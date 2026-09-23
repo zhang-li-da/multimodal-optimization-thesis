@@ -26,6 +26,14 @@ def verify(root: Path, output: Path, limit: int | None = None) -> dict:
         raise ValueError("Manifest hash mismatch")
     if source_fingerprint() != manifest["source_fingerprint_sha256"]:
         raise ValueError("Audit must use the frozen search source files")
+    audit_sha=hashlib.sha256(Path(__file__).read_bytes().replace(b"\r\n",b"\n")).hexdigest()
+    cached={}
+    prior_elapsed=0.0
+    if output.exists():
+        old=json.loads(output.read_text(encoding="utf-8"))
+        if old.get("audit_source_sha256")==audit_sha and old.get("source_fingerprint")==source_fingerprint():
+            cached={row["job_id"]:row for row in old["runs"] if row["ok"]}
+            prior_elapsed=old.get("elapsed_seconds",0.0)
     jobs=sorted(manifest["jobs"],key=lambda job:(job["block"],job["task"],job["job_id"]))
     rows=[]
     missing=[]
@@ -37,6 +45,10 @@ def verify(root: Path, output: Path, limit: int | None = None) -> dict:
             missing.append(job["job_id"])
             continue
         if limit is not None and len(rows)>=limit: break
+        result_sha=hashlib.sha256(path.read_bytes()).hexdigest()
+        if job["job_id"] in cached and cached[job["job_id"]]["result_sha256"]==result_sha:
+            rows.append(cached[job["job_id"]])
+            continue
         result=json.loads(path.read_text(encoding="utf-8"))
         errors=[]
         def check(condition, message):
@@ -128,16 +140,17 @@ def verify(root: Path, output: Path, limit: int | None = None) -> dict:
             "validation_programs_replayed":validation_replayed,"test_programs_replayed":test_replayed,
             "tokens_checked":tokens,"usage_complete":summary["usage_complete"],
             "request_errors":len(result["llm_errors"]),"output_cap_violations":output_cap_violations,
-            "result_sha256":hashlib.sha256(path.read_bytes()).hexdigest()})
+            "result_sha256":result_sha})
         print(json.dumps({"verified":len(rows),"job_id":job["job_id"],"ok":not errors}),flush=True)
     report={"created_utc":datetime.now(timezone.utc).isoformat(),
         "scope":"no model calls; deterministic evaluator/controller/usage replay",
         "source_commit":manifest["source_commit"],"source_fingerprint":source_fingerprint(),
+        "audit_source_sha256":audit_sha,
         "planned_runs":len(jobs),"checked_runs":len(rows),"missing_results":missing,"limit":limit,
         "all_checked_pass":all(row["ok"] for row in rows),
         "validation_programs_replayed":sum(row["validation_programs_replayed"] for row in rows),
         "test_programs_replayed":sum(row["test_programs_replayed"] for row in rows),
-        "elapsed_seconds":time.perf_counter()-start,"runs":rows}
+        "elapsed_seconds":prior_elapsed+time.perf_counter()-start,"runs":rows}
     output.parent.mkdir(parents=True,exist_ok=True)
     output.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
     return report
