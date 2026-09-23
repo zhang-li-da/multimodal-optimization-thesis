@@ -4,6 +4,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import os
 import random
 import statistics
 import time
@@ -13,6 +14,7 @@ from .programs import Program, ProgramError, FEATURES
 from .classification import CLASS_TAGS, CLASS_DESCRIPTION, CLASS_SEEDS
 
 VERSION = "heuristic-benchmark-2-frozen-pilot"
+INDEPENDENT_PROFILE = "chapter6-v11-independent-v1"
 TAGS = {
     "tsp": ["local_distance", "return_aware", "regret", "cluster", "lookahead", "progress", "nonlinear", "hybrid"],
     "binpack": ["tight_fit", "loose_fit", "exact_fill", "balance", "distribution", "item_size", "nonlinear", "hybrid"],
@@ -61,13 +63,31 @@ def _make_instance(task, family, seed, size):
     return {"id":f"{family}-{seed}","family":family,"items":items}
 
 
-@lru_cache(maxsize=12)
 def instances(task, split):
+    profile=os.getenv("CHAPTER6_BENCHMARK_PROFILE", "")
+    block=int(os.getenv("CHAPTER6_DATA_BLOCK", "0"))
+    return _instances_cached(task, split, profile, block)
+
+
+@lru_cache(maxsize=128)
+def _instances_cached(task, split, profile, block):
     if split not in ("probe","validation","test"):
         raise ValueError("Unknown split.")
     if task == "classification":
         from .classification import cases
         return cases(split)
+    if profile == INDEPENDENT_PROFILE:
+        if task not in ("tsp","binpack"):
+            raise ValueError("Independent v1.1 profile is defined for TSP and binpack only.")
+        families=("uniform","clustered","grid") if task=="tsp" else ("uniform","bimodal","complementary")
+        offsets={"probe":371700,"validation":544300,"test":797100}
+        counts={"probe":3,"validation":8,"test":12}
+        if split not in offsets:
+            raise ValueError("Unknown split.")
+        size=12 if task=="tsp" else 64
+        base=offsets[split]+block*10_000
+        return tuple(_make_instance(task,family,base+fi*100+j,size)
+                     for fi,family in enumerate(families) for j in range(counts[split]))
     # All generation rules and seeds are fixed before the live experiment.
     family_names = ("uniform","clustered","grid") if task == "tsp" else ("uniform","bimodal","complementary")
     offset = {"probe":21700,"validation":44300,"test":97100}[split]
@@ -75,6 +95,9 @@ def instances(task, split):
     size = (10 if split == "probe" else 12) if task == "tsp" else (32 if split == "probe" else 64)
     return tuple(_make_instance(task, family, offset+fi*100+j, size)
                  for fi,family in enumerate(family_names) for j in range(count))
+
+
+instances.cache_clear = _instances_cached.cache_clear
 
 
 def split_fingerprint(task, split):

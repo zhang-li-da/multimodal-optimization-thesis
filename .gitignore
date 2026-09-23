@@ -12,5 +12,6 @@ __pycache__/
 venv/
 *.py[cod]
 *.log
+experiments/chapter6/v11/screening-*/
 .DS_Store
 Thumbs.db

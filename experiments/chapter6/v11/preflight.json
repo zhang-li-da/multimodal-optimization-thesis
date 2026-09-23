@@ -1,0 +1,29 @@
+{
+  "scope": "connectivity only; excluded from search results",
+  "checks": [
+    {
+      "provider": "alibaba-token-plan-cn",
+      "model": "qwen3.7-plus",
+      "ok": true,
+      "usage": {
+        "model": "qwen3.7-plus",
+        "input_tokens": 32,
+        "output_tokens": 5,
+        "seconds": 0.9854094999609515
+      },
+      "response_valid_json": true
+    },
+    {
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "ok": true,
+      "usage": {
+        "model": "MiniMax-M3",
+        "input_tokens": 44,
+        "output_tokens": 6,
+        "seconds": 2.7824347999412566
+      },
+      "response_valid_json": true
+    }
+  ]
+}

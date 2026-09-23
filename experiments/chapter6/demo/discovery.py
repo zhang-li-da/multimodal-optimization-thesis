@@ -6,19 +6,27 @@ from collections import Counter
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import random
 import statistics
 import time
 
-from .benchmarks import (VERSION, TAGS, DESCRIPTIONS, SEEDS, FEATURES, instances,
+from .benchmarks import (VERSION, INDEPENDENT_PROFILE, TAGS, DESCRIPTIONS, SEEDS, FEATURES, instances,
     split_fingerprint, evaluate, behavior_distance, descriptor_hash)
 from .providers import ModelClient, ModelError, parse_json
 from .programs import ProgramError
 
 SYSTEM = "You are an algorithm researcher writing small executable heuristics. Obey the provided bounded Python language. Return one valid JSON object only; no markdown. Assess feedback empirically and do not invent evaluation results."
 GRAMMAR = "Allowed Python: exactly def priority(f), scalar local assignments, return, if/else or conditional expression, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh. NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls. Access only listed features with f['feature']. Guard denominators with 1e-9 and log domains. <=25 source lines and <=320 AST nodes. Higher returned value is chosen."
-METHODS = ("quality", "niche", "terminal", "relational", "relational_no_w")
+METHODS = ("quality", "niche", "terminal", "relational", "relational_no_w",
+           "relational_qp", "relational_rr", "relational_qp_rr")
+CONTROLLER_FACTORS = {
+    "relational": {"quality_protection": False, "restart_correction": False},
+    "relational_qp": {"quality_protection": True, "restart_correction": False},
+    "relational_rr": {"quality_protection": False, "restart_correction": True},
+    "relational_qp_rr": {"quality_protection": True, "restart_correction": True},
+}
 QUALITY_TOLERANCE = {"tsp":0.035, "binpack":0.035, "classification":0.025}
 BEHAVIOR_RADIUS = 0.08
 MAX_ARCHIVE = 10
@@ -34,12 +42,12 @@ def _brief(node):
             "error":e.get("error"),"trajectory_values":e.get("trajectory_values",[])[:2]}
 
 
-def report_archive(nodes, task, capacity=MAX_ARCHIVE):
+def report_archive(nodes, task, capacity=MAX_ARCHIVE, quality_reference=None):
     """Same final readout for EVERY method, isolated from its search policy."""
     valid=[n for n in nodes if n["evaluation"]["valid"]]
     if not valid:
         return []
-    best=min(n["evaluation"]["loss"] for n in valid)
+    best=min(n["evaluation"]["loss"] for n in valid) if quality_reference is None else quality_reference
     eligible=sorted((n for n in valid if n["evaluation"]["loss"]<=best+QUALITY_TOLERANCE[task]),
                     key=lambda n:(n["evaluation"]["loss"],n["evaluation"].get("ast_nodes",0),n["id"]))
     kept=[]
@@ -51,9 +59,20 @@ def report_archive(nodes, task, capacity=MAX_ARCHIVE):
     return kept
 
 
+def _restart_decision(valid_count, saturation_collision_count, attempts, no_growth,
+                      restart_correction, recent_local_development):
+    saturated=(valid_count>=2 and saturation_collision_count/max(1,valid_count)>=0.6)
+    stalled=no_growth>=2 and not (restart_correction and recent_local_development)
+    return {"saturated":saturated,"stalled":stalled,
+            "restart":stalled or saturated or attempts==0}
+
+
 class SearchState:
-    def __init__(self, task, method, seed):
+    def __init__(self, task, method, seed, quality_protection=None, restart_correction=None):
         self.task,self.method=task,method
+        defaults=CONTROLLER_FACTORS.get(method, {"quality_protection":False,"restart_correction":False})
+        self.quality_protection=defaults["quality_protection"] if quality_protection is None else quality_protection
+        self.restart_correction=defaults["restart_correction"] if restart_correction is None else restart_correction
         self.rng=random.Random(seed)
         self.nodes=[]
         self.A=[]
@@ -75,7 +94,18 @@ class SearchState:
         collision=ev["valid"] and distance is not None and distance<=BEHAVIOR_RADIUS
         improved=ev["valid"] and (self.best is None or ev["loss"] < self.best-1e-9)
         competitive=ev["valid"] and (self.best is None or ev["loss"] <= self.best+QUALITY_TOLERANCE[self.task])
-        gain=improved or (competitive and not collision)
+        parent=next((n for n in self.nodes if n["id"]==node.get("parent_id") and n["evaluation"]["valid"]),None)
+        parent_margin=(parent["evaluation"]["loss"]-ev["loss"]) if ev["valid"] and parent else None
+        neighbor_margin=(nearest["evaluation"]["loss"]-ev["loss"]) if ev["valid"] and nearest else None
+        parent_improved=parent_margin is not None and parent_margin>1e-9
+        neighbor_improved=neighbor_margin is not None and neighbor_margin>1e-9
+        # Local gains are credited only while the candidate remains within the
+        # common quality envelope. This protects useful development without
+        # allowing a weak branch to claim unlimited progress.
+        local_development=bool(competitive and (parent_improved or neighbor_improved))
+        productive_collision=bool(collision and (improved or local_development))
+        unproductive_collision=bool(collision and not productive_collision)
+        gain=improved or (competitive and not collision) or (self.quality_protection and local_development)
         self.best=min(self.best,ev["loss"]) if ev["valid"] and self.best is not None else (ev["loss"] if ev["valid"] else self.best)
         self.no_growth=0 if gain else self.no_growth+1
         event={"node_id":node["id"],"tags":node["tags"],"allocated_tag":node.get("allocated_tag"),"parent_id":node["parent_id"],
@@ -83,7 +113,13 @@ class SearchState:
                "terminal_collision":bool(collision),"distance_to_previous":distance,
                "nearest_node":nearest["id"] if nearest else None,
                "different_intent_collision":bool(collision and set(node["tags"])!=set(nearest["tags"])),
-               "improved":bool(improved),"useful_gain":bool(gain),
+               "improved":bool(improved),"parent_improvement_margin":parent_margin,
+               "neighborhood_improvement_margin":neighbor_margin,
+               "parent_improved":bool(parent_improved),"neighborhood_improved":bool(neighbor_improved),
+               "competitive_local_development":bool(local_development),
+               "productive_collision":productive_collision,"unproductive_collision":unproductive_collision,
+               "useful_gain":bool(gain),"quality_protection":self.quality_protection,
+               "restart_correction":self.restart_correction,
                "loss":ev["loss"],"failure_type":ev.get("failure_type"),
                "fidelity":"full-validation-plus-fixed-probes",
                "feature_calls":ev["features_called"],"local_checks":ev["local_checks"],
@@ -124,7 +160,7 @@ class SearchState:
             if others and step%3==2:
                 reference=self.rng.choice(others)
                 action="recombine"
-        elif self.method in ("terminal", "relational", "relational_no_w"):
+        elif self.method in ("terminal", "relational", "relational_no_w") or self.method in CONTROLLER_FACTORS:
             scores={}
             history={}
             for tag in tags:
@@ -134,11 +170,17 @@ class SearchState:
                 valid_records=[r for r in records if r["valid"]]
                 n=len(valid_records)
                 gains=sum(r["useful_gain"] for r in valid_records)
-                collisions=sum(r["terminal_collision"] for r in valid_records)
+                raw_collisions=sum(r["terminal_collision"] for r in valid_records)
+                penalized_collisions=sum(r["unproductive_collision"] for r in valid_records) if self.quality_protection else raw_collisions
                 posterior=(1+gains)/(2+n)
                 uncertainty=math.sqrt(math.log(2+len(self.M))/(1+len(records)))
-                score=posterior+0.45*uncertainty-0.5*collisions/max(1,n)
-                history[tag]={"attempts":len(records),"valid":n,"gains":gains,"collisions":collisions,
+                score=posterior+0.45*uncertainty-0.5*penalized_collisions/max(1,n)
+                saturation_collisions=sum(r["unproductive_collision"] for r in valid_records) if self.restart_correction else raw_collisions
+                recent_local_development=any(r.get("competitive_local_development",False) for r in valid_records[-2:])
+                history[tag]={"attempts":len(records),"valid":n,"gains":gains,
+                              "collisions":raw_collisions,"penalized_collisions":penalized_collisions,
+                              "saturation_collisions":saturation_collisions,
+                              "recent_local_development":recent_local_development,
                               "priority":score}
                 scores[tag]=score
             target=max(tags,key=lambda t:(scores[t],-tags.index(t)))
@@ -157,8 +199,12 @@ class SearchState:
                     return sum(r["behavior_hash"]==h for r in self.M)
                 parent=min(parent_pool,key=lambda n:(pressure(n),n["evaluation"]["loss"]))
             target_state=history[target]
-            saturated=(target_state["valid"]>=2 and target_state["collisions"]/target_state["valid"]>=0.6)
-            action="restart" if self.no_growth>=2 or saturated or target_state["attempts"]==0 else "refine"
+            restart_state=_restart_decision(target_state["valid"],target_state["saturation_collisions"],
+                target_state["attempts"],self.no_growth,self.restart_correction,
+                target_state["recent_local_development"])
+            saturated=restart_state["saturated"]
+            stalled=restart_state["stalled"]
+            action="restart" if restart_state["restart"] else "refine"
             if reactivate:
                 action="reactivate"
             if parent:
@@ -175,7 +221,7 @@ class SearchState:
                     if complement(reference)>0.005 and action=="refine":
                         action="recombine"
             evidence.update(tag_statistics=history,selected_tag=target,saturated=saturated,
-                no_growth=self.no_growth,reactivated=reactivate,
+                no_growth=self.no_growth,stalled=stalled,reactivated=reactivate,
                 repeated_outcomes=[r for r in self.M if r["terminal_collision"]][-3:])
         if action=="restart":
             parent=None
@@ -212,24 +258,65 @@ def _save(path,obj):
 
 
 def source_fingerprint():
-    root=Path(__file__).parent
+    root=Path(__file__).resolve().parents[3]
     digest=hashlib.sha256()
-    for name in ("programs.py","benchmarks.py","discovery.py","providers.py","classification.py"):
+    names=(
+        "chapter6_demo/__init__.py",
+        "experiments/chapter6/demo/programs.py",
+        "experiments/chapter6/demo/benchmarks.py",
+        "experiments/chapter6/demo/discovery.py",
+        "experiments/chapter6/demo/providers.py",
+        "experiments/chapter6/demo/inspect_environment.py",
+        "experiments/chapter6/demo/classification.py",
+        "experiments/chapter6/v11/preregistration.md",
+        "experiments/chapter6/v11/selector.py",
+        "experiments/chapter6/v11/run_factorial.py",
+        "experiments/chapter6/v11/analyze_factorial.py",
+        "experiments/chapter6/v11/test_v11.py",
+    )
+    for name in names:
         digest.update(name.encode())
         digest.update((root/name).read_bytes())
     return digest.hexdigest()
 
 
-def run_search(task,method,seed,steps,provider,model,output):
+def _token_reservation(prompt, max_output):
+    """Conservative admission bound: UTF-8 input bytes plus fixed margin and output cap."""
+    return len(SYSTEM.encode("utf-8"))+len(prompt.encode("utf-8"))+512+max_output
+
+
+def _behavior_mode_count(nodes, evaluations, radius=BEHAVIOR_RADIUS):
+    ordered=sorted(nodes,key=lambda n:(evaluations[str(n["id"])]["loss"],n["id"]))
+    kept=[]
+    for node in ordered:
+        behavior=evaluations[str(node["id"])]["behavior"]
+        if not kept or min(behavior_distance(behavior,evaluations[str(k["id"])]["behavior"]) for k in kept)>radius:
+            kept.append(node)
+    return len(kept)
+
+
+def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
     if method not in METHODS:
         raise ValueError("Unknown method.")
     directory=Path(output)
     directory.mkdir(parents=True,exist_ok=True)
     final_file=directory/"result.json"
     checkpoint_file=directory/"checkpoint.json"
+    profile=os.getenv("CHAPTER6_BENCHMARK_PROFILE", "")
+    if profile and profile != INDEPENDENT_PROFILE:
+        raise ValueError("Unknown experiment benchmark profile.")
+    data_block=int(os.getenv("CHAPTER6_DATA_BLOCK", "0"))
+    if data_block<0:
+        raise ValueError("Data block must be nonnegative.")
+    if token_budget is not None and token_budget<=0:
+        raise ValueError("Token budget must be positive.")
+    benchmark_version=f"{VERSION}|{profile or 'default'}"
+    factors=CONTROLLER_FACTORS.get(method,{"quality_protection":False,"restart_correction":False})
     config={"task":task,"method":method,"seed":seed,"steps":steps,"provider":provider,"model":model,
-            "benchmark_version":VERSION,"quality_tolerance":QUALITY_TOLERANCE[task],
+            "benchmark_version":benchmark_version,"data_block":data_block,
+            "quality_tolerance":QUALITY_TOLERANCE[task],
             "behavior_radius":BEHAVIOR_RADIUS,"archive_capacity":MAX_ARCHIVE,
+            "controller_factors":factors,"token_budget":token_budget,
             "source_fingerprint":source_fingerprint(),
             "splits":{s:split_fingerprint(task,s) for s in ("probe","validation","test")}}
     if final_file.exists():
@@ -239,9 +326,12 @@ def run_search(task,method,seed,steps,provider,model,output):
         print(json.dumps({"cached_run":str(directory),"summary":old["summary"]}),flush=True)
         return old
     client=ModelClient.from_opencode(provider,model)
-    state=SearchState(task,method,seed)
+    state=SearchState(task,method,seed,**factors)
     usage=[]
     llm_errors=[]
+    budget_stops=[]
+    reservation_violations=[]
+    usage_missing=[]
     start=time.perf_counter()
     prior_elapsed=0.0
     if checkpoint_file.exists():
@@ -252,6 +342,9 @@ def run_search(task,method,seed,steps,provider,model,output):
             state.observe(node)
         usage=saved["usage"]
         llm_errors=saved["llm_errors"]
+        budget_stops=saved.get("budget_stops",[])
+        reservation_violations=saved.get("reservation_violations",[])
+        usage_missing=saved.get("usage_missing",[])
         prior_elapsed=saved.get("elapsed_seconds",0)
         if saved.get("rng_state"):
             def tuples(obj): return tuple(tuples(x) for x in obj) if isinstance(obj,list) else obj
@@ -262,23 +355,59 @@ def run_search(task,method,seed,steps,provider,model,output):
             state.observe({"id":i,"name":name,"intent":"shared hand-written seed: "+name,
                 "tags":tags,"code":code,"parent_id":None,"reference_id":None,"action":"seed",
                 "source":"handwritten_seed","evaluation":ev})
+
+    def record_usage(stage, iteration, response):
+        item={"stage":stage,"iteration":iteration,**response.usage()}
+        usage.append(item)
+        if item["input_tokens"]<=0 or item["output_tokens"]<=0:
+            usage_missing.append({"stage":stage,"iteration":iteration,
+                                  "reason":"provider returned zero or missing token usage"})
+
     completed=len(state.nodes)-len(SEEDS[task])
     for step in range(completed,steps):
+        stop_after_candidate=False
         selection=state.choose(step)
         plan_prompt=planner_prompt(task,selection,step)
+        planner_reserve=_token_reservation(plan_prompt,1800)
+        spent=sum(u["input_tokens"]+u["output_tokens"] for u in usage)
+        if token_budget is not None and spent+planner_reserve>token_budget:
+            budget_stops.append({"iteration":step,"stage":"planner_admission","tokens_used":spent,
+                                 "tokens_reserved":planner_reserve,"budget":token_budget})
+            break
         plan={"name":f"candidate_{step}","intent":"unavailable","tags":[selection["target"]]}
         code=""
         try:
             response=client.complete(SYSTEM,plan_prompt,max_tokens=1800)
-            usage.append({"stage":"planner","iteration":step,**response.usage()})
+            record_usage("planner",step,response)
+            observed=response.input_tokens+response.output_tokens
+            if observed>planner_reserve:
+                reservation_violations.append({"iteration":step,"stage":"planner",
+                    "observed_tokens":observed,"reserved_tokens":planner_reserve})
             _save(directory/f"{step:03d}_plan.json",{"prompt":plan_prompt,"response":response.text,"usage":response.usage()})
+            if usage_missing and usage_missing[-1]["iteration"]==step and usage_missing[-1]["stage"]=="planner":
+                budget_stops.append({"iteration":step,"stage":"planner_usage_unavailable",
+                                     "budget":token_budget,"planner_usage_recorded":False})
+                break
             generated_plan=parse_json(response.text)
             if not isinstance(generated_plan,dict):
                 raise ValueError("Planner must return an object.")
             plan.update(generated_plan)
             code_prompt=coder_prompt(task,plan,selection)
+            coder_reserve=_token_reservation(code_prompt,2000)
+            spent=sum(u["input_tokens"]+u["output_tokens"] for u in usage)
+            if token_budget is not None and spent+coder_reserve>token_budget:
+                budget_stops.append({"iteration":step,"stage":"coder_admission_after_planner",
+                                     "tokens_used":spent,"tokens_reserved":coder_reserve,
+                                     "budget":token_budget,"planner_usage_recorded":True})
+                break
             response=client.complete(SYSTEM,code_prompt,max_tokens=2000)
-            usage.append({"stage":"coder","iteration":step,**response.usage()})
+            record_usage("coder",step,response)
+            if usage_missing and usage_missing[-1]["iteration"]==step and usage_missing[-1]["stage"]=="coder":
+                stop_after_candidate=token_budget is not None
+            observed=response.input_tokens+response.output_tokens
+            if observed>coder_reserve:
+                reservation_violations.append({"iteration":step,"stage":"coder",
+                    "observed_tokens":observed,"reserved_tokens":coder_reserve})
             _save(directory/f"{step:03d}_code.json",{"prompt":code_prompt,"response":response.text,"usage":response.usage()})
             data=parse_json(response.text)
             code=data.get("code","") if isinstance(data,dict) else ""
@@ -287,6 +416,10 @@ def run_search(task,method,seed,steps,provider,model,output):
             evaluation=evaluate(code,task)
         except (ModelError,ValueError,TypeError,KeyError) as exc:
             llm_errors.append({"iteration":step,"type":type(exc).__name__,"error":str(exc)[:160]})
+            if isinstance(exc,ModelError):
+                usage_missing.append({"stage":"request_error","iteration":step,
+                                      "reason":"request failed without provider token usage"})
+                stop_after_candidate=token_budget is not None
             evaluation=evaluate("",task)
             evaluation.update(failure_type=type(exc).__name__,error=str(exc)[:160])
         # Both stages retain actual usage; there is no invisible retry or
@@ -301,14 +434,22 @@ def run_search(task,method,seed,steps,provider,model,output):
               "action":selection["action"],"allocation":selection["evidence"],"evaluation":evaluation}
         state.observe(node)
         checkpoint={"config":config,"nodes":state.nodes,"usage":usage,"llm_errors":llm_errors,
-                    "rng_state":state.rng.getstate(),"elapsed_seconds":prior_elapsed+time.perf_counter()-start}
+                    "budget_stops":budget_stops,"reservation_violations":reservation_violations,
+                    "usage_missing":usage_missing,"rng_state":state.rng.getstate(),
+                    "elapsed_seconds":prior_elapsed+time.perf_counter()-start}
         _save(checkpoint_file,checkpoint)
         print(json.dumps({"task":task,"method":method,"seed":seed,"step":step+1,"steps":steps,
             "valid":evaluation["valid"],"loss":evaluation["loss"],"modes":len(state.A),
             "action":selection["action"],"collision":state.events[-1]["terminal_collision"]}),flush=True)
+        if stop_after_candidate:
+            budget_stops.append({"iteration":step,"stage":"stop_after_unknown_usage",
+                                 "budget":token_budget,"reason":"cannot safely admit another model request"})
+            break
     # Final reporting archive and best program are fixed from validation BEFORE
     # any hidden-test feedback exists. Test never enters state or prompts.
-    archive=report_archive(state.nodes,task)
+    shared_seed_nodes=[n for n in state.nodes if n["source"]=="handwritten_seed"]
+    shared_seed_validation=min(n["evaluation"]["loss"] for n in shared_seed_nodes)
+    archive=report_archive(state.nodes,task,quality_reference=shared_seed_validation)
     test={}
     for node in archive:
         test[str(node["id"])]=evaluate(node["code"],task,split="test",with_probes=False)
@@ -317,31 +458,78 @@ def run_search(task,method,seed,steps,provider,model,output):
     best=state._simple_parent()
     if best and str(best["id"]) not in test:
         test[str(best["id"])]=evaluate(best["code"],task,split="test",with_probes=False)
+    for node in shared_seed_nodes:
+        if str(node["id"]) not in test:
+            test[str(node["id"])]=evaluate(node["code"],task,split="test",with_probes=False)
+    shared_seed_test=min(test[str(n["id"])]["loss"] for n in shared_seed_nodes)
+    shared_test_threshold=shared_seed_test+QUALITY_TOLERANCE[task]
+    common_test_archive=[n for n in archive if test[str(n["id"])]["loss"]<=shared_test_threshold]
+    common_test_archive.sort(key=lambda n:(test[str(n["id"])]["loss"],n["id"]))
+    archive_test_rows=[test[str(n["id"])]["per_instance_loss"] for n in common_test_archive]
+    if archive_test_rows:
+        per_instance_oracle=[min(row[j] for row in archive_test_rows) for j in range(len(archive_test_rows[0]))]
+        oracle_test=statistics.fmean(per_instance_oracle)
+        best_single_test=min(test[str(n["id"])]["loss"] for n in common_test_archive)
+        oracle_gain=best_single_test-oracle_test
+    else:
+        oracle_test=best_single_test=oracle_gain=None
     valid_generated=[n for n in generated if n["evaluation"]["valid"]]
     summary={"generated":len(generated),"valid_generated":len(valid_generated),
         "valid_fraction":len(valid_generated)/max(1,len(generated)),
         "best_validation_loss":state.best,"validation_selected_best_id":best["id"] if best else None,
         "validation_selected_test_loss":test[str(best["id"])]["loss"] if best else None,
+        "shared_seed_best_validation_loss":shared_seed_validation,
+        "shared_seed_best_test_loss":shared_seed_test,
         "quality_constrained_modes":len(archive),
+        "common_gate_archive_size":len(archive),
+        "common_gate_test_eligible_size":len(common_test_archive),
+        "common_gate_test_behavior_modes":_behavior_mode_count(common_test_archive,test),
+        "best_single_test_loss_within_common_archive":best_single_test,
+        "test_instance_oracle_archive_loss_upper_bound_only":oracle_test,
+        "test_instance_oracle_gain_upper_bound_only":oracle_gain,
         "terminal_collision_rate":sum(e["terminal_collision"] for e in events)/max(1,len(events)),
         "different_intent_collisions":sum(e["different_intent_collision"] for e in events),
         "useful_generated":sum(e["useful_gain"] for e in events),
         "model_calls":len(usage),"input_tokens":sum(u["input_tokens"] for u in usage),
         "output_tokens":sum(u["output_tokens"] for u in usage),
+        "usage_missing_calls":len(usage_missing),"usage_complete":not usage_missing,
+        "request_errors":len(llm_errors),
+        "partial_attempts":sum(s["stage"] in ("coder_admission_after_planner","planner_usage_unavailable")
+                                for s in budget_stops),
         "model_seconds":sum(u["seconds"] for u in usage),
         "evaluator_cpu_seconds":sum(n["evaluation"]["cpu_seconds"] for n in state.nodes),
         "feature_calls":sum(n["evaluation"]["features_called"] for n in state.nodes),
         "local_checks":sum(n["evaluation"]["local_checks"] for n in state.nodes),
         "elapsed_seconds":prior_elapsed+time.perf_counter()-start,
+        "token_budget":token_budget,
+        "tokens_used":sum(u["input_tokens"]+u["output_tokens"] for u in usage),
+        "tokens_remaining":None if token_budget is None else token_budget-sum(u["input_tokens"]+u["output_tokens"] for u in usage),
+        "token_budget_valid":None if token_budget is None else
+            (sum(u["input_tokens"]+u["output_tokens"] for u in usage)<=token_budget
+             and not reservation_violations and not usage_missing),
+        "budget_stop_stage":budget_stops[-1]["stage"] if budget_stops else None,
         "actions":dict(Counter(n["action"] for n in generated)),
+        "parent_improvements":sum(e["parent_improved"] for e in events),
+        "neighborhood_improvements":sum(e["neighborhood_improved"] for e in events),
+        "competitive_local_developments":sum(e["competitive_local_development"] for e in events),
+        "productive_collisions":sum(e["productive_collision"] for e in events),
+        "unproductive_collisions":sum(e["unproductive_collision"] for e in events),
+        "restarts":sum(n["action"]=="restart" for n in generated),
         "api_price":"coding plan; marginal cash cost not inferred"}
+    from .v11.selector import fit_and_evaluate_selector
+    selector=fit_and_evaluate_selector(
+        {"nodes":state.nodes,"archive_ids":[n["id"] for n in archive],"test":test},
+        task,instances(task,"validation"),instances(task,"test"))
+    summary["algorithm_set_selector_status"]=selector.get("status")
     result={"config":config,"summary":summary,"nodes":state.nodes,"events":state.events,
             "archive_ids":[n["id"] for n in archive],"working_ids":[n["id"] for n in state.W],
-            "terminal_memory":state.M,"curve":state.curve,"usage":usage,"llm_errors":llm_errors,"test":test,
-            "claims":{"level":"live bounded-program synthesis pilot",
+            "terminal_memory":state.M,"curve":state.curve,"usage":usage,"llm_errors":llm_errors,
+            "budget_stops":budget_stops,"reservation_violations":reservation_violations,
+            "usage_missing":usage_missing,"test":test,"selector":selector,
+            "claims":{"level":"live bounded-program synthesis screening study",
                 "mode_definition":"quality-constrained clusters of executed behavior on fixed probes; not enumerated algorithmic optima",
                 "not_reproduced":["MLEvolve","SeaEvo","AdaEvolve"],
-                "protocol":"equal proposal slots and maximum tokens per call; actual token and CPU costs reported; same final archive readout"}}
+                "protocol":"fixed candidate slots or total input+output token ceiling; actual token and CPU costs reported; same final archive readout"}}
     _save(final_file,result)
     (directory/"programs").mkdir(exist_ok=True)
     for node in archive:
@@ -356,11 +544,13 @@ def main():
     p.add_argument("--method",choices=METHODS,default="relational")
     p.add_argument("--seed",type=int,default=0)
     p.add_argument("--steps",type=int,default=12)
+    p.add_argument("--token-budget",type=int,default=None,
+                   help="Optional hard input+output token ceiling, with UTF-8 byte admission reserve.")
     p.add_argument("--provider",default="alibaba-token-plan-cn")
     p.add_argument("--model",default="qwen3.7-plus")
     p.add_argument("--output",required=True)
     args=p.parse_args()
-    run_search(args.task,args.method,args.seed,args.steps,args.provider,args.model,args.output)
+    run_search(args.task,args.method,args.seed,args.steps,args.provider,args.model,args.output,args.token_budget)
 
 
 if __name__=="__main__":
