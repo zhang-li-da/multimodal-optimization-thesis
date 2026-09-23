@@ -47,9 +47,11 @@ class V12SearchState(SearchState):
     def observe(self,node):
         allocation=node.get("allocation",{})
         charged_parent=allocation.get("branch_parent_id")
+        charged_depth=None
         if charged_parent is not None:
             branch=next((item for item in self.branch_pool if item["node_id"]==charged_parent),None)
             if branch is not None:
+                charged_depth=branch["depth"]+1
                 branch["remaining"]-=1
                 branch["attempts"]+=1
 
@@ -80,7 +82,7 @@ class V12SearchState(SearchState):
             classification="other_valid_candidate"
 
         admitted=False
-        if classification=="competitive_local_improvement":
+        if classification=="competitive_local_improvement" and self.method!="niche":
             parent_depth=0
             parent_id=node.get("parent_id")
             if parent_id is not None:
@@ -103,7 +105,8 @@ class V12SearchState(SearchState):
 
         event.update(branch_classification=classification,branch_admitted=admitted,
             branch_parent_id=charged_parent,branch_parent_development=charged_parent is not None,
-            branch_pool_size=len(self.branch_pool),branch_depth=self._depth_for(node.get("id")))
+            branch_pool_size=len(self.branch_pool),
+            branch_depth=charged_depth if charged_depth is not None else self._depth_for(node.get("id")))
         self.branch_decisions.append({k:event[k] for k in (
             "node_id","branch_classification","branch_admitted","branch_parent_id",
             "branch_parent_development","branch_pool_size","branch_depth")})

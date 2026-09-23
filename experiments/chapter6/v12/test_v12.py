@@ -36,6 +36,7 @@ def test_competitive_parent_improvement_enters_B_and_gets_followup_parent_slot()
     assert selection["parent"]["id"]==2
     assert selection["action"]=="refine"
     assert selection["audit"]["branch_remaining_before"]==2
+    assert state.events[-1]["branch_depth"]==1
     plan=json.loads(planner_prompt("tsp",selection,1))
     assert "niche_fixed_dev" not in json.dumps(plan)
     assert "relational_branch" not in json.dumps(plan)
@@ -49,6 +50,14 @@ def test_known_rule_reproduction_and_low_quality_novelty_do_not_enter_B():
     state.observe(_node(3,.30,[[0,0,1]],parent=1,vector=[.30,.30]))
     assert state.events[-1]["branch_classification"]=="low_quality_novel_behavior"
     assert not state.events[-1]["branch_admitted"]
+    assert state.branch_pool==[]
+
+
+def test_niche_reference_has_no_branch_pool_even_when_local_improvement_is_observed():
+    state=_seeded("niche")
+    state.observe(_node(2,.11,[[0,1,0]],parent=1,vector=[.105,.115]))
+    assert state.events[-1]["branch_classification"]=="competitive_local_improvement"
+    assert state.events[-1]["branch_admitted"] is False
     assert state.branch_pool==[]
 
 
