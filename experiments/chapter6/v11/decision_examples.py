@@ -49,7 +49,7 @@ def main():
           f"Global gain: {event['global_improvement_margin']}; parent gain: {event['parent_improvement_margin']}; neighbor gain: {event['neighborhood_improvement_margin']}.",
           f"Collision: {event['terminal_collision']}; local credit eligible: {event['local_credit_eligible']}; useful gain recorded: {event['useful_gain']}.","",
           "```python",example["node"]["code"],"```",""])
-    (output/"DECISION_EXAMPLES.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
+    (output/"DECISION_EXAMPLES.md").write_text("\n".join(lines).rstrip()+"\n",encoding="utf-8")
     print(json.dumps({"example_categories":len(chosen),"source":manifest["source_commit"]}))
 
 

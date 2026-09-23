@@ -1,3 +1,7 @@
+# Chapter 6 v1.1 screening results
+
+The preregistered 200-run study is complete. Its screening evidence does not support a stable test-quality advantage for the full revised controller: it beat the niche baseline in 0/8 model-task-budget cells. Read the [Chinese technical report](experiments/chapter6/v11/results/screening-20260923-r1/TECHNICAL_REPORT_ZH.md), the [v1.1 study page](experiments/chapter6/v11/README.md), and the [evidence manifest](experiments/chapter6/v11/results/screening-20260923-r1/EVIDENCE_MANIFEST.json). This is a negative mechanism-screening result, not a final confirmation of the thesis chapter or a claim that multimodal algorithm discovery is infeasible.
+
 # 多模态智能优化博士论文项目材料
 
 本仓库汇集博士论文前五章对应文章材料、第六章 agent 原型与验证记录，以及总体技术报告，供跨设备查阅和复核。

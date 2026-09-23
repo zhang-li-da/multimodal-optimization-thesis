@@ -1,0 +1,30 @@
+{
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependency_versions": {
+    "numpy": "2.1.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.0",
+    "pytest": "8.3.4"
+  },
+  "providers": [
+    {
+      "provider": "alibaba-token-plan-cn",
+      "requested_model": "qwen3.7-plus",
+      "protocol": "openai",
+      "endpoint_host": "token-plan.cn-beijing.maas.aliyuncs.com",
+      "endpoint_path": "/compatible-mode/v1",
+      "timeout_seconds": 120
+    },
+    {
+      "provider": "minimax-cn-coding-plan",
+      "requested_model": "MiniMax-M3",
+      "protocol": "anthropic",
+      "endpoint_host": "api.minimaxi.com",
+      "endpoint_path": "/anthropic/v1",
+      "timeout_seconds": 120
+    }
+  ],
+  "credential_policy": "OpenCode credentials read at runtime; no values copied into evidence"
+}

@@ -235,7 +235,7 @@ def main():
         "- `qwen-raw-runs.zip`、`minimax-raw-runs.zip`：所有新运行的提示、响应、候选、checkpoint、结果、usage 和控制台记录。",
         "- `preregistered-source.zip`：冻结源码；`EVIDENCE_MANIFEST.json` 和 `SHA256SUMS.txt`：归档及逐原始文件哈希。",
         "",
-        "公开发布采用实验分支、预注册标签、结果提交与 screening 结果标签分离；旧 d7fd074 资料保留。读取结果不需要 API 密钥。重新搜索依赖接收电脑自己的 OpenCode 模型凭据；确定性回放只依赖冻结 Python 环境和归档程序，不调用模型。请把两个 raw ZIP 解压到同一新的目录，并从仓库根目录运行 `python -m chapter6_demo.v11.verify_screening <解压目录>`。统计和图表也可由相应模块重新生成。",
+        "公开发布采用实验分支、预注册标签、结果提交与 screening 结果标签分离；旧 d7fd074 资料保留。读取结果不需要 API 密钥。重新搜索依赖接收电脑自己的 OpenCode 模型凭据；确定性回放不调用模型。请把两个 raw ZIP 解压到同一数据目录，并把 `preregistered-source.zip` 解压到独立源码目录。源码指纹包含冻结文档，因此必须从该源码快照导入评估器：从仓库根目录将 `PYTHONPATH` 指向冻结源码目录，再运行 `python experiments/chapter6/v11/verify_screening.py <数据目录>`。统计和图表也可由相应模块重新生成。",
         "",
         f"实验清单哈希：`{manifest['manifest_sha256']}`。源码指纹：`{manifest['source_fingerprint_sha256']}`。",
     ])

@@ -1,0 +1,1230 @@
+{
+  "scope": "historical motivation replay only; no new search and no performance counterfactual",
+  "archive": "experiments\\chapter6\\archives\\chapter6_validation_delivery_20260923.zip",
+  "archive_sha256": "23254428e801fc364161306ff3704b4f335e912ed88f2ca77e91337952c2a2af",
+  "selection": "relational; saved cost_valid flag; Qwen confirm_v1 plus complete MiniMax recovery batch",
+  "old_quality_epsilon": 1e-09,
+  "total_selected_runs": 60,
+  "selected_runs_by_cell": {
+    "MiniMax-M3/binpack": 10,
+    "MiniMax-M3/classification": 10,
+    "MiniMax-M3/tsp": 10,
+    "qwen3.7-plus/binpack": 10,
+    "qwen3.7-plus/classification": 10,
+    "qwen3.7-plus/tsp": 10
+  },
+  "uncredited_parent_improvements": 49,
+  "counts_by_cell": {
+    "MiniMax-M3/binpack": 15,
+    "MiniMax-M3/classification": 3,
+    "MiniMax-M3/tsp": 4,
+    "qwen3.7-plus/binpack": 21,
+    "qwen3.7-plus/classification": 4,
+    "qwen3.7-plus/tsp": 2
+  },
+  "examples": [
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p11/result.json",
+      "node_id": 10,
+      "parent_id": 1,
+      "parent_loss": 0.14455877008296367,
+      "candidate_loss": 0.13918242599694214,
+      "global_best_before": 0.13918242599694214,
+      "parent_gain": 0.005376344086021528,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        5,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        5,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p11/result.json",
+      "node_id": 11,
+      "parent_id": 1,
+      "parent_loss": 0.14455877008296367,
+      "candidate_loss": 0.13918242599694214,
+      "global_best_before": 0.13918242599694214,
+      "parent_gain": 0.005376344086021528,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        5,
+        8,
+        10
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        5,
+        8,
+        10
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p11/result.json",
+      "node_id": 16,
+      "parent_id": 1,
+      "parent_loss": 0.14455877008296367,
+      "candidate_loss": 0.13918242599694214,
+      "global_best_before": 0.13918242599694214,
+      "parent_gain": 0.005376344086021528,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        5,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        5,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p12/result.json",
+      "node_id": 11,
+      "parent_id": 4,
+      "parent_loss": 0.10686716826771801,
+      "candidate_loss": 0.09462329020674848,
+      "global_best_before": 0.08519108501304902,
+      "parent_gain": 0.012243878060969535,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p12/result.json",
+      "node_id": 15,
+      "parent_id": 8,
+      "parent_loss": 0.08827750476613545,
+      "candidate_loss": 0.08519108501304902,
+      "global_best_before": 0.08519108501304902,
+      "parent_gain": 0.0030864197530864335,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        6,
+        12
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p12/result.json",
+      "node_id": 16,
+      "parent_id": 8,
+      "parent_loss": 0.08827750476613545,
+      "candidate_loss": 0.08519108501304902,
+      "global_best_before": 0.08519108501304902,
+      "parent_gain": 0.0030864197530864335,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        6,
+        12,
+        15
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        6,
+        12,
+        15
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p13/result.json",
+      "node_id": 12,
+      "parent_id": 4,
+      "parent_loss": 0.1472371655405139,
+      "candidate_loss": 0.12124250617503991,
+      "global_best_before": 0.11815608642195351,
+      "parent_gain": 0.025994659365473974,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p14/result.json",
+      "node_id": 9,
+      "parent_id": 1,
+      "parent_loss": 0.13010994451898997,
+      "candidate_loss": 0.12436281808220838,
+      "global_best_before": 0.12436281808220838,
+      "parent_gain": 0.005747126436781588,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        5,
+        6,
+        7,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p14/result.json",
+      "node_id": 17,
+      "parent_id": 1,
+      "parent_loss": 0.13010994451898997,
+      "candidate_loss": 0.12436281808220838,
+      "global_best_before": 0.12436281808220838,
+      "parent_gain": 0.005747126436781588,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        16
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        16
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p15/result.json",
+      "node_id": 9,
+      "parent_id": 1,
+      "parent_loss": 0.14791105007122,
+      "candidate_loss": 0.13876202008885666,
+      "global_best_before": 0.13876202008885666,
+      "parent_gain": 0.009149029982363333,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        6,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p15/result.json",
+      "node_id": 14,
+      "parent_id": 13,
+      "parent_loss": 0.1418484398419431,
+      "candidate_loss": 0.13876202008885666,
+      "global_best_before": 0.13876202008885666,
+      "parent_gain": 0.0030864197530864335,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p17/result.json",
+      "node_id": 16,
+      "parent_id": 1,
+      "parent_loss": 0.13955456770807162,
+      "candidate_loss": 0.13389020518887038,
+      "global_best_before": 0.13389020518887038,
+      "parent_gain": 0.005664362519201244,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        12,
+        15
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        12,
+        15
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p18/result.json",
+      "node_id": 9,
+      "parent_id": 1,
+      "parent_loss": 0.13220780889571496,
+      "candidate_loss": 0.12292398926706775,
+      "global_best_before": 0.12292398926706775,
+      "parent_gain": 0.009283819628647202,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p19/result.json",
+      "node_id": 10,
+      "parent_id": 1,
+      "parent_loss": 0.11111405377897132,
+      "candidate_loss": 0.10157382389391384,
+      "global_best_before": 0.10157382389391384,
+      "parent_gain": 0.009540229885057483,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p20/result.json",
+      "node_id": 10,
+      "parent_id": 1,
+      "parent_loss": 0.1092012243499,
+      "candidate_loss": 0.10364566879434445,
+      "global_best_before": 0.10364566879434445,
+      "parent_gain": 0.00555555555555555,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_classification_relational_p13/result.json",
+      "node_id": 16,
+      "parent_id": 2,
+      "parent_loss": 0.058334983825179904,
+      "candidate_loss": 0.05441341519772893,
+      "global_best_before": 0.038146167557932265,
+      "parent_gain": 0.003921568627450973,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": [
+        5,
+        9,
+        11,
+        14
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_classification_relational_p14/result.json",
+      "node_id": 11,
+      "parent_id": 3,
+      "parent_loss": 0.06898395721925134,
+      "candidate_loss": 0.06114081996434937,
+      "global_best_before": 0.045989304812834225,
+      "parent_gain": 0.007843137254901968,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": [
+        9,
+        10
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_classification_relational_p16/result.json",
+      "node_id": 16,
+      "parent_id": 12,
+      "parent_loss": 0.06898395721925134,
+      "candidate_loss": 0.06506238859180036,
+      "global_best_before": 0.06114081996434937,
+      "parent_gain": 0.00392156862745098,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": [
+        1,
+        3,
+        8,
+        14
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_tsp_relational_p13/result.json",
+      "node_id": 16,
+      "parent_id": 15,
+      "parent_loss": 0.054730336519605106,
+      "candidate_loss": 0.0525876396283839,
+      "global_best_before": 0.02519882647190926,
+      "parent_gain": 0.0021426968912212074,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": []
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_tsp_relational_p14/result.json",
+      "node_id": 16,
+      "parent_id": 6,
+      "parent_loss": 0.08698432369655423,
+      "candidate_loss": 0.06027198492353606,
+      "global_best_before": 0.05746722515790229,
+      "parent_gain": 0.026712338773018172,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": []
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_tsp_relational_p15/result.json",
+      "node_id": 16,
+      "parent_id": 14,
+      "parent_loss": 0.06725178892384497,
+      "candidate_loss": 0.06540080946437453,
+      "global_best_before": 0.04026610345042686,
+      "parent_gain": 0.0018509794594704365,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": [
+        10
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_minimax_recovery/MiniMax-M3_tsp_relational_p20/result.json",
+      "node_id": 12,
+      "parent_id": 1,
+      "parent_loss": 0.020094296235045512,
+      "candidate_loss": 0.009257852672940233,
+      "global_best_before": 0.008030414124152082,
+      "parent_gain": 0.010836443562105278,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": [
+        8,
+        10
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p11/result.json",
+      "node_id": 9,
+      "parent_id": 5,
+      "parent_loss": 0.16117615359550844,
+      "candidate_loss": 0.13918242599694214,
+      "global_best_before": 0.13918242599694214,
+      "parent_gain": 0.0219937275985663,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        6,
+        7,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p11/result.json",
+      "node_id": 16,
+      "parent_id": 5,
+      "parent_loss": 0.16117615359550844,
+      "candidate_loss": 0.13918242599694214,
+      "global_best_before": 0.13918242599694214,
+      "parent_gain": 0.0219937275985663,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p12/result.json",
+      "node_id": 11,
+      "parent_id": 1,
+      "parent_loss": 0.09402463120291706,
+      "candidate_loss": 0.08519108501304902,
+      "global_best_before": 0.08519108501304902,
+      "parent_gain": 0.008833546189868036,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p12/result.json",
+      "node_id": 12,
+      "parent_id": 1,
+      "parent_loss": 0.09402463120291706,
+      "candidate_loss": 0.08519108501304902,
+      "global_best_before": 0.08519108501304902,
+      "parent_gain": 0.008833546189868036,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        6,
+        7,
+        8,
+        11
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        6,
+        7,
+        8,
+        11
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p12/result.json",
+      "node_id": 16,
+      "parent_id": 1,
+      "parent_loss": 0.09402463120291706,
+      "candidate_loss": 0.08519108501304902,
+      "global_best_before": 0.08519108501304902,
+      "parent_gain": 0.008833546189868036,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        6,
+        7,
+        8,
+        11,
+        12,
+        14,
+        15
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        6,
+        7,
+        8,
+        11,
+        12,
+        14,
+        15
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p13/result.json",
+      "node_id": 9,
+      "parent_id": 1,
+      "parent_loss": 0.12795211433392342,
+      "candidate_loss": 0.11815608642195351,
+      "global_best_before": 0.11815608642195351,
+      "parent_gain": 0.009796027911969915,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p13/result.json",
+      "node_id": 14,
+      "parent_id": 1,
+      "parent_loss": 0.12795211433392342,
+      "candidate_loss": 0.11815608642195351,
+      "global_best_before": 0.11815608642195351,
+      "parent_gain": 0.009796027911969915,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p14/result.json",
+      "node_id": 9,
+      "parent_id": 1,
+      "parent_loss": 0.13010994451898997,
+      "candidate_loss": 0.12436281808220838,
+      "global_best_before": 0.12436281808220838,
+      "parent_gain": 0.005747126436781588,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p14/result.json",
+      "node_id": 16,
+      "parent_id": 1,
+      "parent_loss": 0.13010994451898997,
+      "candidate_loss": 0.12436281808220838,
+      "global_best_before": 0.12436281808220838,
+      "parent_gain": 0.005747126436781588,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p15/result.json",
+      "node_id": 9,
+      "parent_id": 1,
+      "parent_loss": 0.14791105007122,
+      "candidate_loss": 0.13876202008885666,
+      "global_best_before": 0.13876202008885666,
+      "parent_gain": 0.009149029982363333,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p15/result.json",
+      "node_id": 16,
+      "parent_id": 1,
+      "parent_loss": 0.14791105007122,
+      "candidate_loss": 0.13876202008885666,
+      "global_best_before": 0.13876202008885666,
+      "parent_gain": 0.009149029982363333,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p16/result.json",
+      "node_id": 9,
+      "parent_id": 1,
+      "parent_loss": 0.10914297391287224,
+      "candidate_loss": 0.1003574885648869,
+      "global_best_before": 0.1003574885648869,
+      "parent_gain": 0.008785485347985345,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p16/result.json",
+      "node_id": 16,
+      "parent_id": 1,
+      "parent_loss": 0.10914297391287224,
+      "candidate_loss": 0.1003574885648869,
+      "global_best_before": 0.1003574885648869,
+      "parent_gain": 0.008785485347985345,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p17/result.json",
+      "node_id": 9,
+      "parent_id": 1,
+      "parent_loss": 0.13955456770807162,
+      "candidate_loss": 0.13389020518887038,
+      "global_best_before": 0.13389020518887038,
+      "parent_gain": 0.005664362519201244,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        6,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p17/result.json",
+      "node_id": 11,
+      "parent_id": 1,
+      "parent_loss": 0.13955456770807162,
+      "candidate_loss": 0.13389020518887038,
+      "global_best_before": 0.13389020518887038,
+      "parent_gain": 0.005664362519201244,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        6,
+        8,
+        9
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p17/result.json",
+      "node_id": 16,
+      "parent_id": 10,
+      "parent_loss": 0.14233234548584942,
+      "candidate_loss": 0.13389020518887038,
+      "global_best_before": 0.13389020518887038,
+      "parent_gain": 0.00844214029697904,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        6,
+        8,
+        9,
+        11,
+        15
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        8,
+        9,
+        11,
+        15
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p18/result.json",
+      "node_id": 10,
+      "parent_id": 1,
+      "parent_loss": 0.13220780889571496,
+      "candidate_loss": 0.12292398926706775,
+      "global_best_before": 0.12292398926706775,
+      "parent_gain": 0.009283819628647202,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p18/result.json",
+      "node_id": 14,
+      "parent_id": 1,
+      "parent_loss": 0.13220780889571496,
+      "candidate_loss": 0.12292398926706775,
+      "global_best_before": 0.12292398926706775,
+      "parent_gain": 0.009283819628647202,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p18/result.json",
+      "node_id": 15,
+      "parent_id": 1,
+      "parent_loss": 0.13220780889571496,
+      "candidate_loss": 0.12292398926706775,
+      "global_best_before": 0.12292398926706775,
+      "parent_gain": 0.009283819628647202,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        14
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        14
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p19/result.json",
+      "node_id": 12,
+      "parent_id": 10,
+      "parent_loss": 0.10742357758849512,
+      "candidate_loss": 0.10157382389391384,
+      "global_best_before": 0.10157382389391384,
+      "parent_gain": 0.005849753694581281,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_binpack_relational_p20/result.json",
+      "node_id": 9,
+      "parent_id": 1,
+      "parent_loss": 0.1092012243499,
+      "candidate_loss": 0.10364566879434445,
+      "global_best_before": 0.10364566879434445,
+      "parent_gain": 0.00555555555555555,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        0,
+        3,
+        6,
+        7
+      ],
+      "weakly_dominating_prior_node_ids": [
+        0,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_classification_relational_p11/result.json",
+      "node_id": 7,
+      "parent_id": 2,
+      "parent_loss": 0.04318346867366476,
+      "candidate_loss": 0.03926190004621377,
+      "global_best_before": 0.03141876279131181,
+      "parent_gain": 0.003921568627450987,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": [
+        5
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_classification_relational_p13/result.json",
+      "node_id": 10,
+      "parent_id": 2,
+      "parent_loss": 0.058334983825179904,
+      "candidate_loss": 0.038146167557932265,
+      "global_best_before": 0.038146167557932265,
+      "parent_gain": 0.02018881626724764,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        9
+      ],
+      "weakly_dominating_prior_node_ids": [
+        9
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_classification_relational_p18/result.json",
+      "node_id": 7,
+      "parent_id": 2,
+      "parent_loss": 0.05494817455601769,
+      "candidate_loss": 0.03979665940450254,
+      "global_best_before": 0.03979665940450254,
+      "parent_gain": 0.015151515151515152,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [
+        5
+      ],
+      "weakly_dominating_prior_node_ids": [
+        5
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_classification_relational_p18/result.json",
+      "node_id": 9,
+      "parent_id": 2,
+      "parent_loss": 0.05494817455601769,
+      "candidate_loss": 0.03979665940450254,
+      "global_best_before": 0.03979665940450254,
+      "parent_gain": 0.015151515151515152,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": [
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_tsp_relational_p12/result.json",
+      "node_id": 9,
+      "parent_id": 3,
+      "parent_loss": 0.036713829567061894,
+      "candidate_loss": 0.03306467115429693,
+      "global_best_before": 0.029573319709449247,
+      "parent_gain": 0.0036491584127649607,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": []
+    },
+    {
+      "archive_path": "chapter6_validation/runs/confirm_v1/qwen3.7-plus_tsp_relational_p13/result.json",
+      "node_id": 9,
+      "parent_id": 6,
+      "parent_loss": 0.04886812963676116,
+      "candidate_loss": 0.0441674689916452,
+      "global_best_before": 0.03386682277984704,
+      "parent_gain": 0.004700660645115963,
+      "terminal_collision": true,
+      "useful_gain": false,
+      "identical_prior_node_ids": [],
+      "weakly_dominating_prior_node_ids": []
+    }
+  ],
+  "counterexample_replay": {
+    "before_code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+    "after_code": "def priority(f):\n    d = f[\"distance\"]\n    rd = f[\"return_distance\"]\n    r = f[\"regret\"]\n    return -d + 0.2 * rd + 0.15 * r",
+    "before_validation_loss": 0.07324525964113937,
+    "after_validation_loss": 0.06220810163964809,
+    "fixed_probe_distance": 0.0,
+    "is_historical_instance_profile": true
+  },
+  "validation_redundancy_audit": {
+    "same_probe_and_validation_loss_vector": 35,
+    "weakly_dominated_by_one_existing_validation_rule": 45,
+    "binpack_identical": 33,
+    "classification_identical": 2,
+    "tsp_identical": 0
+  },
+  "interpretation": "Parent improvement is not automatically an archive or utility improvement. Identical observed behavior and loss vectors can rediscover known rules; finite validation dominance does not establish distributional dominance or absence of future branch potential."
+}

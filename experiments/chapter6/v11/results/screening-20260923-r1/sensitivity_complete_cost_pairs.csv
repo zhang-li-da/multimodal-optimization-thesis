@@ -1,0 +1,129 @@
+﻿model,task,regime,contrast,metric,eligible_paired_blocks,block_ids,mean_difference,bootstrap_95_low,bootstrap_95_high
+MiniMax-M3,binpack,slots8,relational_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0,0.0,0.0
+MiniMax-M3,binpack,slots8,relational_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-0.8,-2.4,0.4
+MiniMax-M3,binpack,slots8,relational_minus_niche,selector_loss,0,[],,,
+MiniMax-M3,binpack,slots8,relational_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",6966.8,5429.0,8883.8
+MiniMax-M3,binpack,slots8,relational_qp_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.00024154589371980784,0.0,0.0007246376811594236
+MiniMax-M3,binpack,slots8,relational_qp_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-1.4,-3.2,0.4
+MiniMax-M3,binpack,slots8,relational_qp_minus_niche,selector_loss,0,[],,,
+MiniMax-M3,binpack,slots8,relational_qp_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",7605.0,5671.8,9516.8
+MiniMax-M3,binpack,slots8,relational_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0,0.0,0.0
+MiniMax-M3,binpack,slots8,relational_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-1.8,-4.2,1.2
+MiniMax-M3,binpack,slots8,relational_rr_minus_niche,selector_loss,0,[],,,
+MiniMax-M3,binpack,slots8,relational_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",7448.4,5235.4,9700.4
+MiniMax-M3,binpack,slots8,relational_qp_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0,0.0,0.0
+MiniMax-M3,binpack,slots8,relational_qp_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-1.4,-3.4,1.2
+MiniMax-M3,binpack,slots8,relational_qp_rr_minus_niche,selector_loss,0,[],,,
+MiniMax-M3,binpack,slots8,relational_qp_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",7241.8,4857.6,9757.2
+MiniMax-M3,binpack,tokens30000,relational_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0,0.0,0.0
+MiniMax-M3,binpack,tokens30000,relational_minus_niche,modes,5,"[0, 1, 2, 3, 4]",0.6,-0.4,1.4
+MiniMax-M3,binpack,tokens30000,relational_minus_niche,selector_loss,0,[],,,
+MiniMax-M3,binpack,tokens30000,relational_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-3236.6,-4109.8,-2363.4
+MiniMax-M3,binpack,tokens30000,relational_qp_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0,0.0,0.0
+MiniMax-M3,binpack,tokens30000,relational_qp_minus_niche,modes,5,"[0, 1, 2, 3, 4]",0.0,-0.8,0.8
+MiniMax-M3,binpack,tokens30000,relational_qp_minus_niche,selector_loss,0,[],,,
+MiniMax-M3,binpack,tokens30000,relational_qp_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-2542.4,-3805.4,-1172.2
+MiniMax-M3,binpack,tokens30000,relational_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0,0.0,0.0
+MiniMax-M3,binpack,tokens30000,relational_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",0.0,-0.8,1.0
+MiniMax-M3,binpack,tokens30000,relational_rr_minus_niche,selector_loss,0,[],,,
+MiniMax-M3,binpack,tokens30000,relational_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-2408.6,-4010.2,-807.0
+MiniMax-M3,binpack,tokens30000,relational_qp_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0,0.0,0.0
+MiniMax-M3,binpack,tokens30000,relational_qp_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",0.8,-0.2,2.0
+MiniMax-M3,binpack,tokens30000,relational_qp_rr_minus_niche,selector_loss,0,[],,,
+MiniMax-M3,binpack,tokens30000,relational_qp_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-2774.6,-4313.8,-1627.0
+MiniMax-M3,tsp,slots8,relational_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.003007442902510854,-0.005585810444860095,0.010901250545004858
+MiniMax-M3,tsp,slots8,relational_minus_niche,modes,5,"[0, 1, 2, 3, 4]",0.0,-1.4,1.4
+MiniMax-M3,tsp,slots8,relational_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",-0.001538512486214963,-0.00977358934708343,0.006084585371379953
+MiniMax-M3,tsp,slots8,relational_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",7863.0,6993.8,8741.2
+MiniMax-M3,tsp,slots8,relational_qp_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.007170139647819632,-1.303347815967415e-05,0.017288294100256448
+MiniMax-M3,tsp,slots8,relational_qp_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-0.6,-1.4,0.4
+MiniMax-M3,tsp,slots8,relational_qp_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",0.0017277727160929846,-0.005729141370578729,0.006787855014069791
+MiniMax-M3,tsp,slots8,relational_qp_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",8173.4,7703.0,8643.8
+MiniMax-M3,tsp,slots8,relational_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",-0.002556858467816821,-0.008577086894158117,0.0031088268858788072
+MiniMax-M3,tsp,slots8,relational_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-0.6,-2.8,1.8
+MiniMax-M3,tsp,slots8,relational_rr_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",-0.006866289803166048,-0.013772465876121598,-9.40867197619738e-05
+MiniMax-M3,tsp,slots8,relational_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",7674.8,4360.8,10988.8
+MiniMax-M3,tsp,slots8,relational_qp_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0017131146314625797,-0.003480438124966456,0.0069066673878916155
+MiniMax-M3,tsp,slots8,relational_qp_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-1.2,-2.8,0.2
+MiniMax-M3,tsp,slots8,relational_qp_rr_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",-0.0038407962549855484,-0.01139687539658343,0.0023354294500909033
+MiniMax-M3,tsp,slots8,relational_qp_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",10063.8,7648.4,12098.8
+MiniMax-M3,tsp,tokens30000,relational_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.014022887023982647,0.002778618830581779,0.02526715521738352
+MiniMax-M3,tsp,tokens30000,relational_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-2.0,-3.2,-1.0
+MiniMax-M3,tsp,tokens30000,relational_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",0.004513675797923678,-0.0014467061867879632,0.011871785836677237
+MiniMax-M3,tsp,tokens30000,relational_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-732.6,-1272.6,-191.8
+MiniMax-M3,tsp,tokens30000,relational_qp_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.014640724997260934,0.001249384974808297,0.02803206501971357
+MiniMax-M3,tsp,tokens30000,relational_qp_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-1.8,-4.2,0.2
+MiniMax-M3,tsp,tokens30000,relational_qp_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",0.006128628663547889,0.001310439467059371,0.010946817860036406
+MiniMax-M3,tsp,tokens30000,relational_qp_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-2233.2,-3287.8,-1411.2
+MiniMax-M3,tsp,tokens30000,relational_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.01696702324039648,0.007895035894235045,0.024958222622320385
+MiniMax-M3,tsp,tokens30000,relational_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-2.2,-4.4,-0.2
+MiniMax-M3,tsp,tokens30000,relational_rr_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",0.0077530261570663535,0.003388428046716574,0.011011507085983313
+MiniMax-M3,tsp,tokens30000,relational_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-2280.6,-4303.6,-257.6
+MiniMax-M3,tsp,tokens30000,relational_qp_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.015060408599274776,0.0048536619811660395,0.02526715521738352
+MiniMax-M3,tsp,tokens30000,relational_qp_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-1.6,-3.6,0.4
+MiniMax-M3,tsp,tokens30000,relational_qp_rr_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",0.006826605081475698,0.0028087007040955582,0.010844509458855837
+MiniMax-M3,tsp,tokens30000,relational_qp_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-2034.2,-3213.6,-1047.4
+qwen3.7-plus,binpack,slots8,relational_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0,0.0,0.0
+qwen3.7-plus,binpack,slots8,relational_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-0.2,-1.2,0.6
+qwen3.7-plus,binpack,slots8,relational_minus_niche,selector_loss,0,[],,,
+qwen3.7-plus,binpack,slots8,relational_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",11193.2,10618.8,11692.6
+qwen3.7-plus,binpack,slots8,relational_qp_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0,0.0,0.0
+qwen3.7-plus,binpack,slots8,relational_qp_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-0.2,-1.2,0.8
+qwen3.7-plus,binpack,slots8,relational_qp_minus_niche,selector_loss,0,[],,,
+qwen3.7-plus,binpack,slots8,relational_qp_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",11448.2,11003.0,11824.0
+qwen3.7-plus,binpack,slots8,relational_rr_minus_niche,test_loss,4,"[0, 2, 3, 4]",0.0,0.0,0.0
+qwen3.7-plus,binpack,slots8,relational_rr_minus_niche,modes,4,"[0, 2, 3, 4]",0.25,-0.75,1.5
+qwen3.7-plus,binpack,slots8,relational_rr_minus_niche,selector_loss,0,[],,,
+qwen3.7-plus,binpack,slots8,relational_rr_minus_niche,known_tokens,4,"[0, 2, 3, 4]",11324.5,10486.75,11947.5
+qwen3.7-plus,binpack,slots8,relational_qp_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0,0.0,0.0
+qwen3.7-plus,binpack,slots8,relational_qp_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",0.0,-1.2,1.0
+qwen3.7-plus,binpack,slots8,relational_qp_rr_minus_niche,selector_loss,0,[],,,
+qwen3.7-plus,binpack,slots8,relational_qp_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",11608.4,11166.0,12019.4
+qwen3.7-plus,binpack,tokens30000,relational_minus_niche,test_loss,4,"[1, 2, 3, 4]",0.0,0.0,0.0
+qwen3.7-plus,binpack,tokens30000,relational_minus_niche,modes,4,"[1, 2, 3, 4]",-1.25,-2.5,-0.25
+qwen3.7-plus,binpack,tokens30000,relational_minus_niche,selector_loss,0,[],,,
+qwen3.7-plus,binpack,tokens30000,relational_minus_niche,known_tokens,4,"[1, 2, 3, 4]",-2702.0,-3448.5,-1845.25
+qwen3.7-plus,binpack,tokens30000,relational_qp_minus_niche,test_loss,4,"[1, 2, 3, 4]",0.0,0.0,0.0
+qwen3.7-plus,binpack,tokens30000,relational_qp_minus_niche,modes,4,"[1, 2, 3, 4]",-2.25,-3.5,-1.0
+qwen3.7-plus,binpack,tokens30000,relational_qp_minus_niche,selector_loss,0,[],,,
+qwen3.7-plus,binpack,tokens30000,relational_qp_minus_niche,known_tokens,4,"[1, 2, 3, 4]",-3455.75,-3882.0,-2861.25
+qwen3.7-plus,binpack,tokens30000,relational_rr_minus_niche,test_loss,4,"[1, 2, 3, 4]",0.0,0.0,0.0
+qwen3.7-plus,binpack,tokens30000,relational_rr_minus_niche,modes,4,"[1, 2, 3, 4]",-1.75,-3.0,-0.5
+qwen3.7-plus,binpack,tokens30000,relational_rr_minus_niche,selector_loss,0,[],,,
+qwen3.7-plus,binpack,tokens30000,relational_rr_minus_niche,known_tokens,4,"[1, 2, 3, 4]",-3547.5,-4171.5,-2923.5
+qwen3.7-plus,binpack,tokens30000,relational_qp_rr_minus_niche,test_loss,4,"[1, 2, 3, 4]",0.0,0.0,0.0
+qwen3.7-plus,binpack,tokens30000,relational_qp_rr_minus_niche,modes,4,"[1, 2, 3, 4]",-2.25,-3.5,-1.0
+qwen3.7-plus,binpack,tokens30000,relational_qp_rr_minus_niche,selector_loss,0,[],,,
+qwen3.7-plus,binpack,tokens30000,relational_qp_rr_minus_niche,known_tokens,4,"[1, 2, 3, 4]",-3607.25,-4190.0,-2933.75
+qwen3.7-plus,tsp,slots8,relational_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",-0.008481932378786958,-0.01813941437936001,0.0009441446943615678
+qwen3.7-plus,tsp,slots8,relational_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-0.8,-2.4,0.4
+qwen3.7-plus,tsp,slots8,relational_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",-0.01273548597513704,-0.026687462845488053,-0.0020466454643530015
+qwen3.7-plus,tsp,slots8,relational_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",7689.2,6912.8,8932.0
+qwen3.7-plus,tsp,slots8,relational_qp_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.001714139664709087,-0.005463729063756186,0.008930343851905134
+qwen3.7-plus,tsp,slots8,relational_qp_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-1.4,-3.2,0.6
+qwen3.7-plus,tsp,slots8,relational_qp_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",-0.0036223444340541993,-0.019345628347790016,0.01026343024085435
+qwen3.7-plus,tsp,slots8,relational_qp_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",7749.2,6304.2,9029.6
+qwen3.7-plus,tsp,slots8,relational_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0016938099618233394,-0.009311774131326115,0.012699394054972793
+qwen3.7-plus,tsp,slots8,relational_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-1.4,-2.8,0.2
+qwen3.7-plus,tsp,slots8,relational_rr_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",-0.004660440204503634,-0.021994816849606646,0.009019550143538264
+qwen3.7-plus,tsp,slots8,relational_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",7708.2,6207.6,9194.6
+qwen3.7-plus,tsp,slots8,relational_qp_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0008752279841284752,-0.008264429742660954,0.009895471771659736
+qwen3.7-plus,tsp,slots8,relational_qp_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-1.2,-2.2,-0.2
+qwen3.7-plus,tsp,slots8,relational_qp_rr_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",-0.003597256590629476,-0.021579008532264736,0.013729423038636968
+qwen3.7-plus,tsp,slots8,relational_qp_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",7806.2,6374.8,9326.4
+qwen3.7-plus,tsp,tokens30000,relational_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0007061277009452457,-0.003718901835714908,0.005513254415256637
+qwen3.7-plus,tsp,tokens30000,relational_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-1.2,-2.2,-0.2
+qwen3.7-plus,tsp,tokens30000,relational_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",0.006143736402296793,0.0008736066946405136,0.013923731838741033
+qwen3.7-plus,tsp,tokens30000,relational_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-3785.0,-4652.2,-3093.0
+qwen3.7-plus,tsp,tokens30000,relational_qp_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.0043802053320344935,0.0003870032912222862,0.0083734073728467
+qwen3.7-plus,tsp,tokens30000,relational_qp_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-0.8,-2.0,0.0
+qwen3.7-plus,tsp,tokens30000,relational_qp_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",0.011270247364228606,0.000606442575390144,0.021439175996473502
+qwen3.7-plus,tsp,tokens30000,relational_qp_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-3844.0,-4400.4,-3018.6
+qwen3.7-plus,tsp,tokens30000,relational_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.004329906522961587,-0.0042156804213900915,0.014391417657109652
+qwen3.7-plus,tsp,tokens30000,relational_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",0.4,-0.8,1.8
+qwen3.7-plus,tsp,tokens30000,relational_rr_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",0.008210267458272351,-0.002404831655653518,0.018825366572198222
+qwen3.7-plus,tsp,tokens30000,relational_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-4176.8,-5815.6,-2538.0
+qwen3.7-plus,tsp,tokens30000,relational_qp_rr_minus_niche,test_loss,5,"[0, 1, 2, 3, 4]",0.008197437139345485,0.0024333863767858647,0.015750631239565382
+qwen3.7-plus,tsp,tokens30000,relational_qp_rr_minus_niche,modes,5,"[0, 1, 2, 3, 4]",-1.4,-2.8,0.0
+qwen3.7-plus,tsp,tokens30000,relational_qp_rr_minus_niche,selector_loss,5,"[0, 1, 2, 3, 4]",0.013189417970970957,0.0020659859088909493,0.023519040668907375
+qwen3.7-plus,tsp,tokens30000,relational_qp_rr_minus_niche,known_tokens,5,"[0, 1, 2, 3, 4]",-3615.8,-4477.4,-2818.2
