@@ -71,6 +71,13 @@ def audit_result(result):
         counts["parent_improvements"]+=int(event["parent_improved"])
         counts["neighborhood_improvements"]+=int(event["neighborhood_improved"])
         if local_only:
+            previous=[n for n in actual.nodes[:-1] if n["evaluation"]["valid"]]
+            identical=[n for n in previous if n["evaluation"]["behavior"]==node["evaluation"]["behavior"]
+                       and n["evaluation"]["per_instance_loss"]==node["evaluation"]["per_instance_loss"]]
+            dominant=[n for n in previous if all(a<=b+1e-12 for a,b in
+                      zip(n["evaluation"]["per_instance_loss"],node["evaluation"]["per_instance_loss"]))]
+            counts["local_only_identical_to_prior_observed_rule"]+=int(bool(identical))
+            counts["local_only_weakly_dominated_on_validation"]+=int(bool(dominant))
             in_archive=any(n["id"]==node["id"] for n in actual.A)
             counts["local_only_retained_in_search_archive"]+=int(in_archive)
             counts["local_only_later_used_as_parent"]+=int(future_parents[node["id"]]>0)
@@ -79,6 +86,8 @@ def audit_result(result):
                 "loss":event["loss"],"parent_gain":event["parent_improvement_margin"],
                 "neighbor_gain":event["neighborhood_improvement_margin"],"credit_eligible":event["local_credit_eligible"],
                 "retained_in_search_archive_after_observe":in_archive,
+                "identical_prior_node_ids":[n["id"] for n in identical],
+                "weakly_dominating_prior_node_ids":[n["id"] for n in dominant],
                 "later_parent_uses":future_parents[node["id"]],"later_reference_uses":future_refs[node["id"]]})
         step+=1
     return {"counts":dict(counts),"local_development_examples":exposures,"fixed_history_decision_changes":comparisons}
@@ -124,6 +133,7 @@ def main():
             "local_only_collisions","local_only_credit_eligible","local_only_credit_exhausted",
             "local_only_retained_in_search_archive","local_only_later_used_as_parent",
             "local_only_later_used_as_reference","restarts","restart_trigger_untried",
+            "local_only_identical_to_prior_observed_rule","local_only_weakly_dominated_on_validation",
             "restart_trigger_saturation","restart_trigger_no_growth",
             "relational_qp_fixed_history_decision_changes","relational_rr_fixed_history_decision_changes",
             "relational_qp_rr_fixed_history_decision_changes")}
