@@ -1,6 +1,6 @@
 # v1.2 r2 evidence package
 
-This is the public result package for the preregistered Chapter 6 v1.2 bounded branch-development screen. It contains all 18 valid r2 runs and their analysis outputs. The earlier r1 batch is excluded because its `niche` controller incorrectly enabled the development pool; it is preserved separately under [`excluded-r1/`](excluded-r1/), with its source snapshot and raw runs, and is not combined with r2. See the [version history](../../VERSION_HISTORY.md) for the freeze and correction commits.
+This is the public result package for the preregistered Chapter 6 v1.2 bounded branch-development screen. It contains all 18 valid r2 runs and their analysis outputs. The earlier r1 batch is excluded because its `niche` controller incorrectly enabled the development pool; it is preserved separately under [`excluded-r1/`](excluded-r1/), with its source snapshot and raw runs, and is not combined with r2. See the [version history](VERSION_HISTORY.md) for the freeze and correction commits and their GitHub source tags.
 
 ## Result in one paragraph
 
