@@ -13,7 +13,7 @@ import random
 import statistics
 import time
 
-from .benchmarks import (VERSION, INDEPENDENT_PROFILE, TAGS, DESCRIPTIONS, SEEDS, FEATURES, instances,
+from .benchmarks import (VERSION, INDEPENDENT_PROFILE, V12_TSP_PROFILE, TAGS, DESCRIPTIONS, SEEDS, FEATURES, instances,
     split_fingerprint, evaluate, behavior_distance, descriptor_hash)
 from .providers import ModelClient, ModelError, parse_json
 from .programs import ProgramError
@@ -21,7 +21,8 @@ from .programs import ProgramError
 SYSTEM = "You are an algorithm researcher writing small executable heuristics. Obey the provided bounded Python language. Return one valid JSON object only; no markdown. Assess feedback empirically and do not invent evaluation results."
 GRAMMAR = "Allowed Python: exactly def priority(f), scalar local assignments, return, if/else or conditional expression, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh. NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls. Access only listed features with f['feature']. Guard denominators with 1e-9 and log domains. <=25 source lines and <=320 AST nodes. Higher returned value is chosen."
 METHODS = ("quality", "niche", "terminal", "relational", "relational_no_w",
-           "relational_qp", "relational_rr", "relational_qp_rr")
+           "relational_qp", "relational_rr", "relational_qp_rr",
+           "niche_fixed_dev", "relational_branch")
 CONTROLLER_FACTORS = {
     "relational": {"quality_protection": False, "restart_correction": False},
     "relational_qp": {"quality_protection": True, "restart_correction": False},
@@ -320,8 +321,10 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
     checkpoint_file=directory/"checkpoint.json"
     pending_file=directory/"pending_call.json"
     profile=os.getenv("CHAPTER6_BENCHMARK_PROFILE", "")
-    if profile and profile != INDEPENDENT_PROFILE:
+    if profile and profile not in (INDEPENDENT_PROFILE,V12_TSP_PROFILE):
         raise ValueError("Unknown experiment benchmark profile.")
+    if profile==V12_TSP_PROFILE and task!="tsp":
+        raise ValueError("The v1.2 profile is defined for TSP only.")
     data_block=int(os.getenv("CHAPTER6_DATA_BLOCK", "0"))
     if data_block<0:
         raise ValueError("Data block must be nonnegative.")
@@ -329,12 +332,19 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
         raise ValueError("Token budget must be positive.")
     benchmark_version=f"{VERSION}|{profile or 'default'}"
     factors=CONTROLLER_FACTORS.get(method,{"quality_protection":False,"restart_correction":False})
+    if profile==V12_TSP_PROFILE:
+        from .v12_controller import V12_METHODS, V12SearchState, v12_source_fingerprint
+        if method not in V12_METHODS:
+            raise ValueError("The v1.2 profile requires a preregistered v1.2 controller.")
+        run_fingerprint=v12_source_fingerprint()
+    else:
+        run_fingerprint=source_fingerprint()
     config={"task":task,"method":method,"seed":seed,"steps":steps,"provider":provider,"model":model,
             "benchmark_version":benchmark_version,"data_block":data_block,
             "quality_tolerance":QUALITY_TOLERANCE[task],
             "behavior_radius":BEHAVIOR_RADIUS,"archive_capacity":MAX_ARCHIVE,
             "controller_factors":factors,"token_budget":token_budget,
-            "source_fingerprint":source_fingerprint(),
+            "source_fingerprint":run_fingerprint,
             "splits":{s:split_fingerprint(task,s) for s in ("probe","validation","test")}}
     if final_file.exists():
         old=json.loads(final_file.read_text(encoding="utf-8"))
@@ -352,7 +362,10 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
         if pending.get("iteration",finished)>=finished and not checkpoint.get("search_finished",False):
             raise RuntimeError("Interrupted model attempt remains in pending_call.json; refusing an unaccounted retry.")
     client=ModelClient.from_opencode(provider,model)
-    state=SearchState(task,method,seed,**factors)
+    if profile==V12_TSP_PROFILE:
+        state=V12SearchState(task,method,seed,**factors)
+    else:
+        state=SearchState(task,method,seed,**factors)
     usage=[]
     llm_errors=[]
     budget_stops=[]
@@ -466,7 +479,7 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
               "allocated_tag":selection["target"],"code":code,"source":"live_llm",
               "parent_id":selection["parent"]["id"] if selection["parent"] else None,
               "reference_id":selection["reference"]["id"] if selection["reference"] else None,
-              "action":selection["action"],"allocation":selection["evidence"],"evaluation":evaluation}
+              "action":selection["action"],"allocation":selection.get("audit",selection["evidence"]),"evaluation":evaluation}
         state.observe(node)
         checkpoint={"config":config,"nodes":state.nodes,"usage":usage,"llm_errors":llm_errors,
                     "budget_stops":budget_stops,"reservation_violations":reservation_violations,
@@ -565,8 +578,11 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
         {"nodes":state.nodes,"archive_ids":[n["id"] for n in archive],"test":test},
         task,instances(task,"validation"),instances(task,"test"))
     summary["algorithm_set_selector_status"]=selector.get("status")
+    if hasattr(state,"summary"):
+        summary.update(state.summary())
     result={"config":config,"summary":summary,"nodes":state.nodes,"events":state.events,
             "archive_ids":[n["id"] for n in archive],"working_ids":[n["id"] for n in state.W],
+            "branch_pool":getattr(state,"branch_pool",[]),
             "terminal_memory":state.M,"curve":state.curve,"usage":usage,"llm_errors":llm_errors,
             "budget_stops":budget_stops,"reservation_violations":reservation_violations,
             "usage_missing":usage_missing,"test":test,"selector":selector,

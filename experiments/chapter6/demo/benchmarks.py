@@ -15,6 +15,7 @@ from .classification import CLASS_TAGS, CLASS_DESCRIPTION, CLASS_SEEDS
 
 VERSION = "heuristic-benchmark-2-frozen-pilot"
 INDEPENDENT_PROFILE = "chapter6-v11-independent-v1"
+V12_TSP_PROFILE = "chapter6-v12-tsp14-v1"
 TAGS = {
     "tsp": ["local_distance", "return_aware", "regret", "cluster", "lookahead", "progress", "nonlinear", "hybrid"],
     "binpack": ["tight_fit", "loose_fit", "exact_fill", "balance", "distribution", "item_size", "nonlinear", "hybrid"],
@@ -87,6 +88,17 @@ def _instances_cached(task, split, profile, block):
         size=12 if task=="tsp" else 64
         base=offsets[split]+block*10_000
         return tuple(_make_instance(task,family,base+fi*100+j,size)
+                     for fi,family in enumerate(families) for j in range(counts[split]))
+    if profile == V12_TSP_PROFILE:
+        if task != "tsp":
+            raise ValueError("The v1.2 mechanism profile is defined for TSP only.")
+        families=("uniform","clustered","grid")
+        offsets={"probe":918000,"validation":934000,"test":962000}
+        counts={"probe":4,"validation":12,"test":20}
+        if split not in offsets:
+            raise ValueError("Unknown split.")
+        base=offsets[split]+block*20_000
+        return tuple(_make_instance(task,family,base+fi*200+j,14)
                      for fi,family in enumerate(families) for j in range(counts[split]))
     # All generation rules and seeds are fixed before the live experiment.
     family_names = ("uniform","clustered","grid") if task == "tsp" else ("uniform","bimodal","complementary")
