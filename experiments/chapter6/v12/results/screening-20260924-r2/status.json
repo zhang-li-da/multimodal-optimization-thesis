@@ -1,0 +1,92 @@
+[
+  {
+    "job_id": "minimax-niche-b0",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b0",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "alibaba-niche-b0",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b2",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b0",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "alibaba-niche-b1",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "minimax-relational_branch-b1",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "minimax-relational_branch-b2",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b1",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "minimax-niche-b1",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "minimax-relational_branch-b0",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "alibaba-relational_branch-b2",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "minimax-niche-b2",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b1",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "job_id": "alibaba-relational_branch-b0",
+    "status": "completed",
+    "exit_code": 0
+  }
+]
