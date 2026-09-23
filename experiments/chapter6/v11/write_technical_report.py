@@ -55,9 +55,10 @@ def main():
     generated=sum(s["generated"] for s in summaries)
     valid=sum(s["valid_generated"] for s in summaries)
     token_total=sum(s["tokens_used"] for s in summaries)
-    selectors=[r["selector"] for r in results if r["config"]["task"]=="tsp"]
+    selectors=[r["selector"] for r in results if r["config"]["task"]=="tsp"
+               and r.get("selector",{}).get("selection_seconds_per_test_instance") is not None]
     selector_cells=[g for g in groups if g["task"]=="tsp" and g["metric"]=="selector_gain_vs_single"]
-    selector_positive=sum(g["mean"]>0 for g in selector_cells)
+    selector_positive=sum(g["mean"] is not None and g["mean"]>0 for g in selector_cells)
     fixed=[s for r,s in zip(results,summaries) if r["config"]["token_budget"] is not None and s["usage_complete"]]
     text=[
         "# 第六章 v1.1 技术报告：质量保护、重启修正与多算法用途",
@@ -182,7 +183,7 @@ def main():
     text.extend(["","![因子效应](factorial_effects.png)","",
         "## 7. 多算法集合是否有实际用途","",
         "TSP 用验证集的逐实例损失拟合标准化 Ridge 多输出预测器（alpha=10），输入只有城市几何特征；预测最低损失规则后才读取对应测试损失。每实例只需选择一个规则，不用测试标签寻找正确算法。装箱不开展这一实验，避免完整序列特征泄露未来输入。","",
-        f"20 个 TSP“模型×预算×方法”单元中，学习选择器的均值收益为正的单元为 {selector_positive}/20。这个计数只是描述；需要结合每格五个区块和区间判断一致性。所有 TSP 运行记录的选择特征与预测时间均值为 {1000*statistics.fmean(s['selection_seconds_per_test_instance'] for s in selectors):.3f} ms/实例。该时间是本机运行测量，不等同硬实时保证或跨机器效率排名。","",
+        f"20 个 TSP“模型×预算×方法”单元中，学习选择器的均值收益为正的单元为 {selector_positive}/20。这个计数只是描述；需要结合每格五个区块和区间判断一致性。{('所有具备选择器结果的 TSP 运行中，选择特征与预测时间均值为 '+format(1000*statistics.fmean(s['selection_seconds_per_test_instance'] for s in selectors),'.3f')+' ms/实例。') if selectors else '本批次没有可用的 TSP 选择器结果。'}该时间是本机运行测量，不等同硬实时保证或跨机器效率排名。","",
         f"另对 {deployment['tsp_runs']} 次 TSP 运行回放冻结选择和单一规则：选择器特征/预测时间加被选算法执行时间的平均开销为 {deployment['mean_selector_ms_per_instance']:.3f} ms/实例，单规则为 {deployment['mean_single_ms_per_instance']:.3f} ms/实例；逐运行时间比均值为 {deployment['mean_end_to_end_time_ratio']:.3f}。逐实例选择损失回放一致。精确参考最优值预先计算，不计入部署时间；特征/预测时间来自原始 36 实例批处理平均，规则执行时间来自之后一次本机回放，两者相加为描述性成本估计，不等同同时测得的端到端时延保证。详见 `deployment_cost.csv`。","",
         "| 模型 | 预算 | 方法 | 单规则损失 % | 学习选择器损失 % | 选择收益 pp [95% 区间] | oracle 潜力 pp（不可部署） |",
         "|---|---|---|---:|---:|---:|---:|"])
