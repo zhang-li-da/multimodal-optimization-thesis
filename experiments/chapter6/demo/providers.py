@@ -108,15 +108,17 @@ class ModelClient:
         usage = data.get("usage", {})
         if self.protocol == "anthropic":
             output = "\n".join(c.get("text", "") for c in data.get("content", []) if c.get("type") == "text")
-            input_tokens, output_tokens = usage.get("input_tokens",0), usage.get("output_tokens",0)
+            input_tokens = (usage.get("input_tokens",0) or 0) + (usage.get("cache_read_input_tokens",0) or 0) + (usage.get("cache_creation_input_tokens",0) or 0)
+            output_tokens = usage.get("output_tokens",0) or 0
         else:
             choices = data.get("choices", [])
-            if not choices:
-                raise ModelError("API returned no choices.")
-            output = choices[0].get("message", {}).get("content") or ""
-            input_tokens, output_tokens = usage.get("prompt_tokens",0), usage.get("completion_tokens",0)
-        if not isinstance(output, str) or not output.strip():
-            raise ModelError("API returned no usable text within output budget.")
+            output = choices[0].get("message", {}).get("content") or "" if choices else ""
+            input_tokens, output_tokens = usage.get("prompt_tokens",0) or 0, usage.get("completion_tokens",0) or 0
+        # Preserve billed usage even when a thinking model returns no final text.
+        # The caller records the completion before treating empty output as an
+        # invalid proposal; dropping this response would undercount costs.
+        if not isinstance(output,str):
+            output=""
         return Completion(output, data.get("model", self.model), int(input_tokens), int(output_tokens),
                           time.perf_counter()-start, request_id or str(data.get("id", "")))
 

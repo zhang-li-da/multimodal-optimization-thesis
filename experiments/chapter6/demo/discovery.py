@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+from datetime import datetime, timezone
 import hashlib
 import json
 import math
@@ -32,6 +33,8 @@ BEHAVIOR_RADIUS = 0.08
 MAX_ARCHIVE = 10
 MAX_WORKING = 16
 MAX_TERMINAL = 128
+LOCAL_GAIN_EPSILON = 1e-4
+MAX_LOCAL_CREDITS = 2
 
 
 def _brief(node):
@@ -82,6 +85,7 @@ class SearchState:
         self.curve=[]
         self.best=None
         self.no_growth=0
+        self.local_credits={}
 
     def observe(self,node):
         ev=node["evaluation"]
@@ -89,23 +93,31 @@ class SearchState:
         nearest=None
         distance=None
         if ev["valid"] and previous:
-            nearest=min(previous,key=lambda n:behavior_distance(ev["behavior"],n["evaluation"]["behavior"]))
+            nearest=min(previous,key=lambda n:(behavior_distance(ev["behavior"],n["evaluation"]["behavior"]),
+                                                n["evaluation"]["loss"],n["id"]))
             distance=behavior_distance(ev["behavior"],nearest["evaluation"]["behavior"])
         collision=ev["valid"] and distance is not None and distance<=BEHAVIOR_RADIUS
         improved=ev["valid"] and (self.best is None or ev["loss"] < self.best-1e-9)
         competitive=ev["valid"] and (self.best is None or ev["loss"] <= self.best+QUALITY_TOLERANCE[self.task])
         parent=next((n for n in self.nodes if n["id"]==node.get("parent_id") and n["evaluation"]["valid"]),None)
         parent_margin=(parent["evaluation"]["loss"]-ev["loss"]) if ev["valid"] and parent else None
-        neighbor_margin=(nearest["evaluation"]["loss"]-ev["loss"]) if ev["valid"] and nearest else None
-        parent_improved=parent_margin is not None and parent_margin>1e-9
-        neighbor_improved=neighbor_margin is not None and neighbor_margin>1e-9
+        neighbor_margin=(nearest["evaluation"]["loss"]-ev["loss"]) if collision else None
+        parent_improved=parent_margin is not None and parent_margin>LOCAL_GAIN_EPSILON
+        neighbor_improved=neighbor_margin is not None and neighbor_margin>LOCAL_GAIN_EPSILON
         # Local gains are credited only while the candidate remains within the
         # common quality envelope. This protects useful development without
         # allowing a weak branch to claim unlimited progress.
         local_development=bool(competitive and (parent_improved or neighbor_improved))
+        allocated=node.get("allocated_tag") or node["tags"][0]
+        if improved or (competitive and not collision):
+            self.local_credits[allocated]=0
+        local_credit=bool(local_development and self.local_credits.get(allocated,0)<MAX_LOCAL_CREDITS)
+        if local_credit and not improved:
+            self.local_credits[allocated]=self.local_credits.get(allocated,0)+1
         productive_collision=bool(collision and (improved or local_development))
         unproductive_collision=bool(collision and not productive_collision)
-        gain=improved or (competitive and not collision) or (self.quality_protection and local_development)
+        gain=improved or (competitive and not collision) or (self.quality_protection and local_credit)
+        global_margin=(self.best-ev["loss"]) if ev["valid"] and self.best is not None else None
         self.best=min(self.best,ev["loss"]) if ev["valid"] and self.best is not None else (ev["loss"] if ev["valid"] else self.best)
         self.no_growth=0 if gain else self.no_growth+1
         event={"node_id":node["id"],"tags":node["tags"],"allocated_tag":node.get("allocated_tag"),"parent_id":node["parent_id"],
@@ -114,6 +126,7 @@ class SearchState:
                "nearest_node":nearest["id"] if nearest else None,
                "different_intent_collision":bool(collision and set(node["tags"])!=set(nearest["tags"])),
                "improved":bool(improved),"parent_improvement_margin":parent_margin,
+               "global_improvement_margin":global_margin,"local_credit_eligible":local_credit,
                "neighborhood_improvement_margin":neighbor_margin,
                "parent_improved":bool(parent_improved),"neighborhood_improved":bool(neighbor_improved),
                "competitive_local_development":bool(local_development),
@@ -171,12 +184,14 @@ class SearchState:
                 n=len(valid_records)
                 gains=sum(r["useful_gain"] for r in valid_records)
                 raw_collisions=sum(r["terminal_collision"] for r in valid_records)
-                penalized_collisions=sum(r["unproductive_collision"] for r in valid_records) if self.quality_protection else raw_collisions
+                penalized_collisions=sum(r["terminal_collision"] and not (r["improved"] or r["local_credit_eligible"])
+                                        for r in valid_records) if self.quality_protection else raw_collisions
                 posterior=(1+gains)/(2+n)
                 uncertainty=math.sqrt(math.log(2+len(self.M))/(1+len(records)))
                 score=posterior+0.45*uncertainty-0.5*penalized_collisions/max(1,n)
                 saturation_collisions=sum(r["unproductive_collision"] for r in valid_records) if self.restart_correction else raw_collisions
-                recent_local_development=any(r.get("competitive_local_development",False) for r in valid_records[-2:])
+                recent_local_development=any(r.get("local_credit_eligible",False) for r in valid_records[-2:]
+                    if r.get("node_id",-1)>=len(self.nodes)-2)
                 history[tag]={"attempts":len(records),"valid":n,"gains":gains,
                               "collisions":raw_collisions,"penalized_collisions":penalized_collisions,
                               "saturation_collisions":saturation_collisions,
@@ -273,10 +288,11 @@ def source_fingerprint():
         "experiments/chapter6/v11/run_factorial.py",
         "experiments/chapter6/v11/analyze_factorial.py",
         "experiments/chapter6/v11/test_v11.py",
+        "experiments/chapter6/v11/README.md",
     )
     for name in names:
         digest.update(name.encode())
-        digest.update((root/name).read_bytes())
+        digest.update((root/name).read_bytes().replace(b"\r\n",b"\n"))
     return digest.hexdigest()
 
 
@@ -302,6 +318,7 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
     directory.mkdir(parents=True,exist_ok=True)
     final_file=directory/"result.json"
     checkpoint_file=directory/"checkpoint.json"
+    pending_file=directory/"pending_call.json"
     profile=os.getenv("CHAPTER6_BENCHMARK_PROFILE", "")
     if profile and profile != INDEPENDENT_PROFILE:
         raise ValueError("Unknown experiment benchmark profile.")
@@ -325,6 +342,15 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
             raise ValueError("Existing run has different config; choose a new output directory.")
         print(json.dumps({"cached_run":str(directory),"summary":old["summary"]}),flush=True)
         return old
+    # An interrupted request may have been billed without a response. Do not
+    # silently replay it. The runner preserves this run as an infrastructure
+    # failure until explicit provenance-aware recovery is possible.
+    if pending_file.exists():
+        pending=json.loads(pending_file.read_text(encoding="utf-8"))
+        checkpoint=json.loads(checkpoint_file.read_text(encoding="utf-8")) if checkpoint_file.exists() else {}
+        finished=len(checkpoint.get("nodes",[]))-len(SEEDS[task])
+        if pending.get("iteration",finished)>=finished and not checkpoint.get("search_finished",False):
+            raise RuntimeError("Interrupted model attempt remains in pending_call.json; refusing an unaccounted retry.")
     client=ModelClient.from_opencode(provider,model)
     state=SearchState(task,method,seed,**factors)
     usage=[]
@@ -334,6 +360,7 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
     usage_missing=[]
     start=time.perf_counter()
     prior_elapsed=0.0
+    search_finished=False
     if checkpoint_file.exists():
         saved=json.loads(checkpoint_file.read_text(encoding="utf-8"))
         if saved["config"]!=config:
@@ -346,6 +373,7 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
         reservation_violations=saved.get("reservation_violations",[])
         usage_missing=saved.get("usage_missing",[])
         prior_elapsed=saved.get("elapsed_seconds",0)
+        search_finished=saved.get("search_finished",False)
         if saved.get("rng_state"):
             def tuples(obj): return tuple(tuples(x) for x in obj) if isinstance(obj,list) else obj
             state.rng.setstate(tuples(saved["rng_state"]))
@@ -357,14 +385,14 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
                 "source":"handwritten_seed","evaluation":ev})
 
     def record_usage(stage, iteration, response):
-        item={"stage":stage,"iteration":iteration,**response.usage()}
+        item={"stage":stage,"iteration":iteration,"recorded_utc":datetime.now(timezone.utc).isoformat(),**response.usage()}
         usage.append(item)
         if item["input_tokens"]<=0 or item["output_tokens"]<=0:
             usage_missing.append({"stage":stage,"iteration":iteration,
                                   "reason":"provider returned zero or missing token usage"})
 
     completed=len(state.nodes)-len(SEEDS[task])
-    for step in range(completed,steps):
+    for step in range(steps if search_finished else completed,steps):
         stop_after_candidate=False
         selection=state.choose(step)
         plan_prompt=planner_prompt(task,selection,step)
@@ -377,6 +405,7 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
         plan={"name":f"candidate_{step}","intent":"unavailable","tags":[selection["target"]]}
         code=""
         try:
+            _save(pending_file,{"iteration":step,"stage":"planner_requested","config":config})
             response=client.complete(SYSTEM,plan_prompt,max_tokens=1800)
             record_usage("planner",step,response)
             observed=response.input_tokens+response.output_tokens
@@ -384,7 +413,11 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
                 reservation_violations.append({"iteration":step,"stage":"planner",
                     "observed_tokens":observed,"reserved_tokens":planner_reserve})
             _save(directory/f"{step:03d}_plan.json",{"prompt":plan_prompt,"response":response.text,"usage":response.usage()})
-            if usage_missing and usage_missing[-1]["iteration"]==step and usage_missing[-1]["stage"]=="planner":
+            if token_budget is not None and observed>planner_reserve:
+                budget_stops.append({"iteration":step,"stage":"planner_reservation_violation","budget":token_budget})
+                break
+            if (token_budget is not None and usage_missing
+                    and usage_missing[-1]["iteration"]==step and usage_missing[-1]["stage"]=="planner"):
                 budget_stops.append({"iteration":step,"stage":"planner_usage_unavailable",
                                      "budget":token_budget,"planner_usage_recorded":False})
                 break
@@ -400,6 +433,7 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
                                      "tokens_used":spent,"tokens_reserved":coder_reserve,
                                      "budget":token_budget,"planner_usage_recorded":True})
                 break
+            _save(pending_file,{"iteration":step,"stage":"coder_requested","config":config})
             response=client.complete(SYSTEM,code_prompt,max_tokens=2000)
             record_usage("coder",step,response)
             if usage_missing and usage_missing[-1]["iteration"]==step and usage_missing[-1]["stage"]=="coder":
@@ -408,6 +442,7 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
             if observed>coder_reserve:
                 reservation_violations.append({"iteration":step,"stage":"coder",
                     "observed_tokens":observed,"reserved_tokens":coder_reserve})
+                stop_after_candidate=token_budget is not None
             _save(directory/f"{step:03d}_code.json",{"prompt":code_prompt,"response":response.text,"usage":response.usage()})
             data=parse_json(response.text)
             code=data.get("code","") if isinstance(data,dict) else ""
@@ -438,6 +473,7 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
                     "usage_missing":usage_missing,"rng_state":state.rng.getstate(),
                     "elapsed_seconds":prior_elapsed+time.perf_counter()-start}
         _save(checkpoint_file,checkpoint)
+        pending_file.unlink(missing_ok=True)
         print(json.dumps({"task":task,"method":method,"seed":seed,"step":step+1,"steps":steps,
             "valid":evaluation["valid"],"loss":evaluation["loss"],"modes":len(state.A),
             "action":selection["action"],"collision":state.events[-1]["terminal_collision"]}),flush=True)
@@ -445,6 +481,11 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
             budget_stops.append({"iteration":step,"stage":"stop_after_unknown_usage",
                                  "budget":token_budget,"reason":"cannot safely admit another model request"})
             break
+    _save(checkpoint_file,{"config":config,"nodes":state.nodes,"usage":usage,"llm_errors":llm_errors,
+         "budget_stops":budget_stops,"reservation_violations":reservation_violations,
+         "usage_missing":usage_missing,"rng_state":state.rng.getstate(),
+         "search_finished":True,"elapsed_seconds":prior_elapsed+time.perf_counter()-start})
+    pending_file.unlink(missing_ok=True)
     # Final reporting archive and best program are fixed from validation BEFORE
     # any hidden-test feedback exists. Test never enters state or prompts.
     shared_seed_nodes=[n for n in state.nodes if n["source"]=="handwritten_seed"]
@@ -463,7 +504,7 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
             test[str(node["id"])]=evaluate(node["code"],task,split="test",with_probes=False)
     shared_seed_test=min(test[str(n["id"])]["loss"] for n in shared_seed_nodes)
     shared_test_threshold=shared_seed_test+QUALITY_TOLERANCE[task]
-    common_test_archive=[n for n in archive if test[str(n["id"])]["loss"]<=shared_test_threshold]
+    common_test_archive=[n for n in archive if test[str(n["id"])]["valid"] and test[str(n["id"])]["loss"]<=shared_test_threshold]
     common_test_archive.sort(key=lambda n:(test[str(n["id"])]["loss"],n["id"]))
     archive_test_rows=[test[str(n["id"])]["per_instance_loss"] for n in common_test_archive]
     if archive_test_rows:
@@ -477,7 +518,9 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
     summary={"generated":len(generated),"valid_generated":len(valid_generated),
         "valid_fraction":len(valid_generated)/max(1,len(generated)),
         "best_validation_loss":state.best,"validation_selected_best_id":best["id"] if best else None,
-        "validation_selected_test_loss":test[str(best["id"])]["loss"] if best else None,
+        "validation_selected_test_loss":(test[str(best["id"])]["loss"] if test[str(best["id"])]["valid"] else 1.0) if best else None,
+        "validation_selected_test_valid":test[str(best["id"])]["valid"] if best else False,
+        "test_failure_penalty_loss":1.0,
         "shared_seed_best_validation_loss":shared_seed_validation,
         "shared_seed_best_test_loss":shared_seed_test,
         "quality_constrained_modes":len(archive),
@@ -494,7 +537,7 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
         "output_tokens":sum(u["output_tokens"] for u in usage),
         "usage_missing_calls":len(usage_missing),"usage_complete":not usage_missing,
         "request_errors":len(llm_errors),
-        "partial_attempts":sum(s["stage"] in ("coder_admission_after_planner","planner_usage_unavailable")
+        "partial_attempts":sum(s["stage"] in ("coder_admission_after_planner","planner_usage_unavailable","planner_reservation_violation")
                                 for s in budget_stops),
         "model_seconds":sum(u["seconds"] for u in usage),
         "evaluator_cpu_seconds":sum(n["evaluation"]["cpu_seconds"] for n in state.nodes),
@@ -502,6 +545,7 @@ def run_search(task,method,seed,steps,provider,model,output,token_budget=None):
         "local_checks":sum(n["evaluation"]["local_checks"] for n in state.nodes),
         "elapsed_seconds":prior_elapsed+time.perf_counter()-start,
         "token_budget":token_budget,
+        "local_gain_epsilon":LOCAL_GAIN_EPSILON,"maximum_local_credits_per_family":MAX_LOCAL_CREDITS,
         "tokens_used":sum(u["input_tokens"]+u["output_tokens"] for u in usage),
         "tokens_remaining":None if token_budget is None else token_budget-sum(u["input_tokens"]+u["output_tokens"] for u in usage),
         "token_budget_valid":None if token_budget is None else

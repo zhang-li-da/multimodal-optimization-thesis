@@ -12,6 +12,7 @@ import statistics
 
 METRICS = {
     "validation_selected_test_loss": ("validation-selected mean test loss", "lower"),
+    "validation_selected_test_valid": ("validation-selected rule has valid test execution", "higher"),
     "common_gate_test_behavior_modes": ("test behavior modes within common quality gate", "higher"),
     "common_gate_test_eligible_size": ("test-eligible common-gate archive size", "higher"),
     "valid_fraction": ("valid generated fraction", "higher"),
@@ -19,6 +20,7 @@ METRICS = {
     "token_budget_valid": ("valid hard-token-ceiling run", "higher"),
     "learned_selector_test_loss": ("validation-fitted selector mean test loss", "lower"),
     "selector_gain_vs_single": ("selector improvement over validation-selected single rule", "higher"),
+    "selector_seconds_per_instance": ("selector feature and prediction seconds per test instance", "lower"),
     "oracle_gain_upper_bound": ("test-instance oracle gain (upper bound only)", "higher"),
     "parent_improvements": ("parent improvements", "higher"),
     "neighborhood_improvements": ("behavior-neighborhood improvements", "higher"),
@@ -56,6 +58,8 @@ def _summary_metric(result, metric):
     summary = result["summary"]
     if metric == "tokens_used" and not summary.get("usage_complete", True):
         return None
+    if metric == "selector_seconds_per_instance":
+        return result.get("selector", {}).get("selection_seconds_per_test_instance")
     if metric in ("learned_selector_test_loss", "selector_gain_vs_single", "oracle_gain_upper_bound"):
         selector = result.get("selector", {})
         keys = {
@@ -112,7 +116,7 @@ def analyze(root: Path, output: Path):
                "budget_stop_stage": summary.get("budget_stop_stage"),
                "selector_status": selector.get("status")}
         for metric in METRICS:
-            row[metric] = _summary_metric(result, metric)
+            row[metric] = None if job["task"] == "binpack" and metric.startswith("selector_") else _summary_metric(result, metric)
         row.update({
             "generated": summary.get("generated"), "valid_generated": summary.get("valid_generated"),
             "input_tokens": summary.get("input_tokens"), "output_tokens": summary.get("output_tokens"),
@@ -242,7 +246,7 @@ def analyze(root: Path, output: Path):
         "",
         "## Design and inferential scope",
         "",
-        "This is a live screening experiment of parent/neighborhood quality protection and restart correction in a 2×2 controller factorial, with niche search as a contextual baseline. It crosses TSP and online bin packing, Qwen3.7-Plus and MiniMax-M3, five paired data blocks, and fixed 8-slot versus 30,000 input+output token budgets (200 planned runs). The API model writes bounded heuristic code; deterministic evaluators execute it on separate probe, validation, and test instances.",
+        "This is a live screening experiment of parent/neighborhood quality protection and restart correction in a 2×2 controller factorial, with niche search as a contextual baseline. It crosses TSP and online bin packing, Qwen3.7-Plus and MiniMax-M3, five paired data blocks, and fixed 8-slot versus 30,000 input+output token budgets (200 planned runs). The API model writes bounded heuristic code; deterministic evaluators execute it on separate probe, validation, and test instances. The validation-fitted per-instance selector is TSP-only because full-sequence bin-packing descriptors would reveal future arrivals.",
         "",
         "The unit of replication is the paired block-level run. Generated candidates and test instances are not treated as independent algorithm replications. Intervals are percentile bootstrap intervals over five paired blocks; they are descriptive and do not establish small effects or doctoral-level novelty. No confirmatory p-values are reported.",
         "",
@@ -265,7 +269,7 @@ def analyze(root: Path, output: Path):
         for method in METHODS_SCREENING:
             loss = summary_lookup.get((provider,task,regime,method,"validation_selected_test_loss"),{})
             modes = summary_lookup.get((provider,task,regime,method,"common_gate_test_behavior_modes"),{})
-            gain = summary_lookup.get((provider,task,regime,method,"selector_gain_vs_single"),{})
+            gain = summary_lookup.get((provider,task,regime,method,"selector_gain_vs_single"),{}) if task == "tsp" else {}
             def fmt(row):
                 mean=row.get("mean")
                 return "—" if mean is None else f"{mean:.4f} [{row.get('bootstrap_95_low'):.4f}, {row.get('bootstrap_95_high'):.4f}]"
@@ -276,7 +280,7 @@ def analyze(root: Path, output: Path):
         "",
         "Read the individual paired blocks and integrity columns before interpreting a cell average. An absent result, API request failure, missing token usage, reservation violation, or budget stop is retained and is not replaced based on its outcome. A missing provider usage value invalidates strict token-efficiency claims for that run. The `tokens30000` regime is a hard admission ceiling with UTF-8 byte-based conservative reservations; reservation violations are explicitly flagged and do not qualify as compliant runs.",
         "",
-        "The algorithm-set selector uses validation outcomes and public instance features only. The per-test-instance oracle uses held-out outcomes and is not deployable. Positive screening patterns require a new independently frozen confirmation; null or mixed outcomes narrow the mechanism claim.",
+        "The TSP algorithm-set selector uses validation outcomes and public instance features only. No full-sequence selector is evaluated for online bin packing. The per-test-instance oracle uses held-out outcomes and is not deployable. Positive screening patterns require a new independently frozen confirmation; null or mixed outcomes narrow the mechanism claim.",
         "",
         f"Integrity details: `{json.dumps(problems, ensure_ascii=False)}`",
     ])

@@ -1,5 +1,7 @@
 """Focused invariant tests for the v1.1 mechanism and selector."""
 import copy
+import json
+import pytest
 
 from chapter6_demo.benchmarks import INDEPENDENT_PROFILE, instances, split_fingerprint
 from chapter6_demo.discovery import (SearchState, _restart_decision, _token_reservation,
@@ -40,6 +42,16 @@ def test_parent_gain_inside_quality_envelope_is_protected_only_when_factor_enabl
     assert base_event["useful_gain"] is False
     assert protected_event["useful_gain"] is True
     assert protected_event["productive_collision"] is True
+
+
+def test_local_credit_is_capped_per_allocated_family_until_a_global_or_novel_gain():
+    state = SearchState("tsp", "relational_qp", 0)
+    rows = [_node(0, .10, [1, 0, 0]), _node(1, .12, [1, 0, 0], parent=0),
+            _node(2, .115, [1, 0, 0], parent=1), _node(3, .114, [1, 0, 0], parent=2),
+            _node(4, .113, [1, 0, 0], parent=3)]
+    for row in rows:
+        state.observe(row)
+    assert [event["local_credit_eligible"] for event in state.events[2:]] == [True, True, False]
 
 
 def test_restart_correction_uses_recent_local_development_as_separate_factor():
@@ -89,8 +101,8 @@ def test_selector_uses_validation_archive_and_marks_oracle_as_upper_bound_only(m
     nodes[1]["evaluation"]["per_instance_loss"] = [0.11] * len(train)
     nodes[1]["evaluation"]["loss"] = .11
     test_results = {
-        "0": {"per_instance_loss": [.2] * len(test)},
-        "1": {"per_instance_loss": [.15] * len(test)},
+        "0": {"valid": True, "per_instance_loss": [.2] * len(test)},
+        "1": {"valid": True, "per_instance_loss": [.15] * len(test)},
     }
     output = fit_and_evaluate_selector({"nodes": nodes, "archive_ids": [0, 1], "test": test_results},
                                        "tsp", train, test)
@@ -98,3 +110,52 @@ def test_selector_uses_validation_archive_and_marks_oracle_as_upper_bound_only(m
     assert output["validation_instance_count"] == len(train)
     assert output["test_instance_count"] == len(test)
     assert output["test_instance_oracle_loss_upper_bound_only"] <= output["learned_selector_test_loss"]
+    assert len(output["test_selected_ids"]) == len(test)
+    assert output["selection_seconds_per_test_instance"] >= 0
+    test_results["0"]["per_instance_loss"] = [.01]*len(test)
+    test_results["1"]["per_instance_loss"] = [.99]*len(test)
+    changed = fit_and_evaluate_selector({"nodes":nodes,"archive_ids":[0,1],"test":test_results},
+                                        "tsp",train,test)
+    assert changed["test_selected_ids"] == output["test_selected_ids"]
+
+
+def test_online_binpack_selector_refuses_future_leaking_full_sequence_features(monkeypatch):
+    monkeypatch.setenv("CHAPTER6_BENCHMARK_PROFILE", INDEPENDENT_PROFILE)
+    monkeypatch.setenv("CHAPTER6_DATA_BLOCK", "0")
+    instances.cache_clear()
+    outcome = fit_and_evaluate_selector({"nodes": [], "archive_ids": [], "test": {}}, "binpack",
+                                        instances("binpack", "validation"), instances("binpack", "test"))
+    assert outcome["status"] == "not_applicable_online_task"
+
+
+def test_paid_planner_budget_stop_and_finished_checkpoint_do_not_repeat_calls(monkeypatch, tmp_path):
+    from chapter6_demo import discovery
+    from chapter6_demo.providers import Completion
+    class Client:
+        calls=0
+        def complete(self, *args, **kwargs):
+            self.calls+=1
+            return Completion('{"name":"test","tags":["tight_fit"]}',"fake-test",900,100,0.0,"fake")
+    client=Client()
+    monkeypatch.setenv("CHAPTER6_BENCHMARK_PROFILE",INDEPENDENT_PROFILE)
+    monkeypatch.setenv("CHAPTER6_DATA_BLOCK","0")
+    monkeypatch.setattr(discovery.ModelClient,"from_opencode",lambda *args,**kwargs:client)
+    monkeypatch.setattr(discovery,"_token_reservation",lambda *args:1000)
+    args=("binpack","niche",0,8,"fake","fake-test",tmp_path,1500)
+    result=discovery.run_search(*args)
+    assert client.calls==1
+    assert result["summary"]["generated"]==0
+    assert result["summary"]["partial_attempts"]==1
+    assert result["summary"]["tokens_used"]==1000
+    assert result["summary"]["token_budget_valid"]
+    (tmp_path/"result.json").unlink()
+    resumed=discovery.run_search(*args)
+    assert client.calls==1 and resumed["summary"]["tokens_used"]==1000
+
+
+def test_pending_request_is_not_silently_reissued(monkeypatch,tmp_path):
+    from chapter6_demo.discovery import run_search
+    monkeypatch.setenv("CHAPTER6_BENCHMARK_PROFILE",INDEPENDENT_PROFILE)
+    (tmp_path/"pending_call.json").write_text(json.dumps({"iteration":0}),encoding="utf-8")
+    with pytest.raises(RuntimeError,match="unaccounted retry"):
+        run_search("binpack","niche",0,8,"fake","fake-test",tmp_path,1500)

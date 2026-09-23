@@ -5,6 +5,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 import hashlib
+from importlib.metadata import version
 import json
 import os
 from pathlib import Path
@@ -15,6 +16,7 @@ import sys
 import threading
 
 from chapter6_demo.discovery import METHODS, source_fingerprint
+from chapter6_demo.benchmarks import instances, split_fingerprint
 
 
 MODEL_CELLS = (
@@ -72,6 +74,20 @@ def create_manifest(output: Path, run_name: str) -> dict:
         raise RuntimeError("The preregistered worktree must be clean before any live search calls.")
     source_commit = _git("rev-parse", "HEAD")
     prereg = repo / "experiments/chapter6/v11/preregistration.md"
+    old_profile=os.environ.get("CHAPTER6_BENCHMARK_PROFILE")
+    old_block=os.environ.get("CHAPTER6_DATA_BLOCK")
+    splits={}
+    try:
+        os.environ["CHAPTER6_BENCHMARK_PROFILE"]="chapter6-v11-independent-v1"
+        for block in BLOCKS:
+            os.environ["CHAPTER6_DATA_BLOCK"]=str(block)
+            splits[str(block)]={task:{split:{"sha256":split_fingerprint(task,split),
+                "instance_ids":[x["id"] for x in instances(task,split)]}
+                for split in ("probe","validation","test")} for task in TASKS}
+    finally:
+        for name,value in (("CHAPTER6_BENCHMARK_PROFILE",old_profile),("CHAPTER6_DATA_BLOCK",old_block)):
+            if value is None: os.environ.pop(name,None)
+            else: os.environ[name]=value
     manifest = {
         "schema_version": 1,
         "study_id": run_name,
@@ -82,12 +98,18 @@ def create_manifest(output: Path, run_name: str) -> dict:
         "preregistration_sha256": hashlib.sha256(prereg.read_bytes()).hexdigest(),
         "python": sys.version,
         "platform": platform.platform(),
+        "dependencies":{name:version(name) for name in ("numpy","scikit-learn","pytest")},
+        "splits":splits,
         "protocol": {
             "profile": "chapter6-v11-independent-v1",
             "block_seed_is_search_seed": True,
             "factorial": {"quality_protection": [False, True], "restart_correction": [False, True]},
             "additional_baseline": "niche",
             "per_call_output_ceilings": {"planner": 1800, "coder": 2000},
+            "temperature": 0.7,
+            "local_gain_epsilon": 1e-4,
+            "maximum_local_credits_per_family": 2,
+            "online_binpack_selector": "not evaluated; full-sequence descriptors leak future items",
             "provider_concurrency": 1,
             "total_input_output_token_ceiling": 30_000,
             "screening_runs": 200,
@@ -114,6 +136,7 @@ def execute_job(job: dict, root: Path, semaphore: threading.Semaphore) -> dict:
                     and cached["config"]["provider"] == job["provider"]
                     and cached["config"]["model"] == job["model"]
                     and cached["config"]["data_block"] == expected_block
+                    and cached["config"]["source_fingerprint"] == source_fingerprint()
                     and cached["config"]["token_budget"] == job["token_budget"]
                     and cached["config"]["steps"] == job["steps"]):
                 return {"job_id": job["job_id"], "status": "cached_result", "exit_code": 0,
@@ -150,7 +173,7 @@ def execute_job(job: dict, root: Path, semaphore: threading.Semaphore) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", default="experiments/chapter6/v11/screening-20260923")
+    parser.add_argument("--output", default="experiments/chapter6/v11/screening-20260923-r1")
     parser.add_argument("--dry-run", action="store_true", help="Write and validate the 200-run plan only.")
     args = parser.parse_args()
     root = Path(args.output)
@@ -179,23 +202,25 @@ def main():
             prior = {}
     locks = {provider: threading.Semaphore(1) for provider, _ in MODEL_CELLS}
     outcomes = dict(prior)
-    pending = [j for j in manifest["jobs"] if outcomes.get(j["job_id"], {}).get("status")
-               not in ("completed", "completed_with_process_error", "cached_result")]
-    with ThreadPoolExecutor(max_workers=2) as pool:
-        futures = {pool.submit(execute_job, job, root, locks[job["provider"]]): job for job in pending}
-        for future in as_completed(futures):
-            job = futures[future]
+    pending = [j for j in manifest["jobs"] if j["job_id"] not in outcomes]
+    status_lock=threading.Lock()
+    def provider_lane(provider):
+        for job in pending:
+            if job["provider"]!=provider: continue
             try:
-                result = future.result()
-            except Exception as exc:  # preserve a bounded diagnostic, never emit auth/config contents
-                result = {"job_id": job["job_id"], "status": "runner_error",
-                          "error_type": type(exc).__name__, "error": str(exc)[:200], "exit_code": 2}
-            outcomes[job["job_id"]] = result
-            ordered = [outcomes[j["job_id"]] for j in manifest["jobs"] if j["job_id"] in outcomes]
-            _atomic_json(status_path, ordered)
-            print(json.dumps({"completed": len(outcomes), "planned": len(manifest["jobs"]),
-                              **{k: v for k, v in result.items() if k != "summary"},
-                              "summary": result.get("summary")}, ensure_ascii=False), flush=True)
+                result=execute_job(job,root,locks[provider])
+            except Exception as exc:
+                result={"job_id":job["job_id"],"status":"runner_error",
+                        "error_type":type(exc).__name__,"error":str(exc)[:200],"exit_code":2}
+            with status_lock:
+                outcomes[job["job_id"]]=result
+                _atomic_json(status_path,[outcomes[j["job_id"]] for j in manifest["jobs"] if j["job_id"] in outcomes])
+                print(json.dumps({"completed":len(outcomes),"planned":len(manifest["jobs"]),
+                      **{k:v for k,v in result.items() if k!="summary"}},ensure_ascii=False),flush=True)
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        futures = [pool.submit(provider_lane,provider) for provider,_ in MODEL_CELLS]
+        for future in as_completed(futures):
+            future.result()
     if len(outcomes) < len(manifest["jobs"]) or any(r.get("exit_code", 1) != 0 for r in outcomes.values()):
         raise SystemExit(1)
 
