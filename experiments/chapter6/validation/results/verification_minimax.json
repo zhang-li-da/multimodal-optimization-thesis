@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "available_runs_pass": true,
+  "complete": true,
+  "missing_runs": 0,
+  "models": [
+    "MiniMax-M3"
+  ],
+  "runs": 60,
+  "candidate_attempts": 1009,
+  "model_calls": 2017,
+  "tokens": 3049359,
+  "unique_program_split_replays": 504,
+  "failures": [],
+  "infrastructure_ineligible": [
+    {
+      "run": "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p12",
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "TimeoutError; provider=minimax-cn-coding-plan"
+        }
+      ],
+      "recorded_tokens": 0,
+      "interpretation": "logged protocol exclusion; recorded calls still audited, unknown remote usage cannot be certified"
+    }
+  ],
+  "all_runs_cost_eligible": false,
+  "scope": "source/split/recorded-budget journal audit and deterministic replay of every final selected program; infrastructure exclusions are explicit; no API calls"
+}

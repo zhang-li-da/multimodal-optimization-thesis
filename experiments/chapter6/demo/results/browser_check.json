@@ -1,0 +1,35 @@
+{
+  "initial": {
+    "title": "第六章 · 多模态算法发现实验室",
+    "models": 2,
+    "runs": 25,
+    "rows": 15,
+    "code": "def priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    return -d + 0.3 * rd",
+    "loss": "5.1%",
+    "overflow": false,
+    "total_runs": 74,
+    "task_options": [
+      "tsp",
+      "binpack",
+      "classification"
+    ]
+  },
+  "interaction": {
+    "task": "binpack",
+    "selected": "#3 · exact_gap_squared",
+    "note": "验证实例 uniform-44301 · 损失 6.9% · 该解用于查看行为，不是算法模式的全局覆盖证明。",
+    "rows": 15
+  },
+  "classification": {
+    "task": "classification",
+    "note": "验证实例 iris-validation · 损失 0.0% · 该解用于查看行为，不是算法模式的全局覆盖证明。",
+    "code": "def priority(f):\n    knn = f[\"knn_fraction\"]\n    nll = f[\"diagonal_nll\"]\n    prior = f[\"prior\"]\n    score = knn - 0.2 * nll + 0.05 * log(prior + 1e-9)\n    return score"
+  },
+  "fallback": {
+    "model": "MiniMax-M3",
+    "task": "binpack",
+    "rows": 15
+  },
+  "js_errors": [],
+  "pass": true
+}

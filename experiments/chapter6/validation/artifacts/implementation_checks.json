@@ -1,0 +1,22 @@
+{
+  "frozen_controller": {
+    "scenario": "same probe decisions, strictly improving validation loss",
+    "event_improved": true,
+    "event_collision": true,
+    "useful_gain": true,
+    "no_growth": 0,
+    "next_action": "restart",
+    "next_target": "return_aware",
+    "source_anchor": "chapter6_demo/discovery.py:137-161",
+    "scope": "unit-level evidence that improvement and collision coexist; not a causal efficacy test"
+  },
+  "upstream_isolated_check": {
+    "module": "chapter6_validation\\artifacts\\literature\\skydiscover\\skydiscover\\optimize\\search\\adaevolve\\adaptation.py",
+    "scenario": "same score after initial improvement",
+    "signal_before": 0.09999999999999998,
+    "signal_after": 0.09999999999999998,
+    "paper_ema_expected_after": 0.08999999999999998,
+    "matches_paper_recurrence_in_isolated_method": false,
+    "scope": "isolated module observation only; full controller calling path not executed, not a published bug claim"
+  }
+}

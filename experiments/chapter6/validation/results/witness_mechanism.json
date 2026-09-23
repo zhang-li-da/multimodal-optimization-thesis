@@ -1,0 +1,212 @@
+{
+  "scope": "Synthetic finite-domain identification only; no LLM calls, no algorithm-discovery efficacy claim. Programs are executed once on all 256 states and Monte Carlo sampling replays these exact outcomes. Reported per-pair program calls are equivalent evaluation work, not measured repeated interpreter calls.",
+  "radius": 0.03,
+  "domain_size": 256,
+  "replicates": 400,
+  "witness_looks": [
+    24,
+    48,
+    96,
+    192,
+    384,
+    768,
+    1536
+  ],
+  "interval": "Clopper-Pearson with alpha=.05/7 per scheduled look, independent IID uniform sampling after pair is fixed",
+  "programs": [
+    {
+      "name": "equivalent",
+      "code": "def priority(f):\n    renamed = f[\"gap\"]\n    return 2 - 3 * renamed\n",
+      "reference_code": "def priority(f):\n    return -f[\"gap\"]\n"
+    },
+    {
+      "name": "rare_difference_3_of_256",
+      "code": "def priority(f):\n    if f[\"gap\"] < 0.013618677042801557:\n        return -2\n    return -f[\"gap\"]\n",
+      "reference_code": "def priority(f):\n    return -f[\"gap\"]\n"
+    },
+    {
+      "name": "rare_difference_13_of_256",
+      "code": "def priority(f):\n    if f[\"gap\"] < 0.05252918287937743:\n        return -2\n    return -f[\"gap\"]\n",
+      "reference_code": "def priority(f):\n    return -f[\"gap\"]\n"
+    },
+    {
+      "name": "rare_difference_51_of_256",
+      "code": "def priority(f):\n    if f[\"gap\"] < 0.20038910505836577:\n        return -2\n    return -f[\"gap\"]\n",
+      "reference_code": "def priority(f):\n    return -f[\"gap\"]\n"
+    }
+  ],
+  "results": [
+    {
+      "pair": "equivalent",
+      "true_distance_on_finite_domain": 0.0,
+      "true_same_at_radius": true,
+      "fixed_probe": [
+        {
+          "probe_n": 6,
+          "wrong_decisions": 0,
+          "replicates": 400,
+          "error_rate": 0.0,
+          "program_calls_per_pair": 24
+        },
+        {
+          "probe_n": 24,
+          "wrong_decisions": 0,
+          "replicates": 400,
+          "error_rate": 0.0,
+          "program_calls_per_pair": 96
+        },
+        {
+          "probe_n": 96,
+          "wrong_decisions": 0,
+          "replicates": 400,
+          "error_rate": 0.0,
+          "program_calls_per_pair": 384
+        },
+        {
+          "probe_n": 384,
+          "wrong_decisions": 0,
+          "replicates": 400,
+          "error_rate": 0.0,
+          "program_calls_per_pair": 1536
+        }
+      ],
+      "independent_witness": {
+        "decided": 400,
+        "undecided": 0,
+        "wrong_decisions": 0,
+        "replicates": 400,
+        "mean_observations": 192.0,
+        "mean_program_calls": 768.0
+      }
+    },
+    {
+      "pair": "rare_difference_3_of_256",
+      "true_distance_on_finite_domain": 0.01171875,
+      "true_same_at_radius": true,
+      "fixed_probe": [
+        {
+          "probe_n": 6,
+          "wrong_decisions": 35,
+          "replicates": 400,
+          "error_rate": 0.0875,
+          "program_calls_per_pair": 24
+        },
+        {
+          "probe_n": 24,
+          "wrong_decisions": 97,
+          "replicates": 400,
+          "error_rate": 0.2425,
+          "program_calls_per_pair": 96
+        },
+        {
+          "probe_n": 96,
+          "wrong_decisions": 48,
+          "replicates": 400,
+          "error_rate": 0.12,
+          "program_calls_per_pair": 384
+        },
+        {
+          "probe_n": 384,
+          "wrong_decisions": 0,
+          "replicates": 400,
+          "error_rate": 0.0,
+          "program_calls_per_pair": 1536
+        }
+      ],
+      "independent_witness": {
+        "decided": 393,
+        "undecided": 7,
+        "wrong_decisions": 0,
+        "replicates": 400,
+        "mean_observations": 843.84,
+        "mean_program_calls": 3375.36
+      }
+    },
+    {
+      "pair": "rare_difference_13_of_256",
+      "true_distance_on_finite_domain": 0.05078125,
+      "true_same_at_radius": false,
+      "fixed_probe": [
+        {
+          "probe_n": 6,
+          "wrong_decisions": 310,
+          "replicates": 400,
+          "error_rate": 0.775,
+          "program_calls_per_pair": 24
+        },
+        {
+          "probe_n": 24,
+          "wrong_decisions": 113,
+          "replicates": 400,
+          "error_rate": 0.2825,
+          "program_calls_per_pair": 96
+        },
+        {
+          "probe_n": 96,
+          "wrong_decisions": 44,
+          "replicates": 400,
+          "error_rate": 0.11,
+          "program_calls_per_pair": 384
+        },
+        {
+          "probe_n": 384,
+          "wrong_decisions": 6,
+          "replicates": 400,
+          "error_rate": 0.015,
+          "program_calls_per_pair": 1536
+        }
+      ],
+      "independent_witness": {
+        "decided": 365,
+        "undecided": 35,
+        "wrong_decisions": 0,
+        "replicates": 400,
+        "mean_observations": 901.5,
+        "mean_program_calls": 3606.0
+      }
+    },
+    {
+      "pair": "rare_difference_51_of_256",
+      "true_distance_on_finite_domain": 0.19921875,
+      "true_same_at_radius": false,
+      "fixed_probe": [
+        {
+          "probe_n": 6,
+          "wrong_decisions": 96,
+          "replicates": 400,
+          "error_rate": 0.24,
+          "program_calls_per_pair": 24
+        },
+        {
+          "probe_n": 24,
+          "wrong_decisions": 1,
+          "replicates": 400,
+          "error_rate": 0.0025,
+          "program_calls_per_pair": 96
+        },
+        {
+          "probe_n": 96,
+          "wrong_decisions": 0,
+          "replicates": 400,
+          "error_rate": 0.0,
+          "program_calls_per_pair": 384
+        },
+        {
+          "probe_n": 384,
+          "wrong_decisions": 0,
+          "replicates": 400,
+          "error_rate": 0.0,
+          "program_calls_per_pair": 1536
+        }
+      ],
+      "independent_witness": {
+        "decided": 400,
+        "undecided": 0,
+        "wrong_decisions": 0,
+        "replicates": 400,
+        "mean_observations": 37.26,
+        "mean_program_calls": 149.04
+      }
+    }
+  ]
+}

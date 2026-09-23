@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "available_runs_pass": true,
+  "complete": true,
+  "missing_runs": 0,
+  "models": [
+    "qwen3.7-plus"
+  ],
+  "runs": 60,
+  "candidate_attempts": 1117,
+  "model_calls": 2234,
+  "tokens": 3119639,
+  "unique_program_split_replays": 442,
+  "failures": [],
+  "infrastructure_ineligible": [
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_tsp_niche_p13",
+      "errors": [
+        {
+          "iteration": 1,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "TimeoutError; provider=alibaba-token-plan-cn"
+        }
+      ],
+      "recorded_tokens": 2154,
+      "interpretation": "logged protocol exclusion; recorded calls still audited, unknown remote usage cannot be certified"
+    }
+  ],
+  "all_runs_cost_eligible": false,
+  "scope": "source/split/recorded-budget journal audit and deterministic replay of every final selected program; infrastructure exclusions are explicit; no API calls"
+}

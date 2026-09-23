@@ -1,0 +1,130 @@
+{
+  "sha": "9c5c8a3b23f0361708b59a401452dddc00f97189",
+  "node_id": "C_kwDORQT4cdoAKDljNWM4YTNiMjNmMDM2MTcwOGI1OWE0MDE0NTJkZGRjMDBmOTcxODk",
+  "commit": {
+    "author": {
+      "name": "Shangheng Du",
+      "email": "143237960+YoungDubbyDu@users.noreply.github.com",
+      "date": "2026-09-04T07:49:13Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-04T07:49:13Z"
+    },
+    "message": "Merge pull request #8 from GuoCheng24/fix-leakage-trigger-threshold\n\nMake the data-leakage trigger reachable",
+    "tree": {
+      "sha": "9c320b878083f567557bbd41223fe5bb64114730",
+      "url": "https://api.github.com/repos/InternScience/MLEvolve/git/trees/9c320b878083f567557bbd41223fe5bb64114730"
+    },
+    "url": "https://api.github.com/repos/InternScience/MLEvolve/git/commits/9c5c8a3b23f0361708b59a401452dddc00f97189",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqmnf5CRC1aQ7uu5UhlAAAmlEQADPAfiXPVoQRFhnFVsm+vVjL\nTP9bQ5XLADqnuVbdG7MjSRh7V/oQpyM10Y7Nz8tk88wPoxT0AFTvxqqDM/1dW7AF\ntUBaIYbCxeCs/wBmALNIlBQbDwaao7ccrMNJMtBJTdY6kC1WzeRiuUmgDeCaD93n\n95UoBOmj9Fz7fHBK3pmilhkUA0uiFtq6PejaMEf00EKDCfj3TuadQtfsxuZRFCUK\nPSllY+0xmrs2RGXbmByIKV15wVFL8VPTSiZjbxcEfHOCTFzBNJ1P+46HcrV4vVBU\nCC8aDsQjt3+1iyZYQEjF5VVkfGtawlpWCVe3qkIhgVGMWF5kMsGMrX2QP/U1J3Zv\nbg1/YiuxJqNTO6UU2Ysm55xDF7wM5TrVoH1MhxiRqBsZg9fK9RPszmX0rkWmuOJA\nrtSZnjc70hrGEsL3YUKjowweQEoqE5riuyZI7jZUaGzXLsyscbxSODcxcZcNtOX0\nlzMwajx6QJaVciG3il30kr5maYopGiTI4Z8ZoY2NNs4Jo0tiJ9/ZgYIgjPI4f0Jo\ncRJwO2pwRIQym8pg0wg3nwx/sq8j22+hEhuvGb6PQiHHH2CshhxanIP75C1UhUZ4\nKf6Z94f4AEycgemt6vrMrjFEZCUkpD52EC1OkFr7l1M5tnjrXkoGONV006noxnsT\nWTdtCNY5m5kVbIecWr5T\n=UBdL\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 9c320b878083f567557bbd41223fe5bb64114730\nparent 45b4e329ff7b57203b71c5f20ab1b69470780c99\nparent 40bf66f34c090043b9c8c1b9c39e1867b234c1df\nauthor Shangheng Du <143237960+YoungDubbyDu@users.noreply.github.com> 1788508153 +0800\ncommitter GitHub <noreply@github.com> 1788508153 +0800\n\nMerge pull request #8 from GuoCheng24/fix-leakage-trigger-threshold\n\nMake the data-leakage trigger reachable",
+      "verified_at": "2026-09-04T07:49:13Z"
+    }
+  },
+  "url": "https://api.github.com/repos/InternScience/MLEvolve/commits/9c5c8a3b23f0361708b59a401452dddc00f97189",
+  "html_url": "https://github.com/InternScience/MLEvolve/commit/9c5c8a3b23f0361708b59a401452dddc00f97189",
+  "comments_url": "https://api.github.com/repos/InternScience/MLEvolve/commits/9c5c8a3b23f0361708b59a401452dddc00f97189/comments",
+  "author": {
+    "login": "YoungDubbyDu",
+    "id": 143237960,
+    "node_id": "U_kgDOCImjSA",
+    "avatar_url": "https://avatars.githubusercontent.com/u/143237960?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/YoungDubbyDu",
+    "html_url": "https://github.com/YoungDubbyDu",
+    "followers_url": "https://api.github.com/users/YoungDubbyDu/followers",
+    "following_url": "https://api.github.com/users/YoungDubbyDu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/YoungDubbyDu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/YoungDubbyDu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/YoungDubbyDu/subscriptions",
+    "organizations_url": "https://api.github.com/users/YoungDubbyDu/orgs",
+    "repos_url": "https://api.github.com/users/YoungDubbyDu/repos",
+    "events_url": "https://api.github.com/users/YoungDubbyDu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/YoungDubbyDu/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "45b4e329ff7b57203b71c5f20ab1b69470780c99",
+      "url": "https://api.github.com/repos/InternScience/MLEvolve/commits/45b4e329ff7b57203b71c5f20ab1b69470780c99",
+      "html_url": "https://github.com/InternScience/MLEvolve/commit/45b4e329ff7b57203b71c5f20ab1b69470780c99"
+    },
+    {
+      "sha": "40bf66f34c090043b9c8c1b9c39e1867b234c1df",
+      "url": "https://api.github.com/repos/InternScience/MLEvolve/commits/40bf66f34c090043b9c8c1b9c39e1867b234c1df",
+      "html_url": "https://github.com/InternScience/MLEvolve/commit/40bf66f34c090043b9c8c1b9c39e1867b234c1df"
+    }
+  ],
+  "stats": {
+    "total": 13,
+    "additions": 11,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "0617408bf34c0c65c766ad5cb29932b39cf34193",
+      "filename": "agents/triggers.py",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 2,
+      "changes": 7,
+      "blob_url": "https://github.com/InternScience/MLEvolve/blob/9c5c8a3b23f0361708b59a401452dddc00f97189/agents%2Ftriggers.py",
+      "raw_url": "https://github.com/InternScience/MLEvolve/raw/9c5c8a3b23f0361708b59a401452dddc00f97189/agents%2Ftriggers.py",
+      "contents_url": "https://api.github.com/repos/InternScience/MLEvolve/contents/agents%2Ftriggers.py?ref=9c5c8a3b23f0361708b59a401452dddc00f97189",
+      "patch": "@@ -14,10 +14,13 @@ def should_check_data_leakage(agent, node: SearchNode) -> bool:\n     metric_value = node.metric.value\n     maximize = agent.metric_maximize\n \n+    # Exact float equality almost never fires in practice: a leaked AUC lands\n+    # on 0.99997, a leaked RMSE on 1.2e-08. Compare against a threshold instead,\n+    # keeping the old exact-1.0 / exact-0.0 cases inside the new bounds.\n     if maximize:\n-        is_extreme = (metric_value == 1.0)\n+        is_extreme = (metric_value >= agent.acfg.leakage_max_threshold)\n     else:\n-        is_extreme = (metric_value == 0.0)\n+        is_extreme = (metric_value <= agent.acfg.leakage_min_threshold)\n \n     if is_extreme:\n         logger.info("
+    },
+    {
+      "sha": "287374241db9247736f81b42571eb89d606d3a37",
+      "filename": "config/__init__.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 0,
+      "changes": 3,
+      "blob_url": "https://github.com/InternScience/MLEvolve/blob/9c5c8a3b23f0361708b59a401452dddc00f97189/config%2F__init__.py",
+      "raw_url": "https://github.com/InternScience/MLEvolve/raw/9c5c8a3b23f0361708b59a401452dddc00f97189/config%2F__init__.py",
+      "contents_url": "https://api.github.com/repos/InternScience/MLEvolve/contents/config%2F__init__.py?ref=9c5c8a3b23f0361708b59a401452dddc00f97189",
+      "patch": "@@ -102,6 +102,9 @@ class AgentConfig:\n     use_evolution: bool = True\n     use_fusion: bool = True\n     use_aggregation: bool = True\n+    # Bounds for the data-leakage trigger (see agents/triggers.py).\n+    leakage_max_threshold: float = 0.999\n+    leakage_min_threshold: float = 1e-6\n @dataclass\n class ExecConfig:\n     timeout: int"
+    },
+    {
+      "sha": "37f6af135b2af84702ed3f40fc6235fb2110fed8",
+      "filename": "config/config.yaml",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 0,
+      "changes": 3,
+      "blob_url": "https://github.com/InternScience/MLEvolve/blob/9c5c8a3b23f0361708b59a401452dddc00f97189/config%2Fconfig.yaml",
+      "raw_url": "https://github.com/InternScience/MLEvolve/raw/9c5c8a3b23f0361708b59a401452dddc00f97189/config%2Fconfig.yaml",
+      "contents_url": "https://api.github.com/repos/InternScience/MLEvolve/contents/config%2Fconfig.yaml?ref=9c5c8a3b23f0361708b59a401452dddc00f97189",
+      "patch": "@@ -56,6 +56,9 @@ agent:\n \r\n   # --- Submission check ---\r\n   check_data_leakage: True\r\n+  # A metric at or beyond these bounds triggers the data-leakage check.\r\n+  leakage_max_threshold: 0.999\r\n+  leakage_min_threshold: 1e-6\r\n \r\n   # --- Code gen mode ---\r\n   use_diff_mode: True                 # Multi-Mode Codegen\r"
+    }
+  ]
+}

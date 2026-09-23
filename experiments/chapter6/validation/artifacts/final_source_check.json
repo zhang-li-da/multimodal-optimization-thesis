@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-09-23T05:14:53.478694+00:00",
+  "live_core_fingerprint": "8f93acbc027a64bad421eff1a3c80fb2587fd23d3a871119b61dad0e41113e73",
+  "frozen_core_fingerprint": "8f93acbc027a64bad421eff1a3c80fb2587fd23d3a871119b61dad0e41113e73",
+  "match": true,
+  "analysis_source": {
+    "analyze.py": "bfdeb4b156b4fe832655c735618fe43df2e3e7c021f66c3316b5e814ecf3c2b4",
+    "verify.py": "8538856a7e5c3b6c03a4485052d67b5d3d91f02c580df1bd114c0bc2351f5a17",
+    "protocol.py": "a52a7ad3b1db18bd6be24de0599e1e1e263dc58a60c857901b5a424571a14107"
+  },
+  "note": "Analysis/UI/report changes occurred after freeze; no changes to the prospective search/evaluation/controller source fingerprint."
+}

@@ -1,0 +1,59 @@
+{
+  "scope": "Post-hoc pooled pairs among validation-selected test-evaluated programs only. Pairs are dependent and selection-biased; no population-wide error-rate estimate or significance test.",
+  "groups": [
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "pairs": 454,
+      "probe_same": 0,
+      "probe_different": 454,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 11
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "pairs": 175,
+      "probe_same": 73,
+      "probe_different": 102,
+      "probe_same_test_different": 21,
+      "probe_different_test_same": 52
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "pairs": 281,
+      "probe_same": 19,
+      "probe_different": 262,
+      "probe_same_test_different": 17,
+      "probe_different_test_same": 8
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "pairs": 282,
+      "probe_same": 1,
+      "probe_different": 281,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 3
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "pairs": 150,
+      "probe_same": 56,
+      "probe_different": 94,
+      "probe_same_test_different": 16,
+      "probe_different_test_same": 54
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "pairs": 322,
+      "probe_same": 25,
+      "probe_different": 297,
+      "probe_same_test_different": 24,
+      "probe_different_test_same": 4
+    }
+  ]
+}

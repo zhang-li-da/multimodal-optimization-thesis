@@ -1,0 +1,113 @@
+{
+  "sha": "0d932b690670a7e544388ad362e9876c8bd256a0",
+  "node_id": "C_kwDORS62MdoAKDBkOTMyYjY5MDY3MGE3ZTU0NDM4OGFkMzYyZTk4NzZjOGJkMjU2YTA",
+  "commit": {
+    "author": {
+      "name": "Orthur",
+      "email": "orthur2@gmail.com",
+      "date": "2026-09-14T05:07:49Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-14T05:07:49Z"
+    },
+    "message": "fix(topk): optimize zero context requests (#103)",
+    "tree": {
+      "sha": "c0029a2e681d29a668ba678bcd704e2140e7a19e",
+      "url": "https://api.github.com/repos/skydiscover-ai/skydiscover/git/trees/c0029a2e681d29a668ba678bcd704e2140e7a19e"
+    },
+    "url": "https://api.github.com/repos/skydiscover-ai/skydiscover/git/commits/0d932b690670a7e544388ad362e9876c8bd256a0",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqp4ElCRC1aQ7uu5UhlAAAjwoQAFsZgKsv5QVrvuqfCZGwWgw4\nb+tGVJfP+ua528veKpVUzedIXOLx/KV7/T2o4aJ8mfiDQcCrz8PEw6AWG9KkpAYd\n2syEedKRqZxPGz58WyNPxGr2kuXgPwnCz1thmGSe6gs7ki9LweaqiTPGoYbDrSbB\nneqxFyaujgakSA+SzbhoGwdlXJVxTEU2b3lqlgeOrDmO9c7YadtKFHK9kPfRvqrZ\nHtOiW7+V9w5GZWcL2W7h3HlAGjV5I9FK2XEZ0u/+w19//8S5n7WD//W622j8T59L\nPgQVDasnL6TOdHwuMg1K5LA6YFT4pI9YltrrDFeOy46xvU46C+8b6Yvi6MSyLUdi\n4W+Q+dOlXED+zy96glcBQg51PvFjpj1aoDREd4EdsDSh4dayGELwlnq1sfP8axDj\nGgZ8suO8Do6DvNlk2ipscJMT2mNNDXrhhqvZLddRcn3vNthfU43OY2ptIdvbyIOY\nAYF8R60nu4YBcU7iBz6bpipQWcdSBP+yp9Kz7oaNQlg2tI/rv2tVELJKwrkITA2Y\nK+wAcc8TwDMOaoxJGAUzQdSwA4YhvblwiiXnM4JF0+TyZVB23BjJ+jWFYj4Er5DA\n4/i3QkcYmdbPBp7DSoOdjI5+MgQ8HEzv/OvORh/oh16Sv3cuPNv4v+NjZV4YV65V\nffKZ9HbYc8SzVVsvxxj4\n=QP8X\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree c0029a2e681d29a668ba678bcd704e2140e7a19e\nparent c30ca1907b0084c7ef2d2ed4b6398d181a3fad0c\nauthor Orthur <orthur2@gmail.com> 1789362469 -0400\ncommitter GitHub <noreply@github.com> 1789362469 -0700\n\nfix(topk): optimize zero context requests (#103)",
+      "verified_at": "2026-09-14T05:07:50Z"
+    }
+  },
+  "url": "https://api.github.com/repos/skydiscover-ai/skydiscover/commits/0d932b690670a7e544388ad362e9876c8bd256a0",
+  "html_url": "https://github.com/skydiscover-ai/skydiscover/commit/0d932b690670a7e544388ad362e9876c8bd256a0",
+  "comments_url": "https://api.github.com/repos/skydiscover-ai/skydiscover/commits/0d932b690670a7e544388ad362e9876c8bd256a0/comments",
+  "author": {
+    "login": "orthur2",
+    "id": 177996397,
+    "node_id": "U_kgDOCpwCbQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/177996397?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/orthur2",
+    "html_url": "https://github.com/orthur2",
+    "followers_url": "https://api.github.com/users/orthur2/followers",
+    "following_url": "https://api.github.com/users/orthur2/following{/other_user}",
+    "gists_url": "https://api.github.com/users/orthur2/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/orthur2/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/orthur2/subscriptions",
+    "organizations_url": "https://api.github.com/users/orthur2/orgs",
+    "repos_url": "https://api.github.com/users/orthur2/repos",
+    "events_url": "https://api.github.com/users/orthur2/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/orthur2/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "c30ca1907b0084c7ef2d2ed4b6398d181a3fad0c",
+      "url": "https://api.github.com/repos/skydiscover-ai/skydiscover/commits/c30ca1907b0084c7ef2d2ed4b6398d181a3fad0c",
+      "html_url": "https://github.com/skydiscover-ai/skydiscover/commit/c30ca1907b0084c7ef2d2ed4b6398d181a3fad0c"
+    }
+  ],
+  "stats": {
+    "total": 55,
+    "additions": 47,
+    "deletions": 8
+  },
+  "files": [
+    {
+      "sha": "3954c38b0b9681880cccbb8c82f246634b7ae512",
+      "filename": "skydiscover/optimize/search/topk/database.py",
+      "status": "modified",
+      "additions": 13,
+      "deletions": 8,
+      "changes": 21,
+      "blob_url": "https://github.com/skydiscover-ai/skydiscover/blob/0d932b690670a7e544388ad362e9876c8bd256a0/skydiscover%2Foptimize%2Fsearch%2Ftopk%2Fdatabase.py",
+      "raw_url": "https://github.com/skydiscover-ai/skydiscover/raw/0d932b690670a7e544388ad362e9876c8bd256a0/skydiscover%2Foptimize%2Fsearch%2Ftopk%2Fdatabase.py",
+      "contents_url": "https://api.github.com/repos/skydiscover-ai/skydiscover/contents/skydiscover%2Foptimize%2Fsearch%2Ftopk%2Fdatabase.py?ref=0d932b690670a7e544388ad362e9876c8bd256a0",
+      "patch": "@@ -49,7 +49,8 @@ def sample(\n         - Context programs: Next K programs (ranks 2 to K+1)\n \n         Args:\n-            num_context_programs: Number of context programs for context (defaults to 5)\n+            num_context_programs: Number of context programs (defaults to 4).\n+                Zero returns no context programs.\n             **kwargs: Additional keyword arguments\n \n         Returns:\n@@ -65,17 +66,21 @@ def sample(\n         if not top_programs:\n             raise ValueError(\"Cannot sample: no programs available after filtering\")\n \n-        if len(top_programs) < 2:\n-            # Only one program available, use it as both parent and context program\n-            parent = top_programs[0]\n-            context_programs = [top_programs[0]]\n+        parent = top_programs[0]\n+\n+        if num_context_programs == 0:\n+            context_programs: List[Program] = []\n+            logger.debug(\n+                f\"Top K search: parent {parent.id} (rank 1), no context programs requested\"\n+            )\n+        elif len(top_programs) < 2:\n+            # Reuse the parent when context is requested but no other program exists.\n+            context_programs = [parent]\n             logger.debug(\n                 \"Top K search: only 1 program available, using as both parent and context program\"\n             )\n         else:\n-            # Parent is top 1, context_programs is next K\n-            parent = top_programs[0]\n-            context_programs = top_programs[1 : min(len(top_programs), num_context_programs + 1)]\n+            context_programs = top_programs[1 : num_context_programs + 1]\n             logger.debug(\n                 f\"Top K search: parent {parent.id} (rank 1), context programs {len(context_programs)} programs (ranks 2-{len(context_programs)+1})\"\n             )"
+    },
+    {
+      "sha": "6581300301c98d6b6e05e3937d3377b26102e1a7",
+      "filename": "tests/search/test_topk_database.py",
+      "status": "added",
+      "additions": 34,
+      "deletions": 0,
+      "changes": 34,
+      "blob_url": "https://github.com/skydiscover-ai/skydiscover/blob/0d932b690670a7e544388ad362e9876c8bd256a0/tests%2Fsearch%2Ftest_topk_database.py",
+      "raw_url": "https://github.com/skydiscover-ai/skydiscover/raw/0d932b690670a7e544388ad362e9876c8bd256a0/tests%2Fsearch%2Ftest_topk_database.py",
+      "contents_url": "https://api.github.com/repos/skydiscover-ai/skydiscover/contents/tests%2Fsearch%2Ftest_topk_database.py?ref=0d932b690670a7e544388ad362e9876c8bd256a0",
+      "patch": "@@ -0,0 +1,34 @@\n+\"\"\"Regression tests for Top-K context selection.\n+\n+A zero context count fetched only the parent and triggered the single-program\n+fallback, incorrectly returning the parent as context.\n+\"\"\"\n+\n+from skydiscover.optimize.config import DatabaseConfig\n+from skydiscover.optimize.search.base_database import Program\n+from skydiscover.optimize.search.topk.database import TopKDatabase\n+\n+\n+def _make_database(num_programs: int) -> TopKDatabase:\n+    db = TopKDatabase(\"topk\", DatabaseConfig())\n+    for i in range(num_programs):\n+        db.add(Program(id=f\"p{i}\", solution=f\"code {i}\", metrics={\"combined_score\": float(i)}))\n+    return db\n+\n+\n+def test_no_context_requested():\n+    parent, context = _make_database(3).sample(num_context_programs=0)\n+    assert parent.id == \"p2\"\n+    assert context == []\n+\n+\n+def test_context_requested_with_one_program_falls_back_to_parent():\n+    parent, context = _make_database(1).sample(num_context_programs=1)\n+    assert parent.id == \"p0\"\n+    assert context == [parent]\n+\n+\n+def test_context_contains_next_best_programs():\n+    parent, context = _make_database(4).sample(num_context_programs=2)\n+    assert parent.id == \"p3\"\n+    assert [p.id for p in context] == [\"p2\", \"p1\"]"
+    }
+  ]
+}

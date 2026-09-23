@@ -1,0 +1,1117 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 1277431,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              19
+            ]
+          ],
+          "date-time": "2026-09-19T11:43:50Z",
+          "timestamp": 1789818230669,
+          "version": "4.0.1"
+        },
+        "reference-count": 17,
+        "publisher": "Association for Computing Machinery (ACM)",
+        "issue": "11",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2006,
+                  10,
+                  20
+                ]
+              ],
+              "date-time": "2006-10-20T00:00:00Z",
+              "timestamp": 1161302400000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "dl.acm.org"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "SIGPLAN Not."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2006,
+              11
+            ]
+          ]
+        },
+        "abstract": "<jats:p>\n            Sketching is a software synthesis approach where the programmer develops a partial implementation - a sketch - and a separate specification of the desired functionality. The synthesizer then completes the sketch to behave like the specification. The correctness of the synthesized implementation is guaranteed by the compiler, which allows, among other benefits, rapid development of highly tuned implementations without the fear of introducing bugs.We develop SKETCH, a language for finite programs with linguistic support for sketching. Finite programs include many highperformance kernels, including cryptocodes. In contrast to prior synthesizers, which had to be equipped with domain-specific rules, SKETCH completes sketches by means of a combinatorial search based on generalized boolean satisfiability. Consequently, our combinatorial synthesizer is complete for the class of finite programs: it is guaranteed to complete any sketch in theory, and in practice has scaled to realistic programming problems.Freed from domain rules, we can now write sketches as simpleto-understand partial programs, which are regular programs in which difficult code fragments are replaced with\n            <jats:italic>holes</jats:italic>\n            to be filled by the synthesizer. Holes may stand for index expressions, lookup tables, or bitmasks, but the programmer can easily define new kinds of holes using a single versatile synthesis operator.We have used SKETCH to synthesize an efficient implementation of the AES cipher standard. The synthesizer produces the most complex part of the implementation and runs in about an hour.\n          </jats:p>",
+        "DOI": "10.1145/1168918.1168907",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2007,
+              1,
+              17
+            ]
+          ],
+          "date-time": "2007-01-17T18:32:02Z",
+          "timestamp": 1169058722000
+        },
+        "page": "404-415",
+        "update-policy": "https://doi.org/10.1145/crossmark-policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 76,
+        "title": [
+          "Combinatorial sketching for finite programs"
+        ],
+        "prefix": "10.1145",
+        "volume": "41",
+        "author": [
+          {
+            "given": "Armando",
+            "family": "Solar-Lezama",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Liviu",
+            "family": "Tancau",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Rastislav",
+            "family": "Bodik",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sanjit",
+            "family": "Seshia",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Vijay",
+            "family": "Saraswat",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "IBM T.J. Watson Research Center"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "320",
+        "published-online": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              20
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "e_1_2_1_1_1",
+            "volume-title": "Programmable reinforcement learning agents. Advances in Neural Information Processing Systems, 13",
+            "author": "Andre D.",
+            "year": "2001",
+            "unstructured": "D. Andre and S. Russell . Programmable reinforcement learning agents. Advances in Neural Information Processing Systems, 13 , 2001 . MIT Press . D. Andre and S. Russell. Programmable reinforcement learning agents. Advances in Neural Information Processing Systems, 13, 2001. MIT Press."
+          },
+          {
+            "key": "e_1_2_1_2_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/321992.321996"
+          },
+          {
+            "key": "e_1_2_1_3_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/775832.775928"
+          },
+          {
+            "key": "e_1_2_1_4_1",
+            "doi-asserted-by": "crossref",
+            "unstructured": "N.\n      E\u00e9zn\n     and \n      N.\n      S\u00f6rensson\n  . \n  An extensible SAT-solver\n  . In E. Giunchiglia and A. Tacchella editors SAT volume \n  2919\n   of \n  Lecture Notes in Computer Science pages \n  502\n  --\n  518\n  . \n  Springer 2003\n  .  N. E\u00e9zn and N. S\u00f6rensson. An extensible SAT-solver. In E. Giunchiglia and A. Tacchella editors SAT volume 2919 of Lecture Notes in Computer Science pages 502--518. Springer 2003.",
+            "DOI": "10.1007/978-3-540-24605-3_37"
+          },
+          {
+            "key": "e_1_2_1_5_1",
+            "volume-title": "November",
+            "author": "Advanced",
+            "year": "2001",
+            "unstructured": "Advanced encryption standard (AES). U.S. DEPARTMENT OF COMMERCE/National Institute of Standards and Technology , November 2001 . http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf. Advanced encryption standard (AES). U.S. DEPARTMENT OF COMMERCE/National Institute of Standards and Technology, November 2001. http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf."
+          },
+          {
+            "key": "e_1_2_1_6_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1017/S0956796802004562"
+          },
+          {
+            "key": "e_1_2_1_7_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/242223.242279"
+          },
+          {
+            "key": "e_1_2_1_8_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/512529.512566"
+          },
+          {
+            "key": "e_1_2_1_9_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/362566.362568"
+          },
+          {
+            "key": "e_1_2_1_10_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1146909.1147048"
+          },
+          {
+            "key": "e_1_2_1_11_1",
+            "volume-title": "The Seventh International Conference on Theory and Applications of Satisfiability Testing (SAT 2004)",
+            "author": "Ranjan D.P.",
+            "year": "2004",
+            "unstructured": "D.P. Ranjan , D. Tang , and S. Malik . A comparative study of 2qbf algorithms . In The Seventh International Conference on Theory and Applications of Satisfiability Testing (SAT 2004) , May 2004 . D.P. Ranjan, D. Tang, and S. Malik. A comparative study of 2qbf algorithms. In The Seventh International Conference on Theory and Applications of Satisfiability Testing (SAT 2004), May 2004."
+          },
+          {
+            "key": "e_1_2_1_12_1",
+            "volume-title": "Combinatorial Algorithms - Theory and Practice",
+            "author": "Reingold E.M.",
+            "year": "1977",
+            "unstructured": "E.M. Reingold , J. Nievergelt , and N. Deo . Combinatorial Algorithms - Theory and Practice . Prentice-Hall , 1977 . E.M. Reingold, J. Nievergelt, and N. Deo. Combinatorial Algorithms - Theory and Practice. Prentice-Hall, 1977."
+          },
+          {
+            "key": "e_1_2_1_13_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1065010.1065045"
+          },
+          {
+            "key": "e_1_2_1_14_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5555/647478.727935"
+          },
+          {
+            "key": "e_1_2_1_15_1",
+            "volume-title": "Inc.",
+            "author": "Warren H.S.",
+            "year": "2002",
+            "unstructured": "H.S. Warren . Hacker's Delight . Addison-Wesley Longman Publishing Co ., Inc. , Boston, MA, USA , 2002 . H.S. Warren. Hacker's Delight. Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 2002."
+          },
+          {
+            "key": "e_1_2_1_16_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/367236.367286"
+          },
+          {
+            "key": "e_1_2_1_17_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1040305.1040334"
+          }
+        ],
+        "container-title": [
+          "ACM SIGPLAN Notices"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://dl.acm.org/doi/10.1145/1168918.1168907",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://dl.acm.org/doi/pdf/10.1145/1168918.1168907",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              18
+            ]
+          ],
+          "date-time": "2025-06-18T15:06:38Z",
+          "timestamp": 1750259198000
+        },
+        "score": 48.683983,
+        "resource": {
+          "primary": {
+            "URL": "https://dl.acm.org/doi/10.1145/1168918.1168907"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              20
+            ]
+          ]
+        },
+        "references-count": 17,
+        "journal-issue": {
+          "issue": "11",
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                11
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1145/1168918.1168907"
+        ],
+        "URL": "https://doi.org/10.1145/1168918.1168907",
+        "relation": {
+          "is-identical-to": [
+            {
+              "id-type": "doi",
+              "id": "10.1145/1168857.1168907",
+              "asserted-by": "subject"
+            }
+          ]
+        },
+        "ISSN": [
+          "0362-1340",
+          "1558-1160"
+        ],
+        "issn-type": [
+          {
+            "value": "0362-1340",
+            "type": "print"
+          },
+          {
+            "value": "1558-1160",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              20
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "2006-10-20",
+            "order": 2,
+            "name": "published",
+            "label": "Published",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          }
+        ]
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              17
+            ]
+          ],
+          "date-time": "2026-09-17T19:57:08Z",
+          "timestamp": 1789675028043,
+          "version": "4.0.1"
+        },
+        "reference-count": 17,
+        "publisher": "Association for Computing Machinery (ACM)",
+        "issue": "5",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2006,
+                  10,
+                  20
+                ]
+              ],
+              "date-time": "2006-10-20T00:00:00Z",
+              "timestamp": 1161302400000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "dl.acm.org"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "SIGARCH Comput. Archit. News"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              20
+            ]
+          ]
+        },
+        "abstract": "<jats:p>\n            Sketching is a software synthesis approach where the programmer develops a partial implementation - a sketch - and a separate specification of the desired functionality. The synthesizer then completes the sketch to behave like the specification. The correctness of the synthesized implementation is guaranteed by the compiler, which allows, among other benefits, rapid development of highly tuned implementations without the fear of introducing bugs.We develop SKETCH, a language for finite programs with linguistic support for sketching. Finite programs include many highperformance kernels, including cryptocodes. In contrast to prior synthesizers, which had to be equipped with domain-specific rules, SKETCH completes sketches by means of a combinatorial search based on generalized boolean satisfiability. Consequently, our combinatorial synthesizer is complete for the class of finite programs: it is guaranteed to complete any sketch in theory, and in practice has scaled to realistic programming problems.Freed from domain rules, we can now write sketches as simpleto-understand partial programs, which are regular programs in which difficult code fragments are replaced with\n            <jats:italic>holes</jats:italic>\n            to be filled by the synthesizer. Holes may stand for index expressions, lookup tables, or bitmasks, but the programmer can easily define new kinds of holes using a single versatile synthesis operator.We have used SKETCH to synthesize an efficient implementation of the AES cipher standard. The synthesizer produces the most complex part of the implementation and runs in about an hour.\n          </jats:p>",
+        "DOI": "10.1145/1168919.1168907",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2007,
+              1,
+              17
+            ]
+          ],
+          "date-time": "2007-01-17T18:32:02Z",
+          "timestamp": 1169058722000
+        },
+        "page": "404-415",
+        "update-policy": "https://doi.org/10.1145/crossmark-policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 29,
+        "title": [
+          "Combinatorial sketching for finite programs"
+        ],
+        "prefix": "10.1145",
+        "volume": "34",
+        "author": [
+          {
+            "given": "Armando",
+            "family": "Solar-Lezama",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Liviu",
+            "family": "Tancau",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Rastislav",
+            "family": "Bodik",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sanjit",
+            "family": "Seshia",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Vijay",
+            "family": "Saraswat",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "IBM T.J. Watson Research Center"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "320",
+        "published-online": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              20
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "e_1_2_1_1_1",
+            "volume-title": "Programmable reinforcement learning agents. Advances in Neural Information Processing Systems, 13",
+            "author": "Andre D.",
+            "year": "2001",
+            "unstructured": "D. Andre and S. Russell . Programmable reinforcement learning agents. Advances in Neural Information Processing Systems, 13 , 2001 . MIT Press . D. Andre and S. Russell. Programmable reinforcement learning agents. Advances in Neural Information Processing Systems, 13, 2001. MIT Press."
+          },
+          {
+            "key": "e_1_2_1_2_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/321992.321996"
+          },
+          {
+            "key": "e_1_2_1_3_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/775832.775928"
+          },
+          {
+            "key": "e_1_2_1_4_1",
+            "doi-asserted-by": "crossref",
+            "unstructured": "N.\n      E\u00e9zn\n     and \n      N.\n      S\u00f6rensson\n  . \n  An extensible SAT-solver\n  . In E. Giunchiglia and A. Tacchella editors SAT volume \n  2919\n   of \n  Lecture Notes in Computer Science pages \n  502\n  --\n  518\n  . \n  Springer 2003\n  .  N. E\u00e9zn and N. S\u00f6rensson. An extensible SAT-solver. In E. Giunchiglia and A. Tacchella editors SAT volume 2919 of Lecture Notes in Computer Science pages 502--518. Springer 2003.",
+            "DOI": "10.1007/978-3-540-24605-3_37"
+          },
+          {
+            "key": "e_1_2_1_5_1",
+            "volume-title": "November",
+            "author": "Advanced",
+            "year": "2001",
+            "unstructured": "Advanced encryption standard (AES). U.S. DEPARTMENT OF COMMERCE/National Institute of Standards and Technology , November 2001 . http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf. Advanced encryption standard (AES). U.S. DEPARTMENT OF COMMERCE/National Institute of Standards and Technology, November 2001. http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf."
+          },
+          {
+            "key": "e_1_2_1_6_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1017/S0956796802004562"
+          },
+          {
+            "key": "e_1_2_1_7_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/242223.242279"
+          },
+          {
+            "key": "e_1_2_1_8_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/512529.512566"
+          },
+          {
+            "key": "e_1_2_1_9_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/362566.362568"
+          },
+          {
+            "key": "e_1_2_1_10_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1146909.1147048"
+          },
+          {
+            "key": "e_1_2_1_11_1",
+            "volume-title": "The Seventh International Conference on Theory and Applications of Satisfiability Testing (SAT 2004)",
+            "author": "Ranjan D.P.",
+            "year": "2004",
+            "unstructured": "D.P. Ranjan , D. Tang , and S. Malik . A comparative study of 2qbf algorithms . In The Seventh International Conference on Theory and Applications of Satisfiability Testing (SAT 2004) , May 2004 . D.P. Ranjan, D. Tang, and S. Malik. A comparative study of 2qbf algorithms. In The Seventh International Conference on Theory and Applications of Satisfiability Testing (SAT 2004), May 2004."
+          },
+          {
+            "key": "e_1_2_1_12_1",
+            "volume-title": "Combinatorial Algorithms - Theory and Practice",
+            "author": "Reingold E.M.",
+            "year": "1977",
+            "unstructured": "E.M. Reingold , J. Nievergelt , and N. Deo . Combinatorial Algorithms - Theory and Practice . Prentice-Hall , 1977 . E.M. Reingold, J. Nievergelt, and N. Deo. Combinatorial Algorithms - Theory and Practice. Prentice-Hall, 1977."
+          },
+          {
+            "key": "e_1_2_1_13_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1065010.1065045"
+          },
+          {
+            "key": "e_1_2_1_14_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5555/647478.727935"
+          },
+          {
+            "key": "e_1_2_1_15_1",
+            "volume-title": "Inc.",
+            "author": "Warren H.S.",
+            "year": "2002",
+            "unstructured": "H.S. Warren . Hacker's Delight . Addison-Wesley Longman Publishing Co ., Inc. , Boston, MA, USA , 2002 . H.S. Warren. Hacker's Delight. Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 2002."
+          },
+          {
+            "key": "e_1_2_1_16_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/367236.367286"
+          },
+          {
+            "key": "e_1_2_1_17_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1040305.1040334"
+          }
+        ],
+        "container-title": [
+          "ACM SIGARCH Computer Architecture News"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://dl.acm.org/doi/10.1145/1168919.1168907",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://dl.acm.org/doi/pdf/10.1145/1168919.1168907",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              18
+            ]
+          ],
+          "date-time": "2025-06-18T15:06:38Z",
+          "timestamp": 1750259198000
+        },
+        "score": 47.629364,
+        "resource": {
+          "primary": {
+            "URL": "https://dl.acm.org/doi/10.1145/1168919.1168907"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              20
+            ]
+          ]
+        },
+        "references-count": 17,
+        "journal-issue": {
+          "issue": "5",
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                10,
+                20
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1145/1168919.1168907"
+        ],
+        "URL": "https://doi.org/10.1145/1168919.1168907",
+        "relation": {
+          "is-identical-to": [
+            {
+              "id-type": "doi",
+              "id": "10.1145/1168857.1168907",
+              "asserted-by": "subject"
+            }
+          ]
+        },
+        "ISSN": [
+          "0163-5964"
+        ],
+        "issn-type": [
+          {
+            "value": "0163-5964",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              20
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "2006-10-20",
+            "order": 2,
+            "name": "published",
+            "label": "Published",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          }
+        ]
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              18
+            ]
+          ],
+          "date-time": "2026-08-18T14:23:00Z",
+          "timestamp": 1787062980131,
+          "version": "build-2736575974"
+        },
+        "reference-count": 17,
+        "publisher": "Association for Computing Machinery (ACM)",
+        "issue": "5",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2006,
+                  10,
+                  20
+                ]
+              ],
+              "date-time": "2006-10-20T00:00:00Z",
+              "timestamp": 1161302400000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "dl.acm.org"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "SIGOPS Oper. Syst. Rev."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              20
+            ]
+          ]
+        },
+        "abstract": "<jats:p>\n                    Sketching is a software synthesis approach where the programmer develops a partial implementation - a sketch - and a separate specification of the desired functionality. The synthesizer then completes the sketch to behave like the specification. The correctness of the synthesized implementation is guaranteed by the compiler, which allows, among other benefits, rapid development of highly tuned implementations without the fear of introducing bugs.We develop SKETCH, a language for finite programs with linguistic support for sketching. Finite programs include many highperformance kernels, including cryptocodes. In contrast to prior synthesizers, which had to be equipped with domain-specific rules, SKETCH completes sketches by means of a combinatorial search based on generalized boolean satisfiability. Consequently, our combinatorial synthesizer is complete for the class of finite programs: it is guaranteed to complete any sketch in theory, and in practice has scaled to realistic programming problems.Freed from domain rules, we can now write sketches as simpleto-understand partial programs, which are regular programs in which difficult code fragments are replaced with\n                    <jats:italic>holes</jats:italic>\n                    to be filled by the synthesizer. Holes may stand for index expressions, lookup tables, or bitmasks, but the programmer can easily define new kinds of holes using a single versatile synthesis operator.We have used SKETCH to synthesize an efficient implementation of the AES cipher standard. The synthesizer produces the most complex part of the implementation and runs in about an hour.\n                  </jats:p>",
+        "DOI": "10.1145/1168917.1168907",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2007,
+              1,
+              17
+            ]
+          ],
+          "date-time": "2007-01-17T13:32:02Z",
+          "timestamp": 1169040722000
+        },
+        "page": "404-415",
+        "update-policy": "https://doi.org/10.1145/crossmark-policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 58,
+        "title": [
+          "Combinatorial sketching for finite programs"
+        ],
+        "prefix": "10.1145",
+        "volume": "40",
+        "author": [
+          {
+            "given": "Armando",
+            "family": "Solar-Lezama",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Liviu",
+            "family": "Tancau",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Rastislav",
+            "family": "Bodik",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sanjit",
+            "family": "Seshia",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "UC Berkeley"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Vijay",
+            "family": "Saraswat",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "IBM T.J. Watson Research Center"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "320",
+        "published-online": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              20
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "e_1_2_1_1_1",
+            "volume-title": "Programmable reinforcement learning agents. Advances in Neural Information Processing Systems, 13",
+            "author": "Andre D.",
+            "year": "2001",
+            "unstructured": "D. Andre and S. Russell . Programmable reinforcement learning agents. Advances in Neural Information Processing Systems, 13 , 2001 . MIT Press . D. Andre and S. Russell. Programmable reinforcement learning agents. Advances in Neural Information Processing Systems, 13, 2001. MIT Press."
+          },
+          {
+            "key": "e_1_2_1_2_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/321992.321996"
+          },
+          {
+            "key": "e_1_2_1_3_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/775832.775928"
+          },
+          {
+            "key": "e_1_2_1_4_1",
+            "doi-asserted-by": "crossref",
+            "unstructured": "N.\n      E\u00e9zn\n     and \n      N.\n      S\u00f6rensson\n  . \n  An extensible SAT-solver\n  . In E. Giunchiglia and A. Tacchella editors SAT volume \n  2919\n   of \n  Lecture Notes in Computer Science pages \n  502\n  --\n  518\n  . \n  Springer 2003\n  .  N. E\u00e9zn and N. S\u00f6rensson. An extensible SAT-solver. In E. Giunchiglia and A. Tacchella editors SAT volume 2919 of Lecture Notes in Computer Science pages 502--518. Springer 2003.",
+            "DOI": "10.1007/978-3-540-24605-3_37"
+          },
+          {
+            "key": "e_1_2_1_5_1",
+            "volume-title": "November",
+            "author": "Advanced",
+            "year": "2001",
+            "unstructured": "Advanced encryption standard (AES). U.S. DEPARTMENT OF COMMERCE/National Institute of Standards and Technology , November 2001 . http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf. Advanced encryption standard (AES). U.S. DEPARTMENT OF COMMERCE/National Institute of Standards and Technology, November 2001. http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf."
+          },
+          {
+            "key": "e_1_2_1_6_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1017/S0956796802004562"
+          },
+          {
+            "key": "e_1_2_1_7_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/242223.242279"
+          },
+          {
+            "key": "e_1_2_1_8_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/512529.512566"
+          },
+          {
+            "key": "e_1_2_1_9_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/362566.362568"
+          },
+          {
+            "key": "e_1_2_1_10_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1146909.1147048"
+          },
+          {
+            "key": "e_1_2_1_11_1",
+            "volume-title": "The Seventh International Conference on Theory and Applications of Satisfiability Testing (SAT 2004)",
+            "author": "Ranjan D.P.",
+            "year": "2004",
+            "unstructured": "D.P. Ranjan , D. Tang , and S. Malik . A comparative study of 2qbf algorithms . In The Seventh International Conference on Theory and Applications of Satisfiability Testing (SAT 2004) , May 2004 . D.P. Ranjan, D. Tang, and S. Malik. A comparative study of 2qbf algorithms. In The Seventh International Conference on Theory and Applications of Satisfiability Testing (SAT 2004), May 2004."
+          },
+          {
+            "key": "e_1_2_1_12_1",
+            "volume-title": "Combinatorial Algorithms - Theory and Practice",
+            "author": "Reingold E.M.",
+            "year": "1977",
+            "unstructured": "E.M. Reingold , J. Nievergelt , and N. Deo . Combinatorial Algorithms - Theory and Practice . Prentice-Hall , 1977 . E.M. Reingold, J. Nievergelt, and N. Deo. Combinatorial Algorithms - Theory and Practice. Prentice-Hall, 1977."
+          },
+          {
+            "key": "e_1_2_1_13_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1065010.1065045"
+          },
+          {
+            "key": "e_1_2_1_14_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5555/647478.727935"
+          },
+          {
+            "key": "e_1_2_1_15_1",
+            "volume-title": "Inc.",
+            "author": "Warren H.S.",
+            "year": "2002",
+            "unstructured": "H.S. Warren . Hacker's Delight . Addison-Wesley Longman Publishing Co ., Inc. , Boston, MA, USA , 2002 . H.S. Warren. Hacker's Delight. Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 2002."
+          },
+          {
+            "key": "e_1_2_1_16_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/367236.367286"
+          },
+          {
+            "key": "e_1_2_1_17_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1040305.1040334"
+          }
+        ],
+        "container-title": [
+          "ACM SIGOPS Operating Systems Review"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://dl.acm.org/doi/10.1145/1168917.1168907",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://dl.acm.org/doi/pdf/10.1145/1168917.1168907",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              18
+            ]
+          ],
+          "date-time": "2025-06-18T11:06:37Z",
+          "timestamp": 1750244797000
+        },
+        "score": 47.54596,
+        "resource": {
+          "primary": {
+            "URL": "https://dl.acm.org/doi/10.1145/1168917.1168907"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              20
+            ]
+          ]
+        },
+        "references-count": 17,
+        "journal-issue": {
+          "issue": "5",
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                10,
+                20
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1145/1168917.1168907"
+        ],
+        "URL": "https://doi.org/10.1145/1168917.1168907",
+        "relation": {
+          "is-identical-to": [
+            {
+              "id-type": "doi",
+              "id": "10.1145/1168857.1168907",
+              "asserted-by": "subject"
+            }
+          ]
+        },
+        "ISSN": [
+          "0163-5980"
+        ],
+        "issn-type": [
+          {
+            "value": "0163-5980",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              20
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "2006-10-20",
+            "order": 2,
+            "name": "published",
+            "label": "Published",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          }
+        ]
+      }
+    ],
+    "items-per-page": 3,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

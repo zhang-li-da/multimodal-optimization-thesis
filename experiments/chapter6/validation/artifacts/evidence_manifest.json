@@ -1,0 +1,93 @@
+{
+  "recorded_utc": "2026-09-23T04:59:48.264750+00:00",
+  "sources": [
+    {
+      "name": "MLEvolve",
+      "url": "https://github.com/InternScience/MLEvolve",
+      "local_path": "chapter6_validation\\artifacts\\literature\\mlevolve_current.json",
+      "read_scope": "commit metadata; local source and paper were read in the initial audit",
+      "exists": true,
+      "sha256": "24803c5f8714d169d8ee4dce222b8029db451e66c3076760452feba9bd7dbb4c"
+    },
+    {
+      "name": "AdaEvolve / SkyDiscover",
+      "url": "https://github.com/skydiscover-ai/skydiscover",
+      "local_path": "chapter6_validation\\artifacts\\literature\\skydiscover_commit.json",
+      "read_scope": "pinned repository tree, adaptation code, archive and config read",
+      "exists": true,
+      "sha256": "501bc94be275345538de95f05c1ed5001966d0f804a662b0d76dfe1278dec418"
+    },
+    {
+      "name": "FunSearch",
+      "url": "https://github.com/google-deepmind/funsearch",
+      "local_path": "chapter6_validation\\artifacts\\literature\\funsearch_programs_database.py",
+      "read_scope": "signature-based clustering and island reset read; matching commit metadata retained",
+      "exists": true,
+      "sha256": "b2bef312d04861f467f304f65788efe959f0493818976b052c46b4703151affc"
+    },
+    {
+      "name": "SeaEvo",
+      "url": "https://arxiv.org/html/2604.24372v2",
+      "local_path": "_analysis\\seaevo.txt",
+      "read_scope": "sections 3.2-3.5 read; no verified author source found in this bounded repository search",
+      "exists": true,
+      "sha256": "fbf21c95ce0303c399ba13c2e47940efcce4e9268f4ffd795e18d74d3575e4f8"
+    },
+    {
+      "name": "AdaEvolve paper",
+      "url": "https://arxiv.org/html/2602.20133v1",
+      "local_path": "_analysis\\adaevolve.txt",
+      "read_scope": "local adaptation/global UCB/migration/meta-guidance read",
+      "exists": true,
+      "sha256": "2213df58d9fc57535c0fae73f0e3a7730ca8e7d65e8dc5554223f391704088b5"
+    },
+    {
+      "name": "GEPA",
+      "url": "https://arxiv.org/html/2507.19457v1",
+      "local_path": "chapter6_validation\\artifacts\\literature\\gepa_abstract.html",
+      "read_scope": "full paper HTML retrieved; trajectories/Pareto selection/merge sections read, not a complete implementation audit",
+      "exists": true,
+      "sha256": "dff6f513486910694609a3ed0340220848279f0182f0b1d5f35a612aec8b4df1"
+    },
+    {
+      "name": "Combinatorial sketching",
+      "url": "https://doi.org/10.1145/1168918.1168907",
+      "local_path": "chapter6_validation\\artifacts\\literature\\prior_art_query_0.json",
+      "read_scope": "Crossref bibliographic verification only; not full-text theorem audit",
+      "exists": true,
+      "sha256": "bee1d832fa6e5924439b554ce0cc74e62e5fb46b93b155bfbb352676da06ffc9"
+    },
+    {
+      "name": "Bandits with Knapsacks",
+      "url": "https://doi.org/10.1145/3164539",
+      "local_path": "chapter6_validation\\artifacts\\literature\\prior_art_query_2.json",
+      "read_scope": "Crossref bibliographic verification only; not full-text theorem audit",
+      "exists": true,
+      "sha256": "6713501699b101ef85a56ab3f457455d5819ee4f3bf4fd609433aedd6bd68bbe"
+    },
+    {
+      "name": "Corrected MSLS-MA",
+      "url": "user-supplied archive",
+      "local_path": "_analysis\\paper_tsp_new\\Manuscript File.tex",
+      "read_scope": "correct paper source; discrete niching/local search/restart mapping in prior handoff",
+      "exists": true,
+      "sha256": "ee0691cf20d31588cf19169123a8c476671d22c277b91c17eafb0d0e7a896b14"
+    },
+    {
+      "name": "RMC-CMSA",
+      "url": "user-supplied manuscript",
+      "local_path": "_analysis\\paper2\\edc_cmsa_main.tex",
+      "read_scope": "start-terminal mismatch, typed memory, finite-pool property",
+      "exists": true,
+      "sha256": "960014ba30eb3ca3e60212610def5b1723d1c72b1603fc5605ebf663290fa9e4"
+    }
+  ],
+  "limits": "Bounded literature audit, not exhaustive novelty proof; no external framework performance reproduction in this validation.",
+  "frozen_protocol": {
+    "created_utc": "2026-09-23T04:27:25.025733+00:00",
+    "validation_fingerprint": "8f93acbc027a64bad421eff1a3c80fb2587fd23d3a871119b61dad0e41113e73",
+    "pilot_fingerprint": "c4b522edb87ae89299c283b7322c856d4e19af9cdf0dab9140618788790c1194",
+    "protocol_sha256": "dd9d1e53024222ca1b590206a10a73b096579099a68397d6309cf80f71094a33"
+  },
+  "infrastructure_amendment": "chapter6_validation\\artifacts\\infrastructure_amendment.json"
+}

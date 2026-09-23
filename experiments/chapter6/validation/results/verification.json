@@ -1,0 +1,46 @@
+{
+  "pass": true,
+  "available_runs_pass": true,
+  "all_runs_cost_eligible": false,
+  "complete": true,
+  "runs": 120,
+  "candidate_attempts": 2126,
+  "model_calls": 4251,
+  "tokens": 6168998,
+  "replay_evaluations": 946,
+  "replay_count_definition": "distinct within each audit batch; some equivalent programs can recur across models or incremental batches, so not a global distinct-program count",
+  "infrastructure_ineligible": [
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_tsp_niche_p13",
+      "errors": [
+        {
+          "iteration": 1,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "TimeoutError; provider=alibaba-token-plan-cn"
+        }
+      ],
+      "recorded_tokens": 2154,
+      "interpretation": "logged protocol exclusion; recorded calls still audited, unknown remote usage cannot be certified"
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p12",
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "TimeoutError; provider=minimax-cn-coding-plan"
+        }
+      ],
+      "recorded_tokens": 0,
+      "interpretation": "logged protocol exclusion; recorded calls still audited, unknown remote usage cannot be certified"
+    }
+  ],
+  "failures": [],
+  "audit_files": [
+    "verification_qwen.json",
+    "verification_minimax.json"
+  ],
+  "scope": "source/split/recorded token admission and selected-program replay; unknown API error usage is excluded from cost inference"
+}

@@ -1,0 +1,1767 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 5835,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              22
+            ]
+          ],
+          "date-time": "2026-09-22T18:16:00Z",
+          "timestamp": 1790100960321,
+          "version": "4.0.1"
+        },
+        "reference-count": 33,
+        "publisher": "IEEE",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2013,
+              10
+            ]
+          ]
+        },
+        "DOI": "10.1109/focs.2013.30",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2014,
+              1,
+              3
+            ]
+          ],
+          "date-time": "2014-01-03T18:37:15Z",
+          "timestamp": 1388774235000
+        },
+        "page": "207-216",
+        "source": "Crossref",
+        "is-referenced-by-count": 114,
+        "title": [
+          "Bandits with Knapsacks"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Ashwinkumar",
+            "family": "Badanidiyuru",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Robert",
+            "family": "Kleinberg",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Aleksandrs",
+            "family": "Slivkins",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "19",
+            "first-page": "496",
+            "article-title": "Multi-armed bandits with metric switching costs",
+            "author": "guha",
+            "year": "2007",
+            "journal-title": "36th ICALP"
+          },
+          {
+            "key": "17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/0196-8858(85)90002-8"
+          },
+          {
+            "key": "18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1561/2200000024"
+          },
+          {
+            "key": "33",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/1.9781611972771.20"
+          },
+          {
+            "key": "15",
+            "first-page": "355",
+            "article-title": "Stochastic linear optimization under bandit feedback",
+            "author": "dani",
+            "year": "2008",
+            "journal-title": "21th COLT"
+          },
+          {
+            "key": "16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1374376.1374475"
+          },
+          {
+            "key": "13",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/SFCS.2003.1238232"
+          },
+          {
+            "key": "14",
+            "doi-asserted-by": "crossref",
+            "first-page": "1167",
+            "DOI": "10.1145/2488388.2488490",
+            "article-title": "Truthful incentives in crowdsourcing tasks using regret minimization mechanisms",
+            "author": "singla",
+            "year": "2013",
+            "journal-title": "22nd WWW"
+          },
+          {
+            "key": "11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2229012.2229023"
+          },
+          {
+            "key": "12",
+            "first-page": "202",
+            "article-title": "Online learning in online auctions",
+            "author": "blum",
+            "year": "2003",
+            "journal-title": "14th ACM-SIAM SODA"
+          },
+          {
+            "key": "21",
+            "author": "tran-thanh",
+            "year": "2012",
+            "journal-title": "Budget-limited Multi-armed Bandits"
+          },
+          {
+            "key": "20",
+            "first-page": "827",
+            "article-title": "Approximation algorithms for correlated knapsacks and nonmartingale bandits",
+            "author": "gupta",
+            "year": "2011",
+            "journal-title": "52nd IEEE FOCS"
+          },
+          {
+            "key": "22",
+            "doi-asserted-by": "crossref",
+            "first-page": "1211",
+            "DOI": "10.1609/aaai.v24i1.7758",
+            "article-title": "?-first policies for budget-limited multiarmed bandits",
+            "author": "tran-thanh",
+            "year": "2010",
+            "journal-title": "AAAI'10"
+          },
+          {
+            "key": "23",
+            "first-page": "1134",
+            "article-title": "Knapsack based optimal policies for budget-limited multiarmed bandits",
+            "author": "tran-thanh",
+            "year": "2012",
+            "journal-title": "AAAI'10"
+          },
+          {
+            "key": "24",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/1.9781611973105.86"
+          },
+          {
+            "key": "25",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1566374.1566384"
+          },
+          {
+            "key": "26",
+            "author": "agrawal",
+            "year": "2009",
+            "journal-title": "A Dynamic Nearoptimal Algorithm for Online Linear Programming"
+          },
+          {
+            "key": "27",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1993574.1993581"
+          },
+          {
+            "key": "28",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-642-15775-2_16"
+          },
+          {
+            "key": "29",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-642-31594-7_59"
+          },
+          {
+            "key": "3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/S0097539701398375"
+          },
+          {
+            "key": "2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1287/moor.24.2.293"
+          },
+          {
+            "key": "10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1287/opre.1080.0640"
+          },
+          {
+            "key": "1",
+            "doi-asserted-by": "crossref",
+            "first-page": "143",
+            "DOI": "10.1111/j.2517-6161.1980.tb01111.x",
+            "article-title": "Multi-armed bandits and the gittins index",
+            "volume": "42",
+            "author": "whittle",
+            "year": "1980",
+            "journal-title": "J Royal Statistical Society Series B"
+          },
+          {
+            "key": "30",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.4086/toc.2012.v008a006"
+          },
+          {
+            "key": "7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1023/A:1013689704352"
+          },
+          {
+            "key": "6",
+            "article-title": "Adaptive crowdsourcing algorithms for the bandit survey problem",
+            "author": "abraham",
+            "year": "2013",
+            "journal-title": "26th COLT"
+          },
+          {
+            "key": "32",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1287/moor.20.2.257"
+          },
+          {
+            "key": "5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2229012.2229026"
+          },
+          {
+            "key": "31",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/S0097539704446232"
+          },
+          {
+            "key": "4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1287/opre.1120.1103"
+          },
+          {
+            "key": "9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1006/jcss.1997.1504"
+          },
+          {
+            "key": "8",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1006/inco.1994.1009"
+          }
+        ],
+        "event": {
+          "name": "2013 IEEE 54th Annual Symposium on Foundations of Computer Science (FOCS)",
+          "location": "Berkeley, CA, USA",
+          "start": {
+            "date-parts": [
+              [
+                2013,
+                10,
+                26
+              ]
+            ]
+          },
+          "end": {
+            "date-parts": [
+              [
+                2013,
+                10,
+                29
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2013 IEEE 54th Annual Symposium on Foundations of Computer Science"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/6685222/6686124/06686156.pdf?arnumber=6686156",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2025-05-01T10:53:49Z",
+          "timestamp": 1746096829000
+        },
+        "score": 74.94745,
+        "resource": {
+          "primary": {
+            "URL": "http://ieeexplore.ieee.org/document/6686156/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2013,
+              10
+            ]
+          ]
+        },
+        "references-count": 33,
+        "URL": "https://doi.org/10.1109/focs.2013.30",
+        "published": {
+          "date-parts": [
+            [
+              2013,
+              10
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              22
+            ]
+          ],
+          "date-time": "2026-09-22T18:16:00Z",
+          "timestamp": 1790100960235,
+          "version": "4.0.1"
+        },
+        "reference-count": 57,
+        "publisher": "Association for Computing Machinery (ACM)",
+        "issue": "3",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2018,
+                  3,
+                  1
+                ]
+              ],
+              "date-time": "2018-03-01T00:00:00Z",
+              "timestamp": 1519862400000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/100000001",
+            "name": "NSF",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "IIS-0905467, CCF-0643934, AF-0910940"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "IIS-0905467, CCF-0643934, AF-0910940"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000001",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/100006112",
+            "name": "Microsoft Research",
+            "doi-asserted-by": "crossref",
+            "award": [
+              "New Faculty Fellowship"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "New Faculty Fellowship"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100006112",
+                "id-type": "DOI",
+                "asserted-by": "crossref"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/100006785",
+            "name": "Google",
+            "doi-asserted-by": "crossref",
+            "award": [
+              "Research Grant"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "Research Grant"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100006785",
+                "id-type": "DOI",
+                "asserted-by": "crossref"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "dl.acm.org"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "J. ACM"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2018,
+              6,
+              30
+            ]
+          ]
+        },
+        "abstract": "<jats:p>\n                    Multi-armed bandit problems are the predominant theoretical model of exploration-exploitation tradeoffs in learning, and they have countless applications ranging from medical trials, to communication networks, to Web search and advertising. In many of these application domains, the learner may be constrained by one or more supply (or budget) limits, in addition to the customary limitation on the time horizon. The literature lacks a general model encompassing these sorts of problems. We introduce such a model, called\n                    <jats:italic>bandits with knapsacks</jats:italic>\n                    , that combines bandit learning with aspects of stochastic integer programming. In particular, a bandit algorithm needs to solve a stochastic version of the well-known\n                    <jats:italic>knapsack problem</jats:italic>\n                    , which is concerned with packing items into a limited-size knapsack. A distinctive feature of our problem, in comparison to the existing regret-minimization literature, is that the optimal policy for a given latent distribution may significantly outperform the policy that plays the optimal fixed arm. Consequently, achieving sublinear regret in the bandits-with-knapsacks problem is significantly more challenging than in conventional bandit problems.\n                  </jats:p>\n                  <jats:p>We present two algorithms whose reward is close to the information-theoretic optimum: one is based on a novel \u201cbalanced exploration\u201d paradigm, while the other is a primal-dual algorithm that uses multiplicative updates. Further, we prove that the regret achieved by both algorithms is optimal up to polylogarithmic factors. We illustrate the generality of the problem by presenting applications in a number of different domains, including electronic commerce, routing, and scheduling. As one example of a concrete application, we consider the problem of dynamic posted pricing with limited supply and obtain the first algorithm whose regret, with respect to the optimal dynamic policy, is sublinear in the supply.</jats:p>",
+        "DOI": "10.1145/3164539",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2018,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2018-03-01T10:27:23Z",
+          "timestamp": 1519900043000
+        },
+        "page": "1-55",
+        "update-policy": "https://doi.org/10.1145/crossmark-policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 117,
+        "title": [
+          "Bandits with Knapsacks"
+        ],
+        "prefix": "10.1145",
+        "volume": "65",
+        "author": [
+          {
+            "given": "Ashwinkumar",
+            "family": "Badanidiyuru",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Google Research, CA, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Robert",
+            "family": "Kleinberg",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Cornell University, Ithaca, NY, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Aleksandrs",
+            "family": "Slivkins",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Microsoft Research, NY, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "320",
+        "published-online": {
+          "date-parts": [
+            [
+              2018,
+              3
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "e_1_2_1_1_1",
+            "volume-title": "Proceedings of the 26th COLT.",
+            "author": "Abraham Ittai",
+            "year": "2013"
+          },
+          {
+            "key": "e_1_2_1_2_1",
+            "volume-title": "Proceedings of the 31st ICML.",
+            "author": "Agarwal Alekh",
+            "year": "2014"
+          },
+          {
+            "key": "e_1_2_1_3_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2600057.2602844"
+          },
+          {
+            "key": "e_1_2_1_4_1",
+            "volume-title": "Proceedings of the 29th NIPS.",
+            "author": "Agrawal Shipra"
+          },
+          {
+            "key": "e_1_2_1_5_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5555/2765026.2765038"
+          },
+          {
+            "key": "e_1_2_1_6_1",
+            "volume-title": "Proceedings of the 29th COLT.",
+            "author": "Agrawal Shipra",
+            "year": "2016"
+          },
+          {
+            "key": "e_1_2_1_7_1",
+            "volume-title": "Proceedings of the 28th UAI.",
+            "author": "Amin Kareem",
+            "year": "2012"
+          },
+          {
+            "key": "e_1_2_1_8_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.4086/toc.2012.v008a006"
+          },
+          {
+            "key": "e_1_2_1_9_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1023/A:1013689704352"
+          },
+          {
+            "key": "e_1_2_1_10_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/S0097539701398375"
+          },
+          {
+            "key": "e_1_2_1_11_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1566374.1566386"
+          },
+          {
+            "key": "e_1_2_1_12_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2229012.2229023"
+          },
+          {
+            "key": "e_1_2_1_13_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2229012.2229026"
+          },
+          {
+            "key": "e_1_2_1_14_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/FOCS.2013.30"
+          },
+          {
+            "key": "e_1_2_1_15_1",
+            "volume-title": "Proceedings of the 27th COLT.",
+            "author": "Badanidiyuru Ashwinkumar",
+            "year": "2014"
+          },
+          {
+            "key": "e_1_2_1_16_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1287/opre.1080.0640"
+          },
+          {
+            "key": "e_1_2_1_17_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5555/2448473.2448483"
+          },
+          {
+            "key": "e_1_2_1_18_1",
+            "volume-title": "Proceedings of the 14th ACM-SIAM SODA. 202--204",
+            "author": "Blum Avrim",
+            "year": "2003"
+          },
+          {
+            "key": "e_1_2_1_19_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.sorms.2015.03.001"
+          },
+          {
+            "key": "e_1_2_1_20_1",
+            "doi-asserted-by": "crossref",
+            "unstructured": "S\u00e9bastien Bubeck and Nicolo Cesa-Bianchi. 2012. Regret Analysis of Stochastic and Nonstochastic Multi-armed Bandit Problems. Found.Trends Mach. Learn. 5 1 (2012). S\u00e9bastien Bubeck and Nicolo Cesa-Bianchi. 2012. Regret Analysis of Stochastic and Nonstochastic Multi-armed Bandit Problems. Found.Trends Mach. Learn. 5 1 (2012).",
+            "DOI": "10.1561/2200000024"
+          },
+          {
+            "key": "e_1_2_1_21_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5555/2627817.2627903"
+          },
+          {
+            "key": "e_1_2_1_22_1",
+            "volume-title": "Proceedings of the 14th AISTATS.",
+            "author": "Chu Wei"
+          },
+          {
+            "key": "e_1_2_1_23_1",
+            "volume-title": "Proceedings of the 21th COLT. 355--366",
+            "author": "Dani Varsha",
+            "year": "2008"
+          },
+          {
+            "key": "e_1_2_1_24_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1566374.1566388"
+          },
+          {
+            "key": "e_1_2_1_25_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1566374.1566384"
+          },
+          {
+            "key": "e_1_2_1_26_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1993574.1993581"
+          },
+          {
+            "key": "e_1_2_1_27_1",
+            "volume-title": "Proceedings of the 27th AAAI.",
+            "author": "Ding Wenkui",
+            "year": "2013"
+          },
+          {
+            "key": "e_1_2_1_28_1",
+            "volume-title": "Proceedings of the 27th UAI.",
+            "author": "Dud\u00edik Miroslav",
+            "year": "2011"
+          },
+          {
+            "key": "e_1_2_1_29_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5555/648301.755490"
+          },
+          {
+            "key": "e_1_2_1_30_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5555/1888935.1888957"
+          },
+          {
+            "key": "e_1_2_1_31_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1006/jcss.1997.1504"
+          },
+          {
+            "key": "e_1_2_1_32_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/S0097539704446232"
+          },
+          {
+            "key": "e_1_2_1_33_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-642-02930-1_41"
+          },
+          {
+            "key": "e_1_2_1_34_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/FOCS.2011.48"
+          },
+          {
+            "key": "e_1_2_1_35_1",
+            "volume-title": "Proceedings of the 20th IJCAI. 830--835",
+            "author": "Gy\u00f6rgy Andr\u00e1s",
+            "year": "2007"
+          },
+          {
+            "key": "e_1_2_1_36_1",
+            "volume-title": "Proceedings of the 20th COLT. 499--513",
+            "author": "Hazan Elad",
+            "year": "2007"
+          },
+          {
+            "key": "e_1_2_1_37_1",
+            "volume-title": "Proceedings of the 18th NIPS.",
+            "author": "Kleinberg Robert",
+            "year": "2004"
+          },
+          {
+            "key": "e_1_2_1_38_1",
+            "unstructured": "Robert Kleinberg. 2007. Lecture notes for CS 683 (week 2) Cornell University. Retrieved from http://www.cs.cornell.edu/courses/cs683/2007sp/lecnotes/week2.pdf. Robert Kleinberg. 2007. Lecture notes for CS 683 (week 2) Cornell University. Retrieved from http://www.cs.cornell.edu/courses/cs683/2007sp/lecnotes/week2.pdf."
+          },
+          {
+            "key": "e_1_2_1_39_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5555/946243.946352"
+          },
+          {
+            "key": "e_1_2_1_40_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5555/1873601.1873669"
+          },
+          {
+            "key": "e_1_2_1_41_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1374376.1374475"
+          },
+          {
+            "key": "e_1_2_1_42_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/0196-8858(85)90002-8"
+          },
+          {
+            "key": "e_1_2_1_43_1",
+            "volume-title": "Proceedings of the 21st NIPS.",
+            "author": "Langford John",
+            "year": "2007"
+          },
+          {
+            "key": "e_1_2_1_44_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1006/inco.1994.1009"
+          },
+          {
+            "key": "e_1_2_1_45_1",
+            "volume-title": "Proceedings of the 14th AISTATS.",
+            "author": "Lu Tyler",
+            "year": "2010"
+          },
+          {
+            "key": "e_1_2_1_46_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-642-31594-7_59"
+          },
+          {
+            "key": "e_1_2_1_47_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/1.9781611972771.20"
+          },
+          {
+            "key": "e_1_2_1_48_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1273496.1273587"
+          },
+          {
+            "key": "e_1_2_1_49_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1287/moor.24.2.293"
+          },
+          {
+            "key": "e_1_2_1_50_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5555/3219302.3219303"
+          },
+          {
+            "key": "e_1_2_1_51_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2488388.2488490"
+          },
+          {
+            "key": "e_1_2_1_52_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2692359.2692364"
+          },
+          {
+            "key": "e_1_2_1_53_1",
+            "volume-title": "Proceedings of the 24th AAAI. 1211--1216",
+            "author": "Tran-Thanh Long"
+          },
+          {
+            "key": "e_1_2_1_54_1",
+            "volume-title": "Proceedings of the 26th AAAI. 1134--1140",
+            "author": "Tran-Thanh Long"
+          },
+          {
+            "key": "e_1_2_1_55_1",
+            "volume-title": "Proceedings of the 30th UAI.",
+            "author": "Tran-Thanh Long",
+            "year": "2014"
+          },
+          {
+            "key": "e_1_2_1_56_1",
+            "first-page": "318",
+            "article-title": "Close the Gaps",
+            "volume": "62",
+            "author": "Wang Zizhuo",
+            "year": "2014",
+            "journal-title": "A Learning-While-Doing Algorithm for Single-Product Revenue Management Problems. Oper. Res."
+          },
+          {
+            "key": "e_1_2_1_57_1",
+            "doi-asserted-by": "crossref",
+            "first-page": "143",
+            "DOI": "10.1111/j.2517-6161.1980.tb01111.x",
+            "article-title": "Multi-armed Bandits and the Gittins Index",
+            "volume": "42",
+            "author": "Whittle Peter",
+            "year": "1980",
+            "journal-title": "J. Roy. Stat. Soc., Ser. B"
+          }
+        ],
+        "container-title": [
+          "Journal of the ACM"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://dl.acm.org/doi/10.1145/3164539",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://dl.acm.org/doi/pdf/10.1145/3164539",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "syndication"
+          },
+          {
+            "URL": "https://dl.acm.org/doi/pdf/10.1145/3164539",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              17
+            ]
+          ],
+          "date-time": "2025-06-17T22:13:38Z",
+          "timestamp": 1750198418000
+        },
+        "score": 70.27671,
+        "resource": {
+          "primary": {
+            "URL": "https://dl.acm.org/doi/10.1145/3164539"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2018,
+              3
+            ]
+          ]
+        },
+        "references-count": 57,
+        "journal-issue": {
+          "issue": "3",
+          "published-print": {
+            "date-parts": [
+              [
+                2018,
+                6,
+                30
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1145/3164539"
+        ],
+        "URL": "https://doi.org/10.1145/3164539",
+        "ISSN": [
+          "0004-5411",
+          "1557-735X"
+        ],
+        "issn-type": [
+          {
+            "value": "0004-5411",
+            "type": "print"
+          },
+          {
+            "value": "1557-735X",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2018,
+              3
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "2015-07-01",
+            "order": 0,
+            "name": "received",
+            "label": "Received",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          },
+          {
+            "value": "2017-11-01",
+            "order": 1,
+            "name": "accepted",
+            "label": "Accepted",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          },
+          {
+            "value": "2018-03-01",
+            "order": 2,
+            "name": "published",
+            "label": "Published",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          }
+        ]
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              22
+            ]
+          ],
+          "date-time": "2026-09-22T18:16:15Z",
+          "timestamp": 1790100975835,
+          "version": "4.0.1"
+        },
+        "reference-count": 88,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2019,
+                  11,
+                  1
+                ]
+              ],
+              "date-time": "2019-11-01T00:00:00Z",
+              "timestamp": 1572566400000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2019,
+                  11,
+                  1
+                ]
+              ],
+              "date-time": "2019-11-01T00:00:00Z",
+              "timestamp": 1572566400000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2019,
+                  11,
+                  1
+                ]
+              ],
+              "date-time": "2019-11-01T00:00:00Z",
+              "timestamp": 1572566400000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2019,
+              11
+            ]
+          ]
+        },
+        "DOI": "10.1109/focs.2019.00022",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2020,
+              1,
+              7
+            ]
+          ],
+          "date-time": "2020-01-07T18:49:16Z",
+          "timestamp": 1578422956000
+        },
+        "page": "202-219",
+        "source": "Crossref",
+        "is-referenced-by-count": 16,
+        "title": [
+          "Adversarial Bandits with Knapsacks"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Nicole",
+            "family": "Immorlica",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Karthik Abinav",
+            "family": "Sankararaman",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Robert",
+            "family": "Schapire",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Aleksandrs",
+            "family": "Slivkins",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref73",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/3033274.3085106"
+          },
+          {
+            "key": "ref72",
+            "first-page": "471",
+            "article-title": "Inducing approximately optimal flow using truthful mediators",
+            "author": "rogers",
+            "year": "2015",
+            "journal-title": "16th ACM Conf on Electronic Commerce (EC)"
+          },
+          {
+            "key": "ref71",
+            "article-title": "Online saddle point problem with applications to constrained online convex optimization",
+            "author": "rivera",
+            "year": "2018"
+          },
+          {
+            "key": "ref70",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.24963/ijcai.2019/459"
+          },
+          {
+            "key": "ref76",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.7551/mitpress/8291.001.0001",
+            "author": "schapire",
+            "year": "2012",
+            "journal-title": "Boosting Foundations and Algorithms"
+          },
+          {
+            "key": "ref77",
+            "article-title": "An improved parametrization and analysis of the EXP3++ algorithm for stochastic and adversarial bandits",
+            "author": "seldin",
+            "year": "2017",
+            "journal-title": "30th Conf on Learning Theory (COLT)"
+          },
+          {
+            "key": "ref74",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2897518.2897579"
+          },
+          {
+            "key": "ref39",
+            "article-title": "Efficient optimal leanring for contextual bandits",
+            "author": "dud\u00edk",
+            "year": "2011",
+            "journal-title": "27th Conf Uncertainty in Artificial Intelligence (UA/)"
+          },
+          {
+            "key": "ref75",
+            "first-page": "1760",
+            "article-title": "Combinatorial semi-bandits with knapsacks",
+            "author": "sankararaman",
+            "year": "2018",
+            "journal-title": "Proc Int Conf Artificial Intelligence and Statistics (AISTATS)"
+          },
+          {
+            "key": "ref38",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1609/aaai.v27i1.8637",
+            "article-title": "Multi-armed bandit with budget constraint and variable costs",
+            "author": "ding",
+            "year": "2013",
+            "journal-title": "The AAAI Conference of Artificial Intelligence (AAAI)"
+          },
+          {
+            "key": "ref78",
+            "article-title": "One practical algorithm for both stochastic and adversarial bandits",
+            "author": "seldin",
+            "year": "2014",
+            "journal-title": "Proc of the 31th Intl Conf on Mach Learn (ICML)"
+          },
+          {
+            "key": "ref79",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2488388.2488490"
+          },
+          {
+            "key": "ref33",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TSP.2017.2750109"
+          },
+          {
+            "key": "ref32",
+            "article-title": "Bandit convex optimization for scalable and dynamic iot management",
+            "author": "chen",
+            "year": "2018",
+            "journal-title": "IEEE Internet of Things Journal"
+          },
+          {
+            "key": "ref31",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/SFCS.1998.743496"
+          },
+          {
+            "key": "ref30",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1017/CBO9780511546921"
+          },
+          {
+            "key": "ref37",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1993574.1993581"
+          },
+          {
+            "key": "ref36",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1566374.1566384"
+          },
+          {
+            "key": "ref35",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2796314.2745847"
+          },
+          {
+            "key": "ref34",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1993636.1993674"
+          },
+          {
+            "key": "ref60",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/0012-365X(75)90058-8"
+          },
+          {
+            "key": "ref62",
+            "first-page": "2503",
+            "article-title": "Trading regret for efficiency: online convex optimization with long term constraints",
+            "volume": "13",
+            "author": "mahdavi",
+            "year": "2012",
+            "journal-title": "J Machine Learning Research (JMLR)"
+          },
+          {
+            "key": "ref61",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/3188745.3188918"
+          },
+          {
+            "key": "ref63",
+            "first-page": "1115",
+            "article-title": "Stochastic convex optimization with multiple objectives",
+            "author": "mahdavi",
+            "year": "2013",
+            "journal-title": "Advances in Neural Information Processing Systems (NIPS)"
+          },
+          {
+            "key": "ref28",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1561/0400000024"
+          },
+          {
+            "key": "ref64",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1561/0400000057"
+          },
+          {
+            "key": "ref27",
+            "article-title": "The best of both worlds: stochastic and adversarial bandits",
+            "author": "bubeck",
+            "year": "2012",
+            "journal-title": "25th Conf on Learning Theory (COLT)"
+          },
+          {
+            "key": "ref65",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1284320.1284321"
+          },
+          {
+            "key": "ref66",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-642-31594-7_59"
+          },
+          {
+            "key": "ref29",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1287/moor.1080.0363"
+          },
+          {
+            "key": "ref67",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1017/CBO9780511814075"
+          },
+          {
+            "key": "ref68",
+            "article-title": "Online convex optimization with time-varying constraints",
+            "author": "neely",
+            "year": "2017"
+          },
+          {
+            "key": "ref69",
+            "first-page": "993",
+            "article-title": "Online learning with predictable sequences",
+            "author": "rakhlin",
+            "year": "2013",
+            "journal-title": "26th Conf on Learning Theory (COLT)"
+          },
+          {
+            "key": "ref2",
+            "article-title": "A reductions approach to fair classification",
+            "author": "agarwal",
+            "year": "2017",
+            "journal-title": "Fairness Accountability and Transparency in Machine Learning"
+          },
+          {
+            "key": "ref1",
+            "first-page": "6584",
+            "article-title": "On frank-wolfe and equilibrium computation",
+            "author": "abernethy",
+            "year": "2017",
+            "journal-title": "Advances in Neural Information Processing Systems (NIPS)"
+          },
+          {
+            "key": "ref20",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/FOCS.2011.63"
+          },
+          {
+            "key": "ref22",
+            "article-title": "Bandit Problems",
+            "author": "bergemann",
+            "year": "2006",
+            "journal-title": "The New Palgrave Dictionary of Economics"
+          },
+          {
+            "key": "ref21",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/1.9780898718829"
+          },
+          {
+            "key": "ref24",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1287/opre.1120.1103"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1287/opre.1080.0640"
+          },
+          {
+            "key": "ref26",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/3055399.3055403"
+          },
+          {
+            "key": "ref25",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1561/2200000024"
+          },
+          {
+            "key": "ref50",
+            "first-page": "2369",
+            "article-title": "The on-line shortest path problem under partial monitoring",
+            "volume": "8",
+            "author": "gy\u00f6rgy",
+            "year": "2007",
+            "journal-title": "J Machine Learning Research (JMLR)"
+          },
+          {
+            "key": "ref51",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1561/2400000013"
+          },
+          {
+            "key": "ref59",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1006/inco.1994.1009"
+          },
+          {
+            "key": "ref58",
+            "article-title": "The Epoch-Greedy Algorithm for Contextual Multi-armed Bandits",
+            "author": "langford",
+            "year": "2007",
+            "journal-title": "Advances in Neural Information Processing Systems I (NIPS)"
+          },
+          {
+            "key": "ref57",
+            "article-title": "Nearly tight bounds for the continuum-armed bandit problem",
+            "author": "kleinberg",
+            "year": "2004",
+            "journal-title": "Advances in Neural Information Processing Systems I (NIPS)"
+          },
+          {
+            "key": "ref56",
+            "first-page": "2564",
+            "article-title": "Preventing fairness gerrymandering: Auditing and learning for subgroup fairness",
+            "author": "kearns",
+            "year": "2018",
+            "journal-title": "Intl Conf on Machine Learning (ICML)"
+          },
+          {
+            "key": "ref55",
+            "first-page": "1054",
+            "article-title": "Non-stochastic bandit slate problems",
+            "author": "kale",
+            "year": "2010",
+            "journal-title": "Advances in Neural Information Processing Systems I (NIPS)"
+          },
+          {
+            "key": "ref54",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/S0022-0000(74)80044-9"
+          },
+          {
+            "key": "ref53",
+            "article-title": "Adversarial bandits with knapsacks, 2018",
+            "author": "immorlica",
+            "year": "0",
+            "journal-title": "Working Paper"
+          },
+          {
+            "key": "ref52",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/1.9781611974331.ch43"
+          },
+          {
+            "key": "ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1502793.1502794"
+          },
+          {
+            "key": "ref11",
+            "first-page": "107",
+            "article-title": "Minimax policies for combinatorial prediction games",
+            "author": "audibert",
+            "year": "2011",
+            "journal-title": "24th Annual Conference on Learning Theory (COLT)"
+          },
+          {
+            "key": "ref40",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-642-15775-2_16"
+          },
+          {
+            "key": "ref12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/S0097539701398375"
+          },
+          {
+            "key": "ref13",
+            "article-title": "An algorithm with nearly optimal pseudo-regret for both stochastic and adversarial bandits",
+            "author": "auer",
+            "year": "2016",
+            "journal-title": "29th Annual Conference on Learning Theory (COLT)"
+          },
+          {
+            "key": "ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/SFCS.1997.646143"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/FOCS.2016.24"
+          },
+          {
+            "key": "ref82",
+            "doi-asserted-by": "crossref",
+            "first-page": "1211",
+            "DOI": "10.1609/aaai.v24i1.7758",
+            "article-title": "?-first policies for budget-limited multi-armed bandits",
+            "author": "tran-thanh",
+            "year": "2010",
+            "journal-title": "The AAAI Conference of Artificial Intelligence (AAAI)"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2559152"
+          },
+          {
+            "key": "ref81",
+            "first-page": "2989",
+            "article-title": "Fast convergence of regularized learning in games",
+            "author": "syrgkanis",
+            "year": "2015",
+            "journal-title": "Advances in Neural Information Processing Systems I (NIPS)"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2229012.2229026"
+          },
+          {
+            "key": "ref84",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/1.9781611973730.91"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/3164539"
+          },
+          {
+            "key": "ref83",
+            "first-page": "1134",
+            "article-title": "Knapsack based optimal policies for budget-limited multi-armed bandits",
+            "author": "tran-thanh",
+            "year": "2012",
+            "journal-title": "The AAAI Conference of Artificial Intelligence (AAAI)"
+          },
+          {
+            "key": "ref19",
+            "article-title": "Resourceful contextual bandits",
+            "author": "badanidiyuru",
+            "year": "2014",
+            "journal-title": "27th Conf on Learning Theory (COLT)"
+          },
+          {
+            "key": "ref80",
+            "article-title": "Dynamic ad allocation: Bandits with budgets",
+            "author": "slivkins",
+            "year": "2013"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/2600057.2602844"
+          },
+          {
+            "key": "ref3",
+            "article-title": "Taming the monster: A fast and simple algorithm for contextual bandits",
+            "author": "agarwal",
+            "year": "2014",
+            "journal-title": "Intl Conf on Machine Learning (ICML)"
+          },
+          {
+            "key": "ref6",
+            "article-title": "An efficient algorithm for contextual bandits with knapsacks, and an extension to concave objectives",
+            "author": "agrawal",
+            "year": "2016",
+            "journal-title": "29th Annual Conference on Learning Theory (COLT)"
+          },
+          {
+            "key": "ref5",
+            "article-title": "Linear contextual bandits with knapsacks",
+            "author": "agrawal",
+            "year": "2016",
+            "journal-title": "Advances in Neural Information Processing Systems I (NIPS)"
+          },
+          {
+            "key": "ref85",
+            "first-page": "3828",
+            "article-title": "Acceleration through optimistic no-regret dynamics",
+            "author": "wang",
+            "year": "2018",
+            "journal-title": "Advances in Neural Information Processing Systems I (NIPS)"
+          },
+          {
+            "key": "ref8",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/780555.780558"
+          },
+          {
+            "key": "ref86",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1287/opre.2013.1245"
+          },
+          {
+            "key": "ref7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1287/opre.2014.1289"
+          },
+          {
+            "key": "ref49",
+            "first-page": "830",
+            "article-title": "Continuous time associative bandit problems",
+            "author": "gy\u00f6rgy",
+            "year": "2007",
+            "journal-title": "20th Intl Joint Conf on Artificial Intelligence (IJCAI)"
+          },
+          {
+            "key": "ref87",
+            "article-title": "More adaptive algorithms for adversarial bandits",
+            "author": "wei",
+            "year": "2018",
+            "journal-title": "31st Conf on Learning Theory (COLT)"
+          },
+          {
+            "key": "ref88",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1017/CBO9780511921735"
+          },
+          {
+            "key": "ref9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.4086/toc.2012.v008a006"
+          },
+          {
+            "key": "ref46",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1002/9780470980033"
+          },
+          {
+            "key": "ref45",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1006/game.1999.0738"
+          },
+          {
+            "key": "ref48",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/FOCS.2011.48"
+          },
+          {
+            "key": "ref47",
+            "first-page": "496",
+            "article-title": "Multi-armed Bandits with Metric Switching Costs",
+            "author": "guha",
+            "year": "2007",
+            "journal-title": "International Colloquium on Automata Languages and Programming (ICALP)"
+          },
+          {
+            "key": "ref42",
+            "first-page": "385",
+            "article-title": "Online Convex Optimization in the Bandit Setting: Gradient Descent without a Gradient",
+            "author": "flaxman",
+            "year": "2005",
+            "journal-title": "Proc ACM-SIAM Symp Discrete Algorithms (SODA)"
+          },
+          {
+            "key": "ref41",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/0196-6774(91)90041-V"
+          },
+          {
+            "key": "ref44",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1006/jcss.1997.1504"
+          },
+          {
+            "key": "ref43",
+            "first-page": "325",
+            "article-title": "Game theory, online prediction and boosting",
+            "author": "freund",
+            "year": "1996",
+            "journal-title": "Conf Learning Theory (COLT)"
+          }
+        ],
+        "event": {
+          "name": "2019 IEEE 60th Annual Symposium on Foundations of Computer Science (FOCS)",
+          "location": "Baltimore, MD, USA",
+          "start": {
+            "date-parts": [
+              [
+                2019,
+                11,
+                9
+              ]
+            ]
+          },
+          "end": {
+            "date-parts": [
+              [
+                2019,
+                11,
+                12
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2019 IEEE 60th Annual Symposium on Foundations of Computer Science (FOCS)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/8936052/8948505/08948695.pdf?arnumber=8948695",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              10,
+              10
+            ]
+          ],
+          "date-time": "2022-10-10T06:24:16Z",
+          "timestamp": 1665383056000
+        },
+        "score": 42.732517,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/8948695/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2019,
+              11
+            ]
+          ]
+        },
+        "references-count": 88,
+        "URL": "https://doi.org/10.1109/focs.2019.00022",
+        "published": {
+          "date-parts": [
+            [
+              2019,
+              11
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 3,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

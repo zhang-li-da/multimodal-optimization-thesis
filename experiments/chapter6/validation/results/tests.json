@@ -1,0 +1,8 @@
+{
+  "pass": true,
+  "tests": 15,
+  "command": "python -m pytest chapter6_validation/test_protocol.py chapter6_validation/test_analysis.py chapter6_validation/test_witness.py chapter6_validation/program_regression_test.py -q",
+  "observed_output": "15 passed in 1.46s",
+  "source_fingerprint": "8f93acbc027a64bad421eff1a3c80fb2587fd23d3a871119b61dad0e41113e73",
+  "recorded_utc": "2026-09-23T05:08:48.705083+00:00"
+}

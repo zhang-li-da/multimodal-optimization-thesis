@@ -1,0 +1,5 @@
+# Classification data/features, plotting, and verification:
+numpy>=1.26
+scikit-learn>=1.4
+matplotlib>=3.8
+pytest>=8

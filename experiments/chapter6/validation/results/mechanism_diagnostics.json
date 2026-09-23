@@ -1,0 +1,246 @@
+{
+  "scope": "Post-hoc descriptive mechanism analysis of all cost-eligible runs; associations do not establish causal effects of restart or W.",
+  "groups": [
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "runs": 9,
+      "candidates": 177,
+      "improvements": 4,
+      "improvements_marked_repeated": 0,
+      "repeated": 106,
+      "different_intent_repeated": 91,
+      "actions": {
+        "refine": 98,
+        "recombine": 56,
+        "restart": 23
+      },
+      "tokens": 474960,
+      "planner_input_tokens": 286488,
+      "coder_input_tokens": 110693,
+      "output_tokens": 77779
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "runs": 10,
+      "candidates": 150,
+      "improvements": 1,
+      "improvements_marked_repeated": 0,
+      "repeated": 97,
+      "different_intent_repeated": 90,
+      "actions": {
+        "restart": 104,
+        "recombine": 26,
+        "reactivate": 20
+      },
+      "tokens": 507122,
+      "planner_input_tokens": 358607,
+      "coder_input_tokens": 84145,
+      "output_tokens": 64370
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "runs": 10,
+      "candidates": 198,
+      "improvements": 17,
+      "improvements_marked_repeated": 17,
+      "repeated": 156,
+      "different_intent_repeated": 132,
+      "actions": {
+        "refine": 143,
+        "recombine": 25,
+        "restart": 30
+      },
+      "tokens": 528763,
+      "planner_input_tokens": 316145,
+      "coder_input_tokens": 126584,
+      "output_tokens": 86034
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "relational",
+      "runs": 10,
+      "candidates": 152,
+      "improvements": 13,
+      "improvements_marked_repeated": 13,
+      "repeated": 130,
+      "different_intent_repeated": 118,
+      "actions": {
+        "restart": 116,
+        "refine": 7,
+        "recombine": 11,
+        "reactivate": 18
+      },
+      "tokens": 508200,
+      "planner_input_tokens": 366924,
+      "coder_input_tokens": 89926,
+      "output_tokens": 51350
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "runs": 10,
+      "candidates": 192,
+      "improvements": 12,
+      "improvements_marked_repeated": 10,
+      "repeated": 126,
+      "different_intent_repeated": 113,
+      "actions": {
+        "refine": 119,
+        "recombine": 47,
+        "restart": 26
+      },
+      "tokens": 528481,
+      "planner_input_tokens": 330454,
+      "coder_input_tokens": 119347,
+      "output_tokens": 78680
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "relational",
+      "runs": 10,
+      "candidates": 140,
+      "improvements": 6,
+      "improvements_marked_repeated": 4,
+      "repeated": 70,
+      "different_intent_repeated": 65,
+      "actions": {
+        "restart": 107,
+        "reactivate": 17,
+        "recombine": 16
+      },
+      "tokens": 501833,
+      "planner_input_tokens": 357291,
+      "coder_input_tokens": 88542,
+      "output_tokens": 56000
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "runs": 10,
+      "candidates": 248,
+      "improvements": 3,
+      "improvements_marked_repeated": 0,
+      "repeated": 193,
+      "different_intent_repeated": 173,
+      "actions": {
+        "refine": 133,
+        "recombine": 78,
+        "restart": 37
+      },
+      "tokens": 536445,
+      "planner_input_tokens": 341393,
+      "coder_input_tokens": 141541,
+      "output_tokens": 53511
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "runs": 10,
+      "candidates": 170,
+      "improvements": 1,
+      "improvements_marked_repeated": 0,
+      "repeated": 152,
+      "different_intent_repeated": 132,
+      "actions": {
+        "restart": 136,
+        "reactivate": 20,
+        "recombine": 14
+      },
+      "tokens": 529472,
+      "planner_input_tokens": 403047,
+      "coder_input_tokens": 94162,
+      "output_tokens": 32263
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "runs": 10,
+      "candidates": 224,
+      "improvements": 16,
+      "improvements_marked_repeated": 16,
+      "repeated": 221,
+      "different_intent_repeated": 178,
+      "actions": {
+        "refine": 153,
+        "restart": 35,
+        "recombine": 36
+      },
+      "tokens": 539382,
+      "planner_input_tokens": 336844,
+      "coder_input_tokens": 148127,
+      "output_tokens": 54411
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "runs": 10,
+      "candidates": 149,
+      "improvements": 7,
+      "improvements_marked_repeated": 7,
+      "repeated": 132,
+      "different_intent_repeated": 112,
+      "actions": {
+        "restart": 122,
+        "recombine": 7,
+        "reactivate": 20
+      },
+      "tokens": 518288,
+      "planner_input_tokens": 390196,
+      "coder_input_tokens": 96476,
+      "output_tokens": 31616
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "runs": 9,
+      "candidates": 185,
+      "improvements": 18,
+      "improvements_marked_repeated": 13,
+      "repeated": 144,
+      "different_intent_repeated": 113,
+      "actions": {
+        "refine": 100,
+        "recombine": 58,
+        "restart": 27
+      },
+      "tokens": 483322,
+      "planner_input_tokens": 324505,
+      "coder_input_tokens": 114856,
+      "output_tokens": 43961
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "runs": 10,
+      "candidates": 140,
+      "improvements": 13,
+      "improvements_marked_repeated": 8,
+      "repeated": 68,
+      "different_intent_repeated": 56,
+      "actions": {
+        "restart": 98,
+        "reactivate": 18,
+        "recombine": 24
+      },
+      "tokens": 510576,
+      "planner_input_tokens": 391914,
+      "coder_input_tokens": 87125,
+      "output_tokens": 31537
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "sha": "cc53f274237d7ab05c19df939edbc1f9616a7c19",
+  "node_id": "C_kwDOKxEsk9oAKGNjNTNmMjc0MjM3ZDdhYjA1YzE5ZGY5MzllZGJjMWY5NjE2YTdjMTk",
+  "commit": {
+    "author": {
+      "name": "Matej Balog",
+      "email": "matejb@google.com",
+      "date": "2024-02-05T10:32:17Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2024-02-05T10:32:17Z"
+    },
+    "message": "Merge pull request #2 from eltociear/patch-1\n\nUpdate bin_packing.ipynb",
+    "tree": {
+      "sha": "c7c73d3207f4fe70452749f75508710fa87f450c",
+      "url": "https://api.github.com/repos/google-deepmind/funsearch/git/trees/c7c73d3207f4fe70452749f75508710fa87f450c"
+    },
+    "url": "https://api.github.com/repos/google-deepmind/funsearch/git/commits/cc53f274237d7ab05c19df939edbc1f9616a7c19",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJlwLkxCRC1aQ7uu5UhlAAA/vwQAG42nnY/QMlHLqnEZ0uqeFS/\nb0oU+D8E0uapFj2jeKVLZ0owhvk/DB/38ChVNJpJR4TQ3MOtk6VOqfgFa7sNh7Sj\nAZoM5Ewm0FD6lwCSloYh+1sFJbP71rGaa883SJETh0FhD9LkKku3VuryoREjgzk0\nXqVipdgaOFMoOIzJFf/2HRwXBm4SLrAPPM7NslLb/cOZ4K2ipDYui+urzQN/GaTa\nV7WsqtqX5kXlBN5AHDqRR8PdzecAJ+pvyEfVChi5uiFqjLLLZBTBdf7pxp9cyjfM\noFU1+aqb08h+FhWLeMAaVK6tRDymgjkixfw3zSa5DHFo4ePGM9y6onM1ROMnv6VF\nz3K+8N1Cyc5rUpvFl+unMoM57CRipCMMsToz57AF8zX/RtUY50QeVDAgQ+qo2+I7\nxeU1W93bKvkClzJa81GmHXUgvqJbZ/MQgVLdi2sC3YWYRXOLXLd/+66JfSzPe/AU\nwyudipsexYT4XH4kbkkOytbJ1sBNXNERp1GcNmR2dPIWZ3jslWY81/wmrV4R9rA/\nkednCXmx5cnsPcIqfrzxHdKFFp19obltEfdONh/6vt6BALCcwFuwRYG7Y9tBdtep\nxX8Zj6zNQ0YOcrY2759y6MZlxPIjDOKDxyYugwbE5WtR00vH7kUqLs0KHLbQIwMJ\nb3ySIOuDeipH2Mu1IUaw\n=vyeO\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree c7c73d3207f4fe70452749f75508710fa87f450c\nparent 65ba52cba984bba8df788e921a4fb7790881177d\nparent 2a2c8641f8590ae17ad98e82435cb1781a917957\nauthor Matej Balog <matejb@google.com> 1707129137 +0000\ncommitter GitHub <noreply@github.com> 1707129137 +0000\n\nMerge pull request #2 from eltociear/patch-1\n\nUpdate bin_packing.ipynb",
+      "verified_at": "2024-11-05T19:05:58Z"
+    }
+  },
+  "url": "https://api.github.com/repos/google-deepmind/funsearch/commits/cc53f274237d7ab05c19df939edbc1f9616a7c19",
+  "html_url": "https://github.com/google-deepmind/funsearch/commit/cc53f274237d7ab05c19df939edbc1f9616a7c19",
+  "comments_url": "https://api.github.com/repos/google-deepmind/funsearch/commits/cc53f274237d7ab05c19df939edbc1f9616a7c19/comments",
+  "author": {
+    "login": "matejbalog",
+    "id": 3765298,
+    "node_id": "MDQ6VXNlcjM3NjUyOTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/3765298?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/matejbalog",
+    "html_url": "https://github.com/matejbalog",
+    "followers_url": "https://api.github.com/users/matejbalog/followers",
+    "following_url": "https://api.github.com/users/matejbalog/following{/other_user}",
+    "gists_url": "https://api.github.com/users/matejbalog/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/matejbalog/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/matejbalog/subscriptions",
+    "organizations_url": "https://api.github.com/users/matejbalog/orgs",
+    "repos_url": "https://api.github.com/users/matejbalog/repos",
+    "events_url": "https://api.github.com/users/matejbalog/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/matejbalog/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "65ba52cba984bba8df788e921a4fb7790881177d",
+      "url": "https://api.github.com/repos/google-deepmind/funsearch/commits/65ba52cba984bba8df788e921a4fb7790881177d",
+      "html_url": "https://github.com/google-deepmind/funsearch/commit/65ba52cba984bba8df788e921a4fb7790881177d"
+    },
+    {
+      "sha": "2a2c8641f8590ae17ad98e82435cb1781a917957",
+      "url": "https://api.github.com/repos/google-deepmind/funsearch/commits/2a2c8641f8590ae17ad98e82435cb1781a917957",
+      "html_url": "https://github.com/google-deepmind/funsearch/commit/2a2c8641f8590ae17ad98e82435cb1781a917957"
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "additions": 1,
+    "deletions": 1
+  },
+  "files": [
+    {
+      "sha": "ca20ad3bebe330b88c8120a143c53e36876d5fe3",
+      "filename": "bin_packing/bin_packing.ipynb",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/google-deepmind/funsearch/blob/cc53f274237d7ab05c19df939edbc1f9616a7c19/bin_packing%2Fbin_packing.ipynb",
+      "raw_url": "https://github.com/google-deepmind/funsearch/raw/cc53f274237d7ab05c19df939edbc1f9616a7c19/bin_packing%2Fbin_packing.ipynb",
+      "contents_url": "https://api.github.com/repos/google-deepmind/funsearch/contents/bin_packing%2Fbin_packing.ipynb?ref=cc53f274237d7ab05c19df939edbc1f9616a7c19",
+      "patch": "@@ -189,7 +189,7 @@\n         \"id\": \"QY5jPdo-g1fT\"\n       },\n       \"source\": [\n-        \"By executing the skeleton with the inital `priority` function corresponding to the *best fit* algorithm, we can obtain the average number of bins required to pack the items in the two datasets provided. We can compare this number to the L1 lower bound on the optimal number of bins.\"\n+        \"By executing the skeleton with the initial `priority` function corresponding to the *best fit* algorithm, we can obtain the average number of bins required to pack the items in the two datasets provided. We can compare this number to the L1 lower bound on the optimal number of bins.\"\n       ]\n     },\n     {"
+    }
+  ]
+}

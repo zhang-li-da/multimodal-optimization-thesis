@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "runs": 74,
+  "live_generated_candidates": 888,
+  "recorded_successful_model_calls": 1775,
+  "total_recorded_tokens": 2563223,
+  "unique_program_split_replays": 244,
+  "source_versions": {
+    "pilot_qwen": [
+      "701c32df525a1e34aad1077660ab3585c4e77d7bdf870df711c8301c7e3e40aa"
+    ],
+    "pilot_minimax": [
+      "701c32df525a1e34aad1077660ab3585c4e77d7bdf870df711c8301c7e3e40aa"
+    ],
+    "pilot_no_w": [
+      "701c32df525a1e34aad1077660ab3585c4e77d7bdf870df711c8301c7e3e40aa"
+    ],
+    "pilot_classification": [
+      "c4b522edb87ae89299c283b7322c856d4e19af9cdf0dab9140618788790c1194"
+    ]
+  },
+  "failures": [],
+  "scope": "Saved-run arithmetic and budgets, fixed splits, quality gates, every unique final archive program replayed on validation+probe and held-out test. No LLM calls."
+}

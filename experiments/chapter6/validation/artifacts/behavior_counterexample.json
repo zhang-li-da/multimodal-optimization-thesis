@@ -1,0 +1,74 @@
+{
+  "source_run": "chapter6_demo\\runs\\pilot_qwen\\tsp_niche_s0\\result.json",
+  "selection": "first lexicographic run/event satisfying improved and collision; existence example only",
+  "event": {
+    "node_id": 3,
+    "tags": [
+      "return_aware",
+      "regret"
+    ],
+    "allocated_tag": "local_distance",
+    "parent_id": 1,
+    "reference_id": null,
+    "action": "refine",
+    "valid": true,
+    "terminal_collision": true,
+    "distance_to_previous": 0.0,
+    "nearest_node": 1,
+    "different_intent_collision": true,
+    "improved": true,
+    "useful_gain": true,
+    "loss": 0.06220810163964809,
+    "failure_type": null,
+    "fidelity": "full-validation-plus-fixed-probes",
+    "feature_calls": 1062,
+    "local_checks": 432,
+    "cpu_seconds": 0.078125,
+    "wall_seconds": 0.07237589999567717,
+    "behavior_hash": "29234977d38411ea",
+    "trajectory_hash": "b52dc1e48687e34c"
+  },
+  "before": {
+    "id": 1,
+    "name": "return_aware",
+    "intent": "shared hand-written seed: return_aware",
+    "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n"
+  },
+  "after": {
+    "id": 3,
+    "name": "return_regret_hybrid",
+    "intent": "Combine return awareness with regret to prevent early commitment to isolated clusters while maintaining tour closure efficiency. The hypothesis is that balancing the immediate cost (distance) with the opportunity cost of skipping a node (regret) and the future cost of returning home (return_distance) yields a more robust construction than either alone.",
+    "code": "def priority(f):\n    d = f[\"distance\"]\n    rd = f[\"return_distance\"]\n    r = f[\"regret\"]\n    return -d + 0.2 * rd + 0.15 * r"
+  },
+  "before_validation_loss": 0.07324525964113937,
+  "after_validation_loss": 0.06220810163964809,
+  "before_per_instance_loss": [
+    0.0821752872491508,
+    0.1942564323605911,
+    0.0,
+    0.17765809416974143,
+    0.029760641020099676,
+    0.049219981790140865,
+    0.04185316612272949,
+    0.00377150923221925,
+    0.009361373690391916,
+    0.0,
+    0.18000112641500166,
+    0.11088550364360628
+  ],
+  "after_per_instance_loss": [
+    0.0821752872491508,
+    0.13795186657759495,
+    0.0,
+    0.017421665641875972,
+    0.029760641020099676,
+    0.09050427116646187,
+    0.04185316612272949,
+    0.00377150923221925,
+    0.009361373690391916,
+    0.0,
+    0.2228119353316469,
+    0.11088550364360628
+  ],
+  "probe_distance": 0.0
+}

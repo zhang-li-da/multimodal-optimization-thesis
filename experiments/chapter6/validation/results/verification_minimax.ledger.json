@@ -1,0 +1,245 @@
+{
+  "source_fingerprint": "8f93acbc027a64bad421eff1a3c80fb2587fd23d3a871119b61dad0e41113e73",
+  "verified": {
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p11\\result.json": {
+      "result_sha256": "d1ef4d8c48e7becf7476e1220c3dbadb44d86e46713f7b5988cc006f8f506aec",
+      "unique_program_split_replays_added": 22
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p12\\result.json": {
+      "result_sha256": "9d5531d506245267edfe53046fa5ea02c81c906a6c0c0acfcdd438d03f287b54",
+      "unique_program_split_replays_added": 6
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p13\\result.json": {
+      "result_sha256": "92655912bcbcaa3bbfba67c164dac5a15d39d7c57185b6d49e3c6612e8f8ca6e",
+      "unique_program_split_replays_added": 22
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p14\\result.json": {
+      "result_sha256": "439eb1cebedba89224874a299f411f8d90d7e4d3294231e58b77418bfb191a1c",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p15\\result.json": {
+      "result_sha256": "e6deeb6890bd5d67f9b63b97ac4c29673bc940663e47bbc2877806f4bd3a1e9f",
+      "unique_program_split_replays_added": 22
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p16\\result.json": {
+      "result_sha256": "4b61d238507ada79488bf578d94e15561c83fc98048c3c208599208c9dc5e85c",
+      "unique_program_split_replays_added": 6
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p19\\result.json": {
+      "result_sha256": "60c2636c269395cfa434183306a205bf7ac0544736d9f5adf31054aa16cb2d9d",
+      "unique_program_split_replays_added": 16
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p20\\result.json": {
+      "result_sha256": "147f890ad441fd38c37e8a92b5e0e7ba13bf3cab339d09b15efadeb117bfddb1",
+      "unique_program_split_replays_added": 20
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_relational_p11\\result.json": {
+      "result_sha256": "fc2ee125d4ade7285d4002759adecf37515cebb555ff4618b54845ee38c38cd6",
+      "unique_program_split_replays_added": 6
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_relational_p12\\result.json": {
+      "result_sha256": "dd05564aa68ac6a927859cf2d7354f8eda6694cbf494dfbbaae610b03a301cbc",
+      "unique_program_split_replays_added": 12
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_relational_p13\\result.json": {
+      "result_sha256": "9f62068843a6ba2f027cd758b6d26bfa4c69c3c2c685281c6d874476bd9f77f0",
+      "unique_program_split_replays_added": 10
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_relational_p16\\result.json": {
+      "result_sha256": "12851803772bf918f9ad1eea3ae208285bbdab0263ba48e588fc81eed26326af",
+      "unique_program_split_replays_added": 6
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_relational_p17\\result.json": {
+      "result_sha256": "76b73b5a3ff23289ee684c68a2afef4132029f9900306e9ded4580350ae7a9d3",
+      "unique_program_split_replays_added": 6
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_relational_p18\\result.json": {
+      "result_sha256": "ca3b62bd23b2f53ece9937f7c328c5e85047cc3f669b3d319fb5f6abfa01ac8d",
+      "unique_program_split_replays_added": 12
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_relational_p19\\result.json": {
+      "result_sha256": "cee3a27816c37cb214a6250fa0ab89c63fef78334ac6ff01510295c734951fb5",
+      "unique_program_split_replays_added": 6
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_relational_p20\\result.json": {
+      "result_sha256": "f26a0abc078521b76b8ce58287d61d1348ddc8540b201354a81a74de2d6b62c9",
+      "unique_program_split_replays_added": 4
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_niche_p11\\result.json": {
+      "result_sha256": "1850f7b416c61c71610c9fecddd57074cf28fcae9085dc3e31d44b7e7c196d10",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_niche_p12\\result.json": {
+      "result_sha256": "30ce3dea3237f8e8c40b75d5d6c5872c67ddb8ad93a462bcf5ce6732beb66be1",
+      "unique_program_split_replays_added": 12
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_niche_p13\\result.json": {
+      "result_sha256": "2faeb6f71acb9f368d2ec441f47a0956d59dd1dd80c37703487948d474195aaa",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_niche_p14\\result.json": {
+      "result_sha256": "8e2b8bab6f9c8eac27a8219407c960f7d0e0d510f1540211a0e84ee194f0e958",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_niche_p17\\result.json": {
+      "result_sha256": "4b7bf4c098ad24bfe8ddf6f629104faad056d7828ee59dc42b6f9c06cc5e1277",
+      "unique_program_split_replays_added": 6
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_niche_p19\\result.json": {
+      "result_sha256": "bf34dde8ac8b738c947946212aca26dd5b6ed14ee69c2277201ce6469651c562",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_niche_p20\\result.json": {
+      "result_sha256": "aa7b91e3e6f8e11548dcdbd59fa8bf813af30319b8eda8516c0b3ee105a2a26a",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_relational_p11\\result.json": {
+      "result_sha256": "42d7ec4c679ad4922b9f1b075de576611726a518b3594f2d6b82dd9b62050145",
+      "unique_program_split_replays_added": 4
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_relational_p13\\result.json": {
+      "result_sha256": "da0fc5342b38f5fc4019736be56fc1211eaec637ff1ad8df599e44eaee33ee51",
+      "unique_program_split_replays_added": 6
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_relational_p14\\result.json": {
+      "result_sha256": "4fba5026ac9f2338db435d68d3a6e6a2a50aee9f76abcb1242acf11ba4a6f536",
+      "unique_program_split_replays_added": 4
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_relational_p15\\result.json": {
+      "result_sha256": "fe3020de147cd485711e2db4c838b106cbddf64fbac6d77a8bdea9e305b9b7cc",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_relational_p16\\result.json": {
+      "result_sha256": "5307119b5ea713254055738c449f8963bc7b27f034c58cb28d264483cf35d344",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_relational_p17\\result.json": {
+      "result_sha256": "de0c73043cff269a85021ce8aa1e4efecf3e30702a4fc306fc1efc2e18f3b897",
+      "unique_program_split_replays_added": 2
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_niche_p12\\result.json": {
+      "result_sha256": "1521645ec5a198cb8268fa687f0c81de3d7b0cc42de4335f6cb6fde845125cc6",
+      "unique_program_split_replays_added": 18
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_niche_p13\\result.json": {
+      "result_sha256": "bc08d59d02372335e2915aaa6ce4e4dffe7b4e9352b740f13f48458f6e11b4a3",
+      "unique_program_split_replays_added": 12
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_niche_p15\\result.json": {
+      "result_sha256": "ad81343faf900e5ed3f83f0bf72cd1b33722adaae5554fc8de55ba7058aa5447",
+      "unique_program_split_replays_added": 10
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_niche_p17\\result.json": {
+      "result_sha256": "f1d6d7fbd278d11c9442837e56e72574505d1da5ec22cb5ace7590111757da24",
+      "unique_program_split_replays_added": 10
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_niche_p18\\result.json": {
+      "result_sha256": "b473384565ab8819db71c948026dd8fbe204e052a29c515bd591eb9c66be0df7",
+      "unique_program_split_replays_added": 10
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_niche_p19\\result.json": {
+      "result_sha256": "b9a8528228363247680d44a1b9f8471647e5263f356c81ab08678623253cff7a",
+      "unique_program_split_replays_added": 10
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_niche_p20\\result.json": {
+      "result_sha256": "34508c585211268333624a3466f94809c1b2dca3639e4cb16c72a14ed4ef737d",
+      "unique_program_split_replays_added": 12
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_relational_p11\\result.json": {
+      "result_sha256": "ede37f21a5c5b01b5d02923aba2ecfbb2f303a8b653ceea927343465aac91ac0",
+      "unique_program_split_replays_added": 6
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_relational_p13\\result.json": {
+      "result_sha256": "e50bc46022e52bb61fa49a0b2baccddadb01c982f6a2900b94b482ad8a1efb58",
+      "unique_program_split_replays_added": 4
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_relational_p15\\result.json": {
+      "result_sha256": "fb64b42ab5445afde60898e7157134c2dbe62dc93d229f066af6b4028b61d461",
+      "unique_program_split_replays_added": 4
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_relational_p16\\result.json": {
+      "result_sha256": "95c0e83b58b6b7a9e3fd2348b62c0e99b4bdeb0a212d6e28979d4013fc5e0522",
+      "unique_program_split_replays_added": 12
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_relational_p17\\result.json": {
+      "result_sha256": "9b9089502e0b2c659f8878b6d60d0ff5853f3b90f4df14c8e83c6372e5ff1c87",
+      "unique_program_split_replays_added": 10
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p17\\result.json": {
+      "result_sha256": "e3e0a7a7f6ee30fcb26e57045f81470814205f84197e047d2a45677a7ff2bbb7",
+      "unique_program_split_replays_added": 14
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_relational_p15\\result.json": {
+      "result_sha256": "342c3d03c85d890e35e1c46a4ceb492dabc13e7ad69bf9261ab1ae4004c48ca6",
+      "unique_program_split_replays_added": 14
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_relational_p18\\result.json": {
+      "result_sha256": "1d2db546fb87fe382ee151ca3616b8ad606e92ec2544d225c523d4473b13a37b",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_niche_p16\\result.json": {
+      "result_sha256": "147903fa38833401e47414b6fc85cff94af0e9ceefe8f9e63e2c1c5af2018aaa",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_niche_p11\\result.json": {
+      "result_sha256": "0b1750e108555a6c33a12ea83bf6bf6bde15cbfffdf27ed8590cfc5dabc87c92",
+      "unique_program_split_replays_added": 14
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_relational_p20\\result.json": {
+      "result_sha256": "21da97fdb0d8e68791e880e5d8be057aeb2ed6fe540f61a960ae16906e8fbfde",
+      "unique_program_split_replays_added": 10
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_niche_p16\\result.json": {
+      "result_sha256": "40daa8be5d561fda08f1e3a93bbddba9f21eaa2cc765f9548eef709f4080623e",
+      "unique_program_split_replays_added": 14
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_relational_p14\\result.json": {
+      "result_sha256": "a98975045eec10c679f29904a29a89154b281b7b3134a8a5ca6e4afc91b1e1e4",
+      "unique_program_split_replays_added": 10
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_niche_p15\\result.json": {
+      "result_sha256": "dfd8e361560065d2efcde98923b50ea6a32fd78317b886fa3063cffc106492fc",
+      "unique_program_split_replays_added": 12
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_relational_p12\\result.json": {
+      "result_sha256": "ea0c1dcb5b85e3998bd7b56be19e885bde705ec9076ce4af37244b5b3777179c",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_relational_p18\\result.json": {
+      "result_sha256": "39eb30fd0fb47efb77b59a9b3a899e3fe62292a7983933d99389b45fa372f806",
+      "unique_program_split_replays_added": 10
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_relational_p14\\result.json": {
+      "result_sha256": "04c41f9d4d31c599de51acdfaf264f9e5acf184d402f9f7b62cc9e6099eb9a55",
+      "unique_program_split_replays_added": 10
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_relational_p12\\result.json": {
+      "result_sha256": "5c0c7feafd6f4d11c321ff7ca9491a3faa9e20b25486b7e2fbbba05527eb28d7",
+      "unique_program_split_replays_added": 14
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_binpack_niche_p18\\result.json": {
+      "result_sha256": "c625f0f1a054ad0da73911b0c1fba2919d86540e8f6ff5c4c8c3380a2ed13c78",
+      "unique_program_split_replays_added": 16
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_relational_p20\\result.json": {
+      "result_sha256": "213af0648e1a957cc36d75110c7876fdfcfea7a34b021e3eb5ea30eb6db16bc8",
+      "unique_program_split_replays_added": 16
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_niche_p18\\result.json": {
+      "result_sha256": "15abad07fc45f7887106aeb87924bf4d1f4f295bf1051ee08477977df6925ec0",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_relational_p19\\result.json": {
+      "result_sha256": "327cd00be0c3a86f1a5a1838c6fa1894fd382a81d563f22e9e6e9fd23edb505c",
+      "unique_program_split_replays_added": 8
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_tsp_niche_p14\\result.json": {
+      "result_sha256": "ed793acc58e30e11008642cefa12d5f3fef45fe02cb560b4d41c21c4da031b14",
+      "unique_program_split_replays_added": 12
+    },
+    "chapter6_validation\\runs\\confirm_minimax_recovery\\MiniMax-M3_classification_relational_p19\\result.json": {
+      "result_sha256": "0e12364bcabb40394e9051d5c6b073ba60f55c822b24cf6e738b30ebcb4470e5",
+      "unique_program_split_replays_added": 8
+    }
+  }
+}

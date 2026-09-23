@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>博士论文总体架构与第六章技术报告</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">博士论文总体架构与第六章技术报告</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#博士论文总体架构与第六章技术报告">博士论文总体架构与第六章技术报告</a>
+<ul>
+<li><a href="#一结论先行">一、结论先行</a></li>
+<li><a href="#二博士论文总体架构与前五章工作">二、博士论文总体架构与前五章工作</a>
+<ul>
+<li><a href="#前后章节的概念连续性和迁移边界">前后章节的概念连续性和迁移边界</a></li>
+</ul></li>
+<li><a href="#三第六章研究问题与系统实际架构">三、第六章研究问题与系统实际架构</a>
+<ul>
+<li><a href="#研究对象和待验证问题">3.1 研究对象和待验证问题</a></li>
+<li><a href="#v1-原型数据流">3.2 v1 原型数据流</a></li>
+<li><a href="#多模态机制在-v1-中的具体实现">3.3 多模态机制在 v1 中的具体实现</a></li>
+</ul></li>
+<li><a href="#四已完成实验与结果">四、已完成实验与结果</a>
+<ul>
+<li><a href="#早期真实模型-pilot">4.1 早期真实模型 pilot</a></li>
+<li><a href="#冻结追加验证">4.2 冻结追加验证</a></li>
+<li><a href="#机制诊断与反例">4.3 机制诊断与反例</a></li>
+</ul></li>
+<li><a href="#五当前缺陷风险与证据缺口">五、当前缺陷、风险与证据缺口</a></li>
+<li><a href="#六科学性可行性与创新性判断">六、科学性、可行性与创新性判断</a>
+<ul>
+<li><a href="#科学性">科学性</a></li>
+<li><a href="#工程可行性">工程可行性</a></li>
+<li><a href="#创新性">创新性</a></li>
+</ul></li>
+<li><a href="#七建议技术路线与第六章验收标准">七、建议技术路线与第六章验收标准</a></li>
+<li><a href="#八资料与复核入口">八、资料与复核入口</a>
+<ul>
+<li><a href="#参考文献与相关框架本报告实际采用范围">参考文献与相关框架（本报告实际采用范围）</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="博士论文总体架构与第六章技术报告">博士论文总体架构与第六章技术报告</h1>
+<p><strong>整理日期：2026 年 9 月 23 日</strong></p>
+<p><strong>范围：</strong> 依据工作区中的博士论文架构说明、已提供论文材料、第六章 demo 与冻结追加验证，汇总论文主线、系统实现、实验结果和当前限制。本文用于科研讨论和开题/中期材料准备，不替代各篇论文的正式书目信息核验。</p>
+<h2 id="一结论先行">一、结论先行</h2>
+<p>目前能够作出的判断需要区分三个层次：</p>
+<ol type="1">
+<li><strong>工程可行性已有实证支持。</strong> 已实现一个真实大模型驱动的程序搜索闭环：模型提出策略并生成受限 Python 评分函数，隔离解释器评估函数，外层控制器保存质量、行为和执行记录并安排后续搜索。系统在 TSP、在线装箱与小型分类规则发现任务上运行过多轮，完整输入、响应、usage、候选程序和回放信息得到保存。</li>
+<li><strong>原型机制有研究价值，但完整 A/W/M 版本的稳定优势未得到支持。</strong> 早期 pilot 出现过个别改善信号；预注册冻结追加验证中，六个“模型×任务”单元没有一个达到事先规定的质量—多样性通过门槛。因此不能据此声称 relational 方法优于简单小生境，也不能把“降低重复”直接解释为“找到更好的算法”。</li>
+<li><strong>第六章可作为有证据的问题驱动研究方向，尚不能按已验证的新算法定稿。</strong> 观察到的 probe 误判和“把有益局部开发判成重复”的反例，为重新定义机制提供了具体动机。下一版应聚焦质量保护下的行为关系辨识和搜索资源分配，并重新冻结、独立验证；若新增机制不超过简单基线，应相应收窄论文贡献。</li>
+</ol>
+<p>这意味着：<strong>方向科学、原型可运行、证据可审计；但方法是否有效、相对近期强基线是否有独立创新，仍待后续实验回答。</strong></p>
+<h2 id="二博士论文总体架构与前五章工作">二、博士论文总体架构与前五章工作</h2>
+<p>论文主线从多模态优化基础理论出发，逐步处理专家经验与评价、单目标离散/连续优化、高维多目标优化，最后探索这些搜索思想在 LLM 自动算法发现中的迁移。第一、二章主要承担铺垫；第三至五章建立多模态搜索方法；第六章是面向新搜索对象的迁移与验证。</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>章节</th>
+<th>拟定内容与研究问题</th>
+<th>对应工作/文章</th>
+<th>当前状态与边界</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>第一章</td>
+<td>绪论：研究背景、问题、贡献与论文组织</td>
+<td>无单独对应论文</td>
+<td>综合提出多模态搜索与自动算法发现的研究动机。</td>
+</tr>
+<tr class="even">
+<td>第二章</td>
+<td>多模态智能优化基本理论与文献综述</td>
+<td>无单独对应论文</td>
+<td>梳理多模态单目标、多目标、决策空间多样性及评价方法，为后文统一术语。</td>
+</tr>
+<tr class="odd">
+<td>第三章</td>
+<td>专家经验辅助的多模态智能优化算法设计</td>
+<td>① <em>A Review of Evolutionary Algorithms for Multimodal Multi-objective Optimization: Mechanisms, Progress, and Prospects</em>；② <em>A Parameter-Free Joint-Space Metric for Multimodal Multiobjective Optimization</em>；③ 多模态测试问题设计（尚未完成）</td>
+<td>综述归纳机制发展；联合空间指标关注目标质量与决策空间分布。指标依赖参考集等评价条件。测试问题设计仍是本章待完成工作，不能在目录中当成已有成果。</td>
+</tr>
+<tr class="even">
+<td>第四章</td>
+<td>决策空间拓扑/等效结构下的多模态单目标优化</td>
+<td>① <em>A Multi-Strategy Local Search Memetic Algorithm for Multimodal Traveling Salesman Problem</em>（MSLS-MA）；② <em>Relational-Memory State-Driven Restart Allocation for Multimodal Optimization</em>（RMC-CMSA，含补充材料）</td>
+<td>分别代表离散 MMTSP 与连续多模态优化工作。前者兼顾路径质量、路径差异、局部搜索和停滞重启；后者研究状态/关系记忆与重启分配。</td>
+</tr>
+<tr class="odd">
+<td>第五章</td>
+<td>双空间协同演化的高维多模态多目标优化</td>
+<td><em>High-Dimensional Multimodal Multi-Objective Optimization via Subspace Projection and Angular Diversity Management</em>（HDADE）</td>
+<td>以子空间投影和角度多样性管理应对高维决策空间下的质量与决策分布平衡。</td>
+</tr>
+<tr class="even">
+<td>第六章</td>
+<td>面向自动算法发现的执行反馈多模态搜索与关系记忆</td>
+<td>本报告所述 agent 原型；MLEvolve 为重要启发和相邻框架</td>
+<td>研究外层算法规则/程序搜索中，如何识别行为模式、保护有用开发、利用执行关系并控制成本。当前原型不是 MLEvolve 的复现，也未覆盖一般机器学习训练管线。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="前后章节的概念连续性和迁移边界">前后章节的概念连续性和迁移边界</h3>
+<ul>
+<li>MSLS-MA 给出离散搜索中“保留质量相近但结构不同的方案、做局部开发、停滞后重启”的直接启发。第六章把搜索对象提升为能处理一组实例的评分程序；这不是把 MMTSP 算法本身交给 LLM 重跑，也不是对 MSLS-MA 全算法复现。</li>
+<li>RMC-CMSA 启发记录起点、过程、终端及其关系，并把状态用于重启资源决策。第六章的 A/W/M 借用了这一思路，但程序搜索中的轨迹语义并不天然等同连续优化轨迹。尤其分类任务保存的预测前缀不是训练动力学证据。</li>
+<li>HDADE 支持分别考察质量与高维行为分布的原则。本 agent 没有把随机子空间投影直接移植到程序空间，也没有证明其行为描述符保留程序空间拓扑。</li>
+<li>DWD 联合空间指标建立在任务和参考集定义之上。开放程序空间没有已知完整参考集，因此当前报告只谈有限 probe 上的操作性行为模式，不使用 DWD 或 PR 声称恢复了真实全局模式。</li>
+</ul>
+<h2 id="三第六章研究问题与系统实际架构">三、第六章研究问题与系统实际架构</h2>
+<h3 id="研究对象和待验证问题">3.1 研究对象和待验证问题</h3>
+<p>系统搜索对象是受限程序空间中的评分/决策规则：外层保存一组可执行规则，每个规则作用于多个实例并诱导路线、装箱选择或类别预测。应区分<strong>外层规则的行为模式</strong>与<strong>内层单个实例上的解</strong>。当前“模式”按固定 probe 上的行为相似度操作性定义；它不是已证明的吸引域、局部最优盆地或程序语义等价类。</p>
+<p>本章目前最具体的问题是：在固定调用/评估预算下，有限执行 probe 能否可靠区分程序行为；在质量约束下，如何保留有收益的同模式开发，同时避免把无收益重复搜索反复计入；父代、操作、意图、轨迹与终端结果的关系能否帮助分配后续搜索；这些信息带来的收益是否超过额外 token 与评估成本。</p>
+<p>MLEvolve 的跨分支引用、长期记忆和 planner/coder 分工构成问题背景，但这些功能已经由 MLEvolve 等工作涉及，不能直接写作本章首创。系统尚未完整复现 MLEvolve、SeaEvo、AdaEvolve、FunSearch 或 GEPA。</p>
+<h3 id="v1-原型数据流">3.2 v1 原型数据流</h3>
+<pre class="text"><code>任务规格、初始规则与预算
+          ↓
+规划器提出研究意图 ──→ 编码器生成受限评分函数
+          ↓                         ↓
+外层控制器挑选父代/操作      AST 检查与受限解释器
+          └──────────→ 训练/搜索实例评估
+                                    ↓
+                        验证质量 + 行为 probe
+                                    ↓
+                   A 质量档案 / W 执行记录 / M 关系记忆
+                                    ↓
+                     继续、引用、重启或重新激活</code></pre>
+<p>候选函数由真实模型生成，而不是从预置参数网格中选择。执行层使用受限 AST 解释器，不允许候选任意导入库、访问文件或网络、使用循环或反射。这个保护边界也限定了研究结论：它是<strong>有界规则发现 agent</strong>，尚不是任意 AutoML 系统。</p>
+<h3 id="多模态机制在-v1-中的具体实现">3.3 多模态机制在 v1 中的具体实现</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>记号</th>
+<th>实际保存内容</th>
+<th>在搜索中的作用</th>
+<th>当前不足</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A：质量/行为档案</td>
+<td>质量较好的程序；在任务固定 probe 上的行为描述；小生境代表</td>
+<td>质量门槛后保留若干行为不同的规则，避免只留单一最优文本/规则</td>
+<td>probe 距离易误并/误拆；质量进步与碰撞惩罚可能同时触发。</td>
+</tr>
+<tr class="even">
+<td>W：执行轨迹/中间状态</td>
+<td>TSP 局部改进前后的路线状态；装箱状态前缀；分类预测前缀等</td>
+<td>给候选复用提供过程证据，尝试辨识构造轨迹到终端行为的关系</td>
+<td>跨任务语义不一致；分类前缀不代表训练过程；其独立增量未建立。</td>
+</tr>
+<tr class="odd">
+<td>M：关系与结果记忆</td>
+<td>意图/计划标签、父代、操作、执行终端、改进、重复/碰撞、失败和成本</td>
+<td>让后续选择依赖历史操作结果；控制器可继续、重组、重启或重新激活</td>
+<td>记录 token 不等于按 token 净收益调度；关系计数可能混淆收益与重复。</td>
+</tr>
+</tbody>
+</table>
+<p>原控制器包含 quality、niche、terminal、relational 等内部机制对照，并运行过 relational 去 W 消融。Pilot 阶段样本较少，且这些对照不等于外部完整框架复现。v1 主要按标签、收益和碰撞规则调度，<strong>没有直接优化每 token 的预期净收益</strong>。</p>
+<h2 id="四已完成实验与结果">四、已完成实验与结果</h2>
+<h3 id="早期真实模型-pilot">4.1 早期真实模型 pilot</h3>
+<ul>
+<li>共运行 74 次正式实验；模型为 Qwen3.7-Plus 与 MiniMax-M3。另有模型连通性检查，不并入正式实验统计。</li>
+<li>真实候选生成尝试 888 次，其中 865 个有效、23 个失败；失败仍纳入尝试记录和预算口径。</li>
+<li>有 usage 的模型调用 1,775 次，累计记录 2,563,223 tokens。保存 244 个不同“最终程序—数据划分”组合的回放核验结果，19 项协议/执行器测试通过。</li>
+<li>任务包括 12 城市 TSP、在线装箱和 Iris/Wine/Breast Cancer 分类规则发现。比较机制包括 quality、niche、terminal、relational 和 relational_no_w 等。</li>
+<li>观察到的局部信号并不一致：Qwen 分类 relational 的测试错误率为 5.49%，niche 为 6.85%；但 Qwen TSP niche 为 4.25%，relational 为 4.61%；装箱各方法的最好测试 gap 相同。重复行为下降并不必然带来质量或模式收益。</li>
+</ul>
+<p>这轮 pilot 支持“模型生成规则的闭环能够运行”和“执行行为记忆会改变搜索决策”，不构成稳定优效证据。很多任务只有 3–5 次重复，结果只适合提出后续假设。</p>
+<h3 id="冻结追加验证">4.2 冻结追加验证</h3>
+<p>原控制器、提示和核心源码冻结，运行 <strong>2 个模型 × 3 类任务 × 2 个控制器 × 10 个新划分 = 120 个区块</strong>。每个区块输入加输出 token 上限为 60,000，采用预注册的共同质量门槛。MiniMax 首批高并发发生限流后，在观察效果之前登记降低并发并对整个提供方批次重跑；原有 24 个保存区块仍单独保留，没有按结果择优拼接。</p>
+<table>
+<thead>
+<tr class="header">
+<th>项目</th>
+<th style="text-align: right;">实测</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>已评价候选槽（含无效代码）</td>
+<td style="text-align: right;">2,126</td>
+</tr>
+<tr class="even">
+<td>有效候选</td>
+<td style="text-align: right;">2,001</td>
+</tr>
+<tr class="odd">
+<td>有 usage 调用</td>
+<td style="text-align: right;">4,251</td>
+</tr>
+<tr class="even">
+<td>记录 tokens</td>
+<td style="text-align: right;">6,168,998</td>
+</tr>
+<tr class="odd">
+<td>API 请求总数</td>
+<td style="text-align: right;">4,253（另 2 次服务错误无 usage）</td>
+</tr>
+<tr class="even">
+<td>程序—划分回放审核</td>
+<td style="text-align: right;">946 项通过</td>
+</tr>
+<tr class="odd">
+<td>新增协议/统计/机制/回归测试</td>
+<td style="text-align: right;">15 项通过</td>
+</tr>
+</tbody>
+</table>
+<p>追加验证的主要均值如下。TSP/装箱为测试 gap；分类为三个数据集等权平均错误率；模式数是在共同质量门槛和固定行为度量下的代表数。各任务损失单位不可横向合并。</p>
+<table>
+<thead>
+<tr class="header">
+<th>模型 / 任务</th>
+<th style="text-align: right;">有效配对数</th>
+<th style="text-align: right;">niche 测试损失</th>
+<th style="text-align: right;">relational 测试损失</th>
+<th style="text-align: right;">niche 模式数</th>
+<th style="text-align: right;">relational 模式数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Qwen / TSP</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">5.14%</td>
+<td style="text-align: right;">4.65%</td>
+<td style="text-align: right;">3.78</td>
+<td style="text-align: right;">3.11</td>
+</tr>
+<tr class="even">
+<td>Qwen / 在线装箱</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10.56%</td>
+<td style="text-align: right;">10.55%</td>
+<td style="text-align: right;">5.10</td>
+<td style="text-align: right;">2.80</td>
+</tr>
+<tr class="odd">
+<td>Qwen / 分类</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5.37%</td>
+<td style="text-align: right;">5.47%</td>
+<td style="text-align: right;">0.80</td>
+<td style="text-align: right;">1.00</td>
+</tr>
+<tr class="even">
+<td>MiniMax / TSP</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5.54%</td>
+<td style="text-align: right;">5.27%</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">2.40</td>
+</tr>
+<tr class="odd">
+<td>MiniMax / 在线装箱</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10.71%</td>
+<td style="text-align: right;">10.68%</td>
+<td style="text-align: right;">6.33</td>
+<td style="text-align: right;">4.56</td>
+</tr>
+<tr class="even">
+<td>MiniMax / 分类</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5.03%</td>
+<td style="text-align: right;">5.49%</td>
+<td style="text-align: right;">0.90</td>
+<td style="text-align: right;">0.80</td>
+</tr>
+</tbody>
+</table>
+<p>预注册的门槛要求质量改善与行为模式非劣，或模式改善与质量非劣，并进行多重检验校正。<strong>六个模型—任务单元中没有一个通过。</strong> 两个单元因服务超时/使用量不完整，不能作完整确认性成本推断；其余可确认单元也没有稳定通过。因此不能把失败仅归咎于接口问题。样本量为每格约 9–10 个配对块，功效主要覆盖较大的、一致的效应；失败不代表统计等效，也不证明所有多模态策略无效。</p>
+<h3 id="机制诊断与反例">4.3 机制诊断与反例</h3>
+<ol type="1">
+<li><strong>相似不等于无收益重复。</strong> 复核的 TSP 程序对在固定 probe 上行为距离为 0，但加入 regret 项后，验证 gap 从 0.073245 降至 0.062208。旧 pilot 的部分有质量提升候选同时被标记为 probe 碰撞。原控制器对碰撞施加负项，可能压制有价值的同模式局部开发。</li>
+<li><strong>模式关系依赖 probe 和分布。</strong> 256 状态、可枚举真值的检查显示，6 个随机 probe 会把仅在稀有状态分歧的程序大量误合并；加入独立 witness 可降低已知域的错判，但需要更多执行样本。该检查没有证明 witness agent 的搜索表现更好。真实任务中 TSP 的 probe 为 10 城市而验证/test 为 12 城市，分类与装箱也有 probe/test 关系不一致现象，有限采样误差和规模迁移混在一起。</li>
+<li><strong>降低重复率不是充分目标。</strong> Qwen/装箱 relational 的测试模式数低于 niche（2.80 对 5.10），但测试 gap 几乎相同；分类的 relational 结果也未在新划分重现 pilot 中的优势。</li>
+<li><strong>固定分类器参照说明任务能力边界。</strong> 在相同分类划分上，按验证选择六种固定分类器得到约 3.41% 平均测试错误率。它不是同 API、同程序语言、同调用预算对照，也不能当作对 agent 的公平基线；它说明当前受限规则搜索不应被描述成已达到完整 AutoML 性能。</li>
+</ol>
+<h2 id="五当前缺陷风险与证据缺口">五、当前缺陷、风险与证据缺口</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>缺陷</th>
+<th>已有依据</th>
+<th>对论文结论的影响</th>
+<th>当前处理建议</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>v1 完整 A/W/M 无稳定优势</td>
+<td>冻结追加验证 0/6 单元过门槛</td>
+<td>不可声称方法优于简单 niche 或已证明有效</td>
+<td>将 v1 作为问题暴露/原型研究，另行开发与冻结 v2。</td>
+</tr>
+<tr class="even">
+<td>固定 probe 关系误判</td>
+<td>TSP 同 probe 距离为 0 的质量改进反例；有限域误并/误拆</td>
+<td>行为档案未必代表真实算法模式</td>
+<td>同分布辨识、独立 witness、未决状态；按相同成本比较固定大 probe。</td>
+</tr>
+<tr class="odd">
+<td>冲突的质量与碰撞信号</td>
+<td>改进候选可能同时受到重复惩罚</td>
+<td>可能抑制有用局部开发，引起过度重启</td>
+<td>仅把无质量/用途增益的重复计为无效；做质量保护消融。</td>
+</tr>
+<tr class="even">
+<td>W 的跨任务语义不统一</td>
+<td>TSP 有前后路线，分类/装箱是任务前缀</td>
+<td>不能声称普遍“轨迹记忆”有效</td>
+<td>先条件检验 W 对父代、终端、质量、成本的独立预测增量；无增量则删除或限用。</td>
+</tr>
+<tr class="odd">
+<td>搜索预算和 token 成本未进入 v1 决策目标</td>
+<td>记录调用用量，但未以净收益/成本调度</td>
+<td>记忆机制可能仅增加上下文消耗</td>
+<td>在同候选数、同 token 上限和同 evaluator 预算三种口径分别对照。</td>
+</tr>
+<tr class="even">
+<td>搜索语言及任务范围有限</td>
+<td>受限 AST 评分函数；TSP、装箱、小型分类</td>
+<td>不能外推为任意模型训练、优化器发现或 AutoML 管线</td>
+<td>增加真实训练规则/管线发现任务并统一 GPU 时间、内存和评估权限。</td>
+</tr>
+<tr class="odd">
+<td>分类数据集少且划分重叠</td>
+<td>三个小型表格数据集反复分割</td>
+<td>不能据此声称跨数据集泛化</td>
+<td>扩充独立确认数据集、任务类型和分布迁移测试。</td>
+</tr>
+<tr class="even">
+<td>确认样本功效有限</td>
+<td>每个配对格约 10 块，推断单元部分因服务问题失效</td>
+<td>可筛出大效应，但不能排除小效应</td>
+<td>用开发方差作任务级功效模拟，减少主比较、增加独立任务。</td>
+</tr>
+<tr class="odd">
+<td>近期外部强基线未完整复现</td>
+<td>MLEvolve/SeaEvo/AdaEvolve/FunSearch/GEPA 仅作文献与实现审查</td>
+<td>尚无外部排名或相对增量主张</td>
+<td>同任务、版本锁定、全成本的作者版复现与统一接口比较分开报告。</td>
+</tr>
+<tr class="even">
+<td>第三章测试问题设计未完成</td>
+<td>架构文档直接标注未完成</td>
+<td>前章结构仍有交付缺口</td>
+<td>明确测试问题的多模态定义、真实值标签和基准协议。</td>
+</tr>
+</tbody>
+</table>
+<p>特别需要避免三类过度外推：把有限 probe 模式称为真实等价类/吸引域；把“多模态+记忆+重启”的组件拼接称为博士创新；把支持原型能运行的证据当作 v2 或完整 AutoML 性能证据。</p>
+<h2 id="六科学性可行性与创新性判断">六、科学性、可行性与创新性判断</h2>
+<h3 id="科学性">科学性</h3>
+<p>研究问题可以形式化：给定有界程序空间、实例分布、质量门槛、行为描述与成本预算，研究模式辨识误差如何影响候选保留和后续搜索，并检验关系信息能否带来质量或多样性增量。已有负结果、反例和冻结协议使假设可以被否证。科学性来自可操作定义、可复核实验和明确的失败解释，不等于预先断言新方法有效。</p>
+<h3 id="工程可行性">工程可行性</h3>
+<p>当前闭环已真实运行，调用预算、程序执行、回放与失败均有记录，CPU 规则评估可承担现有小规模任务。coding plan 减少经费障碍，但不消除 API 限流、服务超时或并发限制。现有证据没有测得真实模型训练任务的 GPU 时间、显存和吞吐，故不能据小任务承诺大模型训练级算法发现的墙钟周期。</p>
+<h3 id="创新性">创新性</h3>
+<p>MLEvolve 已覆盖跨分支引用、记忆和规划/编码分离；FunSearch 有执行分数签名聚类与岛屿机制；SeaEvo 已有策略簇和互补检索；AdaEvolve 已有质量/多样性档案与自适应分配；GEPA 使用轨迹反思、Pareto 选择及跨谱系组合。因此，“将多模态优化加入 LLM agent”或“A/W/M 组件组合”本身不足以确立新颖性。</p>
+<p>可以进一步检验的贡献候选是：<strong>质量保护、对关系不确定性有显式处理、并按验证增益与成本分配资源的执行行为关系搜索</strong>。它仍是候选，不是当前已证明的新方法。其成立至少需要在可枚举机制基准、真实程序发现任务、近期强基线与独立任务集上显示不可被固定大 probe、质量 UCB、小生境或简单关系计数替代的增量。</p>
+<h2 id="七建议技术路线与第六章验收标准">七、建议技术路线与第六章验收标准</h2>
+<ol type="1">
+<li><strong>先修正机制定义。</strong> 分开“行为相近”“严格/近似等价”“无质量/用途增益重复”和“关系不确定”。质量进步优先保护；未能确认关系时保留未决并计算 witness 成本。</li>
+<li><strong>先做可枚举辨识，再接真实模型。</strong> 明确有限语法、全域行为真值、质量合格模式和变异邻接。比较固定小/大 probe、witness、随机关系和文本/评分签名；至少报告误并、误拆、未决、成本及真模式召回。</li>
+<li><strong>做最小归因实验。</strong> 质量档案 A × 关系记忆 M 的 2×2 起步；再依次检验 W、witness、成本感知和重启规则。真实执行关系与打乱关系、仅计数关系、质量 UCB 及更大固定 probe 都要对照。</li>
+<li><strong>按预算公平比较。</strong> 同时登记 token、候选数量、评估次数和墙钟；模型调用失败、候选执行失败及 API 成本分开记载。主分析按同 token 上限，另报告实际耗用，不从有利轨迹截断拼接。</li>
+<li><strong>扩展真实任务和基线。</strong> 先扩充算法规则发现，再加入至少一类优化器/训练更新规则或 ML 管线模块发现；按任务级抽样，锁定模型、任务、数据划分和外部框架 commit。作者版复现和统一接口适配分开评估。</li>
+<li><strong>冻结独立确认集后再作结论。</strong> 质量和多样性/用途各设主指标与非劣界；任务是最高推断层，不能把同一数据集的多个划分当作不同数据集。完整报告效应量、区间、多重校正、最坏任务、成本及失败案例。</li>
+</ol>
+<p>博士章节最低验收条件：方法状态、等价/模式/关系、用途和成本定义完整；至少一个新机制相对简单小生境、质量 UCB 和近期适用方法有独立增量；A/W/M 消融能解释增量来源；质量与实际用途在独立任务上达到预注册门槛；至少有一类真实机器学习算法或模块发现任务；源码、提示、模型版本、数据划分、失败日志和统计脚本可复核。若只证明可运行或只改善重复率，章节应限定为程序空间执行关系辨识/失效分析研究。</p>
+<h2 id="八资料与复核入口">八、资料与复核入口</h2>
+<p>本报告依赖的工作区资料包括：</p>
+<ul>
+<li><code>博士大论文架构.txt</code>：用户提供的章节主线。</li>
+<li><code>chapter6_demo/DELIVERY.md</code>、<code>chapter6_demo/results/measured_report.md</code>、<code>chapter6_demo/THESIS_LINK.md</code>：早期 pilot 数值、实现和与前作的机制联系。</li>
+<li><code>chapter6_validation/DELIVERY.md</code>、<code>PREREGISTRATION.md</code>、<code>results/measured_report.md</code>、<code>EXPERIMENT_DESIGN.md</code>、<code>TECHNICAL_ROUTE.md</code>、<code>NOVELTY_AUDIT.md</code>：追加验证、协议、技术路线与创新边界。</li>
+<li><code>chapter6_validation/results/mechanism_diagnostics.md</code>、<code>witness_mechanism.md</code>、<code>descriptor_diagnostic.md</code>、<code>classifier_context.md</code>：失效机制、probe/witness、分布迁移和分类器参照。</li>
+<li>原始逐次运行、程序、响应、usage、统计 JSON 与回放核验均包含在第六章交付归档中。两轮交付归档分别为 <code>chapter6_demo_delivery_20260923.zip</code> 与 <code>chapter6_validation_delivery_20260923.zip</code>。</li>
+<li>文章材料包括综述、DWD 指标、正确版本的 MSLS-MA、RMC-CMSA 主文及补充材料、HDADE。MSLS-MA 已核对为用户后补的正确文章版本。</li>
+</ul>
+<h3 id="参考文献与相关框架本报告实际采用范围">参考文献与相关框架（本报告实际采用范围）</h3>
+<ol type="1">
+<li>L. Zhang et al., “A Multi-Strategy Local Search Memetic Algorithm for Multimodal Traveling Salesman Problem.”</li>
+<li>L. Zhang et al., “Relational-Memory State-Driven Restart Allocation for Multimodal Optimization.”</li>
+<li>L. Zhang et al., “High-Dimensional Multimodal Multi-Objective Optimization via Subspace Projection and Angular Diversity Management.”</li>
+<li>“A Review of Evolutionary Algorithms for Multimodal Multi-objective Optimization: Mechanisms, Progress, and Prospects.”</li>
+<li>“A Parameter-Free Joint-Space Metric for Multimodal Multiobjective Optimization.”</li>
+<li>“MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery,” source repository: <a href="https://github.com/InternScience/MLEvolve" class="uri">https://github.com/InternScience/MLEvolve</a>.</li>
+<li>FunSearch, SeaEvo, AdaEvolve, GEPA 等作为相邻方法用于限定已有技术覆盖；本项目未将其完整运行结果纳入直接比较。</li>
+</ol>
+<p><strong>最终判定：</strong> 当前材料足以支持“第六章研究方向具有科学问题基础、agent 原型工程上可运行、并已有可复核的初步与负面证据”；还不足以支持“第六章新算法已经证明稳定有效或已确立博士级创新”。下一阶段应围绕 probe 误判、质量保护和关系辨识的最小新机制重新开展独立实验。</p>
+</body>
+</html>

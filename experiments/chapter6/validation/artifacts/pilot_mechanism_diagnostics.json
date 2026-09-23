@@ -1,0 +1,288 @@
+[
+  {
+    "model": "MiniMax-M3",
+    "task": "binpack",
+    "method": "niche",
+    "runs": 3,
+    "n": 36,
+    "improve_repeat": 0,
+    "improve_total": 0,
+    "different_intent_repeat": 18,
+    "repeat_total": 19,
+    "actions": {
+      "refine": 18,
+      "recombine": 12,
+      "restart": 6
+    }
+  },
+  {
+    "model": "MiniMax-M3",
+    "task": "binpack",
+    "method": "relational",
+    "runs": 3,
+    "n": 36,
+    "improve_repeat": 0,
+    "improve_total": 0,
+    "different_intent_repeat": 23,
+    "repeat_total": 24,
+    "actions": {
+      "restart": 26,
+      "recombine": 7,
+      "reactivate": 3
+    }
+  },
+  {
+    "model": "MiniMax-M3",
+    "task": "tsp",
+    "method": "niche",
+    "runs": 3,
+    "n": 36,
+    "improve_repeat": 8,
+    "improve_total": 8,
+    "different_intent_repeat": 17,
+    "repeat_total": 26,
+    "actions": {
+      "refine": 23,
+      "restart": 6,
+      "recombine": 7
+    }
+  },
+  {
+    "model": "MiniMax-M3",
+    "task": "tsp",
+    "method": "relational",
+    "runs": 3,
+    "n": 36,
+    "improve_repeat": 1,
+    "improve_total": 2,
+    "different_intent_repeat": 10,
+    "repeat_total": 12,
+    "actions": {
+      "restart": 30,
+      "reactivate": 3,
+      "recombine": 3
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "binpack",
+    "method": "niche",
+    "runs": 5,
+    "n": 60,
+    "improve_repeat": 0,
+    "improve_total": 0,
+    "different_intent_repeat": 48,
+    "repeat_total": 51,
+    "actions": {
+      "refine": 30,
+      "recombine": 20,
+      "restart": 10
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "binpack",
+    "method": "quality",
+    "runs": 5,
+    "n": 60,
+    "improve_repeat": 0,
+    "improve_total": 0,
+    "different_intent_repeat": 48,
+    "repeat_total": 52,
+    "actions": {
+      "refine": 50,
+      "restart": 10
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "binpack",
+    "method": "relational",
+    "runs": 5,
+    "n": 60,
+    "improve_repeat": 0,
+    "improve_total": 0,
+    "different_intent_repeat": 39,
+    "repeat_total": 45,
+    "actions": {
+      "restart": 45,
+      "reactivate": 5,
+      "recombine": 10
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "binpack",
+    "method": "relational_no_w",
+    "runs": 5,
+    "n": 60,
+    "improve_repeat": 0,
+    "improve_total": 0,
+    "different_intent_repeat": 48,
+    "repeat_total": 58,
+    "actions": {
+      "restart": 53,
+      "reactivate": 5,
+      "recombine": 2
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "binpack",
+    "method": "terminal",
+    "runs": 5,
+    "n": 60,
+    "improve_repeat": 0,
+    "improve_total": 0,
+    "different_intent_repeat": 47,
+    "repeat_total": 54,
+    "actions": {
+      "restart": 48,
+      "reactivate": 5,
+      "recombine": 7
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "classification",
+    "method": "niche",
+    "runs": 3,
+    "n": 36,
+    "improve_repeat": 2,
+    "improve_total": 2,
+    "different_intent_repeat": 28,
+    "repeat_total": 36,
+    "actions": {
+      "refine": 18,
+      "recombine": 12,
+      "restart": 6
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "classification",
+    "method": "quality",
+    "runs": 3,
+    "n": 36,
+    "improve_repeat": 3,
+    "improve_total": 3,
+    "different_intent_repeat": 22,
+    "repeat_total": 36,
+    "actions": {
+      "refine": 30,
+      "restart": 6
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "classification",
+    "method": "relational",
+    "runs": 3,
+    "n": 36,
+    "improve_repeat": 5,
+    "improve_total": 5,
+    "different_intent_repeat": 28,
+    "repeat_total": 33,
+    "actions": {
+      "restart": 28,
+      "recombine": 5,
+      "reactivate": 3
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "classification",
+    "method": "terminal",
+    "runs": 3,
+    "n": 36,
+    "improve_repeat": 4,
+    "improve_total": 4,
+    "different_intent_repeat": 32,
+    "repeat_total": 34,
+    "actions": {
+      "restart": 27,
+      "reactivate": 3,
+      "recombine": 6
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "tsp",
+    "method": "niche",
+    "runs": 5,
+    "n": 60,
+    "improve_repeat": 12,
+    "improve_total": 17,
+    "different_intent_repeat": 46,
+    "repeat_total": 49,
+    "actions": {
+      "refine": 34,
+      "recombine": 16,
+      "restart": 10
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "tsp",
+    "method": "quality",
+    "runs": 5,
+    "n": 60,
+    "improve_repeat": 12,
+    "improve_total": 13,
+    "different_intent_repeat": 53,
+    "repeat_total": 55,
+    "actions": {
+      "refine": 50,
+      "restart": 10
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "tsp",
+    "method": "relational",
+    "runs": 5,
+    "n": 60,
+    "improve_repeat": 2,
+    "improve_total": 5,
+    "different_intent_repeat": 23,
+    "repeat_total": 29,
+    "actions": {
+      "restart": 47,
+      "reactivate": 5,
+      "recombine": 8
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "tsp",
+    "method": "relational_no_w",
+    "runs": 5,
+    "n": 60,
+    "improve_repeat": 3,
+    "improve_total": 8,
+    "different_intent_repeat": 17,
+    "repeat_total": 23,
+    "actions": {
+      "restart": 42,
+      "reactivate": 5,
+      "recombine": 8,
+      "refine": 5
+    }
+  },
+  {
+    "model": "qwen3.7-plus",
+    "task": "tsp",
+    "method": "terminal",
+    "runs": 5,
+    "n": 60,
+    "improve_repeat": 3,
+    "improve_total": 8,
+    "different_intent_repeat": 22,
+    "repeat_total": 25,
+    "actions": {
+      "restart": 41,
+      "recombine": 14,
+      "reactivate": 5
+    }
+  }
+]

@@ -1,0 +1,476 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 5788541,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2024-03-01T19:27:11Z",
+          "timestamp": 1709321231865
+        },
+        "reference-count": 0,
+        "publisher": "Informa UK Limited",
+        "issue": "1",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "NVSD"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1997,
+              8,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1080/00423119708969607",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2007,
+              7,
+              21
+            ]
+          ],
+          "date-time": "2007-07-21T06:27:23Z",
+          "timestamp": 1184999243000
+        },
+        "page": "772-777",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "DISTINGUISHING BETWEEN RANDOM AND DETERMINISTIC TRACK INPUTS FOR ACTIVE RAILWAY SUSPENSIONS"
+        ],
+        "prefix": "10.1080",
+        "volume": "29",
+        "author": [
+          {
+            "given": "Hong",
+            "family": "LI",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Roger",
+            "family": "GOODALL",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "301",
+        "container-title": [
+          "Vehicle System Dynamics"
+        ],
+        "language": "en",
+        "deposited": {
+          "date-parts": [
+            [
+              2014,
+              11,
+              3
+            ]
+          ],
+          "date-time": "2014-11-03T13:50:27Z",
+          "timestamp": 1415022627000
+        },
+        "score": 25.369812,
+        "resource": {
+          "primary": {
+            "URL": "http://www.informaworld.com/openurl?genre=article&doi=10.1080/00423119708969607&magic=crossref||D404A21C5BB053405B1A640AFFD44AE3"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1997,
+              8,
+              1
+            ]
+          ]
+        },
+        "references-count": 0,
+        "journal-issue": {
+          "issue": "1",
+          "published-print": {
+            "date-parts": [
+              [
+                1997,
+                8,
+                1
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "780769540"
+        ],
+        "URL": "https://doi.org/10.1080/00423119708969607",
+        "ISSN": [
+          "0042-3114"
+        ],
+        "issn-type": [
+          {
+            "value": "0042-3114",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1997,
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              2
+            ]
+          ],
+          "date-time": "2022-04-02T04:06:16Z",
+          "timestamp": 1648872376434
+        },
+        "reference-count": 7,
+        "publisher": "Informa UK Limited",
+        "issue": "sup1",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Vehicle System Dynamics"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1998,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1080/00423119808969607",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2007,
+              7,
+              28
+            ]
+          ],
+          "date-time": "2007-07-28T05:02:31Z",
+          "timestamp": 1185598951000
+        },
+        "page": "772-777",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "DISTINGUISHING BETWEEN RANDOM AND DETERMINISTIC TRACK INPUTS FOR ACTIVE RAILWAY SUSPENSIONS"
+        ],
+        "prefix": "10.1080",
+        "volume": "29",
+        "author": [
+          {
+            "given": "Hong",
+            "family": "LI",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Roger",
+            "family": "GOODALL",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "301",
+        "reference": [
+          {
+            "key": "CIT0002",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1080/00423118108968679"
+          },
+          {
+            "key": "CIT0003",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1080/00423117608968414"
+          },
+          {
+            "key": "CIT0004",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1080/00423118808968911"
+          },
+          {
+            "key": "CIT0005",
+            "first-page": "81",
+            "volume-title": "Proceedings of the JSME Conference STECH '93",
+            "volume": "2",
+            "author": "Goodall R.M.",
+            "year": "1993"
+          },
+          {
+            "key": "CIT0006",
+            "unstructured": "Li , H. \u201c Non-Linear Control Approaches For Active Railway Suspensions \u201d, Loughborough University M.Phil thesis , 1997 ."
+          },
+          {
+            "key": "CIT0007",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1049/cp:19940155"
+          },
+          {
+            "key": "CIT0008",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Chui , C.K. , Chen , G. \u201c Kalman Filtering with Real-Time Applications \u201d, Springer-Verlag Inc. , 1987 .",
+            "DOI": "10.1007/978-3-662-02508-6"
+          }
+        ],
+        "container-title": [
+          "Vehicle System Dynamics"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "http://www.tandfonline.com/doi/pdf/10.1080/00423119808969607",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2019-05-01T15:05:44Z",
+          "timestamp": 1556723144000
+        },
+        "score": 24.047464,
+        "resource": {
+          "primary": {
+            "URL": "http://www.tandfonline.com/doi/abs/10.1080/00423119808969607"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1998,
+              1
+            ]
+          ]
+        },
+        "references-count": 7,
+        "journal-issue": {
+          "issue": "sup1",
+          "published-print": {
+            "date-parts": [
+              [
+                1998,
+                1
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1080/00423119808969607"
+        ],
+        "URL": "https://doi.org/10.1080/00423119808969607",
+        "ISSN": [
+          "0042-3114",
+          "1744-5159"
+        ],
+        "issn-type": [
+          {
+            "value": "0042-3114",
+            "type": "print"
+          },
+          {
+            "value": "1744-5159",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1998,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "institution": [
+          {
+            "name": "Chicago Office",
+            "acronym": [
+              "CHO"
+            ],
+            "place": [
+              "Argonne, IL (United States)"
+            ]
+          },
+          {
+            "name": "Univ. of Puerto Rico, Mayaguez (Puerto Rico)"
+          },
+          {
+            "name": "USDOE"
+          }
+        ],
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              4
+            ]
+          ],
+          "date-time": "2025-02-04T03:40:00Z",
+          "timestamp": 1738640400668,
+          "version": "3.35.0"
+        },
+        "reference-count": 0,
+        "publisher": "Office of Scientific and Technical Information (OSTI)",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2013,
+              1,
+              28
+            ]
+          ]
+        },
+        "DOI": "10.2172/1060773",
+        "type": "report",
+        "created": {
+          "date-parts": [
+            [
+              2013,
+              2,
+              27
+            ]
+          ],
+          "date-time": "2013-02-27T05:37:05Z",
+          "timestamp": 1361943425000
+        },
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Biological Ocean Margins Program: Active Microbes Responding to Inputs from the Orinoco River Plume (Final Report)"
+        ],
+        "prefix": "10.2172",
+        "author": [
+          {
+            "given": "Jorge",
+            "family": "Corredor",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Univ. of Puerto Rico, Mayaguez (Puerto Rico)"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "960",
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              4
+            ]
+          ],
+          "date-time": "2025-02-04T03:02:55Z",
+          "timestamp": 1738638175000
+        },
+        "score": 23.82403,
+        "resource": {
+          "primary": {
+            "URL": "https://www.osti.gov/servlets/purl/1060773/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2013,
+              1,
+              28
+            ]
+          ]
+        },
+        "references-count": 0,
+        "URL": "https://doi.org/10.2172/1060773",
+        "published": {
+          "date-parts": [
+            [
+              2013,
+              1,
+              28
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 3,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

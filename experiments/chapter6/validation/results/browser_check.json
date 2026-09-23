@@ -1,0 +1,70 @@
+{
+  "initial": {
+    "title": "第六章追加验证 · 证据与技术路线",
+    "runs": "120 / 120",
+    "models": 2,
+    "rows": 20,
+    "code": "def priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    reg = f['regret']\n    p = f['progress']\n    score = -d + 0.2 * reg + (0.1 + 0.4 * p) * rd\n    return score",
+    "overflow": false,
+    "imageLoaded": true
+  },
+  "transitions": [
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "rows": 20,
+      "summaryRows": 2,
+      "code": true,
+      "raw": "runs/confirm_v1/qwen3.7-plus_tsp_relational_p11/result.json"
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "rows": 20,
+      "summaryRows": 2,
+      "code": true,
+      "raw": "runs/confirm_v1/qwen3.7-plus_binpack_relational_p11/result.json"
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "rows": 20,
+      "summaryRows": 2,
+      "code": true,
+      "raw": "runs/confirm_v1/qwen3.7-plus_classification_relational_p11/result.json"
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "rows": 20,
+      "summaryRows": 2,
+      "code": true,
+      "raw": "runs/confirm_minimax_recovery/MiniMax-M3_tsp_relational_p11/result.json"
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "rows": 20,
+      "summaryRows": 2,
+      "code": true,
+      "raw": "runs/confirm_minimax_recovery/MiniMax-M3_binpack_relational_p11/result.json"
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "rows": 20,
+      "summaryRows": 2,
+      "code": true,
+      "raw": "runs/confirm_minimax_recovery/MiniMax-M3_classification_relational_p11/result.json"
+    }
+  ],
+  "route": {
+    "title": "第六章技术路线：执行辨识与质量保护的多模态程序搜索",
+    "math": 41,
+    "imageLoaded": true,
+    "replacementCharacters": false,
+    "overflow": false
+  },
+  "js_errors": [],
+  "pass": true
+}

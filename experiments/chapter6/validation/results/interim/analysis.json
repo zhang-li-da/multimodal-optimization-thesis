@@ -1,0 +1,4360 @@
+{
+  "protocol": {
+    "id": "independent-split-hard-budget-20260923-v1",
+    "tasks": [
+      "tsp",
+      "binpack",
+      "classification"
+    ],
+    "models": {
+      "qwen3.7-plus": "alibaba-token-plan-cn",
+      "MiniMax-M3": "minimax-cn-coding-plan"
+    },
+    "methods": [
+      "niche",
+      "relational"
+    ],
+    "partitions": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "seed_rule": "search seed = 88000 + partition; one independent API search per method/model/block",
+    "token_cap": 60000,
+    "candidate_safety_cap": 60,
+    "planner_output_cap": 1800,
+    "coder_output_cap": 2000,
+    "primary_quality": "validation-selected best rule evaluated once on the final held-out split",
+    "primary_coverage": "up to 10 probe-separated rules under a common seed-anchored validation gate; retain only rules meeting the corresponding test anchor gate, deduplicate on test behavior",
+    "quality_tolerance": {
+      "tsp": 0.035,
+      "binpack": 0.035,
+      "classification": 0.025
+    },
+    "loss_noninferiority_margin": {
+      "tsp": 0.005,
+      "binpack": 0.01,
+      "classification": 0.005
+    },
+    "mode_noninferiority_margin": 0.5,
+    "multiplicity": "Holm family of 24 one-sided paired sign-flip tests: 6 task/model cells times loss superiority, mode superiority, loss noninferiority, mode noninferiority. Exact enumeration is conditional on sign-exchangeability of block differences.",
+    "interval": "95% paired-block t intervals; report raw effects, wins/ties/losses and usage alongside p values",
+    "cell_gate": "Holm-adjusted p < .05 for both loss superiority and mode noninferiority, OR for both mode superiority and loss noninferiority",
+    "broad_stability_gate": "at least 4/6 cells pass, covering both models and at least 2 tasks, with no cell showing a loss CI entirely above its noninferiority margin",
+    "scope": "Small tasks and the fixed language/feature interface only. Repeated classification splits overlap in samples; inference is conditional on these datasets, not new-dataset generalization.",
+    "stopping": "Finish every predeclared run regardless of effect direction. Budget guard per call. Retain failed and incomplete iterations in usage. API errors without usage invalidate strict cost comparisons; do not silently rerun.",
+    "external_comparator_gate": "Only after the frozen method passes the broad gate, invest in full closest-framework experiments; failure against niche already blocks a broad superiority claim."
+  },
+  "source_fingerprint": "8f93acbc027a64bad421eff1a3c80fb2587fd23d3a871119b61dad0e41113e73",
+  "totals": {
+    "runs": 111,
+    "candidate_attempts": 1983,
+    "candidate_count_definition": "completed candidate evaluation slots, including invalid code; unfinished planner/coder iterations are separately counted",
+    "valid_candidates": 1871,
+    "model_calls": 3965,
+    "tokens": 5704321,
+    "cost_invalid_runs": 2,
+    "min_budget_utilization": 0.0,
+    "max_budget_utilization": 0.9217833333333333,
+    "started_iterations": 1985,
+    "partial_budget_iterations_with_charge": 0,
+    "unknown_usage_calls": 2,
+    "attempted_model_calls": 3967,
+    "infrastructure_prior_batch_recorded_tokens": 232015,
+    "infrastructure_prior_batch_recorded_calls": 144
+  },
+  "missing": [
+    [
+      "MiniMax-M3",
+      "binpack",
+      "niche",
+      18
+    ],
+    [
+      "MiniMax-M3",
+      "classification",
+      "niche",
+      18
+    ],
+    [
+      "MiniMax-M3",
+      "classification",
+      "relational",
+      12
+    ],
+    [
+      "MiniMax-M3",
+      "classification",
+      "relational",
+      18
+    ],
+    [
+      "MiniMax-M3",
+      "classification",
+      "relational",
+      19
+    ],
+    [
+      "MiniMax-M3",
+      "tsp",
+      "niche",
+      14
+    ],
+    [
+      "MiniMax-M3",
+      "tsp",
+      "relational",
+      14
+    ],
+    [
+      "MiniMax-M3",
+      "tsp",
+      "relational",
+      19
+    ],
+    [
+      "MiniMax-M3",
+      "tsp",
+      "relational",
+      20
+    ]
+  ],
+  "unexpected": [],
+  "aggregates": [
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "n": 10,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.051543997221911296,
+          "low": 0.03264428581460581,
+          "high": 0.07044370862921678,
+          "n": 10
+        },
+        "anchored_validation_modes": {
+          "mean": 4.2,
+          "low": 3.091773846605078,
+          "high": 5.308226153394923,
+          "n": 10
+        },
+        "anchored_test_modes": {
+          "mean": 3.6,
+          "low": 2.6343417761097725,
+          "high": 4.565658223890227,
+          "n": 10
+        },
+        "terminal_collision_rate": {
+          "mean": 0.8006060606060605,
+          "low": 0.6988158617448688,
+          "high": 0.9023962594672523,
+          "n": 10
+        },
+        "generated": {
+          "mean": 18.6,
+          "low": 14.149174243579921,
+          "high": 23.050825756420082,
+          "n": 10
+        },
+        "total_tokens": {
+          "mean": 48547.6,
+          "low": 36864.837593848606,
+          "high": 60230.36240615139,
+          "n": 10
+        },
+        "budget_utilization": {
+          "mean": 0.8091266666666668,
+          "low": 0.6144139598974769,
+          "high": 1.0038393734358566,
+          "n": 10
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 1.925,
+          "low": 1.5674845886690376,
+          "high": 2.2825154113309623,
+          "n": 10
+        },
+        "elapsed_seconds": {
+          "mean": 121.20040068998932,
+          "low": 110.96788078725602,
+          "high": 131.43292059272264,
+          "n": 10
+        }
+      }
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "n": 10,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.05131331317931589,
+          "low": 0.037581059994799396,
+          "high": 0.06504556636383238,
+          "n": 10
+        },
+        "anchored_validation_modes": {
+          "mean": 3.8,
+          "low": 2.299454694799611,
+          "high": 5.300545305200389,
+          "n": 10
+        },
+        "anchored_test_modes": {
+          "mean": 3.6,
+          "low": 2.161359735058225,
+          "high": 5.038640264941775,
+          "n": 10
+        },
+        "terminal_collision_rate": {
+          "mean": 0.4864468864468865,
+          "low": 0.35514580559016296,
+          "high": 0.61774796730361,
+          "n": 10
+        },
+        "generated": {
+          "mean": 14.0,
+          "low": 13.523095396007774,
+          "high": 14.476904603992226,
+          "n": 10
+        },
+        "total_tokens": {
+          "mean": 51057.6,
+          "low": 49987.10391961334,
+          "high": 52128.096080386655,
+          "n": 10
+        },
+        "budget_utilization": {
+          "mean": 0.85096,
+          "low": 0.8331183986602224,
+          "high": 0.8688016013397777,
+          "n": 10
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 1.4734375,
+          "low": 1.4101973087593485,
+          "high": 1.5366776912406515,
+          "n": 10
+        },
+        "elapsed_seconds": {
+          "mean": 81.58620437998324,
+          "low": 72.85596232558389,
+          "high": 90.3164464343826,
+          "n": 10
+        }
+      }
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "n": 10,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.10562051597528757,
+          "low": 0.10050335321279871,
+          "high": 0.11073767873777643,
+          "n": 10
+        },
+        "anchored_validation_modes": {
+          "mean": 5.6,
+          "low": 3.7777500667825104,
+          "high": 7.422249933217489,
+          "n": 10
+        },
+        "anchored_test_modes": {
+          "mean": 5.1,
+          "low": 3.5381829287529096,
+          "high": 6.661817071247089,
+          "n": 10
+        },
+        "terminal_collision_rate": {
+          "mean": 0.7748431134083308,
+          "low": 0.6824341253283626,
+          "high": 0.867252101488299,
+          "n": 10
+        },
+        "generated": {
+          "mean": 24.8,
+          "low": 23.799636463199743,
+          "high": 25.80036353680026,
+          "n": 10
+        },
+        "total_tokens": {
+          "mean": 53644.5,
+          "low": 53244.12370858486,
+          "high": 54044.87629141514,
+          "n": 10
+        },
+        "budget_utilization": {
+          "mean": 0.894075,
+          "low": 0.8874020618097477,
+          "high": 0.9007479381902522,
+          "n": 10
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 1.3046875,
+          "low": 1.2379860058635146,
+          "high": 1.3713889941364854,
+          "n": 10
+        },
+        "elapsed_seconds": {
+          "mean": 130.2833863399923,
+          "low": 120.72887136140778,
+          "high": 139.8379013185768,
+          "n": 10
+        }
+      }
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "n": 10,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.10550044547910471,
+          "low": 0.10056440205624471,
+          "high": 0.11043648890196471,
+          "n": 10
+        },
+        "anchored_validation_modes": {
+          "mean": 2.9,
+          "low": 2.27363704431217,
+          "high": 3.52636295568783,
+          "n": 10
+        },
+        "anchored_test_modes": {
+          "mean": 2.8,
+          "low": 2.2357188627708915,
+          "high": 3.364281137229108,
+          "n": 10
+        },
+        "terminal_collision_rate": {
+          "mean": 0.8932598039215686,
+          "low": 0.8284889115011083,
+          "high": 0.9580306963420289,
+          "n": 10
+        },
+        "generated": {
+          "mean": 17.0,
+          "low": 16.66277752053801,
+          "high": 17.33722247946199,
+          "n": 10
+        },
+        "total_tokens": {
+          "mean": 52947.2,
+          "low": 52504.709388785384,
+          "high": 53389.69061121461,
+          "n": 10
+        },
+        "budget_utilization": {
+          "mean": 0.8824533333333333,
+          "low": 0.8750784898130898,
+          "high": 0.8898281768535768,
+          "n": 10
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 0.7984375,
+          "low": 0.741822239244784,
+          "high": 0.8550527607552161,
+          "n": 10
+        },
+        "elapsed_seconds": {
+          "mean": 83.8471557999961,
+          "low": 79.50876736022825,
+          "high": 88.18554423976396,
+          "n": 10
+        }
+      }
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "n": 10,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.05369683805814578,
+          "low": 0.03840309759714425,
+          "high": 0.0689905785191473,
+          "n": 10
+        },
+        "anchored_validation_modes": {
+          "mean": 2.0,
+          "low": 1.2459476123819668,
+          "high": 2.7540523876180334,
+          "n": 10
+        },
+        "anchored_test_modes": {
+          "mean": 0.8,
+          "low": 0.4983790449527868,
+          "high": 1.1016209550472134,
+          "n": 10
+        },
+        "terminal_collision_rate": {
+          "mean": 0.9874545454545455,
+          "low": 0.9676583631502298,
+          "high": 1.0072507277588612,
+          "n": 10
+        },
+        "generated": {
+          "mean": 22.4,
+          "low": 21.271437725541784,
+          "high": 23.528562274458213,
+          "n": 10
+        },
+        "total_tokens": {
+          "mean": 53938.2,
+          "low": 53221.18151685879,
+          "high": 54655.2184831412,
+          "n": 10
+        },
+        "budget_utilization": {
+          "mean": 0.8989699999999999,
+          "low": 0.8870196919476466,
+          "high": 0.9109203080523532,
+          "n": 10
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 0.2453125,
+          "low": 0.21841942846395296,
+          "high": 0.272205571536047,
+          "n": 10
+        },
+        "elapsed_seconds": {
+          "mean": 122.72945590998279,
+          "low": 114.75261841243108,
+          "high": 130.7062934075345,
+          "n": 10
+        }
+      }
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "n": 10,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.054657404286659425,
+          "low": 0.03882634305409585,
+          "high": 0.070488465519223,
+          "n": 10
+        },
+        "anchored_validation_modes": {
+          "mean": 2.0,
+          "low": 1.325555041076023,
+          "high": 2.674444958923977,
+          "n": 10
+        },
+        "anchored_test_modes": {
+          "mean": 1.0,
+          "low": 1.0,
+          "high": 1.0,
+          "n": 10
+        },
+        "terminal_collision_rate": {
+          "mean": 0.8857142857142858,
+          "low": 0.7987771891962736,
+          "high": 0.972651382232298,
+          "n": 10
+        },
+        "generated": {
+          "mean": 14.9,
+          "low": 14.493930361946363,
+          "high": 15.306069638053637,
+          "n": 10
+        },
+        "total_tokens": {
+          "mean": 51828.8,
+          "low": 51108.17246216234,
+          "high": 52549.42753783766,
+          "n": 10
+        },
+        "budget_utilization": {
+          "mean": 0.8638133333333334,
+          "low": 0.8518028743693724,
+          "high": 0.8758237922972945,
+          "n": 10
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 0.1640625,
+          "low": 0.13147490854325483,
+          "high": 0.19665009145674517,
+          "n": 10
+        },
+        "elapsed_seconds": {
+          "mean": 76.25603778999066,
+          "low": 71.57937900753173,
+          "high": 80.93269657244959,
+          "n": 10
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "n": 9,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.0567328619026309,
+          "low": 0.05173751112354466,
+          "high": 0.061728212681717146,
+          "n": 9
+        },
+        "anchored_validation_modes": {
+          "mean": 3.5555555555555554,
+          "low": 2.530664828798148,
+          "high": 4.580446282312963,
+          "n": 9
+        },
+        "anchored_test_modes": {
+          "mean": 3.0,
+          "low": 1.7846291064979938,
+          "high": 4.215370893502007,
+          "n": 9
+        },
+        "terminal_collision_rate": {
+          "mean": 0.6572225523205915,
+          "low": 0.5325978803372937,
+          "high": 0.7818472243038892,
+          "n": 9
+        },
+        "generated": {
+          "mean": 19.444444444444443,
+          "low": 18.28434691253271,
+          "high": 20.604541976356177,
+          "n": 9
+        },
+        "total_tokens": {
+          "mean": 52998.333333333336,
+          "low": 52018.14435562396,
+          "high": 53978.52231104271,
+          "n": 9
+        },
+        "budget_utilization": {
+          "mean": 0.8833055555555556,
+          "low": 0.8669690725937327,
+          "high": 0.8996420385173785,
+          "n": 9
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 2.0815972222222223,
+          "low": 1.907676105477392,
+          "high": 2.2555183389670526,
+          "n": 9
+        },
+        "elapsed_seconds": {
+          "mean": 104.88557512221288,
+          "low": 97.10029757288254,
+          "high": 112.67085267154323,
+          "n": 9
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "relational",
+      "n": 7,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.05768732455822682,
+          "low": 0.03962189595626388,
+          "high": 0.07575275316018976,
+          "n": 7
+        },
+        "anchored_validation_modes": {
+          "mean": 3.7142857142857144,
+          "low": 2.1380376200064486,
+          "high": 5.29053380856498,
+          "n": 7
+        },
+        "anchored_test_modes": {
+          "mean": 2.2857142857142856,
+          "low": 1.2566409366525728,
+          "high": 3.3147876347759984,
+          "n": 7
+        },
+        "terminal_collision_rate": {
+          "mean": 0.5190149136577709,
+          "low": 0.284575321402279,
+          "high": 0.7534545059132627,
+          "n": 7
+        },
+        "generated": {
+          "mean": 14.428571428571429,
+          "low": 13.251781032172605,
+          "high": 15.605361824970252,
+          "n": 7
+        },
+        "total_tokens": {
+          "mean": 50172.57142857143,
+          "low": 49218.89881371651,
+          "high": 51126.24404342635,
+          "n": 7
+        },
+        "budget_utilization": {
+          "mean": 0.836209523809524,
+          "low": 0.8203149802286086,
+          "high": 0.8521040673904393,
+          "n": 7
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 1.7321428571428572,
+          "low": 1.5525371611176038,
+          "high": 1.9117485531681107,
+          "n": 7
+        },
+        "elapsed_seconds": {
+          "mean": 78.57836289999874,
+          "low": 72.36328616870226,
+          "high": 84.79343963129521,
+          "n": 7
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "n": 9,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.10424135382470984,
+          "low": 0.09967988731477004,
+          "high": 0.10880282033464964,
+          "n": 9
+        },
+        "anchored_validation_modes": {
+          "mean": 6.555555555555555,
+          "low": 3.8897312406844553,
+          "high": 9.221379870426656,
+          "n": 9
+        },
+        "anchored_test_modes": {
+          "mean": 5.777777777777778,
+          "low": 3.5773932391934165,
+          "high": 7.978162316362139,
+          "n": 9
+        },
+        "terminal_collision_rate": {
+          "mean": 0.518857030673336,
+          "low": 0.2603419605863109,
+          "high": 0.7773721007603611,
+          "n": 9
+        },
+        "generated": {
+          "mean": 17.333333333333332,
+          "low": 12.205677916269975,
+          "high": 22.460988750396687,
+          "n": 9
+        },
+        "total_tokens": {
+          "mean": 46921.666666666664,
+          "low": 33358.09832522515,
+          "high": 60485.235008108175,
+          "n": 9
+        },
+        "budget_utilization": {
+          "mean": 0.7820277777777779,
+          "low": 0.5559683054204194,
+          "high": 1.0080872501351363,
+          "n": 9
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 1.7100694444444444,
+          "low": 1.2039142128373812,
+          "high": 2.2162246760515076,
+          "n": 9
+        },
+        "elapsed_seconds": {
+          "mean": 105.88119327777531,
+          "low": 94.18829972916765,
+          "high": 117.57408682638297,
+          "n": 9
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "n": 10,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.10593729795873622,
+          "low": 0.10023640577870221,
+          "high": 0.11163819013877022,
+          "n": 10
+        },
+        "anchored_validation_modes": {
+          "mean": 5.1,
+          "low": 3.910125402343416,
+          "high": 6.289874597656583,
+          "n": 10
+        },
+        "anchored_test_modes": {
+          "mean": 4.9,
+          "low": 3.663262130116933,
+          "high": 6.136737869883068,
+          "n": 10
+        },
+        "terminal_collision_rate": {
+          "mean": 0.645297619047619,
+          "low": 0.5380090193745759,
+          "high": 0.752586218720662,
+          "n": 10
+        },
+        "generated": {
+          "mean": 15.0,
+          "low": 14.523095396007774,
+          "high": 15.476904603992226,
+          "n": 10
+        },
+        "total_tokens": {
+          "mean": 50712.2,
+          "low": 49478.698397231645,
+          "high": 51945.70160276835,
+          "n": 10
+        },
+        "budget_utilization": {
+          "mean": 0.8452033333333334,
+          "low": 0.8246449732871942,
+          "high": 0.8657616933794726,
+          "n": 10
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 1.4703125,
+          "low": 1.2943331954083974,
+          "high": 1.6462918045916024,
+          "n": 10
+        },
+        "elapsed_seconds": {
+          "mean": 79.46786030003568,
+          "low": 74.80969784877794,
+          "high": 84.12602275129342,
+          "n": 10
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "n": 9,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.054176184948008334,
+          "low": 0.038872651748329316,
+          "high": 0.06947971814768736,
+          "n": 9
+        },
+        "anchored_validation_modes": {
+          "mean": 1.7777777777777777,
+          "low": 1.1372210735543984,
+          "high": 2.418334482001157,
+          "n": 9
+        },
+        "anchored_test_modes": {
+          "mean": 0.8888888888888888,
+          "low": 0.632666207199537,
+          "high": 1.1451115705782406,
+          "n": 9
+        },
+        "terminal_collision_rate": {
+          "mean": 0.7657316044941118,
+          "low": 0.6551307131316397,
+          "high": 0.8763324958565839,
+          "n": 9
+        },
+        "generated": {
+          "mean": 19.88888888888889,
+          "low": 18.238289725432953,
+          "high": 21.539488052344826,
+          "n": 9
+        },
+        "total_tokens": {
+          "mean": 52677.22222222222,
+          "low": 52068.9749531515,
+          "high": 53285.46949129294,
+          "n": 9
+        },
+        "budget_utilization": {
+          "mean": 0.8779537037037036,
+          "low": 0.8678162492191916,
+          "high": 0.8880911581882156,
+          "n": 9
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 0.3697916666666667,
+          "low": 0.3150815169088291,
+          "high": 0.4245018164245043,
+          "n": 9
+        },
+        "elapsed_seconds": {
+          "mean": 103.84393613335367,
+          "low": 93.56655097101567,
+          "high": 114.12132129569166,
+          "n": 9
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "relational",
+      "n": 7,
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.05599870176883996,
+          "low": 0.035434895581613376,
+          "high": 0.07656250795606655,
+          "n": 7
+        },
+        "anchored_validation_modes": {
+          "mean": 2.142857142857143,
+          "low": 1.5046529442386558,
+          "high": 2.7810613414756298,
+          "n": 7
+        },
+        "anchored_test_modes": {
+          "mean": 0.7142857142857143,
+          "low": 0.2630071976608558,
+          "high": 1.1655642309105727,
+          "n": 7
+        },
+        "terminal_collision_rate": {
+          "mean": 0.8466727716727718,
+          "low": 0.7635535973032888,
+          "high": 0.9297919460422548,
+          "n": 7
+        },
+        "generated": {
+          "mean": 15.0,
+          "low": 13.150308503363918,
+          "high": 16.849691496636083,
+          "n": 7
+        },
+        "total_tokens": {
+          "mean": 50425.28571428572,
+          "low": 48884.130822083695,
+          "high": 51966.44060648774,
+          "n": 7
+        },
+        "budget_utilization": {
+          "mean": 0.8404214285714285,
+          "low": 0.8147355137013949,
+          "high": 0.8661073434414622,
+          "n": 7
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 0.3013392857142857,
+          "low": 0.27278399347162574,
+          "high": 0.32989457795694566,
+          "n": 7
+        },
+        "elapsed_seconds": {
+          "mean": 75.93091968575027,
+          "low": 58.873306293663674,
+          "high": 92.98853307783686,
+          "n": 7
+        }
+      }
+    }
+  ],
+  "eligible_pair_aggregates": [
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "n": 9,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.051374629147818235,
+          "low": 0.029838966975014286,
+          "high": 0.07291029132062218,
+          "n": 9
+        },
+        "anchored_validation_modes": {
+          "mean": 4.444444444444445,
+          "low": 3.3498606684498835,
+          "high": 5.539028220439006,
+          "n": 9
+        },
+        "anchored_test_modes": {
+          "mean": 3.7777777777777777,
+          "low": 2.777196219465681,
+          "high": 4.778359336089874,
+          "n": 9
+        },
+        "terminal_collision_rate": {
+          "mean": 0.7784511784511784,
+          "low": 0.6774766399191647,
+          "high": 0.879425716983192,
+          "n": 9
+        },
+        "generated": {
+          "mean": 20.555555555555557,
+          "low": 19.99713116729212,
+          "high": 21.113979943818993,
+          "n": 9
+        },
+        "total_tokens": {
+          "mean": 53702.444444444445,
+          "low": 52891.39109334492,
+          "high": 54513.49779554397,
+          "n": 9
+        },
+        "budget_utilization": {
+          "mean": 0.8950407407407407,
+          "low": 0.881523184889082,
+          "high": 0.9085582965923994,
+          "n": 9
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 2.079861111111111,
+          "low": 1.9985254241080612,
+          "high": 2.161196798114161,
+          "n": 9
+        },
+        "elapsed_seconds": {
+          "mean": 120.15891056665633,
+          "low": 108.81019558807029,
+          "high": 131.50762554524238,
+          "n": 9
+        }
+      }
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "n": 9,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.0465390254795165,
+          "low": 0.03687296662897489,
+          "high": 0.05620508433005811,
+          "n": 9
+        },
+        "anchored_validation_modes": {
+          "mean": 3.3333333333333335,
+          "low": 2.1179624398313273,
+          "high": 4.54870422683534,
+          "n": 9
+        },
+        "anchored_test_modes": {
+          "mean": 3.111111111111111,
+          "low": 2.0624745922198473,
+          "high": 4.159747630002375,
+          "n": 9
+        },
+        "terminal_collision_rate": {
+          "mean": 0.49776149776149775,
+          "low": 0.3509878594589177,
+          "high": 0.6445351360640779,
+          "n": 9
+        },
+        "generated": {
+          "mean": 14.11111111111111,
+          "low": 13.649199102727188,
+          "high": 14.573023119495033,
+          "n": 9
+        },
+        "total_tokens": {
+          "mean": 51235.444444444445,
+          "low": 50104.83283538958,
+          "high": 52366.05605349931,
+          "n": 9
+        },
+        "budget_utilization": {
+          "mean": 0.853924074074074,
+          "low": 0.8350805472564929,
+          "high": 0.8727676008916551,
+          "n": 9
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 1.484375,
+          "low": 1.4180451870300605,
+          "high": 1.5507048129699395,
+          "n": 9
+        },
+        "elapsed_seconds": {
+          "mean": 83.193050522202,
+          "low": 74.14661325002254,
+          "high": 92.23948779438146,
+          "n": 9
+        }
+      }
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "n": 10,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.10562051597528757,
+          "low": 0.10050335321279871,
+          "high": 0.11073767873777643,
+          "n": 10
+        },
+        "anchored_validation_modes": {
+          "mean": 5.6,
+          "low": 3.7777500667825104,
+          "high": 7.422249933217489,
+          "n": 10
+        },
+        "anchored_test_modes": {
+          "mean": 5.1,
+          "low": 3.5381829287529096,
+          "high": 6.661817071247089,
+          "n": 10
+        },
+        "terminal_collision_rate": {
+          "mean": 0.7748431134083308,
+          "low": 0.6824341253283626,
+          "high": 0.867252101488299,
+          "n": 10
+        },
+        "generated": {
+          "mean": 24.8,
+          "low": 23.799636463199743,
+          "high": 25.80036353680026,
+          "n": 10
+        },
+        "total_tokens": {
+          "mean": 53644.5,
+          "low": 53244.12370858486,
+          "high": 54044.87629141514,
+          "n": 10
+        },
+        "budget_utilization": {
+          "mean": 0.894075,
+          "low": 0.8874020618097477,
+          "high": 0.9007479381902522,
+          "n": 10
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 1.3046875,
+          "low": 1.2379860058635146,
+          "high": 1.3713889941364854,
+          "n": 10
+        },
+        "elapsed_seconds": {
+          "mean": 130.2833863399923,
+          "low": 120.72887136140778,
+          "high": 139.8379013185768,
+          "n": 10
+        }
+      }
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "n": 10,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.10550044547910471,
+          "low": 0.10056440205624471,
+          "high": 0.11043648890196471,
+          "n": 10
+        },
+        "anchored_validation_modes": {
+          "mean": 2.9,
+          "low": 2.27363704431217,
+          "high": 3.52636295568783,
+          "n": 10
+        },
+        "anchored_test_modes": {
+          "mean": 2.8,
+          "low": 2.2357188627708915,
+          "high": 3.364281137229108,
+          "n": 10
+        },
+        "terminal_collision_rate": {
+          "mean": 0.8932598039215686,
+          "low": 0.8284889115011083,
+          "high": 0.9580306963420289,
+          "n": 10
+        },
+        "generated": {
+          "mean": 17.0,
+          "low": 16.66277752053801,
+          "high": 17.33722247946199,
+          "n": 10
+        },
+        "total_tokens": {
+          "mean": 52947.2,
+          "low": 52504.709388785384,
+          "high": 53389.69061121461,
+          "n": 10
+        },
+        "budget_utilization": {
+          "mean": 0.8824533333333333,
+          "low": 0.8750784898130898,
+          "high": 0.8898281768535768,
+          "n": 10
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 0.7984375,
+          "low": 0.741822239244784,
+          "high": 0.8550527607552161,
+          "n": 10
+        },
+        "elapsed_seconds": {
+          "mean": 83.8471557999961,
+          "low": 79.50876736022825,
+          "high": 88.18554423976396,
+          "n": 10
+        }
+      }
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "n": 10,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.05369683805814578,
+          "low": 0.03840309759714425,
+          "high": 0.0689905785191473,
+          "n": 10
+        },
+        "anchored_validation_modes": {
+          "mean": 2.0,
+          "low": 1.2459476123819668,
+          "high": 2.7540523876180334,
+          "n": 10
+        },
+        "anchored_test_modes": {
+          "mean": 0.8,
+          "low": 0.4983790449527868,
+          "high": 1.1016209550472134,
+          "n": 10
+        },
+        "terminal_collision_rate": {
+          "mean": 0.9874545454545455,
+          "low": 0.9676583631502298,
+          "high": 1.0072507277588612,
+          "n": 10
+        },
+        "generated": {
+          "mean": 22.4,
+          "low": 21.271437725541784,
+          "high": 23.528562274458213,
+          "n": 10
+        },
+        "total_tokens": {
+          "mean": 53938.2,
+          "low": 53221.18151685879,
+          "high": 54655.2184831412,
+          "n": 10
+        },
+        "budget_utilization": {
+          "mean": 0.8989699999999999,
+          "low": 0.8870196919476466,
+          "high": 0.9109203080523532,
+          "n": 10
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 0.2453125,
+          "low": 0.21841942846395296,
+          "high": 0.272205571536047,
+          "n": 10
+        },
+        "elapsed_seconds": {
+          "mean": 122.72945590998279,
+          "low": 114.75261841243108,
+          "high": 130.7062934075345,
+          "n": 10
+        }
+      }
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "n": 10,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.054657404286659425,
+          "low": 0.03882634305409585,
+          "high": 0.070488465519223,
+          "n": 10
+        },
+        "anchored_validation_modes": {
+          "mean": 2.0,
+          "low": 1.325555041076023,
+          "high": 2.674444958923977,
+          "n": 10
+        },
+        "anchored_test_modes": {
+          "mean": 1.0,
+          "low": 1.0,
+          "high": 1.0,
+          "n": 10
+        },
+        "terminal_collision_rate": {
+          "mean": 0.8857142857142858,
+          "low": 0.7987771891962736,
+          "high": 0.972651382232298,
+          "n": 10
+        },
+        "generated": {
+          "mean": 14.9,
+          "low": 14.493930361946363,
+          "high": 15.306069638053637,
+          "n": 10
+        },
+        "total_tokens": {
+          "mean": 51828.8,
+          "low": 51108.17246216234,
+          "high": 52549.42753783766,
+          "n": 10
+        },
+        "budget_utilization": {
+          "mean": 0.8638133333333334,
+          "low": 0.8518028743693724,
+          "high": 0.8758237922972945,
+          "n": 10
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 0.1640625,
+          "low": 0.13147490854325483,
+          "high": 0.19665009145674517,
+          "n": 10
+        },
+        "elapsed_seconds": {
+          "mean": 76.25603778999066,
+          "low": 71.57937900753173,
+          "high": 80.93269657244959,
+          "n": 10
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "n": 7,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.05758119378314918,
+          "low": 0.05154267030232579,
+          "high": 0.06361971726397257,
+          "n": 7
+        },
+        "anchored_validation_modes": {
+          "mean": 3.857142857142857,
+          "low": 2.613053842357256,
+          "high": 5.101231871928459,
+          "n": 7
+        },
+        "anchored_test_modes": {
+          "mean": 3.2857142857142856,
+          "low": 1.8026617460768553,
+          "high": 4.768766825351716,
+          "n": 7
+        },
+        "terminal_collision_rate": {
+          "mean": 0.6727782021899669,
+          "low": 0.5046831240116845,
+          "high": 0.8408732803682493,
+          "n": 7
+        },
+        "generated": {
+          "mean": 19.571428571428573,
+          "low": 18.074707055835756,
+          "high": 21.06815008702139,
+          "n": 7
+        },
+        "total_tokens": {
+          "mean": 52875.42857142857,
+          "low": 51875.176381788624,
+          "high": 53875.68076106852,
+          "n": 7
+        },
+        "budget_utilization": {
+          "mean": 0.8812571428571427,
+          "low": 0.8645862730298103,
+          "high": 0.8979280126844752,
+          "n": 7
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 2.046875,
+          "low": 1.8205317173299442,
+          "high": 2.2732182826700558,
+          "n": 7
+        },
+        "elapsed_seconds": {
+          "mean": 102.93949461428981,
+          "low": 93.06677604718571,
+          "high": 112.81221318139391,
+          "n": 7
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "relational",
+      "n": 7,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.05768732455822682,
+          "low": 0.03962189595626388,
+          "high": 0.07575275316018976,
+          "n": 7
+        },
+        "anchored_validation_modes": {
+          "mean": 3.7142857142857144,
+          "low": 2.1380376200064486,
+          "high": 5.29053380856498,
+          "n": 7
+        },
+        "anchored_test_modes": {
+          "mean": 2.2857142857142856,
+          "low": 1.2566409366525728,
+          "high": 3.3147876347759984,
+          "n": 7
+        },
+        "terminal_collision_rate": {
+          "mean": 0.5190149136577709,
+          "low": 0.284575321402279,
+          "high": 0.7534545059132627,
+          "n": 7
+        },
+        "generated": {
+          "mean": 14.428571428571429,
+          "low": 13.251781032172605,
+          "high": 15.605361824970252,
+          "n": 7
+        },
+        "total_tokens": {
+          "mean": 50172.57142857143,
+          "low": 49218.89881371651,
+          "high": 51126.24404342635,
+          "n": 7
+        },
+        "budget_utilization": {
+          "mean": 0.836209523809524,
+          "low": 0.8203149802286086,
+          "high": 0.8521040673904393,
+          "n": 7
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 1.7321428571428572,
+          "low": 1.5525371611176038,
+          "high": 1.9117485531681107,
+          "n": 7
+        },
+        "elapsed_seconds": {
+          "mean": 78.57836289999874,
+          "low": 72.36328616870226,
+          "high": 84.79343963129521,
+          "n": 7
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "n": 8,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.10505322028598588,
+          "low": 0.1002168224515764,
+          "high": 0.10988961812039535,
+          "n": 8
+        },
+        "anchored_validation_modes": {
+          "mean": 7.125,
+          "low": 4.427525115442913,
+          "high": 9.822474884557087,
+          "n": 8
+        },
+        "anchored_test_modes": {
+          "mean": 6.25,
+          "low": 4.026839971718882,
+          "high": 8.473160028281118,
+          "n": 8
+        },
+        "terminal_collision_rate": {
+          "mean": 0.5837141595075032,
+          "low": 0.3385444191352329,
+          "high": 0.8288838998797734,
+          "n": 8
+        },
+        "generated": {
+          "mean": 19.5,
+          "low": 18.159384061322843,
+          "high": 20.840615938677157,
+          "n": 8
+        },
+        "total_tokens": {
+          "mean": 52786.875,
+          "low": 51601.41868971424,
+          "high": 53972.33131028576,
+          "n": 8
+        },
+        "budget_utilization": {
+          "mean": 0.87978125,
+          "low": 0.8600236448285706,
+          "high": 0.8995388551714293,
+          "n": 8
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 1.916015625,
+          "low": 1.712453654936579,
+          "high": 2.119577595063421,
+          "n": 8
+        },
+        "elapsed_seconds": {
+          "mean": 103.7969396749977,
+          "low": 91.40304149603429,
+          "high": 116.19083785396111,
+          "n": 8
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "n": 8,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.10486504824297513,
+          "low": 0.10024144506239883,
+          "high": 0.10948865142355142,
+          "n": 8
+        },
+        "anchored_validation_modes": {
+          "mean": 4.75,
+          "low": 3.5059610587319003,
+          "high": 5.9940389412681,
+          "n": 8
+        },
+        "anchored_test_modes": {
+          "mean": 4.625,
+          "low": 3.3660021371987874,
+          "high": 5.883997862801213,
+          "n": 8
+        },
+        "terminal_collision_rate": {
+          "mean": 0.6935267857142857,
+          "low": 0.6035639766850948,
+          "high": 0.7834895947434767,
+          "n": 8
+        },
+        "generated": {
+          "mean": 15.125,
+          "low": 14.589219318386384,
+          "high": 15.660780681613616,
+          "n": 8
+        },
+        "total_tokens": {
+          "mean": 50728.0,
+          "low": 49114.551776857275,
+          "high": 52341.448223142725,
+          "n": 8
+        },
+        "budget_utilization": {
+          "mean": 0.8454666666666666,
+          "low": 0.8185758629476211,
+          "high": 0.8723574703857121,
+          "n": 8
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 1.513671875,
+          "low": 1.2972816173310415,
+          "high": 1.7300621326689585,
+          "n": 8
+        },
+        "elapsed_seconds": {
+          "mean": 78.7786427000392,
+          "low": 72.85173922520558,
+          "high": 84.70554617487282,
+          "n": 8
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "n": 7,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.04888428801472279,
+          "low": 0.0318523748645139,
+          "high": 0.06591620116493169,
+          "n": 7
+        },
+        "anchored_validation_modes": {
+          "mean": 1.7142857142857142,
+          "low": 1.0151680425300087,
+          "high": 2.41340338604142,
+          "n": 7
+        },
+        "anchored_test_modes": {
+          "mean": 0.8571428571428571,
+          "low": 0.5075840212650043,
+          "high": 1.20670169302071,
+          "n": 7
+        },
+        "terminal_collision_rate": {
+          "mean": 0.7446914970134785,
+          "low": 0.6116113329720211,
+          "high": 0.8777716610549359,
+          "n": 7
+        },
+        "generated": {
+          "mean": 19.714285714285715,
+          "low": 17.886747010755478,
+          "high": 21.541824417815953,
+          "n": 7
+        },
+        "total_tokens": {
+          "mean": 52728.142857142855,
+          "low": 51891.964754523346,
+          "high": 53564.320959762365,
+          "n": 7
+        },
+        "budget_utilization": {
+          "mean": 0.8788023809523811,
+          "low": 0.8648660792420558,
+          "high": 0.8927386826627063,
+          "n": 7
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 0.36160714285714285,
+          "low": 0.28772051343780225,
+          "high": 0.43549377227648345,
+          "n": 7
+        },
+        "elapsed_seconds": {
+          "mean": 103.69751240002059,
+          "low": 89.8332805056128,
+          "high": 117.56174429442837,
+          "n": 7
+        }
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "relational",
+      "n": 7,
+      "label": "descriptive matched complete pairs; not a replacement for the frozen full-cell test",
+      "metrics": {
+        "validation_selected_test_loss": {
+          "mean": 0.05599870176883996,
+          "low": 0.035434895581613376,
+          "high": 0.07656250795606655,
+          "n": 7
+        },
+        "anchored_validation_modes": {
+          "mean": 2.142857142857143,
+          "low": 1.5046529442386558,
+          "high": 2.7810613414756298,
+          "n": 7
+        },
+        "anchored_test_modes": {
+          "mean": 0.7142857142857143,
+          "low": 0.2630071976608558,
+          "high": 1.1655642309105727,
+          "n": 7
+        },
+        "terminal_collision_rate": {
+          "mean": 0.8466727716727718,
+          "low": 0.7635535973032888,
+          "high": 0.9297919460422548,
+          "n": 7
+        },
+        "generated": {
+          "mean": 15.0,
+          "low": 13.150308503363918,
+          "high": 16.849691496636083,
+          "n": 7
+        },
+        "total_tokens": {
+          "mean": 50425.28571428572,
+          "low": 48884.130822083695,
+          "high": 51966.44060648774,
+          "n": 7
+        },
+        "budget_utilization": {
+          "mean": 0.8404214285714285,
+          "low": 0.8147355137013949,
+          "high": 0.8661073434414622,
+          "n": 7
+        },
+        "evaluator_cpu_seconds": {
+          "mean": 0.3013392857142857,
+          "low": 0.27278399347162574,
+          "high": 0.32989457795694566,
+          "n": 7
+        },
+        "elapsed_seconds": {
+          "mean": 75.93091968575027,
+          "low": 58.873306293663674,
+          "high": 92.98853307783686,
+          "n": 7
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "n": 10,
+      "partitions": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "complete": true,
+      "cost_valid": false,
+      "loss_difference": {
+        "mean": -0.00023068404259540403,
+        "low": -0.026346028389686388,
+        "high": 0.02588466030449558,
+        "n": 10
+      },
+      "test_mode_difference": {
+        "mean": 0.0,
+        "low": -1.8775753034936387,
+        "high": 1.8775753034936387,
+        "n": 10
+      },
+      "loss_win_tie_loss": [
+        3,
+        1,
+        6
+      ],
+      "mode_win_tie_loss": [
+        3,
+        2,
+        5
+      ],
+      "delta_loss": [
+        0.02055267469665379,
+        0.02956499753951365,
+        0.04121359258876166,
+        0.00839726151111271,
+        -0.0922343095528808,
+        0.009993617495438194,
+        -0.009520863823982421,
+        0.0,
+        0.004327988464273562,
+        -0.01460179934484438
+      ],
+      "delta_modes": [
+        -1,
+        2,
+        6,
+        -1,
+        0,
+        -3,
+        -3,
+        -1,
+        0,
+        1
+      ],
+      "tests": {
+        "loss_superiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "mode_superiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "loss_noninferiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "mode_noninferiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        }
+      },
+      "complete_pair_diagnostic": {
+        "n": 9,
+        "loss_difference": {
+          "mean": -0.004835603668301744,
+          "low": -0.0321290012413935,
+          "high": 0.02245779390479001,
+          "n": 9
+        },
+        "test_mode_difference": {
+          "mean": -0.6666666666666666,
+          "low": -1.9413584135800335,
+          "high": 0.6080250802467003,
+          "n": 9
+        },
+        "label": "descriptive cost-eligible pairs only; exclusion can bias effects, no confirmatory p value"
+      },
+      "gate_pass": false,
+      "analysis_status": "infrastructure_or_completion_ineligible",
+      "harm_signal": false
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "n": 10,
+      "partitions": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "complete": true,
+      "cost_valid": true,
+      "loss_difference": {
+        "mean": -0.00012007049618284333,
+        "low": -0.0004264428374234899,
+        "high": 0.00018630184505780327,
+        "n": 10
+      },
+      "test_mode_difference": {
+        "mean": -2.3,
+        "low": -3.8471861438679706,
+        "high": -0.7528138561320288,
+        "n": 10
+      },
+      "loss_win_tie_loss": [
+        1,
+        8,
+        1
+      ],
+      "mode_win_tie_loss": [
+        0,
+        3,
+        7
+      ],
+      "delta_loss": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0013331993831159628,
+        0.00013249442128752953,
+        0.0
+      ],
+      "delta_modes": [
+        -2,
+        0,
+        -2,
+        -7,
+        0,
+        -2,
+        0,
+        -4,
+        -3,
+        -3
+      ],
+      "tests": {
+        "loss_superiority": {
+          "p_raw": 0.5,
+          "p_holm": 1.0
+        },
+        "mode_superiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "loss_noninferiority": {
+          "p_raw": 0.0009765625,
+          "p_holm": 0.0234375
+        },
+        "mode_noninferiority": {
+          "p_raw": 0.9931640625,
+          "p_holm": 1.0
+        }
+      },
+      "complete_pair_diagnostic": {
+        "n": 10,
+        "loss_difference": {
+          "mean": -0.00012007049618284333,
+          "low": -0.0004264428374234899,
+          "high": 0.00018630184505780327,
+          "n": 10
+        },
+        "test_mode_difference": {
+          "mean": -2.3,
+          "low": -3.8471861438679706,
+          "high": -0.7528138561320288,
+          "n": 10
+        },
+        "label": "descriptive cost-eligible pairs only; exclusion can bias effects, no confirmatory p value"
+      },
+      "gate_pass": false,
+      "analysis_status": "eligible",
+      "harm_signal": false
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "n": 10,
+      "partitions": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "complete": true,
+      "cost_valid": true,
+      "loss_difference": {
+        "mean": 0.0009605662285136502,
+        "low": -0.004432513985223197,
+        "high": 0.006353646442250498,
+        "n": 10
+      },
+      "test_mode_difference": {
+        "mean": 0.2,
+        "low": -0.10162095504721325,
+        "high": 0.5016209550472133,
+        "n": 10
+      },
+      "loss_win_tie_loss": [
+        3,
+        3,
+        4
+      ],
+      "mode_win_tie_loss": [
+        2,
+        8,
+        0
+      ],
+      "delta_loss": [
+        0.010616784630940346,
+        0.003875968992248069,
+        0.014492753623188408,
+        -0.003875968992248062,
+        0.0,
+        0.0,
+        0.0,
+        -0.0038759689922480654,
+        -0.012345679012345678,
+        0.0007177720356014855
+      ],
+      "delta_modes": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tests": {
+        "loss_superiority": {
+          "p_raw": 0.640625,
+          "p_holm": 1.0
+        },
+        "mode_superiority": {
+          "p_raw": 0.25,
+          "p_holm": 1.0
+        },
+        "loss_noninferiority": {
+          "p_raw": 0.0673828125,
+          "p_holm": 1.0
+        },
+        "mode_noninferiority": {
+          "p_raw": 0.0009765625,
+          "p_holm": 0.0234375
+        }
+      },
+      "complete_pair_diagnostic": {
+        "n": 10,
+        "loss_difference": {
+          "mean": 0.0009605662285136502,
+          "low": -0.004432513985223197,
+          "high": 0.006353646442250498,
+          "n": 10
+        },
+        "test_mode_difference": {
+          "mean": 0.2,
+          "low": -0.10162095504721325,
+          "high": 0.5016209550472133,
+          "n": 10
+        },
+        "label": "descriptive cost-eligible pairs only; exclusion can bias effects, no confirmatory p value"
+      },
+      "gate_pass": false,
+      "analysis_status": "eligible",
+      "harm_signal": false
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "n": 7,
+      "partitions": [
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18
+      ],
+      "complete": false,
+      "cost_valid": true,
+      "loss_difference": {
+        "mean": 0.00010613077507762997,
+        "low": -0.020447196145243495,
+        "high": 0.020659457695398755,
+        "n": 7
+      },
+      "test_mode_difference": {
+        "mean": -1.0,
+        "low": -2.9978951602914004,
+        "high": 0.9978951602914001,
+        "n": 7
+      },
+      "loss_win_tie_loss": [
+        4,
+        0,
+        3
+      ],
+      "mode_win_tie_loss": [
+        2,
+        1,
+        4
+      ],
+      "delta_loss": [
+        0.006748407666720545,
+        -0.020418894338897334,
+        0.04409290217253395,
+        -0.0053572772283878925,
+        -0.014704714287348153,
+        -0.016331645309012918,
+        0.006714136749935214
+      ],
+      "delta_modes": [
+        -3,
+        -4,
+        0,
+        -1,
+        -2,
+        2,
+        1
+      ],
+      "tests": {
+        "loss_superiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "mode_superiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "loss_noninferiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "mode_noninferiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        }
+      },
+      "complete_pair_diagnostic": {
+        "n": 7,
+        "loss_difference": {
+          "mean": 0.00010613077507762997,
+          "low": -0.020447196145243495,
+          "high": 0.020659457695398755,
+          "n": 7
+        },
+        "test_mode_difference": {
+          "mean": -1.0,
+          "low": -2.9978951602914004,
+          "high": 0.9978951602914001,
+          "n": 7
+        },
+        "label": "descriptive cost-eligible pairs only; exclusion can bias effects, no confirmatory p value"
+      },
+      "gate_pass": false,
+      "analysis_status": "infrastructure_or_completion_ineligible",
+      "harm_signal": false
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "n": 9,
+      "partitions": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "complete": false,
+      "cost_valid": false,
+      "loss_difference": {
+        "mean": -0.0001672640382317807,
+        "low": -0.0005529756020652148,
+        "high": 0.00021844752560165335,
+        "n": 9
+      },
+      "test_mode_difference": {
+        "mean": -0.7777777777777778,
+        "low": -3.4343510838995774,
+        "high": 1.878795528344022,
+        "n": 9
+      },
+      "loss_win_tie_loss": [
+        1,
+        8,
+        0
+      ],
+      "mode_win_tie_loss": [
+        3,
+        0,
+        6
+      ],
+      "delta_loss": [
+        0.0,
+        0.0,
+        -0.0015053763440860263,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delta_modes": [
+        -3,
+        6,
+        -3,
+        1,
+        -2,
+        3,
+        -4,
+        -1,
+        -4
+      ],
+      "tests": {
+        "loss_superiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "mode_superiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "loss_noninferiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "mode_noninferiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        }
+      },
+      "complete_pair_diagnostic": {
+        "n": 8,
+        "loss_difference": {
+          "mean": -0.00018817204301075328,
+          "low": -0.0006331282193857411,
+          "high": 0.00025678413336423445,
+          "n": 8
+        },
+        "test_mode_difference": {
+          "mean": -1.625,
+          "low": -3.71803596341496,
+          "high": 0.4680359634149598,
+          "n": 8
+        },
+        "label": "descriptive cost-eligible pairs only; exclusion can bias effects, no confirmatory p value"
+      },
+      "gate_pass": false,
+      "analysis_status": "infrastructure_or_completion_ineligible",
+      "harm_signal": false
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "n": 7,
+      "partitions": [
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        20
+      ],
+      "complete": false,
+      "cost_valid": true,
+      "loss_difference": {
+        "mean": 0.007114413754117158,
+        "low": -0.0013202610557024805,
+        "high": 0.015549088563936796,
+        "n": 7
+      },
+      "test_mode_difference": {
+        "mean": -0.14285714285714285,
+        "low": -0.4924159787349956,
+        "high": 0.2067016930207099,
+        "n": 7
+      },
+      "loss_win_tie_loss": [
+        0,
+        4,
+        3
+      ],
+      "mode_win_tie_loss": [
+        0,
+        6,
+        1
+      ],
+      "delta_loss": [
+        0.0,
+        0.0,
+        0.014492753623188408,
+        0.0144927536231884,
+        0.0,
+        0.0,
+        0.020815389032443295
+      ],
+      "delta_modes": [
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "tests": {
+        "loss_superiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "mode_superiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "loss_noninferiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        },
+        "mode_noninferiority": {
+          "p_raw": 1.0,
+          "p_holm": 1.0
+        }
+      },
+      "complete_pair_diagnostic": {
+        "n": 7,
+        "loss_difference": {
+          "mean": 0.007114413754117158,
+          "low": -0.0013202610557024805,
+          "high": 0.015549088563936796,
+          "n": 7
+        },
+        "test_mode_difference": {
+          "mean": -0.14285714285714285,
+          "low": -0.4924159787349956,
+          "high": 0.2067016930207099,
+          "n": 7
+        },
+        "label": "descriptive cost-eligible pairs only; exclusion can bias effects, no confirmatory p value"
+      },
+      "gate_pass": false,
+      "analysis_status": "infrastructure_or_completion_ineligible",
+      "harm_signal": false
+    }
+  ],
+  "broad_stability_gate": false,
+  "passed_cells": 0,
+  "descriptor_diagnostics": [
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 11,
+      "pairs": 55,
+      "probe_same": 0,
+      "probe_different": 55,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 7
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 12,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 13,
+      "pairs": 55,
+      "probe_same": 0,
+      "probe_different": 55,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 14,
+      "pairs": 6,
+      "probe_same": 0,
+      "probe_different": 6,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 15,
+      "pairs": 45,
+      "probe_same": 0,
+      "probe_different": 45,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 16,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 17,
+      "pairs": 21,
+      "probe_same": 0,
+      "probe_different": 21,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 19,
+      "pairs": 28,
+      "probe_same": 0,
+      "probe_different": 28,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 20,
+      "pairs": 45,
+      "probe_same": 0,
+      "probe_different": 45,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 11,
+      "pairs": 15,
+      "probe_same": 0,
+      "probe_different": 15,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 12,
+      "pairs": 36,
+      "probe_same": 0,
+      "probe_different": 36,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 13,
+      "pairs": 28,
+      "probe_same": 0,
+      "probe_different": 28,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 14,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 15,
+      "pairs": 21,
+      "probe_same": 0,
+      "probe_different": 21,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 16,
+      "pairs": 15,
+      "probe_same": 0,
+      "probe_different": 15,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 17,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 18,
+      "pairs": 15,
+      "probe_same": 0,
+      "probe_different": 15,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 19,
+      "pairs": 15,
+      "probe_same": 0,
+      "probe_different": 15,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 20,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "partition": 11,
+      "pairs": 6,
+      "probe_same": 5,
+      "probe_different": 1,
+      "probe_same_test_different": 3,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "partition": 12,
+      "pairs": 15,
+      "probe_same": 3,
+      "probe_different": 12,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 3
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "partition": 13,
+      "pairs": 6,
+      "probe_same": 3,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 3
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "partition": 14,
+      "pairs": 6,
+      "probe_same": 3,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 3
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "partition": 15,
+      "pairs": 15,
+      "probe_same": 7,
+      "probe_different": 8,
+      "probe_same_test_different": 5,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "partition": 16,
+      "pairs": 6,
+      "probe_same": 2,
+      "probe_different": 4,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "partition": 17,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "partition": 19,
+      "pairs": 6,
+      "probe_same": 6,
+      "probe_different": 0,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "niche",
+      "partition": 20,
+      "pairs": 6,
+      "probe_same": 3,
+      "probe_different": 3,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 3
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "relational",
+      "partition": 11,
+      "pairs": 10,
+      "probe_same": 9,
+      "probe_different": 1,
+      "probe_same_test_different": 6,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "relational",
+      "partition": 13,
+      "pairs": 15,
+      "probe_same": 8,
+      "probe_different": 7,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 7
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "relational",
+      "partition": 14,
+      "pairs": 10,
+      "probe_same": 4,
+      "probe_different": 6,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 5
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "relational",
+      "partition": 15,
+      "pairs": 6,
+      "probe_same": 3,
+      "probe_different": 3,
+      "probe_same_test_different": 3,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "relational",
+      "partition": 16,
+      "pairs": 6,
+      "probe_same": 2,
+      "probe_different": 4,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "relational",
+      "partition": 17,
+      "pairs": 6,
+      "probe_same": 1,
+      "probe_different": 5,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 3
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "classification",
+      "method": "relational",
+      "partition": 20,
+      "pairs": 10,
+      "probe_same": 1,
+      "probe_different": 9,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 8
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 11,
+      "pairs": 21,
+      "probe_same": 2,
+      "probe_different": 19,
+      "probe_same_test_different": 2,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 12,
+      "pairs": 36,
+      "probe_same": 3,
+      "probe_different": 33,
+      "probe_same_test_different": 3,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 13,
+      "pairs": 15,
+      "probe_same": 3,
+      "probe_different": 12,
+      "probe_same_test_different": 3,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 15,
+      "pairs": 10,
+      "probe_same": 1,
+      "probe_different": 9,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 16,
+      "pairs": 21,
+      "probe_same": 1,
+      "probe_different": 20,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 17,
+      "pairs": 6,
+      "probe_same": 0,
+      "probe_different": 6,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 18,
+      "pairs": 10,
+      "probe_same": 1,
+      "probe_different": 9,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 19,
+      "pairs": 10,
+      "probe_same": 2,
+      "probe_different": 8,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 2
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 20,
+      "pairs": 15,
+      "probe_same": 1,
+      "probe_different": 14,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 11,
+      "pairs": 3,
+      "probe_same": 1,
+      "probe_different": 2,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 12,
+      "pairs": 6,
+      "probe_same": 0,
+      "probe_different": 6,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 13,
+      "pairs": 10,
+      "probe_same": 1,
+      "probe_different": 9,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 15,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 16,
+      "pairs": 15,
+      "probe_same": 1,
+      "probe_different": 14,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 17,
+      "pairs": 28,
+      "probe_same": 0,
+      "probe_different": 28,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 3
+    },
+    {
+      "model": "MiniMax-M3",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 18,
+      "pairs": 6,
+      "probe_same": 0,
+      "probe_different": 6,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 11,
+      "pairs": 36,
+      "probe_same": 0,
+      "probe_different": 36,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 2
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 12,
+      "pairs": 6,
+      "probe_same": 0,
+      "probe_different": 6,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 13,
+      "pairs": 15,
+      "probe_same": 0,
+      "probe_different": 15,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 14,
+      "pairs": 55,
+      "probe_same": 0,
+      "probe_different": 55,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 15,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 16,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 17,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 18,
+      "pairs": 36,
+      "probe_same": 0,
+      "probe_different": 36,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 19,
+      "pairs": 36,
+      "probe_same": 1,
+      "probe_different": 35,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "niche",
+      "partition": 20,
+      "pairs": 15,
+      "probe_same": 0,
+      "probe_different": 15,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 11,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 12,
+      "pairs": 6,
+      "probe_same": 0,
+      "probe_different": 6,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 13,
+      "pairs": 6,
+      "probe_same": 0,
+      "probe_different": 6,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 14,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 15,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 16,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 17,
+      "pairs": 6,
+      "probe_same": 0,
+      "probe_different": 6,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 18,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 19,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "binpack",
+      "method": "relational",
+      "partition": 20,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "partition": 11,
+      "pairs": 6,
+      "probe_same": 4,
+      "probe_different": 2,
+      "probe_same_test_different": 3,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "partition": 12,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "partition": 13,
+      "pairs": 15,
+      "probe_same": 6,
+      "probe_different": 9,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 9
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "partition": 14,
+      "pairs": 10,
+      "probe_same": 3,
+      "probe_different": 7,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 5
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "partition": 15,
+      "pairs": 6,
+      "probe_same": 5,
+      "probe_different": 1,
+      "probe_same_test_different": 4,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "partition": 16,
+      "pairs": 3,
+      "probe_same": 1,
+      "probe_different": 2,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "partition": 17,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "partition": 18,
+      "pairs": 6,
+      "probe_same": 1,
+      "probe_different": 5,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 4
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "partition": 19,
+      "pairs": 6,
+      "probe_same": 6,
+      "probe_different": 0,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "niche",
+      "partition": 20,
+      "pairs": 10,
+      "probe_same": 2,
+      "probe_different": 8,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 8
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "partition": 11,
+      "pairs": 10,
+      "probe_same": 6,
+      "probe_different": 4,
+      "probe_same_test_different": 4,
+      "probe_different_test_same": 3
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "partition": 12,
+      "pairs": 15,
+      "probe_same": 1,
+      "probe_different": 14,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "partition": 13,
+      "pairs": 6,
+      "probe_same": 2,
+      "probe_different": 4,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 4
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "partition": 14,
+      "pairs": 6,
+      "probe_same": 2,
+      "probe_different": 4,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 3
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "partition": 15,
+      "pairs": 6,
+      "probe_same": 3,
+      "probe_different": 3,
+      "probe_same_test_different": 3,
+      "probe_different_test_same": 2
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "partition": 16,
+      "pairs": 3,
+      "probe_same": 1,
+      "probe_different": 2,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "partition": 17,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "partition": 18,
+      "pairs": 10,
+      "probe_same": 3,
+      "probe_different": 7,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 5
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "partition": 19,
+      "pairs": 6,
+      "probe_same": 6,
+      "probe_different": 0,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "classification",
+      "method": "relational",
+      "partition": 20,
+      "pairs": 10,
+      "probe_same": 4,
+      "probe_different": 6,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 6
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 11,
+      "pairs": 10,
+      "probe_same": 2,
+      "probe_different": 8,
+      "probe_same_test_different": 2,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 12,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 13,
+      "pairs": 6,
+      "probe_same": 2,
+      "probe_different": 4,
+      "probe_same_test_different": 2,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 14,
+      "pairs": 36,
+      "probe_same": 5,
+      "probe_different": 31,
+      "probe_same_test_different": 5,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 15,
+      "pairs": 15,
+      "probe_same": 1,
+      "probe_different": 14,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 16,
+      "pairs": 21,
+      "probe_same": 1,
+      "probe_different": 20,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 17,
+      "pairs": 28,
+      "probe_same": 0,
+      "probe_different": 28,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 18,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 19,
+      "pairs": 21,
+      "probe_same": 2,
+      "probe_different": 19,
+      "probe_same_test_different": 2,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "niche",
+      "partition": 20,
+      "pairs": 10,
+      "probe_same": 2,
+      "probe_different": 8,
+      "probe_same_test_different": 2,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 11,
+      "pairs": 6,
+      "probe_same": 1,
+      "probe_different": 5,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 12,
+      "pairs": 28,
+      "probe_same": 3,
+      "probe_different": 25,
+      "probe_same_test_different": 3,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 13,
+      "pairs": 36,
+      "probe_same": 0,
+      "probe_different": 36,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 14,
+      "pairs": 36,
+      "probe_same": 5,
+      "probe_different": 31,
+      "probe_same_test_different": 5,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 15,
+      "pairs": 6,
+      "probe_same": 1,
+      "probe_different": 5,
+      "probe_same_test_different": 1,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 16,
+      "pairs": 3,
+      "probe_same": 0,
+      "probe_different": 3,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 17,
+      "pairs": 15,
+      "probe_same": 0,
+      "probe_different": 15,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 18,
+      "pairs": 6,
+      "probe_same": 0,
+      "probe_different": 6,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 0
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 19,
+      "pairs": 10,
+      "probe_same": 0,
+      "probe_different": 10,
+      "probe_same_test_different": 0,
+      "probe_different_test_same": 1
+    },
+    {
+      "model": "qwen3.7-plus",
+      "task": "tsp",
+      "method": "relational",
+      "partition": 20,
+      "pairs": 15,
+      "probe_same": 2,
+      "probe_different": 13,
+      "probe_same_test_different": 2,
+      "probe_different_test_same": 0
+    }
+  ],
+  "infrastructure_excluded": [
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_niche_p12",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.08519108501304902,
+        "validation_selected_best_id": 0,
+        "validation_selected_test_loss": 0.09774642213450153,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 2,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.08519108501304902,
+        "test_anchor": 0.09774642213450153,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.078125,
+        "test_cpu_seconds": 0.421875,
+        "feature_calls": 5512,
+        "local_checks": 0,
+        "elapsed_seconds": 1.3831806000089273
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_niche_p14",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.12436281808220838,
+        "validation_selected_best_id": 0,
+        "validation_selected_test_loss": 0.10332246329749595,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 2,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.12436281808220838,
+        "test_anchor": 0.10332246329749595,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.078125,
+        "test_cpu_seconds": 0.21875,
+        "feature_calls": 6920,
+        "local_checks": 0,
+        "elapsed_seconds": 0.6588325999910012
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_niche_p15",
+      "summary": {
+        "generated": 9,
+        "valid_generated": 7,
+        "best_validation_loss": 0.13876202008885666,
+        "validation_selected_best_id": 0,
+        "validation_selected_test_loss": 0.0963149518769995,
+        "anchored_validation_modes": 6,
+        "anchored_test_modes": 6,
+        "dynamic_validation_modes": 6,
+        "validation_anchor": 0.13876202008885666,
+        "test_anchor": 0.0963149518769995,
+        "terminal_collision_rate": 0.2222222222222222,
+        "different_intent_collisions": 1,
+        "useful_generated": 4,
+        "input_tokens": 25033,
+        "output_tokens": 4908,
+        "total_tokens": 29941,
+        "model_calls": 18,
+        "budget_utilization": 0.49901666666666666,
+        "cost_valid": false,
+        "model_seconds": 48.709025600226596,
+        "evaluator_cpu_seconds": 1.015625,
+        "test_cpu_seconds": 1.625,
+        "feature_calls": 20787,
+        "local_checks": 0,
+        "elapsed_seconds": 51.72531190002337
+      },
+      "errors": [
+        {
+          "iteration": 9,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_niche_p20",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.10364566879434445,
+        "validation_selected_best_id": 0,
+        "validation_selected_test_loss": 0.11027686343565575,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 2,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.10364566879434445,
+        "test_anchor": 0.11027686343565575,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.078125,
+        "test_cpu_seconds": 0.375,
+        "feature_calls": 6110,
+        "local_checks": 0,
+        "elapsed_seconds": 0.7816319999983534
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_relational_p13",
+      "summary": {
+        "generated": 7,
+        "valid_generated": 7,
+        "best_validation_loss": 0.11815608642195351,
+        "validation_selected_best_id": 0,
+        "validation_selected_test_loss": 0.11090283334730416,
+        "anchored_validation_modes": 3,
+        "anchored_test_modes": 2,
+        "dynamic_validation_modes": 3,
+        "validation_anchor": 0.11815608642195351,
+        "test_anchor": 0.11090283334730416,
+        "terminal_collision_rate": 0.8571428571428571,
+        "different_intent_collisions": 5,
+        "useful_generated": 1,
+        "input_tokens": 21661,
+        "output_tokens": 2603,
+        "total_tokens": 24264,
+        "model_calls": 15,
+        "budget_utilization": 0.4044,
+        "cost_valid": false,
+        "model_seconds": 43.84735870012082,
+        "evaluator_cpu_seconds": 0.640625,
+        "test_cpu_seconds": 0.515625,
+        "feature_calls": 17613,
+        "local_checks": 0,
+        "elapsed_seconds": 45.700207100016996
+      },
+      "errors": [
+        {
+          "iteration": 7,
+          "stage": "coder",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_relational_p17",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.13389020518887038,
+        "validation_selected_best_id": 0,
+        "validation_selected_test_loss": 0.10544647663010358,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 2,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.13389020518887038,
+        "test_anchor": 0.10544647663010358,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.09375,
+        "test_cpu_seconds": 0.328125,
+        "feature_calls": 7039,
+        "local_checks": 0,
+        "elapsed_seconds": 0.9930144000099972
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_relational_p18",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.12292398926706775,
+        "validation_selected_best_id": 0,
+        "validation_selected_test_loss": 0.11742142213272701,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 2,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.12292398926706775,
+        "test_anchor": 0.11742142213272701,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.078125,
+        "test_cpu_seconds": 0.40625,
+        "feature_calls": 6406,
+        "local_checks": 0,
+        "elapsed_seconds": 1.6101315000560135
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_relational_p20",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.10364566879434445,
+        "validation_selected_best_id": 0,
+        "validation_selected_test_loss": 0.11027686343565575,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 2,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.10364566879434445,
+        "test_anchor": 0.11027686343565575,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.078125,
+        "test_cpu_seconds": 0.328125,
+        "feature_calls": 6110,
+        "local_checks": 0,
+        "elapsed_seconds": 1.0341232999926433
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_niche_p12",
+      "summary": {
+        "generated": 4,
+        "valid_generated": 4,
+        "best_validation_loss": 0.026916221033868093,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.042342308604526334,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 1,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.026916221033868093,
+        "test_anchor": 0.042342308604526334,
+        "terminal_collision_rate": 0.75,
+        "different_intent_collisions": 2,
+        "useful_generated": 0,
+        "input_tokens": 8283,
+        "output_tokens": 1340,
+        "total_tokens": 9623,
+        "model_calls": 8,
+        "budget_utilization": 0.16038333333333332,
+        "cost_valid": false,
+        "model_seconds": 19.79591419978533,
+        "evaluator_cpu_seconds": 0.078125,
+        "test_cpu_seconds": 0.015625,
+        "feature_calls": 3710,
+        "local_checks": 0,
+        "elapsed_seconds": 20.10368009994272
+      },
+      "errors": [
+        {
+          "iteration": 4,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_niche_p14",
+      "summary": {
+        "generated": 5,
+        "valid_generated": 4,
+        "best_validation_loss": 0.06898395721925134,
+        "validation_selected_best_id": 6,
+        "validation_selected_test_loss": 0.015503875968992248,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 1,
+        "dynamic_validation_modes": 1,
+        "validation_anchor": 0.08863801412821021,
+        "test_anchor": 0.007751937984496124,
+        "terminal_collision_rate": 0.8,
+        "different_intent_collisions": 4,
+        "useful_generated": 2,
+        "input_tokens": 12752,
+        "output_tokens": 2091,
+        "total_tokens": 14843,
+        "model_calls": 11,
+        "budget_utilization": 0.24738333333333334,
+        "cost_valid": false,
+        "model_seconds": 20.518420199980028,
+        "evaluator_cpu_seconds": 0.03125,
+        "test_cpu_seconds": 0.015625,
+        "feature_calls": 3710,
+        "local_checks": 0,
+        "elapsed_seconds": 20.827281299978495
+      },
+      "errors": [
+        {
+          "iteration": 5,
+          "stage": "coder",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_niche_p17",
+      "summary": {
+        "generated": 4,
+        "valid_generated": 4,
+        "best_validation_loss": 0.019073083778966132,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.05009424658902245,
+        "anchored_validation_modes": 1,
+        "anchored_test_modes": 1,
+        "dynamic_validation_modes": 1,
+        "validation_anchor": 0.019073083778966132,
+        "test_anchor": 0.05009424658902245,
+        "terminal_collision_rate": 0.75,
+        "different_intent_collisions": 3,
+        "useful_generated": 0,
+        "input_tokens": 9466,
+        "output_tokens": 1478,
+        "total_tokens": 10944,
+        "model_calls": 9,
+        "budget_utilization": 0.1824,
+        "cost_valid": false,
+        "model_seconds": 19.11968330014497,
+        "evaluator_cpu_seconds": 0.046875,
+        "test_cpu_seconds": 0.015625,
+        "feature_calls": 3710,
+        "local_checks": 0,
+        "elapsed_seconds": 19.633260599919595
+      },
+      "errors": [
+        {
+          "iteration": 4,
+          "stage": "coder",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p11",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.04318346867366476,
+        "validation_selected_best_id": 2,
+        "validation_selected_test_loss": 0.03488372093023256,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 2,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.04318346867366476,
+        "test_anchor": 0.03488372093023256,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.0,
+        "test_cpu_seconds": 0.0,
+        "feature_calls": 1590,
+        "local_checks": 0,
+        "elapsed_seconds": 0.4462698999559507
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p13",
+      "summary": {
+        "generated": 5,
+        "valid_generated": 5,
+        "best_validation_loss": 0.045989304812834225,
+        "validation_selected_best_id": 5,
+        "validation_selected_test_loss": 0.05569910996267585,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 1,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.05329768270944741,
+        "test_anchor": 0.044071202985931666,
+        "terminal_collision_rate": 1.0,
+        "different_intent_collisions": 5,
+        "useful_generated": 1,
+        "input_tokens": 15089,
+        "output_tokens": 1513,
+        "total_tokens": 16602,
+        "model_calls": 10,
+        "budget_utilization": 0.2767,
+        "cost_valid": false,
+        "model_seconds": 19.95904749969486,
+        "evaluator_cpu_seconds": 0.09375,
+        "test_cpu_seconds": 0.078125,
+        "feature_calls": 4240,
+        "local_checks": 0,
+        "elapsed_seconds": 20.3306653999025
+      },
+      "errors": [
+        {
+          "iteration": 5,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p14",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.08863801412821021,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.007751937984496124,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 1,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.08863801412821021,
+        "test_anchor": 0.007751937984496124,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.015625,
+        "test_cpu_seconds": 0.0,
+        "feature_calls": 1590,
+        "local_checks": 0,
+        "elapsed_seconds": 0.21447199990507215
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p15",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.045989304812834225,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.09429027949418917,
+        "anchored_validation_modes": 1,
+        "anchored_test_modes": 0,
+        "dynamic_validation_modes": 1,
+        "validation_anchor": 0.045989304812834225,
+        "test_anchor": 0.05611729019211325,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.015625,
+        "test_cpu_seconds": 0.015625,
+        "feature_calls": 1590,
+        "local_checks": 0,
+        "elapsed_seconds": 0.4011715000960976
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p16",
+      "summary": {
+        "generated": 14,
+        "valid_generated": 14,
+        "best_validation_loss": 0.06114081996434937,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.027849554981337926,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 1,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.06114081996434937,
+        "test_anchor": 0.027849554981337926,
+        "terminal_collision_rate": 0.6428571428571429,
+        "different_intent_collisions": 9,
+        "useful_generated": 0,
+        "input_tokens": 45849,
+        "output_tokens": 5639,
+        "total_tokens": 51488,
+        "model_calls": 28,
+        "budget_utilization": 0.8581333333333333,
+        "cost_valid": true,
+        "model_seconds": 65.56229919998441,
+        "evaluator_cpu_seconds": 0.359375,
+        "test_cpu_seconds": 0.015625,
+        "feature_calls": 9010,
+        "local_checks": 0,
+        "elapsed_seconds": 66.21356709999964
+      },
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p17",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.019073083778966132,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.05009424658902245,
+        "anchored_validation_modes": 1,
+        "anchored_test_modes": 1,
+        "dynamic_validation_modes": 1,
+        "validation_anchor": 0.019073083778966132,
+        "test_anchor": 0.05009424658902245,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.015625,
+        "test_cpu_seconds": 0.0,
+        "feature_calls": 1590,
+        "local_checks": 0,
+        "elapsed_seconds": 0.21809160010889173
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_niche_p12",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.0485420787693441,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.04923281035458125,
+        "anchored_validation_modes": 3,
+        "anchored_test_modes": 1,
+        "dynamic_validation_modes": 3,
+        "validation_anchor": 0.0485420787693441,
+        "test_anchor": 0.04923281035458125,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.390625,
+        "test_cpu_seconds": 2.375,
+        "feature_calls": 3186,
+        "local_checks": 1296,
+        "elapsed_seconds": 2.604910399997607
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_niche_p13",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.03386682277984704,
+        "validation_selected_best_id": 2,
+        "validation_selected_test_loss": 0.09428190247751043,
+        "anchored_validation_modes": 2,
+        "anchored_test_modes": 2,
+        "dynamic_validation_modes": 2,
+        "validation_anchor": 0.03386682277984704,
+        "test_anchor": 0.06074037625659668,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.390625,
+        "test_cpu_seconds": 2.421875,
+        "feature_calls": 3186,
+        "local_checks": 1296,
+        "elapsed_seconds": 3.101283899974078
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_niche_p15",
+      "summary": {
+        "generated": 6,
+        "valid_generated": 5,
+        "best_validation_loss": 0.04026610345042686,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.06079973927018021,
+        "anchored_validation_modes": 4,
+        "anchored_test_modes": 3,
+        "dynamic_validation_modes": 4,
+        "validation_anchor": 0.04026610345042686,
+        "test_anchor": 0.06079973927018021,
+        "terminal_collision_rate": 0.6666666666666666,
+        "different_intent_collisions": 3,
+        "useful_generated": 1,
+        "input_tokens": 12718,
+        "output_tokens": 2263,
+        "total_tokens": 14981,
+        "model_calls": 12,
+        "budget_utilization": 0.24968333333333334,
+        "cost_valid": false,
+        "model_seconds": 20.03354199999012,
+        "evaluator_cpu_seconds": 0.921875,
+        "test_cpu_seconds": 2.78125,
+        "feature_calls": 8562,
+        "local_checks": 3456,
+        "elapsed_seconds": 24.44082400004845
+      },
+      "errors": [
+        {
+          "iteration": 6,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_niche_p19",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.04708885733334178,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.04829642759134841,
+        "anchored_validation_modes": 1,
+        "anchored_test_modes": 1,
+        "dynamic_validation_modes": 1,
+        "validation_anchor": 0.04708885733334178,
+        "test_anchor": 0.04829642759134841,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.484375,
+        "test_cpu_seconds": 2.40625,
+        "feature_calls": 3186,
+        "local_checks": 1296,
+        "elapsed_seconds": 2.915039399988018
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_relational_p11",
+      "summary": {
+        "generated": 0,
+        "valid_generated": 0,
+        "best_validation_loss": 0.019681882257050254,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.06320990734890551,
+        "anchored_validation_modes": 1,
+        "anchored_test_modes": 1,
+        "dynamic_validation_modes": 1,
+        "validation_anchor": 0.019681882257050254,
+        "test_anchor": 0.06320990734890551,
+        "terminal_collision_rate": 0.0,
+        "different_intent_collisions": 0,
+        "useful_generated": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "model_calls": 0,
+        "budget_utilization": 0.0,
+        "cost_valid": false,
+        "model_seconds": 0,
+        "evaluator_cpu_seconds": 0.453125,
+        "test_cpu_seconds": 2.4375,
+        "feature_calls": 3186,
+        "local_checks": 1296,
+        "elapsed_seconds": 2.8461005999706686
+      },
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_relational_p15",
+      "summary": {
+        "generated": 5,
+        "valid_generated": 5,
+        "best_validation_loss": 0.04026610345042686,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.06079973927018021,
+        "anchored_validation_modes": 6,
+        "anchored_test_modes": 5,
+        "dynamic_validation_modes": 6,
+        "validation_anchor": 0.04026610345042686,
+        "test_anchor": 0.06079973927018021,
+        "terminal_collision_rate": 0.4,
+        "different_intent_collisions": 1,
+        "useful_generated": 3,
+        "input_tokens": 14880,
+        "output_tokens": 1698,
+        "total_tokens": 16578,
+        "model_calls": 10,
+        "budget_utilization": 0.2763,
+        "cost_valid": false,
+        "model_seconds": 19.315723600098863,
+        "evaluator_cpu_seconds": 0.90625,
+        "test_cpu_seconds": 2.765625,
+        "feature_calls": 8496,
+        "local_checks": 3456,
+        "elapsed_seconds": 22.801792899961583
+      },
+      "errors": [
+        {
+          "iteration": 5,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_relational_p17",
+      "summary": {
+        "generated": 11,
+        "valid_generated": 11,
+        "best_validation_loss": 0.050050031011033204,
+        "validation_selected_best_id": 1,
+        "validation_selected_test_loss": 0.05163266578731724,
+        "anchored_validation_modes": 1,
+        "anchored_test_modes": 1,
+        "dynamic_validation_modes": 1,
+        "validation_anchor": 0.050050031011033204,
+        "test_anchor": 0.05163266578731724,
+        "terminal_collision_rate": 0.2727272727272727,
+        "different_intent_collisions": 2,
+        "useful_generated": 0,
+        "input_tokens": 38307,
+        "output_tokens": 4444,
+        "total_tokens": 42751,
+        "model_calls": 23,
+        "budget_utilization": 0.7125166666666667,
+        "cost_valid": false,
+        "model_seconds": 50.04548089962918,
+        "evaluator_cpu_seconds": 1.46875,
+        "test_cpu_seconds": 1.96875,
+        "feature_calls": 14868,
+        "local_checks": 6048,
+        "elapsed_seconds": 53.923602399998344
+      },
+      "errors": [
+        {
+          "iteration": 11,
+          "stage": "coder",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    }
+  ],
+  "interpretation": "Pass/fail is conditional on this frozen small-task protocol. Failure to reject superiority is not proof of equivalence; no broad generalization or novelty is inferred from significance alone."
+}

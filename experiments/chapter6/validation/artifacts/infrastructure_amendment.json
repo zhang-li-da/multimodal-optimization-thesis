@@ -1,0 +1,448 @@
+{
+  "registered_utc": "2026-09-23T04:32:16.816311+00:00",
+  "reason": "MiniMax returned widespread HTTP 429 under shared 8-worker scheduling. No treatment-effect analysis inspected before this provider-level decision.",
+  "rule": "Retain every first-batch MiniMax run as infrastructure evidence; replace ALL 60 MiniMax runs in a new folder, including any valid ones. Retain and finish all Qwen runs. No outcome-based run selection.",
+  "provider_concurrency": {
+    "qwen3.7-plus": 6,
+    "MiniMax-M3": 2
+  },
+  "unchanged": "controller, prompts, data partitions, token cap, output caps, primary metrics, statistical family and pass thresholds",
+  "source_fingerprint": "8f93acbc027a64bad421eff1a3c80fb2587fd23d3a871119b61dad0e41113e73",
+  "initial_infrastructure_observations": [
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_niche_p12",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_niche_p14",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_niche_p15",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 18,
+      "errors": [
+        {
+          "iteration": 9,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_niche_p20",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_relational_p13",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 15,
+      "errors": [
+        {
+          "iteration": 7,
+          "stage": "coder",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_relational_p17",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_relational_p18",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_binpack_relational_p20",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_niche_p12",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 8,
+      "errors": [
+        {
+          "iteration": 4,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_niche_p14",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 11,
+      "errors": [
+        {
+          "iteration": 5,
+          "stage": "coder",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_niche_p17",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 9,
+      "errors": [
+        {
+          "iteration": 4,
+          "stage": "coder",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p11",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p13",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 10,
+      "errors": [
+        {
+          "iteration": 5,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p14",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p15",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p16",
+      "model": "MiniMax-M3",
+      "cost_valid": true,
+      "calls": 28,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_classification_relational_p17",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_niche_p12",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_niche_p13",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_niche_p15",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 12,
+      "errors": [
+        {
+          "iteration": 6,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_niche_p19",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_relational_p11",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 0,
+      "errors": [
+        {
+          "iteration": 0,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_relational_p15",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 10,
+      "errors": [
+        {
+          "iteration": 5,
+          "stage": "planner",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\MiniMax-M3_tsp_relational_p17",
+      "model": "MiniMax-M3",
+      "cost_valid": false,
+      "calls": 23,
+      "errors": [
+        {
+          "iteration": 11,
+          "stage": "coder",
+          "type": "ModelError",
+          "error": "HTTP 429; provider=minimax-cn-coding-plan; code=http_error"
+        }
+      ]
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_binpack_niche_p12",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 52,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_binpack_niche_p16",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 52,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_binpack_niche_p17",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 50,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_binpack_relational_p11",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 34,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_binpack_relational_p15",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 34,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_classification_niche_p13",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 44,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_classification_niche_p20",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 46,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_classification_relational_p15",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 30,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_classification_relational_p19",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 30,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_tsp_niche_p12",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 42,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_tsp_niche_p17",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 40,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_tsp_niche_p20",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 40,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_tsp_relational_p12",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 28,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_tsp_relational_p15",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 28,
+      "errors": []
+    },
+    {
+      "run": "chapter6_validation\\runs\\confirm_v1\\qwen3.7-plus_tsp_relational_p18",
+      "model": "qwen3.7-plus",
+      "cost_valid": true,
+      "calls": 28,
+      "errors": []
+    }
+  ],
+  "limitations": "The amendment follows an infrastructure failure; this is not an untouched preregistration. Failed-batch usage is reported as overhead and is not merged into confirmatory runs."
+}
