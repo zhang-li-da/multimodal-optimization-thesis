@@ -1,0 +1,2447 @@
+[
+  {
+    "job_id": "minimax-niche-b0",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      2,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b0",
+    "step": 1,
+    "available_branch_ids": [],
+    "selected": [
+      "return_aware",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b0",
+    "step": 2,
+    "available_branch_ids": [],
+    "selected": [
+      "regret",
+      "recombine",
+      3,
+      4
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b0",
+    "step": 3,
+    "available_branch_ids": [],
+    "selected": [
+      "cluster",
+      "refine",
+      2,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b0",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b0",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "recombine",
+      5,
+      4
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b0",
+    "step": 6,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "refine",
+      8,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b0",
+    "step": 7,
+    "available_branch_ids": [],
+    "selected": [
+      "hybrid",
+      "refine",
+      4,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b0",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      2,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b0",
+    "step": 1,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": 2
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b0",
+    "step": 2,
+    "available_branch_ids": [
+      3,
+      4
+    ],
+    "selected": [
+      "regret",
+      "recombine",
+      4,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 3
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b0",
+    "step": 3,
+    "available_branch_ids": [
+      3,
+      4,
+      5
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      4,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 3,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b0",
+    "step": 4,
+    "available_branch_ids": [
+      3,
+      4,
+      5
+    ],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b0",
+    "step": 5,
+    "available_branch_ids": [
+      3,
+      4,
+      5
+    ],
+    "selected": [
+      "regret",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 4,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b0",
+    "step": 6,
+    "available_branch_ids": [
+      3,
+      4,
+      5
+    ],
+    "selected": [
+      "nonlinear",
+      "refine",
+      4,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b0",
+    "step": 7,
+    "available_branch_ids": [
+      3,
+      4,
+      5
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b0",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      2,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b0",
+    "step": 1,
+    "available_branch_ids": [],
+    "selected": [
+      "return_aware",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b0",
+    "step": 2,
+    "available_branch_ids": [],
+    "selected": [
+      "regret",
+      "recombine",
+      3,
+      1
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b0",
+    "step": 3,
+    "available_branch_ids": [],
+    "selected": [
+      "cluster",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b0",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b0",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "recombine",
+      1,
+      6
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b0",
+    "step": 6,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b0",
+    "step": 7,
+    "available_branch_ids": [],
+    "selected": [
+      "hybrid",
+      "refine",
+      6,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b2",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b2",
+    "step": 1,
+    "available_branch_ids": [],
+    "selected": [
+      "return_aware",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b2",
+    "step": 2,
+    "available_branch_ids": [
+      4
+    ],
+    "selected": [
+      "regret",
+      "recombine",
+      4,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 2
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b2",
+    "step": 3,
+    "available_branch_ids": [
+      4,
+      5
+    ],
+    "selected": [
+      "return_aware",
+      "refine",
+      4,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": 2
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b2",
+    "step": 4,
+    "available_branch_ids": [
+      4,
+      5,
+      6
+    ],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b2",
+    "step": 5,
+    "available_branch_ids": [
+      4,
+      5,
+      6
+    ],
+    "selected": [
+      "regret",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 3,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b2",
+    "step": 6,
+    "available_branch_ids": [
+      4,
+      5,
+      6
+    ],
+    "selected": [
+      "nonlinear",
+      "refine",
+      7,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b2",
+    "step": 7,
+    "available_branch_ids": [
+      4,
+      5,
+      6
+    ],
+    "selected": [
+      "return_aware",
+      "refine",
+      6,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 3,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b0",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      2,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b0",
+    "step": 1,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b0",
+    "step": 2,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "regret",
+      "recombine",
+      3,
+      4
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b0",
+    "step": 3,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b0",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b0",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "recombine",
+      7,
+      5
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b0",
+    "step": 6,
+    "available_branch_ids": [
+      8
+    ],
+    "selected": [
+      "nonlinear",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b0",
+    "step": 7,
+    "available_branch_ids": [
+      8,
+      9
+    ],
+    "selected": [
+      "progress",
+      "refine",
+      8,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": 2
+  },
+  {
+    "job_id": "alibaba-niche-b1",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b1",
+    "step": 1,
+    "available_branch_ids": [],
+    "selected": [
+      "return_aware",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b1",
+    "step": 2,
+    "available_branch_ids": [],
+    "selected": [
+      "regret",
+      "recombine",
+      4,
+      1
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b1",
+    "step": 3,
+    "available_branch_ids": [],
+    "selected": [
+      "cluster",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b1",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b1",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "recombine",
+      7,
+      4
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b1",
+    "step": 6,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "refine",
+      4,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b1",
+    "step": 7,
+    "available_branch_ids": [],
+    "selected": [
+      "hybrid",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b1",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "cluster",
+      "restart",
+      null,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b1",
+    "step": 1,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b1",
+    "step": 2,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "restart",
+      null,
+      4
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b1",
+    "step": 3,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "restart",
+      null,
+      5
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b1",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "hybrid",
+      "restart",
+      null,
+      6
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b1",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "return_aware",
+      "restart",
+      null,
+      7
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b1",
+    "step": 6,
+    "available_branch_ids": [],
+    "selected": [
+      "regret",
+      "reactivate",
+      1,
+      7
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b1",
+    "step": 7,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "restart",
+      null,
+      7
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b2",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "recombine",
+      1,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "minimax-relational_branch-b2",
+    "step": 1,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": 2
+  },
+  {
+    "job_id": "minimax-relational_branch-b2",
+    "step": 2,
+    "available_branch_ids": [
+      3,
+      4
+    ],
+    "selected": [
+      "cluster",
+      "restart",
+      null,
+      0
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b2",
+    "step": 3,
+    "available_branch_ids": [
+      3,
+      4
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b2",
+    "step": 4,
+    "available_branch_ids": [
+      4
+    ],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      0
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b2",
+    "step": 5,
+    "available_branch_ids": [
+      4
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      4,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 3,
+    "success_depth": 3
+  },
+  {
+    "job_id": "minimax-relational_branch-b2",
+    "step": 6,
+    "available_branch_ids": [
+      4,
+      8
+    ],
+    "selected": [
+      "local_distance",
+      "reactivate",
+      8,
+      7
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b2",
+    "step": 7,
+    "available_branch_ids": [
+      4,
+      8
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      8,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 4,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b1",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b1",
+    "step": 1,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b1",
+    "step": 2,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "regret",
+      "recombine",
+      1,
+      3
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b1",
+    "step": 3,
+    "available_branch_ids": [
+      3,
+      5
+    ],
+    "selected": [
+      "regret",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b1",
+    "step": 4,
+    "available_branch_ids": [
+      3,
+      5
+    ],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b1",
+    "step": 5,
+    "available_branch_ids": [
+      3,
+      5
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b1",
+    "step": 6,
+    "available_branch_ids": [
+      5
+    ],
+    "selected": [
+      "nonlinear",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche_fixed_dev-b1",
+    "step": 7,
+    "available_branch_ids": [
+      5
+    ],
+    "selected": [
+      "regret",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "cluster",
+      "restart",
+      null,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "step": 1,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      3
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "step": 2,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "restart",
+      null,
+      3
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "step": 3,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "restart",
+      null,
+      3
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "hybrid",
+      "restart",
+      null,
+      6
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "return_aware",
+      "recombine",
+      1,
+      6
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "step": 6,
+    "available_branch_ids": [],
+    "selected": [
+      "regret",
+      "reactivate",
+      8,
+      1
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "step": 7,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "recombine",
+      4,
+      1
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b1",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b1",
+    "step": 1,
+    "available_branch_ids": [],
+    "selected": [
+      "return_aware",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b1",
+    "step": 2,
+    "available_branch_ids": [],
+    "selected": [
+      "regret",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b1",
+    "step": 3,
+    "available_branch_ids": [],
+    "selected": [
+      "cluster",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b1",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b1",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "recombine",
+      5,
+      1
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b1",
+    "step": 6,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b1",
+    "step": 7,
+    "available_branch_ids": [],
+    "selected": [
+      "hybrid",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b0",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "recombine",
+      1,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b0",
+    "step": 1,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "recombine",
+      1,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b0",
+    "step": 2,
+    "available_branch_ids": [],
+    "selected": [
+      "cluster",
+      "restart",
+      null,
+      4
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b0",
+    "step": 3,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      4
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b0",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "restart",
+      null,
+      4
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b0",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "restart",
+      null,
+      7
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b0",
+    "step": 6,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "reactivate",
+      1,
+      7
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-relational_branch-b0",
+    "step": 7,
+    "available_branch_ids": [],
+    "selected": [
+      "hybrid",
+      "restart",
+      null,
+      9
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b2",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "recombine",
+      1,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "alibaba-relational_branch-b2",
+    "step": 1,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b2",
+    "step": 2,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "cluster",
+      "restart",
+      null,
+      3
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b2",
+    "step": 3,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b2",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      0
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b2",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "restart",
+      null,
+      0
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b2",
+    "step": 6,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "reactivate",
+      6,
+      0
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b2",
+    "step": 7,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "restart",
+      null,
+      0
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 1,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 2,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "regret",
+      "recombine",
+      3,
+      4
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 3,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "recombine",
+      1,
+      5
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 6,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "refine",
+      2,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 7,
+    "available_branch_ids": [
+      9
+    ],
+    "selected": [
+      "nonlinear",
+      "refine",
+      9,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "step": 1,
+    "available_branch_ids": [],
+    "selected": [
+      "return_aware",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "step": 2,
+    "available_branch_ids": [],
+    "selected": [
+      "regret",
+      "recombine",
+      4,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "step": 3,
+    "available_branch_ids": [],
+    "selected": [
+      "cluster",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "recombine",
+      1,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "step": 6,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "refine",
+      8,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "step": 7,
+    "available_branch_ids": [],
+    "selected": [
+      "hybrid",
+      "refine",
+      9,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b2",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b2",
+    "step": 1,
+    "available_branch_ids": [],
+    "selected": [
+      "return_aware",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b2",
+    "step": 2,
+    "available_branch_ids": [],
+    "selected": [
+      "regret",
+      "recombine",
+      3,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b2",
+    "step": 3,
+    "available_branch_ids": [],
+    "selected": [
+      "cluster",
+      "refine",
+      4,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b2",
+    "step": 4,
+    "available_branch_ids": [],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b2",
+    "step": 5,
+    "available_branch_ids": [],
+    "selected": [
+      "progress",
+      "recombine",
+      5,
+      4
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b2",
+    "step": 6,
+    "available_branch_ids": [],
+    "selected": [
+      "nonlinear",
+      "refine",
+      2,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "minimax-niche-b2",
+    "step": 7,
+    "available_branch_ids": [],
+    "selected": [
+      "hybrid",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b1",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b1",
+    "step": 1,
+    "available_branch_ids": [],
+    "selected": [
+      "return_aware",
+      "refine",
+      1,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b1",
+    "step": 2,
+    "available_branch_ids": [
+      4
+    ],
+    "selected": [
+      "regret",
+      "recombine",
+      1,
+      4
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b1",
+    "step": 3,
+    "available_branch_ids": [
+      4,
+      5
+    ],
+    "selected": [
+      "return_aware",
+      "refine",
+      4,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b1",
+    "step": 4,
+    "available_branch_ids": [
+      4,
+      5
+    ],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b1",
+    "step": 5,
+    "available_branch_ids": [
+      4,
+      5
+    ],
+    "selected": [
+      "regret",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b1",
+    "step": 6,
+    "available_branch_ids": [
+      4,
+      5
+    ],
+    "selected": [
+      "nonlinear",
+      "refine",
+      5,
+      null
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b1",
+    "step": 7,
+    "available_branch_ids": [
+      4,
+      5
+    ],
+    "selected": [
+      "return_aware",
+      "refine",
+      4,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b0",
+    "step": 0,
+    "available_branch_ids": [],
+    "selected": [
+      "local_distance",
+      "recombine",
+      1,
+      2
+    ],
+    "branch_development": false,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": 1
+  },
+  {
+    "job_id": "alibaba-relational_branch-b0",
+    "step": 1,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": 2
+  },
+  {
+    "job_id": "alibaba-relational_branch-b0",
+    "step": 2,
+    "available_branch_ids": [
+      3,
+      4
+    ],
+    "selected": [
+      "cluster",
+      "restart",
+      null,
+      1
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b0",
+    "step": 3,
+    "available_branch_ids": [
+      3,
+      4
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      4,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 3,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b0",
+    "step": 4,
+    "available_branch_ids": [
+      3,
+      4
+    ],
+    "selected": [
+      "lookahead",
+      "restart",
+      null,
+      1
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": true,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b0",
+    "step": 5,
+    "available_branch_ids": [
+      3,
+      4
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      4,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 3,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b0",
+    "step": 6,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "nonlinear",
+      "reactivate",
+      4,
+      1
+    ],
+    "branch_development": false,
+    "w_only_reference": true,
+    "restart_to_untried_tag": false,
+    "attempt_depth": null,
+    "success_depth": null
+  },
+  {
+    "job_id": "alibaba-relational_branch-b0",
+    "step": 7,
+    "available_branch_ids": [
+      3
+    ],
+    "selected": [
+      "local_distance",
+      "refine",
+      3,
+      null
+    ],
+    "branch_development": true,
+    "w_only_reference": false,
+    "restart_to_untried_tag": false,
+    "attempt_depth": 2,
+    "success_depth": null
+  }
+]
