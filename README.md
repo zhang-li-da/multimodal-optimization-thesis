@@ -8,6 +8,8 @@
 
 阅读[本轮中文报告](experiments/chapter6/v12_1/results/mechanism-only-20260924/REPORT_ZH.md)、[复核记录](docs/chapter6/reviews/V12_R2_INDEPENDENT_REVIEW.md)、[机制代码与复现命令](experiments/chapter6/v12_1/README.md)。[16次后续搜索协议](experiments/chapter6/v12_1/preregistration.md)仍是草案，未执行。新分支为 `experiment/v1.2.1-isolated-branch-policy`，最新审计修订标签为 `chapter6-v1.2.1-mechanism-only-20260924-r1`；早期机制标签保留不改写。
 
+新增 [v1.2.1 独立审阅](docs/chapter6/reviews/v121/REVIEW.md)与[详细后续实验流程](docs/chapter6/reviews/v121/EXPERIMENT_PLAN.md)：包含 Linux 复核、ZIP/AST 哈希兼容诊断、在线启动验收、16 次搜索矩阵，以及后续族证据归因和算法集合用途实验。本次仍为 0 新模型调用；任务矩阵是设计草案，不是已执行或冻结的搜索。
+
 ## 从哪里开始
 
 - [博士论文总体架构与第六章技术报告](docs/report/博士论文总体架构与第六章技术报告.md)：章节结构、方法架构、实验结果和当前缺陷。

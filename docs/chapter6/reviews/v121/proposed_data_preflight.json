@@ -1,0 +1,72 @@
+{
+  "status": "preflight generator diagnostic; not frozen run data",
+  "historical_instances": 324,
+  "proposed_instances": 432,
+  "cells": [
+    {
+      "block": 3,
+      "split": "probe",
+      "instances": 12
+    },
+    {
+      "block": 3,
+      "split": "validation",
+      "instances": 36
+    },
+    {
+      "block": 3,
+      "split": "test",
+      "instances": 60
+    },
+    {
+      "block": 4,
+      "split": "probe",
+      "instances": 12
+    },
+    {
+      "block": 4,
+      "split": "validation",
+      "instances": 36
+    },
+    {
+      "block": 4,
+      "split": "test",
+      "instances": 60
+    },
+    {
+      "block": 5,
+      "split": "probe",
+      "instances": 12
+    },
+    {
+      "block": 5,
+      "split": "validation",
+      "instances": 36
+    },
+    {
+      "block": 5,
+      "split": "test",
+      "instances": 60
+    },
+    {
+      "block": 6,
+      "split": "probe",
+      "instances": 12
+    },
+    {
+      "block": 6,
+      "split": "validation",
+      "instances": 36
+    },
+    {
+      "block": 6,
+      "split": "test",
+      "instances": 60
+    }
+  ],
+  "new_unique_ids": 432,
+  "new_unique_coordinate_arrays": 432,
+  "old_new_id_overlap": 0,
+  "old_new_exact_coordinate_overlap": 0,
+  "note": "Freeze actual new coordinates before calls; these checks do not prove absence of semantic/geometric equivalence."
+}
