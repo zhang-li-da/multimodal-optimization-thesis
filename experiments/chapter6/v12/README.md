@@ -1,35 +1,18 @@
-# Chapter 6 v1.2 bounded branch development
+# v1.2 r2 历史机制筛查与勘误
 
-This version tests the execution chain behind local improvement credit: a competitive child must be retained in a separate, small development pool and actually receive a bounded follow-up proposal. The output archive and development pool have separate roles.
+本目录保存18次r2模型搜索；r1因niche误建B池作废并单独归档。本次v1.2.1修订没有新增模型调用。原始源码、manifest、ZIP和质量统计保留，报告的实现描述由版本提交勘误。
 
-The frozen r2 screen is complete. The mechanism trigger gate passed (30 branch follow-up evaluations, 30 valid children), but relation-guided scheduling did not outperform the matched `niche + fixed development` baseline. See the [technical report](results/screening-20260924-r2/TECHNICAL_REPORT_ZH.md), [architecture note](../../../docs/chapter6/V12_ARCHITECTURE.md), [manifest](results/screening-20260924-r2/manifest.json), and [release package instructions](results/screening-20260924-r2/README.md). The earlier r1 batch is excluded because the `niche` controller incorrectly created a development pool.
+均值test gap为niche 5.759%、固定开发5.569%、关系开发6.379%。30次续开发中6次改进父代，说明执行链运行过。r2固定臂普通步骤调用niche、关系臂调用relational且继承W引用，因此不能独立解释B内排序效果。固定臂实际是可用集合索引轮转，并非FIFO；旧深度字段最大4混入尝试，成功深度应为3。原合并门槛通过不等于每单元充分检验。
 
-The preregistered design uses a 14-city TSP, three controllers (`niche`, `niche_fixed_dev`, and `relational_branch`), two coding-plan models, three paired blocks, and eight proposals per run. This gives 18 short screening runs. The strongest simple baseline is niche search with the same fixed local-development opportunity schedule. No full relation graph, witness sampling, or online-binpack selector is included. See [version history](VERSION_HISTORY.md) for the initial invalid batch and corrected source freeze.
+阅读[历史结果及勘误](results/screening-20260924-r2/TECHNICAL_REPORT_ZH.md)、[当前架构](../../../docs/chapter6/V12_ARCHITECTURE.md)、[v1.2.1离线工具](../v12_1/README.md)和[版本记录](VERSION_HISTORY.md)。原[预注册文件](preregistration.md)是不可追溯修改的历史文档；与实际实现不符处以勘误说明。
 
-Run invariant tests:
-
-```powershell
-python -m pytest experiments/chapter6/v12/test_v12.py experiments/chapter6/v11/test_v11.py -q
-```
-
-Verify the archived runs and regenerate the analysis/report (uses the recorded replay file and does not call an LLM):
+离线审计直接读取已归档ZIP：
 
 ```powershell
-python experiments/chapter6/v12/verify_v12.py experiments/chapter6/v12/screening-20260924-r2
-python experiments/chapter6/v12/analyze_v12.py experiments/chapter6/v12/screening-20260924-r2
+python -m chapter6_demo.v12_1.audit_r2 --output audit-local
+python -m chapter6_demo.v12_1.verify_numeric --instances audit-local/r2_instances.json --output audit-local/numeric-replay.json
 ```
 
-The package under `results/screening-20260924-r2/` contains the frozen manifest, verification record, generated tables and figures, Chinese report, raw runs grouped by model, frozen source snapshot, and SHA-256 checksums. The r2 raw logs are archived there so the working run directory can remain excluded from ordinary source commits.
+旧严格回放请按[结果包说明](results/screening-20260924-r2/README.md)先解压到新的工作目录，使用`python -m chapter6_demo.v12.verify_v12`。禁止将缺少runs的发布目录作为回放写入目标，以免覆盖原verification记录。
 
-Create and execute a new stochastic replication in a fresh output directory (the archived r2 evidence is already complete):
-
-```powershell
-python -m chapter6_demo.v12.run_v12 --dry-run --output experiments/chapter6/v12/screening-replication-20260924
-python -m chapter6_demo.v12.run_v12 --output experiments/chapter6/v12/screening-replication-20260924
-```
-
-Do not use the launcher's default output path for a new batch; it names the invalid r1 staging directory. The r2 configuration and result artifacts are fixed by the published manifest.
-
-The v1.2 benchmark profile creates disjoint probe, validation, and test instances. Model-facing planner prompts omit controller identifiers and use a fixed evidence schema. The run manifest and per-run records retain treatment identity for analysis. API errors and incomplete usage are not silently replaced.
-
-This is a mechanism screen, not a doctoral-level effectiveness confirmation. The protocol requires actual branch opportunities and evaluated follow-up children before interpreting any quality difference.
+在线runner只作为历史源码保留，本轮不运行它。计划中的16次搜索使用新协议与全新区块，不能追加到r2。

@@ -1,10 +1,12 @@
-# Chapter 6 v1.2 bounded branch-development screen
-
-The latest v1.2 screen completed 18 paired model searches. It verified that competitive parent-relative improvements can enter a separate bounded development pool and receive real follow-up proposals. Relation-guided scheduling did not outperform the strong `niche + fixed development` baseline: mean test gap was 6.379% versus 5.569%. This is a small mechanism screen, not a confirmatory performance result. See the [technical report](experiments/chapter6/v12/results/screening-20260924-r2/TECHNICAL_REPORT_ZH.md), [architecture](docs/chapter6/V12_ARCHITECTURE.md), [v1.2 protocol](experiments/chapter6/v12/preregistration.md), [evidence package](experiments/chapter6/v12/results/screening-20260924-r2/README.md), and [version history](experiments/chapter6/v12/VERSION_HISTORY.md). The package preserves the invalid r1 batch separately for audit; its results are not pooled with r2.
-
 # 多模态智能优化博士论文项目材料
 
 本仓库汇集博士论文前五章对应文章材料、第六章 agent 原型与验证记录，以及总体技术报告，供跨设备查阅和复核。
+
+## 最新版本：v1.2.1 离线机制修正
+
+本轮没有新增模型调用。两开发组已统一普通 niche 调度，W 不参与决策，只有 B 内选择规则不同；FIFO、尝试深度和成功深度已明确区分。旧 r2 的18次模型搜索保持归档；新版本只完成本地测试、旧日志回放与数值复核，尚不能证明关系排序提高性能。
+
+阅读[本轮中文报告](experiments/chapter6/v12_1/results/mechanism-only-20260924/REPORT_ZH.md)、[复核记录](docs/chapter6/reviews/V12_R2_INDEPENDENT_REVIEW.md)、[机制代码与复现命令](experiments/chapter6/v12_1/README.md)。[16次后续搜索协议](experiments/chapter6/v12_1/preregistration.md)仍是草案，未执行。新分支为 `experiment/v1.2.1-isolated-branch-policy`，新标签为 `chapter6-v1.2.1-mechanism-only-20260924`。
 
 ## 从哪里开始
 
@@ -18,7 +20,7 @@ The latest v1.2 screen completed 18 paired model searches. It verified that comp
 
 ## 当前证据状态
 
-原型已完成真实模型驱动的受限程序生成、执行、记忆更新和独立重放审核。v1.2 机制门槛通过：两模型合计发生 30 次分支后续评价、30 个有效子代；但关系引导未优于固定开发基线。因此目前支持有限分支开发执行链的工程可行性，不支持关系调度的稳定质量优势，也不构成博士创新性已确立的证据。v1.1 结果作为先前负结果独立保留；r1 v1.2 因基线实现错误作废，不计入分析。
+原型已完成真实模型驱动的受限程序生成、执行、记忆更新和独立重放审核。v1.2 机制门槛通过：两模型合计发生 30 次分支后续评价、30 个有效子代；但关系控制器整体未优于固定开发基线，且普通调度及 W 引用存在混杂，未隔离关系排序效果。因此目前支持有限分支开发执行链的工程可行性，不支持关系调度的稳定质量优势，也不构成博士创新性已确立的证据。v1.1 结果作为先前负结果独立保留；r1 v1.2 因基线实现错误作废，不计入分析。
 
 ## 论文对应关系
 
@@ -32,10 +34,10 @@ The latest v1.2 screen completed 18 paired model searches. It verified that comp
 ```powershell
 git clone https://github.com/zhang-li-da/multimodal-optimization-thesis.git
 cd multimodal-optimization-thesis
-git switch --track origin/experiment/v1.2-bounded-branch-development
+git switch --track origin/experiment/v1.2.1-isolated-branch-policy
 ```
 
-仓库为公开仓库，查阅论文和实验材料不需要 GitHub 登录。发布标签 `chapter6-v1.2-screening-20260924` 对应本轮报告与归档；模型 API 搜索需要各自的服务凭据，凭据不包含在仓库中。若只需下载文件，可使用 GitHub 页面上的 **Code → Download ZIP**。
+仓库为公开仓库，查阅论文和实验材料不需要 GitHub 登录。旧标签 `chapter6-v1.2-screening-20260924` 保留原始 r2 发布；最新离线修正使用 `chapter6-v1.2.1-mechanism-only-20260924`；模型 API 搜索需要各自的服务凭据，凭据不包含在仓库中。若只需下载文件，可使用 GitHub 页面上的 **Code → Download ZIP**。
 
 ## 注意事项
 
