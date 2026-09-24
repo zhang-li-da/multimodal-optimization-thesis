@@ -2,7 +2,7 @@
   "kind": "offline mechanism validation; post-hoc archival audit",
   "new_model_calls": 0,
   "new_search_runs": 0,
-  "source_fingerprint_sha256": "7a29d83d7b6bd2ad232a57868668d191e59ec5fe7cdd0882725ff8e122232866",
+  "source_fingerprint_sha256": "fdb1d37520433f1c9aace38104aa81089081d0cda34878d8d46b330f55a436bd",
   "historical_source_fingerprint_sha256": "ecb43ba979653ee02f7b70a553ae7b171a44072a7c0bfe94a2e048cfa35ef55b",
   "tests": {
     "tests": 31,
@@ -11,7 +11,7 @@
     "skipped": 0
   },
   "branch": "experiment/v1.2.1-isolated-branch-policy",
-  "tag": "chapter6-v1.2.1-mechanism-only-20260924",
+  "tag": "chapter6-v1.2.1-mechanism-only-20260924-r1",
   "future_16_run_search": "draft; not executed",
   "source_commit": "Resolve the immutable release tag; this post-hoc manifest is not a search freeze.",
   "r2_quality_results_changed": false

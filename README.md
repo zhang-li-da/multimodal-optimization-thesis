@@ -6,7 +6,7 @@
 
 本轮没有新增模型调用。两开发组已统一普通 niche 调度，W 不参与决策，只有 B 内选择规则不同；FIFO、尝试深度和成功深度已明确区分。旧 r2 的18次模型搜索保持归档；新版本只完成本地测试、旧日志回放与数值复核，尚不能证明关系排序提高性能。
 
-阅读[本轮中文报告](experiments/chapter6/v12_1/results/mechanism-only-20260924/REPORT_ZH.md)、[复核记录](docs/chapter6/reviews/V12_R2_INDEPENDENT_REVIEW.md)、[机制代码与复现命令](experiments/chapter6/v12_1/README.md)。[16次后续搜索协议](experiments/chapter6/v12_1/preregistration.md)仍是草案，未执行。新分支为 `experiment/v1.2.1-isolated-branch-policy`，新标签为 `chapter6-v1.2.1-mechanism-only-20260924`。
+阅读[本轮中文报告](experiments/chapter6/v12_1/results/mechanism-only-20260924/REPORT_ZH.md)、[复核记录](docs/chapter6/reviews/V12_R2_INDEPENDENT_REVIEW.md)、[机制代码与复现命令](experiments/chapter6/v12_1/README.md)。[16次后续搜索协议](experiments/chapter6/v12_1/preregistration.md)仍是草案，未执行。新分支为 `experiment/v1.2.1-isolated-branch-policy`，最新审计修订标签为 `chapter6-v1.2.1-mechanism-only-20260924-r1`；早期机制标签保留不改写。
 
 ## 从哪里开始
 
@@ -37,7 +37,7 @@ cd multimodal-optimization-thesis
 git switch --track origin/experiment/v1.2.1-isolated-branch-policy
 ```
 
-仓库为公开仓库，查阅论文和实验材料不需要 GitHub 登录。旧标签 `chapter6-v1.2-screening-20260924` 保留原始 r2 发布；最新离线修正使用 `chapter6-v1.2.1-mechanism-only-20260924`；模型 API 搜索需要各自的服务凭据，凭据不包含在仓库中。若只需下载文件，可使用 GitHub 页面上的 **Code → Download ZIP**。
+仓库为公开仓库，查阅论文和实验材料不需要 GitHub 登录。旧标签 `chapter6-v1.2-screening-20260924` 保留原始 r2 发布；最新离线审计修订使用 `chapter6-v1.2.1-mechanism-only-20260924-r1`，早期机制标签不改写；模型 API 搜索需要各自的服务凭据，凭据不包含在仓库中。若只需下载文件，可使用 GitHub 页面上的 **Code → Download ZIP**。
 
 ## 注意事项
 

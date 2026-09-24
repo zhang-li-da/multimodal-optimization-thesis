@@ -116,10 +116,20 @@ def audit(package=PACKAGE, output=OUTPUT):
                     "restart_to_untried_tag": restart and not records,
                     "attempt_depth": attempt, "success_depth": depths.get(node["id"])})
 
-                # Query copies, then discard the decisions. Feed both policies
-                # the SAME historical evaluated nodes below. This diagnoses
-                # decision invariance; it is not an off-policy performance run.
-                left, right = (copy.deepcopy(s).choose(step) for s in alternatives)
+                # Advance each policy copy with its own selected allocation.
+                # The recorded candidate evaluation is deliberately reused as
+                # a same-history probe; no counterfactual model response is
+                # generated. This makes branch budgets and future availability
+                # evolve under the queried policy instead of silently leaving
+                # every branch uncharged.
+                selected = []
+                policy_copies = []
+                for alternative in alternatives:
+                    policy_copy = copy.deepcopy(alternative)
+                    choice = policy_copy.choose(step)
+                    selected.append(choice)
+                    policy_copies.append(policy_copy)
+                left, right = selected
                 ordinary_equal = left["audit"]["ordinary_decision"] == right["audit"]["ordinary_decision"]
                 nondev = not left["branch_development_scheduled"]
                 full_prompt_equal = planner_prompt("tsp", left, step) == planner_prompt("tsp", right, step)
@@ -131,13 +141,23 @@ def audit(package=PACKAGE, output=OUTPUT):
                     "available_count": len(left["audit"]["available_branch_ids"]),
                     "fixed_parent": chosen(left)[2], "relation_parent": chosen(right)[2],
                     "branch_choice_changed": chosen(left)[2] != chosen(right)[2]})
+                for policy_copy, choice in zip(policy_copies, selected):
+                    observed = copy.deepcopy(node)
+                    observed.update({
+                        "allocated_tag": choice["target"],
+                        "action": choice["action"],
+                        "parent_id": choice["parent"]["id"] if choice["parent"] else None,
+                        "reference_id": choice["reference"]["id"] if choice["reference"] else None,
+                        "allocation": choice["audit"],
+                    })
+                    policy_copy.observe(observed)
+                alternatives = policy_copies
                 step += 1
             state.observe(node)
+            if not live:
+                for alternative in alternatives:
+                    alternative.observe(copy.deepcopy(node))
             assert state.events[-1] == event
-            for alternative in alternatives:
-                observed = copy.deepcopy(node)
-                observed.pop("allocation", None)
-                alternative.observe(observed)
         assert state.summary() == {key: result["summary"][key] for key in state.summary()}
         row.update(max_attempt_depth=attempted_max, max_success_depth=successful_max)
         rows.append(row)

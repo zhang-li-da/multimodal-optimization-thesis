@@ -1,7 +1,9 @@
 # v1.2.1 mechanism-only evidence package
 
 This package contains only deterministic, local work performed after the v1.2
-r2 review. It contains no new model responses and no new search runs.
+r2 review. It contains no new model responses and no new search runs. The
+latest audit-state replay is published under
+`chapter6-v1.2.1-mechanism-only-20260924-r1`; the earlier tag remains immutable.
 
 - `REPORT_ZH.md`: Chinese technical report and current limitations.
 - `r2_audit.json`, `r2_cells.csv`, `r2_runs.csv`: post-hoc replay of the 18

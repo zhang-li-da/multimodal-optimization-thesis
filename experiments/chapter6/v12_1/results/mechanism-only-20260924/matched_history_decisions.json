@@ -28,8 +28,8 @@
     "nondevelopment": true,
     "full_prompt_equal": true,
     "available_count": 1,
-    "fixed_parent": 2,
-    "relation_parent": 2,
+    "fixed_parent": 3,
+    "relation_parent": 3,
     "branch_choice_changed": false
   },
   {
@@ -49,7 +49,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 1,
+    "available_count": 0,
     "fixed_parent": null,
     "relation_parent": null,
     "branch_choice_changed": false
@@ -58,11 +58,11 @@
     "job_id": "minimax-niche-b0",
     "step": 5,
     "ordinary_equal": true,
-    "nondevelopment": false,
+    "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "available_count": 0,
+    "fixed_parent": 5,
+    "relation_parent": 5,
     "branch_choice_changed": false
   },
   {
@@ -71,7 +71,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 2,
+    "available_count": 1,
     "fixed_parent": 8,
     "relation_parent": 8,
     "branch_choice_changed": false
@@ -82,9 +82,9 @@
     "ordinary_equal": true,
     "nondevelopment": false,
     "full_prompt_equal": true,
-    "available_count": 2,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "available_count": 1,
+    "fixed_parent": 8,
+    "relation_parent": 8,
     "branch_choice_changed": false
   },
   {
@@ -116,8 +116,8 @@
     "nondevelopment": true,
     "full_prompt_equal": true,
     "available_count": 2,
-    "fixed_parent": 2,
-    "relation_parent": 2,
+    "fixed_parent": 4,
+    "relation_parent": 4,
     "branch_choice_changed": false
   },
   {
@@ -147,11 +147,11 @@
     "step": 5,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": true,
+    "full_prompt_equal": false,
     "available_count": 3,
-    "fixed_parent": 3,
+    "fixed_parent": 4,
     "relation_parent": 3,
-    "branch_choice_changed": false
+    "branch_choice_changed": true
   },
   {
     "job_id": "minimax-niche_fixed_dev-b0",
@@ -171,8 +171,8 @@
     "nondevelopment": false,
     "full_prompt_equal": true,
     "available_count": 3,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "fixed_parent": 4,
+    "relation_parent": 4,
     "branch_choice_changed": false
   },
   {
@@ -203,9 +203,9 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 2,
-    "fixed_parent": 4,
-    "relation_parent": 4,
+    "available_count": 1,
+    "fixed_parent": 3,
+    "relation_parent": 3,
     "branch_choice_changed": false
   },
   {
@@ -213,11 +213,11 @@
     "step": 3,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": true,
-    "available_count": 3,
+    "full_prompt_equal": false,
+    "available_count": 2,
     "fixed_parent": 3,
-    "relation_parent": 3,
-    "branch_choice_changed": false
+    "relation_parent": 5,
+    "branch_choice_changed": true
   },
   {
     "job_id": "alibaba-niche-b0",
@@ -225,7 +225,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 3,
+    "available_count": 1,
     "fixed_parent": null,
     "relation_parent": null,
     "branch_choice_changed": false
@@ -235,11 +235,11 @@
     "step": 5,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": true,
-    "available_count": 3,
-    "fixed_parent": 3,
+    "full_prompt_equal": false,
+    "available_count": 1,
+    "fixed_parent": 5,
     "relation_parent": 3,
-    "branch_choice_changed": false
+    "branch_choice_changed": true
   },
   {
     "job_id": "alibaba-niche-b0",
@@ -247,7 +247,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 3,
+    "available_count": 1,
     "fixed_parent": 1,
     "relation_parent": 1,
     "branch_choice_changed": false
@@ -258,9 +258,9 @@
     "ordinary_equal": true,
     "nondevelopment": false,
     "full_prompt_equal": true,
-    "available_count": 3,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "available_count": 2,
+    "fixed_parent": 5,
+    "relation_parent": 5,
     "branch_choice_changed": false
   },
   {
@@ -326,7 +326,7 @@
     "full_prompt_equal": false,
     "available_count": 3,
     "fixed_parent": 4,
-    "relation_parent": 6,
+    "relation_parent": 5,
     "branch_choice_changed": true
   },
   {
@@ -335,9 +335,9 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 3,
-    "fixed_parent": 2,
-    "relation_parent": 2,
+    "available_count": 2,
+    "fixed_parent": 7,
+    "relation_parent": 7,
     "branch_choice_changed": false
   },
   {
@@ -346,9 +346,9 @@
     "ordinary_equal": true,
     "nondevelopment": false,
     "full_prompt_equal": false,
-    "available_count": 3,
-    "fixed_parent": 4,
-    "relation_parent": 6,
+    "available_count": 2,
+    "fixed_parent": 5,
+    "relation_parent": 4,
     "branch_choice_changed": true
   },
   {
@@ -380,8 +380,8 @@
     "nondevelopment": true,
     "full_prompt_equal": true,
     "available_count": 1,
-    "fixed_parent": 2,
-    "relation_parent": 2,
+    "fixed_parent": 3,
+    "relation_parent": 3,
     "branch_choice_changed": false
   },
   {
@@ -401,7 +401,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 1,
+    "available_count": 0,
     "fixed_parent": null,
     "relation_parent": null,
     "branch_choice_changed": false
@@ -410,11 +410,11 @@
     "job_id": "alibaba-niche_fixed_dev-b0",
     "step": 5,
     "ordinary_equal": true,
-    "nondevelopment": false,
+    "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "available_count": 0,
+    "fixed_parent": 7,
+    "relation_parent": 7,
     "branch_choice_changed": false
   },
   {
@@ -423,9 +423,9 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 2,
-    "fixed_parent": 2,
-    "relation_parent": 2,
+    "available_count": 1,
+    "fixed_parent": 5,
+    "relation_parent": 5,
     "branch_choice_changed": false
   },
   {
@@ -434,8 +434,8 @@
     "ordinary_equal": true,
     "nondevelopment": false,
     "full_prompt_equal": false,
-    "available_count": 3,
-    "fixed_parent": 3,
+    "available_count": 2,
+    "fixed_parent": 8,
     "relation_parent": 9,
     "branch_choice_changed": true
   },
@@ -468,8 +468,8 @@
     "nondevelopment": true,
     "full_prompt_equal": true,
     "available_count": 0,
-    "fixed_parent": 1,
-    "relation_parent": 1,
+    "fixed_parent": 4,
+    "relation_parent": 4,
     "branch_choice_changed": false
   },
   {
@@ -511,9 +511,9 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 2,
-    "fixed_parent": 5,
-    "relation_parent": 5,
+    "available_count": 1,
+    "fixed_parent": 4,
+    "relation_parent": 4,
     "branch_choice_changed": false
   },
   {
@@ -521,11 +521,11 @@
     "step": 7,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": false,
-    "available_count": 3,
-    "fixed_parent": 5,
+    "full_prompt_equal": true,
+    "available_count": 2,
+    "fixed_parent": 8,
     "relation_parent": 8,
-    "branch_choice_changed": true
+    "branch_choice_changed": false
   },
   {
     "job_id": "minimax-relational_branch-b1",
@@ -665,7 +665,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 2,
+    "available_count": 1,
     "fixed_parent": null,
     "relation_parent": null,
     "branch_choice_changed": false
@@ -676,9 +676,9 @@
     "ordinary_equal": true,
     "nondevelopment": false,
     "full_prompt_equal": true,
-    "available_count": 2,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "available_count": 1,
+    "fixed_parent": 4,
+    "relation_parent": 4,
     "branch_choice_changed": false
   },
   {
@@ -687,9 +687,9 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 3,
-    "fixed_parent": 8,
-    "relation_parent": 8,
+    "available_count": 2,
+    "fixed_parent": 2,
+    "relation_parent": 2,
     "branch_choice_changed": false
   },
   {
@@ -697,11 +697,11 @@
     "step": 7,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": true,
-    "available_count": 3,
-    "fixed_parent": 3,
-    "relation_parent": 3,
-    "branch_choice_changed": false
+    "full_prompt_equal": false,
+    "available_count": 2,
+    "fixed_parent": 4,
+    "relation_parent": 8,
+    "branch_choice_changed": true
   },
   {
     "job_id": "minimax-niche_fixed_dev-b1",
@@ -732,8 +732,8 @@
     "nondevelopment": true,
     "full_prompt_equal": true,
     "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "fixed_parent": 1,
+    "relation_parent": 1,
     "branch_choice_changed": false
   },
   {
@@ -753,7 +753,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 2,
+    "available_count": 1,
     "fixed_parent": null,
     "relation_parent": null,
     "branch_choice_changed": false
@@ -763,11 +763,11 @@
     "step": 5,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": true,
-    "available_count": 2,
-    "fixed_parent": 3,
+    "full_prompt_equal": false,
+    "available_count": 1,
+    "fixed_parent": 5,
     "relation_parent": 3,
-    "branch_choice_changed": false
+    "branch_choice_changed": true
   },
   {
     "job_id": "minimax-niche_fixed_dev-b1",
@@ -775,7 +775,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 2,
+    "available_count": 1,
     "fixed_parent": 5,
     "relation_parent": 5,
     "branch_choice_changed": false
@@ -785,11 +785,11 @@
     "step": 7,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": false,
-    "available_count": 2,
-    "fixed_parent": 3,
+    "full_prompt_equal": true,
+    "available_count": 1,
+    "fixed_parent": 5,
     "relation_parent": 5,
-    "branch_choice_changed": true
+    "branch_choice_changed": false
   },
   {
     "job_id": "alibaba-relational_branch-b1",
@@ -816,39 +816,6 @@
   {
     "job_id": "alibaba-relational_branch-b1",
     "step": 2,
-    "ordinary_equal": true,
-    "nondevelopment": true,
-    "full_prompt_equal": true,
-    "available_count": 0,
-    "fixed_parent": 1,
-    "relation_parent": 1,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-relational_branch-b1",
-    "step": 3,
-    "ordinary_equal": true,
-    "nondevelopment": true,
-    "full_prompt_equal": true,
-    "available_count": 0,
-    "fixed_parent": 1,
-    "relation_parent": 1,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-relational_branch-b1",
-    "step": 4,
-    "ordinary_equal": true,
-    "nondevelopment": true,
-    "full_prompt_equal": true,
-    "available_count": 0,
-    "fixed_parent": null,
-    "relation_parent": null,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-relational_branch-b1",
-    "step": 5,
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
@@ -859,22 +826,55 @@
   },
   {
     "job_id": "alibaba-relational_branch-b1",
-    "step": 6,
+    "step": 3,
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
     "available_count": 0,
-    "fixed_parent": 8,
-    "relation_parent": 8,
+    "fixed_parent": 4,
+    "relation_parent": 4,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "step": 4,
+    "ordinary_equal": true,
+    "nondevelopment": true,
+    "full_prompt_equal": true,
+    "available_count": 0,
+    "fixed_parent": null,
+    "relation_parent": null,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "step": 5,
+    "ordinary_equal": true,
+    "nondevelopment": true,
+    "full_prompt_equal": true,
+    "available_count": 0,
+    "fixed_parent": 5,
+    "relation_parent": 5,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-relational_branch-b1",
+    "step": 6,
+    "ordinary_equal": true,
+    "nondevelopment": true,
+    "full_prompt_equal": true,
+    "available_count": 1,
+    "fixed_parent": 6,
+    "relation_parent": 6,
     "branch_choice_changed": false
   },
   {
     "job_id": "alibaba-relational_branch-b1",
     "step": 7,
     "ordinary_equal": true,
-    "nondevelopment": true,
+    "nondevelopment": false,
     "full_prompt_equal": true,
-    "available_count": 0,
+    "available_count": 1,
     "fixed_parent": 8,
     "relation_parent": 8,
     "branch_choice_changed": false
@@ -941,8 +941,8 @@
     "nondevelopment": true,
     "full_prompt_equal": true,
     "available_count": 0,
-    "fixed_parent": 1,
-    "relation_parent": 1,
+    "fixed_parent": 5,
+    "relation_parent": 5,
     "branch_choice_changed": false
   },
   {
@@ -952,8 +952,8 @@
     "nondevelopment": true,
     "full_prompt_equal": true,
     "available_count": 1,
-    "fixed_parent": 1,
-    "relation_parent": 1,
+    "fixed_parent": 5,
+    "relation_parent": 5,
     "branch_choice_changed": false
   },
   {
@@ -982,9 +982,9 @@
     "job_id": "minimax-relational_branch-b0",
     "step": 1,
     "ordinary_equal": true,
-    "nondevelopment": true,
+    "nondevelopment": false,
     "full_prompt_equal": true,
-    "available_count": 0,
+    "available_count": 1,
     "fixed_parent": 3,
     "relation_parent": 3,
     "branch_choice_changed": false
@@ -995,18 +995,18 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 0,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "available_count": 1,
+    "fixed_parent": 1,
+    "relation_parent": 1,
     "branch_choice_changed": false
   },
   {
     "job_id": "minimax-relational_branch-b0",
     "step": 3,
     "ordinary_equal": true,
-    "nondevelopment": true,
+    "nondevelopment": false,
     "full_prompt_equal": true,
-    "available_count": 0,
+    "available_count": 1,
     "fixed_parent": 3,
     "relation_parent": 3,
     "branch_choice_changed": false
@@ -1105,7 +1105,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 1,
+    "available_count": 0,
     "fixed_parent": null,
     "relation_parent": null,
     "branch_choice_changed": false
@@ -1114,11 +1114,11 @@
     "job_id": "alibaba-relational_branch-b2",
     "step": 5,
     "ordinary_equal": true,
-    "nondevelopment": false,
+    "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "available_count": 0,
+    "fixed_parent": 1,
+    "relation_parent": 1,
     "branch_choice_changed": false
   },
   {
@@ -1128,152 +1128,152 @@
     "nondevelopment": true,
     "full_prompt_equal": true,
     "available_count": 1,
+    "fixed_parent": 6,
+    "relation_parent": 6,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-relational_branch-b2",
+    "step": 7,
+    "ordinary_equal": true,
+    "nondevelopment": false,
+    "full_prompt_equal": true,
+    "available_count": 1,
+    "fixed_parent": 8,
+    "relation_parent": 8,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 0,
+    "ordinary_equal": true,
+    "nondevelopment": true,
+    "full_prompt_equal": true,
+    "available_count": 0,
+    "fixed_parent": 1,
+    "relation_parent": 1,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 1,
+    "ordinary_equal": true,
+    "nondevelopment": false,
+    "full_prompt_equal": true,
+    "available_count": 1,
+    "fixed_parent": 3,
+    "relation_parent": 3,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 2,
+    "ordinary_equal": true,
+    "nondevelopment": true,
+    "full_prompt_equal": true,
+    "available_count": 1,
+    "fixed_parent": 3,
+    "relation_parent": 3,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 3,
+    "ordinary_equal": true,
+    "nondevelopment": false,
+    "full_prompt_equal": true,
+    "available_count": 1,
+    "fixed_parent": 3,
+    "relation_parent": 3,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 4,
+    "ordinary_equal": true,
+    "nondevelopment": true,
+    "full_prompt_equal": true,
+    "available_count": 0,
+    "fixed_parent": null,
+    "relation_parent": null,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 5,
+    "ordinary_equal": true,
+    "nondevelopment": true,
+    "full_prompt_equal": true,
+    "available_count": 0,
+    "fixed_parent": 1,
+    "relation_parent": 1,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 6,
+    "ordinary_equal": true,
+    "nondevelopment": true,
+    "full_prompt_equal": true,
+    "available_count": 0,
+    "fixed_parent": 2,
+    "relation_parent": 2,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-niche_fixed_dev-b2",
+    "step": 7,
+    "ordinary_equal": true,
+    "nondevelopment": false,
+    "full_prompt_equal": true,
+    "available_count": 1,
+    "fixed_parent": 9,
+    "relation_parent": 9,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "step": 0,
+    "ordinary_equal": true,
+    "nondevelopment": true,
+    "full_prompt_equal": true,
+    "available_count": 0,
+    "fixed_parent": 1,
+    "relation_parent": 1,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "step": 1,
+    "ordinary_equal": true,
+    "nondevelopment": false,
+    "full_prompt_equal": true,
+    "available_count": 1,
+    "fixed_parent": 3,
+    "relation_parent": 3,
+    "branch_choice_changed": false
+  },
+  {
+    "job_id": "alibaba-niche-b2",
+    "step": 2,
+    "ordinary_equal": true,
+    "nondevelopment": true,
+    "full_prompt_equal": true,
+    "available_count": 2,
     "fixed_parent": 4,
     "relation_parent": 4,
     "branch_choice_changed": false
   },
   {
-    "job_id": "alibaba-relational_branch-b2",
-    "step": 7,
-    "ordinary_equal": true,
-    "nondevelopment": false,
-    "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche_fixed_dev-b2",
-    "step": 0,
-    "ordinary_equal": true,
-    "nondevelopment": true,
-    "full_prompt_equal": true,
-    "available_count": 0,
-    "fixed_parent": 1,
-    "relation_parent": 1,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche_fixed_dev-b2",
-    "step": 1,
-    "ordinary_equal": true,
-    "nondevelopment": false,
-    "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche_fixed_dev-b2",
-    "step": 2,
-    "ordinary_equal": true,
-    "nondevelopment": true,
-    "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche_fixed_dev-b2",
+    "job_id": "alibaba-niche-b2",
     "step": 3,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche_fixed_dev-b2",
-    "step": 4,
-    "ordinary_equal": true,
-    "nondevelopment": true,
-    "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": null,
-    "relation_parent": null,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche_fixed_dev-b2",
-    "step": 5,
-    "ordinary_equal": true,
-    "nondevelopment": false,
-    "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche_fixed_dev-b2",
-    "step": 6,
-    "ordinary_equal": true,
-    "nondevelopment": true,
-    "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche_fixed_dev-b2",
-    "step": 7,
-    "ordinary_equal": true,
-    "nondevelopment": false,
-    "full_prompt_equal": true,
+    "full_prompt_equal": false,
     "available_count": 2,
     "fixed_parent": 3,
-    "relation_parent": 3,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche-b2",
-    "step": 0,
-    "ordinary_equal": true,
-    "nondevelopment": true,
-    "full_prompt_equal": true,
-    "available_count": 0,
-    "fixed_parent": 1,
-    "relation_parent": 1,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche-b2",
-    "step": 1,
-    "ordinary_equal": true,
-    "nondevelopment": false,
-    "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche-b2",
-    "step": 2,
-    "ordinary_equal": true,
-    "nondevelopment": true,
-    "full_prompt_equal": true,
-    "available_count": 2,
-    "fixed_parent": 4,
     "relation_parent": 4,
-    "branch_choice_changed": false
-  },
-  {
-    "job_id": "alibaba-niche-b2",
-    "step": 3,
-    "ordinary_equal": true,
-    "nondevelopment": false,
-    "full_prompt_equal": true,
-    "available_count": 2,
-    "fixed_parent": 3,
-    "relation_parent": 3,
-    "branch_choice_changed": false
+    "branch_choice_changed": true
   },
   {
     "job_id": "alibaba-niche-b2",
@@ -1281,7 +1281,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 3,
+    "available_count": 1,
     "fixed_parent": null,
     "relation_parent": null,
     "branch_choice_changed": false
@@ -1291,11 +1291,11 @@
     "step": 5,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": true,
-    "available_count": 3,
-    "fixed_parent": 3,
+    "full_prompt_equal": false,
+    "available_count": 1,
+    "fixed_parent": 4,
     "relation_parent": 3,
-    "branch_choice_changed": false
+    "branch_choice_changed": true
   },
   {
     "job_id": "alibaba-niche-b2",
@@ -1303,7 +1303,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 3,
+    "available_count": 2,
     "fixed_parent": 8,
     "relation_parent": 8,
     "branch_choice_changed": false
@@ -1315,7 +1315,7 @@
     "nondevelopment": false,
     "full_prompt_equal": false,
     "available_count": 3,
-    "fixed_parent": 3,
+    "fixed_parent": 4,
     "relation_parent": 8,
     "branch_choice_changed": true
   },
@@ -1369,7 +1369,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 1,
+    "available_count": 0,
     "fixed_parent": null,
     "relation_parent": null,
     "branch_choice_changed": false
@@ -1378,11 +1378,11 @@
     "job_id": "minimax-niche-b2",
     "step": 5,
     "ordinary_equal": true,
-    "nondevelopment": false,
+    "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 1,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "available_count": 0,
+    "fixed_parent": 5,
+    "relation_parent": 5,
     "branch_choice_changed": false
   },
   {
@@ -1391,9 +1391,9 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 2,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "available_count": 1,
+    "fixed_parent": 2,
+    "relation_parent": 2,
     "branch_choice_changed": false
   },
   {
@@ -1402,9 +1402,9 @@
     "ordinary_equal": true,
     "nondevelopment": false,
     "full_prompt_equal": true,
-    "available_count": 3,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "available_count": 2,
+    "fixed_parent": 8,
+    "relation_parent": 8,
     "branch_choice_changed": false
   },
   {
@@ -1436,8 +1436,8 @@
     "nondevelopment": true,
     "full_prompt_equal": true,
     "available_count": 1,
-    "fixed_parent": 4,
-    "relation_parent": 4,
+    "fixed_parent": 1,
+    "relation_parent": 1,
     "branch_choice_changed": false
   },
   {
@@ -1479,7 +1479,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 2,
+    "available_count": 1,
     "fixed_parent": 5,
     "relation_parent": 5,
     "branch_choice_changed": false
@@ -1490,9 +1490,9 @@
     "ordinary_equal": true,
     "nondevelopment": false,
     "full_prompt_equal": true,
-    "available_count": 2,
-    "fixed_parent": 4,
-    "relation_parent": 4,
+    "available_count": 1,
+    "fixed_parent": 5,
+    "relation_parent": 5,
     "branch_choice_changed": false
   },
   {
@@ -1524,8 +1524,8 @@
     "nondevelopment": true,
     "full_prompt_equal": true,
     "available_count": 2,
-    "fixed_parent": 3,
-    "relation_parent": 3,
+    "fixed_parent": 4,
+    "relation_parent": 4,
     "branch_choice_changed": false
   },
   {
@@ -1533,11 +1533,11 @@
     "step": 3,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": false,
+    "full_prompt_equal": true,
     "available_count": 2,
     "fixed_parent": 3,
-    "relation_parent": 4,
-    "branch_choice_changed": true
+    "relation_parent": 3,
+    "branch_choice_changed": false
   },
   {
     "job_id": "alibaba-relational_branch-b0",
@@ -1545,7 +1545,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 2,
+    "available_count": 1,
     "fixed_parent": null,
     "relation_parent": null,
     "branch_choice_changed": false
@@ -1555,11 +1555,11 @@
     "step": 5,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": false,
-    "available_count": 2,
-    "fixed_parent": 3,
+    "full_prompt_equal": true,
+    "available_count": 1,
+    "fixed_parent": 4,
     "relation_parent": 4,
-    "branch_choice_changed": true
+    "branch_choice_changed": false
   },
   {
     "job_id": "alibaba-relational_branch-b0",
@@ -1567,7 +1567,7 @@
     "ordinary_equal": true,
     "nondevelopment": true,
     "full_prompt_equal": true,
-    "available_count": 2,
+    "available_count": 1,
     "fixed_parent": 6,
     "relation_parent": 6,
     "branch_choice_changed": false
@@ -1577,10 +1577,10 @@
     "step": 7,
     "ordinary_equal": true,
     "nondevelopment": false,
-    "full_prompt_equal": false,
+    "full_prompt_equal": true,
     "available_count": 2,
-    "fixed_parent": 3,
+    "fixed_parent": 4,
     "relation_parent": 4,
-    "branch_choice_changed": true
+    "branch_choice_changed": false
   }
 ]

@@ -468,8 +468,8 @@
   "matched_history_probe": {
     "queries": 144,
     "ordinary_equal": 144,
-    "nondevelopment_queries": 90,
-    "nondevelopment_prompts_equal": 90,
-    "branch_choice_differences": 12
+    "nondevelopment_queries": 92,
+    "nondevelopment_prompts_equal": 92,
+    "branch_choice_differences": 14
   }
 }

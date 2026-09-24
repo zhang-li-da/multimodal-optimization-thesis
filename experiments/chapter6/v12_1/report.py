@@ -57,7 +57,7 @@ def main():
         f"- 使用实例快照重执行：{numeric['validation_programs']}个validation程序、{numeric['test_programs']}个test程序；Windows本机{numeric['strict_equal']}/{numeric['program_evaluations']}严格一致，控制器决策无差异。",
         "- 324个TSP实例坐标事后重建并匹配原9个split指纹；记录生成来源，不宣称它们是在r2搜索时同步保存的。", "",
         "构造夹具中两个可选分支的局部收益与使用次数相同，仅改变族历史便改变实际choose的父代。这证明该信号进入执行路径。另有失败第4层尝试而成功深度保持3的反例测试。", "",
-        "同历史探测使用相同已归档候选及其原父代关系，只在状态副本上查询选择，然后丢弃反事实决策。没有生成新选择对应的子代，不能估计其最终收益。全部局部评价都是历史程序重执行，没有发现新的模型候选。", "",
+        "同历史探测使用相同已归档候选及其评价；两个策略副本沿各自选择的allocation推进，以便开发额度和后续可用分支不会被遗漏。没有生成新选择对应的模型子代，不能估计其最终收益。全部局部评价都是历史程序重执行，没有发现新的模型候选。", "",
         "## 5. 当前缺陷与未解决问题", "",
         "1. 新控制器只经离线验证，尚不知道在新模型生成轨迹上是否更有效。小容量池和8提案短搜索可能仍缺少足够多的选择机会。",
         "2. 族标签统计仍是稀疏启发式；收益组合排序优于FIFO也不能单独证明关系信息的贡献，需加入纯局部收益/使用次数基线与打乱族证据的控制。",
@@ -70,7 +70,7 @@ def main():
         "若组合排序值得继续，独立增加收益排序/证据打乱基线；再用独立训练且冻结的选择器检验多算法集合用途。更大规模任务、witness、W和关系图仅在最小机制有增量证据后引入。若无增量，应删除相应创新主张。", "",
         "## 7. 复现与版本管理", "",
         "本包保留r2原始数据引用及各运行SHA-256、逐步选择诊断、分单元CSV、实例坐标、Windows数值回放、测试XML、源码指纹和SHA256SUMS。按[复现说明](../../README.md)运行离线脚本，任何新机器数值回放使用新输出路径。", "",
-        "新分支experiment/v1.2.1-isolated-branch-policy，新标签chapter6-v1.2.1-mechanism-only-20260924。旧r2标签、冻结源码及原始ZIP不改写；r1仍作废。本报告与旧r2的质量结果分开解释。",
+        "新分支experiment/v1.2.1-isolated-branch-policy，审计修订标签chapter6-v1.2.1-mechanism-only-20260924-r1。早期机制标签、旧r2标签、冻结源码及原始ZIP不改写；v1.2 r1仍作废。本报告与旧r2的质量结果分开解释。",
     ]
     (OUTPUT / "REPORT_ZH.md").write_bytes(("\n".join(lines) + "\n").encode())
     # This is a post-hoc release manifest, not a model-search preregistration.
@@ -79,7 +79,7 @@ def main():
                 "source_fingerprint_sha256": v121_source_fingerprint(),
                 "historical_source_fingerprint_sha256": audit["source_fingerprint"],
                 "tests": tests, "branch": "experiment/v1.2.1-isolated-branch-policy",
-                "tag": "chapter6-v1.2.1-mechanism-only-20260924",
+                "tag": "chapter6-v1.2.1-mechanism-only-20260924-r1",
                 "future_16_run_search": "draft; not executed",
                 "source_commit": "Resolve the immutable release tag; this post-hoc manifest is not a search freeze.",
                 "r2_quality_results_changed": False}

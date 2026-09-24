@@ -27,3 +27,7 @@ Branch `experiment/v1.2.1-isolated-branch-policy`; tag `chapter6-v1.2.1-mechanis
 The original r2 source, manifest, raw ZIPs, numeric CSV/JSON and old tags are unchanged. Report prose and report-generation code include explicit errata; the updated package has a new checksum list. New post-hoc audit and numeric replay artifacts live under `v12_1/results/mechanism-only-20260924/`. The legacy r2 branch stays at its published revision; main and the new v1.2.1 branch carry this correction.
 
 The 16-run follow-up is an unexecuted draft using fresh blocks 3–6. It requires a separate future freeze and result tag and cannot extend r2. Claims of effectiveness, independent relational information value, portfolio utility and doctoral novelty remain unestablished.
+
+The post-hoc audit state replay was corrected in a follow-up patch. Tag
+chapter6-v1.2.1-mechanism-only-20260924-r1 is the latest v1.2.1 audit release;
+the earlier mechanism-only tag remains immutable.

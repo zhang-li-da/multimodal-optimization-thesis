@@ -31,7 +31,7 @@ python -m chapter6_demo.v12_1.verify_numeric --instances audit-local/r2_instance
 - v1.2 r2 冻结源码、原始运行ZIP、manifest、CSV/JSON质量数值和旧标签保持原样；其报告勘误更新可由Git追踪。
 - `v12_1_controller.py` 不进入旧r2的源码指纹，也不被旧在线runner使用。
 - 当前分支：`experiment/v1.2.1-isolated-branch-policy`。
-- 当前标签：`chapter6-v1.2.1-mechanism-only-20260924`。
+- 当前审计修订标签：`chapter6-v1.2.1-mechanism-only-20260924-r1`；早期机制标签 `chapter6-v1.2.1-mechanism-only-20260924` 保持不变。
 - 后续搜索使用全新区块3、4、5、6和单独版本，不追加到r2，不汇总为旧实验的重复样本。
 
 本版本确认的是实现与机制可检验性。修正版关系/收益排序是否改善新搜索质量，以及多算法集合是否有实际用途，仍待新实验回答。
