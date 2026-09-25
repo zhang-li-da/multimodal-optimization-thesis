@@ -87,11 +87,17 @@ def check(demo, output, edge, ffmpeg=None):
             time.sleep(.05)
         checks = {"historical_options": evaluate("document.querySelector('#run-select').options.length")}
         assert checks["historical_options"] == 18
+        checks["historical_fixed_label"] = evaluate("label('niche_fixed_dev')")
+        assert checks["historical_fixed_label"] == "固定开发 · 旧轮转"
+        checks["replacement_question_mark_text"] = evaluate("document.body.innerText.includes('???')")
+        assert not checks["replacement_question_mark_text"]
         checks["initial_step"] = evaluate("document.querySelector('#step-label').textContent")
         assert checks["initial_step"] == "共同初始化"
         # Exercise every historical run and every frame, rather than one favorable screenshot.
         checks["historical_frames"] = evaluate("(()=>{let count=0;for(let i=0;i<DATA.historical.runs.length;i++){runIndex=i;render();for(let j=0;j<run().frames.length;j++){frameIndex=j;renderFrame();if(document.querySelectorAll('#lineage [data-node]').length!==run().frames[j].node_ids.length)throw Error('lineage mismatch');count++;}}return count;})()")
         evaluate("setView('history');frameIndex=4;renderFrame()")
+        assert evaluate("document.querySelector('#code-diff').previousElementSibling.textContent") == "与本次父代的源码差异"
+        assert evaluate("document.querySelector('.callout').textContent.includes('父代')")
         shot("01_historical_replay.png")
         evaluate("document.querySelector('#prev').click()")
         assert evaluate("frameIndex") == 3

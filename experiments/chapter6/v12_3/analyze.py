@@ -210,6 +210,7 @@ def analyze(study, output, preflight=None):
             "execution_cpu_seconds_including_reference_setup": sum(n["evaluation"]["cpu_seconds"] for n in cp["seeds"] + [r["node"] for r in records]) if cp else None,
             "test_gap": best_loss, "seed_test_gap": seed_loss,
             "test_improvement_over_seed_pp": 100 * (seed_loss-best_loss) if test else None,
+            "independent_test_completed": test is not None,
             "test_valid": test["primary_test_valid"] if test else None,
             "best_validation_gap": search["summary"]["best_validation_loss"] if search else None,
             "best_id": test["best_id"] if test else None,

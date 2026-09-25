@@ -1,0 +1,27 @@
+{
+  "historical_runs": 18,
+  "historical_default": "minimax-niche_fixed_dev-b0",
+  "historical_default_selection_rule": "First run in original manifest order with an admitted branch later selected for continuation; all 18 runs remain selectable.",
+  "current_runs": 16,
+  "synthetic_cases": 3,
+  "synthetic_selected_parents": [
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "new_model_calls": 0,
+  "program_evaluations": 0,
+  "files": {
+    "index.html": "b11ba2528dd8276a5dffbf2d5e2146764b2535741a28353f41d89f34c36f25a9",
+    "demo_data.json": "75cd50e41a0364860ace36735212b2a665b1d1f974a7b405561043baa6bfcec9"
+  }
+}
