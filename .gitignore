@@ -15,6 +15,12 @@ venv/
 experiments/chapter6/v11/screening-*/
 experiments/chapter6/v12/screening-*/
 experiments/chapter6/v12_2/local-*/
+experiments/chapter6/v12_3/local-*/
+experiments/chapter6/v12_3/studies/*/runs/
+experiments/chapter6/v12_3/studies/*/tests/
+experiments/chapter6/v12_3/studies/*/lanes/
+experiments/chapter6/v12_3/studies/*/dispatch/
+.run.lock
 replay-local/
 readiness-tests.xml
 identity-local.json
