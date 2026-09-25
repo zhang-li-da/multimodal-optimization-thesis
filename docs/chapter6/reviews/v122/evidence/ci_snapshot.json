@@ -1,0 +1,45 @@
+{
+  "review_date": "2026-09-25",
+  "source_commit": "44bafd2344d6a25e247c93c62280e6bf20e5e508",
+  "workflow_run_id": 36101135589,
+  "workflow_url": "https://github.com/zhang-li-da/multimodal-optimization-thesis/actions/runs/36101135589",
+  "jobs": [
+    {
+      "id": 107963668347,
+      "name": "verify (windows-latest, 3.13.5)",
+      "conclusion": "success",
+      "url": "https://github.com/zhang-li-da/multimodal-optimization-thesis/actions/runs/36101135589/job/107963668347",
+      "failed_steps": []
+    },
+    {
+      "id": 107963668390,
+      "name": "verify (ubuntu-latest, 3.13.5)",
+      "conclusion": "success",
+      "url": "https://github.com/zhang-li-da/multimodal-optimization-thesis/actions/runs/36101135589/job/107963668390",
+      "failed_steps": []
+    },
+    {
+      "id": 107963668415,
+      "name": "verify (windows-latest, 3.12.14)",
+      "conclusion": "failure",
+      "url": "https://github.com/zhang-li-da/multimodal-optimization-thesis/actions/runs/36101135589/job/107963668415",
+      "failed_steps": [
+        "Run actions/setup-python@v5"
+      ]
+    },
+    {
+      "id": 107963668430,
+      "name": "verify (ubuntu-latest, 3.12.14)",
+      "conclusion": "success",
+      "url": "https://github.com/zhang-li-da/multimodal-optimization-thesis/actions/runs/36101135589/job/107963668430",
+      "failed_steps": []
+    }
+  ],
+  "failed_job_diagnosis": {
+    "job_id": 107963668415,
+    "stage": "actions/setup-python@v5",
+    "message": "Python 3.12.14 x64 was not found for Windows 2025.",
+    "tests_executed": false,
+    "classification": "environment provisioning failure; not an algorithm/test failure"
+  }
+}
