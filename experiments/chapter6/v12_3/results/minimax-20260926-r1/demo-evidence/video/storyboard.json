@@ -1,0 +1,148 @@
+{
+  "kind": "timed_browser_frames_with_captions_not_live_API_recording",
+  "duration_seconds": 260,
+  "width": 1440,
+  "height": 1080,
+  "fps": 15,
+  "audio_track": false,
+  "scenes": [
+    {
+      "index": 1,
+      "start_seconds": 0,
+      "duration_seconds": 15,
+      "title": "01 · 研究对象是跨实例规则",
+      "caption": "历史 v1.2 r2 真实日志回放。外层改进程序，内层才执行 TSP 路线构造；不是一次路线生成。",
+      "browser_action": "setView('history');frameIndex=0;renderFrame()"
+    },
+    {
+      "index": 2,
+      "start_seconds": 15,
+      "duration_seconds": 15,
+      "title": "共同初始化与有限预算",
+      "caption": "三条相同手写规则、8 个提案时隙。A 维护输出代表，B 保存开发机会，M 记录已执行反馈。",
+      "browser_action": "frameIndex=0;renderFrame()"
+    },
+    {
+      "index": 3,
+      "start_seconds": 30,
+      "duration_seconds": 15,
+      "title": "第一次候选改进并入池",
+      "caption": "p3 改善父代与当时全局 validation 最好值。合格改进进入 B，获得两次有限机会。",
+      "browser_action": "frameIndex=1;renderFrame()"
+    },
+    {
+      "index": 4,
+      "start_seconds": 45,
+      "duration_seconds": 15,
+      "title": "兑现一次分支开发",
+      "caption": "p3 被实际选择为父代；p4 再次改善。p3 的剩余额度减少，新候选的准入独立判断。",
+      "browser_action": "frameIndex=2;renderFrame()"
+    },
+    {
+      "index": 5,
+      "start_seconds": 60,
+      "duration_seconds": 15,
+      "title": "成功改进链继续增长",
+      "caption": "p5 的改进使成功深度达到 3。展示的是已归档执行结果，不是预测未来会成功。",
+      "browser_action": "frameIndex=3;renderFrame()"
+    },
+    {
+      "index": 6,
+      "start_seconds": 75,
+      "duration_seconds": 15,
+      "title": "一次续开发没有改善",
+      "caption": "p6 未优于父代，仍然消耗开发机会。尝试深度与成功改进深度必须分开记录。",
+      "browser_action": "frameIndex=4;renderFrame()"
+    },
+    {
+      "index": 7,
+      "start_seconds": 90,
+      "duration_seconds": 15,
+      "title": "新行为也可能质量不足",
+      "caption": "p7 来自一次重启，质量明显较差。程序或行为不同本身不足以获得新的开发额度。",
+      "browser_action": "frameIndex=5;renderFrame()"
+    },
+    {
+      "index": 8,
+      "start_seconds": 105,
+      "duration_seconds": 15,
+      "title": "预算用尽，按 validation 冻结",
+      "caption": "这条历史运行有成功也有失败。最终测试只评价已冻结规则，不反过来指导搜索。",
+      "browser_action": "frameIndex=8;renderFrame()"
+    },
+    {
+      "index": 9,
+      "start_seconds": 120,
+      "duration_seconds": 15,
+      "title": "不能用单条成功轨迹代表整组效果",
+      "caption": "全部 18 次可切换。旧固定开发平均 Test gap 为 5.569%，旧关系开发为 6.379%；旧版普通调度和 W 存在混杂。",
+      "browser_action": "frameIndex=8;renderFrame();document.querySelector('details.panel').open=true"
+    },
+    {
+      "index": 10,
+      "start_seconds": 135,
+      "duration_seconds": 15,
+      "title": "02 · 合成控制用例，零模型调用",
+      "caption": "现在使用人工设定的历史反馈。两分支的局部收益均为 0.01、使用次数均为 0，只改变已观察族证据。",
+      "browser_action": "setView('synthetic');caseIndex=0;renderSynthetic()"
+    },
+    {
+      "index": 11,
+      "start_seconds": 150,
+      "duration_seconds": 15,
+      "title": "同收益下，族证据改变选择",
+      "caption": "local_distance 额外有两次失败。FIFO 选择 p2，完整排序选择 p3；数值由真实 V121 控制器计算。",
+      "browser_action": "caseIndex=0;renderSynthetic()"
+    },
+    {
+      "index": 12,
+      "start_seconds": 165,
+      "duration_seconds": 15,
+      "title": "交换失败归属，完整排序改选 p2",
+      "caption": "变化来自证据对应关系，不是固定偏好某个程序编号。这只能说明排序规则能够使用该信息。",
+      "browser_action": "caseIndex=1;renderSynthetic()"
+    },
+    {
+      "index": 13,
+      "start_seconds": 180,
+      "duration_seconds": 15,
+      "title": "样本不足时回退共享统计",
+      "caption": "两候选族都没有足够独立观察，使用相同 q。当前同收益用例中，两种排序选择一致。",
+      "browser_action": "caseIndex=2;renderSynthetic()"
+    },
+    {
+      "index": 14,
+      "start_seconds": 195,
+      "duration_seconds": 15,
+      "title": "无效子代仍然扣除开发额度",
+      "caption": "表中随后注入的是预先规定的无效反馈。没有新成功深度，不补额度，也没有声称任何性能提升。",
+      "browser_action": "caseIndex=0;renderSynthetic()"
+    },
+    {
+      "index": 15,
+      "start_seconds": 210,
+      "duration_seconds": 15,
+      "title": "从机制响应到实际价值还有距离",
+      "caption": "真实搜索必须出现多个可选分支、可区分证据和选择差异，之后才可能检验是否带来独立测试收益。",
+      "browser_action": "caseIndex=0;renderSynthetic()"
+    },
+    {
+      "index": 16,
+      "start_seconds": 225,
+      "duration_seconds": 15,
+      "title": "03 · 本轮真实筛查与证据边界",
+      "caption": "v1.2.3 使用 MiniMax M3、两控制器、八个配对区块。完整保留无效提案与未入池运行，不挑选成功案例。",
+      "browser_action": "setView(DATA.current?'current':'history');frameIndex=0;renderFrame()"
+    },
+    {
+      "index": 17,
+      "start_seconds": 240,
+      "duration_seconds": 20,
+      "title": "开题基础成立，方法有效性继续检验",
+      "caption": "程序合法性、开发机制、排序增量与多算法集合用途是不同问题。后续四组归因和独立选择器实验均需另行冻结。",
+      "browser_action": "setView(DATA.current?'current':'history');frameIndex=0;renderFrame()"
+    }
+  ],
+  "new_model_calls": 0,
+  "video_sha256": "4213e8153e7ccd82159d63c4a8eb97ec86fc8cf03ea3d5e676fc032c49c02400"
+}

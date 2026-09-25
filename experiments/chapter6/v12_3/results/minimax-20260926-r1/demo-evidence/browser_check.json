@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "demo_html_sha256": "b11ba2528dd8276a5dffbf2d5e2146764b2535741a28353f41d89f34c36f25a9",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Edg/153.0.4234.48",
+    "revision": "@cf31d6623d8718e7a3c3e181e55e59c1aae57a73",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0",
+    "jsVersion": "15.3.12.7"
+  },
+  "checks": {
+    "historical_options": 18,
+    "historical_fixed_label": "固定开发 · 旧轮转",
+    "replacement_question_mark_text": false,
+    "initial_step": "共同初始化",
+    "historical_frames": 162,
+    "synthetic_choices": [
+      [
+        "p2",
+        "p3"
+      ],
+      [
+        "p2",
+        "p2"
+      ],
+      [
+        "p2",
+        "p2"
+      ]
+    ],
+    "current_options": 16,
+    "current_frames": 144,
+    "mobile_page_overflow": false
+  },
+  "page_javascript_exceptions": [],
+  "page_network_requests": [],
+  "new_model_calls": 0,
+  "screenshots": [
+    {
+      "file": "01_historical_replay.png",
+      "sha256": "43b50ede890d76228c244c1e1f384a54f3dcf469625628510e93caea4479195b"
+    },
+    {
+      "file": "02_synthetic_control.png",
+      "sha256": "1cee28ba376dcce26b2f8244b40a4e53c7506ebb1f0e15425b86de7258160470"
+    },
+    {
+      "file": "03_current_screening.png",
+      "sha256": "43d42f84ddc65e080a8fd3e8ad96237d2a2e8533762554a1b4f1294700fc42ea"
+    },
+    {
+      "file": "04_mobile_replay.png",
+      "sha256": "8ed3fa8f0cc5ed5c2b6eb167023349575af3c42dc110a6fc9256276cbfbb7caf"
+    }
+  ],
+  "video": {
+    "kind": "timed_browser_frames_with_captions_not_live_API_recording",
+    "duration_seconds": 260,
+    "width": 1440,
+    "height": 1080,
+    "fps": 15,
+    "audio_track": false,
+    "new_model_calls": 0,
+    "video_sha256": "4213e8153e7ccd82159d63c4a8eb97ec86fc8cf03ea3d5e676fc032c49c02400"
+  }
+}

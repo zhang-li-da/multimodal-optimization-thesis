@@ -1,0 +1,15 @@
+{
+  "scope": "Post-hoc engineering diagnosis after the frozen search; does not alter calls, proposals, or primary outcomes.",
+  "manifest_sha256": "9a623fec5a481ad4645ae014887a4b4f820bf61b2e89d234bd75c35ad5af22b8",
+  "new_model_calls": 0,
+  "responses": 156,
+  "planner_requests": 128,
+  "coder_requests": 28,
+  "planner_length_stops": 100,
+  "coder_length_stops": 3,
+  "planner_no_final_text_after_thinking": 98,
+  "unclosed_thinking_blocks": 0,
+  "failed_stage_matches_length_stop": 103,
+  "correction": "Early progress wording 'unclosed thinking' was imprecise: truncated planner responses end with </think> but no final plan text. The analyzer's unclosed_thinking_responses=0 is correct.",
+  "interpretation": "An engineering preflight that returned ready=true did not validate task-shaped planner/coder outputs under the frozen 1800/2000-token limits. Output-limit or thinking-mode changes require a new protocol; no repair or resubmission was made in this batch."
+}

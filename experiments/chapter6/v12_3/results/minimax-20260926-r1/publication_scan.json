@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "staged_paths": 53,
+  "payloads_checked_including_zip_members": 1236,
+  "decoded_provider_bodies": 157,
+  "active_provider_key_checked_in_memory": true,
+  "credentials_emitted": false,
+  "suspect_paths": [],
+  "new_model_calls": 0
+}
