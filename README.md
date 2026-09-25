@@ -2,7 +2,11 @@
 
 本仓库汇集博士论文前五章对应文章材料、第六章 agent 原型与验证记录，以及总体技术报告，供跨设备查阅和复核。
 
-## 最新版本：v1.2.1 离线机制修正
+## 最新版本：v1.2.2 启动准备与离线集成验证
+
+依据 PR #1 的复核意见补齐了独立搜索入口、请求与状态恢复、测试集隔离，以及 ZIP/AST 哈希兼容。控制器仍使用 v1.2.1 的两臂规则；本轮新增模型调用 0，16 次真实搜索仍未冻结、未执行。阅读[启动层架构](docs/chapter6/V122_READINESS.md)、[代码与复现命令](experiments/chapter6/v12_2/README.md)及[本轮技术报告](experiments/chapter6/v12_2/results/readiness-20260925/REPORT_ZH.md)。新分支为 `experiment/v1.2.2-runner-readiness`。
+
+## v1.2.1 离线机制修正
 
 本轮没有新增模型调用。两开发组已统一普通 niche 调度，W 不参与决策，只有 B 内选择规则不同；FIFO、尝试深度和成功深度已明确区分。旧 r2 的18次模型搜索保持归档；新版本只完成本地测试、旧日志回放与数值复核，尚不能证明关系排序提高性能。
 
@@ -36,7 +40,7 @@
 ```powershell
 git clone https://github.com/zhang-li-da/multimodal-optimization-thesis.git
 cd multimodal-optimization-thesis
-git switch --track origin/experiment/v1.2.1-isolated-branch-policy
+git switch --track origin/experiment/v1.2.2-runner-readiness
 ```
 
 仓库为公开仓库，查阅论文和实验材料不需要 GitHub 登录。旧标签 `chapter6-v1.2-screening-20260924` 保留原始 r2 发布；最新离线审计修订使用 `chapter6-v1.2.1-mechanism-only-20260924-r1`，早期机制标签不改写；模型 API 搜索需要各自的服务凭据，凭据不包含在仓库中。若只需下载文件，可使用 GitHub 页面上的 **Code → Download ZIP**。

@@ -9,3 +9,4 @@
 *.txt text eol=lf
 experiments/chapter6/v12/results/** -text
 experiments/chapter6/v12_1/results/** -text
+experiments/chapter6/v12_2/results/** -text

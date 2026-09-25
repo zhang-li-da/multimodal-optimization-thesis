@@ -1,0 +1,412 @@
+{
+  "schema": "chapter6-v1.2.2-runner-1",
+  "status": "DRAFT_NOT_EXECUTABLE",
+  "created_utc": "2026-09-25T05:24:14.722066+00:00",
+  "source_commit": "2a870dd45612a90ce8fc653f4276181a90b9d4cf",
+  "source": {
+    "format": "named-source-files-lf-sha256-v1",
+    "files": {
+      "chapter6_demo/__init__.py": "8ac4e98e568b6d6740f704f161a820a9f1210146b43f4b941042d6269b1e3398",
+      "experiments/chapter6/demo/__init__.py": "9e0a96a7c80110ea9a785b5f0b8797f79550c8d21b9d44f4294ad6611423c0b9",
+      "experiments/chapter6/demo/analyze.py": "01381fbcd2e292a795e430d0105930a808bae51575226476439db22dd9fcd248",
+      "experiments/chapter6/demo/benchmarks.py": "a4f461c8496a066b96dd92811145c86c1b1ba19fd08eb956cb0c017d7635dff3",
+      "experiments/chapter6/demo/classification.py": "8a6dc688c5bb8c897f2ed110d70264105f51886426b20adcaabd334e1f36623f",
+      "experiments/chapter6/demo/dashboard.py": "aea6d42b88d7959f2d89a06a9d822eafbd8a8c02772f6f49a254b74d522ecee6",
+      "experiments/chapter6/demo/discovery.py": "da8863bebf19981d283d47e67637d0ff76367e50997a6a76e43fb2dd990eef5a",
+      "experiments/chapter6/demo/inspect_environment.py": "5c9b9c4e8b68c7b24d3c6eee4e5532b7bc3de7da46106e8767bc732e3d18814d",
+      "experiments/chapter6/demo/mmo_agent_demo.py": "96a179c7ff32ed8eb6ff0d429d1a5b720aecb33c9f377a56eaed8fd8ffb2bea3",
+      "experiments/chapter6/demo/programs.py": "6036ae160339384e2807770951fba2c34b978712de24b67c730ac3ce0e4c6868",
+      "experiments/chapter6/demo/providers.py": "a6dcacdebd896f71d9a54816d09b2d1a239b9f2f9cb68525c1e44514bcebadad",
+      "experiments/chapter6/demo/run_suite.py": "10d7489d87f27de91e35cd65dbd73a5bd41c4cb912993c7b757a06156f0deca1",
+      "experiments/chapter6/demo/test_classification.py": "77f64e9756243e24ac272646f30c8410f0ba9a52c6f2e5ae51384a819f0f289e",
+      "experiments/chapter6/demo/test_science.py": "1f4a73ef98d90eced8c8a6a5c81c2db7516e30d1a614b5e99ccef47ae90fd1a9",
+      "experiments/chapter6/demo/v12_1_controller.py": "a96d3f569e42f8c6fc11780226d50a32b3b3bb26bd070fe5763d6abc64de8a38",
+      "experiments/chapter6/demo/v12_controller.py": "ec542df06bffed6197e623f897086936cd17894c2be029ce2de470a66db11cb0",
+      "experiments/chapter6/demo/verify_experiments.py": "209270bfed77eba0f06a715b0a6647cb6d37d4fe613b584148e0e33e9ae6ec6e",
+      "experiments/chapter6/v12/__init__.py": "5c8695673a1b1d1444ca99ea27522d0d94252976ce5c4d47fe12ba7a8767228e",
+      "experiments/chapter6/v12/analyze_v12.py": "88955df2584e466c8f3509657659ba60533277893e4677643b676b8e6bbabc84",
+      "experiments/chapter6/v12/run_v12.py": "f6da99e1d89ce4eb56e75915885af690175bc145d83db611a86ba65c3a25fdfd",
+      "experiments/chapter6/v12/test_v12.py": "8b4ef79dc8a01db0d4e3b8de1ec75c10fcd590ac7fbde1e4f4f4f80c139d2f17",
+      "experiments/chapter6/v12/verify_v12.py": "7c5c78d198c37cf4e44a74d61da521dc483e303175a731836e5a4ba4f58b201d",
+      "experiments/chapter6/v12_1/__init__.py": "aa812a55b5255beb9f4a3c227f9bd6774b5a408b16e8c3d38a0a855f2aab785b",
+      "experiments/chapter6/v12_1/audit_r2.py": "7450314f2bc109e8ab63ea96fa5d6370bdb2011475830cb65f11e0e7f569afc8",
+      "experiments/chapter6/v12_1/report.py": "5fbdfbac2a95c0978cfeec7f3ef565c3850125251401a8c77fe6969d042ff5de",
+      "experiments/chapter6/v12_1/test_mechanism.py": "122677f1020bb403e8aa0a6b9d8950241ca8a9f994abbe45ae91664b3e29a6ed",
+      "experiments/chapter6/v12_1/test_numeric.py": "710aa5dfbbd8b63aa04be614469cc5c31dfc95baaa45dfd2e155b75031fa1fd5",
+      "experiments/chapter6/v12_1/verify_numeric.py": "8eed2ee6fff6c9e7eb778071ae0d9ca871b2caaa1a4a04752b4fb73609f1716c",
+      "experiments/chapter6/v12_2/__init__.py": "63606dac4f6df54e95f3bca591432d6a66444ff6531099aba9e39689b18e9954",
+      "experiments/chapter6/v12_2/archives.py": "3f7bb331327fb359043d705ee129831d4d2abd85572afe75a6471936babd07a6",
+      "experiments/chapter6/v12_2/calls.py": "5465027d502246cbaa3b4f4015d0d35b71e27eb40114d12515186ca43bb8b983",
+      "experiments/chapter6/v12_2/cli.py": "d62b72ae7aeba4201b4404a4649a0e99398cef441013d75e29d49fb24fc16596",
+      "experiments/chapter6/v12_2/common.py": "db4d0160b77f73f36e3f2859c1f4646759f4f1e85a74df57c9e2c5e28a0c0dbc",
+      "experiments/chapter6/v12_2/conftest.py": "f43ba223d371e464bf83c82866d7589db6c5dc19ee95776c0d2db7fa19b42896",
+      "experiments/chapter6/v12_2/data.py": "ccbfbb393fe32859e23d31b14bed8380b735e4f8e7583be8d13cc041f87c2a7b",
+      "experiments/chapter6/v12_2/fixtures.py": "c56b2b38745fb76d669cf7c1599db5507df5e309a4290a52ce5f7578dec7ece2",
+      "experiments/chapter6/v12_2/identity.py": "d371b797cc10a5f992ffca7502a743296cd37133fbe7a4d61751d983861949ad",
+      "experiments/chapter6/v12_2/protocol.draft.json": "17f34c6f9e84cdb410cf1b9c3d107d0e1b7a3a37f44218fc1e7606fc29584324",
+      "experiments/chapter6/v12_2/replay_r2.py": "002e200e63b64cb10708c7311da6e979d77f68595a2b55742d91e6ca11645fb8",
+      "experiments/chapter6/v12_2/requirements.lock.txt": "5ba9cb4cc6ba20cac0392bb6e2cd7bf5708389c5953ae87acd5331ee5239c88d",
+      "experiments/chapter6/v12_2/runner.py": "a3edda6018dba52fabdf4099b27b336fb8942cf07da336abdd6827b14392dc62",
+      "experiments/chapter6/v12_2/smoke.py": "1cb70685cec0a9c20334eee96e8f83d70e23bd5ead5d5419a2be47a65036de7e",
+      "experiments/chapter6/v12_2/test_portable.py": "eaa5d46e3f538e4c6d1668daf99c1050fc4443266782c8ec674b9e0fe8172586",
+      "experiments/chapter6/v12_2/test_runner.py": "c0143f23da335223230f890b613e30f04df2f5dfedc78fd6a0fa3cd9d7644a94",
+      "experiments/chapter6/v12_2/test_stage.py": "46afe666518e59534820d9d3ce5b0731fe1705b154d0a0479b2e2eda47159f72",
+      "experiments/chapter6/v12_2/verify_identity.py": "7e416295715ea3ff366099626a85bc523a624b822377d1825abcabebeea1b2e5"
+    },
+    "sha256": "ec1a3b7c784992b6324e64c28b7b506692b1fbfc217287bf7a995953dc258825"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "implementation": "CPython",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": {
+      "numpy": "2.1.3",
+      "scikit-learn": "1.6.1",
+      "matplotlib": "3.10.0",
+      "pytest": "8.3.4"
+    }
+  },
+  "protocol": {
+    "status": "DRAFT_NOT_PREREGISTERED",
+    "review_commit": "2a870dd45612a90ce8fc653f4276181a90b9d4cf",
+    "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+    "controllers": [
+      "niche_fixed_dev",
+      "relational_branch"
+    ],
+    "models": [
+      [
+        "alibaba-token-plan-cn",
+        "qwen3.7-plus"
+      ],
+      [
+        "minimax-cn-coding-plan",
+        "MiniMax-M3"
+      ]
+    ],
+    "blocks": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "order_seed": 9241201,
+    "steps": 8,
+    "token_budget": null,
+    "temperature": 0.7,
+    "planner_max_tokens": 1800,
+    "coder_max_tokens": 2000,
+    "timeout_seconds": 120,
+    "provider_immutable_versions": null,
+    "primary_contrast": "validation-selected test gap: relational_branch minus niche_fixed_dev",
+    "repeated_unit": "data block; model observations remain paired within each block",
+    "minimum_practical_gain_percentage_points": null,
+    "maximum_acceptable_token_increase_fraction": null,
+    "failure_policy": "No replacement proposals or automatic POST retries. Indeterminate requests stop their run. Missing usage stays null.",
+    "selection_quality_policy": "Competitive at admission; do not re-gate existing B entries. Record selection-time gap.",
+    "selector": "excluded; independent portfolio study required"
+  },
+  "data": {
+    "3": {
+      "search": {
+        "path": "data/search-b3.json",
+        "sha256": "4514553df2f2e28d7c187ffa2659fba4caa8781888903680dbc166ae0681f5fa"
+      },
+      "test": {
+        "path": "data/test-b3.json",
+        "sha256": "27f75c571c79c0d7f1276de9491b3f93a73e6966ef81217b22bc351b88aeefeb"
+      }
+    },
+    "4": {
+      "search": {
+        "path": "data/search-b4.json",
+        "sha256": "a6903cb40b130c60c444a0407911bf6a161e1328246934fa1e482a1a2ce17836"
+      },
+      "test": {
+        "path": "data/test-b4.json",
+        "sha256": "b12b3a832d4edcaee9d904c28eab451c6b1a3c96972e2d4ca2704e81947613fd"
+      }
+    },
+    "5": {
+      "search": {
+        "path": "data/search-b5.json",
+        "sha256": "38f8edb4770742f87921830568b91ef948b94bcf6bf050271f8da2f015eea380"
+      },
+      "test": {
+        "path": "data/test-b5.json",
+        "sha256": "40bf675688a0b6d04c7c79ee379ca17d4061678ae1cee554cd2078c9c4ed5a4f"
+      }
+    },
+    "6": {
+      "search": {
+        "path": "data/search-b6.json",
+        "sha256": "f8b02b54ef72ea0842c0871abb1e0baddeb016f358989958776d4849189c73d9"
+      },
+      "test": {
+        "path": "data/test-b6.json",
+        "sha256": "8a1047a0af4556138a24099ea3e426f5f99a9111f564534cdf7bea6b3fceb75b"
+      }
+    }
+  },
+  "splits": {
+    "3": {
+      "probe": {
+        "count": 12,
+        "sha256": "a7bceda0739bd5c723c5110e822304ca4f406616160a86cff7e88d85bc659344"
+      },
+      "validation": {
+        "count": 36,
+        "sha256": "3db0816b4d112c3323f0ac23fc87800f8cebab3032b4542bf45f57a1efa4dcd1"
+      },
+      "test": {
+        "count": 60,
+        "sha256": "ceb3afab2948ff8291c008e574fc40a47a4a25cd28235de5a7bd7ac86ee8b2ac"
+      }
+    },
+    "4": {
+      "probe": {
+        "count": 12,
+        "sha256": "185ebc71997d75a890f26015f6b5011b28c9670f4a4445e8eed6ab2c26cb19a9"
+      },
+      "validation": {
+        "count": 36,
+        "sha256": "9c31749818650db7aecfb266c6ad5b367fd13ae74d9c87db7cc5776ccb589ae9"
+      },
+      "test": {
+        "count": 60,
+        "sha256": "5bfda3c121a1889b0d9778d2831fb26134cd61945949e8b099d06849500c38fd"
+      }
+    },
+    "5": {
+      "probe": {
+        "count": 12,
+        "sha256": "3930c0f2b65f2e6f36edf3ee656df42b47857c46e00284f1dfde6c3c5b8da93d"
+      },
+      "validation": {
+        "count": 36,
+        "sha256": "3c282f0f3a7903a6b9976fc52a208b3ff9705eafcae9c5614401b6a2334b6ad7"
+      },
+      "test": {
+        "count": 60,
+        "sha256": "47106b1acb7e57f2734cc5f7dc0d301534c362f6317f99533d949234097c30fd"
+      }
+    },
+    "6": {
+      "probe": {
+        "count": 12,
+        "sha256": "c8d48d890ff059de039690ecc034913ccdd0702452f85608757e8c87a53f5853"
+      },
+      "validation": {
+        "count": 36,
+        "sha256": "bc5dec56718877c5273fc1be869c5f4b411cd973823734f96101c41b23eaf541"
+      },
+      "test": {
+        "count": 60,
+        "sha256": "25afbe931f1b2dd748ba211532bf394a17cf6ddcf995ee904b9453c91a8d44e4"
+      }
+    }
+  },
+  "jobs": [
+    {
+      "job_id": "minimax-relational_branch-b4",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 4,
+      "search_seed": 4,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b3",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 3,
+      "search_seed": 3,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-relational_branch-b3",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 3,
+      "search_seed": 3,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "alibaba-relational_branch-b4",
+      "provider": "alibaba-token-plan-cn",
+      "model": "qwen3.7-plus",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 4,
+      "search_seed": 4,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b6",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 6,
+      "search_seed": 6,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "alibaba-relational_branch-b6",
+      "provider": "alibaba-token-plan-cn",
+      "model": "qwen3.7-plus",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 6,
+      "search_seed": 6,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b5",
+      "provider": "alibaba-token-plan-cn",
+      "model": "qwen3.7-plus",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 5,
+      "search_seed": 5,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b6",
+      "provider": "alibaba-token-plan-cn",
+      "model": "qwen3.7-plus",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 6,
+      "search_seed": 6,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "alibaba-relational_branch-b3",
+      "provider": "alibaba-token-plan-cn",
+      "model": "qwen3.7-plus",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 3,
+      "search_seed": 3,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b5",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 5,
+      "search_seed": 5,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-relational_branch-b6",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 6,
+      "search_seed": 6,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b3",
+      "provider": "alibaba-token-plan-cn",
+      "model": "qwen3.7-plus",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 3,
+      "search_seed": 3,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "alibaba-relational_branch-b5",
+      "provider": "alibaba-token-plan-cn",
+      "model": "qwen3.7-plus",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 5,
+      "search_seed": 5,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b4",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 4,
+      "search_seed": 4,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b4",
+      "provider": "alibaba-token-plan-cn",
+      "model": "qwen3.7-plus",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 4,
+      "search_seed": 4,
+      "steps": 8,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-relational_branch-b5",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 5,
+      "search_seed": 5,
+      "steps": 8,
+      "token_budget": null
+    }
+  ],
+  "program_hash_format": "chapter6-priority-ast-json-v1",
+  "new_model_calls": 0,
+  "overlap_check": {
+    "old_instances": 324,
+    "new_instances": 432,
+    "id_or_exact_coordinate_collisions": 0,
+    "geometric_equivalence_checked": false
+  },
+  "manifest_sha256": "8cb6202eb61ffd47fb9e3a7929dafff4ba8bfcc2d21e5f445df7df678be522d7"
+}

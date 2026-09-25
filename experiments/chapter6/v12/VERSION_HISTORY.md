@@ -31,3 +31,8 @@ The 16-run follow-up is an unexecuted draft using fresh blocks 3–6. It require
 The post-hoc audit state replay was corrected in a follow-up patch. Tag
 chapter6-v1.2.1-mechanism-only-20260924-r1 is the latest v1.2.1 audit release;
 the earlier mechanism-only tag remains immutable.
+
+2026-09-25, v1.2.2 readiness erratum: the current r2 checksum list now contains
+23 tracked release files. Two untracked analysis_code/__pycache__ entries were
+removed from the list. No original ZIP, numeric outcome, frozen controller or
+historical tag was changed. See ../v12_2/CHANGELOG.md for the independent runner.

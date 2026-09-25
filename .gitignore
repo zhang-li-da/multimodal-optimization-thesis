@@ -14,5 +14,9 @@ venv/
 *.log
 experiments/chapter6/v11/screening-*/
 experiments/chapter6/v12/screening-*/
+experiments/chapter6/v12_2/local-*/
+replay-local/
+readiness-tests.xml
+identity-local.json
 .DS_Store
 Thumbs.db

@@ -1,0 +1,3002 @@
+{
+  "scope": "Local evaluation replay, not evidence of successful verification on an untested OS.",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.5",
+  "model_calls": 0,
+  "source_fingerprint": "ecb43ba979653ee02f7b70a553ae7b171a44072a7c0bfe94a2e048cfa35ef55b",
+  "instance_snapshot_sha256": "00e6966c4a5c16d47e8c270ec4c5e7606f618fe8a29463dcb34aa0780ead497f",
+  "tolerances": {
+    "absolute": 1e-12,
+    "relative": 1e-10,
+    "numeric_fields": [
+      "family_loss",
+      "loss",
+      "per_instance_loss",
+      "per_instance_value",
+      "trajectory_values"
+    ]
+  },
+  "ignored_fields": [
+    "cpu_seconds",
+    "wall_seconds"
+  ],
+  "program_evaluations": 330,
+  "validation_programs": 198,
+  "test_programs": 132,
+  "strict_equal": 330,
+  "within_numeric_contract": 330,
+  "decision_errors": [],
+  "evaluations": [
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 9,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 6,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 10,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 8,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b0",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 10,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 3,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 9,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 7,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b0",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 8,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 3,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 10,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 9,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b0",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 10,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 8,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 7,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b0",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b0",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 3,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b0",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 8,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 9,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 7,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b1",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 3,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 9,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 6,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b1",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 8,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 6,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 9,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 10,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b1",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 8,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 9,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b1",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 3,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 7,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 9,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 8,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 10,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b1",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b1",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 10,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche-b2",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 3,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 9,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 10,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-niche_fixed_dev-b2",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 3,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 6,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 8,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 7,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "alibaba-relational_branch-b2",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 3,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 6,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 9,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 10,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche-b2",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 7,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 6,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 4,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 8,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 10,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 9,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b2",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 0,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 1,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 2,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 3,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 4,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 5,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 6,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 7,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 8,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 9,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 10,
+      "split": "validation",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 8,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 3,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 5,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 1,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 2,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 10,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    },
+    {
+      "job_id": "minimax-relational_branch-b2",
+      "node_id": 0,
+      "split": "test",
+      "exact_mismatches": [],
+      "numeric_differences": [],
+      "strict_equal": true,
+      "within_numeric_contract": true
+    }
+  ],
+  "passed": true
+}

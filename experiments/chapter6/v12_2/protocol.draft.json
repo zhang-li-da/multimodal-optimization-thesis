@@ -1,0 +1,23 @@
+{
+  "status": "DRAFT_NOT_PREREGISTERED",
+  "review_commit": "2a870dd45612a90ce8fc653f4276181a90b9d4cf",
+  "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+  "controllers": ["niche_fixed_dev", "relational_branch"],
+  "models": [["alibaba-token-plan-cn", "qwen3.7-plus"], ["minimax-cn-coding-plan", "MiniMax-M3"]],
+  "blocks": [3, 4, 5, 6],
+  "order_seed": 9241201,
+  "steps": 8,
+  "token_budget": null,
+  "temperature": 0.7,
+  "planner_max_tokens": 1800,
+  "coder_max_tokens": 2000,
+  "timeout_seconds": 120,
+  "provider_immutable_versions": null,
+  "primary_contrast": "validation-selected test gap: relational_branch minus niche_fixed_dev",
+  "repeated_unit": "data block; model observations remain paired within each block",
+  "minimum_practical_gain_percentage_points": null,
+  "maximum_acceptable_token_increase_fraction": null,
+  "failure_policy": "No replacement proposals or automatic POST retries. Indeterminate requests stop their run. Missing usage stays null.",
+  "selection_quality_policy": "Competitive at admission; do not re-gate existing B entries. Record selection-time gap.",
+  "selector": "excluded; independent portfolio study required"
+}
