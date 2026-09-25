@@ -1,0 +1,442 @@
+{
+  "review_version": "review-v122.1",
+  "review_date": "2026-09-25",
+  "reviewed_commit": "44bafd2344d6a25e247c93c62280e6bf20e5e508",
+  "review_new_model_calls": 0,
+  "review_new_search_runs": 0,
+  "local_tests": {
+    "tests": "74",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "19.305",
+    "timestamp": "2026-09-25T17:37:49.946420+05:30"
+  },
+  "test_command": "python -m pytest experiments/chapter6/v12_2 experiments/chapter6/v12_1 experiments/chapter6/v12/test_v12.py experiments/chapter6/v11/test_v11.py -q",
+  "local_python": "3.12.14",
+  "checksums": {
+    "v122": {
+      "entries": 194,
+      "matching": 194,
+      "failed": [],
+      "unlisted_tracked_files": [],
+      "listed_untracked_files": [],
+      "passed": true
+    },
+    "r2": {
+      "entries": 23,
+      "matching": 23,
+      "failed": [],
+      "unlisted_tracked_files": [],
+      "listed_untracked_files": [],
+      "passed": true
+    }
+  },
+  "published_source_fingerprint": "ec1a3b7c784992b6324e64c28b7b506692b1fbfc217287bf7a995953dc258825",
+  "current_source_fingerprint": "ec1a3b7c784992b6324e64c28b7b506692b1fbfc217287bf7a995953dc258825",
+  "source_fingerprint_matches_published": true,
+  "published_new_model_calls": 0,
+  "published_new_online_search_runs": 0,
+  "published_fixture_rows": [
+    {
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "fixture_proposals": 8,
+      "fixture_provider_calls": 16,
+      "valid_generated": 7,
+      "restored_state_equal": true,
+      "test_after_readout": true,
+      "test_evaluations": 5,
+      "readout_sha256": "47cb532ad865aed1e7667b99dfcdfb73e0d68c981d12b13c9ebeb8292264cd9a",
+      "model_calls": 0
+    },
+    {
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "fixture_proposals": 8,
+      "fixture_provider_calls": 16,
+      "valid_generated": 7,
+      "restored_state_equal": true,
+      "test_after_readout": true,
+      "test_evaluations": 5,
+      "readout_sha256": "8a1b6678ffac6b16fde1a278320eead4f312d231819e819c3c23f9fd9e5ac241",
+      "model_calls": 0
+    }
+  ],
+  "fixture_summaries": [
+    {
+      "controller": "niche_fixed_dev",
+      "summary": {
+        "branch_pool_capacity": 3,
+        "branch_children_per_entry": 2,
+        "branch_admissions": 2,
+        "branch_development_attempts": 4,
+        "valid_branch_children": 4,
+        "parent_improving_branch_children": 1,
+        "branch_development_successful_extensions": 1,
+        "branch_development_max_attempt_depth": 3,
+        "branch_development_max_success_depth": 2,
+        "multi_branch_slots": 1,
+        "ordinary_scheduler": "shared_niche",
+        "working_memory_policy": "disabled",
+        "fixed_development_order": "fifo_until_exhaustion",
+        "completed_proposals": 8,
+        "best_validation_loss": 0.0582290764382379,
+        "valid_generated": 7,
+        "model_calls": 0,
+        "fixture_calls": 16,
+        "family_differentiated_branch_slots": 0,
+        "full_vs_gain_choice_differences": 0,
+        "evaluation_cpu_seconds": 6.234375,
+        "feature_calls": 43680,
+        "local_checks": 11520
+      },
+      "execution_mode": "fixture"
+    },
+    {
+      "controller": "relational_branch",
+      "summary": {
+        "branch_pool_capacity": 3,
+        "branch_children_per_entry": 2,
+        "branch_admissions": 2,
+        "branch_development_attempts": 4,
+        "valid_branch_children": 4,
+        "parent_improving_branch_children": 1,
+        "branch_development_successful_extensions": 1,
+        "branch_development_max_attempt_depth": 3,
+        "branch_development_max_success_depth": 2,
+        "multi_branch_slots": 1,
+        "ordinary_scheduler": "shared_niche",
+        "working_memory_policy": "disabled",
+        "fixed_development_order": "fifo_until_exhaustion",
+        "completed_proposals": 8,
+        "best_validation_loss": 0.0582290764382379,
+        "valid_generated": 7,
+        "model_calls": 0,
+        "fixture_calls": 16,
+        "family_differentiated_branch_slots": 0,
+        "full_vs_gain_choice_differences": 0,
+        "evaluation_cpu_seconds": 1.640625,
+        "feature_calls": 43680,
+        "local_checks": 11520
+      },
+      "execution_mode": "fixture"
+    }
+  ],
+  "r2_recomputed_from_archived_csv": {
+    "rows": 18,
+    "mean_test_gap_fraction": {
+      "niche": 0.05759344901347461,
+      "niche_fixed_dev": 0.05568540686289758,
+      "relational_branch": 0.06379383280150107
+    },
+    "relational_minus_fixed_percentage_points": 0.8108425938603494,
+    "relational_better_pairs": 1,
+    "pairs": 6,
+    "model_calls": 288,
+    "tokens": 392242
+  },
+  "mechanism_cases_reexecuted_no_api": [
+    {
+      "fixture": true,
+      "bad_tag": "local_distance",
+      "controller": "niche_fixed_dev",
+      "selected_parent_id": 2,
+      "exposure": {
+        "branch_slot": true,
+        "entries": [
+          {
+            "node_id": 2,
+            "parent_id": 1,
+            "tag": "local_distance",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 0,
+            "family_priority": 0.4,
+            "family_observations": 3,
+            "family_fallback": false,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          },
+          {
+            "node_id": 3,
+            "parent_id": 1,
+            "tag": "return_aware",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 1,
+            "family_priority": 0.5,
+            "family_observations": 1,
+            "family_fallback": true,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          }
+        ],
+        "multi_branch_slot": true,
+        "distinct_available_tags": 2,
+        "family_priority_varies": true,
+        "full_rank_parent_id": 3,
+        "gain_only_parent_id": 2,
+        "full_vs_gain_choice_differs": true,
+        "selected_parent_gap_to_best": 0.03
+      }
+    },
+    {
+      "fixture": true,
+      "bad_tag": "local_distance",
+      "controller": "relational_branch",
+      "selected_parent_id": 3,
+      "exposure": {
+        "branch_slot": true,
+        "entries": [
+          {
+            "node_id": 2,
+            "parent_id": 1,
+            "tag": "local_distance",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 0,
+            "family_priority": 0.4,
+            "family_observations": 3,
+            "family_fallback": false,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          },
+          {
+            "node_id": 3,
+            "parent_id": 1,
+            "tag": "return_aware",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 1,
+            "family_priority": 0.5,
+            "family_observations": 1,
+            "family_fallback": true,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          }
+        ],
+        "multi_branch_slot": true,
+        "distinct_available_tags": 2,
+        "family_priority_varies": true,
+        "full_rank_parent_id": 3,
+        "gain_only_parent_id": 2,
+        "full_vs_gain_choice_differs": true,
+        "selected_parent_gap_to_best": 0.03
+      }
+    },
+    {
+      "fixture": true,
+      "bad_tag": "return_aware",
+      "controller": "niche_fixed_dev",
+      "selected_parent_id": 2,
+      "exposure": {
+        "branch_slot": true,
+        "entries": [
+          {
+            "node_id": 2,
+            "parent_id": 1,
+            "tag": "local_distance",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 0,
+            "family_priority": 0.5,
+            "family_observations": 1,
+            "family_fallback": true,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          },
+          {
+            "node_id": 3,
+            "parent_id": 1,
+            "tag": "return_aware",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 1,
+            "family_priority": 0.4,
+            "family_observations": 3,
+            "family_fallback": false,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          }
+        ],
+        "multi_branch_slot": true,
+        "distinct_available_tags": 2,
+        "family_priority_varies": true,
+        "full_rank_parent_id": 2,
+        "gain_only_parent_id": 2,
+        "full_vs_gain_choice_differs": false,
+        "selected_parent_gap_to_best": 0.03
+      }
+    },
+    {
+      "fixture": true,
+      "bad_tag": "return_aware",
+      "controller": "relational_branch",
+      "selected_parent_id": 2,
+      "exposure": {
+        "branch_slot": true,
+        "entries": [
+          {
+            "node_id": 2,
+            "parent_id": 1,
+            "tag": "local_distance",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 0,
+            "family_priority": 0.5,
+            "family_observations": 1,
+            "family_fallback": true,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          },
+          {
+            "node_id": 3,
+            "parent_id": 1,
+            "tag": "return_aware",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 1,
+            "family_priority": 0.4,
+            "family_observations": 3,
+            "family_fallback": false,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          }
+        ],
+        "multi_branch_slot": true,
+        "distinct_available_tags": 2,
+        "family_priority_varies": true,
+        "full_rank_parent_id": 2,
+        "gain_only_parent_id": 2,
+        "full_vs_gain_choice_differs": false,
+        "selected_parent_gap_to_best": 0.03
+      }
+    },
+    {
+      "fixture": true,
+      "bad_tag": "hybrid",
+      "controller": "niche_fixed_dev",
+      "selected_parent_id": 2,
+      "exposure": {
+        "branch_slot": true,
+        "entries": [
+          {
+            "node_id": 2,
+            "parent_id": 1,
+            "tag": "local_distance",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 0,
+            "family_priority": 0.5,
+            "family_observations": 1,
+            "family_fallback": true,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          },
+          {
+            "node_id": 3,
+            "parent_id": 1,
+            "tag": "return_aware",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 1,
+            "family_priority": 0.5,
+            "family_observations": 1,
+            "family_fallback": true,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          }
+        ],
+        "multi_branch_slot": true,
+        "distinct_available_tags": 2,
+        "family_priority_varies": false,
+        "full_rank_parent_id": 2,
+        "gain_only_parent_id": 2,
+        "full_vs_gain_choice_differs": false,
+        "selected_parent_gap_to_best": 0.03
+      }
+    },
+    {
+      "fixture": true,
+      "bad_tag": "hybrid",
+      "controller": "relational_branch",
+      "selected_parent_id": 2,
+      "exposure": {
+        "branch_slot": true,
+        "entries": [
+          {
+            "node_id": 2,
+            "parent_id": 1,
+            "tag": "local_distance",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 0,
+            "family_priority": 0.5,
+            "family_observations": 1,
+            "family_fallback": true,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          },
+          {
+            "node_id": 3,
+            "parent_id": 1,
+            "tag": "return_aware",
+            "loss": 0.11,
+            "parent_gain": 0.009999999999999995,
+            "remaining": 2,
+            "attempts": 0,
+            "depth": 1,
+            "created_order": 1,
+            "family_priority": 0.5,
+            "family_observations": 1,
+            "family_fallback": true,
+            "gain_term": 0.009999999999999995,
+            "selection_time_gap_to_best": 0.03
+          }
+        ],
+        "multi_branch_slot": true,
+        "distinct_available_tags": 2,
+        "family_priority_varies": false,
+        "full_rank_parent_id": 2,
+        "gain_only_parent_id": 2,
+        "full_vs_gain_choice_differs": false,
+        "selected_parent_gap_to_best": 0.03
+      }
+    }
+  ],
+  "scope": "74 tests, checksum verification, stored CSV reaggregation and synthetic mechanism cases were rerun. The published 330 program evaluations were not independently rerun during this review."
+}
