@@ -1,0 +1,2041 @@
+{
+  "archive": "raw-study.zip",
+  "sha256": "4486551a4309c649ad71e4b0c744ccc66dfe76becdfbf2ace3cab5c6ba6cfbd0",
+  "bytes": 1102405,
+  "file_count": 508,
+  "verified_files": 508,
+  "files": {
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/manifest.json": {
+      "sha256": "72f67767d8c8b3d6d92deb3d6628b2351427c0175582e36f0d935fc7186ef3c4",
+      "bytes": 143930
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/progress.json": {
+      "sha256": "c0e7e182e6240c227aadd3d664d91b7eb48c9329471cca082f4d22d47acf500b",
+      "bytes": 66267
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/run_result.json": {
+      "sha256": "16d400cbdc2dadc14392206321f8d628defa239797824dea2a1c72f1a4bb1aff",
+      "bytes": 690
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r0/calls/000-coder/raw_response.json": {
+      "sha256": "740e2651fcd1d25287548524d71905fb150a258f2e54900be1ef0aae0ef43993",
+      "bytes": 5319
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r0/calls/000-coder/request.json": {
+      "sha256": "0f0ff2ba96115192b9ca879bbaf251e39848cb1f4dd9b4e9b9aceb2119e9f25e",
+      "bytes": 2514
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r0/calls/000-coder/response.json": {
+      "sha256": "4c2d04f41bfd66d20c1e66f1c33c5476778cdb4da517953a6901cf394d5657fc",
+      "bytes": 3642
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r0/calls/000-coder/state.json": {
+      "sha256": "d7a6643b39092ed268355459dbf0b714b39bd7c4faa35252bb7e08de41e3d5c6",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r0/config.json": {
+      "sha256": "765ade837d1c249b44aff0ff36a94e72c3c4533be1468ad33dfb4702f0bdb168",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r0/outcome.json": {
+      "sha256": "cb9207254d56b0c2d8e874e178ea6d415794197dd7870c8ef44825e76244f844",
+      "bytes": 676
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r1/calls/000-coder/raw_response.json": {
+      "sha256": "3b65ac72c815d97b6e3409920ea569633157fbf863e63cfe83a941eeb552c8da",
+      "bytes": 10604
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r1/calls/000-coder/request.json": {
+      "sha256": "a4b6b835077ad8227ad56cf29182c3334e939cf95ada5f281dca0d66fabd2a26",
+      "bytes": 2517
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r1/calls/000-coder/response.json": {
+      "sha256": "e2823e90bd72f4f8a25f782ea0c7ab47cd11b4d7965ddf2e8bc4c768d30ccb08",
+      "bytes": 7607
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r1/calls/000-coder/state.json": {
+      "sha256": "e4939dd6498a2a8536c106aa0dbda7103b5eb835134a525f503267991f9b407f",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r1/config.json": {
+      "sha256": "728078875b86123ffa2d7d113c7abeadb27e2da73f84d6052d28fc11cade5db9",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r1/outcome.json": {
+      "sha256": "eb7da49e420d403413f65d1510e87e1690a3eb2b027dc319d6ce86c1ef845a28",
+      "bytes": 676
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r2/calls/000-coder/raw_response.json": {
+      "sha256": "deb1243137589e04e82620f26c482a0d60cae293f29c4c69926af940e4f15551",
+      "bytes": 18107
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r2/calls/000-coder/request.json": {
+      "sha256": "2703a13fe5dd2096b53274d8ee8dc02c9f095e057858db6c584bd21529f748d5",
+      "bytes": 2517
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r2/calls/000-coder/response.json": {
+      "sha256": "fcea8466347cf565f74e4f170c96fba86cd87934bedb704794602a8f7ad564d4",
+      "bytes": 13214
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r2/calls/000-coder/state.json": {
+      "sha256": "ed334f32ebce7497c10dd41ab16f11ecc878ed43be397d12e614dc0e85ffcbd3",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r2/config.json": {
+      "sha256": "8081b2220340cd9e83e85a3ce346fe38fd13ff1ab9a78c0bfa52f3653d217730",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r2/outcome.json": {
+      "sha256": "a428faefe4d588942e616512b15e17d5304fadbcfefe09f29cf45055354e21bf",
+      "bytes": 678
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r3/calls/000-coder/raw_response.json": {
+      "sha256": "01c6e68e31ccb8333a5778902855764798219adb43d48d754fde67d77792213f",
+      "bytes": 10586
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r3/calls/000-coder/request.json": {
+      "sha256": "9a0b145beae59a8f542f29fae84d077d16e2e14f137e22e1b90b3c9d2c45657c",
+      "bytes": 2517
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r3/calls/000-coder/response.json": {
+      "sha256": "226fc15798ac45511591de516031922f24c6cefe39834c924278d00667cad256",
+      "bytes": 7591
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r3/calls/000-coder/state.json": {
+      "sha256": "0106d7b5ac414399f12e10bc6c2b19a237fff61d1d6d9dea1212d278715b4499",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r3/config.json": {
+      "sha256": "defc29f7daa7fa27dd69882173b0958bc4a85b7ba99f1d38080e80d214a929db",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r3/outcome.json": {
+      "sha256": "3cd7f838cc19da33fcf3c5f77ba513107dd5887cf044448e1d74500bfc1479bb",
+      "bytes": 677
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r4/calls/000-coder/raw_response.json": {
+      "sha256": "69bb714756de66799e74f818200f498792225a1ee547a73d41fc4d76e1014e9a",
+      "bytes": 8372
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r4/calls/000-coder/request.json": {
+      "sha256": "1c4e1c65dcb1ce7b40a63c4e660cfdd2aadae59117bc94ebeccd46e3b6cef635",
+      "bytes": 2517
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r4/calls/000-coder/response.json": {
+      "sha256": "9f49f019ec22fb7f34c6d1265bf9d67c58613ec71974c8bc12ba3eb05adaa9e6",
+      "bytes": 5932
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r4/calls/000-coder/state.json": {
+      "sha256": "09c4b2188926734150992ef895939f619ef207c30633f742176eb7ac95e58211",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r4/config.json": {
+      "sha256": "7295d619225e783596b54471c3f5f625ca1b1f14a1eaf7ff817c040059e78bfe",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r4/outcome.json": {
+      "sha256": "d6236eb1075bd7c4752fbc1d597ef1345c26de1fe004cae83ff4700fd9380eec",
+      "bytes": 676
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r5/calls/000-coder/raw_response.json": {
+      "sha256": "0e5619f2ec3310fec8e352b82d398594ab0fc31c4cab549caac165b736e73a12",
+      "bytes": 6831
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r5/calls/000-coder/request.json": {
+      "sha256": "c55abd7127a05436e81c3539effdb78f4bfb8380eee6d38bc05e0615432669bf",
+      "bytes": 2516
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r5/calls/000-coder/response.json": {
+      "sha256": "6eeb66dd41702f318c10fe40391628a499dc03101e8d61224cef24254268b600",
+      "bytes": 4775
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r5/calls/000-coder/state.json": {
+      "sha256": "dd7870570fdbd1ecb13cbdbfcc8ee32e90b0842e1c93708ead7eb5f867fd78ab",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r5/config.json": {
+      "sha256": "5fc5434d94667cc0491368d7ee55b51d8f552dff61b46982569a90751613c28d",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t0-r5/outcome.json": {
+      "sha256": "e541d7f30f8c27abe45202a6f886f7418c8193ba7ff0ca341e91b0ac864aa05b",
+      "bytes": 675
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r0/calls/000-coder/raw_response.json": {
+      "sha256": "ae97cedc97ba800b4b5aee534882faa3435abe9556da53ab533ffdfcbc6ee937",
+      "bytes": 7655
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r0/calls/000-coder/request.json": {
+      "sha256": "6414f33e0bb8feafd9111eb36e16624ed58140d6f358ae01821f6c8b9baa7fdb",
+      "bytes": 2606
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r0/calls/000-coder/response.json": {
+      "sha256": "600c2c7e5b3ee97a6c083c5bc42f6bf60436d94c7c70a98ff9e6dce5f55c204e",
+      "bytes": 5394
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r0/calls/000-coder/state.json": {
+      "sha256": "5fde6ef48f465b2bec39de1c6ae6a696b2734260e8bdf4fa653453af32ca4225",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r0/config.json": {
+      "sha256": "a5a8c6281b90a272045425f56dd66bbf6ec6a6edfd97dc70a42a89a589358022",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r0/outcome.json": {
+      "sha256": "8bcb3365abb56fdd5172809115ebb59a9d0b3e6d9b64e5b859eb3298bf7dfd0b",
+      "bytes": 681
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r1/calls/000-coder/raw_response.json": {
+      "sha256": "1dccc24335cbbbde42eae3bbee568cd73c39254fce33d64472e8646ec728756b",
+      "bytes": 9443
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r1/calls/000-coder/request.json": {
+      "sha256": "ad295d5b6b35a7b22cbaf3a2fe5a57fefb52216bdbe06dd5c13740f4f907aded",
+      "bytes": 2609
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r1/calls/000-coder/response.json": {
+      "sha256": "49b3288543bfca4e2a9c9f6665425d5da5d3ca1f384f900046afdd3598e34767",
+      "bytes": 6735
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r1/calls/000-coder/state.json": {
+      "sha256": "e3615c65887ea13e13f3c857b0364e642e5520bfb2b976559275c90d14495682",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r1/config.json": {
+      "sha256": "786ebe53ca76c8f16fba30c0740c2148a7776568a69c780ca317735d821c86d3",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r1/outcome.json": {
+      "sha256": "d3df86de5ed0114ec10d4b3adb823193686b4ea8b0a195d7906788df365aecac",
+      "bytes": 681
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r2/calls/000-coder/raw_response.json": {
+      "sha256": "1aea82be6eb9bcd3d0c5e32713df444b829b0cf6f9ab3b26a28cbef88ac0d1f1",
+      "bytes": 11343
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r2/calls/000-coder/request.json": {
+      "sha256": "cba569d369830da0e4c475f4a4b321c60f33260ea6267d2e5c43a9b3142592d3",
+      "bytes": 2609
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r2/calls/000-coder/response.json": {
+      "sha256": "f01a9f3767f60ff1382789a4d8471ddf470981de6a4cd13374a892313d583d61",
+      "bytes": 8160
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r2/calls/000-coder/state.json": {
+      "sha256": "507ad8139f784b4627fab80c9c6b1eb7219755ebc44631b51c8fe72bac0324a6",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r2/config.json": {
+      "sha256": "da0286fb8a53feae728d9f87d1625210a650bafc0cce17907287241e4b7cc954",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r2/outcome.json": {
+      "sha256": "d865dea9ed3c494bc8b7919f46195f08b98aaca6b465817a79bb9ac6e7fe0c66",
+      "bytes": 681
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r3/calls/000-coder/raw_response.json": {
+      "sha256": "2eebd2fc1e0fd32aba5cc4962d3e3c5b1abaec27e306c77ef2e62823c1cbc2c4",
+      "bytes": 15096
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r3/calls/000-coder/request.json": {
+      "sha256": "5885a136e7b56d479ef20c5f44c834809343598c3d4f2ac61306d78ea044936a",
+      "bytes": 2609
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r3/calls/000-coder/response.json": {
+      "sha256": "644b35a187de4ad2976558282ce57846a203e4e88fe32a1b296a186b81e09854",
+      "bytes": 10974
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r3/calls/000-coder/state.json": {
+      "sha256": "cf3455797fc3cb3e6acdc303c7af5dc8dbbd30e03297a43baa4cc50fecb5247c",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r3/config.json": {
+      "sha256": "87153047f32c7276f5ccdc4484575cbf4fc5b5d34325b1f88b603ebca2d31b53",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r3/outcome.json": {
+      "sha256": "5963cceeff09beddcf5ec50146c50db1eab51db0f2f4baefc0a4ae5b7b07c91e",
+      "bytes": 679
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r4/calls/000-coder/raw_response.json": {
+      "sha256": "b18ad8fa4a8ddffb7ec7becce33468b24e86448a27871a36b202cf5714b3863f",
+      "bytes": 6379
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r4/calls/000-coder/request.json": {
+      "sha256": "00ef6b484a3dacf5a006fd2114a3894c96c9aa234654bd2c8dd663bdd1b0e8a5",
+      "bytes": 2609
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r4/calls/000-coder/response.json": {
+      "sha256": "089125ab9ff9315873f3ebd800deeb6f23dc181fc8134bac0c9d9ed8d697ed95",
+      "bytes": 4418
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r4/calls/000-coder/state.json": {
+      "sha256": "bc40b011a4b6552ef7c8fccb32a1bd6a778c9db8aabea5690b602013225f03a5",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r4/config.json": {
+      "sha256": "d9749bc32bd3eb80ef595e345b74428faaa5b17ff6eb120950c9e2c48906efec",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r4/outcome.json": {
+      "sha256": "93ba404079d253ee38dbbc1ead92e24163b453d52694492d9df58a3385c81b42",
+      "bytes": 681
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r5/calls/000-coder/raw_response.json": {
+      "sha256": "f6d43fad2acf678ba17e4a177028a9883f3ce373e38824b37fbfad791b696a28",
+      "bytes": 7655
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r5/calls/000-coder/request.json": {
+      "sha256": "425115055e1c4d4351c4c99c467046885ea6a9f33b712cbd4d55fc5a0ee32a7b",
+      "bytes": 2608
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r5/calls/000-coder/response.json": {
+      "sha256": "c26eb1b0ee3e516b69584c77033f4828ef5861d9f27aad252f1b97965d49840e",
+      "bytes": 5395
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r5/calls/000-coder/state.json": {
+      "sha256": "a0ab939bf988cd89f1eb26f960082c14e7816b89420db444ad5e4eaaf70dbb06",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r5/config.json": {
+      "sha256": "ab410f9f15ca642fe3ae0507aed0b4c046222cd417cca08438ee7b708fa259d5",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t1-r5/outcome.json": {
+      "sha256": "25497a811d0dc47fa415164493a5202022587544013baacdaca8a0045f08d8fc",
+      "bytes": 681
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r0/calls/000-coder/raw_response.json": {
+      "sha256": "4e92646d95fc8da32af1eec4253cde2b348cf051290cb6e63d8d0365d2c8d296",
+      "bytes": 5715
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r0/calls/000-coder/request.json": {
+      "sha256": "63187990fcd715bc2db9d0e3f90a08fe1e320aa86a13cd7aab4040c2393cbe63",
+      "bytes": 2688
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r0/calls/000-coder/response.json": {
+      "sha256": "d4b5cf7560f0627ddb7bf20e07f6635f45c7b44ba6eecbdcc2a8e0de621aec56",
+      "bytes": 3940
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r0/calls/000-coder/state.json": {
+      "sha256": "98d72d54e0aa005f794af63771c15d00b7478f484332351675fa5417d2833456",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r0/config.json": {
+      "sha256": "d04eea64282b2f970ecae59f8d0ca781e30661d10eea6ae55131392737448f36",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r0/outcome.json": {
+      "sha256": "f4cbcb8930b3427932694bca586a4a5d97fbb6482c7da096dd1d96c48e044f28",
+      "bytes": 681
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r1/calls/000-coder/raw_response.json": {
+      "sha256": "cabe4bef32cdd7cd17e5ae9046e4cc3126d6dc9620f92f663e370515a70c7a92",
+      "bytes": 5291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r1/calls/000-coder/request.json": {
+      "sha256": "2e34a18cc19608bd8e8b13fe74f2cdf12b8943c78d30ff5242cc00976ea69a1a",
+      "bytes": 2691
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r1/calls/000-coder/response.json": {
+      "sha256": "4f207e34d6535dddc9735a371fbb132e4d6422f450ce74a1dea0dfaffa544f80",
+      "bytes": 3620
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r1/calls/000-coder/state.json": {
+      "sha256": "36e852e155aabace4488ba21b7cb27d7abbb7100f3f185bd23f21b4e6f4b0f2c",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r1/config.json": {
+      "sha256": "c6e956b6602217d60cb9a2ef0a3de906d8c05e6f02a126c3bfa1d5fd4f33f47c",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r1/outcome.json": {
+      "sha256": "e796987dc57353b9919fee5308e228814f4d2db01bae8be3a552ccef3512b77f",
+      "bytes": 682
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r2/calls/000-coder/raw_response.json": {
+      "sha256": "a9e0d3f39bb74161185f03cc66937140c600ef1620de672df77040a3a259daa0",
+      "bytes": 4363
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r2/calls/000-coder/request.json": {
+      "sha256": "729c7c5ce642a69c23721f3cdf46acb632f08ee615c9152ee5d52542180c0280",
+      "bytes": 2691
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r2/calls/000-coder/response.json": {
+      "sha256": "87abb5e6cf7b92c41a75d25375360ede8f5993243fcef9e2520f72a1deeaf2eb",
+      "bytes": 2904
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r2/calls/000-coder/state.json": {
+      "sha256": "a7110b2cab2f6b952402774ed8755f5577e9fff509c9a4b217dafad84fb2aa54",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r2/config.json": {
+      "sha256": "2b0599b0a0c8a84193c9567a4a0e0c0df4938f636580c1a59a5dda508f5520d9",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r2/outcome.json": {
+      "sha256": "64792d4932e949b2386c273347cd763badd09f351808d91191f756089f5b379b",
+      "bytes": 683
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r3/calls/000-coder/raw_response.json": {
+      "sha256": "b3738fa360ac58c7794d3412f0405d2a0e6d5f553cfd74e0580b52b9ae880219",
+      "bytes": 11123
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r3/calls/000-coder/request.json": {
+      "sha256": "67e0d346dbcdedcfa06403346ba7d419bbc97568fdd926980bef166022649074",
+      "bytes": 2691
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r3/calls/000-coder/response.json": {
+      "sha256": "8519a0396f2ab891a56b42f17bbd232c5defb1fcd009c2a2cc81436b16d3d2d0",
+      "bytes": 7996
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r3/calls/000-coder/state.json": {
+      "sha256": "a4f4fb891aaf1c2ecc135d3226c91d0b663de95e242bdc633935bb172b07a3dd",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r3/config.json": {
+      "sha256": "4193a1ca21a28ee132363e54a760d28969ebb0242f26bcb0f9c51899acf4e77b",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r3/outcome.json": {
+      "sha256": "679d21cb423ab8eebf96b2624dba26a4148615e31760382821f59572fc40748c",
+      "bytes": 684
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r4/calls/000-coder/raw_response.json": {
+      "sha256": "e842cdcc33db5069f99cc1c06b7bdd3ee813119771e31b846b835c02b4e2adf3",
+      "bytes": 9576
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r4/calls/000-coder/request.json": {
+      "sha256": "6c63f6bef02acbdb5599f5af98285f49b633844a50822514a760e5f82ef04935",
+      "bytes": 2691
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r4/calls/000-coder/response.json": {
+      "sha256": "e2a91aa1b8ffa47cb22d8f156eda838262df7359b80d378a8e0a3e6c55105889",
+      "bytes": 6835
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r4/calls/000-coder/state.json": {
+      "sha256": "b55673eb16c72bfd47f2de428e51ceb93965dc9dfa0a16e2942b5f0eb81770b4",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r4/config.json": {
+      "sha256": "44fefaf8f886436c41d80e5aa329b595e797d2382187a3230c94f4ccabfa2211",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r4/outcome.json": {
+      "sha256": "9a175f8243e49482f6590da0c4bb8baeac7a036f7f4dfb5a8372a5285aae26ea",
+      "bytes": 685
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r5/calls/000-coder/raw_response.json": {
+      "sha256": "0c7b30a84bc7c77ed7acd993a07a14b106791565c985d3f21f43984223639712",
+      "bytes": 7015
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r5/calls/000-coder/request.json": {
+      "sha256": "5f613dc98222bd9359d1f5705b7567c44be4979346281962798970bf89f2939a",
+      "bytes": 2690
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r5/calls/000-coder/response.json": {
+      "sha256": "d35271a7b9cf23be1f202cb6717e647763e71b4b3b96993b9ecb5045c5a6cf30",
+      "bytes": 4915
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r5/calls/000-coder/state.json": {
+      "sha256": "4a3749108dd69e69cd82e1d9096c2032c1a3286e175715d51e40a43fe3061a0b",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r5/config.json": {
+      "sha256": "159c9de3e06f8ba5e148c4c343586e13bbed9d2872a4ca6c9b897d236d4bdb24",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-c-t2-r5/outcome.json": {
+      "sha256": "af4a902c9cabb254719268ef1eed4cd8157fee2a9617fbea2d06eec1a62f5e4a",
+      "bytes": 684
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r0/calls/000-planner/raw_response.json": {
+      "sha256": "19de4e4ea9985d9a27bc80c17a1d4989ead503b284cf64d8b1ec9ff66c0f62b3",
+      "bytes": 17315
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r0/calls/000-planner/request.json": {
+      "sha256": "bcdc749fe3af032c52993320022e73fdf0e72777bf8930656620feab065c9cb4",
+      "bytes": 2726
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r0/calls/000-planner/response.json": {
+      "sha256": "bcb3e7a3ace6094f2de6f159b967416675e539f8f8ca1ec1ac3659a8c18315dd",
+      "bytes": 12638
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r0/calls/000-planner/state.json": {
+      "sha256": "be170a1caf9ab96d356f6057309d4bd83c8d53323699eb9a66075ef2e2bb4a11",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r0/config.json": {
+      "sha256": "18e70f1696bd912c000631c551510f2df1e67decb23a250be2058ba5762365dc",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r0/outcome.json": {
+      "sha256": "6a2ec8f365852dbfff4d9e9d0e08d00d234befcf0d5a14a3a57240c7ca5b180a",
+      "bytes": 650
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r1/calls/000-planner/raw_response.json": {
+      "sha256": "d7274f76ab616e83e3f5e067f3d1cfe488fc075b9ba0f2779effed088a6547d8",
+      "bytes": 26931
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r1/calls/000-planner/request.json": {
+      "sha256": "44db187c3d61e3187908401d95479664119aa18620ae54649920c638adf93f67",
+      "bytes": 2727
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r1/calls/000-planner/response.json": {
+      "sha256": "d3df12244c4a39f964e3cb9f6ff4dc8387dc142c7bf45e0760fa3d06dcd70dba",
+      "bytes": 19810
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r1/calls/000-planner/state.json": {
+      "sha256": "acf7d8f8ef7123284d795550baf51f39ddf4e0533023f1d30be44a7a5f0de210",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r1/config.json": {
+      "sha256": "38cf45c2c27848db1c0ee6dc9377de8414432c95c2cd7295fa097fbad23cf52e",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r1/outcome.json": {
+      "sha256": "fe2c45e627fa0415cadf880b1287b7f1ef328e36d1ca9cd944169c1d4d40aea9",
+      "bytes": 686
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r2/calls/000-planner/raw_response.json": {
+      "sha256": "11f99bc35aa7064fb9b62f545946d99378afd4604870484f2bf7881f63f43127",
+      "bytes": 15636
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r2/calls/000-planner/request.json": {
+      "sha256": "977d8eb81167a26de80e30d2aca0e3e303a075b2af2b215d0adb5dfa03fbc8f6",
+      "bytes": 2729
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r2/calls/000-planner/response.json": {
+      "sha256": "f08ad31e25e9d5fd0a3a14cf51bbbabde0be3022b3c2f16f6abdc0d5125d43be",
+      "bytes": 11379
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r2/calls/000-planner/state.json": {
+      "sha256": "353ebe0a8389158907fb023b8376b9adff62a648a8692dee17996a7fc06118e7",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r2/config.json": {
+      "sha256": "c593f9671b8fb011a7461cb634db62adeded12205a1d2fc9a63bdf068c5263bd",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r2/outcome.json": {
+      "sha256": "fc5c1431a51e819b0f4e754b2fce8f4f6b96b0b93d3ea3443a18f262cd9a97c7",
+      "bytes": 654
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r3/calls/000-planner/raw_response.json": {
+      "sha256": "8ca61d3f9200cfe2b1dba9c681abd920674c7e4f777daad44db7cc9ad7729a60",
+      "bytes": 15227
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r3/calls/000-planner/request.json": {
+      "sha256": "22fea9a761e336dbc81f55dae032f77d0400f42300ff6a8db77cdd411b43770e",
+      "bytes": 2728
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r3/calls/000-planner/response.json": {
+      "sha256": "80d7cfc1a80e3e78f259444c03f9b179282d9794c60f4c3d3371850321272452",
+      "bytes": 11072
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r3/calls/000-planner/state.json": {
+      "sha256": "1649744d2030120a5ddac0ac0fd3e09227feb779ea36ed58b35abf760e46dc5c",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r3/config.json": {
+      "sha256": "5d395da3f99a99ae85f487482be0b90ac97b4198c3d1f533c0ef37a623fd70a6",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r3/outcome.json": {
+      "sha256": "ae00994fcde28509e72c1fe738e7fe2a41bc547378b3080273cc9776973d6fc6",
+      "bytes": 650
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r4/calls/000-planner/raw_response.json": {
+      "sha256": "f03800cc56baf1ffcb3d5089b7633128314992f5456ed6692bad4c2a7dc8fa29",
+      "bytes": 19712
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r4/calls/000-planner/request.json": {
+      "sha256": "30bf228d0d9b54f0971f4df792bb87717f623d84222e3eddaaddb85cf5dbfa9c",
+      "bytes": 2729
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r4/calls/000-planner/response.json": {
+      "sha256": "7d4662bc1c05019e58a6f7fa1c32eec514630317a4dde04dd2c75064a7bbda14",
+      "bytes": 14438
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r4/calls/000-planner/state.json": {
+      "sha256": "f41d9ee3952a6c9c3229436edb386e419e0095bc9e69bb9a3d77b5718c48db4b",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r4/config.json": {
+      "sha256": "7d055de6b8e3da7a014612d3756e4792ba63b38b9a8897b5bc7dbd19e603d3ad",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r4/outcome.json": {
+      "sha256": "f6ebf00c617c13e5c03909905aa83394547683ce1d5e99fb2afaf6ee5512cf9a",
+      "bytes": 654
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r5/calls/000-planner/raw_response.json": {
+      "sha256": "39c396e8b3f407ba17e75b88eeb2738a496ae09a35f9de784fcd7da835128d85",
+      "bytes": 25999
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r5/calls/000-planner/request.json": {
+      "sha256": "1b7be394a8e1025db5dbfb0fccd87e70c6f12161c99cfbb67e6adc4bd741967b",
+      "bytes": 2726
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r5/calls/000-planner/response.json": {
+      "sha256": "acd80d8970cc66755fe0c2390569f1cf258ddfbe266858ccfacf4d410d638d18",
+      "bytes": 19153
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r5/calls/000-planner/state.json": {
+      "sha256": "c64a19a2f0e953b0c8d8c3820ba3b7ecefae6e657fc227c292797dbda3f17a41",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r5/config.json": {
+      "sha256": "c30bdfa118e1c9360f56902f026dfb051866afd678f248600251c3283c578ed3",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t0-r5/outcome.json": {
+      "sha256": "c77589d61e7cbb9eec5ecab7b5c579a0612bb74c1ebbc640eb16ccdd73f2a29b",
+      "bytes": 653
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r0/calls/000-planner/raw_response.json": {
+      "sha256": "c887bc15a6cba74a3da98e11d5107a13db2a045ff21c57459f8c724bbe528732",
+      "bytes": 25780
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r0/calls/000-planner/request.json": {
+      "sha256": "64f3a88317d3ab82441b9e3978956dcb9352204c320715bdcc666e1ae2caad28",
+      "bytes": 3108
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r0/calls/000-planner/response.json": {
+      "sha256": "2a23072b1f69b8517ecff3c8f5f526c6ab775179b3e7abf28a36282bd64dfeca",
+      "bytes": 18987
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r0/calls/000-planner/state.json": {
+      "sha256": "d14d182e78ae30a3e5256f441bf2d865e6dab5c81db3446088abb3adf7f2cbaa",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r0/config.json": {
+      "sha256": "ce3c69778a28516c6e86e1ee6673077e9a53adc9ea04899fdc8c59d4fda810a7",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r0/outcome.json": {
+      "sha256": "2909ef8b3e5292a6980c4fee21923c70ed1570e79f205f126d5de71c29d91d66",
+      "bytes": 673
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r1/calls/000-planner/raw_response.json": {
+      "sha256": "db1289c08aa7cc94cd27631cc7af9da4bced053c69af3ba0640a906af7e0f917",
+      "bytes": 23128
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r1/calls/000-planner/request.json": {
+      "sha256": "6555562b69d24631644ee79a6acd543f473d674af07d8d9a6dd39f49286a08dc",
+      "bytes": 3112
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r1/calls/000-planner/response.json": {
+      "sha256": "544e6934e8bb24dc839ebc6279ff709eacb5e928114145b50b5a79313a3d6b55",
+      "bytes": 16999
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r1/calls/000-planner/state.json": {
+      "sha256": "87460964c9c081001d67b703454df0ed715aa2b050cd287b632373768425fc0f",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r1/config.json": {
+      "sha256": "49a0e9778765fc3c7048b2e436526dbf5907018c9398261028235353a00f4e7d",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r1/outcome.json": {
+      "sha256": "4f0a408c31a6183a60a7e402d891b27a6c10a42491395d8cb7242dc1feb0ceff",
+      "bytes": 654
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r2/calls/000-planner/raw_response.json": {
+      "sha256": "63804f3adf849322ad6628fc9df5219960483f9dc66bce62b25dd211175a451b",
+      "bytes": 18464
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r2/calls/000-planner/request.json": {
+      "sha256": "5b84d2f23ab9fb12982b7556347c38c286cc7931412a930c02f361d9f0721992",
+      "bytes": 3111
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r2/calls/000-planner/response.json": {
+      "sha256": "a9bc23df9ae3cb98d45ac289857fffed92c5f9d0d817c1f762ec2c187108f6ce",
+      "bytes": 13502
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r2/calls/000-planner/state.json": {
+      "sha256": "183b71f2bdaadafa1d61f327f6f9a2f383a16d6741bf5ef9a9b5a1ddc2591983",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r2/config.json": {
+      "sha256": "bd6705c2a85d3d6cfcd68d7e279ebdfa4921074e117f1925ddb8a21d2ef5b773",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r2/outcome.json": {
+      "sha256": "7606d73f2c45cc1bf8582d3bda3eb71aacecc4cc1fa9759f3b704cc84916dcd2",
+      "bytes": 657
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r3/calls/000-planner/raw_response.json": {
+      "sha256": "b406cd6deb7c005671c37d58f9dde2f3a567fb44cf52639e0bcc1c400b2a4b57",
+      "bytes": 25108
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r3/calls/000-planner/request.json": {
+      "sha256": "a9d565c3391a0c3f4ed383a28926af6d8b2a36f86ef70fac86e35a87f9b59987",
+      "bytes": 3112
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r3/calls/000-planner/response.json": {
+      "sha256": "4e07adc3450ff6fdb96cd80de8bc643c1071d01591d8d56a02308e5fe3a203e0",
+      "bytes": 18462
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r3/calls/000-planner/state.json": {
+      "sha256": "c8f12e72e4f794ee8523ba3f8ac8864afc1365333365c481ed052d74c29aeec9",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r3/config.json": {
+      "sha256": "64dee910a8d6fae6ca0daa144da9b447ac5e4098b286e25cbbae3cda6c42da0d",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r3/outcome.json": {
+      "sha256": "8ec0755533a72197c2965033e2cc68fb9c75885d3d8aa613b810f6a306d803a9",
+      "bytes": 689
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r4/calls/000-planner/raw_response.json": {
+      "sha256": "3ff3cb6e9bc8068e8de875d20bbdc97a28d13a472e5094a9d0ca5a7f86f457f9",
+      "bytes": 16511
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r4/calls/000-planner/request.json": {
+      "sha256": "1364cb850fdac82b7fdcd6fdea298c6cc33cddd7e2348ae09eeb9e6268d15b59",
+      "bytes": 3109
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r4/calls/000-planner/response.json": {
+      "sha256": "504be2f0ecad4aab1b789ee22ee1e319210d6ffa39f64fe1869d3d86ff63faba",
+      "bytes": 12037
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r4/calls/000-planner/state.json": {
+      "sha256": "47c358cde85f478ff2c10c1f4d9715653b4e9f75659130c8878a8c6615c8d5db",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r4/config.json": {
+      "sha256": "370052757d001e8366cddedd6e4251225a3ad96df7c9c5e12b2e409593f1c353",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r4/outcome.json": {
+      "sha256": "a14e3dc6992407d36705b03e406ff88381d2b9ba3c685dbc0b6ef7fe5f3c8c20",
+      "bytes": 656
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r5/calls/000-planner/raw_response.json": {
+      "sha256": "c72d38a49b50889c0d6f709a72c33f3babdef8c9bcf0e6869c096529bb6dedce",
+      "bytes": 26238
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r5/calls/000-planner/request.json": {
+      "sha256": "fa676bc6bab22bf857ddc80eecbf951af4345f4556c0d007e86d6cafe053be83",
+      "bytes": 3116
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r5/calls/000-planner/response.json": {
+      "sha256": "e45d3304c9a18817b0d75395bcc0c6e8536309a41f80cdfb54b2ba88e7a449e4",
+      "bytes": 19328
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r5/calls/000-planner/state.json": {
+      "sha256": "449b4b75fbc8ae2534d2b7e405011bd2158efcd0b1cd1ee9862324203d218ba3",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r5/config.json": {
+      "sha256": "5b37e0f5a34a5eaafc9476727325c818b9d2303c138ad12fbd4c1efe0f3361cc",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t1-r5/outcome.json": {
+      "sha256": "da405ba60fbd87289abcc4ee07289ac0bead178f6279153e5293fc46bb94d9ce",
+      "bytes": 687
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r0/calls/000-planner/raw_response.json": {
+      "sha256": "0920b5b8bafe526e5eb1db969d7592d99c3cb628b967e4fad56cd87ee435cdfb",
+      "bytes": 15168
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r0/calls/000-planner/request.json": {
+      "sha256": "cd54b9db90a57e18d53fa97c6e53b495415260dadb5cd969b421ea3c9d626ff8",
+      "bytes": 3480
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r0/calls/000-planner/response.json": {
+      "sha256": "56b9590fd462fc736e9514f9bd616b50339655d3a670b013efb78bdd9e43541e",
+      "bytes": 11028
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r0/calls/000-planner/state.json": {
+      "sha256": "d7c29a562c058a47074c25d17836f273c51c42ed75bcac500047d0ba5dd438d6",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r0/config.json": {
+      "sha256": "5fd5e37a14ef25263b2a08fba03129810f8171e33f47d8de515cbbaf5f480d91",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r0/outcome.json": {
+      "sha256": "54c721ad4d8cd7d264dbed4088bbbe0ed4f011c570b6a77f9d85b8a2fafb0948",
+      "bytes": 660
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r1/calls/000-planner/raw_response.json": {
+      "sha256": "e3ab8fc6404a2ec19e51741022463b4b01f5b3d42adbc2231609429d0a3781a8",
+      "bytes": 25036
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r1/calls/000-planner/request.json": {
+      "sha256": "534835072941fde33d3d09fea2c165434d9ff7d9fe78231cb2866c2d6600b980",
+      "bytes": 3495
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r1/calls/000-planner/response.json": {
+      "sha256": "492b5dc7790b446033c36a085dfa6a18a29ed0605cc43f7cdd94203ba959bce2",
+      "bytes": 18430
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r1/calls/000-planner/state.json": {
+      "sha256": "507f35325c3b430edaf738f399aff655e683f7a675817840b4bfd561404c74e7",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r1/config.json": {
+      "sha256": "b18c7a2a805b20fe44e3deb997415c4470a92b9af0bdee66aeeae9d314bb6657",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r1/outcome.json": {
+      "sha256": "d2db6a075a6bafd98e47d7a0d35c9fb9e29b2475eba9281c2b612f34babf2bf5",
+      "bytes": 660
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r2/calls/000-planner/raw_response.json": {
+      "sha256": "6cb4db2c0d3a2dac6234de76a028651f2ba7825d767747c6825e29ea1923fbee",
+      "bytes": 20499
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r2/calls/000-planner/request.json": {
+      "sha256": "68d3c52a27f888fc7d4c1df5fd3b8d3c8ea80e4f1c334f734e14ad7d7ba66e97",
+      "bytes": 3483
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r2/calls/000-planner/response.json": {
+      "sha256": "934fe155270a7fd422cbb42560f10492b3f77c5fcc20dbacd1519dcbe64c4c81",
+      "bytes": 15026
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r2/calls/000-planner/state.json": {
+      "sha256": "2621ee07ea0f55c9a0ab87131858f52d2873d8f1899ae8cf5379686a98e43a08",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r2/config.json": {
+      "sha256": "0940c69bbb64898d9ba5b10163fc4cbd2f73d5077a7262dddc7db7f6fe4f22ff",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r2/outcome.json": {
+      "sha256": "31676227ffc3f32529a63da4840c56be12c37f3263c497f2ca3b9b4d6339e841",
+      "bytes": 659
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r3/calls/000-planner/raw_response.json": {
+      "sha256": "23e261e5ed8761141969870b5bc0cf11b5849a52d4c75d5d5da5a1f1a22014ff",
+      "bytes": 17579
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r3/calls/000-planner/request.json": {
+      "sha256": "25d12d18231ca287958ae7e67ae0e074437dad0bb8896b2838f664db8ded54e8",
+      "bytes": 3480
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r3/calls/000-planner/response.json": {
+      "sha256": "7e3612eb445d08e1ee71f808d42b989f0ba430e0473d6a864577002c36b88e25",
+      "bytes": 12818
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r3/calls/000-planner/state.json": {
+      "sha256": "1852790437bc22ce31e969a0beda50158e5f10c1f8f7e1363ad225eeb6973f4d",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r3/config.json": {
+      "sha256": "6fb7660406edbabf58ec5fcf7dffd6d8431957769367754518b8fb6770d114ac",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r3/outcome.json": {
+      "sha256": "436903998140308aaca2df5e07c71a8e8d5d257619233b434569e353ac1fa0a2",
+      "bytes": 659
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r4/calls/000-planner/raw_response.json": {
+      "sha256": "d3eb023253a3fd03a4b3f8aaddfaf507e69a0c75afb3000b556c667939d6b117",
+      "bytes": 7467
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r4/calls/000-planner/request.json": {
+      "sha256": "8f813e647436a9831c525b7786ea7d79eb8a97124bff1d1c89149fcefa20802c",
+      "bytes": 3488
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r4/calls/000-planner/response.json": {
+      "sha256": "4d9a6e62e1ebc94b09878db459991098cb8ec12365e35dd2dbd266d683f7b412",
+      "bytes": 5254
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r4/calls/000-planner/state.json": {
+      "sha256": "664e7b25169d178c20b4ff57dde35b1b07736c4f0c06e4728af16bb3de8d4e8b",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r4/config.json": {
+      "sha256": "93dead14eae793f46c4ce01900d22afcbaeff6c167d133e6f590554c7a2d9db3",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r4/outcome.json": {
+      "sha256": "f80c4621e7bc703fabb2ba00bae808ceeb4b61b6214ade04e2a554d26134651f",
+      "bytes": 658
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r5/calls/000-planner/raw_response.json": {
+      "sha256": "803cd538c9e8a96bb4c8f6e7ca09144110380d27e1ee53a8cbc04d5f1656278e",
+      "bytes": 8599
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r5/calls/000-planner/request.json": {
+      "sha256": "ba7bd92e300ca8f664802feeb1b6899bf846851da7a6320d7c24efb317d361d0",
+      "bytes": 3484
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r5/calls/000-planner/response.json": {
+      "sha256": "11e04eb06743feeff4638f49532ec33ed46e133ef73a2849efaf3e1c1edefc83",
+      "bytes": 6083
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r5/calls/000-planner/state.json": {
+      "sha256": "2d1b8bf726e4618dd7cf7889e157e7968b1cc68cbf324e0d0a404deb611ee369",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r5/config.json": {
+      "sha256": "a25900df43dfb8c4619c32f069abccab9406ac18201cd59c3f6567fe9de2d494",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/acc-p-t2-r5/outcome.json": {
+      "sha256": "33f8b315df6a1ca8e3db699cf089ad6d4ac989dbc7f3c5119be6a1fb8a7e82ea",
+      "bytes": 659
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r0/calls/000-coder/raw_response.json": {
+      "sha256": "96f9219b4fea4469e5dcea40c79eebb87f1b9338998d689ddbba9e2f5b9e488e",
+      "bytes": 9299
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r0/calls/000-coder/request.json": {
+      "sha256": "500e491d002356a58666247f363e1da2eb8a907e594935aed99f87217e34cdaf",
+      "bytes": 2516
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r0/calls/000-coder/response.json": {
+      "sha256": "22eca05cfd49d31d2c6832764ba005303c37f49a70a38d703174f30a7f2c0de7",
+      "bytes": 6628
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r0/calls/000-coder/state.json": {
+      "sha256": "c65644ec4c2d01e570f3448c91da21bafc29217c9270ccf8aac2e2e4fb5cd2ea",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r0/config.json": {
+      "sha256": "8834905b534659111eacdb4b516009d41ef88645982f980b21abd37006e1df6f",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r0/outcome.json": {
+      "sha256": "c6efdc07258056616a2b3a0c92135e8e346d5d52328ec045c765c0ef678226ba",
+      "bytes": 680
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r1/calls/000-coder/raw_response.json": {
+      "sha256": "2ebecba57aa43c6b5b68c333c807dcd502f5620802d8deb800089496343c0009",
+      "bytes": 12707
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r1/calls/000-coder/request.json": {
+      "sha256": "7660b79356263f4d339a397deb5ef683a69dff8b78afe0eccafdaaad68052277",
+      "bytes": 2518
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r1/calls/000-coder/response.json": {
+      "sha256": "006bd8c999f591f2179b9559d70b56e918ca074b7ca194a7f31792131b5be933",
+      "bytes": 9181
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r1/calls/000-coder/state.json": {
+      "sha256": "68187e355dd9059d59e6789a53642269af874028e8f456bf049c9e87d5f6a390",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r1/config.json": {
+      "sha256": "7bd2bf6132347c6274c12baf1dfbe8f36a16259fcd08e5203cc89deeb85a3d22",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r1/outcome.json": {
+      "sha256": "e9c6b46b4cc5c9f5cb054136fa8cd4ba40c14eb6a0486d3d565069b8db18ec9a",
+      "bytes": 686
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r2/calls/000-coder/raw_response.json": {
+      "sha256": "8e50ff17f1de43de6bd1eb61711711d9eefa5d5a3483b11bb93b1506082c55a3",
+      "bytes": 11431
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r2/calls/000-coder/request.json": {
+      "sha256": "37c6bc5d0df6bbc84905cb99461fec35723bcc83ae8433b98a485981d43e47d3",
+      "bytes": 2518
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r2/calls/000-coder/response.json": {
+      "sha256": "df687719ae0e01b68f838ed62349b0576f8a069873fc44ba2131b5d5c372090f",
+      "bytes": 8225
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r2/calls/000-coder/state.json": {
+      "sha256": "21437d2ca31b00fb2a00222a2e5f4570ed2a5b3aaa5faa6171e180f107d803ea",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r2/config.json": {
+      "sha256": "c014096dc5e8d80f2cd29bebaac15898b040f4658c5db2c0dcc48c7d506dbdc5",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t0-r2/outcome.json": {
+      "sha256": "cfe2f77ef7928646191ff3d254c15c0faf650088ada2453b4fd39d0fe4c790b2",
+      "bytes": 686
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r0/calls/000-coder/raw_response.json": {
+      "sha256": "55bb2a8f0f12fa1e33be726aec8e4ba66a12046ab337399e8a0aab3efbbc54b6",
+      "bytes": 7464
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r0/calls/000-coder/request.json": {
+      "sha256": "5d44fdb329b192e567f194fec70413b6fbf5b5d107b65d8edbefa74a1bc50253",
+      "bytes": 2572
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r0/calls/000-coder/response.json": {
+      "sha256": "2e3eec5a0655ec0056a170f25f5cb41b182abc2be5127a1ce0c7fc953906f22d",
+      "bytes": 5251
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r0/calls/000-coder/state.json": {
+      "sha256": "50d754c22fba7992a56c2af07a1caf79e34aac9b0577fc2bdec4e392e1cc643c",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r0/config.json": {
+      "sha256": "ad6bbf1aa0001ddcc8d7d17e65139da0cca90a22a18dcfb700201116b6ce27d6",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r0/outcome.json": {
+      "sha256": "ab165eec659711ffb36245e7b4f5ce8b61a3fd602cbf0e831bd7772331b26cab",
+      "bytes": 681
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r1/calls/000-coder/raw_response.json": {
+      "sha256": "23a554b1cd2caf7e4157f0738fded9a19ea055f2a4ab80baa562e9c0d6c09eef",
+      "bytes": 9630
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r1/calls/000-coder/request.json": {
+      "sha256": "760cc07e255ff43b566ed7e185ca00a3b885d501bbd6b4cd5a15bebcecdeeb28",
+      "bytes": 2574
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r1/calls/000-coder/response.json": {
+      "sha256": "14f196fffd5d45051d0a08952d2e93eb0242ed797043385f0750a0b203ad188e",
+      "bytes": 6876
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r1/calls/000-coder/state.json": {
+      "sha256": "8f7d4192b2d7705d2860cd50313bf56b10c9d85981025bdfd459d4c14c1d8d2a",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r1/config.json": {
+      "sha256": "26f61c3e5c7c6e0beb86d34e173455e838749f25b47267f7d5c96fb04eeeee6d",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r1/outcome.json": {
+      "sha256": "ded685fe52ebee123e7e7353973d01d51a21fd2d1990fe9175647a0b32bf9c57",
+      "bytes": 682
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r2/calls/000-coder/raw_response.json": {
+      "sha256": "0785751cce42c00f0870cac78ce9d3b253330c3712ae304c118507e2ca294697",
+      "bytes": 6480
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r2/calls/000-coder/request.json": {
+      "sha256": "e22a72a62c0dc3b6a33146f62e264f3076615d4150aeab057e4c0d78481bcf99",
+      "bytes": 2574
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r2/calls/000-coder/response.json": {
+      "sha256": "768321c54c9c1f9e84c8a906a8836abc80b3d4a0e48349c8d9f7af13ae054258",
+      "bytes": 4513
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r2/calls/000-coder/state.json": {
+      "sha256": "f30aa6c91accb1f2bba3d32327827f84faba15f65e4c2c7f66f34c2cca7c36a2",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r2/config.json": {
+      "sha256": "d05bb65acdf8461ce4035a434db0ab274f41878296376dab4f9d76ab6974d28b",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t1-r2/outcome.json": {
+      "sha256": "8acd7b1742bb904eb4c15a3b90bac009914d53c58d958171555c004ba04c4aaa",
+      "bytes": 683
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r0/calls/000-coder/raw_response.json": {
+      "sha256": "b109d871d9eb460743a37caea679ef796db3009d6a9b6e493cdb2f8637fc96f2",
+      "bytes": 11003
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r0/calls/000-coder/request.json": {
+      "sha256": "923948fd9f484aebc8ba5c809841a509d30dda10a0a021ad7cd5df7348e1ced8",
+      "bytes": 2654
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r0/calls/000-coder/response.json": {
+      "sha256": "0fe5326f3a0fd31fd23d961a8d9130f44fcc1534bc21e7bfe921339f2e6fded5",
+      "bytes": 7902
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r0/calls/000-coder/state.json": {
+      "sha256": "6d00946c14db306842513c142547294968146c7d36bdf525852a3123a24b6e8c",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r0/config.json": {
+      "sha256": "1f473a1431d4794c7f445999f243647a81204e9826e0bd2fdb3530309f5ee39c",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r0/outcome.json": {
+      "sha256": "c2025f5c5c3d7b1e4852743038ac8f6d7f90b7ff01ad35f07933cb1673c25cfa",
+      "bytes": 692
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r1/calls/000-coder/raw_response.json": {
+      "sha256": "82af9844f3f7a6dc7e1c875ac7f785b45b263d856a4d28496b99006ecc9425a2",
+      "bytes": 8443
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r1/calls/000-coder/request.json": {
+      "sha256": "45e5cdd345bd0bd92e92a4d7712300b2d75b5bf617998cc758e3478a6e8ba0a2",
+      "bytes": 2656
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r1/calls/000-coder/response.json": {
+      "sha256": "e51a8984b945ff8aa28546b6752b4df9058c7f026ee17ac8f1937ae3e17fb162",
+      "bytes": 5984
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r1/calls/000-coder/state.json": {
+      "sha256": "a47e4d73ea5a1f6f7944a91bf3d425622d82130a0acb9bb5b45b9195277a4a2e",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r1/config.json": {
+      "sha256": "18f771c42839baf656f2306c97e607fcd52c57c66884320748c12baf21a06cdf",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r1/outcome.json": {
+      "sha256": "493bcb539ebc364fc68d20097f2b84e925ae8db44183340cdd8f083ce98079aa",
+      "bytes": 686
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r2/calls/000-coder/raw_response.json": {
+      "sha256": "888473cb7427d162e23c14473dae11de6fa6321da0908d68b02cb7d95f81d8b8",
+      "bytes": 6707
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r2/calls/000-coder/request.json": {
+      "sha256": "2881990597da112a96833c269be19997cf00dfcae5343e7394067a10dca0854d",
+      "bytes": 2656
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r2/calls/000-coder/response.json": {
+      "sha256": "1a98a0ca9db555390ef2820fa33a50548c132a129dceff129aab802a4b150e53",
+      "bytes": 4684
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r2/calls/000-coder/state.json": {
+      "sha256": "b65f21e6f962aec6d7905dd50816a2122c2d90e522ab5372d5ea5e534d91d8a8",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r2/config.json": {
+      "sha256": "b0c3a83368ab7664829f1af28b1455c2c434e33d8e54d9dede9722d52507ba90",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c0-t2-r2/outcome.json": {
+      "sha256": "f2da8faeb5abdc72bae4994456cdabf8a08ec4a9d43f9fd899cc4c8050276218",
+      "bytes": 686
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r0/calls/000-coder/raw_response.json": {
+      "sha256": "dd00411d6f3cb03b6ea13da22f90a5dc1dc7bbd6e7d275dbc3ede6ab2d8f96f3",
+      "bytes": 10767
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r0/calls/000-coder/request.json": {
+      "sha256": "f3d18d8f7df51c9f1b05d0238d488c782773a71ccb97c419e8748cfdfc60f2f1",
+      "bytes": 2516
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r0/calls/000-coder/response.json": {
+      "sha256": "aa297a25b840310b89e2bd6ea96a41c8155acbd3e8abbf603a80f42f6407b14f",
+      "bytes": 7728
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r0/calls/000-coder/state.json": {
+      "sha256": "75f849e6e401d7d4f025bf4627a32b2937874bf0dea897ad89ffe7f782ab2daa",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r0/config.json": {
+      "sha256": "29a4c2a73a60caaa53f68febebd3163d7c820db99ff2be150ab9779fe6380152",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r0/outcome.json": {
+      "sha256": "19460ec81bd388655008a4f19d74c49e9ca246cad1af0c9b733fdbec2a1645f6",
+      "bytes": 682
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r1/calls/000-coder/raw_response.json": {
+      "sha256": "7bc9cbdb28421f552509328595b247fbe9a631edc78fb9b2f024aa552816c410",
+      "bytes": 21180
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r1/calls/000-coder/request.json": {
+      "sha256": "e879e9532956fffb65a7923820f342523ea963cdfd5f0d09ebd58650db716b71",
+      "bytes": 2518
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r1/calls/000-coder/response.json": {
+      "sha256": "2e29dae88a609fd3eecb3506f101bac15ae0f5a5378f15f906e01b86350cef80",
+      "bytes": 15538
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r1/calls/000-coder/state.json": {
+      "sha256": "02f4950dd994531b70453fe3d19af3d60cd736f94cf44b4b234926c94e9df55b",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r1/config.json": {
+      "sha256": "e7d6772f349e02b91e415c666ad54111d716a6ac54c6ede06a1c44efc6be95a1",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r1/outcome.json": {
+      "sha256": "ce94f19526acae3bb7acb1315644208621bf9bf1cc5d4f958a5cdbb9d20120d5",
+      "bytes": 683
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r2/calls/000-coder/raw_response.json": {
+      "sha256": "54a686e580be8957710299378f02d6900b5d3a851c818876cd1263dc5d8b9085",
+      "bytes": 10971
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r2/calls/000-coder/request.json": {
+      "sha256": "e1c88f39ac517cfed0146303da1785d48bef4b6c1e99b7154e88e66ba1bd28c0",
+      "bytes": 2518
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r2/calls/000-coder/response.json": {
+      "sha256": "b4aa7802e3dd207fdc44fefa09457087b01fe2c0d8fa400904b0e862103d289f",
+      "bytes": 7881
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r2/calls/000-coder/state.json": {
+      "sha256": "63bb7656eb49a378f47b961dc7f08442f8e9613fc5b7f07b2c8283739a21e6be",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r2/config.json": {
+      "sha256": "49c866683dac0da6a23a2cad3dafdf4234b1174e5d8ecf7a8abdc862ac1a67aa",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t0-r2/outcome.json": {
+      "sha256": "c76fb897d813f4a6cd928d406fdfbe0d7ea3b544a82a0227d6cd79cb6b9199b2",
+      "bytes": 682
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r0/calls/000-coder/raw_response.json": {
+      "sha256": "d51e2605700a25b6b778f5960786afec21d3d4fb06a9499a917335b999f8ebe8",
+      "bytes": 7004
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r0/calls/000-coder/request.json": {
+      "sha256": "edcefae3ff5a42b3c8e355435e13d9f40ff9a05f99691450baa37060b114df6c",
+      "bytes": 2572
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r0/calls/000-coder/response.json": {
+      "sha256": "d8ff214ca3bafe8573aa276249d5dbad8b500f7f128e84bd242edf00fea6e294",
+      "bytes": 4906
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r0/calls/000-coder/state.json": {
+      "sha256": "d55bf004fca6a94a723f1e0011c206527635b998c93b6b24c5c824a1d8452f53",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r0/config.json": {
+      "sha256": "eebf6821354a6d9dd6a710fa978572b7ef981fb2cbd1edd6bb416a0d82498689",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r0/outcome.json": {
+      "sha256": "8fc8afea703c0ba22d3c4940fcba16a257af32d2532a6221d3970a21044b2ff6",
+      "bytes": 683
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r1/calls/000-coder/raw_response.json": {
+      "sha256": "2338d528477f98611d6e2d5b5e46a8bcd58642edb95c650478bc9380982c4005",
+      "bytes": 6988
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r1/calls/000-coder/request.json": {
+      "sha256": "2e8288df769a5bc4b728d68813e86649cb52bca65e04549f7736ff4b6bbb7fa8",
+      "bytes": 2574
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r1/calls/000-coder/response.json": {
+      "sha256": "0e364551675daf51d1eae64f498ca0c773d249c9b720263a84ce0a3d8389c6a1",
+      "bytes": 4895
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r1/calls/000-coder/state.json": {
+      "sha256": "6b1d25c7161b5e4052f23031e05a4a5ffcede18b4bf9eba3bae2902cc344d59f",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r1/config.json": {
+      "sha256": "cc93f164bf356f290c8c7c608880c3d3232fa94cde8d4c440c15021cf935db40",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r1/outcome.json": {
+      "sha256": "5f3c231ec1e9d04caaa1fccf200a8061a4946f7b9fde094e4d147f39f0eeac87",
+      "bytes": 686
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r2/calls/000-coder/raw_response.json": {
+      "sha256": "ac51daa86478a0e83c941687ea8be557b94f44111ec8f4fbc16d2088823f90fd",
+      "bytes": 7955
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r2/calls/000-coder/request.json": {
+      "sha256": "bba4dc2661887f9d807274ab785d11a18adb561bca95e02ac492c943c6e7d1ba",
+      "bytes": 2574
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r2/calls/000-coder/response.json": {
+      "sha256": "ee225646261ef1241c6a3c1f874bda2e16c4041376a7a029d26ffbdd4bd68121",
+      "bytes": 5618
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r2/calls/000-coder/state.json": {
+      "sha256": "e7489212e671687704b5885500547de46911ffe0e39cfd5c9306f6393090d209",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r2/config.json": {
+      "sha256": "810d365820fceada5bf36cd8e09344d5cde1353bc4aa5ab8d10c629cbdf35d75",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t1-r2/outcome.json": {
+      "sha256": "c877fe7cbc6ff69be5e7eb2fe6f47c4af849c2fb2ba8407600957f6bd035dc2f",
+      "bytes": 685
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r0/calls/000-coder/raw_response.json": {
+      "sha256": "ee232918607f1657c2bf99815ba6469e9fe6932f3bb8be074daeacb5d6f0bcd0",
+      "bytes": 6315
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r0/calls/000-coder/request.json": {
+      "sha256": "4457909b693ffaa08fc0ff82c9320d02483f8ff2b11a104cd10d249ba45e92a3",
+      "bytes": 2654
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r0/calls/000-coder/response.json": {
+      "sha256": "11a8a6c2b28f1822b216172636b77b624cfc24f0105ae4af7f025232ad7ddb9b",
+      "bytes": 4389
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r0/calls/000-coder/state.json": {
+      "sha256": "47cb6f37dceadc793974a9ef13828e7e230655a96d9f3dda67fb4a9a369a98f2",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r0/config.json": {
+      "sha256": "d1f1b104e4af9476290682b883b788ebaa9ddddae106d0796eff013433dc97fe",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r0/outcome.json": {
+      "sha256": "0a765835fed96fcae991a27d592be494eba24d2d7c23bd13689023f925dd36e1",
+      "bytes": 687
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r1/calls/000-coder/raw_response.json": {
+      "sha256": "f255f4db0b736e2bff0aa7d7ec221cdf9dc4aa1535cf891f0c81b1713c693a3e",
+      "bytes": 9560
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r1/calls/000-coder/request.json": {
+      "sha256": "e001d01ae5dbacafa4ce4d556fd701104195e67f4d5056d72a64fdd52a892cf1",
+      "bytes": 2656
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r1/calls/000-coder/response.json": {
+      "sha256": "452041f4833925babdbb213595fd4e7109e4cd164565d1faf126ecf3f9c2a1eb",
+      "bytes": 6823
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r1/calls/000-coder/state.json": {
+      "sha256": "a25511ba2d6c74cec9e9c6064be7ec52ebcfe3ed5c19082e2f6af80065bb0b5e",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r1/config.json": {
+      "sha256": "2f8d23cadbb48018dbcacddbd31072c29f1bc9d7fc83bb7021c4e18a921e451d",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r1/outcome.json": {
+      "sha256": "d30bdc006246f5f9ce45472a82176a137fb0ca83b7e8c6d0d9cff32be8ffd747",
+      "bytes": 689
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r2/calls/000-coder/raw_response.json": {
+      "sha256": "8592b353a27414155d4949610317135b82d35eae8031348c68fd4319003db5d3",
+      "bytes": 7855
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r2/calls/000-coder/request.json": {
+      "sha256": "b00b5d5dab6b289721861b2c7eb510be3262e882a36bb8354eac8028f4f2950b",
+      "bytes": 2656
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r2/calls/000-coder/response.json": {
+      "sha256": "4465df181af311dc244e7025b20fefcb529fe798b0bf63002261ef0e318f512f",
+      "bytes": 5545
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r2/calls/000-coder/state.json": {
+      "sha256": "506c0e80af01af6c102881da69cc60265226205ddaedf7bf683c6f5b22396754",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r2/config.json": {
+      "sha256": "bfd2576384623a9a8f113c4b6d914a32af88b9e79fcebb26d80c54f44b1458e4",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-c-c1-t2-r2/outcome.json": {
+      "sha256": "75c6bc90d9fb8f12c608cfc9da7ac893361e48a61654f06f6f3a15f79a5252da",
+      "bytes": 688
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r0/calls/000-planner/raw_response.json": {
+      "sha256": "6058702f60b010c64fb201f07fe825f517a7b42f188ef7f14e23f96122622fc1",
+      "bytes": 12427
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r0/calls/000-planner/request.json": {
+      "sha256": "34f4ecb11b384068929f62c4ad608517de53e030c818aea27ae323ead77d374c",
+      "bytes": 2732
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r0/calls/000-planner/response.json": {
+      "sha256": "0e065ab9df21d9b6dcea2806aaea8128a0a2e6a8d8e524605efca7bf345226ce",
+      "bytes": 8972
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r0/calls/000-planner/state.json": {
+      "sha256": "4bc0ca1cfaca9bff9c1310baeba333ab323f5dde5f4914a6c61a35684f21f01c",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r0/config.json": {
+      "sha256": "d5094485efbeac905519bcbb08bed1ecefb328f30a9df0cd0fe3872e9dc14150",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r0/outcome.json": {
+      "sha256": "8d1814c7941607786afd3d4929252d169080d56f61b2b0245126dc421c110a66",
+      "bytes": 687
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r1/calls/000-planner/raw_response.json": {
+      "sha256": "3ab5266bc54212ced236d734cb552ae8a0481a188ada0553e146b938680162f9",
+      "bytes": 12588
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r1/calls/000-planner/request.json": {
+      "sha256": "3e42d598064fef36ce8cf336448acdc18c4d1ee329dfb01c801337827d1d57bc",
+      "bytes": 2730
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r1/calls/000-planner/response.json": {
+      "sha256": "01ca89708d7486a005fa2f181482ede7428cb26e015f0051eae46c274f9cb165",
+      "bytes": 9092
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r1/calls/000-planner/state.json": {
+      "sha256": "049724af8f5560e81b6ae81d88c8e0c09bcd3341cec31907c767d76c67546642",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r1/config.json": {
+      "sha256": "b98ebe717c543de83c62c062ab82ae71509525e91e6ebb622ab529f9de366e55",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r1/outcome.json": {
+      "sha256": "49160027095984a5635dbd69b789384455ec14c3d9b3d43831bb30afe4cf18b5",
+      "bytes": 685
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r2/calls/000-planner/raw_response.json": {
+      "sha256": "5f1bab99bbb5d4ec88aac634e65fa388ddd6b224778a59914e85f86b637e6a71",
+      "bytes": 12491
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r2/calls/000-planner/request.json": {
+      "sha256": "4e83c754bfbf6b4f1fc9f40fae96849657eccc9c741b7ea8a8df3a660d5652c9",
+      "bytes": 2724
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r2/calls/000-planner/response.json": {
+      "sha256": "7143fe2643f667a778716271788236a3b7c001e65008524c91451deca8493e00",
+      "bytes": 9018
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r2/calls/000-planner/state.json": {
+      "sha256": "d82aabfee3f12bf3cc700e5695fcfe73abc05d6095d24cc826819f31c942d2c9",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r2/config.json": {
+      "sha256": "c69b201969b2f9fcec51ec1763cb0afbf742777bf328d7af6ff9dcdfb309d973",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t0-r2/outcome.json": {
+      "sha256": "804c99718f06b94f3bd3353c6b2a9678751ce7ae1ac2dc62f64850ef0540bdfe",
+      "bytes": 687
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r0/calls/000-planner/raw_response.json": {
+      "sha256": "d3a4ce378cbec1e272e97c3d7106563d2eea723d6d94bef973beeb00ce2a26cb",
+      "bytes": 11748
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r0/calls/000-planner/request.json": {
+      "sha256": "cea26585d880da7d243c23fbd73eaeac823ae3bc2995432c28bffc54843b1ec1",
+      "bytes": 3058
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r0/calls/000-planner/response.json": {
+      "sha256": "ba34c69dc7ad590078c9c89915b4d5e30acce26f68b66be76bf2c0fe76cdd312",
+      "bytes": 8444
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r0/calls/000-planner/state.json": {
+      "sha256": "ecf0bd459e926b4127c373a4fde80fc63b2a8acd69a8460e3056050fce193311",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r0/config.json": {
+      "sha256": "ae9d91e24bf16c4f4aa596a461cd970bad6837fc9061af205b41960b68b5ef9a",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r0/outcome.json": {
+      "sha256": "5415f1519ce589c4d9345aa687a81ef6f1d5ddd5a31427bfdd2332190f45e2de",
+      "bytes": 691
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r1/calls/000-planner/raw_response.json": {
+      "sha256": "7afb4bd139be08d41e0f2fec03a75a3d46e4a86ee3e24721bc415f0d4af0fe29",
+      "bytes": 12048
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r1/calls/000-planner/request.json": {
+      "sha256": "121e56bc3a33a4ff4865aa7d6ea52c9483ba234b138f21c71072499d1b7a6056",
+      "bytes": 3066
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r1/calls/000-planner/response.json": {
+      "sha256": "a1b2edef13b34178300831be24e03bbc26981c7926ffca85a7d2a8992217f6b6",
+      "bytes": 8687
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r1/calls/000-planner/state.json": {
+      "sha256": "d94cfcfa5cdbfab35b975f92151847dae30c982f55fd646b32e642533eb7408b",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r1/config.json": {
+      "sha256": "3b0e8c895d8e6188f27b25b3fa1e32146fa2ab90967d5aea4e1f6503b63e8186",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r1/outcome.json": {
+      "sha256": "9e731efcdb2b7aa49b0e82439333007de1bdfb328d5d5719707c60a054d1bec7",
+      "bytes": 691
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r2/calls/000-planner/raw_response.json": {
+      "sha256": "42eefc1c8ca7f7a178f68949acd98cc7760148395b8f2ec7a1c42857eb561ca5",
+      "bytes": 12572
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r2/calls/000-planner/request.json": {
+      "sha256": "84321b133b645f530804e665a36d0e6ccf79383a838643b39703bf951daa7e36",
+      "bytes": 3054
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r2/calls/000-planner/response.json": {
+      "sha256": "1165e7a641e1ebfbd45a4f922cbf542cce070b991ee14ea3268eb4a41e11b7f9",
+      "bytes": 9081
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r2/calls/000-planner/state.json": {
+      "sha256": "a1b74e58d310c1fd0a618bfafe38836b2d9c84c326fe1692931d6cdd174b0244",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r2/config.json": {
+      "sha256": "d1a2d72cf13a0f6eaadbfbfd0ea44aeaa0f5fdf32eec1f088bb2e55f60b835d7",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t1-r2/outcome.json": {
+      "sha256": "16c9d35e4027cac4fd63d96020ff5ad3d4b8aef857783fdc6be29e56e9fdbbf9",
+      "bytes": 691
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r0/calls/000-planner/raw_response.json": {
+      "sha256": "ced9d317f6780eaa1e7e4dfef2e5e2823b2838a76b76fc7e4bf3768e60156d47",
+      "bytes": 9543
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r0/calls/000-planner/request.json": {
+      "sha256": "3e071e5504b2e3d5e633f58158895a09c3ffba02a472246ea00d1e51f235536e",
+      "bytes": 3422
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r0/calls/000-planner/response.json": {
+      "sha256": "cb968df04ea580f684c1f31ddae5a4dcc9ee7ca9130ec6b7a6f3b5f34821149d",
+      "bytes": 6811
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r0/calls/000-planner/state.json": {
+      "sha256": "f54ed66495fba8a2151b934addc30607f0596853c5f43971f14f3c9654757f76",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r0/config.json": {
+      "sha256": "eab9c59404beaef6d5b6336f501fd5ad8b7584a0ea3165d2ba9b7f8426e3bbf3",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r0/outcome.json": {
+      "sha256": "cda275f278d3630b5a29879fb91d9dd7087cc87c3feed1ed3e510be3b90712f6",
+      "bytes": 661
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r1/calls/000-planner/raw_response.json": {
+      "sha256": "9317b9b0edd0d7fa001798478cfe1448d90c2cfb85cb9b69486d9096884d2810",
+      "bytes": 12048
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r1/calls/000-planner/request.json": {
+      "sha256": "08c94f9040bf4c8815594da548b4db4f8d7a59ecd93dfcc6ff3b2f4594980592",
+      "bytes": 3438
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r1/calls/000-planner/response.json": {
+      "sha256": "f3618d1d846fca842b40dde2de0cbbb9a5e2b8bb8f99363ca66892a4d479784a",
+      "bytes": 8667
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r1/calls/000-planner/state.json": {
+      "sha256": "526013ba9197bbdcac166debf824ed537b48e790c17da368166775ab38c2f6c9",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r1/config.json": {
+      "sha256": "4b882d704f4027335be87de5d5937841f7a4b7a00ba161e82013e5124bbd3739",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r1/outcome.json": {
+      "sha256": "cb48c4ba2641a24db8e7a520d68adca45ac3110c1fae3f7a76e55f27197470d8",
+      "bytes": 694
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r2/calls/000-planner/raw_response.json": {
+      "sha256": "d85dfa6382d6103d76a0d800e2e0b619eb8aaf74b2487cac4f672df6be0c41a8",
+      "bytes": 11904
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r2/calls/000-planner/request.json": {
+      "sha256": "9a4479ea9726580d7cfb9c4f3bf88004a17c74d788b0b5e2da0e9b89f7d80dcd",
+      "bytes": 3427
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r2/calls/000-planner/response.json": {
+      "sha256": "e822c095becc6d387a0c0184ea172908dba9227fad03ad99e6ec0db27f07e389",
+      "bytes": 8580
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r2/calls/000-planner/state.json": {
+      "sha256": "a2114e7dffec521b7999a679ecda3b2a291e772245ba2f0bcd3e32635b79d154",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r2/config.json": {
+      "sha256": "ad0b9c0acb175d9ad09ae354f5d242a9cd911259a4fa548fc0ae7f0c99aa3d06",
+      "bytes": 289
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c0-t2-r2/outcome.json": {
+      "sha256": "125668c51160f33310b4d628eeae86b5e7fac24f687babc687aa73c00ee30156",
+      "bytes": 691
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r0/calls/000-planner/raw_response.json": {
+      "sha256": "01a3ffdfd9611af48b396769bc1a3acdd9a690616f96c4086a5898e6f95ddb41",
+      "bytes": 22764
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r0/calls/000-planner/request.json": {
+      "sha256": "18d9f1b00ed14af9fc886096b429772d31e69f7e096c44122d42eb7a5d4c6849",
+      "bytes": 2732
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r0/calls/000-planner/response.json": {
+      "sha256": "050a2533111204e0bd5b23e374413117b46fde4ec88686814e7fcfa3da7d6bd2",
+      "bytes": 16726
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r0/calls/000-planner/state.json": {
+      "sha256": "d07c860868533bfe291f3b234a7e3fb96f8f0bb4b3e7d6e329bf4cc528125ce2",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r0/config.json": {
+      "sha256": "fa26a6c5434759eb74c748eb8a34972963cb6186613ab239cfc76272843abd29",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r0/outcome.json": {
+      "sha256": "fb1519426ad9d9c0ea6256daf4bd7e47d3aec7ddd579763b0523786a6ebc149b",
+      "bytes": 658
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r1/calls/000-planner/raw_response.json": {
+      "sha256": "93c32c6a7dff6520952020bc6b180205552b06186aee356e7824e11b3c1d2309",
+      "bytes": 12824
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r1/calls/000-planner/request.json": {
+      "sha256": "fc3ba042ae6424a0d1177a71c453a14c51e3e33fe9e6fec4dc238d3ad21a70d0",
+      "bytes": 2730
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r1/calls/000-planner/response.json": {
+      "sha256": "48fab9431deb11b8c2b6b00ab37afabfba3ac568e5e1cc38967c7342f27f3383",
+      "bytes": 9271
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r1/calls/000-planner/state.json": {
+      "sha256": "547f2b43f65d66ba7bb0bc80e6752af047ea9556ad68b09d8f1938fe18ed8642",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r1/config.json": {
+      "sha256": "99fbdc3ba7f08c75a22c45a825198b78763f02fe173fb80bfc746c3f0b6a0745",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r1/outcome.json": {
+      "sha256": "3c3560d7330cfeddbc9bcc16da08232a5e30bf712f6b17b30de1ffe7f8d4bf9d",
+      "bytes": 655
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r2/calls/000-planner/raw_response.json": {
+      "sha256": "e7f26fde198df9914bf33a0aa9de8d2e68ff0a36593e927cb65b7324811fe993",
+      "bytes": 9475
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r2/calls/000-planner/request.json": {
+      "sha256": "7d424ae1008f3494a7b3de1005a43d16192c697998a6dbeaca923693c08044a6",
+      "bytes": 2724
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r2/calls/000-planner/response.json": {
+      "sha256": "651650c9d3e580266668885ab329c809e31d50f5f399fde843d8535f171a6fc3",
+      "bytes": 6760
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r2/calls/000-planner/state.json": {
+      "sha256": "abaf7aef02156328dcfa038912f254163a913ad656e5d83044cf4ed0b69cc1f0",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r2/config.json": {
+      "sha256": "5108ff935e884bd03d9ccca9ff92cca771ae386b0b00c6017088aa7ff02c210e",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t0-r2/outcome.json": {
+      "sha256": "090a88ebe121aede1ab88aed72f8019c7e9a1be3d83cd06a4969e0be97132445",
+      "bytes": 657
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r0/calls/000-planner/raw_response.json": {
+      "sha256": "6876ce85f2f6e3b957e86fab153bc880456fcb39dd8e496e3cc187c36d7a7ea7",
+      "bytes": 15115
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r0/calls/000-planner/request.json": {
+      "sha256": "5c9ef75e8a3ede98406e26c9cf2e88ae469be302eca8af57f6b0eb81444ffda6",
+      "bytes": 3058
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r0/calls/000-planner/response.json": {
+      "sha256": "93d5e4354a18914e7e1e983421c27c652a44a0384aed145c7e42a6b3686073ef",
+      "bytes": 10969
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r0/calls/000-planner/state.json": {
+      "sha256": "24a0045b1f785261f550d9d0c55c0f1d4d5dc97f354798998b23987c582d4260",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r0/config.json": {
+      "sha256": "f1b571c20ac1475c031ffd427ea89768fe8dbe5b95d9eef4a349a91361af2dfc",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r0/outcome.json": {
+      "sha256": "26091f1035dcd5831022ec68ae662f1f8aab21642e0aac68a8dd41babbd7c6f8",
+      "bytes": 660
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r1/calls/000-planner/raw_response.json": {
+      "sha256": "8696c2ea5b6487b5fa8c800d02a6a58bc673af8ee226801baa80806e36405ad7",
+      "bytes": 25907
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r1/calls/000-planner/request.json": {
+      "sha256": "2086dcb8685de8f81b698546595faa28151457aef8368b5281a20de5dc3ce638",
+      "bytes": 3066
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r1/calls/000-planner/response.json": {
+      "sha256": "a6e0398d134ba6637e4abd7e9bd4f0b501738f3e916f347489587b2d5ec6cf4f",
+      "bytes": 19081
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r1/calls/000-planner/state.json": {
+      "sha256": "86768ac7d20ca4c438bb4527842136c46d31096e45f2197e1cc289a22cf107e7",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r1/config.json": {
+      "sha256": "8bcd9497b68c1d89d7cba54984f441e84f7210782b0641464489621c8033f7a8",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r1/outcome.json": {
+      "sha256": "886b62f963a04de5e7401ec3d4d3246ad9ead7fb6bcab164feb244e4c93661e7",
+      "bytes": 692
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r2/calls/000-planner/raw_response.json": {
+      "sha256": "3aadcc6f8c5d90934cd34adacfd0177e88c367a3242a17e05ed76b1ee784422b",
+      "bytes": 27672
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r2/calls/000-planner/request.json": {
+      "sha256": "c28807349822c633ba05a4447b2fa269e259143ce74ae5eda74bd3aa49e34aad",
+      "bytes": 3054
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r2/calls/000-planner/response.json": {
+      "sha256": "ccfb11294bb29e1e88ab7056b8ef17974130ce7a5faaaf7b42360995dbe17e48",
+      "bytes": 20406
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r2/calls/000-planner/state.json": {
+      "sha256": "28fc7d0ecbab059e7b185698a8aeeab55c8ad3fd166c0dbac8f9b9695f65f2e4",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r2/config.json": {
+      "sha256": "830c3d9e1bf82aa8dc621e45058b104a0533f17943c64db576e2d427f1c91944",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t1-r2/outcome.json": {
+      "sha256": "2f2cae3d8ef923707fb74be6902403ed5b28eb20caa478d5e8e461c8566ecd05",
+      "bytes": 693
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r0/calls/000-planner/raw_response.json": {
+      "sha256": "c6a79fbb395bf7993193bd97c090bce8418e82a687b68625c9a0038d4190fb4f",
+      "bytes": 11495
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r0/calls/000-planner/request.json": {
+      "sha256": "8fe01db58d2c8cff262e4c0050e888bf45fba51159034dde8aaa53c685b92e87",
+      "bytes": 3422
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r0/calls/000-planner/response.json": {
+      "sha256": "382b5e66b121fafd75e3343b44cb2db391335e4a3d717fa0febb29e445107053",
+      "bytes": 8274
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r0/calls/000-planner/state.json": {
+      "sha256": "285ba882b1b7610d218b4c4130cb087f6cedacfef2a4ebd30c08318a21e8dc79",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r0/config.json": {
+      "sha256": "e45a642fac9371dfd1bf2cf761dc6454405df42f71771048930c3761d66879f0",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r0/outcome.json": {
+      "sha256": "088991f77a41c349753979ddad2b2ae2b3895152c70d0545abaf95e7a8e66ff6",
+      "bytes": 663
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r1/calls/000-planner/raw_response.json": {
+      "sha256": "1b84b7752c5128374d00bb557ddf47579112c5c7d1c5bbff9c6784d90ec395e3",
+      "bytes": 3979
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r1/calls/000-planner/request.json": {
+      "sha256": "080de32095582425cc553ea38c8fae17f832159ebd19f627c946bfc23e213894",
+      "bytes": 3438
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r1/calls/000-planner/response.json": {
+      "sha256": "e9aa164c8b31488a740b1ebb4398d27a6af7b06310d93c1df48ea156f7662829",
+      "bytes": 2617
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r1/calls/000-planner/state.json": {
+      "sha256": "898fafef782fae8846cd14515a3fdbc861e7f01824d186546b35c495d042b986",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r1/config.json": {
+      "sha256": "49ca97491aec9a9a4fe40b4d2d5a8cb29dd673fab8e3ced1d93d1e12590846f8",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r1/outcome.json": {
+      "sha256": "5859ba5516dd4feb8b3220d681ea212e0ec582275487cd85234d0941cc7a2785",
+      "bytes": 662
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r2/calls/000-planner/raw_response.json": {
+      "sha256": "9ee900b861a790c6d79c926a7e9d27450ee54f1e697ace51dab4b21f4401f52f",
+      "bytes": 24409
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r2/calls/000-planner/request.json": {
+      "sha256": "bf36c19ced941a63faa77c8bf8274efd06e227066ad42b585ebd946f5ec37474",
+      "bytes": 3427
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r2/calls/000-planner/response.json": {
+      "sha256": "4300117aa9748f1cf2c7ef1b5589af39bf76fdc09b7a7c9145e9296b5a6acd66",
+      "bytes": 17958
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r2/calls/000-planner/state.json": {
+      "sha256": "9dcadd2b0b052ad1ceee65a0f73ed1d1b9a34501e743b5f793fa3f6638150da9",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r2/config.json": {
+      "sha256": "c45e5bcfe56e288f95174d2896f008da9ed537850378381e1bb90e9fbd60a6c2",
+      "bytes": 291
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/cal-p-c1-t2-r2/outcome.json": {
+      "sha256": "633eeb29d6c50f934e07fe165f997c632c005bb9b1b8831090ea717c33f584ab",
+      "bytes": 658
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-c/calls/000-coder/raw_response.json": {
+      "sha256": "f2e94d3919f3ac5ca2506d3587b9c1315b79509f5cf74107b7bd530d76655480",
+      "bytes": 11860
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-c/calls/000-coder/request.json": {
+      "sha256": "f89b09445ade40952b177dea9a9b5830c2c854df5138449d2514d3dc04f3a30d",
+      "bytes": 2881
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-c/calls/000-coder/response.json": {
+      "sha256": "5aeda459d5e4e8266480009d1bfee9ecbbb0bd228e962ecc9b82e1bdaa272a33",
+      "bytes": 8530
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-c/calls/000-coder/state.json": {
+      "sha256": "e544707b324862da4dd71c787d6a966f6b6014b9ded3f9ba0bfd9c01e8727681",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-c/config.json": {
+      "sha256": "a75f1a2f77032778ffb08f2fb0f8109fb401ad92494fd09ee0a2a46c17129cec",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-c/outcome.json": {
+      "sha256": "853372d60fa9319c595f8e8692d51e9279e2376b9a81b4909408794fad490464",
+      "bytes": 705
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-p/calls/000-planner/raw_response.json": {
+      "sha256": "fe2484881a4caffb4f5a497e24bec720dcc6d3ba2a8eb9e23fef30b277d1449e",
+      "bytes": 24532
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-p/calls/000-planner/request.json": {
+      "sha256": "8508c160d2130af8b678c71aafeacfe0fff4da028b06e997105597712f83f33c",
+      "bytes": 2729
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-p/calls/000-planner/response.json": {
+      "sha256": "8b68a31e545e0e21dfff8cc70bbefcefc982138331506dbc067fc15df0d98e40",
+      "bytes": 18052
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-p/calls/000-planner/state.json": {
+      "sha256": "8d3dd7f4ea91814c7075517c237cc95b65d3db49db9749a28907787c0d15f6fa",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-p/config.json": {
+      "sha256": "7101b2d8658d5fc8b204f0bbc219e0d8e4b6cc001d23bf1a944e70ae2ef327b8",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r0-p/outcome.json": {
+      "sha256": "f407d7746e569ef6bd6099db67ccba80a056aba753e3d4c0425557bf827c0bdb",
+      "bytes": 680
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-c/calls/000-coder/raw_response.json": {
+      "sha256": "e1dc54fc7b320a575433dfba0143264568f8c2247e66c662ba39229d120876b9",
+      "bytes": 20047
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-c/calls/000-coder/request.json": {
+      "sha256": "b45ce20be067f8ad2b649c12e223e8a307cdf44965e450ec227149efb4e45fc8",
+      "bytes": 2856
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-c/calls/000-coder/response.json": {
+      "sha256": "69dd21f790d669732cd5bd6d67e6ff5e390bf880b7732d5943252c036b3772d9",
+      "bytes": 14688
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-c/calls/000-coder/state.json": {
+      "sha256": "8acb8a9f6028436fee87429e20c396e7e04ce26dd14965a6c572f5e067b221d0",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-c/config.json": {
+      "sha256": "8fc239a87c7776a530a7a931ec7fc15d3b5ebbda6fcac2564d403c127088f8f7",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-c/outcome.json": {
+      "sha256": "0932b010be51657d45596805c8469469c3af902c466fb4095ca93c8fa3d8e1a6",
+      "bytes": 701
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-p/calls/000-planner/raw_response.json": {
+      "sha256": "74ffefeb9eb04583a9c232a51af62e015d8108a8e968500fc4683603a4097781",
+      "bytes": 17344
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-p/calls/000-planner/request.json": {
+      "sha256": "2d9398767bc2263872033147a8e24ad76247a22d87feb8d183f717317b2907d5",
+      "bytes": 2726
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-p/calls/000-planner/response.json": {
+      "sha256": "276d4c0f22f136795e9756ac22c80c1d2f5dc716cf4d44116966db61fa1b947b",
+      "bytes": 12643
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-p/calls/000-planner/state.json": {
+      "sha256": "8727c438b887eedafd329dee88231136d6fd14cc66dd6b092a65220291fb423a",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-p/config.json": {
+      "sha256": "4ebd947393dc498260bbd5e5b1b6c9ca66d135bd2bb303b1bb6c9d1dff281c43",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t0-r1-p/outcome.json": {
+      "sha256": "17bb304aa2b1fd4131fd10f079c9e74809849bd29c0f6e44f0d759e4445def87",
+      "bytes": 680
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-c/calls/000-coder/raw_response.json": {
+      "sha256": "c093af181275c245c4f71dad01004f2b3555a29f705687d49de2a68ffb74baf9",
+      "bytes": 6492
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-c/calls/000-coder/request.json": {
+      "sha256": "cbcb3e330311388598ad51aa7331e8a8f7375a1fb1103f109f106e81a82e2c46",
+      "bytes": 2881
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-c/calls/000-coder/response.json": {
+      "sha256": "4dac29246242aa60a91d0dbe4c0dad3909ebd0975bcd01c2b33f09a66d60e382",
+      "bytes": 4521
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-c/calls/000-coder/state.json": {
+      "sha256": "441ae32b3ac1da509d0e279473a77e558c6922ed5d9d1a327823efbad008dd4a",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-c/config.json": {
+      "sha256": "8cd1ff3c41ac69c7592e36ad4f7fad907a6c7a0ae6b1b59ae4a4c8cac050d12a",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-c/outcome.json": {
+      "sha256": "e4765aacf659013128eaafec034050ec9f5f3d604748a2e47b6a650e26eb6108",
+      "bytes": 704
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-p/calls/000-planner/raw_response.json": {
+      "sha256": "3ef1214075b1c9a6ca5a7a7667eefdd2128106077d0498886141659b1c20db9a",
+      "bytes": 17920
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-p/calls/000-planner/request.json": {
+      "sha256": "298f69d621e63c22f807415713e7179920d0c6016062768500419f2e420feab0",
+      "bytes": 3108
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-p/calls/000-planner/response.json": {
+      "sha256": "5557011047642a626b5a9a2eeb03249ede7354c2d382329c015bb18e11ca5320",
+      "bytes": 13094
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-p/calls/000-planner/state.json": {
+      "sha256": "bc418577b8fb637ec2386f4a69b235b3fe5c9467fab16014cb25be79a7093701",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-p/config.json": {
+      "sha256": "1b672f80ccfd08fe772df0c02d58072657913579153b8e8a105868062594f83c",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r0-p/outcome.json": {
+      "sha256": "47b35996de5d17e20182d920ad2089bb8e245744b5d9c30c33edc8103824af5e",
+      "bytes": 683
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-c/calls/000-coder/raw_response.json": {
+      "sha256": "e6f922855adee25d9a18d60e80425b5dc0688aa3fd2da31c271dca5af0ef4423",
+      "bytes": 19363
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-c/calls/000-coder/request.json": {
+      "sha256": "b41faa7d294653128e1a7dd7f2d51d06ecb514f0b9de8d1518f3b972d20d6ef2",
+      "bytes": 2911
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-c/calls/000-coder/response.json": {
+      "sha256": "21ac41444c82f2f74b8d247daa6210399fbb528575780af144356a4adfed46be",
+      "bytes": 14176
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-c/calls/000-coder/state.json": {
+      "sha256": "9632cbbc938ba19041610ab5f0b64ceaafd16490c7bbbd41ec3e96c52654cdb7",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-c/config.json": {
+      "sha256": "0165b2a89387279b7d0fe84097221f8e2a0f2ba4673f510413212510decab4e4",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-c/outcome.json": {
+      "sha256": "74cd7ca1b396c7fd7dd18c3cc9a1ae610b06b37f4cf8224fbc79f38511f37b8d",
+      "bytes": 707
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-p/calls/000-planner/raw_response.json": {
+      "sha256": "2d07d2c958d243be3a114a82c08909d698d266d850e6f3d4c7d0697771eac52a",
+      "bytes": 17044
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-p/calls/000-planner/request.json": {
+      "sha256": "6ff228011a26a147906ab1117c584919e98ee891f6e5acc6051c42913843c77d",
+      "bytes": 3117
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-p/calls/000-planner/response.json": {
+      "sha256": "c162e8427b64361e9f5c8aad411104b83e3c02a7bf6803ec9ecb466bca6c1dce",
+      "bytes": 12417
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-p/calls/000-planner/state.json": {
+      "sha256": "a30ffccc097335f80c674bc578ed2876ed6a8ea571834ed107a4e82dfc70308c",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-p/config.json": {
+      "sha256": "02cb7bac8af57908535683f96cdcb9f04bc88279cfa7fb42fef4309d5a2f4635",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t1-r1-p/outcome.json": {
+      "sha256": "859d6db5ec7b4f2337407953ceabbdcba09d5e2967866ec6e29f8db2ada5aec0",
+      "bytes": 683
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-c/calls/000-coder/raw_response.json": {
+      "sha256": "cf11b06d51f6e36a56dec149acace7b0433116e2f5d0070c929b960165ae6397",
+      "bytes": 4052
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-c/calls/000-coder/request.json": {
+      "sha256": "ff2bc63a0111604b0f294b193c7b7797edc3c61119c991cff7d842e23ac543b4",
+      "bytes": 2712
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-c/calls/000-coder/response.json": {
+      "sha256": "a25c09a7841a9c8b61ec71b9f002446bbb420a30a7de15d4dc60bcbfd0e090ae",
+      "bytes": 2690
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-c/calls/000-coder/state.json": {
+      "sha256": "d325d96879b6b89e0c96b2ef97847b6ee2de8880c6588c3c3fbf5d653ff87cc9",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-c/config.json": {
+      "sha256": "b39d286733dac396fc92bc2396200b20603253ee15fa41944e871e437c064276",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-c/outcome.json": {
+      "sha256": "a019bdcb84e0fd89ed398eef8bd95f7ab019431931270b545bac69bdc4cbd925",
+      "bytes": 709
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-p/calls/000-planner/raw_response.json": {
+      "sha256": "d6e3d9a63f47b3d2ee42a8615362ecf3450a7c9980b439907cfe9373582832bb",
+      "bytes": 12756
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-p/calls/000-planner/request.json": {
+      "sha256": "13e9d5a88e045e73fcd856bc7375fee1d7a0f87bb4e7bbb54fa991cd9a696f0b",
+      "bytes": 3486
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-p/calls/000-planner/response.json": {
+      "sha256": "0223520bd99cbe5e2e5072719c1b53931399acb58ebcdcdbd716aba6092bc1f7",
+      "bytes": 9202
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-p/calls/000-planner/state.json": {
+      "sha256": "d044ac6283b25085861647fe7d73b37b56bf0e42698e37b3d0755b6bb4cd14dc",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-p/config.json": {
+      "sha256": "e62e62104ce2cc907a26eb62f0ae1d63f7fdf0a75e135147326faeabfa54090f",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r0-p/outcome.json": {
+      "sha256": "06bec2f35e90e3677b09ce2d5a2238d5f30c22e147d17ff70c988aa9dc61b624",
+      "bytes": 686
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-c/calls/000-coder/raw_response.json": {
+      "sha256": "cb5b062e3bb7ae80bd81d76a8c8a4768a8cfa40c428fa94eb4df90a608794090",
+      "bytes": 4732
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-c/calls/000-coder/request.json": {
+      "sha256": "3eaae7ccd75075cf57c9e75ef732817d296a3bad6b948408f4295e628eb1bef3",
+      "bytes": 3241
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-c/calls/000-coder/response.json": {
+      "sha256": "740559d03090761480e7b805c57f7c0c56739ff4d57123b4a04d65f4716be7bb",
+      "bytes": 3200
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-c/calls/000-coder/state.json": {
+      "sha256": "a6be01459ecd8a4172ce0bdbdb1cc1e0b6fc0a09ee1d93d0a03972ece2ca9dd5",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-c/config.json": {
+      "sha256": "810df3fe634df56cd850d3e60650117dcf7beb92f91e40b92b3bde5734428c54",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-c/outcome.json": {
+      "sha256": "d26792878f26a5a4d4a01d0875e22a9f7437e908ace3b7c8d8bdc18518fb64a7",
+      "bytes": 709
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-p/calls/000-planner/raw_response.json": {
+      "sha256": "7722b39e0f31656fd6e47d1cd48f10b1a0883a3357caa0e824c6c1fc29e1fc3a",
+      "bytes": 8600
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-p/calls/000-planner/request.json": {
+      "sha256": "0851643253d7a92eee62b2ecadfcc7b0d6c5ae4f65fd9d819e4166c359a2a81e",
+      "bytes": 3486
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-p/calls/000-planner/response.json": {
+      "sha256": "3ecb5387c48019f111f5451f15803adbb7928f34a7c1f5ac3c47e8ea6ee68add",
+      "bytes": 6102
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-p/calls/000-planner/state.json": {
+      "sha256": "3f02c26cbfcb1030587174e06c01daccba4055c714be137344b50652fb21c9e6",
+      "bytes": 125
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-p/config.json": {
+      "sha256": "6588dac7f3bc73140f2614c8d6ee8d02412d78db40b4538232857404d44a33eb",
+      "bytes": 288
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/runs/e2e-t2-r1-p/outcome.json": {
+      "sha256": "af9f0e1955fc6197b6a0beb6c939d3d0e8b3712595d45415de38da325916cd03",
+      "bytes": 683
+    },
+    "experiments/chapter6/s0_output_calibration/studies/s0-minimax-output-calibration-20260926-r2/selection.json": {
+      "sha256": "7dcbadb5db452842021469b3e06f5cf717a0bcd18dd4a19343747e7f6c869bdf",
+      "bytes": 355
+    }
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "study_id": "s0-minimax-output-calibration-20260926-r2",
+  "manifest_sha256": "74c467c7eaa8153fcf19caf4e7cd4251ed917f5f21d609542664354270ab2a14",
+  "source_commit": "bccb7f1f018f82c0517eef00ddf27343a95e3dea",
+  "new_model_calls_by_analysis": 0,
+  "result": {
+    "status": "complete",
+    "completed_slots": 84,
+    "dispatched_requests": 84,
+    "selected_config": "expanded_caps",
+    "calibration_statistics": [
+      {
+        "id": "legacy_caps",
+        "planner_valid": 1,
+        "coder_valid": 6,
+        "median_tokens": 2506.5
+      },
+      {
+        "id": "expanded_caps",
+        "planner_valid": 7,
+        "coder_valid": 9,
+        "median_tokens": 2651.5
+      }
+    ],
+    "selection_uses_acceptance": false,
+    "acceptance": {
+      "planner": {
+        "planned": 18,
+        "observed": 18,
+        "valid": 14
+      },
+      "coder": {
+        "planned": 18,
+        "observed": 18,
+        "valid": 18
+      }
+    },
+    "e2e_successes": 6,
+    "e2e_planned": 6,
+    "ready_for_s1": false
+  },
+  "cohorts": [
+    {
+      "cohort": "acceptance",
+      "config_id": "expanded_caps",
+      "role": "coder",
+      "planned": 18,
+      "observed_slots": 18,
+      "dispatched": 18,
+      "valid": 18,
+      "complete": 18,
+      "schema_valid": 18,
+      "executable": 18,
+      "wilson_95": [
+        0.8241207763533425,
+        1.0
+      ],
+      "known_tokens": 40210,
+      "usage_complete": true,
+      "median_tokens": 2026.5,
+      "total_seconds": 178.3931009999942,
+      "finish_reasons": {
+        "stop": 18
+      }
+    },
+    {
+      "cohort": "acceptance",
+      "config_id": "expanded_caps",
+      "role": "planner",
+      "planned": 18,
+      "observed_slots": 18,
+      "dispatched": 18,
+      "valid": 14,
+      "complete": 14,
+      "schema_valid": 15,
+      "executable": null,
+      "wilson_95": [
+        0.5478541568378739,
+        0.9099907189139831
+      ],
+      "known_tokens": 69913,
+      "usage_complete": true,
+      "median_tokens": 3726.0,
+      "total_seconds": 381.0054428000003,
+      "finish_reasons": {
+        "stop": 14,
+        "length": 4
+      }
+    },
+    {
+      "cohort": "calibration",
+      "config_id": "expanded_caps",
+      "role": "coder",
+      "planned": 9,
+      "observed_slots": 9,
+      "dispatched": 9,
+      "valid": 9,
+      "complete": 9,
+      "schema_valid": 9,
+      "executable": 9,
+      "wilson_95": [
+        0.7008549515804559,
+        1.0
+      ],
+      "known_tokens": 21781,
+      "usage_complete": true,
+      "median_tokens": 2068,
+      "total_seconds": 74.59396169998217,
+      "finish_reasons": {
+        "stop": 9
+      }
+    },
+    {
+      "cohort": "calibration",
+      "config_id": "expanded_caps",
+      "role": "planner",
+      "planned": 9,
+      "observed_slots": 9,
+      "dispatched": 9,
+      "valid": 7,
+      "complete": 7,
+      "schema_valid": 7,
+      "executable": null,
+      "wilson_95": [
+        0.45258896910698887,
+        0.9367748928821533
+      ],
+      "known_tokens": 30912,
+      "usage_complete": true,
+      "median_tokens": 3210,
+      "total_seconds": 160.04206070001237,
+      "finish_reasons": {
+        "length": 2,
+        "stop": 7
+      }
+    },
+    {
+      "cohort": "calibration",
+      "config_id": "legacy_caps",
+      "role": "coder",
+      "planned": 9,
+      "observed_slots": 9,
+      "dispatched": 9,
+      "valid": 6,
+      "complete": 6,
+      "schema_valid": 6,
+      "executable": 6,
+      "wilson_95": [
+        0.3542021355803963,
+        0.879416181613089
+      ],
+      "known_tokens": 20118,
+      "usage_complete": true,
+      "median_tokens": 2255,
+      "total_seconds": 83.54697210015729,
+      "finish_reasons": {
+        "stop": 6,
+        "length": 3
+      }
+    },
+    {
+      "cohort": "calibration",
+      "config_id": "legacy_caps",
+      "role": "planner",
+      "planned": 9,
+      "observed_slots": 9,
+      "dispatched": 9,
+      "valid": 1,
+      "complete": 1,
+      "schema_valid": 1,
+      "executable": null,
+      "wilson_95": [
+        0.019890887638544907,
+        0.434999705576656
+      ],
+      "known_tokens": 23116,
+      "usage_complete": true,
+      "median_tokens": 2608,
+      "total_seconds": 109.31852999993134,
+      "finish_reasons": {
+        "length": 8,
+        "stop": 1
+      }
+    },
+    {
+      "cohort": "end_to_end",
+      "config_id": "expanded_caps",
+      "role": "coder",
+      "planned": 6,
+      "observed_slots": 6,
+      "dispatched": 6,
+      "valid": 6,
+      "complete": 6,
+      "schema_valid": 6,
+      "executable": 6,
+      "wilson_95": [
+        0.6096657120978346,
+        1.0
+      ],
+      "known_tokens": 15475,
+      "usage_complete": true,
+      "median_tokens": 2228.5,
+      "total_seconds": 80.78617840004154,
+      "finish_reasons": {
+        "stop": 6
+      }
+    },
+    {
+      "cohort": "end_to_end",
+      "config_id": "expanded_caps",
+      "role": "planner",
+      "planned": 6,
+      "observed_slots": 6,
+      "dispatched": 6,
+      "valid": 6,
+      "complete": 6,
+      "schema_valid": 6,
+      "executable": null,
+      "wilson_95": [
+        0.6096657120978346,
+        1.0
+      ],
+      "known_tokens": 20170,
+      "usage_complete": true,
+      "median_tokens": 3472.0,
+      "total_seconds": 102.25821330002509,
+      "finish_reasons": {
+        "stop": 6
+      }
+    }
+  ],
+  "known_tokens": 241695,
+  "total_requests": 84,
+  "returned_models": [
+    "MiniMax-M3"
+  ],
+  "claim": "Engineering calibration, not search superiority. Synthetic feedback; four feature inputs do not prove universal executability."
+}

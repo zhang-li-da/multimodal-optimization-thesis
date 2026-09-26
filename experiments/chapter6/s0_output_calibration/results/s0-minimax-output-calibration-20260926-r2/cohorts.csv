@@ -1,0 +1,9 @@
+cohort,complete,config_id,dispatched,executable,finish_reasons,known_tokens,median_tokens,observed_slots,planned,role,schema_valid,total_seconds,usage_complete,valid,wilson_95
+acceptance,18,expanded_caps,18,18,{'stop': 18},40210,2026.5,18,18,coder,18,178.3931009999942,True,18,"[0.8241207763533425, 1.0]"
+acceptance,14,expanded_caps,18,,"{'stop': 14, 'length': 4}",69913,3726.0,18,18,planner,15,381.0054428000003,True,14,"[0.5478541568378739, 0.9099907189139831]"
+calibration,9,expanded_caps,9,9,{'stop': 9},21781,2068,9,9,coder,9,74.59396169998217,True,9,"[0.7008549515804559, 1.0]"
+calibration,7,expanded_caps,9,,"{'length': 2, 'stop': 7}",30912,3210,9,9,planner,7,160.04206070001237,True,7,"[0.45258896910698887, 0.9367748928821533]"
+calibration,6,legacy_caps,9,6,"{'stop': 6, 'length': 3}",20118,2255,9,9,coder,6,83.54697210015729,True,6,"[0.3542021355803963, 0.879416181613089]"
+calibration,1,legacy_caps,9,,"{'length': 8, 'stop': 1}",23116,2608,9,9,planner,1,109.31852999993134,True,1,"[0.019890887638544907, 0.434999705576656]"
+end_to_end,6,expanded_caps,6,6,{'stop': 6},15475,2228.5,6,6,coder,6,80.78617840004154,True,6,"[0.6096657120978346, 1.0]"
+end_to_end,6,expanded_caps,6,,{'stop': 6},20170,3472.0,6,6,planner,6,102.25821330002509,True,6,"[0.6096657120978346, 1.0]"
