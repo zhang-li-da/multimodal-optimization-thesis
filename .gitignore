@@ -32,3 +32,4 @@ experiments/chapter6/agent_search/local-*/
 experiments/chapter6/agent_search/studies/*/runs/
 experiments/chapter6/agent_search/s1_observability/studies/*/runs/
 experiments/chapter6/agent_search/local-*.xml
+experiments/chapter6/agent_search/local-*.js
