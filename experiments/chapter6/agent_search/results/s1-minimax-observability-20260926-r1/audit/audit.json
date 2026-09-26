@@ -1,0 +1,133 @@
+{
+  "manifest_sha256": "84892f146dd5fcbaffd824b1c27f9f08302eb29bad52ae4f424ee853d13d489a",
+  "runtime_source_unchanged": true,
+  "new_model_calls": 0,
+  "group_results": [
+    {
+      "controller": "niche_fixed_dev",
+      "runs": 6,
+      "test_gap": {
+        "n": 6,
+        "mean": 0.04613163086046562,
+        "min": 0.04057619162920321,
+        "max": 0.05826847546400602,
+        "median": 0.04395656680264233
+      },
+      "known_tokens": 1817329,
+      "runs_with_multi_branch": 6,
+      "completed_proposals": 192,
+      "valid_candidates": 188,
+      "admissions": 87,
+      "development_attempts": 95,
+      "multi_branch_slots": 86,
+      "differentiated_family_slots": 74,
+      "full_vs_fifo_choice_differences": 58,
+      "full_vs_gain_choice_differences": 43,
+      "parent_improving_dev_children": 57,
+      "global_improving_dev_children": 23,
+      "calls": 382,
+      "output_truncations": 2
+    },
+    {
+      "controller": "relational_branch",
+      "runs": 6,
+      "test_gap": {
+        "n": 6,
+        "mean": 0.050170756118933534,
+        "min": 0.032097569339076884,
+        "max": 0.06583209623638372,
+        "median": 0.04892018176973041
+      },
+      "known_tokens": 1698576,
+      "runs_with_multi_branch": 6,
+      "completed_proposals": 192,
+      "valid_candidates": 190,
+      "admissions": 81,
+      "development_attempts": 94,
+      "multi_branch_slots": 84,
+      "differentiated_family_slots": 74,
+      "full_vs_fifo_choice_differences": 64,
+      "full_vs_gain_choice_differences": 53,
+      "parent_improving_dev_children": 34,
+      "global_improving_dev_children": 22,
+      "calls": 382,
+      "output_truncations": 2
+    }
+  ],
+  "pairs": [
+    {
+      "block": 11,
+      "seed": 0,
+      "fifo_test_gap": 0.05826847546400602,
+      "ranked_test_gap": 0.04593887549149455,
+      "delta_pp": -1.2329599972511471
+    },
+    {
+      "block": 11,
+      "seed": 1,
+      "fifo_test_gap": 0.04057619162920321,
+      "ranked_test_gap": 0.06583209623638372,
+      "delta_pp": 2.5255904607180515
+    },
+    {
+      "block": 12,
+      "seed": 0,
+      "fifo_test_gap": 0.044742584515454126,
+      "ranked_test_gap": 0.05190148804796627,
+      "delta_pp": 0.7158903532512146
+    },
+    {
+      "block": 12,
+      "seed": 1,
+      "fifo_test_gap": 0.04257058331341494,
+      "ranked_test_gap": 0.032097569339076884,
+      "delta_pp": -1.047301397433806
+    },
+    {
+      "block": 13,
+      "seed": 0,
+      "fifo_test_gap": 0.047461401150884916,
+      "ranked_test_gap": 0.0644379153110879,
+      "delta_pp": 1.6976514160202987
+    },
+    {
+      "block": 13,
+      "seed": 1,
+      "fifo_test_gap": 0.04317054908983054,
+      "ranked_test_gap": 0.040816592287591866,
+      "delta_pp": -0.23539568022386756
+    }
+  ],
+  "block_mean_deltas_pp": [
+    0.6463152317334522,
+    -0.16570552209129563,
+    0.7311278678982156
+  ],
+  "delta_mean_pp": 0.4039125258467907,
+  "block_bootstrap_95_descriptive": [
+    -0.16570552209129563,
+    0.7311278678982157
+  ],
+  "observability_gates": {
+    "each_arm_at_least_half_runs_multi_branch": true,
+    "each_arm_at_least_10_multi_branch_slots": true,
+    "at_least_5_same_history_FR_or_RG_differences": true,
+    "diagnostic_only_not_quality_pass": true
+  },
+  "total_calls": 764,
+  "total_request_artifacts": 764,
+  "total_known_tokens": 3515905,
+  "all_usage_complete": true,
+  "planner_and_coder_prompt_replay": true,
+  "response_candidate_correspondence": true,
+  "returned_models": {
+    "MiniMax-M3": 764
+  },
+  "replayed_decisions": 384,
+  "ordinary_step_FR_differences": 0,
+  "numerical_evaluations": 554,
+  "numerical_passed": true,
+  "max_abs_numerical_error": 0.0,
+  "posthoc": true,
+  "claims": "Post-hoc diagnostic and descriptive paired quality, not confirmatory causal superiority."
+}
