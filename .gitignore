@@ -31,3 +31,4 @@ experiments/chapter6/s0_output_calibration/studies/*/runs/
 experiments/chapter6/agent_search/local-*/
 experiments/chapter6/agent_search/studies/*/runs/
 experiments/chapter6/agent_search/s1_observability/studies/*/runs/
+experiments/chapter6/agent_search/local-*.xml
