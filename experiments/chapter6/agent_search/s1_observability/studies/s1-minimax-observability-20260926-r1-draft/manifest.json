@@ -1,9 +1,9 @@
 {
   "schema": "chapter6-s1-study-v1",
   "status": "DRAFT_NOT_EXECUTABLE",
-  "created_utc": "2026-09-26T10:16:02.751857+00:00",
+  "created_utc": "2026-09-26T10:18:18.171412+00:00",
   "study_id": "s1-minimax-observability-20260926-r1",
-  "source_commit": "665fb9f5d29608166b05b217cfd2466c4855b24e",
+  "source_commit": "14aa21c92c5412e1fb0be383512ac2c2c37440f9",
   "source": {
     "format": "named-source-files-lf-sha256-v1",
     "files": {
@@ -61,10 +61,10 @@
     "files": {
       "experiments/chapter6/agent_search/s1_observability/__init__.py": "4077ff0b1a0a339a67ee5e5992e7125e40a0bf343a886b8162c111469163e95a",
       "experiments/chapter6/agent_search/s1_observability/protocol.final.json": "4850c555b97f6ae62d6b1e8c598ab514f6fe186e1ce138573f628074e8cb3c7d",
-      "experiments/chapter6/agent_search/s1_observability/study.py": "4905a1c044a30323b8175c197c991ca6028ba7e88aaa5dc3821f0a4f6a2f301a",
+      "experiments/chapter6/agent_search/s1_observability/study.py": "cd9e27c4c7126343fc1760a288723a3757c3cfb3d051a3ce96cf48902d94fba6",
       "experiments/chapter6/agent_search/s1_observability/analyze.py": "a02c8ac232cbc3c668bfa3d8738191edcdcf4f5d53a92c197e3293bb4ca08b5f"
     },
-    "sha256": "c6155d055189e1d112aec6526a95ef8e1f756e562045d95b4690f0b28af5b5a3"
+    "sha256": "e74333932c634e9723b64062df8b1ec0acf52b79e35508c5f4f1ee0f598069f2"
   },
   "environment": {
     "python": "3.13.5",
@@ -405,5 +405,5 @@
     "id_or_exact_coordinate_collisions": 0
   },
   "new_model_calls": 0,
-  "manifest_sha256": "0e6f0aa77e59af22cb12f0c24a09cd0b621b72cbb0a600f9038f947ab6ca9314"
+  "manifest_sha256": "374057c4600422f09e98e255c1240264e4c7dc90eb1f199d632afb24705bb8e1"
 }
