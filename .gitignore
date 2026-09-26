@@ -35,3 +35,8 @@ experiments/chapter6/agent_search/local-*.xml
 experiments/chapter6/agent_search/local-*.js
 
 experiments/chapter6/agent_search/results/*/browser-check/profile/
+
+# S2 live study state is archived in results/*/analysis/raw-study.zip.
+experiments/chapter6/agent_search/s2_tsp/studies/*/runs/
+experiments/chapter6/agent_search/s2_tsp/studies/*/tests/
+experiments/chapter6/agent_search/s2_tsp/studies/*/dispatch/
