@@ -106,7 +106,7 @@ def prepare(output):
 
 
 def verify(directory, frozen=False):
-    directory = Path(directory)
+    directory = Path(directory).resolve()
     m = read_json(directory / "manifest.json")
     if digest({k:v for k,v in m.items() if k != "manifest_sha256"}) != m["manifest_sha256"]: raise ValueError("Manifest digest mismatch")
     if m["protocol"] != read_json(PROTOCOL): raise ValueError("Protocol differs from manifest")
