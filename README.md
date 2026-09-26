@@ -2,14 +2,26 @@
 
 本仓库汇集博士论文前五章对应文章材料、第六章 agent 原型与验证记录，以及总体技术报告，供跨设备查阅和复核。
 
+## 最新研究设计：智能体探索—开发协同（2026-09-26）
+
+第六章的主体更新为**智能体在广泛外层决策空间中的方向探索、局部开发保护与反馈资源分配**；TSP、机器学习工程和数学优化是验证载体。最终可只输出一个最佳方案，算法集合部署或集成不再是章节成立的必要条件。此为待实施设计，不是新实验结果。
+
+- [研究定位与设计修订总入口](docs/chapter6/reviews/agent-search-20260926/README.md)
+- [方向定义、拟议架构与可证伪假设](docs/chapter6/reviews/agent-search-20260926/RESEARCH_DESIGN.md)
+- [逐阶段实验、预算及所需证据](docs/chapter6/reviews/agent-search-20260926/EXPERIMENT_PLAN.md)
+- [MLEvolve / MLE-Bench 实验与源码对齐核查](docs/chapter6/reviews/agent-search-20260926/BENCHMARK_ALIGNMENT.md)
+- [新版开题研究内容](docs/proposal/PROPOSAL_CHAPTER6_AGENT_SEARCH.md)、[冻结与结果验收](docs/chapter6/reviews/agent-search-20260926/ACCEPTANCE.md)
+
+新增单路径、广泛重启、固定多方向、时间调度与反馈调度比较，并分别设计保护消融、TSP 规模/模块空间扩展及跨任务确认。已有 v1.2.3 结果与 demo 仍按原版本解释；本次没有新增模型调用。
+
 ## 最新版本：v1.2.3 MiniMax M3 真实筛查与开题回放
 
 已完成 **MiniMax M3 × FIFO/完整排序 × 8 个新区块＝16 次真实搜索**，每次 8 个提案；16 次独立测试在全部搜索结束后执行。原双模型草案保留，本轮仅提供单模型证据。FIFO 平均 Test gap **5.9833%**，完整排序 **6.1019%**，R−F 为 **+0.1186 个百分点**；3 胜、2 平、3 负，未建立完整排序优势。
 
-本轮关键发现是 **103/128 个提案解析失败，18 次 B 续开发都没有多分支可选，128 次同历史 F/R 决策和提示完全一致**。因此，质量差值不能归因于已观察到的排序动作。下一步先解决任务形态输出在 1800/2000-token 限制下的完整性，并在新协议中检验多分支可观测性，再做四组归因和集合用途实验。
+本轮关键发现是 **103/128 个提案解析失败，18 次 B 续开发都没有多分支可选，128 次同历史 F/R 决策和提示完全一致**。因此，质量差值不能归因于已观察到的排序动作。下一步先解决任务形态输出在 1800/2000-token 限制下的完整性，并在新协议中检验多分支可观测性；其后按上述新设计开展探索—开发策略与机制归因。集合用途保留为可选拓展。
 
 - [完整技术报告、全部配对与缺陷](experiments/chapter6/v12_3/results/minimax-20260926-r1/REPORT_ZH.md)
-- [当前架构和方法边界](docs/chapter6/V123_ARCHITECTURE.md)、[更新后的开题章节](docs/proposal/PROPOSAL_CHAPTER6_V123.md)
+- [v1.2.3 已实现架构和方法边界](docs/chapter6/V123_ARCHITECTURE.md)、[对应历史开题稿](docs/proposal/PROPOSAL_CHAPTER6_V123.md)；当前研究定位见上方新版设计
 - [离线 HTML 回放](experiments/chapter6/v12_3/results/minimax-20260926-r1/demo/index.html)：下载后直接打开，包含 18 次历史、16 次新版和合成机制用例
 - [4 分 20 秒字幕演示 MP4](experiments/chapter6/v12_3/results/minimax-20260926-r1/demo-evidence/video/chapter6_demo_4m20s.mp4)、[演示讲解指南](docs/chapter6/V123_DEMO_GUIDE.md)
 - [原始请求/响应、程序与评价 ZIP](experiments/chapter6/v12_3/results/minimax-20260926-r1/raw-study.zip)、[离线复核命令](experiments/chapter6/v12_3/README.md)
@@ -31,7 +43,7 @@
 ## 从哪里开始
 
 - [博士论文总体架构与第六章技术报告](docs/report/博士论文总体架构与第六章技术报告.md)：章节结构、方法架构、实验结果和当前缺陷。
-- [开题章节草稿](docs/proposal/PROPOSAL_CHAPTER6.md)：第六章拟研究问题与开题表述。
+- [当前开题研究内容](docs/proposal/PROPOSAL_CHAPTER6_AGENT_SEARCH.md)；[早期开题草稿](docs/proposal/PROPOSAL_CHAPTER6.md)作为历史材料保留。
 - [技术路线](docs/chapter6/TECHNICAL_ROUTE.md)、[完整实验设计](docs/chapter6/EXPERIMENT_DESIGN.md)、[创新性审查](docs/chapter6/NOVELTY_AUDIT.md)、[冻结协议](docs/chapter6/PREREGISTRATION.md)。
 - [v1.2 当前架构与证据边界](docs/chapter6/V12_ARCHITECTURE.md)：A/B 双档案、分支调度、实验结果与后续验收门槛。
 - `papers/`：第三至第五章相关论文的原始材料压缩包，以及可直接阅读的主要 PDF。第一、二章目前是综述性基础章节，没有单独指定论文。
@@ -47,7 +59,7 @@
 - 第三章：多模态多目标进化算法综述；联合空间 DWD 指标。
 - 第四章：MSLS-MA（离散 MMTSP）；RMC-CMSA（连续多模态优化）。
 - 第五章：HDADE（高维多模态多目标优化）。
-- 第六章：受限程序空间上的执行反馈多模态搜索原型与待验证方法。MLEvolve 是启发与相关框架，不是本仓库实验中已完整复现的对照。
+- 第六章：智能体外层决策空间中的多模态搜索与探索—开发协同；现有受限程序搜索是机制原型。MLEvolve 是启发与待接入的对照，尚未在本仓库完成其端到端复现。
 
 ## 在另一台电脑获取
 
