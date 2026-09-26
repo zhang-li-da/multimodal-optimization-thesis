@@ -1,0 +1,33 @@
+{
+  "schema": "chapter6-s1-publication-1",
+  "study_id": "s1-minimax-observability-20260926-r1",
+  "provider": "minimax-cn-coding-plan",
+  "model": "MiniMax-M3",
+  "searches": 12,
+  "proposals_per_search": 32,
+  "model_requests": 764,
+  "known_tokens": 3515905,
+  "manifest_sha256": "84892f146dd5fcbaffd824b1c27f9f08302eb29bad52ae4f424ee853d13d489a",
+  "raw_archive": {
+    "path": "raw-study.zip",
+    "sha256": "0341de79309b6049f51df25c8123a5a81361dd62501f39b3a8d7a3ad0b90b3ce",
+    "bytes": 20039222,
+    "members_verified": 3915
+  },
+  "report": {
+    "path": "report/REPORT_ZH.md",
+    "sha256": "78aa5079f2d43b25256b24c77ef4e917ebdf24e3a2cf67794f4d0384254eff64"
+  },
+  "audit": {
+    "prompt_replay": true,
+    "response_candidate_correspondence": true,
+    "numerical_evaluations": 554,
+    "numerical_passed": true,
+    "new_model_calls": 0
+  },
+  "claim_boundary": "Exploratory single-model TSP14 observability screening. It does not establish causal strategy superiority, cross-model generality, cross-task transfer, or completion of the doctoral chapter.",
+  "secret_scan": {
+    "archive_pattern_hit_members": 0,
+    "secrets_printed": false
+  }
+}

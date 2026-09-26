@@ -2,6 +2,22 @@
 
 本仓库汇集博士论文前五章对应文章材料、第六章 agent 原型与验证记录，以及总体技术报告，供跨设备查阅和复核。
 
+## 已完成：S0 输出校准与 S1 真实竞争验证（2026-09-26）
+
+本轮已调用本机 OpenCode 的 **MiniMax-M3 coding plan**，不是只更新文档。S0 r1 工程中止1请求；r2完成84请求但planner验收14/18不通过；另行冻结的r3完成48请求，planner/coder均18/18、端到端6/6，达到进入S1的工程门槛。两次校准不合并。
+
+S1已完成**两控制器×三个新区块×两搜索种子=12次，每次32提案**，使用同提案上限、串行 MiniMax M3 调用；12/12 搜索和12/12 独立 test 读出均已归档。本批只诊断自然 B 竞争机会，不是 SP/WR/FB/TS/AD 五策略效果确认。
+
+- [S0 r2负结果与完整成本](experiments/chapter6/s0_output_calibration/results/s0-minimax-output-calibration-20260926-r2/REPORT_ZH.md)
+- [S0 r3独立验收与原始结果](experiments/chapter6/agent_search/results/s0-minimax-output-acceptance-20260926-r3/REPORT_ZH.md)
+- [S1冻结协议](experiments/chapter6/agent_search/s1_observability/protocol.final.json)、[执行限制披露](experiments/chapter6/agent_search/s1_observability/EXECUTION_DEVIATIONS_ZH.md)
+- [S1完整技术报告](experiments/chapter6/agent_search/results/s1-minimax-observability-20260926-r1/report/REPORT_ZH.md)、[离线回放](experiments/chapter6/agent_search/results/s1-minimax-observability-20260926-r1/demo/index.html)、[原始归档](experiments/chapter6/agent_search/results/s1-minimax-observability-20260926-r1/raw-study.zip)
+- [S1复现说明](experiments/chapter6/agent_search/results/s1-minimax-observability-20260926-r1/REPRODUCE.md)、[发布元数据](experiments/chapter6/agent_search/results/s1-minimax-observability-20260926-r1/PUBLICATION.json)
+- [五策略纯状态机与较大TSP工程准备，均非真实策略效果结果](experiments/chapter6/agent_search/ENGINEERING_PREPARATION_ZH.md)
+- [PR #5](https://github.com/zhang-li-da/multimodal-optimization-thesis/pull/5)：版本分支 `experiment/chapter6-agent-search-s0-20260926`，不自动合并旧分支。
+
+本批共完成 764 次 S1 模型请求（3,515,905 个已知 tokens）；FIFO 平均 Test gap 为 4.613%，组合排序为 5.017%，R−FIFO 为 +0.4039 个百分点，六个配对为 3 胜、3 负。多分支和评分差异实际出现，但该质量差异不支持组合排序优势。研究设计/历史版本中的“本次无模型调用”只指其原始提交，不描述本批真实运行。最终方法优势与博士章节收口仍待公平策略效果和机制归因证据。
+
 ## 最新研究设计：智能体探索—开发协同（2026-09-26）
 
 第六章的主体更新为**智能体在广泛外层决策空间中的方向探索、局部开发保护与反馈资源分配**；TSP、机器学习工程和数学优化是验证载体。最终可只输出一个最佳方案，算法集合部署或集成不再是章节成立的必要条件。此为待实施设计，不是新实验结果。
@@ -66,7 +82,7 @@
 ```powershell
 git clone https://github.com/zhang-li-da/multimodal-optimization-thesis.git
 cd multimodal-optimization-thesis
-git switch --track origin/experiment/v1.2.3-minimax-screening
+git switch --track origin/experiment/chapter6-agent-search-s0-20260926
 ```
 
 仓库为公开仓库，查阅论文和实验材料不需要 GitHub 登录。旧标签 `chapter6-v1.2-screening-20260924` 保留原始 r2 发布；最新离线审计修订使用 `chapter6-v1.2.1-mechanism-only-20260924-r1`，早期机制标签不改写；模型 API 搜索需要各自的服务凭据，凭据不包含在仓库中。若只需下载文件，可使用 GitHub 页面上的 **Code → Download ZIP**。

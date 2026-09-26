@@ -1,0 +1,5 @@
+cohort,complete,config_id,dispatched,executable,finish_reasons,known_tokens,median_tokens,observed_slots,planned,role,schema_valid,total_seconds,usage_complete,valid,wilson_95
+acceptance,18,fixed_headroom,18,18,{'stop': 18},45985,2165.5,18,18,coder,18,184.16415099985898,True,18,"[0.8241207763533425, 1.0]"
+acceptance,18,fixed_headroom,18,,{'stop': 18},77519,3861.0,18,18,planner,18,323.90686540002935,True,18,"[0.8241207763533425, 1.0]"
+end_to_end,6,fixed_headroom,6,6,{'stop': 6},14290,2186.0,6,6,coder,6,51.34613399987575,True,6,"[0.6096657120978346, 1.0]"
+end_to_end,6,fixed_headroom,6,,{'stop': 6},32930,4992.0,6,6,planner,6,125.91691509995144,True,6,"[0.6096657120978346, 1.0]"

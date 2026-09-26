@@ -1,0 +1,28 @@
+{
+  "schema": "chapter6-s0-output-calibration-r2",
+  "study_id": "s0-minimax-output-calibration-20260926-r2",
+  "status": "FINAL_PROTOCOL_PENDING_EXECUTION",
+  "provider": "minimax-cn-coding-plan",
+  "model": "MiniMax-M3",
+  "provider_endpoint": "https://api.minimaxi.com/v1",
+  "immutable_model_version": "unknown; record response model alias",
+  "temperature": 0.7,
+  "timeout_seconds": 120,
+  "order_seed": 2026092602,
+  "configs": [
+    {"id": "legacy_caps", "planner_max_tokens": 1800, "coder_max_tokens": 2000},
+    {"id": "expanded_caps", "planner_max_tokens": 4096, "coder_max_tokens": 4096}
+  ],
+  "budget": {"calibration_planner": 18, "calibration_coder": 18, "acceptance_planner": 18, "acceptance_coder": 18, "end_to_end_maximum": 12, "total_requests_maximum": 84},
+  "selection": "Use calibration only: maximize minimum of planner/coder valid counts (9 each), then their sum; tie-break lower median input+output tokens across all 18 known-usage responses, then expanded_caps. Freeze selection before independent acceptance.",
+  "acceptance": "Only the selected configuration is evaluated on 18 NEW planner and 18 NEW coder fixtures (3 templates x 6 repeats). Each must have at least 17 complete schema-valid outputs; coder must also execute in the bounded interpreter. No reselection after acceptance.",
+  "end_to_end": "6 NEW synthetic execution contexts. Actual valid planner output is passed to coder. An invalid planner skips coder and is a failed pair. At least 5/6 pairs valid. Run diagnostics even if acceptance fails; S1 stays gated.",
+  "complete_output": "finish_reason=stop and no unclosed thought; final JSON outside any closed thought meets schema. Also report JSON/schema validity separately from completion.",
+  "planner_schema": "name,intent,formula nonempty strings; tags 1-2 from actual task vocabulary; identical to discovery.planner_prompt request",
+  "coder_execution": "Identical bounded Program interpreter and feature vocabulary as TSP search; 4 non-instance feature dictionaries including zero/late-tour inputs; never Python exec/eval",
+  "prompt_policy": "Use unchanged discovery.SYSTEM/planner_prompt/coder_prompt. Only output caps differ across configurations. Synthetic histories are explicitly recorded in fixtures, never reported as measured scores.",
+  "failures": "Malformed model outputs consume slots without retries. Any provider/indeterminate failure halts the batch; missing slots stay unstarted. Durable responses are recovered without retransmission. No success replacement.",
+  "continuation": "Run S1 only if both independent acceptance gates and E2E >=5/6 pass. Passing engineering gates is not evidence for search superiority.",
+  "r1_provenance": "r1 aborted after 1 request (781 known tokens). Not pooled with r2; retain its source, manifest and response. r2 also corrects impossible 17/18 gate, synthetic prompt mismatch, absent end-to-end plan handoff, and unsafe exec-based validator before any new calls.",
+  "independence": "No task-instance coordinates or hidden-test scores used. Calibration, acceptance and E2E fixtures frozen separately; synthetic feedback only."
+}

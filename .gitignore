@@ -26,3 +26,12 @@ readiness-tests.xml
 identity-local.json
 .DS_Store
 Thumbs.db
+
+experiments/chapter6/s0_output_calibration/studies/*/runs/
+experiments/chapter6/agent_search/local-*/
+experiments/chapter6/agent_search/studies/*/runs/
+experiments/chapter6/agent_search/s1_observability/studies/*/runs/
+experiments/chapter6/agent_search/local-*.xml
+experiments/chapter6/agent_search/local-*.js
+
+experiments/chapter6/agent_search/results/*/browser-check/profile/

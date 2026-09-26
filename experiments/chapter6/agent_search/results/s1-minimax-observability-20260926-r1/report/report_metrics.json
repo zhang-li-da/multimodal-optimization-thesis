@@ -1,0 +1,16 @@
+{
+  "manifest_sha256": "84892f146dd5fcbaffd824b1c27f9f08302eb29bad52ae4f424ee853d13d489a",
+  "completed_searches": 12,
+  "tested_searches": 12,
+  "observability_diagnostic_passed": true,
+  "paired_R_wins_ties_losses": [
+    3,
+    0,
+    3
+  ],
+  "total_S0_S1_calls": 897,
+  "total_S0_S1_known_tokens": 3929105,
+  "report_sha256": "78aa5079f2d43b25256b24c77ef4e917ebdf24e3a2cf67794f4d0384254eff64",
+  "new_model_calls_by_report": 0,
+  "claims": "S0/S1 only; S2-S6 not executed"
+}

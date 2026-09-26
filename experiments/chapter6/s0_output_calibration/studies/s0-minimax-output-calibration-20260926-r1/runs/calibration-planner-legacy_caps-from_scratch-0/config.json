@@ -1,0 +1,22 @@
+{
+  "schema": "chapter6-s0-run-config-v1",
+  "job_id": "calibration-planner-legacy_caps-from_scratch-0",
+  "cohort": "calibration",
+  "config_id": "legacy_caps",
+  "provider": "minimax-cn-coding-plan",
+  "model": "MiniMax-M3",
+  "parameters": {
+    "temperature": 0.7
+  },
+  "timeout_seconds": 120,
+  "source": {
+    "format": "named-s0-calibration-files-lf-sha256-v1",
+    "files": {
+      "experiments/chapter6/s0_output_calibration/__init__.py": "c6a87deac93c2069c146777920d3bf67cacbfbaa39c471910e4e5cfd79c299db",
+      "experiments/chapter6/s0_output_calibration/protocol.final.json": "dbcbdb258938b6cb1aadce8b8c56bb2ad5215adcd18863dc09358cdc12684c62",
+      "experiments/chapter6/s0_output_calibration/calibration.py": "662c0e65e9be293d3705f0122395e5746385b15c9f71e85e60d350e16588d88f"
+    },
+    "sha256": "63d9b74b784b09e595621dd26844c32f6d5c773d70a02b48da2d1b4ef721bc3c"
+  },
+  "execution_mode": "live"
+}
