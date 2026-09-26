@@ -1,385 +1,341 @@
-"""Freeze, run and analyze the MiniMax task-shaped output calibration."""
+"""S0 r2: task-shaped, single-attempt calibration before real search."""
 from __future__ import annotations
 
 import argparse
-import ast
 import base64
 from collections import Counter
 import copy
+import csv
 import hashlib
 import json
+import math
 from pathlib import Path
+import random
 import statistics
-import sys
-import time
 
-from chapter6_demo.discovery import SYSTEM
+from chapter6_demo.benchmarks import SEEDS, TAGS
+from chapter6_demo.discovery import SYSTEM, planner_prompt, coder_prompt
+from chapter6_demo.programs import Program, ProgramError, FEATURES
 from chapter6_demo.providers import parse_json
 from chapter6_demo.v12_1.audit_r2 import offline_only
 from chapter6_demo.v12_2.calls import DurableCalls, HTTPTransport, IndeterminateCall, ProviderFailure
-from chapter6_demo.v12_2.common import ROOT, digest, environment, file_sha, git, read_json, run_lock, save_json, source_record, utcnow
+from chapter6_demo.v12_2.common import (ROOT, digest, environment, file_sha, git, read_json,
+    run_lock, save_json, source_record, utcnow)
 
 HERE = Path(__file__).resolve().parent
 PROTOCOL = HERE / "protocol.final.json"
-TERMINAL_FAILURES = (IndeterminateCall, ProviderFailure, OSError, TimeoutError)
-
-TAGS = ["local_distance", "return_aware", "regret", "cluster", "lookahead", "progress", "nonlinear", "hybrid"]
-
-CALIBRATION_TEMPLATES = {
-    "from_scratch": {
-        "parent": "No parent program exists. Propose a first priority rule for the stated constrained interface.",
-        "task": "Start from scratch and combine distance and return-aware evidence without using hidden labels."
-    },
-    "parent_revision": {
-        "parent": "Parent program:\ndef priority(f):\n    return -f[\"distance\"]\nParent validation gap: 0.083. Improve this parent while keeping the public interface.",
-        "task": "Modify the parent to reduce dead-end choices using one or two available features."
-    },
-    "reference_revision": {
-        "parent": "Parent program:\ndef priority(f):\n    return -f[\"distance\"]\nParent validation gap: 0.083.",
-        "reference": "Reference program:\ndef priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\nReference validation gap: 0.079.",
-        "task": "Use the parent and reference as evidence, then propose an explicitly different but valid direction."
-    }
-}
-
-ACCEPTANCE_TEMPLATES = {
-    "from_scratch": {
-        "parent": "No parent program exists. The feature contract is fixed and no hidden evaluation is available.",
-        "task": "Create a concise first rule emphasizing regret and cluster density."
-    },
-    "parent_revision": {
-        "parent": "Parent program:\ndef priority(f):\n    return -f[\"distance\"] + 0.20 * f[\"return_distance\"]\nObserved probe loss: 0.071.",
-        "task": "Make a bounded revision that uses progress or nearest_remaining without changing the function interface."
-    },
-    "reference_revision": {
-        "parent": "Parent program:\ndef priority(f):\n    return -f[\"distance\"] + 0.20 * f[\"return_distance\"]\nObserved probe loss: 0.071.",
-        "reference": "Reference program:\ndef priority(f):\n    return -f[\"distance\"] + 0.30 * f[\"regret\"]\nObserved probe loss: 0.069.",
-        "task": "Propose a legal hybrid rule and describe which evidence motivates the change."
-    }
-}
-
-CODER_PLANS = {
-    "from_scratch": {"name": "calibration_distance", "intent": "Use local distance with a small progress tie adjustment.", "tags": ["local_distance", "progress"], "modifications": ["add a bounded progress coefficient"]},
-    "parent_revision": {"name": "calibration_return", "intent": "Add return awareness while retaining local distance.", "tags": ["local_distance", "return_aware"], "modifications": ["add a return_distance term"]},
-    "reference_revision": {"name": "calibration_regret", "intent": "Blend distance, return distance and regret.", "tags": ["local_distance", "return_aware", "regret"], "modifications": ["add a regret term with a fixed small coefficient"]}
-}
-
-E2E_CASES = [
-    ("from_scratch", "A fresh route constructor for a clustered instance family."),
-    ("from_scratch", "A fresh route constructor for a grid-like instance family."),
-    ("parent_revision", "A parent rule that needs a conservative local repair."),
-    ("parent_revision", "A parent rule with a return-aware reference."),
-    ("reference_revision", "Two valid rules with complementary feature evidence."),
-    ("reference_revision", "A final bounded hybrid proposal with explicit intent.")
-]
+TEMPLATES = ("from_scratch", "parent_revision", "reference_revision")
 
 
-def tooling_files():
-    paths = [HERE / "__init__.py", HERE / "protocol.final.json", HERE / "calibration.py"]
-    files = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes().replace(b"\r\n", b"\n")).hexdigest() for p in paths}
-    return {"format": "named-s0-calibration-files-lf-sha256-v1", "files": files, "sha256": digest(files)}
+def source():
+    files = source_record()["files"].copy()
+    for name in ("__init__.py", "calibration.py", "test_calibration.py", "protocol.final.json"):
+        path = HERE / name
+        files[path.relative_to(ROOT).as_posix()] = hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+    return {"format": "s0-r2-named-lf-sha256", "files": files, "sha256": digest(files)}
+
+
+def fixtures(cohort, template, repeat):
+    """Synthetic execution feedback only, no TSP instance or hidden result."""
+    offset = {"calibration": 0, "acceptance": 10, "end_to_end": 30}[cohort]
+    j = offset + repeat
+    def node(index):
+        name, tags, code = SEEDS["tsp"][index]
+        return {"id": index, "name": name, "intent": "synthetic interface fixture",
+                "tags": tags, "code": code,
+                "evaluation": {"loss": .081 + .0002*j - .003*index, "valid": True,
+                    "family_loss": {"uniform": .10, "clustered": .04, "grid": .08},
+                    "trajectory_values": [], "failure_type": None, "error": None}}
+    parent = None if template == "from_scratch" else node(0 if cohort == "calibration" else 1)
+    reference = node(2) if template == "reference_revision" else None
+    target = TAGS["tsp"][(j + TEMPLATES.index(template)) % len(TAGS["tsp"])]
+    selection = {"target": target, "action": "restart" if parent is None else ("recombine" if reference else "refine"),
+        "parent": parent, "reference": reference, "evidence": {"decision_step": j}, "recent": []}
+    a = round(.12 + .003*j, 4)
+    c = round(.08 + .002*j, 4)
+    plan = {"name": f"bounded_fixture_{cohort}_{template}_{repeat}",
+            "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+            "tags": ["return_aware", "regret"],
+            "formula": f"-distance + {a} * progress * return_distance + {c} * regret / (1 + regret)"}
+    return {"selection": selection, "plan": plan, "step": j,
+            "synthetic_feedback_not_measured_quality": True}
+
+
+def calibration_jobs(protocol):
+    jobs = []
+    for role in ("planner", "coder"):
+        for ci, config in enumerate(protocol["configs"]):
+            for ti, template in enumerate(TEMPLATES):
+                for repeat in range(3):
+                    jobs.append({"job_id": f"cal-{role[0]}-c{ci}-t{ti}-r{repeat}",
+                        "cohort": "calibration", "role": role, "config_id": config["id"],
+                        "template": template, "repeat": repeat, "fixture": fixtures("calibration", template, repeat)})
+    random.Random(protocol["order_seed"]).shuffle(jobs)
+    return jobs
+
+
+def acceptance_jobs():
+    return [{"job_id": f"acc-{role[0]}-t{ti}-r{repeat}", "cohort": "acceptance",
+             "role": role, "config_id": "$selected_from_calibration", "template": template,
+             "repeat": repeat, "fixture": fixtures("acceptance", template, repeat)}
+            for role in ("planner", "coder") for ti, template in enumerate(TEMPLATES) for repeat in range(6)]
+
+
+def e2e_jobs():
+    return [{"job_id": f"e2e-t{ti}-r{repeat}-{role[0]}", "cohort": "end_to_end",
+             "role": role, "config_id": "$selected_from_calibration", "case_id": f"e2e-t{ti}-r{repeat}",
+             "template": template, "repeat": repeat, "fixture": fixtures("end_to_end", template, repeat)}
+            for ti, template in enumerate(TEMPLATES) for repeat in range(2) for role in ("planner", "coder")]
 
 
 def freeze(output):
     output = Path(output)
-    if output.exists():
-        raise ValueError("Use a new immutable study directory.")
+    if output.exists() or git("status", "--porcelain", "--untracked-files=no"):
+        raise ValueError("Freeze requires a new directory and committed source.")
     protocol = read_json(PROTOCOL)
-    manifest = {
-        "schema": "chapter6-s0-study-manifest-v1",
-        "status": "FROZEN_PENDING_EXECUTION",
-        "created_utc": utcnow(),
-        "source_commit": git("rev-parse", "HEAD"),
-        "source": source_record(),
-        "tooling_source": tooling_files(),
-        "environment": environment(),
-        "protocol": protocol,
-        "new_model_calls": 0,
-        "study_data": {"calibration_templates_sha256": digest(CALIBRATION_TEMPLATES), "acceptance_templates_sha256": digest(ACCEPTANCE_TEMPLATES), "coder_plans_sha256": digest(CODER_PLANS), "e2e_cases_sha256": digest(E2E_CASES)}
-    }
+    jobs = calibration_jobs(protocol) + acceptance_jobs() + e2e_jobs()
+    assert len(jobs) == 84 and len({j["job_id"] for j in jobs}) == 84
+    manifest = {"schema": "chapter6-s0-r2-manifest", "status": "FROZEN_PENDING_EXECUTION",
+        "created_utc": utcnow(), "source_commit": git("rev-parse", "HEAD"), "source": source(),
+        "environment": environment(), "protocol": protocol, "jobs": jobs, "new_model_calls": 0}
     manifest["manifest_sha256"] = digest(manifest)
     save_json(output / "manifest.json", manifest, immutable=True)
     return manifest
 
 
-def verify(study):
-    manifest = read_json(Path(study) / "manifest.json")
-    if digest({k: v for k, v in manifest.items() if k != "manifest_sha256"}) != manifest["manifest_sha256"]:
-        raise ValueError("S0 manifest digest mismatch.")
-    if manifest["protocol"] != read_json(PROTOCOL):
-        raise ValueError("S0 protocol changed after freeze.")
-    if manifest["tooling_source"] != tooling_files():
-        raise ValueError("S0 source changed after freeze.")
-    return manifest
+def verify(study, runtime=False):
+    m = read_json(Path(study) / "manifest.json")
+    if digest({k: v for k, v in m.items() if k != "manifest_sha256"}) != m["manifest_sha256"]:
+        raise ValueError("Manifest fingerprint mismatch.")
+    if runtime and (m["source"] != source() or m["environment"] != environment() or m["protocol"] != read_json(PROTOCOL)):
+        raise ValueError("Frozen source, environment or protocol differs.")
+    return m
 
 
-def planner_system():
-    return SYSTEM + "\nFor this calibration, output exactly one JSON object and no prose outside it. Required keys: name (string), intent (string), tags (array using only the supplied vocabulary), modifications (array of strings)."
+def decode_final(text):
+    # Never parse a JSON draft embedded in a truncated, unclosed thought.
+    if not isinstance(text, str) or text.count("<think>") != text.count("</think>"):
+        raise ValueError("Unclosed thought or missing content")
+    return parse_json(text)
 
 
-def planner_prompt(template, text, repeat):
-    item = CALIBRATION_TEMPLATES[template] if text == "calibration" else ACCEPTANCE_TEMPLATES[template]
-    lines = [f"Calibration template: {template}", f"Repeat identifier: {repeat}", item["parent"]]
-    if item.get("reference"):
-        lines.append(item["reference"])
-    lines += ["Task: " + item["task"], "Feature vocabulary: " + ", ".join(TAGS), "Return the required JSON object."]
-    return "\n\n".join(lines)
-
-
-def coder_system():
-    return SYSTEM + "\nReturn exactly one JSON object with a code string. The code must define priority(f), use no imports, and be safe to execute on a feature dictionary."
-
-
-def coder_prompt(template, acceptance=False, repeat=0):
-    plans = CODER_PLANS[template]
-    label = "acceptance" if acceptance else "calibration"
-    return "\n".join(["Coder calibration cohort: " + label, "Repeat identifier: " + str(repeat), "Frozen legal plan:", json.dumps(plans, ensure_ascii=False, indent=2), "Return {\"code\":\"...\"} only."])
-
-
-def planner_valid(text):
-    try:
-        value = parse_json(text)
-        if not isinstance(value, dict):
-            return False, "not_object"
-        if any(not isinstance(value.get(k), str if k in ("name", "intent") else list) for k in ("name", "intent", "tags", "modifications")):
-            return False, "schema_type"
-        if not value["name"].strip() or not value["intent"].strip() or not value["modifications"]:
-            return False, "schema_empty"
-        if not value["tags"] or any(t not in TAGS for t in value["tags"]):
-            return False, "unknown_tag"
-        if any(not isinstance(x, str) or not x.strip() for x in value["modifications"]):
-            return False, "invalid_modification"
-        return True, "valid"
-    except Exception as exc:
-        return False, type(exc).__name__
+def planner_valid(value):
+    if not isinstance(value, dict):
+        return False
+    return (all(isinstance(value.get(k), str) and value[k].strip() for k in ("name", "intent", "formula"))
+        and isinstance(value.get("tags"), list) and 1 <= len(value["tags"]) <= 2
+        and all(t in TAGS["tsp"] for t in value["tags"]))
 
 
 def safe_code_valid(code):
-    if not isinstance(code, str) or not code.strip():
-        return False, "empty_code"
     try:
-        tree = ast.parse(code)
-    except SyntaxError:
-        return False, "syntax_error"
-    forbidden = (ast.Import, ast.ImportFrom, ast.Attribute, ast.While, ast.For, ast.AsyncFor, ast.With, ast.AsyncWith, ast.Try, ast.ClassDef, ast.Lambda, ast.Delete, ast.Global, ast.Nonlocal, ast.Call)
-    if any(isinstance(node, forbidden) for node in ast.walk(tree)):
-        return False, "unsafe_ast"
-    functions = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == "priority"]
-    if len(functions) != 1 or any(isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and node.name != "priority" for node in tree.body):
-        return False, "wrong_interface"
-    try:
-        namespace = {"__builtins__": {}}
-        exec(compile(tree, "<calibration>", "exec"), namespace, namespace)
-        value = namespace["priority"]({"distance": 0.4, "return_distance": 0.2, "regret": 0.1, "progress": 0.5, "nearest_remaining": 0.3, "cluster_density": 0.7})
-        if not isinstance(value, (int, float)):
-            return False, "non_numeric_return"
-    except Exception as exc:
+        program = Program(code, "tsp")
+        # Deliberately include zeros and late-tour conditions; no Python exec.
+        for k in range(4):
+            features = {name: (.1 + .07*i)*(k+1) for i, name in enumerate(FEATURES["tsp"])}
+            features["progress"] = (.1, .5, .9, 1.)[k]
+            if k == 3:
+                features.update(nearest_remaining=0., mean_remaining=0., regret=0., cluster_density=0., spread=0.)
+            if not math.isfinite(program(features)):
+                return False, "nonfinite_return"
+        return True, "executable_on_4_feature_fixtures"
+    except (ProgramError, TypeError, ValueError, RecursionError) as exc:
         return False, type(exc).__name__
-    return True, "executable"
 
 
-def validate_response(role, text, failure=None):
-    """Validate one persisted response without parsing it more than once.
-
-    Provider failures and malformed model output are both recorded as an
-    outcome.  A malformed response must not abort the remaining cohort: every
-    dispatched slot is part of the fixed calibration denominator.
-    """
+def validate_response(role, text, finish_reason="stop", failure=None):
+    result = {"complete": False, "json_valid": False, "schema_valid": False,
+              "executable": False if role == "coder" else None, "valid": False}
     if failure:
-        return False, failure.get("type", "provider_failure")
+        return {**result, "validation_reason": failure["type"]}
+    result["complete"] = finish_reason == "stop" and text.count("<think>") == text.count("</think>")
     try:
-        value = parse_json(text)
-    except Exception as exc:
-        return False, type(exc).__name__
+        parsed = decode_final(text)
+        result["json_valid"] = True
+    except (ValueError, TypeError):
+        return {**result, "validation_reason": "final_json_missing_or_malformed"}
     if role == "planner":
-        return planner_valid(text)
-    if role == "coder":
-        if not isinstance(value, dict) or "code" not in value:
-            return False, "missing_code"
-        return safe_code_valid(value["code"])
-    return False, "unknown_role"
+        result["schema_valid"] = bool(planner_valid(parsed))
+        reason = "valid" if result["schema_valid"] else "planner_schema"
+    elif role == "coder":
+        result["schema_valid"] = isinstance(parsed, dict) and isinstance(parsed.get("code"), str) and bool(parsed["code"].strip())
+        result["executable"], reason = safe_code_valid(parsed["code"]) if result["schema_valid"] else (False, "coder_schema")
+    else:
+        raise ValueError("Unknown response role")
+    result["valid"] = bool(result["complete"] and result["schema_valid"] and (role == "planner" or result["executable"]))
+    return {**result, "validation_reason": reason if result["complete"] else "incomplete_output"}
 
 
-def call_metadata(directory):
-    directory = Path(directory)
-    response = read_json(directory / "response.json") if (directory / "response.json").exists() else {}
-    raw = read_json(directory / "raw_response.json") if (directory / "raw_response.json").exists() else {}
-    body = json.loads(base64.b64decode(raw["envelope"]["body_base64"])) if raw else {}
-    choice = (body.get("choices") or [{}])[0]
-    text = response.get("text", "")
-    closed = "</think>" in text
-    suffix = text.rsplit("</think>", 1)[-1] if closed else text
-    return {"finish_reason": choice.get("finish_reason"), "input_tokens": response.get("input_tokens"), "output_tokens": response.get("output_tokens"), "usage_complete": response.get("usage_complete"), "seconds": response.get("seconds"), "returned_model": response.get("returned_model"), "has_think": "<think>" in text, "think_closed": closed, "final_suffix_characters": len(suffix.strip()) if closed else None, "request_id": response.get("request_id")}
-
-
-def one_call(study, job, step, stage, system, prompt, max_tokens):
-    directory = Path(study) / "runs" / job
-    config = read_json(directory / "config.json")
-    calls = DurableCalls(directory, config, HTTPTransport(config["provider"], config["model"], config["timeout_seconds"]))
+def metadata(folder):
+    response = read_json(folder / "response.json") if (folder / "response.json").exists() else {}
+    raw = read_json(folder / "raw_response.json") if (folder / "raw_response.json").exists() else {}
     try:
-        response = calls.complete(step, stage, system, prompt, max_tokens)
-        return response, call_metadata(directory / "calls" / f"{step:03d}-{stage}"), None
-    except Exception as exc:
-        metadata = call_metadata(directory / "calls" / f"{step:03d}-{stage}") if (directory / "calls" / f"{step:03d}-{stage}" / "response.json").exists() else {"finish_reason": None, "input_tokens": None, "output_tokens": None, "usage_complete": False, "seconds": None, "returned_model": None}
-        return None, metadata, {"type": type(exc).__name__, "error": str(exc)[:180]}
+        body = json.loads(base64.b64decode(raw["envelope"]["body_base64"]))
+    except (KeyError, ValueError):
+        body = {}
+    choice = (body.get("choices") or [{}])[0]
+    usage = response.get("usage_raw") or {}
+    return {**{k: response.get(k) for k in ("input_tokens", "output_tokens", "usage_complete",
+             "seconds", "returned_model", "request_id")}, "finish_reason": choice.get("finish_reason"),
+             "reasoning_tokens": (usage.get("completion_tokens_details") or {}).get("reasoning_tokens"),
+             "cached_tokens": (usage.get("prompt_tokens_details") or {}).get("cached_tokens")}
 
 
-def ensure_job(study, job, config_id, cohort):
-    directory = Path(study) / "runs" / job
-    directory.mkdir(parents=True, exist_ok=True)
-    config = {
-        "schema": "chapter6-s0-run-config-v1", "job_id": job, "cohort": cohort, "config_id": config_id,
-        "provider": "minimax-cn-coding-plan", "model": "MiniMax-M3", "parameters": {"temperature": 0.7},
-        "timeout_seconds": 120, "source": verify(study)["tooling_source"], "execution_mode": "live"
-    }
-    save_json(directory / "config.json", config, immutable=True)
-    return directory
+class LazyTransport:
+    def __init__(self, protocol):
+        self.protocol = protocol
+        self.transport = None
+    def send(self, request, persist):
+        if self.transport is None:
+            self.transport = HTTPTransport(self.protocol["provider"], self.protocol["model"], self.protocol["timeout_seconds"])
+            if self.transport.client.base_url != self.protocol["provider_endpoint"]:
+                raise ProviderFailure("Configured endpoint differs from protocol.")
+        self.transport.send(request, persist)
 
 
-def planned_calls(manifest):
-    configs = [x["id"] for x in manifest["protocol"]["configs"]]
-    result = []
-    for cohort, role, templates in [("calibration", "planner", CALIBRATION_TEMPLATES), ("calibration", "coder", CODER_PLANS), ("acceptance", "planner", ACCEPTANCE_TEMPLATES), ("acceptance", "coder", CODER_PLANS)]:
-        for config in configs:
-            for template in templates:
-                for repeat in range(3):
-                    result.append({"cohort": cohort, "role": role, "config_id": config, "template": template, "repeat": repeat, "job": f"{cohort}-{role}-{config}-{template}-{repeat}"})
-    for index, (template, task) in enumerate(E2E_CASES):
-        result.append({"cohort": "end_to_end", "role": "planner", "config_id": "selected_after_acceptance", "template": template, "repeat": index, "job": f"end_to_end-{index}", "task": task})
-        result.append({"cohort": "end_to_end", "role": "coder", "config_id": "selected_after_acceptance", "template": template, "repeat": index, "job": f"end_to_end-{index}", "task": task})
-    return result
-
-
-def run(study):
-    study = Path(study)
-    manifest = verify(study)
-    if manifest["status"] != "FROZEN_PENDING_EXECUTION":
-        raise ValueError("S0 study is not frozen.")
-    root = study / "runs"
-    root.mkdir(parents=True, exist_ok=True)
-    planned = planned_calls(manifest)
-    report = []
-    halted = None
-    # Calibration and acceptance are fully completed before selecting an
-    # end-to-end diagnostic configuration. No model result is used as quality.
-    for item in planned:
-        if item["cohort"] == "end_to_end":
-            continue
-        if halted:
-            break
-        config = next(x for x in manifest["protocol"]["configs"] if x["id"] == item["config_id"])
-        directory = ensure_job(study, item["job"], item["config_id"], item["cohort"])
-        existing = directory / "outcome.json"
-        if existing.exists():
-            outcome = read_json(existing)
-            report.append(outcome)
-            continue
-        prompt = coder_prompt(item["template"], item["cohort"] == "acceptance", item["repeat"]) if item["role"] == "coder" else planner_prompt(item["template"], item["cohort"], item["repeat"])
-        system = coder_system() if item["role"] == "coder" else planner_system()
-        max_tokens = config["coder_max_tokens"] if item["role"] == "coder" else config["planner_max_tokens"]
-        response, metadata, failure = one_call(study, item["job"], 0, item["role"], system, prompt, max_tokens)
-        text_value = response.get("text", "") if response else ""
-        valid, reason = validate_response(item["role"], text_value, failure)
-        outcome = {**item, "max_tokens": max_tokens, "valid": valid, "validation_reason": reason, "failure": failure, **metadata}
-        save_json(existing, outcome, immutable=True)
-        report.append(outcome)
-        if failure and failure["type"] == "IndeterminateCall":
-            halted = {"reason": "indeterminate_request", "job": item["job"]}
-    # Selection and end-to-end are deterministic from saved outcomes.
-    save_json(study / "calibration_progress.json", {"status": "complete" if not halted else "halted", "halt": halted, "outcomes": report}, immutable=True)
-    selected = select_config(report, manifest["protocol"])
-    if halted:
-        return {"status": "halted", "selected_config": selected, "outcomes": len(report)}
-    for index, (template, task) in enumerate(E2E_CASES):
-        config = next(x for x in manifest["protocol"]["configs"] if x["id"] == selected)
-        job = f"end_to_end-{index}"
-        directory = ensure_job(study, job, selected, "end_to_end")
-        prompt = planner_prompt(template, "acceptance", index) + "\nSpecific diagnostic case: " + task
-        planner_outcome_path = directory / "planner_outcome.json"
-        if planner_outcome_path.exists():
-            planner_outcome = read_json(planner_outcome_path)
-        else:
-            response, metadata, failure = one_call(study, job, 0, "planner", planner_system(), prompt, config["planner_max_tokens"])
-            planner_ok, planner_reason = validate_response("planner", response.get("text", "") if response else "", failure)
-            planner_outcome = {"job": job, "config_id": selected, "template": template, "valid": planner_ok, "validation_reason": planner_reason, "failure": failure, **metadata}
-            save_json(planner_outcome_path, planner_outcome, immutable=True)
-        coder_outcome_path = directory / "coder_outcome.json"
-        if coder_outcome_path.exists():
-            coder_outcome = read_json(coder_outcome_path)
-            coder_failure = coder_outcome.get("failure")
-        else:
-            coder_response, coder_metadata, coder_failure = one_call(study, job, 1, "coder", coder_system(), coder_prompt(template, True, index), config["coder_max_tokens"])
-            coder_ok, coder_reason = validate_response("coder", coder_response.get("text", "") if coder_response else "", coder_failure)
-            coder_outcome = {"job": job, "config_id": selected, "template": template, "valid": coder_ok, "validation_reason": coder_reason, "failure": coder_failure, **coder_metadata}
-            save_json(coder_outcome_path, coder_outcome, immutable=True)
-        if coder_failure and coder_failure["type"] == "IndeterminateCall":
-            halted = {"reason": "indeterminate_request", "job": job}
-            break
-    save_json(study / "selection.json", {"selected_config": selected, "selection_rule": manifest["protocol"]["selection_rule"], "calibration_not_ready": not gates_pass(report), "e2e_started": True, "halt": halted}, immutable=True)
-    return {"status": "complete" if not halted else "halted", "selected_config": selected, "outcomes": len(report), "e2e_cases": len(E2E_CASES)}
+def run_one(study, manifest, job, config_id, transport, actual_plan=None):
+    protocol = manifest["protocol"]
+    cap = next(c for c in protocol["configs"] if c["id"] == config_id)[job["role"]+"_max_tokens"]
+    fixture = job["fixture"]
+    prompt = (planner_prompt("tsp", fixture["selection"], fixture["step"]) if job["role"] == "planner" else
+              coder_prompt("tsp", actual_plan if actual_plan is not None else fixture["plan"], fixture["selection"]))
+    folder = Path(study) / "runs" / job["job_id"]
+    config = {"schema": "s0-r2-call", "manifest_sha256": manifest["manifest_sha256"],
+              "job_id": job["job_id"], "provider": protocol["provider"], "model": protocol["model"],
+              "parameters": {"temperature": protocol["temperature"]}, "config_id": config_id}
+    save_json(folder / "config.json", config, immutable=True)
+    calls = DurableCalls(folder, config, transport)
+    failure, response = None, {}
+    if (folder / "outcome.json").exists():
+        previous = read_json(folder / "outcome.json")
+        if previous["failure"]:
+            return previous, None
+    try:
+        response = calls.complete(0, job["role"], SYSTEM, prompt, cap)
+    except (IndeterminateCall, ProviderFailure) as exc:
+        failure = {"type": type(exc).__name__}
+    meta = metadata(folder / "calls" / f"000-{job['role']}")
+    outcome = {k: v for k, v in job.items() if k != "fixture"}
+    outcome.update(config_id=config_id, max_tokens=cap, input_characters=len(SYSTEM)+len(prompt),
+        dispatched=True, failure=failure, **meta,
+        **validate_response(job["role"], response.get("text", ""), meta["finish_reason"], failure))
+    save_json(folder / "outcome.json", outcome, immutable=True)
+    print(json.dumps({"job": job["job_id"], "valid": outcome["valid"],
+        "finish_reason": meta["finish_reason"], "tokens": [meta["input_tokens"], meta["output_tokens"]]}), flush=True)
+    return outcome, decode_final(response["text"]) if outcome["valid"] else None
 
 
 def select_config(outcomes, protocol):
-    summaries = {}
+    """Only 36 calibration slots select the cap; acceptance is never used."""
+    stats = []
     for config in protocol["configs"]:
-        p = [x for x in outcomes if x["cohort"] == "acceptance" and x["role"] == "planner" and x["config_id"] == config["id"]]
-        c = [x for x in outcomes if x["cohort"] == "acceptance" and x["role"] == "coder" and x["config_id"] == config["id"]]
-        summaries[config["id"]] = {"planner_valid": sum(x["valid"] for x in p), "coder_valid": sum(x["valid"] for x in c), "coder_executable": sum(x["valid"] for x in c), "tokens": [x["input_tokens"] + x["output_tokens"] for x in p+c if x["input_tokens"] is not None and x["output_tokens"] is not None]}
-    passers = [config["id"] for config in protocol["configs"] if summaries[config["id"]]["planner_valid"] >= 17 and summaries[config["id"]]["coder_valid"] >= 17]
-    if len(passers) == 1:
-        return passers[0]
-    if len(passers) > 1:
-        return min(passers, key=lambda x: statistics.median(summaries[x]["tokens"]) if summaries[x]["tokens"] else float("inf"))
-    return "expanded_caps"
+        rows = [x for x in outcomes if x["cohort"] == "calibration" and x["config_id"] == config["id"]]
+        if len(rows) != 18:
+            raise ValueError("Complete both calibration cohorts before selecting.")
+        p, c = (sum(x["valid"] for x in rows if x["role"] == r) for r in ("planner", "coder"))
+        tokens = [x["input_tokens"] + x["output_tokens"] for x in rows if x.get("usage_complete")]
+        stats.append({"id": config["id"], "planner_valid": p, "coder_valid": c,
+            "median_tokens": statistics.median(tokens) if len(tokens) == 18 else None})
+    chosen = max(stats, key=lambda s: (min(s["planner_valid"], s["coder_valid"]),
+        s["planner_valid"]+s["coder_valid"], -(s["median_tokens"] if s["median_tokens"] is not None else math.inf),
+        s["id"] == "expanded_caps"))["id"]
+    return {"selected_config": chosen, "calibration_statistics": stats, "selection_uses_acceptance": False}
 
 
-def gates_pass(outcomes):
-    for config in ("legacy_caps", "expanded_caps"):
-        p = [x for x in outcomes if x["cohort"] == "acceptance" and x["role"] == "planner" and x["config_id"] == config]
-        c = [x for x in outcomes if x["cohort"] == "acceptance" and x["role"] == "coder" and x["config_id"] == config]
-        if len(p) == 18 and len(c) == 18 and sum(x["valid"] for x in p) >= 17 and sum(x["valid"] for x in c) >= 17:
-            return True
-    return False
+def gates(outcomes):
+    counts = {}
+    for role in ("planner", "coder"):
+        rows = [r for r in outcomes if r["cohort"] == "acceptance" and r["role"] == role]
+        counts[role] = {"planned": 18, "observed": len(rows), "valid": sum(r["valid"] for r in rows)}
+    e2e = [r for r in outcomes if r["cohort"] == "end_to_end"]
+    successes = sum(all(any(r.get("case_id") == f"e2e-t{ti}-r{rep}" and r["role"] == role and r["valid"]
+        for r in e2e) for role in ("planner", "coder")) for ti in range(3) for rep in range(2))
+    ready = all(v["observed"] == 18 and v["valid"] >= 17 for v in counts.values()) and successes >= 5
+    return {"acceptance": counts, "e2e_successes": successes, "e2e_planned": 6, "ready_for_s1": ready}
 
 
-def wilson(successes, total, z=1.959963984540054):
-    if not total:
+def run(study, *, transport=None, runtime=True):
+    study = Path(study)
+    manifest = verify(study, runtime=runtime)
+    protocol = manifest["protocol"]
+    transport = transport or LazyTransport(protocol)
+    outcomes, selected, plans = [], None, {}
+    with run_lock(study):
+        if (study / "run_result.json").exists():
+            return read_json(study / "run_result.json")
+        for job in manifest["jobs"]:
+            if job["cohort"] != "calibration" and selected is None:
+                selected = select_config(outcomes, protocol)
+                save_json(study / "selection.json", selected, immutable=True)
+            config_id = job["config_id"] if job["cohort"] == "calibration" else selected["selected_config"]
+            case = job.get("case_id")
+            if case and job["role"] == "coder" and case not in plans:
+                outcome = {k: v for k, v in job.items() if k != "fixture"}
+                outcome.update(config_id=config_id, dispatched=False, valid=False, complete=False,
+                    json_valid=False, schema_valid=False, executable=False, failure=None,
+                    validation_reason="skipped_after_invalid_planner")
+                save_json(study / "runs" / job["job_id"] / "outcome.json", outcome, immutable=True)
+            else:
+                outcome, parsed = run_one(study, manifest, job, config_id, transport, plans.get(case))
+                if case and job["role"] == "planner" and outcome["valid"]:
+                    plans[case] = parsed
+            outcomes.append(outcome)
+            save_json(study / "progress.json", {"outcomes": outcomes, "completed_slots": len(outcomes),
+                "planned_slots": len(manifest["jobs"])})
+            if outcome.get("failure"):
+                result = {"status": "infrastructure_halted", "after_job": job["job_id"],
+                    "completed_slots": len(outcomes), "dispatched_requests": sum(r["dispatched"] for r in outcomes),
+                    "no_automatic_retry": True, **gates(outcomes)}
+                save_json(study / "run_result.json", result, immutable=True)
+                return result
+        result = {"status": "complete", "completed_slots": len(outcomes),
+            "dispatched_requests": sum(r["dispatched"] for r in outcomes), **selected, **gates(outcomes)}
+        save_json(study / "run_result.json", result, immutable=True)
+        return result
+
+
+def wilson(k, n, z=1.959963984540054):
+    if not n:
         return None
-    phat = successes / total
-    denom = 1 + z*z/total
-    centre = (phat + z*z/(2*total)) / denom
-    radius = z * ((phat*(1-phat)/total + z*z/(4*total*total)) ** 0.5) / denom
-    return [centre-radius, centre+radius]
+    d = 1+z*z/n
+    c = (k/n + z*z/(2*n))/d
+    r = z*math.sqrt((k/n)*(1-k/n)/n+z*z/(4*n*n))/d
+    return [c-r, c+r]
 
 
 def analyze(study, output):
     study, output = Path(study), Path(output)
     manifest = verify(study)
-    progress = read_json(study / "calibration_progress.json")
-    outcomes = progress["outcomes"]
-    e2e = []
-    for directory in sorted((study / "runs").glob("end_to_end-*")):
-        if (directory / "planner_outcome.json").exists():
-            e2e.append(read_json(directory / "planner_outcome.json"))
-        if (directory / "coder_outcome.json").exists():
-            e2e.append(read_json(directory / "coder_outcome.json"))
-    rows = []
-    for config in manifest["protocol"]["configs"]:
-        for cohort in ("calibration", "acceptance"):
-            for role in ("planner", "coder"):
-                values = [x for x in outcomes if x["config_id"] == config["id"] and x["cohort"] == cohort and x["role"] == role]
-                success = sum(x["valid"] for x in values)
-                rows.append({"config_id": config["id"], "cohort": cohort, "role": role, "planned": len(values), "valid": success, "fraction": success/len(values) if values else None, "wilson_95": wilson(success, len(values)), "known_tokens": sum((x["input_tokens"] or 0)+(x["output_tokens"] or 0) for x in values), "finish_reasons": dict(Counter(x.get("finish_reason") for x in values)), "returned_models": sorted({x.get("returned_model") for x in values if x.get("returned_model")})})
-    selected = read_json(study / "selection.json") if (study / "selection.json").exists() else None
-    summary = {"study_id": manifest["protocol"]["study_id"], "manifest_sha256": manifest["manifest_sha256"], "analysis_utc": utcnow(), "new_model_calls_by_analysis": 0, "outcomes": len(outcomes), "e2e_outcomes": len(e2e), "selection": selected, "calibration_not_ready": not gates_pass(outcomes), "claim": "Output-readiness engineering calibration only; no search-quality claim.", "rows": rows}
-    output.mkdir(parents=True)
+    rows = [read_json(study / "runs" / j["job_id"] / "outcome.json")
+            for j in manifest["jobs"] if (study / "runs" / j["job_id"] / "outcome.json").exists()]
+    cohorts = []
+    for cohort, config, role in sorted({(r["cohort"], r["config_id"], r["role"]) for r in rows}):
+        values = [r for r in rows if (r["cohort"], r["config_id"], r["role"]) == (cohort, config, role)]
+        dispatched = [r for r in values if r["dispatched"]]
+        tokens = [r["input_tokens"]+r["output_tokens"] for r in dispatched if r.get("usage_complete")]
+        seconds = [r["seconds"] for r in dispatched if r.get("seconds") is not None]
+        k = sum(r["valid"] for r in values)
+        cohorts.append({"cohort": cohort, "config_id": config, "role": role,
+            "planned": 9 if cohort == "calibration" else (18 if cohort == "acceptance" else 6),
+            "observed_slots": len(values), "dispatched": len(dispatched), "valid": k,
+            "complete": sum(r["complete"] for r in values), "schema_valid": sum(r["schema_valid"] for r in values),
+            "executable": sum(bool(r["executable"]) for r in values) if role == "coder" else None,
+            "wilson_95": wilson(k, len(values)), "known_tokens": sum(tokens),
+            "usage_complete": len(tokens) == len(dispatched), "median_tokens": statistics.median(tokens) if tokens else None,
+            "total_seconds": sum(seconds), "finish_reasons": dict(Counter(r.get("finish_reason") for r in values))})
+    total = sum(c["known_tokens"] for c in cohorts)
+    summary = {"study_id": manifest["protocol"]["study_id"], "manifest_sha256": manifest["manifest_sha256"],
+        "source_commit": manifest["source_commit"], "new_model_calls_by_analysis": 0,
+        "result": read_json(study / "run_result.json"), "cohorts": cohorts,
+        "known_tokens": total, "total_requests": sum(r["dispatched"] for r in rows),
+        "returned_models": sorted({r["returned_model"] for r in rows if r.get("returned_model")}),
+        "claim": "Engineering calibration, not search superiority. Synthetic feedback; four feature inputs do not prove universal executability."}
+    output.mkdir(parents=True, exist_ok=True)
     save_json(output / "summary.json", summary, immutable=True)
-    save_json(output / "manifest_binding.json", {"manifest_sha256": manifest["manifest_sha256"], "source_commit": manifest["source_commit"], "new_model_calls_by_analysis": 0}, immutable=True)
-    import csv
-    with (output / "cohorts.csv").open("w", encoding="utf-8", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
-    with (output / "outcomes.csv").open("w", encoding="utf-8", newline="") as stream:
-        fields = sorted({k for x in outcomes+e2e for k in x})
-        writer = csv.DictWriter(stream, fieldnames=fields); writer.writeheader(); writer.writerows(outcomes+e2e)
+    for name, values in (("cohorts", cohorts), ("outcomes", rows)):
+        with (output / f"{name}.csv").open("w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=sorted({k for r in values for k in r}))
+            writer.writeheader(); writer.writerows(values)
     return summary
 
 
@@ -390,15 +346,12 @@ def main():
     p = sub.add_parser("run"); p.add_argument("--study", type=Path, required=True); p.add_argument("--live", action="store_true", required=True)
     p = sub.add_parser("analyze"); p.add_argument("--study", type=Path, required=True); p.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    if args.command == "freeze":
-        with offline_only(): result = freeze(args.output)
-        print(json.dumps({"status": result["status"], "manifest_sha256": result["manifest_sha256"]}))
-    elif args.command == "run":
+    if args.command == "run":
         result = run(args.study)
-        print(json.dumps(result))
     else:
-        with offline_only(): result = analyze(args.study, args.output)
-        print(json.dumps({k: v for k, v in result.items() if k != "rows"}, ensure_ascii=False))
+        with offline_only():
+            result = freeze(args.output) if args.command == "freeze" else analyze(args.study, args.output)
+    print(json.dumps({k: v for k, v in result.items() if k not in ("source", "jobs", "cohorts")}, ensure_ascii=True))
 
 
 if __name__ == "__main__":
