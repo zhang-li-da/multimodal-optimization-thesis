@@ -91,6 +91,13 @@ def analyze(study, output):
             "protected_best_ancestor_runs": sum(r["summary"].get("protected_best_ancestor", False) for r in arm_rows),
             "known_reproduction_rate": statistics.fmean(r["summary"].get("known_reproduction_rate", 0) for r in arm_rows) if arm_rows else None,
         }
+    realized_pairs = sum((p["protected_summary"] or {}).get("protected_slots_realized", 0) > 0 for p in pairs)
+    multi_pairs = sum((p["protected_summary"] or {}).get("multi_branch_slots", 0) > 0 for p in pairs)
+    if "output_fix" in manifest["protocol"]:
+        required_realized, required_multi = 6, 3
+    else:
+        required_realized, required_multi = 3, 1
+    gate_passed = realized_pairs >= required_realized and multi_pairs >= required_multi
     report = {
         "study_id": manifest["study_id"], "protocol_status": manifest["status"],
         "jobs_planned": len(rows), "jobs_complete": len(complete),
@@ -105,14 +112,15 @@ def analyze(study, output):
             "bootstrap_95_percentile": bootstrap(diffs, manifest["protocol"]["statistics"]["bootstrap_seed"]),
         },
         "mechanism_gate": {
-            "pairs_with_protected_realized": sum(
-                (p["protected_summary"] or {}).get("protected_slots_realized", 0) > 0 for p in pairs),
-            "pairs_with_multi_branch_protected": sum(
-                (p["protected_summary"] or {}).get("multi_branch_slots", 0) > 0 for p in pairs),
+            "pairs_with_protected_realized": realized_pairs,
+            "pairs_with_multi_branch_protected": multi_pairs,
             "protection_changed_test_gap_pairs": sum(
                 p["difference_percentage_points"] is not None and abs(p["difference_percentage_points"]) > 1e-12 for p in pairs),
-            "progression_gate_passed": False,
-            "reason": "Only one of twelve pairs realized protected development; no pair had a multi-branch slot.",
+            "required_pairs_with_protected_realized": required_realized,
+            "required_pairs_with_multi_branch": required_multi,
+            "progression_gate_passed": gate_passed,
+            "reason": ("Exposure thresholds met." if gate_passed else
+                       f"Observed {realized_pairs} pairs with protected development and {multi_pairs} pairs with multi-branch slots; required {required_realized} and {required_multi}."),
         },
         "interpretation": "The protection implementation is operational and the 24 jobs completed, but this batch does not identify a quality effect because the protected branch mechanism was almost never exposed. The result is a valid null/exposure failure, not evidence of superiority or inferiority.",
         "new_model_calls_in_analysis": 0,

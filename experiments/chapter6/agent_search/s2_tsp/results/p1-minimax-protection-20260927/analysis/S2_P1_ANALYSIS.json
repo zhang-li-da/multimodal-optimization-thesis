@@ -770,8 +770,10 @@
     "pairs_with_protected_realized": 1,
     "pairs_with_multi_branch_protected": 0,
     "protection_changed_test_gap_pairs": 3,
+    "required_pairs_with_protected_realized": 3,
+    "required_pairs_with_multi_branch": 1,
     "progression_gate_passed": false,
-    "reason": "Only one of twelve pairs realized protected development; no pair had a multi-branch slot."
+    "reason": "Observed 1 pairs with protected development and 0 pairs with multi-branch slots; required 3 and 1."
   },
   "interpretation": "The protection implementation is operational and the 24 jobs completed, but this batch does not identify a quality effect because the protected branch mechanism was almost never exposed. The result is a valid null/exposure failure, not evidence of superiority or inferiority.",
   "new_model_calls_in_analysis": 0
