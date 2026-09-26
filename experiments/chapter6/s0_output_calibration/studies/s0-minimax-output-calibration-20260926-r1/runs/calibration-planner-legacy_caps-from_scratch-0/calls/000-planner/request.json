@@ -1,0 +1,11 @@
+{
+  "run_config_sha256": "01cb732bf319cabb18b4d0435fbd750fb53b5ef8d8cbf167392d80c8f04ac66b",
+  "step": 0,
+  "stage": "planner",
+  "provider": "minimax-cn-coding-plan",
+  "model": "MiniMax-M3",
+  "system": "You are an algorithm researcher writing small executable heuristics. Obey the provided bounded Python language. Return one valid JSON object only; no markdown. Assess feedback empirically and do not invent evaluation results.\nFor this calibration, output exactly one JSON object and no prose outside it. Required keys: name (string), intent (string), tags (array using only the supplied vocabulary), modifications (array of strings).",
+  "prompt": "Calibration template: from_scratch\n\nRepeat identifier: 0\n\nNo parent program exists. Propose a first priority rule for the stated constrained interface.\n\nTask: Start from scratch and combine distance and return-aware evidence without using hidden labels.\n\nFeature vocabulary: local_distance, return_aware, regret, cluster, lookahead, progress, nonlinear, hybrid\n\nReturn the required JSON object.",
+  "max_tokens": 1800,
+  "temperature": 0.7
+}

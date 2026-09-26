@@ -277,7 +277,7 @@ def run(study):
         system = coder_system() if item["role"] == "coder" else planner_system()
         max_tokens = config["coder_max_tokens"] if item["role"] == "coder" else config["planner_max_tokens"]
         response, metadata, failure = one_call(study, item["job"], 0, item["role"], system, prompt, max_tokens)
-        text_value = response.text if response else ""
+        text_value = response.get("text", "") if response else ""
         valid, reason = validate_response(item["role"], text_value, failure)
         outcome = {**item, "max_tokens": max_tokens, "valid": valid, "validation_reason": reason, "failure": failure, **metadata}
         save_json(existing, outcome, immutable=True)
@@ -299,7 +299,7 @@ def run(study):
             planner_outcome = read_json(planner_outcome_path)
         else:
             response, metadata, failure = one_call(study, job, 0, "planner", planner_system(), prompt, config["planner_max_tokens"])
-            planner_ok, planner_reason = validate_response("planner", response.text if response else "", failure)
+            planner_ok, planner_reason = validate_response("planner", response.get("text", "") if response else "", failure)
             planner_outcome = {"job": job, "config_id": selected, "template": template, "valid": planner_ok, "validation_reason": planner_reason, "failure": failure, **metadata}
             save_json(planner_outcome_path, planner_outcome, immutable=True)
         coder_outcome_path = directory / "coder_outcome.json"
@@ -308,7 +308,7 @@ def run(study):
             coder_failure = coder_outcome.get("failure")
         else:
             coder_response, coder_metadata, coder_failure = one_call(study, job, 1, "coder", coder_system(), coder_prompt(template, True, index), config["coder_max_tokens"])
-            coder_ok, coder_reason = validate_response("coder", coder_response.text if coder_response else "", coder_failure)
+            coder_ok, coder_reason = validate_response("coder", coder_response.get("text", "") if coder_response else "", coder_failure)
             coder_outcome = {"job": job, "config_id": selected, "template": template, "valid": coder_ok, "validation_reason": coder_reason, "failure": coder_failure, **coder_metadata}
             save_json(coder_outcome_path, coder_outcome, immutable=True)
         if coder_failure and coder_failure["type"] == "IndeterminateCall":

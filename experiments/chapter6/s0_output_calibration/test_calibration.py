@@ -8,7 +8,7 @@ import pytest
 from chapter6_demo.providers import ModelClient
 from chapter6_demo.s0_output_calibration.calibration import (
     ACCEPTANCE_TEMPLATES, CALIBRATION_TEMPLATES, CODER_PLANS, gates_pass,
-    planner_valid, safe_code_valid, select_config, wilson,
+    planner_valid, safe_code_valid, select_config, validate_response, wilson,
 )
 
 
@@ -39,6 +39,15 @@ def test_code_contract_is_bounded_and_executable():
     assert safe_code_valid('import os\ndef priority(f):\n    return 0') == (False, "unsafe_ast")
     assert safe_code_valid('def priority(f):\n    return __import__("os").getcwd()') == (False, "unsafe_ast")
     assert safe_code_valid('def priority(f):\n    while True:\n        pass') == (False, "unsafe_ast")
+
+
+def test_response_validation_consumes_persisted_dict_text_once():
+    assert validate_response(
+        "planner",
+        {"text": '{"name":"r","intent":"x","tags":["regret"],"modifications":["x"]}'}["text"],
+    ) == (True, "valid")
+    assert validate_response("coder", '{"code":"def priority(f):\\n    return -f[\\"distance\\"]"}') == (True, "executable")
+    assert validate_response("planner", "", {"type": "ProviderFailure"}) == (False, "ProviderFailure")
 
 
 def test_wilson_and_config_selection_do_not_use_task_quality():
