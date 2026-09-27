@@ -40,3 +40,6 @@ experiments/chapter6/agent_search/results/*/browser-check/profile/
 experiments/chapter6/agent_search/s2_tsp/studies/*/runs/
 experiments/chapter6/agent_search/s2_tsp/studies/*/tests/
 experiments/chapter6/agent_search/s2_tsp/studies/*/dispatch/
+experiments/chapter6/agent_search/s3_tsp/studies/*/runs/
+experiments/chapter6/agent_search/s3_tsp/studies/*/tests/
+experiments/chapter6/agent_search/s3_tsp/studies/*/dispatch/

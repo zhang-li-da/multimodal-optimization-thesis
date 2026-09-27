@@ -1,0 +1,203 @@
+{
+  "archive": "experiments/chapter6/agent_search/s2_tsp/results/p1b-minimax-protection-20260927/analysis/raw-study.zip",
+  "response_count_by_stage": {
+    "coder": 125,
+    "planner": 192
+  },
+  "truncated_responses_by_stage": {
+    "coder": 11,
+    "planner": 67
+  },
+  "truncated_responses_total": 78,
+  "proposal_slots": 192,
+  "valid_program_evaluations": 114,
+  "competitive_parentless_exploration_candidates": 6,
+  "competitive_parentless_exploration_candidates_all_arms": 16,
+  "branch_admissions": 9,
+  "admissions_that_refreshed_global_best": 9,
+  "protected_jobs": 8,
+  "protected_development_slots": 14,
+  "protected_slots_using_then_global_best_parent": 13,
+  "protected_parent_improvements": 2,
+  "protected_lagging_parent_improvements": 0,
+  "runs_with_protected_best_ancestor": 1,
+  "runs": [
+    {
+      "run_id": "minimax-fb_protected-b20-s0",
+      "proposals": 12,
+      "protection": true,
+      "competitive_parentless_explores": 1,
+      "branch_admissions": 0,
+      "protected_slots": 0,
+      "protected_parent_was_best": 0,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_protected-b20-s1",
+      "proposals": 12,
+      "protection": true,
+      "competitive_parentless_explores": 1,
+      "branch_admissions": 1,
+      "protected_slots": 1,
+      "protected_parent_was_best": 1,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_protected-b21-s0",
+      "proposals": 12,
+      "protection": true,
+      "competitive_parentless_explores": 1,
+      "branch_admissions": 2,
+      "protected_slots": 4,
+      "protected_parent_was_best": 4,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_protected-b21-s1",
+      "proposals": 12,
+      "protection": true,
+      "competitive_parentless_explores": 0,
+      "branch_admissions": 0,
+      "protected_slots": 0,
+      "protected_parent_was_best": 0,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_protected-b22-s0",
+      "proposals": 12,
+      "protection": true,
+      "competitive_parentless_explores": 0,
+      "branch_admissions": 1,
+      "protected_slots": 2,
+      "protected_parent_was_best": 2,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_protected-b22-s1",
+      "proposals": 12,
+      "protection": true,
+      "competitive_parentless_explores": 1,
+      "branch_admissions": 3,
+      "protected_slots": 3,
+      "protected_parent_was_best": 2,
+      "protected_parent_improvements": 2,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_protected-b23-s0",
+      "proposals": 12,
+      "protection": true,
+      "competitive_parentless_explores": 1,
+      "branch_admissions": 1,
+      "protected_slots": 2,
+      "protected_parent_was_best": 2,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_protected-b23-s1",
+      "proposals": 12,
+      "protection": true,
+      "competitive_parentless_explores": 1,
+      "branch_admissions": 1,
+      "protected_slots": 2,
+      "protected_parent_was_best": 2,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_unprotected-b20-s0",
+      "proposals": 12,
+      "protection": false,
+      "competitive_parentless_explores": 0,
+      "branch_admissions": 0,
+      "protected_slots": 0,
+      "protected_parent_was_best": 0,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_unprotected-b20-s1",
+      "proposals": 12,
+      "protection": false,
+      "competitive_parentless_explores": 0,
+      "branch_admissions": 0,
+      "protected_slots": 0,
+      "protected_parent_was_best": 0,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_unprotected-b21-s0",
+      "proposals": 12,
+      "protection": false,
+      "competitive_parentless_explores": 0,
+      "branch_admissions": 0,
+      "protected_slots": 0,
+      "protected_parent_was_best": 0,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_unprotected-b21-s1",
+      "proposals": 12,
+      "protection": false,
+      "competitive_parentless_explores": 0,
+      "branch_admissions": 0,
+      "protected_slots": 0,
+      "protected_parent_was_best": 0,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_unprotected-b22-s0",
+      "proposals": 12,
+      "protection": false,
+      "competitive_parentless_explores": 0,
+      "branch_admissions": 0,
+      "protected_slots": 0,
+      "protected_parent_was_best": 0,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_unprotected-b22-s1",
+      "proposals": 12,
+      "protection": false,
+      "competitive_parentless_explores": 0,
+      "branch_admissions": 0,
+      "protected_slots": 0,
+      "protected_parent_was_best": 0,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_unprotected-b23-s0",
+      "proposals": 12,
+      "protection": false,
+      "competitive_parentless_explores": 0,
+      "branch_admissions": 0,
+      "protected_slots": 0,
+      "protected_parent_was_best": 0,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    },
+    {
+      "run_id": "minimax-fb_unprotected-b23-s1",
+      "proposals": 12,
+      "protection": false,
+      "competitive_parentless_explores": 0,
+      "branch_admissions": 0,
+      "protected_slots": 0,
+      "protected_parent_was_best": 0,
+      "protected_parent_improvements": 0,
+      "protected_lagging_parent_improvements": 0
+    }
+  ],
+  "scope": "Recomputed from P1b raw ZIP; no new model calls. Does not revise or overwrite the original frozen report."
+}
