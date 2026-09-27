@@ -1,9 +1,9 @@
 {
   "schema": "chapter6-e1-same-state-study-v1",
   "status": "DRAFT_NOT_EXECUTABLE",
-  "created_utc": "2026-09-27T16:20:19.238285+00:00",
+  "created_utc": "2026-09-27T16:27:27.087142+00:00",
   "study_id": "chapter6-component-validation-e1-20260927",
-  "source_commit": "73ea3f7adc19be8176ebfbff0039dbdacc30729d",
+  "source_commit": "a4254c8f643454bc9f582f0cb9626f00c552f0b3",
   "source": {
     "format": "named-source-files-lf-sha256-v1",
     "files": {
@@ -62,10 +62,10 @@
       "experiments/chapter6/agent_search/component_validation/__init__.py": "35b762ae066b800dd4708a5ab315da9ea282b82bf40396eb1559108fa857b0b1",
       "experiments/chapter6/agent_search/component_validation/e1.py": "7111614d675913ceec2325c77e1b2f27d791f8cb087d41bead849bf96e156345",
       "experiments/chapter6/agent_search/component_validation/e1_runner.py": "fd65015f5d3f4e7c0ec872566904f8ee2649ffd6303777ff33f867c2bd8852d8",
-      "experiments/chapter6/agent_search/component_validation/study_e1.py": "1acd118cd9968c121970b57077673da388977252ce6367653f4ca9b5c4153f5e",
+      "experiments/chapter6/agent_search/component_validation/study_e1.py": "3ba58452e9f7d5011ec47b3e6e7e49022961b9fb7c5d1305c6ae0a30f40a7a5e",
       "experiments/chapter6/agent_search/component_validation/protocol.final.json": "b59ce13385fbdc2183222180416b96a84b83c6a4dbf3069e4cb66a28eb711666"
     },
-    "sha256": "cd520a0eb583a6c20716c37a230c01a874be66ed02f34e19ca4025d64c761716"
+    "sha256": "a2531b17d62978df1a851aed5d34625b03b23fba907028ecbf174dd66d62bd9b"
   },
   "environment": {
     "python": "3.13.5",
@@ -101,6 +101,12 @@
     46,
     47
   ],
+  "overlap_check": {
+    "old_instances_checked": 4428,
+    "new_instances": 432,
+    "id_or_exact_coordinate_collisions": 0,
+    "geometric_equivalence_checked": false
+  },
   "data": [
     {
       "block": 44,
@@ -155,49 +161,49 @@
     {
       "checkpoint_id": "b44-fb_p-s16",
       "path": "checkpoints/b44-fb_p-s16.json",
-      "sha256": "f7b6e3b47c9b7a6f265bb63f74186dc38c156b2f9eedb68723194cbc86ef7f0e",
+      "sha256": "aee526614ace50692905c306b4319097f033a7b8aee1b4e54f2a0b42a9300145",
       "continuation_block": 44
     },
     {
       "checkpoint_id": "b44-sp-s16",
       "path": "checkpoints/b44-sp-s16.json",
-      "sha256": "5b342ce208766c7a4846a023b5624faec70fa82574f14e7118d5b1a2fcc2d464",
+      "sha256": "e9d1c209f36a4e1673920ae5b94276149f7bc3c2917a5f997751024ff5705aac",
       "continuation_block": 44
     },
     {
       "checkpoint_id": "b45-fb_p-s16",
       "path": "checkpoints/b45-fb_p-s16.json",
-      "sha256": "09b2e855a3dc24d7ac70570f4085723f492f91423ae6b6e97f02d49383b9c958",
+      "sha256": "76e4bbbcce273bae0e33b0dc6d89834b5465e61cdec79c5305257f943df1797b",
       "continuation_block": 45
     },
     {
       "checkpoint_id": "b45-sp-s16",
       "path": "checkpoints/b45-sp-s16.json",
-      "sha256": "065d01f41c40dd04b716efb6a22062dd6de24092d2f01e3b4f50d2b7cecdbbd9",
+      "sha256": "1e0c0541b78ec44c7dd2c0bcfa337e5075bd4281539908a146fe57b33561efb9",
       "continuation_block": 45
     },
     {
       "checkpoint_id": "b46-fb_p-s16",
       "path": "checkpoints/b46-fb_p-s16.json",
-      "sha256": "8fcdaafdfaaa41a0802d304fefe02271d1e10398822bc663b7eb4c61bee85eff",
+      "sha256": "4ed29382cd7e768e748ab7865da51c81d795c680a195bb3df08942cc0e3f2f19",
       "continuation_block": 46
     },
     {
       "checkpoint_id": "b46-sp-s16",
       "path": "checkpoints/b46-sp-s16.json",
-      "sha256": "3900498d5a0033b563f1323f963a81b8e9dc46404a97de6795ff093514928976",
+      "sha256": "86b1b44e581a256fc292287263de79e30df9c799d2a01c480291ed94dafb0fd3",
       "continuation_block": 46
     },
     {
       "checkpoint_id": "b47-fb_p-s16",
       "path": "checkpoints/b47-fb_p-s16.json",
-      "sha256": "fea7d368db788bde6b1f3b249efb42991b1297d8f15d8d232a7816acf2389076",
+      "sha256": "63fa1a2661c221e308ff9de7ee2848997254b9be50991b794cd1e06b1f74f27a",
       "continuation_block": 47
     },
     {
       "checkpoint_id": "b47-sp-s16",
       "path": "checkpoints/b47-sp-s16.json",
-      "sha256": "95357e52ff491914ea6f88ff01ac703c3d5e14fac840b963ae4e55e56bce8dc0",
+      "sha256": "c3085259d1779736862f93e0008f07d00e1cc416554a549a8d0dde92f5d660fb",
       "continuation_block": 47
     }
   ],
@@ -1168,5 +1174,5 @@
   "planned_proposals": 192,
   "new_model_calls_before_freeze": 0,
   "status_note": "offline checkpoint preparation only; no E1 continuation has run",
-  "manifest_sha256": "4cb66f70056e375048e0868ba231c822459ec6dfa0abf307a37c35180ac7dd72"
+  "manifest_sha256": "17ebb401cc820635de422bfecce95defd0cd2d97223fc135069e33e0b3dcf6bc"
 }

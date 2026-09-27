@@ -3015,8 +3015,8 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 4.893293199827895,
-        "cpu_seconds": 4.859375,
+        "wall_seconds": 4.84685319988057,
+        "cpu_seconds": 4.796875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
           "uniform-1814000",
@@ -9104,8 +9104,8 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.16445100004784763,
-        "cpu_seconds": 0.15625,
+        "wall_seconds": 0.17192559991963208,
+        "cpu_seconds": 0.171875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
           "uniform-1814000",
@@ -15185,7 +15185,7 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.16444869991391897,
+        "wall_seconds": 0.16086109983734787,
         "cpu_seconds": 0.171875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
@@ -18330,7 +18330,7 @@
         "features_called": 0,
         "local_checks": 0,
         "instance_evaluations": 0,
-        "wall_seconds": 1.9999919459223747e-05,
+        "wall_seconds": 1.5200115740299225e-05,
         "cpu_seconds": 0.0,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
@@ -21480,7 +21480,7 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.17208429984748363,
+        "wall_seconds": 0.17586870002560318,
         "cpu_seconds": 0.171875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
@@ -27577,7 +27577,7 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.17223289981484413,
+        "wall_seconds": 0.17317490000277758,
         "cpu_seconds": 0.171875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
@@ -33673,8 +33673,8 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.17634489992633462,
-        "cpu_seconds": 0.1875,
+        "wall_seconds": 0.17477170005440712,
+        "cpu_seconds": 0.171875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
           "uniform-1814000",
@@ -39787,8 +39787,8 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.17837160010822117,
-        "cpu_seconds": 0.171875,
+        "wall_seconds": 0.1821465000975877,
+        "cpu_seconds": 0.1875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
           "uniform-1814000",
@@ -45889,7 +45889,7 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.16535420017316937,
+        "wall_seconds": 0.1739323998335749,
         "cpu_seconds": 0.171875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
@@ -51992,7 +51992,7 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.1854426998179406,
+        "wall_seconds": 0.18727420014329255,
         "cpu_seconds": 0.1875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
@@ -58094,7 +58094,7 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.19125090003944933,
+        "wall_seconds": 0.1934734999667853,
         "cpu_seconds": 0.1875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
@@ -64199,7 +64199,7 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.18232150003314018,
+        "wall_seconds": 0.18436289997771382,
         "cpu_seconds": 0.171875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
@@ -70300,8 +70300,8 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.19789450010284781,
-        "cpu_seconds": 0.203125,
+        "wall_seconds": 0.18788340012542903,
+        "cpu_seconds": 0.1875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
           "uniform-1814000",
@@ -76398,7 +76398,7 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.20456350012682378,
+        "wall_seconds": 0.20486890012398362,
         "cpu_seconds": 0.203125,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
@@ -82494,8 +82494,8 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.2015970000065863,
-        "cpu_seconds": 0.1875,
+        "wall_seconds": 0.20453920005820692,
+        "cpu_seconds": 0.203125,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
           "uniform-1814000",
@@ -88594,7 +88594,7 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.2163420000579208,
+        "wall_seconds": 0.21415409981273115,
         "cpu_seconds": 0.21875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
@@ -94694,8 +94694,8 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.20959020010195673,
-        "cpu_seconds": 0.21875,
+        "wall_seconds": 0.20367920002900064,
+        "cpu_seconds": 0.203125,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
           "uniform-1814000",
@@ -100789,8 +100789,8 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.24575960007496178,
-        "cpu_seconds": 0.25,
+        "wall_seconds": 0.22579930000938475,
+        "cpu_seconds": 0.234375,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
           "uniform-1814000",
@@ -106884,7 +106884,7 @@
         "features_called": 4368,
         "local_checks": 1152,
         "instance_evaluations": 48,
-        "wall_seconds": 0.2367090000770986,
+        "wall_seconds": 0.21765149990096688,
         "cpu_seconds": 0.21875,
         "data_snapshot_sha256": "63b0118da244ca3807b5a1da77684218d7623e21a22e75939ec090a241a44768",
         "evaluated_instance_ids": [
