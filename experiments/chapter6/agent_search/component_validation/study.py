@@ -2,30 +2,39 @@
 from __future__ import annotations
 
 import copy
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import FIRST_COMPLETED, ProcessPoolExecutor, wait
 import hashlib
 import json
 from pathlib import Path
 import random
+import subprocess
+import time
 
 from chapter6_demo import benchmarks
 from chapter6_demo.agent_search.s3_tsp_r3.study import TERMINAL
 from chapter6_demo.v12_1.audit_r2 import offline_only
-from chapter6_demo.v12_2.calls import DurableCalls, HTTPTransport, IndeterminateCall, ProviderFailure
+from chapter6_demo.v12_2.calls import IndeterminateCall, ProviderFailure
 from chapter6_demo.v12_2.common import digest, environment, file_sha, git, read_json, run_lock, save_json, source_record, utcnow
 from chapter6_demo.v12_2.data import content_hash
 
 from .runner import run_search
+from .service import DiagnosticDurableCalls, DiagnosticHTTPTransport, GlobalPauseGate
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 PROTOCOL = HERE / "protocol.final.json"
 
 
-def tooling_source():
-    names = ["__init__.py", "controller.py", "runner.py", "study.py", "protocol.final.json"]
-    files = {f"experiments/chapter6/agent_search/component_validation/{name}": hashlib.sha256(
-        (HERE / name).read_bytes().replace(b"\r\n", b"\n")).hexdigest() for name in names}
+def tooling_source(commit=None, names=None):
+    names = names or ["__init__.py", "controller.py", "runner.py", "service.py", "study.py", "protocol.final.json"]
+    files = {}
+    for name in names:
+        path = f"experiments/chapter6/agent_search/component_validation/{name}"
+        if commit:
+            data = subprocess.check_output(["git", "show", f"{commit}:{path}"], cwd=ROOT)
+        else:
+            data = (HERE / name).read_bytes()
+        files[path] = hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()
     return {"format": "component-validation-source-files-lf-sha256-v1", "files": files,
             "sha256": digest(files)}
 
@@ -122,7 +131,19 @@ def verify(study, *, frozen=False, roles=None):
         raise ValueError("Component manifest digest mismatch")
     if manifest["protocol"] != read_json(PROTOCOL):
         raise ValueError("Component protocol differs from committed source")
-    if manifest["source"] != source_record() or manifest["tooling_source"] != tooling_source():
+    tooling_matches = manifest["tooling_source"] == tooling_source()
+    if not tooling_matches:
+        # A frozen historical archive may predate a guarded runner update.
+        # Validate its exact recorded files against its recorded Git commit,
+        # rather than silently accepting today's source as a replay match.
+        recorded_files = list(manifest["tooling_source"].get("files", {}))
+        old_names = [Path(path).name for path in recorded_files]
+        try:
+            tooling_matches = (tooling_source(manifest.get("source_commit"), old_names) ==
+                               manifest["tooling_source"])
+        except (OSError, subprocess.CalledProcessError):
+            tooling_matches = False
+    if manifest["source"] != source_record() or not tooling_matches:
         raise ValueError("Component source differs; create a new study version")
     if manifest["jobs"] != jobs(manifest["protocol"]):
         raise ValueError("Component job matrix differs")
@@ -165,7 +186,11 @@ def preflight(output):
               "tooling_source": tooling_source(), "environment": environment()}
     with run_lock(output):
         save_json(output / "config.json", config, immutable=True)
-        calls = DurableCalls(output, config, HTTPTransport(config["provider"], config["model"], 120))
+        calls = DiagnosticDurableCalls(
+            output, config,
+            DiagnosticHTTPTransport(config["provider"], config["model"], 120,
+                                    min_interval_seconds=float(protocol.get("execution", {}).get(
+                                        "min_request_interval_seconds", 1.0))))
         try:
             response = calls.complete(0, "connectivity", "You are a coding assistant.",
                                       'Return exactly the JSON object {"ready":true}.', 512)
@@ -175,6 +200,7 @@ def preflight(output):
                       "new_search_runs": 0, "utc": utcnow()}
         except (IndeterminateCall, ProviderFailure) as exc:
             report = {"status": "failed", "error_type": type(exc).__name__,
+                      "error": str(exc), "diagnostics": getattr(exc, "diagnostics", None),
                       "usage": calls.usage(), "new_search_runs": 0, "utc": utcnow()}
         save_json(output / "summary.json", report, immutable=True); return report
 
@@ -193,16 +219,21 @@ def run_one(job, study, manifest):
                   "token_budget": job["token_budget"], "request_limit": job["request_limit"],
                   "wall_limit_seconds": job["wall_limit_seconds"]}
         try:
-            transport = HTTPTransport(job["provider"], job["model"], params["timeout_seconds"])
+            transport = DiagnosticHTTPTransport(
+                job["provider"], job["model"], params["timeout_seconds"],
+                min_interval_seconds=float(manifest["protocol"].get("execution", {}).get(
+                    "min_request_interval_seconds", 1.0)))
             result = run_search(job, snapshot, run_dir, {"manifest_sha256": manifest["manifest_sha256"]},
                                 params, transport, mode="live")
             status = {"status": result["status"], "summary": result.get("summary"), "usage": result.get("usage")}
         except (IndeterminateCall, ProviderFailure, OSError, TimeoutError) as exc:
             status = {"status": "infrastructure_incomplete", "error_type": type(exc).__name__,
+                      "error": str(exc), "diagnostics": getattr(exc, "diagnostics", None),
                       "no_automatic_retry": True}
             save_json(status_path, status)
     save_json(study / "dispatch" / f"{job['job_id']}.json",
-              {"job_id": job["job_id"], "status": status["status"], "utc": utcnow()})
+              {"job_id": job["job_id"], "status": status["status"],
+               "diagnostics": status.get("diagnostics"), "utc": utcnow()})
     return status
 
 
@@ -214,12 +245,67 @@ def search_all(study, preflight_dir):
     study = Path(study).resolve(); (study / "dispatch").mkdir(parents=True, exist_ok=True)
     if (study / "dispatch" / "halt.json").exists():
         raise ValueError("Study explicitly halted; no restart or replacement")
-    workers = int(manifest["protocol"].get("execution", {}).get("max_concurrency", 6))
+    execution = manifest["protocol"].get("execution", {})
+    workers = int(execution.get("max_concurrency", 6))
     workers = max(1, min(workers, len(manifest["jobs"])))
+    jobs = list(manifest["jobs"])
+    pending = iter(jobs)
+    active = {}
+    dispatch_interval = max(0.0, float(execution.get("dispatch_interval_seconds", 1.0)))
+    last_dispatch = 0.0
+    pause_gate = GlobalPauseGate(execution.get("global_pause_after_rate_limits", 2))
+    paused = None
+
+    def mark_unstarted(job, reason, diagnostics=None):
+        save_json(study / "dispatch" / f"{job['job_id']}.json", {
+            "job_id": job["job_id"], "status": "not_started", "reason": reason,
+            "diagnostics": diagnostics, "utc": utcnow()})
+
+    def fill(pool):
+        """Fill only available worker slots; pending jobs remain untouched on pause."""
+        nonlocal paused, last_dispatch
+        while paused is None and len(active) < workers:
+            try:
+                job = next(pending)
+            except StopIteration:
+                break
+            wait = dispatch_interval - (time.monotonic() - last_dispatch)
+            if wait > 0:
+                time.sleep(wait)
+            future = pool.submit(run_one, job, str(study), manifest)
+            active[future] = job
+            last_dispatch = time.monotonic()
+
     with ProcessPoolExecutor(max_workers=workers) as pool:
-        futures = [pool.submit(run_one, job, str(study), manifest) for job in manifest["jobs"]]
-        for future in as_completed(futures):
-            future.result()
+        fill(pool)
+        while active:
+            completed, _ = wait(tuple(active), return_when=FIRST_COMPLETED)
+            for future in completed:
+                job = active.pop(future)
+                status = future.result()
+                diagnostics = status.get("diagnostics") if isinstance(status, dict) else None
+                gate = pause_gate.observe(diagnostics)
+                if gate["pause"] and paused is None:
+                    paused = {"reason": "provider_global_pause", "trigger_job": job["job_id"],
+                              "category": gate["category"], "diagnostics": diagnostics,
+                              "consecutive_rate_limits": gate["consecutive_rate_limits"],
+                              "pending_jobs": None,
+                              "utc": utcnow()}
+            if paused is None:
+                fill(pool)
+        if paused is not None:
+            # The iterator cannot be counted without consuming it.  Mark the
+            # remaining jobs by their known manifest order and existing status.
+            dispatched = {entry.get("job_id") for entry in
+                          (read_json(path) for path in (study / "dispatch").glob("*.json"))}
+            paused["pending_jobs"] = sum(job["job_id"] not in dispatched for job in jobs)
+            for job in jobs:
+                if job["job_id"] not in dispatched:
+                    mark_unstarted(job, "global_provider_pause", paused.get("diagnostics"))
+            save_json(study / "dispatch" / "global_pause.json", paused)
+            save_json(study / "dispatch" / "halt.json", {
+                "reason": "provider_global_pause", "category": paused.get("category"),
+                "diagnostics": paused.get("diagnostics"), "utc": paused.get("utc")})
 
 
 def test_all(study):

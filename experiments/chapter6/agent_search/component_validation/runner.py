@@ -6,6 +6,7 @@ from chapter6_demo.v12_2.calls import no_hook
 from ..s3_tsp_r3 import controller as frozen_controller
 from ..s3_tsp_r3 import runner as frozen_runner
 from .controller import ComponentSearchState, restore_state
+from .service import DiagnosticDurableCalls
 
 
 def run_search(job, snapshot, directory, binding, parameters, transport, *, mode="live", hook=no_hook):
@@ -17,9 +18,11 @@ def run_search(job, snapshot, directory, binding, parameters, transport, *, mode
     old_state = frozen_runner.SearchState
     old_restore = frozen_runner.restore_state
     old_controller_state = frozen_controller.SearchState
+    old_calls = frozen_runner.DurableCalls
     frozen_runner.SearchState = ComponentSearchState
     frozen_runner.restore_state = restore_state
     frozen_controller.SearchState = ComponentSearchState
+    frozen_runner.DurableCalls = DiagnosticDurableCalls
     try:
         return frozen_runner.run_search(job, snapshot, directory, binding,
                                         parameters, transport, mode=mode, hook=hook)
@@ -27,3 +30,4 @@ def run_search(job, snapshot, directory, binding, parameters, transport, *, mode
         frozen_runner.SearchState = old_state
         frozen_runner.restore_state = old_restore
         frozen_controller.SearchState = old_controller_state
+        frozen_runner.DurableCalls = old_calls
