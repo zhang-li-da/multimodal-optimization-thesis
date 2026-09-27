@@ -1,4 +1,4 @@
-﻿{
+{
   "schema": "chapter6-s3-tsp-strategy-study-v2",
   "study_id": "s3-tsp-minimax-strategy-screen-20260927-r2",
   "status": "FINAL_PROTOCOL_PENDING_EXECUTION",
@@ -101,4 +101,3 @@
   "source_output_basis": "Use the S1-validated MiniMax M3 caps: planner 16384, coder 8192, temperature 0.7. S1 observed 378/384 valid proposals at these caps; S2's 4000/2400 caps had 78/192 truncated proposals in P1b. New S3 still records its own output outcomes.",
   "new_model_calls_before_freeze": 0
 }
-
