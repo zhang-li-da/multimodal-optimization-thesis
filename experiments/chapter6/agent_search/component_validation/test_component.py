@@ -179,7 +179,8 @@ def test_fixed_slot_table_and_factor_replay():
     state = ComponentSearchState("P10", 9, steps=32)
     state.initialize(_seeds())
     for step in range(32):
-        _candidate(state, step, loss=.100 - .00001 * step, mode=step % 5)
+        decision, _, event = _candidate(state, step, loss=.100 - .00001 * step, mode=step % 5)
+        assert event["slot_type"] == decision["evidence"]["slot_type"]
     assert [d["evidence"]["slot_type"] for d in state.decisions].count("incumbent") == 20
     assert [d["evidence"]["slot_type"] for d in state.decisions].count("explore") == 6
     assert [d["evidence"]["slot_type"] for d in state.decisions].count("branch") == 6

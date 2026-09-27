@@ -240,6 +240,7 @@ class ComponentSearchState(_S3SearchState):
         return copy.deepcopy(decision)
 
     def observe(self, node, costs=None):
+        pending = copy.deepcopy(self.pending)
         event = super().observe(node, costs)
         # ``SearchState.observe`` serializes the admission reason but not the
         # component-only zero-credit diagnostic.  A zero-credit admission is
@@ -255,12 +256,13 @@ class ComponentSearchState(_S3SearchState):
         event.update({
             "scheduling_priority": self.scheduling_priority,
             "eviction_protection": self.eviction_protection,
-            "slot_type": event.get("action") if event.get("action") in ("explore", "develop") else None,
+            "slot_type": (pending.get("evidence", {}).get("slot_type")
+                           if pending is not None else None),
             "trial_or_renewal": event.get("admission_reason") in ("new_direction_trial", "direction_progression"),
             "zero_credit_pool_entry": event["zero_credit_pool_entry"],
         })
         self.factor_events.append({
-            "step": event["node_id"],
+            "step": pending.get("step") if pending is not None else None,
             "scheduling_priority": self.scheduling_priority,
             "eviction_protection": self.eviction_protection,
             "branch_development": event.get("branch_development", False),
