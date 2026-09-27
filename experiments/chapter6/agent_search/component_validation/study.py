@@ -205,6 +205,13 @@ def preflight(output):
         save_json(output / "summary.json", report, immutable=True); return report
 
 
+def _latest_diagnostics(run_dir):
+    diagnostics = None
+    for call_state in sorted((Path(run_dir) / "calls").glob("*/state.json")):
+        diagnostics = read_json(call_state).get("diagnostics") or diagnostics
+    return diagnostics
+
+
 def run_one(job, study, manifest):
     study = Path(study); run_dir = study / "runs" / job["job_id"]
     status_path = run_dir / "status.json"
@@ -225,7 +232,9 @@ def run_one(job, study, manifest):
                     "min_request_interval_seconds", 1.0)))
             result = run_search(job, snapshot, run_dir, {"manifest_sha256": manifest["manifest_sha256"]},
                                 params, transport, mode="live")
-            status = {"status": result["status"], "summary": result.get("summary"), "usage": result.get("usage")}
+            diagnostics = _latest_diagnostics(run_dir)
+            status = {"status": result["status"], "summary": result.get("summary"),
+                      "usage": result.get("usage"), "diagnostics": diagnostics}
         except (IndeterminateCall, ProviderFailure, OSError, TimeoutError) as exc:
             status = {"status": "infrastructure_incomplete", "error_type": type(exc).__name__,
                       "error": str(exc), "diagnostics": getattr(exc, "diagnostics", None),

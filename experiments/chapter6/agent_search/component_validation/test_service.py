@@ -8,6 +8,7 @@ from chapter6_demo.v12_2.calls import ProviderFailure
 from chapter6_demo.v12_2.common import read_json
 from .service import DiagnosticDurableCalls, GlobalPauseGate, diagnose_http_error
 from .service import error_category
+from .study import _latest_diagnostics
 
 
 def test_provider_diagnostics_retain_code_category_trace_and_retry_without_body():
@@ -60,3 +61,11 @@ def test_durable_component_call_persists_sanitized_failure_diagnostics(tmp_path)
     assert state["diagnostics"]["business_code"] == "1002"
     assert state["diagnostics"]["trace_id"] == "trace-x"
     assert "secret" not in json.dumps(state)
+
+
+def test_scheduler_reads_latest_call_diagnostics_for_global_pause(tmp_path):
+    state = tmp_path / "calls" / "000-planner" / "state.json"
+    state.parent.mkdir(parents=True)
+    state.write_text(json.dumps({"diagnostics": {"error_category": "quota_exhausted",
+                                                    "business_code": "2056"}}), encoding="utf-8")
+    assert _latest_diagnostics(tmp_path)["error_category"] == "quota_exhausted"

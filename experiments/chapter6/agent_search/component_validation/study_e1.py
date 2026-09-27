@@ -37,6 +37,8 @@ def prepare(output: Path, *, source_study: Path = DEFAULT_SOURCE_STUDY) -> dict:
     protocol = read_json(PROTOCOL)
     output.mkdir(parents=True)
     checkpoints = prepare_checkpoints(source_study)
+    if len(checkpoints) != 8:
+        raise ValueError("E1 protocol requires exactly eight checkpoints")
     checkpoint_records = write_checkpoint_set(output, checkpoints)
     checkpoint_map = {record["checkpoint_id"]: record for record in checkpoint_records}
     jobs = continuation_jobs(checkpoints, steps=protocol["e1"]["continuation_steps"],

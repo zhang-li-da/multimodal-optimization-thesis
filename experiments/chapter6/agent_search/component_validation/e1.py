@@ -235,4 +235,3 @@ def write_checkpoint_set(output: Path, checkpoints: Iterable[dict]) -> list[dict
                         "path": rel.as_posix(), "sha256": file_sha(output / rel),
                         "continuation_block": checkpoint["continuation"]["block"]})
     return records
-
