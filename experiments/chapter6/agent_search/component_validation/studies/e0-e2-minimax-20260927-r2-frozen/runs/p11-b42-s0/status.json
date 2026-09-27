@@ -1,0 +1,72 @@
+{
+  "status": "infrastructure_incomplete",
+  "completed_proposals": 2,
+  "usage": {
+    "calls": [
+      {
+        "step": 0,
+        "stage": "coder",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 773,
+        "output_tokens": 2377,
+        "usage_complete": true,
+        "seconds": 9.072275799931958,
+        "request_id": "070860ab2e6bdb371ba73e4c4a91b95f"
+      },
+      {
+        "step": 0,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 993,
+        "output_tokens": 1825,
+        "usage_complete": true,
+        "seconds": 31.25288959988393,
+        "request_id": "0708608bb1611c9ddc17af1631e75de1"
+      },
+      {
+        "step": 1,
+        "stage": "coder",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 778,
+        "output_tokens": 1316,
+        "usage_complete": true,
+        "seconds": 17.2457601998467,
+        "request_id": "070860e5f5156c08fa28151fc6299b77"
+      },
+      {
+        "step": 1,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 1080,
+        "output_tokens": 5006,
+        "usage_complete": true,
+        "seconds": 49.496244499925524,
+        "request_id": "070860b4196099e310288432889dc4f3"
+      },
+      {
+        "step": 2,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "provider_failed",
+        "returned_model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "usage_complete": null,
+        "seconds": null,
+        "request_id": null
+      }
+    ],
+    "call_attempts": 5,
+    "usage_complete": false,
+    "known_tokens": 14148,
+    "total_tokens": null
+  }
+}

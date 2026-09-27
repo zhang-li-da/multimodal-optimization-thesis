@@ -1,0 +1,22 @@
+{
+  "request_sha256": "6b212ffbfcef811b5aaca63649969ce6b5625602d8be48397654d7609c3747ba",
+  "text": "<think>The user is asking me to return exactly a specific JSON object. This is a straightforward request.</think>\n\n{\"ready\":true}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 213,
+    "total_characters": 0,
+    "prompt_tokens": 186,
+    "completion_tokens": 27,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 186,
+  "output_tokens": 27,
+  "usage_complete": true,
+  "seconds": 0.9817081999499351,
+  "request_id": "0708605ca8c42709235723d01697338d"
+}

@@ -1,0 +1,20 @@
+{
+  "run_config_sha256": "e0c24f8a4a46bdfc5eb4ad5c27b2c9d8cf922a8692d6a1e818d03dfd62cf2a4d",
+  "execution_mode": "live",
+  "selected_on": "validation",
+  "best_id": 1,
+  "seed_best_id": 1,
+  "archive_ids": [
+    1
+  ],
+  "programs": [
+    {
+      "id": 1,
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+      "raw_code_sha256": "17c20cc6336cf4b18c89e5964d6df9e1e182d62f6a182ec1bc3df0e95007e28b",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "b11ab831748c31d4b990e8c2fd81fad1e07dc03bd788d9e655cbb38e9609ad20"
+    }
+  ],
+  "frozen_utc": "2026-09-27T14:56:02.164166+00:00"
+}

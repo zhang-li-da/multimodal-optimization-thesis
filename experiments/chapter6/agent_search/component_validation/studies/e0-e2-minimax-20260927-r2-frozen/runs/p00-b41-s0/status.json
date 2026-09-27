@@ -1,0 +1,84 @@
+{
+  "status": "infrastructure_incomplete",
+  "completed_proposals": 2,
+  "usage": {
+    "calls": [
+      {
+        "step": 0,
+        "stage": "coder",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 770,
+        "output_tokens": 433,
+        "usage_complete": true,
+        "seconds": 2.5748290999326855,
+        "request_id": "0708611b24715cdc137444e0fb2f7b15"
+      },
+      {
+        "step": 0,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 1002,
+        "output_tokens": 2102,
+        "usage_complete": true,
+        "seconds": 8.909863900160417,
+        "request_id": "070861129b06acf6a5cb770ead7c3924"
+      },
+      {
+        "step": 1,
+        "stage": "coder",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 771,
+        "output_tokens": 784,
+        "usage_complete": true,
+        "seconds": 3.3080699001438916,
+        "request_id": "0708612b106298e1c64fe14133be94c5"
+      },
+      {
+        "step": 1,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 1003,
+        "output_tokens": 3320,
+        "usage_complete": true,
+        "seconds": 12.627713199937716,
+        "request_id": "0708611e12682c3e0cf8c895021a629f"
+      },
+      {
+        "step": 2,
+        "stage": "coder",
+        "requested_model": "MiniMax-M3",
+        "status": "provider_failed",
+        "returned_model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "usage_complete": null,
+        "seconds": null,
+        "request_id": null
+      },
+      {
+        "step": 2,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 1002,
+        "output_tokens": 4693,
+        "usage_complete": true,
+        "seconds": 15.24754839995876,
+        "request_id": "0708612e8ad1d7fccca39fa8a1bea1c3"
+      }
+    ],
+    "call_attempts": 6,
+    "usage_complete": false,
+    "known_tokens": 15880,
+    "total_tokens": null
+  }
+}

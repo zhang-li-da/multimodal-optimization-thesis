@@ -1,0 +1,19 @@
+{
+  "request_sha256": "a78c50aefdf6f1b481cb2411326cdcdfdfa9b749233ff505fc56308764041341",
+  "text": "<think>The task is to generate a heuristic for TSP. I need to implement the priority function as described in the plan. Let me analyze:\n\nThe plan suggests:\n- formula: -f[\"distance\"] + 0.2 * f[\"return_distance\"] + 0.1 * f[\"regret\"]\n\nI need to write this as Python code following the constraints:\n- exactly `def priority(f):`\n- scalar local assignments allowed\n- return\n- if/else or conditional expression\n- arithmetic operators\n- comparisons\n- boolean operations\n- calls to abs/min/max/sqrt/log/log1p/exp/tanh\n- NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random\n- Access only listed features with f['feature']\n- Guard denominators with 1e-9\n- <=25 source lines and <=320 AST nodes\n\nThe formula is simple enough. Higher returned value is chosen. So we want:\n- Higher value for: lower distance (more negative), higher return_distance, higher regret\n\nWait, let me check: the task says \"the candidate with the HIGHEST priority is visited next\"\n- distance: current-to-candidate. We want shorter distance, so -distance\n- return_distance: candidate-to-start. The plan says \"prevents start-proximal spirals by rewarding candidates farther from city 0\", so higher return_distance should win, hence positive coefficient.\n- regret: second-nearest minus nearest among other unvisited. Higher regret means more unique neighbor - visiting now preserves the short hop. Positive coefficient.\n\nSo priority = -distance + 0.2 * return_distance + 0.1 * regret\n\nLet me write this as simple Python code:\n\n```python\ndef priority(f):\n    d = f[\"distance\"]\n    rd = f[\"return_distance\"]\n    rg = f[\"regret\"]\n    return -d + 0.2 * rd + 0.1 * rg\n```\n\nWait, I need to check whether there are any guard needs. The formula has no division or log, so no need for guards.\n\nLet me verify the line count and node count - this is very simple, well within limits.\n\nAlso: \"No annotations or imports\" - check, just def priority(f).\n\"<=25 source lines and <=320 AST nodes\" - we have 5 lines, very small.\n\"Higher returned value is chosen\" - yes, the formula gives higher priority to candidates with smaller distance, larger return_distance, and larger regret.\n\nThis is straightforward. Let me output the JSON.</think>\n\n{\"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    return -d + 0.2 * rd + 0.1 * rg\\n\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1373,
+    "total_characters": 0,
+    "prompt_tokens": 778,
+    "completion_tokens": 595,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 778,
+  "output_tokens": 595,
+  "usage_complete": true,
+  "seconds": 5.6407328001223505,
+  "request_id": "070861688b98821724e264b5980d65ea"
+}

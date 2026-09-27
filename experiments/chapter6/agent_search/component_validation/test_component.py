@@ -1,7 +1,12 @@
+import base64
+import json
+
 import pytest
 
 from chapter6_demo import benchmarks
 from .controller import ComponentSearchState, plain, restore_state
+from .runner import run_search
+from chapter6_demo.v12_2.common import digest
 
 
 def _behavior(mode):
@@ -103,3 +108,41 @@ def test_fixed_slot_table_and_factor_replay():
     checkpoint["records"] = [{"decision": decision, "node": node, "event": event, "costs": event["costs"]}]
     replayed = restore_state(checkpoint)
     assert replayed.snapshot() == mini.snapshot()
+
+
+class _FixtureTransport:
+    def send(self, request, persist):
+        if request["stage"] == "planner":
+            content = json.dumps({"name": "fixture", "intent": "fixed",
+                                  "tags": ["local_distance"], "formula": "-distance"})
+        else:
+            content = json.dumps({"code": 'def priority(f):\n    return -f["distance"]\n'})
+        body = {"model": request["model"], "id": "fixture-" + request["stage"],
+                "choices": [{"message": {"content": content}, "finish_reason": "stop"}],
+                "usage": {"prompt_tokens": 10, "completion_tokens": 20}}
+        persist({"body_base64": base64.b64encode(json.dumps(body).encode()).decode(),
+                 "seconds": .001, "request_id": body["id"], "protocol": "openai"})
+
+
+def test_component_runner_fixture_persists_fixed_factor_and_no_model_calls(tmp_path):
+    block = 40
+    snapshot = {"profile": benchmarks.V12_TSP_PROFILE, "block": block,
+                "probe": list(benchmarks._instances_cached("tsp", "probe", benchmarks.V12_TSP_PROFILE, block)),
+                "validation": list(benchmarks._instances_cached("tsp", "validation", benchmarks.V12_TSP_PROFILE, block))}
+    job = {"job_id": "fixture-component", "provider": "fixture", "model": "fixture-model",
+           "arm_id": "P11", "policy": "P11", "protection": True,
+           "scheduling_priority": True, "eviction_protection": True,
+           "role": "fixture", "task": "tsp", "data_block": block, "search_seed": 40000,
+           "steps": 32, "capacity": 2, "grant": 1, "maximum_direction_attempts": 4,
+           "quality_tolerance": .035, "gain_epsilon": .0001,
+           "behavior_radius": .08, "adaptive_unit_steps": 2,
+           "request_limit": 64, "token_budget": 100000, "wall_limit_seconds": 60}
+    params = {"temperature": 0.0, "planner_max_tokens": 200, "coder_max_tokens": 200,
+              "timeout_seconds": 10, "token_budget": 100000, "request_limit": 64,
+              "wall_limit_seconds": 60}
+    result = run_search(job, snapshot, tmp_path / "run", {"manifest_sha256": digest(snapshot)},
+                        params, _FixtureTransport(), mode="fixture")
+    assert result["summary"]["completed_proposals"] == 32
+    assert result["summary"]["model_calls"] == 0
+    assert result["summary"]["scheduling_priority"] is True
+    assert result["summary"]["eviction_protection"] is True
