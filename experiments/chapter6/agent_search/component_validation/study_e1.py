@@ -42,6 +42,8 @@ def prepare(output: Path, *, source_study: Path = DEFAULT_SOURCE_STUDY) -> dict:
     jobs = continuation_jobs(checkpoints, steps=protocol["e1"]["continuation_steps"],
                              repetitions=(0, 1))
     for job in jobs:
+        job["provider"] = protocol["model"]["provider"]
+        job["model"] = protocol["model"]["requested_model"]
         job["checkpoint_path"] = checkpoint_map[job["checkpoint_id"]]["path"]
         job["continuation_snapshot_sha256"] = next(
             cp["continuation"]["snapshot_sha256"] for cp in checkpoints
@@ -129,4 +131,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
