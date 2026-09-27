@@ -15,7 +15,8 @@ from chapter6_demo.v12_1.audit_r2 import offline_only
 from chapter6_demo.v12_2.common import digest, environment, file_sha, git, read_json, save_json, source_record, utcnow
 
 from .e1 import (DEFAULT_SOURCE_STUDY, NEW_BLOCKS, SOURCE_ARMS, SOURCE_BLOCK_FOR_NEW,
-                 SOURCE_STEP, continuation_jobs, prepare_checkpoints, write_checkpoint_set)
+                 SOURCE_STEP, continuation_jobs, load_search_snapshot,
+                 prepare_checkpoints, write_checkpoint_set)
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
@@ -36,17 +37,27 @@ def prepare(output: Path, *, source_study: Path = DEFAULT_SOURCE_STUDY) -> dict:
         raise ValueError("Use a new E1 draft directory")
     protocol = read_json(PROTOCOL)
     output.mkdir(parents=True)
+    data_records = []
+    for block in NEW_BLOCKS:
+        snapshot = load_search_snapshot(block)
+        rel = Path("data") / f"search-b{block}.json"
+        save_json(output / rel, snapshot, immutable=True)
+        data_records.append({"block": block, "path": rel.as_posix(),
+                             "sha256": file_sha(output / rel)})
     checkpoints = prepare_checkpoints(source_study)
     if len(checkpoints) != 8:
         raise ValueError("E1 protocol requires exactly eight checkpoints")
     checkpoint_records = write_checkpoint_set(output, checkpoints)
     checkpoint_map = {record["checkpoint_id"]: record for record in checkpoint_records}
+    data_map = {record["block"]: record for record in data_records}
     jobs = continuation_jobs(checkpoints, steps=protocol["e1"]["continuation_steps"],
                              repetitions=(0, 1))
     for job in jobs:
         job["provider"] = protocol["model"]["provider"]
         job["model"] = protocol["model"]["requested_model"]
         job["checkpoint_path"] = checkpoint_map[job["checkpoint_id"]]["path"]
+        job["search_snapshot_path"] = data_map[job["data_block"]]["path"]
+        job["search_snapshot_sha256"] = data_map[job["data_block"]]["sha256"]
         job["continuation_snapshot_sha256"] = next(
             cp["continuation"]["snapshot_sha256"] for cp in checkpoints
             if cp["checkpoint_id"] == job["checkpoint_id"])
@@ -66,6 +77,7 @@ def prepare(output: Path, *, source_study: Path = DEFAULT_SOURCE_STUDY) -> dict:
                           "source_blocks": SOURCE_BLOCK_FOR_NEW,
                           "source_arms": list(SOURCE_ARMS), "source_step": SOURCE_STEP},
         "continuation_blocks": list(NEW_BLOCKS),
+        "data": data_records,
         "checkpoints": checkpoint_records,
         "jobs": jobs,
         "planned_checkpoints": 8, "planned_jobs": 48, "planned_proposals": 192,
@@ -90,6 +102,10 @@ def verify(study: Path, *, frozen: bool = False) -> dict:
         path = (study / record["path"]).resolve()
         if not path.is_relative_to(study) or file_sha(path) != record["sha256"]:
             raise ValueError(f"E1 checkpoint changed: {record['checkpoint_id']}")
+    for record in manifest.get("data", []):
+        path = (study / record["path"]).resolve()
+        if not path.is_relative_to(study) or file_sha(path) != record["sha256"]:
+            raise ValueError(f"E1 data snapshot changed: block {record['block']}")
     return manifest
 
 
@@ -102,6 +118,10 @@ def freeze(draft: Path, output: Path) -> dict:
         raise ValueError("Freeze requires a clean committed source")
     output.mkdir(parents=True)
     for record in manifest["checkpoints"]:
+        target = output / record["path"]
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes((draft / record["path"]).read_bytes())
+    for record in manifest.get("data", []):
         target = output / record["path"]
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes((draft / record["path"]).read_bytes())
