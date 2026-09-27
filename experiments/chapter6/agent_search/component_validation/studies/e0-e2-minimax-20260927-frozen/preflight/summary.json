@@ -1,0 +1,26 @@
+{
+  "status": "failed",
+  "error_type": "ProviderFailure",
+  "usage": {
+    "calls": [
+      {
+        "step": 0,
+        "stage": "connectivity",
+        "requested_model": "MiniMax-M3",
+        "status": "provider_failed",
+        "returned_model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "usage_complete": null,
+        "seconds": null,
+        "request_id": null
+      }
+    ],
+    "call_attempts": 1,
+    "usage_complete": false,
+    "known_tokens": 0,
+    "total_tokens": null
+  },
+  "new_search_runs": 0,
+  "utc": "2026-09-27T14:32:08.612336+00:00"
+}
