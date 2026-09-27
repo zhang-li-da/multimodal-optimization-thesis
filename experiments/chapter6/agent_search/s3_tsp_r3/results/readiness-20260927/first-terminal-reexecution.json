@@ -1,0 +1,61 @@
+{
+  "utc": "2026-09-27T08:53:31.640543+00:00",
+  "study_id": "s3-tsp-minimax-strategy-screen-20260927-r3",
+  "manifest_sha256": "0cfe897a63031982b7a334cdd3bb9eefa6f06faa2779288afef10367b490c7c3",
+  "partial": true,
+  "planned_jobs": 48,
+  "audited_jobs": 1,
+  "test_data_opened_by_this_audit": false,
+  "new_model_calls": 0,
+  "numeric_comparison": "abs_tol=rel_tol=1e-12; exact routes, behaviors, identities and IDs",
+  "replayed_proposals": 32,
+  "reexecuted_evaluations": 35,
+  "rows": [
+    {
+      "job_id": "wr-b38-s0",
+      "arm": "WR",
+      "block": 38,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 198175,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.0,
+        0.0
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 12.38904230017215,
+      "evaluation_cpu_seconds": 11.703125,
+      "instance_evaluations": 1680
+    }
+  ]
+}
