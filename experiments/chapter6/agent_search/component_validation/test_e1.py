@@ -1,11 +1,13 @@
 import base64
 import json
+import pytest
 
 from chapter6_demo import benchmarks
 from chapter6_demo.v12_2.common import digest
 
 from .e1 import choose_checkpoint_nodes, continuation_jobs, reevaluate_history
 from .e1_runner import ContinuationState, run_continuation
+from .study_e1 import _acceptance_summary
 
 
 def _node(node_id, loss, mode, parent=None):
@@ -83,3 +85,20 @@ def test_fixture_continuation_persists_three_strategy_contract(tmp_path):
     assert result["summary"]["new_model_calls"] == 0
     assert result["summary"]["strategy"] == "C-B"
 
+
+def test_e1_acceptance_requires_full_planner_coder_workload(tmp_path):
+    summary = tmp_path / "summary.json"
+    summary.write_text(json.dumps({
+        "status": "passed", "returned_model": "MiniMax-M3",
+        "workload": {"planner_completed": 3, "coder_completed": 3},
+    }), encoding="utf-8")
+    result = _acceptance_summary(summary, expected_model="MiniMax-M3")
+    assert result["planner_completed"] == 3
+    assert result["coder_completed"] == 3
+
+    summary.write_text(json.dumps({
+        "status": "passed", "returned_model": "MiniMax-M3",
+        "workload": {"planner_completed": 1, "coder_completed": 3},
+    }), encoding="utf-8")
+    with pytest.raises(ValueError, match="3\\+3"):
+        _acceptance_summary(summary, expected_model="MiniMax-M3")

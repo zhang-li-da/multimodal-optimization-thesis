@@ -8,22 +8,54 @@ from __future__ import annotations
 
 import argparse
 import copy
+from concurrent.futures import FIRST_COMPLETED, ProcessPoolExecutor, wait
 import json
 from pathlib import Path
+import time
 
 from chapter6_demo.v12_1.audit_r2 import offline_only
 from chapter6_demo.v12_2.common import digest, environment, file_sha, git, read_json, save_json, source_record, utcnow
 from chapter6_demo.v12_2.data import content_hash
+from chapter6_demo.v12_2.calls import IndeterminateCall, ProviderFailure
 from chapter6_demo import benchmarks
 
 from .e1 import (DEFAULT_SOURCE_STUDY, NEW_BLOCKS, SOURCE_ARMS, SOURCE_BLOCK_FOR_NEW,
                  SOURCE_STEP, continuation_jobs, load_search_snapshot, load_test_snapshot,
                  prepare_checkpoints, write_checkpoint_set)
 from .evaluator import evaluate_test
+from .e1_runner import run_continuation
+from .service import DiagnosticHTTPTransport, GlobalPauseGate
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 PROTOCOL = HERE / "protocol.final.json"
+E1_TERMINAL = {"continuation_complete", "infrastructure_incomplete", "budget_exhausted"}
+
+
+def _acceptance_summary(path: Path, *, expected_model: str) -> dict:
+    """Validate the separate full-workload service acceptance record.
+
+    A short connectivity preflight is deliberately insufficient for E1.  The
+    acceptance record must describe the planner/coder workload used by the
+    continuation runner and contain at least three successful exploration and
+    three successful development calls.  This check is read-only and does not
+    contact the provider.
+    """
+    path = Path(path)
+    summary_path = path / "summary.json" if path.is_dir() else path
+    summary = read_json(summary_path)
+    if summary.get("status") != "passed":
+        raise ValueError("E1 service acceptance did not pass")
+    if summary.get("returned_model") != expected_model:
+        raise ValueError("E1 service acceptance model identity is not confirmed")
+    workload = summary.get("workload") or summary.get("acceptance_workload") or {}
+    planner = int(workload.get("planner_completed", summary.get("planner_completed", 0)) or 0)
+    coder = int(workload.get("coder_completed", summary.get("coder_completed", 0)) or 0)
+    if planner < 3 or coder < 3:
+        raise ValueError("E1 requires a passed 3+3 planner/coder workload acceptance")
+    return {"path": str(summary_path.resolve()), "sha256": file_sha(summary_path),
+            "status": summary["status"], "returned_model": summary["returned_model"],
+            "planner_completed": planner, "coder_completed": coder}
 
 
 def tooling_source() -> dict:
@@ -80,6 +112,7 @@ def prepare(output: Path, *, source_study: Path = DEFAULT_SOURCE_STUDY) -> dict:
         job["provider"] = protocol["model"]["provider"]
         job["model"] = protocol["model"]["requested_model"]
         job["checkpoint_path"] = checkpoint_map[job["checkpoint_id"]]["path"]
+        job["checkpoint_sha256"] = checkpoint_map[job["checkpoint_id"]]["sha256"]
         search_data = data_map[(job["data_block"], "search")]
         test_data = data_map[(job["data_block"], "test")]
         job["search_snapshot_path"] = search_data["path"]
@@ -163,6 +196,166 @@ def freeze(draft: Path, output: Path) -> dict:
     return frozen
 
 
+def _latest_diagnostics(run_dir: Path) -> dict | None:
+    diagnostics = None
+    for state_path in sorted((Path(run_dir) / "calls").glob("*/state.json")):
+        diagnostics = read_json(state_path).get("diagnostics") or diagnostics
+    return diagnostics
+
+
+def _run_one_e1(job: dict, study: str, manifest: dict) -> dict:
+    """Execute one frozen E1 fork in an isolated worker.
+
+    The worker reconstructs all inputs from the manifest.  It never reads test
+    data and it does not retry a failed provider call.
+    """
+    study_path = Path(study).resolve()
+    run_dir = study_path / "runs" / job["job_id"]
+    status_path = run_dir / "status.json"
+    if status_path.exists():
+        existing = read_json(status_path)
+        # A persisted status is evidence that this job was already attempted;
+        # never turn a dispatch replay into an automatic retry.
+        return existing
+    checkpoint = read_json(study_path / job["checkpoint_path"])
+    snapshot = read_json(study_path / job["search_snapshot_path"])
+    protocol = manifest["protocol"]
+    parameters = {
+        "temperature": protocol["generation"]["temperature"],
+        "planner_max_tokens": protocol["generation"]["planner_max_tokens"],
+        "coder_max_tokens": protocol["generation"]["coder_max_tokens"],
+        "timeout_seconds": protocol["generation"]["timeout_seconds"],
+        "token_budget": job["token_budget"],
+        "request_limit": job["request_limit"],
+        "wall_limit_seconds": protocol["generation"].get("wall_limit_seconds_per_job"),
+    }
+    try:
+        transport = DiagnosticHTTPTransport(
+            job["provider"], job["model"], parameters["timeout_seconds"],
+            min_interval_seconds=float(protocol.get("execution", {}).get(
+                "min_request_interval_seconds", 1.0)))
+        result = run_continuation(
+            job, checkpoint, snapshot, run_dir,
+            {"manifest_sha256": manifest["manifest_sha256"],
+             "checkpoint_sha256": job.get("checkpoint_sha256"),
+             "search_snapshot_sha256": job.get("search_snapshot_sha256")},
+            parameters, transport, mode="live")
+        status = {"status": result["status"], "summary": result.get("summary"),
+                  "usage": result.get("usage"),
+                  "diagnostics": _latest_diagnostics(run_dir),
+                  "no_automatic_retry": True}
+    except (IndeterminateCall, ProviderFailure, OSError, TimeoutError) as exc:
+        status = {"status": "infrastructure_incomplete", "error_type": type(exc).__name__,
+                  "error": str(exc), "diagnostics": getattr(exc, "diagnostics", None),
+                  "no_automatic_retry": True}
+        save_json(status_path, status)
+    save_json(study_path / "dispatch" / f"{job['job_id']}.json", {
+        "job_id": job["job_id"], "status": status["status"],
+        "diagnostics": status.get("diagnostics"), "utc": utcnow()})
+    return status
+
+
+def search_all(study: Path, acceptance_dir: Path, *, max_concurrency: int | None = None) -> dict:
+    """Run the frozen 48-job E1 matrix with a provider-aware global pause.
+
+    This function only dispatches already frozen jobs.  It cannot append jobs,
+    retry a failed job, or resume a study after ``halt.json`` has been written.
+    Unsubmitted jobs are retained as explicit ``not_started`` records when the
+    provider gate pauses the study.
+    """
+    study = Path(study).resolve()
+    manifest = verify(study, frozen=True)
+    acceptance = _acceptance_summary(
+        Path(acceptance_dir), expected_model=manifest["jobs"][0]["model"])
+    dispatch_dir = study / "dispatch"
+    dispatch_dir.mkdir(parents=True, exist_ok=True)
+    if (dispatch_dir / "halt.json").exists():
+        raise ValueError("E1 study explicitly halted; no restart or replacement")
+
+    protocol = manifest["protocol"]
+    execution = protocol.get("execution", {})
+    workers = int(max_concurrency or execution.get("max_concurrency", 1))
+    workers = max(1, min(workers, len(manifest["jobs"])))
+    interval = max(0.0, float(execution.get("dispatch_interval_seconds", 1.0)))
+    gate = GlobalPauseGate(execution.get("global_pause_after_rate_limits", 2))
+    jobs = list(manifest["jobs"])
+    submitted: set[str] = set()
+    active = {}
+    paused = None
+    last_dispatch = 0.0
+
+    def mark_not_started(job: dict, reason: str, diagnostics: dict | None = None):
+        save_json(dispatch_dir / f"{job['job_id']}.json", {
+            "job_id": job["job_id"], "status": "not_started", "reason": reason,
+            "diagnostics": diagnostics, "utc": utcnow()})
+
+    def fill(pool):
+        nonlocal last_dispatch
+        while paused is None and len(active) < workers:
+            next_job = next((item for item in jobs if item["job_id"] not in submitted), None)
+            if next_job is None:
+                break
+            elapsed = time.monotonic() - last_dispatch
+            if elapsed < interval:
+                time.sleep(interval - elapsed)
+            future = pool.submit(_run_one_e1, next_job, str(study), manifest)
+            active[future] = next_job
+            submitted.add(next_job["job_id"])
+            last_dispatch = time.monotonic()
+
+    with ProcessPoolExecutor(max_workers=workers) as pool:
+        fill(pool)
+        while active:
+            completed, _ = wait(tuple(active), return_when=FIRST_COMPLETED)
+            for future in completed:
+                job = active.pop(future)
+                try:
+                    status = future.result()
+                except Exception as exc:  # preserve worker failure as terminal evidence
+                    status = {"status": "infrastructure_incomplete", "error_type": type(exc).__name__,
+                              "error": str(exc), "diagnostics": None,
+                              "no_automatic_retry": True}
+                    save_json(dispatch_dir / f"{job['job_id']}.json", {
+                        "job_id": job["job_id"], "status": status["status"],
+                        "error_type": status["error_type"], "error": status["error"],
+                        "utc": utcnow()})
+                decision = gate.observe(status.get("diagnostics"))
+                if decision["pause"] and paused is None:
+                    paused = {"reason": "provider_global_pause", "trigger_job": job["job_id"],
+                              "category": decision["category"],
+                              "diagnostics": status.get("diagnostics"),
+                              "consecutive_rate_limits": decision["consecutive_rate_limits"],
+                              "utc": utcnow()}
+            if paused is None:
+                fill(pool)
+
+    if paused is not None:
+        for job in jobs:
+            if job["job_id"] not in submitted:
+                mark_not_started(job, "global_provider_pause", paused.get("diagnostics"))
+        paused["pending_jobs"] = sum(job["job_id"] not in submitted for job in jobs)
+        save_json(dispatch_dir / "global_pause.json", paused)
+        save_json(dispatch_dir / "halt.json", {
+            "reason": "provider_global_pause", "category": paused.get("category"),
+            "diagnostics": paused.get("diagnostics"), "utc": paused.get("utc")})
+
+    records = []
+    for job in jobs:
+        path = dispatch_dir / f"{job['job_id']}.json"
+        records.append(read_json(path) if path.exists() else {
+            "job_id": job["job_id"], "status": "not_started", "reason": "dispatcher_exit"})
+    summary = {
+        "schema": "chapter6-e1-dispatch-summary-v1", "study_id": manifest["study_id"],
+        "manifest_sha256": manifest["manifest_sha256"], "acceptance": acceptance,
+        "planned_jobs": len(jobs), "submitted_jobs": len(submitted),
+        "completed_jobs": sum(record.get("status") in E1_TERMINAL for record in records),
+        "not_started_jobs": sum(record.get("status") == "not_started" for record in records),
+        "paused": paused is not None, "utc": utcnow(), "new_model_calls": None,
+    }
+    save_json(dispatch_dir / "summary.json", summary)
+    return summary
+
+
 def test_all(study: Path) -> dict:
     """Evaluate each terminal continuation's validation-selected program on test."""
     study = Path(study).resolve()
@@ -216,6 +409,10 @@ def main() -> None:
     p.add_argument("--source-study", type=Path, default=DEFAULT_SOURCE_STUDY)
     p = sub.add_parser("freeze"); p.add_argument("--draft", type=Path, required=True); p.add_argument("--output", type=Path, required=True)
     p = sub.add_parser("verify"); p.add_argument("--study", type=Path, required=True); p.add_argument("--frozen", action="store_true")
+    p = sub.add_parser("search-all"); p.add_argument("--study", type=Path, required=True)
+    p.add_argument("--acceptance", type=Path, required=True)
+    p.add_argument("--max-concurrency", type=int, default=None)
+    p.add_argument("--live", action="store_true", required=True)
     p = sub.add_parser("test-all"); p.add_argument("--study", type=Path, required=True)
     args = parser.parse_args()
     if args.command == "prepare":
@@ -224,6 +421,8 @@ def main() -> None:
         with offline_only(): result = freeze(args.draft, args.output)
     elif args.command == "test-all":
         with offline_only(): result = test_all(args.study)
+    elif args.command == "search-all":
+        result = search_all(args.study, args.acceptance, max_concurrency=args.max_concurrency)
     else:
         with offline_only(): result = verify(args.study, frozen=args.frozen)
     print(json.dumps({"status": result["status"], "jobs": len(result["jobs"]),
