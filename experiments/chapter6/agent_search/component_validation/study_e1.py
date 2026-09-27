@@ -15,8 +15,9 @@ from chapter6_demo.v12_1.audit_r2 import offline_only
 from chapter6_demo.v12_2.common import digest, environment, file_sha, git, read_json, save_json, source_record, utcnow
 
 from .e1 import (DEFAULT_SOURCE_STUDY, NEW_BLOCKS, SOURCE_ARMS, SOURCE_BLOCK_FOR_NEW,
-                 SOURCE_STEP, continuation_jobs, load_search_snapshot,
+                 SOURCE_STEP, continuation_jobs, load_search_snapshot, load_test_snapshot,
                  prepare_checkpoints, write_checkpoint_set)
+from .evaluator import evaluate_test
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
@@ -39,25 +40,30 @@ def prepare(output: Path, *, source_study: Path = DEFAULT_SOURCE_STUDY) -> dict:
     output.mkdir(parents=True)
     data_records = []
     for block in NEW_BLOCKS:
-        snapshot = load_search_snapshot(block)
-        rel = Path("data") / f"search-b{block}.json"
-        save_json(output / rel, snapshot, immutable=True)
-        data_records.append({"block": block, "path": rel.as_posix(),
-                             "sha256": file_sha(output / rel)})
+        for role, snapshot in (("search", load_search_snapshot(block)),
+                               ("test", load_test_snapshot(block))):
+            rel = Path("data") / f"{role}-b{block}.json"
+            save_json(output / rel, snapshot, immutable=True)
+            data_records.append({"block": block, "role": role, "path": rel.as_posix(),
+                                 "sha256": file_sha(output / rel)})
     checkpoints = prepare_checkpoints(source_study)
     if len(checkpoints) != 8:
         raise ValueError("E1 protocol requires exactly eight checkpoints")
     checkpoint_records = write_checkpoint_set(output, checkpoints)
     checkpoint_map = {record["checkpoint_id"]: record for record in checkpoint_records}
-    data_map = {record["block"]: record for record in data_records}
+    data_map = {(record["block"], record["role"]): record for record in data_records}
     jobs = continuation_jobs(checkpoints, steps=protocol["e1"]["continuation_steps"],
                              repetitions=(0, 1))
     for job in jobs:
         job["provider"] = protocol["model"]["provider"]
         job["model"] = protocol["model"]["requested_model"]
         job["checkpoint_path"] = checkpoint_map[job["checkpoint_id"]]["path"]
-        job["search_snapshot_path"] = data_map[job["data_block"]]["path"]
-        job["search_snapshot_sha256"] = data_map[job["data_block"]]["sha256"]
+        search_data = data_map[(job["data_block"], "search")]
+        test_data = data_map[(job["data_block"], "test")]
+        job["search_snapshot_path"] = search_data["path"]
+        job["search_snapshot_sha256"] = search_data["sha256"]
+        job["test_snapshot_path"] = test_data["path"]
+        job["test_snapshot_sha256"] = test_data["sha256"]
         job["continuation_snapshot_sha256"] = next(
             cp["continuation"]["snapshot_sha256"] for cp in checkpoints
             if cp["checkpoint_id"] == job["checkpoint_id"])
@@ -105,7 +111,7 @@ def verify(study: Path, *, frozen: bool = False) -> dict:
     for record in manifest.get("data", []):
         path = (study / record["path"]).resolve()
         if not path.is_relative_to(study) or file_sha(path) != record["sha256"]:
-            raise ValueError(f"E1 data snapshot changed: block {record['block']}")
+            raise ValueError(f"E1 data snapshot changed: block {record['block']} {record['role']}")
     return manifest
 
 
@@ -132,6 +138,52 @@ def freeze(draft: Path, output: Path) -> dict:
     return frozen
 
 
+def test_all(study: Path) -> dict:
+    """Evaluate each terminal continuation's validation-selected program on test."""
+    study = Path(study).resolve()
+    manifest = verify(study, frozen=True)
+    statuses = {}
+    for job in manifest["jobs"]:
+        status_path = study / "runs" / job["job_id"] / "status.json"
+        if not status_path.exists():
+            raise ValueError(f"E1 job has no terminal status: {job['job_id']}")
+        statuses[job["job_id"]] = read_json(status_path)
+    allowed = {"continuation_complete", "infrastructure_incomplete", "budget_exhausted"}
+    if any(status.get("status") not in allowed for status in statuses.values()):
+        raise ValueError("E1 jobs are not all terminal")
+    data = {(record["block"], record["role"]): record for record in manifest["data"]}
+    outputs = 0
+    for job in manifest["jobs"]:
+        run_dir = study / "runs" / job["job_id"]
+        selection_path = run_dir / "selection_frozen.json"
+        if not selection_path.exists():
+            continue
+        selection = read_json(selection_path)
+        test_record = data[(job["data_block"], "test")]
+        snapshot = read_json(study / test_record["path"])
+        output = study / "tests" / f"{job['job_id']}.json"
+        if output.exists():
+            outputs += 1
+            continue
+        report = {"schema": "chapter6-e1-test-v1", "job_id": job["job_id"],
+                  "strategy": job["strategy"], "repetition": job["repetition"],
+                  "search_status": statuses[job["job_id"]]["status"],
+                  "selection_sha256": file_sha(selection_path),
+                  "test_snapshot_sha256": file_sha(study / test_record["path"]),
+                  "selected_on": "new-block-validation", "new_model_calls": 0}
+        try:
+            evaluated = evaluate_test(selection["code"], snapshot)
+            report.update(primary_test_gap=evaluated["loss"] if evaluated["valid"] else 1.0,
+                          test_valid=evaluated["valid"], evaluation=evaluated)
+        except Exception as exc:
+            report.update(primary_test_gap=1.0, test_valid=False,
+                          test_error_type=type(exc).__name__, evaluation={})
+        save_json(output, report, immutable=True)
+        outputs += 1
+    return {"status": "test_complete", "planned_jobs": len(manifest["jobs"]),
+            "tested_jobs": outputs, "new_model_calls": 0}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
@@ -139,11 +191,14 @@ def main() -> None:
     p.add_argument("--source-study", type=Path, default=DEFAULT_SOURCE_STUDY)
     p = sub.add_parser("freeze"); p.add_argument("--draft", type=Path, required=True); p.add_argument("--output", type=Path, required=True)
     p = sub.add_parser("verify"); p.add_argument("--study", type=Path, required=True); p.add_argument("--frozen", action="store_true")
+    p = sub.add_parser("test-all"); p.add_argument("--study", type=Path, required=True)
     args = parser.parse_args()
     if args.command == "prepare":
         with offline_only(): result = prepare(args.output, source_study=args.source_study)
     elif args.command == "freeze":
         with offline_only(): result = freeze(args.draft, args.output)
+    elif args.command == "test-all":
+        with offline_only(): result = test_all(args.study)
     else:
         with offline_only(): result = verify(args.study, frozen=args.frozen)
     print(json.dumps({"status": result["status"], "jobs": len(result["jobs"]),

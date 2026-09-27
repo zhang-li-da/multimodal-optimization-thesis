@@ -71,6 +71,16 @@ def load_search_snapshot(block: int) -> dict:
     }
 
 
+def load_test_snapshot(block: int) -> dict:
+    """Load the independent test split; never used during checkpoint choice."""
+    return {
+        "profile": benchmarks.V12_TSP_PROFILE,
+        "block": int(block),
+        "test": list(benchmarks._instances_cached(
+            "tsp", "test", benchmarks.V12_TSP_PROFILE, int(block))),
+    }
+
+
 def _source_nodes(source_checkpoint: dict) -> list[dict]:
     """Return seeds plus the immutable prefix ending at the chosen step."""
     records = source_checkpoint.get("records", [])

@@ -17,10 +17,11 @@ import time
 from chapter6_demo.benchmarks import TAGS
 from chapter6_demo.discovery import SYSTEM, coder_prompt, planner_prompt
 from chapter6_demo.providers import parse_json
-from chapter6_demo.v12_2.calls import DurableCalls, IndeterminateCall, ProviderFailure
+from chapter6_demo.v12_2.calls import IndeterminateCall, ProviderFailure
 from chapter6_demo.v12_2.common import digest, file_sha, read_json, run_lock, save_json, source_record, utcnow
 
 from ..s3_tsp_r3.evaluator import evaluate_search
+from .service import DiagnosticDurableCalls
 
 
 def _brief(node: dict | None) -> dict | None:
@@ -208,7 +209,7 @@ def run_continuation(job: dict, checkpoint: dict, snapshot: dict, directory: Pat
             save_json(checkpoint_path, {"config": config, "state": state.snapshot(),
                                         "records": records}, immutable=True)
         start = time.perf_counter()
-        calls = DurableCalls(directory, config, transport)
+        calls = DiagnosticDurableCalls(directory, config, transport)
         status = "continuation_complete"
         stop_details = {}
         for step in range(len(records), job["steps"]):
@@ -243,7 +244,8 @@ def run_continuation(job: dict, checkpoint: dict, snapshot: dict, directory: Pat
             except (IndeterminateCall, ProviderFailure) as exc:
                 status = "infrastructure_incomplete"
                 stop_details = {"error_type": type(exc).__name__, "reserved_step": step,
-                                "completed_proposals": len(records), "no_automatic_retry": True}
+                                "completed_proposals": len(records), "no_automatic_retry": True,
+                                "diagnostics": getattr(exc, "diagnostics", None)}
                 break
             node = {"id": max(state.by_id) + 1, "name": str(plan.get("name", "candidate"))[:80],
                     "intent": str(plan.get("intent", ""))[:800],
@@ -270,6 +272,13 @@ def run_continuation(job: dict, checkpoint: dict, snapshot: dict, directory: Pat
         best = min(valid, key=lambda node: (node["evaluation"]["loss"], node["id"])) if valid else None
         improvement = (state.start_best_loss - best["evaluation"]["loss"]
                        if best else None)
+        selection = {"schema": "chapter6-e1-selection-v1", "selected_on": "validation",
+                     "strategy": job["strategy"], "best_id": best["id"] if best else None,
+                     "code": best.get("code", "") if best else "",
+                     "validation_loss": best["evaluation"].get("loss") if best else None,
+                     "checkpoint_best_loss": state.start_best_loss,
+                     "completed_proposals": len(records), "status": status}
+        save_json(directory / "selection_frozen.json", selection, immutable=True)
         summary = {"status": status, "strategy": job["strategy"],
                    "checkpoint_best_loss": state.start_best_loss,
                    "final_best_loss": best["evaluation"]["loss"] if best else None,
@@ -283,7 +292,8 @@ def run_continuation(job: dict, checkpoint: dict, snapshot: dict, directory: Pat
                    "new_model_calls": 0 if mode == "fixture" else calls.usage().get("call_attempts", 0)}
         result = {"status": status, "stop_details": stop_details, "config": config,
                   "summary": summary, "usage": calls.usage(),
-                  "state_sha256": digest(state.snapshot())}
+                  "state_sha256": digest(state.snapshot()),
+                  "selection_frozen_sha256": file_sha(directory / "selection_frozen.json")}
         save_json(result_path, result, immutable=True)
         save_json(directory / "status.json", {"status": status,
                                                "completed_proposals": len(records)}, immutable=True)
