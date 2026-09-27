@@ -7,4 +7,4 @@
 E1 同状态真实分叉尚未启动，原因是当前 MiniMax 服务无法稳定提供本阶段所需的请求额度；离线 controller/runner fixture 只验证代码路径，不构成 E1 证据。下一次真实执行应从新的冻结协议开始，先预检并固定提供方可用性，再按 E1→E2 顺序运行；不得把本次失败批次改名重跑。
 
 2026-09-28 已完成不调用模型的修复验收：组件验证测试 18 项通过，冻结的 S3 r3 回归测试 25 项通过。E1 离线准备已将新区块 44--47 的 probe/validation 与独立 test 快照写入
-`experiments/chapter6/agent_search/component_validation/results/e1-preparation-offline-20260928-c/`，生成 8 个检查点、48 个任务和 192 个延续提案；新区块共 432 个实例与旧块 3--43 的 4,428 个实例完成 ID/内容哈希重叠检查，结果为零碰撞。manifest SHA-256 为 `17ebb401cc820635de422bfecce95defd0cd2d97223fc135069e33e0b3dcf6bc`，离线 verify 已通过。该目录是准备记录，不包含真实模型调用、搜索结果或方法效果结论。
+`experiments/chapter6/agent_search/component_validation/results/e1-preparation-offline-20260928-d/`，生成 8 个检查点、48 个任务和 192 个延续提案；新区块共 432 个实例与旧块 3--43 的 4,428 个实例完成 ID/内容哈希重叠检查，结果为零碰撞。manifest SHA-256 为 `a968dae2e8fb02d570c867685bcfb805a6243ad57cc934418bc4211c68b1dca4`，离线 verify 已通过。该目录是准备记录，不包含真实模型调用、搜索结果或方法效果结论。

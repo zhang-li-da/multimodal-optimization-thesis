@@ -1,9 +1,9 @@
 {
   "schema": "chapter6-e1-same-state-study-v1",
   "status": "DRAFT_NOT_EXECUTABLE",
-  "created_utc": "2026-09-27T16:27:27.087142+00:00",
+  "created_utc": "2026-09-27T16:33:32.638778+00:00",
   "study_id": "chapter6-component-validation-e1-20260927",
-  "source_commit": "a4254c8f643454bc9f582f0cb9626f00c552f0b3",
+  "source_commit": "6afa3d65ba1f9890cf6148990a7ea8149a359d78",
   "source": {
     "format": "named-source-files-lf-sha256-v1",
     "files": {
@@ -61,11 +61,11 @@
     "files": {
       "experiments/chapter6/agent_search/component_validation/__init__.py": "35b762ae066b800dd4708a5ab315da9ea282b82bf40396eb1559108fa857b0b1",
       "experiments/chapter6/agent_search/component_validation/e1.py": "7111614d675913ceec2325c77e1b2f27d791f8cb087d41bead849bf96e156345",
-      "experiments/chapter6/agent_search/component_validation/e1_runner.py": "fd65015f5d3f4e7c0ec872566904f8ee2649ffd6303777ff33f867c2bd8852d8",
+      "experiments/chapter6/agent_search/component_validation/e1_runner.py": "ade37638dd0e61755a4fd55243fb684e6823e3d2ba5e39584ba7e0b82f974432",
       "experiments/chapter6/agent_search/component_validation/study_e1.py": "3ba58452e9f7d5011ec47b3e6e7e49022961b9fb7c5d1305c6ae0a30f40a7a5e",
       "experiments/chapter6/agent_search/component_validation/protocol.final.json": "b59ce13385fbdc2183222180416b96a84b83c6a4dbf3069e4cb66a28eb711666"
     },
-    "sha256": "a2531b17d62978df1a851aed5d34625b03b23fba907028ecbf174dd66d62bd9b"
+    "sha256": "a2c25f7cb4858fde0dd2434b60d314f8ae2139206531a799449457dd662d3c6e"
   },
   "environment": {
     "python": "3.13.5",
@@ -161,49 +161,49 @@
     {
       "checkpoint_id": "b44-fb_p-s16",
       "path": "checkpoints/b44-fb_p-s16.json",
-      "sha256": "aee526614ace50692905c306b4319097f033a7b8aee1b4e54f2a0b42a9300145",
+      "sha256": "72d89e447727b084c39fe229433c5f0267bdc3cff17e7430738c33863c574c72",
       "continuation_block": 44
     },
     {
       "checkpoint_id": "b44-sp-s16",
       "path": "checkpoints/b44-sp-s16.json",
-      "sha256": "e9d1c209f36a4e1673920ae5b94276149f7bc3c2917a5f997751024ff5705aac",
+      "sha256": "bc0ceb574d0e20e5fcedf55d752f8a1ab053106b560c2509ea6065e10a42b1aa",
       "continuation_block": 44
     },
     {
       "checkpoint_id": "b45-fb_p-s16",
       "path": "checkpoints/b45-fb_p-s16.json",
-      "sha256": "76e4bbbcce273bae0e33b0dc6d89834b5465e61cdec79c5305257f943df1797b",
+      "sha256": "891096ec120b87040f838f7f3df57cc2d9047624301d9c496ab8bb48564c21e8",
       "continuation_block": 45
     },
     {
       "checkpoint_id": "b45-sp-s16",
       "path": "checkpoints/b45-sp-s16.json",
-      "sha256": "1e0c0541b78ec44c7dd2c0bcfa337e5075bd4281539908a146fe57b33561efb9",
+      "sha256": "d8daace693078bf430045d4da881f2bee7fe505f9525aa6b252dc290c76056a1",
       "continuation_block": 45
     },
     {
       "checkpoint_id": "b46-fb_p-s16",
       "path": "checkpoints/b46-fb_p-s16.json",
-      "sha256": "4ed29382cd7e768e748ab7865da51c81d795c680a195bb3df08942cc0e3f2f19",
+      "sha256": "f63dddfbe83a75ed7ab5b3707e7047436f0cb777ba566e79a024c00fda6d2f8d",
       "continuation_block": 46
     },
     {
       "checkpoint_id": "b46-sp-s16",
       "path": "checkpoints/b46-sp-s16.json",
-      "sha256": "86b1b44e581a256fc292287263de79e30df9c799d2a01c480291ed94dafb0fd3",
+      "sha256": "d100ef340883aa04db58c038f440572596f9892a0146f624a208c11c7ed568c8",
       "continuation_block": 46
     },
     {
       "checkpoint_id": "b47-fb_p-s16",
       "path": "checkpoints/b47-fb_p-s16.json",
-      "sha256": "63fa1a2661c221e308ff9de7ee2848997254b9be50991b794cd1e06b1f74f27a",
+      "sha256": "483c35cce2c0a0d61eba7530708675eaaf0b8fe3f1a8a0a6a4573d2ac289ea4c",
       "continuation_block": 47
     },
     {
       "checkpoint_id": "b47-sp-s16",
       "path": "checkpoints/b47-sp-s16.json",
-      "sha256": "c3085259d1779736862f93e0008f07d00e1cc416554a549a8d0dde92f5d660fb",
+      "sha256": "09c7ae3a8d40f651e483c337bbd76719aeafb90cdda08c88c294a38441033b65",
       "continuation_block": 47
     }
   ],
@@ -1174,5 +1174,5 @@
   "planned_proposals": 192,
   "new_model_calls_before_freeze": 0,
   "status_note": "offline checkpoint preparation only; no E1 continuation has run",
-  "manifest_sha256": "17ebb401cc820635de422bfecce95defd0cd2d97223fc135069e33e0b3dcf6bc"
+  "manifest_sha256": "a968dae2e8fb02d570c867685bcfb805a6243ad57cc934418bc4211c68b1dca4"
 }
