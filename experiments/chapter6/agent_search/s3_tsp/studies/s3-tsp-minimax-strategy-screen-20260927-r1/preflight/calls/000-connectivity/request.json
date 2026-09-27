@@ -1,0 +1,11 @@
+{
+  "run_config_sha256": "3f24c64341eeaef9cefaee1edc004ea6bbbf603b4fcd2efb1b18f217b49d70da",
+  "step": 0,
+  "stage": "connectivity",
+  "provider": "minimax-cn-coding-plan",
+  "model": "MiniMax-M3",
+  "system": "You are a coding assistant.",
+  "prompt": "Return exactly the JSON object {\"ready\":true}.",
+  "max_tokens": 512,
+  "temperature": 0.0
+}
