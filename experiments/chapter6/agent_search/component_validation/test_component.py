@@ -44,6 +44,19 @@ def _to_step(state, step):
         _candidate(state, current, loss=.200, mode=0)
 
 
+def _install_pool_entry(state, direction, *, node_id, loss, created_order,
+                        remaining=1, protection_remaining=1, deadline_step=32):
+    """Install a funded fixture entry without exercising model generation."""
+    lineage = state.direction_lineage[direction]
+    state.pool[direction] = {
+        "direction_id": direction, "lineage_id": lineage, "node_id": node_id,
+        "remaining": remaining, "protection_remaining": protection_remaining,
+        "attempts": 0, "loss": loss, "created_order": created_order,
+        "last_gain": 0.0, "last_admission_reason": "fixture",
+        "deadline_step": deadline_step,
+    }
+
+
 def test_zero_credit_directions_never_enter_active_pool():
     state = ComponentSearchState("P00", 0, steps=32)
     state.initialize(_seeds())
@@ -56,6 +69,80 @@ def test_zero_credit_directions_never_enter_active_pool():
     event = state.observe(node, {"tokens_added": 1000, "requests_added": 2, "complete_responses": 2, "truncations": 0})
     assert event["branch_entry_created"] is False
     assert state.pool == {}
+
+
+def test_zero_credit_same_lineage_cannot_enter_or_evict_funded_entry():
+    state = ComponentSearchState("P00", 0, steps=32, capacity=1)
+    state.initialize(_seeds())
+    _install_pool_entry(state, "D0000", node_id=0, loss=.10, created_order=0)
+    # A new direction in the same lineage has exhausted its cumulative cap.
+    direction = "D-unfunded"
+    state.direction_lineage[direction] = state.direction_lineage["D0000"]
+    state.ledgers[state.direction_lineage[direction]]["grant_awarded"] = state.maximum_direction_attempts
+    result = state._admit(_node(99, .30, 4), direction, "new_direction_trial", 0.0)
+    assert result["development_grant_awarded"] == 0
+    assert result["zero_credit_pool_entry"] is True
+    assert set(state.pool) == {"D0000"}
+
+
+def test_budget_end_does_not_award_unredeemable_commitment():
+    state = ComponentSearchState("P00", 0, steps=32)
+    state.initialize(_seeds())
+    # The interleaved schedule has its last branch slot at step 23.
+    _to_step(state, 24)
+    state.pool.clear()
+    state.ledgers["L0000"]["grant_awarded"] = 0
+    result = state._admit(_node(99, .11, 4), "D0000", "new_direction_trial", 0.0)
+    assert result["development_grant_awarded"] == 0
+    assert result["reason"] == "budget_window_exhausted"
+    assert state.pool == {}
+
+
+def test_ps_changes_branch_choice_from_quality_to_deadline():
+    quality = ComponentSearchState("P00", 0, steps=32, capacity=2)
+    deadline = ComponentSearchState("P10", 0, steps=32, capacity=2)
+    for state in (quality, deadline):
+        state.initialize(_seeds())
+        _to_step(state, 3)
+        state.pool.clear()
+        _install_pool_entry(state, "D0000", node_id=0, loss=.10,
+                            created_order=0, deadline_step=11)
+        _install_pool_entry(state, "D0001", node_id=1, loss=.20,
+                            created_order=1, deadline_step=3)
+    quality_choice = quality.choose(3)["allocation"]["direction_id"]
+    deadline_choice = deadline.choose(3)["allocation"]["direction_id"]
+    assert quality_choice == "D0000"       # ordinary policy: best loss
+    assert deadline_choice == "D0001"      # P-S policy: earliest deadline
+    assert quality_choice != deadline_choice
+
+
+def test_pe_blocks_eviction_of_unredeemed_entry():
+    unprotected = ComponentSearchState("P00", 0, steps=32, capacity=2)
+    protected = ComponentSearchState("P01", 0, steps=32, capacity=2)
+    for state in (unprotected, protected):
+        state.initialize(_seeds())
+        _install_pool_entry(state, "D0000", node_id=0, loss=.10,
+                            created_order=0, remaining=1)
+        _install_pool_entry(state, "D0001", node_id=1, loss=.20,
+                            created_order=1, remaining=1)
+    admitted = unprotected._admit(_node(99, .15, 4), "D0002",
+                                  "new_direction_trial", 0.0)
+    refused = protected._admit(_node(99, .15, 4), "D0002",
+                                "new_direction_trial", 0.0)
+    assert admitted["evicted_direction_id"] == "D0001"
+    assert set(unprotected.pool) == {"D0000", "D0002"}
+    assert refused["reason"] == "pool_full_protected"
+    assert set(protected.pool) == {"D0000", "D0001"}
+
+
+def test_interleaved_slot_positions_expose_branch_opportunities_early():
+    slots = ComponentSearchState.SLOT_TYPES
+    assert len(slots) == 32
+    assert slots.count("incumbent") == 20
+    assert slots.count("explore") == 6
+    assert slots.count("branch") == 6
+    assert [i for i, kind in enumerate(slots) if kind == "branch"] == [3, 7, 11, 15, 19, 23]
+    assert all(i < 24 for i, kind in enumerate(slots) if kind == "branch")
 
 
 def test_trial_is_one_shot_and_behavior_mutation_does_not_reset_lineage_budget():

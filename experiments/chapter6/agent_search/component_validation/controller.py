@@ -40,7 +40,11 @@ def brief(node: dict[str, Any] | None) -> dict[str, Any] | None:
 class ComponentSearchState(_S3SearchState):
     """Fixed-slot E2 state with independently toggled P-S and P-E factors."""
 
-    SLOT_TYPES = ("incumbent",) * 20 + ("explore",) * 6 + ("branch",) * 6
+    # Interleave opportunities so a direction admitted early can be tried
+    # before the search is over.  The counts remain the frozen 20/6/6
+    # allocation, but branch slots are distributed across the first 24 steps.
+    SLOT_TYPES = tuple(("incumbent", "incumbent", "explore", "branch") * 6 +
+                       ("incumbent",) * 8)
 
     def __init__(self, policy: str = "FB", seed: int = 0, *, steps: int = 32,
                  capacity: int = 2, grant: int = 1,
@@ -73,6 +77,27 @@ class ComponentSearchState(_S3SearchState):
     def _pool_entry(self, direction):
         return self.pool.get(direction)
 
+    def _current_step(self):
+        """Return the step whose observation is currently being processed."""
+        return self.decisions[-1]["step"] if self.decisions else -1
+
+    def _future_branch_slots(self):
+        """Count branch slots that can still redeem a new commitment."""
+        next_step = len(self.decisions)
+        return sum(slot == "branch" for slot in self.SLOT_TYPES[next_step:])
+
+    def _next_branch_deadline(self):
+        """Return the next branch slot index, or ``steps`` if none remains."""
+        current = self._current_step()
+        for step in range(current + 1, self.steps):
+            if self.SLOT_TYPES[step] == "branch":
+                return step
+        return self.steps
+
+    def _reserved_branch_slots(self):
+        return sum(max(0, int(entry.get("remaining", 0)))
+                   for entry in self.pool.values())
+
     def _admit(self, node, direction, reason, gain):
         """Admit only funded directions; behavior changes do not reset grants."""
         lineage = self.direction_lineage[direction]
@@ -83,11 +108,26 @@ class ComponentSearchState(_S3SearchState):
         if not (is_trial or is_renewal):
             return {"entry_created": False, "grant_awarded": 0,
                     "development_grant_awarded": 0, "reason": "no_investment_evidence",
-                    "evicted_direction_id": None}
+                    "evicted_direction_id": None, "zero_credit_pool_entry": False}
         if is_renewal and ledger["grant_awarded"] >= self.maximum_direction_attempts:
             return {"entry_created": False, "grant_awarded": 0,
                     "development_grant_awarded": 0, "reason": "lineage_budget_exhausted",
-                    "evicted_direction_id": None}
+                    "evicted_direction_id": None, "zero_credit_pool_entry": False}
+
+        # Compute the grant before touching the pool.  This prevents an
+        # unfunded direction from occupying a slot or evicting a funded one.
+        requested = (self.trial_slots if is_trial and ledger["grant_awarded"] == 0
+                     else self.renewal_slots if is_renewal else 0)
+        lineage_remaining = self.maximum_direction_attempts - ledger["grant_awarded"]
+        branch_slots = self._future_branch_slots()
+        unreserved_slots = max(0, branch_slots - self._reserved_branch_slots())
+        extra = min(requested, lineage_remaining, unreserved_slots)
+        if extra <= 0 and entry is None:
+            reason_code = "budget_window_exhausted" if branch_slots <= 0 or unreserved_slots <= 0 else "no_remaining_trial_or_renewal"
+            return {"entry_created": False, "grant_awarded": 0,
+                    "development_grant_awarded": 0, "reason": reason_code,
+                    "evicted_direction_id": None, "zero_credit_pool_entry": True}
+
         if entry is None:
             if len(self.pool) >= self.capacity:
                 replaceable = list(self.pool.values())
@@ -96,7 +136,7 @@ class ComponentSearchState(_S3SearchState):
                 if not replaceable:
                     return {"entry_created": False, "grant_awarded": 0,
                             "development_grant_awarded": 0, "reason": "pool_full_protected",
-                            "evicted_direction_id": None}
+                            "evicted_direction_id": None, "zero_credit_pool_entry": False}
                 victim = max(replaceable, key=lambda value: (value["loss"], -value["created_order"]))
                 evicted_direction = victim["direction_id"]
                 self.pool.pop(evicted_direction)
@@ -109,6 +149,7 @@ class ComponentSearchState(_S3SearchState):
                 "loss": node["evaluation"]["loss"],
                 "created_order": self.serial, "last_gain": max(0.0, gain),
                 "last_admission_reason": reason,
+                "deadline_step": self._next_branch_deadline(),
             }
             self.serial += 1
             self.pool[direction] = entry
@@ -125,29 +166,31 @@ class ComponentSearchState(_S3SearchState):
             entry["last_admission_reason"] = reason
         # A trial is awarded once. A renewal is awarded only after evidence;
         # the lineage ledger prevents a behavior mutation from resetting it.
-        extra = self.trial_slots if is_trial and ledger["grant_awarded"] == 0 else self.renewal_slots if is_renewal else 0
-        extra = min(extra, self.maximum_direction_attempts - ledger["grant_awarded"])
         if extra <= 0:
             return {"entry_created": created, "grant_awarded": 0,
                     "development_grant_awarded": 0, "reason": "no_remaining_trial_or_renewal",
-                    "evicted_direction_id": evicted_direction}
+                    "evicted_direction_id": evicted_direction, "zero_credit_pool_entry": False}
         ledger["grant_awarded"] += extra
         entry["remaining"] += extra
         if self.scheduling_priority:
             entry["protection_remaining"] += extra
         return {"entry_created": created, "grant_awarded": extra if self.scheduling_priority else 0,
                 "development_grant_awarded": extra, "reason": reason,
-                "evicted_direction_id": evicted_direction}
+                "evicted_direction_id": evicted_direction, "zero_credit_pool_entry": False}
 
     def _available_investments(self):
         return sorted((entry for entry in self.pool.values() if entry["remaining"] > 0),
-                      key=lambda e: (e["created_order"], e["direction_id"]))
+                      # Without P-S, quality is the ordinary branch policy.
+                      key=lambda e: (e["loss"], e["created_order"], e["direction_id"]))
 
     def _available_priority(self):
         if not self.scheduling_priority:
             return []
         return sorted((e for e in self.pool.values() if e["protection_remaining"] > 0),
-                      key=lambda e: (e["created_order"], e["direction_id"]))
+                      # P-S gives the earliest commitment deadline priority;
+                      # creation order only breaks equal-deadline ties.
+                      key=lambda e: (e.get("deadline_step", self.steps),
+                                     e["created_order"], e["direction_id"]))
 
     def choose(self, step: int):
         if self.pending is not None:
@@ -198,12 +241,23 @@ class ComponentSearchState(_S3SearchState):
 
     def observe(self, node, costs=None):
         event = super().observe(node, costs)
+        # ``SearchState.observe`` serializes the admission reason but not the
+        # component-only zero-credit diagnostic.  A zero-credit admission is
+        # only the case where a new entry was refused because no future branch
+        # slot (or reservation) could redeem it.
+        event["zero_credit_pool_entry"] = bool(
+            not event.get("branch_entry_created")
+            and event.get("direction_id") not in self.pool
+            and event.get("admission_reason") in {
+                "budget_window_exhausted", "no_remaining_trial_or_renewal"
+            }
+        )
         event.update({
             "scheduling_priority": self.scheduling_priority,
             "eviction_protection": self.eviction_protection,
             "slot_type": event.get("action") if event.get("action") in ("explore", "develop") else None,
             "trial_or_renewal": event.get("admission_reason") in ("new_direction_trial", "direction_progression"),
-            "zero_credit_pool_entry": False,
+            "zero_credit_pool_entry": event["zero_credit_pool_entry"],
         })
         self.factor_events.append({
             "step": event["node_id"],
