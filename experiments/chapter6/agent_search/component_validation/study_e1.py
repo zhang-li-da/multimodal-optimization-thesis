@@ -315,6 +315,7 @@ def search_all(study: Path, acceptance_dir: Path, *, max_concurrency: int | None
                     status = {"status": "infrastructure_incomplete", "error_type": type(exc).__name__,
                               "error": str(exc), "diagnostics": None,
                               "no_automatic_retry": True}
+                    save_json(study / "runs" / job["job_id"] / "status.json", status)
                     save_json(dispatch_dir / f"{job['job_id']}.json", {
                         "job_id": job["job_id"], "status": status["status"],
                         "error_type": status["error_type"], "error": status["error"],
