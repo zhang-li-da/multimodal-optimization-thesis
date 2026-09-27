@@ -1,0 +1,15 @@
+{
+  "status": "provider_failed",
+  "request_sha256": "efbdf20c032153ea989dd974073af68f9b91577bc30026e95923b60240657f8d",
+  "error_type": "ProviderFailure",
+  "usage": null,
+  "error": "HTTP 429; category=rate_limit; code=rate_limit_error; no retry; token usage unknown",
+  "diagnostics": {
+    "http_status": 429,
+    "business_code": "rate_limit_error",
+    "error_category": "rate_limit",
+    "trace_id": "070894f24199a557cee683e1595a521b",
+    "retry_after": null
+  },
+  "diagnostics_recorded_utc": "2026-09-27T18:35:30.565458+00:00"
+}
