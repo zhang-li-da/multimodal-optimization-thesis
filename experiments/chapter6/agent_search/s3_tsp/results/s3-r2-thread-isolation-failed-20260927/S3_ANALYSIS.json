@@ -1,0 +1,629 @@
+{
+  "study_id": "s3-tsp-minimax-strategy-screen-20260927-r2",
+  "protocol_sha256": "115f1134b8633db17c6fdbb26ef8d41e80f822a3cfb13d0a09c3e977adafc77f",
+  "jobs_planned": 48,
+  "jobs_tested": 0,
+  "status_counts": {
+    "infrastructure_incomplete": 4,
+    "not_started": 30,
+    "search_complete_test_not_run": 14
+  },
+  "independent_unit": "data block",
+  "group": {
+    "SP": {
+      "planned_jobs": 8,
+      "completed_searches": 1,
+      "tested_jobs": 0,
+      "status_counts": {
+        "not_started": 7,
+        "search_complete_test_not_run": 1
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 29146.625,
+      "usage_complete_jobs": 1,
+      "total_requests": 64,
+      "valid_proposals": 32,
+      "proposal_slots": 32,
+      "proposal_validity_rate": 1.0,
+      "truncated_model_responses": 0,
+      "new_direction_candidates": 15,
+      "competitive_new_direction_candidates": 14,
+      "branch_entries_created": 0,
+      "pool_evictions": 0,
+      "protection_grants_awarded": 0,
+      "protected_slots_scheduled": 0,
+      "multi_branch_protection_slots": 0,
+      "protected_slots_with_complete_output": 0,
+      "protected_slots_with_valid_program": 0,
+      "protected_slots_on_lagging_parent": 0,
+      "protected_local_improvements": 0,
+      "protected_global_improvements": 0,
+      "adaptive_units": 0
+    },
+    "WR": {
+      "planned_jobs": 8,
+      "completed_searches": 2,
+      "tested_jobs": 0,
+      "status_counts": {
+        "not_started": 6,
+        "search_complete_test_not_run": 2
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 57149.375,
+      "usage_complete_jobs": 2,
+      "total_requests": 128,
+      "valid_proposals": 64,
+      "proposal_slots": 64,
+      "proposal_validity_rate": 1.0,
+      "truncated_model_responses": 0,
+      "new_direction_candidates": 56,
+      "competitive_new_direction_candidates": 19,
+      "branch_entries_created": 0,
+      "pool_evictions": 0,
+      "protection_grants_awarded": 0,
+      "protected_slots_scheduled": 0,
+      "multi_branch_protection_slots": 0,
+      "protected_slots_with_complete_output": 0,
+      "protected_slots_with_valid_program": 0,
+      "protected_slots_on_lagging_parent": 0,
+      "protected_local_improvements": 0,
+      "protected_global_improvements": 0,
+      "adaptive_units": 0
+    },
+    "FB_U": {
+      "planned_jobs": 8,
+      "completed_searches": 4,
+      "tested_jobs": 0,
+      "status_counts": {
+        "not_started": 4,
+        "search_complete_test_not_run": 4
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 108012.375,
+      "usage_complete_jobs": 4,
+      "total_requests": 256,
+      "valid_proposals": 125,
+      "proposal_slots": 128,
+      "proposal_validity_rate": 0.9765625,
+      "truncated_model_responses": 1,
+      "new_direction_candidates": 73,
+      "competitive_new_direction_candidates": 38,
+      "branch_entries_created": 40,
+      "pool_evictions": 16,
+      "protection_grants_awarded": 0,
+      "protected_slots_scheduled": 0,
+      "multi_branch_protection_slots": 0,
+      "protected_slots_with_complete_output": 0,
+      "protected_slots_with_valid_program": 0,
+      "protected_slots_on_lagging_parent": 0,
+      "protected_local_improvements": 0,
+      "protected_global_improvements": 0,
+      "adaptive_units": 0
+    },
+    "FB_P": {
+      "planned_jobs": 8,
+      "completed_searches": 2,
+      "tested_jobs": 0,
+      "status_counts": {
+        "not_started": 6,
+        "search_complete_test_not_run": 2
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 58323.25,
+      "usage_complete_jobs": 2,
+      "total_requests": 128,
+      "valid_proposals": 64,
+      "proposal_slots": 64,
+      "proposal_validity_rate": 1.0,
+      "truncated_model_responses": 0,
+      "new_direction_candidates": 36,
+      "competitive_new_direction_candidates": 20,
+      "branch_entries_created": 21,
+      "pool_evictions": 9,
+      "protection_grants_awarded": 40,
+      "protected_slots_scheduled": 39,
+      "multi_branch_protection_slots": 17,
+      "protected_slots_with_complete_output": 39,
+      "protected_slots_with_valid_program": 39,
+      "protected_slots_on_lagging_parent": 32,
+      "protected_local_improvements": 17,
+      "protected_global_improvements": 3,
+      "adaptive_units": 0
+    },
+    "TS_P": {
+      "planned_jobs": 8,
+      "completed_searches": 3,
+      "tested_jobs": 0,
+      "status_counts": {
+        "infrastructure_incomplete": 3,
+        "not_started": 2,
+        "search_complete_test_not_run": 3
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 147815.125,
+      "usage_complete_jobs": 5,
+      "total_requests": 318,
+      "valid_proposals": 156,
+      "proposal_slots": 157,
+      "proposal_validity_rate": 0.9936305732484076,
+      "truncated_model_responses": 0,
+      "new_direction_candidates": 104,
+      "competitive_new_direction_candidates": 80,
+      "branch_entries_created": 83,
+      "pool_evictions": 47,
+      "protection_grants_awarded": 106,
+      "protected_slots_scheduled": 99,
+      "multi_branch_protection_slots": 44,
+      "protected_slots_with_complete_output": 99,
+      "protected_slots_with_valid_program": 98,
+      "protected_slots_on_lagging_parent": 82,
+      "protected_local_improvements": 44,
+      "protected_global_improvements": 10,
+      "adaptive_units": 0
+    },
+    "AD_P": {
+      "planned_jobs": 8,
+      "completed_searches": 2,
+      "tested_jobs": 0,
+      "status_counts": {
+        "infrastructure_incomplete": 1,
+        "not_started": 5,
+        "search_complete_test_not_run": 2
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 74412.0,
+      "usage_complete_jobs": 3,
+      "total_requests": 180,
+      "valid_proposals": 89,
+      "proposal_slots": 89,
+      "proposal_validity_rate": 1.0,
+      "truncated_model_responses": 0,
+      "new_direction_candidates": 58,
+      "competitive_new_direction_candidates": 43,
+      "branch_entries_created": 46,
+      "pool_evictions": 28,
+      "protection_grants_awarded": 48,
+      "protected_slots_scheduled": 45,
+      "multi_branch_protection_slots": 21,
+      "protected_slots_with_complete_output": 45,
+      "protected_slots_with_valid_program": 45,
+      "protected_slots_on_lagging_parent": 36,
+      "protected_local_improvements": 14,
+      "protected_global_improvements": 4,
+      "adaptive_units": 21
+    }
+  },
+  "contrasts": {
+    "FB_P_minus_FB_U": {
+      "definition": "100 * (FB_P test gap - FB_U test gap); negative favors FB_P",
+      "pairs": [],
+      "paired_difference_pp": {
+        "lower": null,
+        "upper": null,
+        "mean": null,
+        "n_blocks": 0
+      },
+      "mean_token_increase_fraction": null,
+      "primary_contrast": true,
+      "screening_signal_met": false,
+      "wins_left": 0,
+      "ties": 0,
+      "losses_left": 0
+    },
+    "TS_P_minus_FB_P": {
+      "definition": "100 * (TS_P test gap - FB_P test gap); negative favors TS_P",
+      "pairs": [],
+      "paired_difference_pp": {
+        "lower": null,
+        "upper": null,
+        "mean": null,
+        "n_blocks": 0
+      },
+      "mean_token_increase_fraction": null,
+      "primary_contrast": true,
+      "screening_signal_met": false,
+      "wins_left": 0,
+      "ties": 0,
+      "losses_left": 0
+    },
+    "AD_P_minus_FB_P": {
+      "definition": "100 * (AD_P test gap - FB_P test gap); negative favors AD_P",
+      "pairs": [],
+      "paired_difference_pp": {
+        "lower": null,
+        "upper": null,
+        "mean": null,
+        "n_blocks": 0
+      },
+      "mean_token_increase_fraction": null,
+      "primary_contrast": true,
+      "screening_signal_met": false,
+      "wins_left": 0,
+      "ties": 0,
+      "losses_left": 0
+    },
+    "SP_minus_FB_P": {
+      "definition": "100 * (SP test gap - FB_P test gap); negative favors SP",
+      "pairs": [],
+      "paired_difference_pp": {
+        "lower": null,
+        "upper": null,
+        "mean": null,
+        "n_blocks": 0
+      },
+      "mean_token_increase_fraction": null,
+      "primary_contrast": false,
+      "screening_signal_met": false,
+      "wins_left": 0,
+      "ties": 0,
+      "losses_left": 0
+    },
+    "WR_minus_FB_P": {
+      "definition": "100 * (WR test gap - FB_P test gap); negative favors WR",
+      "pairs": [],
+      "paired_difference_pp": {
+        "lower": null,
+        "upper": null,
+        "mean": null,
+        "n_blocks": 0
+      },
+      "mean_token_increase_fraction": null,
+      "primary_contrast": false,
+      "screening_signal_met": false,
+      "wins_left": 0,
+      "ties": 0,
+      "losses_left": 0
+    }
+  },
+  "block_results": [
+    {
+      "block": 24,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 211267,
+          "valid_proposals": 31
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "infrastructure_incomplete",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 21
+        },
+        "AD_P": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 208572,
+          "valid_proposals": 32
+        }
+      }
+    },
+    {
+      "block": 25,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 211755,
+          "valid_proposals": 32
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "infrastructure_incomplete",
+          "test_gap": null,
+          "tokens": 146121,
+          "valid_proposals": 19
+        },
+        "AD_P": {
+          "status": "infrastructure_incomplete",
+          "test_gap": null,
+          "tokens": 168515,
+          "valid_proposals": 25
+        }
+      }
+    },
+    {
+      "block": 26,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 225475,
+          "valid_proposals": 31
+        },
+        "FB_P": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 228651,
+          "valid_proposals": 32
+        },
+        "TS_P": {
+          "status": "infrastructure_incomplete",
+          "test_gap": null,
+          "tokens": 143236,
+          "valid_proposals": 21
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    },
+    {
+      "block": 27,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 221404,
+          "valid_proposals": 32
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    },
+    {
+      "block": 28,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 254062,
+          "valid_proposals": 32
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    },
+    {
+      "block": 29,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 215602,
+          "valid_proposals": 31
+        },
+        "FB_P": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 237935,
+          "valid_proposals": 32
+        },
+        "TS_P": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 253655,
+          "valid_proposals": 32
+        },
+        "AD_P": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 218209,
+          "valid_proposals": 32
+        }
+      }
+    },
+    {
+      "block": 30,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 235791,
+          "valid_proposals": 32
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 238191,
+          "valid_proposals": 31
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    },
+    {
+      "block": 31,
+      "arms": {
+        "SP": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 233173,
+          "valid_proposals": 32
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    }
+  ],
+  "interpretation_limits": [
+    "This is a single-model TSP14 strategy screen, not a confirmatory multi-task study.",
+    "Confidence intervals resample data blocks; proposal and instance counts are not independent search replicates.",
+    "No p-values or post-hoc stopping are used. Missing jobs remain visible and are not replaced.",
+    "A prespecified screening signal requires at least 6 complete blocks, mean gain of at least 0.3 percentage points, a descriptive interval below zero, and no more than 10% mean token increase."
+  ],
+  "new_model_calls_in_analysis": 0,
+  "efficacy_analysis_eligible": false,
+  "reason": "Thread-global snapshot interference confirmed before any test evaluation"
+}

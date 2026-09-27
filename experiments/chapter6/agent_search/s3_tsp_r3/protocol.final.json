@@ -1,0 +1,162 @@
+{
+  "schema": "chapter6-s3-tsp-strategy-study-v3",
+  "study_id": "s3-tsp-minimax-strategy-screen-20260927-r3",
+  "status": "FINAL_PROTOCOL_PENDING_EXECUTION",
+  "models": [
+    [
+      "minimax-cn-coding-plan",
+      "MiniMax-M3"
+    ]
+  ],
+  "provider_endpoint": "https://api.minimaxi.com/v1",
+  "provider_model_version": "catalog alias; immutable service snapshot unknown",
+  "task": "tsp",
+  "profile": "chapter6-v12-tsp14-v1",
+  "blocks": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "search_seeds": [
+    0
+  ],
+  "arms": [
+    {
+      "arm_id": "SP",
+      "policy": "SP",
+      "protection": false,
+      "role": "single_path_baseline"
+    },
+    {
+      "arm_id": "WR",
+      "policy": "WR",
+      "protection": false,
+      "role": "wide_restart_baseline"
+    },
+    {
+      "arm_id": "FB_U",
+      "policy": "FB",
+      "protection": false,
+      "role": "fixed_balance_unprotected"
+    },
+    {
+      "arm_id": "FB_P",
+      "policy": "FB",
+      "protection": true,
+      "role": "fixed_balance_protected"
+    },
+    {
+      "arm_id": "TS_P",
+      "policy": "TS",
+      "protection": true,
+      "role": "time_scheduled_protected"
+    },
+    {
+      "arm_id": "AD_P",
+      "policy": "AD",
+      "protection": true,
+      "role": "feedback_adaptive_protected"
+    }
+  ],
+  "steps": 32,
+  "temperature": 0.7,
+  "planner_max_tokens": 16384,
+  "coder_max_tokens": 8192,
+  "timeout_seconds": 180,
+  "request_limit_per_job": 64,
+  "token_budget_per_job": 300000,
+  "wall_limit_seconds_per_job": 3600,
+  "execution": {
+    "dispatch": "independent_process_jobs",
+    "max_concurrency": 6,
+    "job_order": "manifest order is retained for audit; completion order is not a treatment factor",
+    "retry_policy": "none",
+    "failure_isolation": "Provider or indeterminate transport failure terminates only its job; malformed/truncated candidate output spends its slot and search continues.",
+    "data_isolation": "Snapshot passed explicitly to pure evaluator; no process-global monkeypatch; separate OS processes."
+  },
+  "order_seed": 9273101,
+  "capacity": 6,
+  "pool_capacity_rule": "When full, evict the worst validation-loss entry with zero outstanding protection slots; preserve its lineage ledger. If every entry has outstanding protected slots, reject the new entry.",
+  "initial_grant": 2,
+  "maximum_direction_attempts": 8,
+  "quality_tolerance": 0.035,
+  "gain_epsilon": 0.0001,
+  "behavior_radius": 0.08,
+  "adaptive_unit_steps": 2,
+  "direction_identity": "Online nearest-linked assignment at fixed probe distance <= 0.08, with stable IDs and no connected-component merge; tags/AST are diagnostics. New mutation directions inherit the parent direction lineage; rejoining an existing direction uses its existing ledger. The cap applies to B-allocated slots, not unlimited incumbent exploitation outside B.",
+  "protection_semantics": "Both protected and unprotected multi-direction arms receive identical B admission and eligibility grants (2 at a time, 8 per lineage). U uses B on ordinary development slots and may evict entries. P guarantees prompt execution by forcing FIFO B slots and excluding entries with outstanding protected slots from eviction. Invalid proposals spend a slot. No repair/replacement calls. Unredeemable end-of-budget grants are reported separately.",
+  "ordinary_scheduling": {
+    "SP": "always develop the current validation incumbent; no branch protection",
+    "WR": "always explore with no parent; no branch protection",
+    "FB": "Bernoulli 0.5 explore/develop; development selects oldest eligible B entry, else validation incumbent. Both FB_U and FB_P use this identical routine; P additionally forces outstanding protected slots before ordinary scheduling.",
+    "TS": "development probability rises linearly from 0.15 to 0.85 over the 32 proposal slots",
+    "AD": "select two-proposal units; the first explore and develop units occur in RNG-randomized order; then adapt from global validation-best loss reduction per 1000 actual model tokens using the preregistered normalized difference rule; keep probability in [0.25, 0.75]"
+  },
+  "adaptive_feedback": {
+    "unit_size": 2,
+    "initial_order": "randomized; one explore unit and one develop unit",
+    "reward": "Sum of the positive pre/post global-best validation reductions caused by the two ordinary proposals, divided by their combined actual tokens/1000. Intervening forced protection rewards and costs are excluded. This is a direct-reward heuristic; delayed exploration value is not estimated.",
+    "estimate": "arithmetic mean over all completed units of the same action",
+    "probability_rule": "0.5 + 0.25 * clip((mean_develop - mean_explore) / (0.001 + abs(mean_develop) + abs(mean_explore)), -1, 1)",
+    "missing_usage": "Units with unknown actual token usage are omitted from action means; if either action mean is unavailable, p_develop=0.5",
+    "protected_slots": "Forced protection slots do not increment unit length, unit tokens, or unit reward; they remain part of the job budget and are reported separately",
+    "unit_accounting": "A unit contains two ordinary proposals, even if protected slots occur between them"
+  },
+  "comparison_semantics": {
+    "FB_U": "Fully active unprotected B, same eligibility grants, FIFO branch selection, and ordinary routing as FB_P; only priority guarantee and eviction protection differ.",
+    "FB_P_minus_FB_U": "Combined scheduling and eviction protection versus ordinary use of the SAME branch pool; not a separate decomposition of priority and eviction protection.",
+    "prompt_visibility": "The model receives action, parent and reference program facts needed for generation; controller-private probabilities, pool scores, and arm identifiers are retained in audit files and omitted from model prompts."
+  },
+  "primary_endpoints": [
+    "Validation-selected single-program test gap (lower is better)",
+    "Paired block-level test-gap difference for FB_P minus FB_U",
+    "Paired block-level test-gap differences for TS_P and AD_P versus FB_P"
+  ],
+  "secondary_endpoints": [
+    "Test-gap improvement versus the best shared hand-written seed",
+    "Tokens, requests, wall time, proposal validity and truncation rate",
+    "New competitive direction admission, protected-slot scheduling, valid protected evaluations, lagging-parent use and protected local/global improvement"
+  ],
+  "practical_thresholds": {
+    "minimum_practical_gain_percentage_points": 0.3,
+    "maximum_acceptable_token_increase_fraction": 0.1,
+    "interpretation": "Decision thresholds are descriptive screening criteria, not a guarantee of confirmatory power."
+  },
+  "statistics": {
+    "independent_unit": "data block",
+    "paired_blocking": "Each arm uses the same generated block and outer random seed; one run per arm per block.",
+    "bootstrap_unit": "whole data block",
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 9273102,
+    "interval": "95% percentile block-bootstrap descriptive interval",
+    "confirmatory_p_values": false,
+    "missing_jobs": "All 48 jobs retained. Terminal budget/provider failures with frozen partial output included in primary available-output quality, with failure status and known/unknown cost reported; completion-only contrast is secondary. No-output failures remain missing. No retries/replacements."
+  },
+  "failure_policy": "Each request is dispatched once. Parse, truncation and invalid-program outcomes consume the proposal slot and actual budget. Indeterminate/provider errors stop that job with no automatic retry. Jobs run independently with bounded parallelism; a failed job does not cancel or replace another job. Test opens only after all planned jobs are terminal.",
+  "audit_corrections": [
+    "The adaptive-unit accounting excludes forced protected slots from proposal count, tokens, and reward.",
+    "Lagging-parent status is captured before the protected representative can be updated by the observed candidate.",
+    "Controller-private scheduling evidence is not sent to the model.",
+    "The preceding r1 execution was halted before test access after these mismatches were found; its three completed searches remain an audit-only archive.",
+    "r2 thread-global evaluator interference was confirmed before test evaluation. r2 is excluded from efficacy analysis. r3 uses blocks 32-39 and explicit input evaluation in isolated processes.",
+    "The B pool is active in both FB_U and FB_P. The contrast changes minimum-opportunity scheduling and eviction protection, not access to branches.",
+    "The direct ordinary AD feedback unit is checked using an interrupted two-proposal synthetic history with intervening protected improvements."
+  ],
+  "claims": "Single-model fixed-budget strategy screening on TSP14. This experiment can estimate whether protected direction development or adaptive scheduling adds value over fixed balance in this task profile. It cannot establish cross-model, cross-task or universal superiority; a later independent confirmatory study is required.",
+  "source_output_basis": "Use the S1-validated MiniMax M3 caps: planner 16384, coder 8192, temperature 0.7. S1 observed 378/384 valid proposals at these caps; S2's 4000/2400 caps had 78/192 truncated proposals in P1b. New S3 still records its own output outcomes.",
+  "new_model_calls_before_freeze": 0,
+  "readout_policy": "Freeze the best validated candidate from completed proposals on every terminal run, including budget exhaustion and provider interruption; evaluate this available-output fallback after all jobs terminate. Show completion-only contrasts as secondary, never silently drop failures. A job with no frozen output stays explicitly missing.",
+  "screening_rule": {
+    "minimum_paired_blocks": 6,
+    "mean_delta_pp_at_most": -0.3,
+    "descriptive_interval_upper_below": 0,
+    "mean_paired_token_increase_at_most": 0.1,
+    "requires_observed_complete_cost_for_each_tested_pair": true,
+    "not_confirmatory": true
+  }
+}

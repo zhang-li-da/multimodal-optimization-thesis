@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-27T08:33:31.656241+00:00",
+  "suite": "experiments/chapter6/agent_search",
+  "tests_passed": 85,
+  "new_model_calls": 0,
+  "checks": [
+    "Explicit-input evaluator versus sequential legacy evaluation",
+    "Repeated concurrent evaluation across distinct blocks",
+    "Independent process evaluation versus serial evaluation",
+    "Identical B grants and ordinary parent selection in U/P arms",
+    "Interrupted adaptive-unit direct reward and cost",
+    "Prompt invariance to controller-private evidence",
+    "Available-output freezing on provider interruption and budget stop"
+  ],
+  "r3_live_calls_before_freeze": 0
+}
