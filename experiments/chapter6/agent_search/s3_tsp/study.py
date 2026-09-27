@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import copy
 import hashlib
 import json
@@ -20,13 +21,13 @@ from .runner import BudgetStop, run_search
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
-PROTOCOL = HERE / "protocol.final.json"
+PROTOCOL = HERE / "protocol.r2.final.json"
 TERMINAL = {"search_complete_test_not_run", "infrastructure_incomplete", "budget_exhausted"}
 
 
 def tooling_source():
     names = ["__init__.py", "controller.py", "runner.py", "study.py", "analyze.py",
-             "audit_p1b.py", "test_s3.py", "protocol.final.json"]
+             "audit_p1b.py", "test_s3.py", "protocol.r2.final.json"]
     files = {f"experiments/chapter6/agent_search/s3_tsp/{name}": hashlib.sha256(
         (HERE / name).read_bytes().replace(b"\r\n", b"\n")).hexdigest() for name in names}
     return {"format": "s3-tsp-source-files-lf-sha256-v1", "files": files,
@@ -196,8 +197,7 @@ def search_all(study, preflight_dir):
         raise ValueError("MiniMax M3 preflight did not pass")
     study = Path(study).resolve()
     (study / "dispatch").mkdir(parents=True, exist_ok=True)
-    consecutive = 0
-    for job in manifest["jobs"]:
+    def run_one(job):
         status_path = study / "runs" / job["job_id"] / "status.json"
         if status_path.exists() and read_json(status_path).get("status") in TERMINAL:
             status = read_json(status_path)
@@ -227,12 +227,14 @@ def search_all(study, preflight_dir):
                               "status": status["status"], "utc": utcnow()}), flush=True)
         save_json(study / "dispatch" / f"{job['job_id']}.json",
                   {"job_id": job["job_id"], "status": status["status"], "utc": utcnow()})
-        consecutive = consecutive + 1 if status["status"] == "infrastructure_incomplete" else 0
-        if consecutive >= 2:
-            save_json(study / "dispatch" / "halt.json",
-                      {"reason": "two_consecutive_infrastructure_failures",
-                       "after_job": job["job_id"], "utc": utcnow()}, immutable=True)
-            break
+        return status
+
+    workers = int(manifest["protocol"].get("execution", {}).get("max_concurrency", 1))
+    workers = max(1, min(workers, len(manifest["jobs"])))
+    with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="s3-job") as pool:
+        futures = [pool.submit(run_one, job) for job in manifest["jobs"]]
+        for future in as_completed(futures):
+            future.result()
 
 
 def test_all(study):

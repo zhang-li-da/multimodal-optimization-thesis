@@ -277,7 +277,11 @@ class SearchState:
         self.adaptive_unit = {
             "unit_id": unit_id, "action": action, "steps_used": 0,
             "start_step": step, "best_before": self.best["evaluation"]["loss"],
-            "tokens_before": self.cumulative_tokens, "selection_draw": draw,
+            "tokens_before": self.cumulative_tokens,
+            "ordinary_tokens": 0,
+            "ordinary_usage_complete": True,
+            "ordinary_global_improvement": 0.0,
+            "selection_draw": draw,
         }
         return self.adaptive_unit
 
@@ -377,6 +381,12 @@ class SearchState:
         branch = self.pool.get(branch_id) if branch_id is not None else None
         if branch_id is not None and (branch is None or branch["protection_remaining"] <= 0):
             raise ValueError("Selected protected branch has no remaining grant")
+        global_before = self.best["evaluation"]["loss"] if self.best else None
+        protected_parent_loss_before = branch["loss"] if branch is not None else None
+        protected_parent_was_behind_global = bool(
+            branch is not None and global_before is not None
+            and protected_parent_loss_before > global_before + self.gain_epsilon
+        )
         if branch is not None:
             branch["remaining"] -= 1
             branch["protection_remaining"] -= 1
@@ -388,7 +398,6 @@ class SearchState:
         known = self._known(node) if valid else False
         parent_gain = self._parent_gain(node)
         local_improvement = bool(valid and parent_gain is not None and parent_gain > self.gain_epsilon)
-        global_before = self.best["evaluation"]["loss"] if self.best else None
         global_improvement = bool(valid and (global_before is None or ev["loss"] < global_before - self.gain_epsilon))
         competitive = self._competitive(node)
         old_direction, distance = self._direction_match(node) if valid else (None, None)
@@ -449,9 +458,10 @@ class SearchState:
             "scheduled_direction_id": pending["allocation"]["direction_id"],
             "scheduled_lineage_id": pending["allocation"]["lineage_id"],
             "protected_development": bool(pending["allocation"]["protected"]),
-            "protected_parent_was_behind_global": bool(
-                branch is not None and global_before is not None and
-                branch["loss"] > global_before + self.gain_epsilon),
+            "protected_parent_loss_before": protected_parent_loss_before,
+            "protected_parent_was_behind_global": protected_parent_was_behind_global,
+            "global_best_loss_before": global_before,
+            "global_best_loss_after": self.best["evaluation"]["loss"] if self.best else None,
             "branch_entry_created": admission["entry_created"],
             "pool_evicted_direction_id": admission["evicted_direction_id"],
             "protection_grant_awarded": admission["grant_awarded"],
@@ -473,19 +483,34 @@ class SearchState:
             return
         if self.adaptive_unit is None or self.adaptive_unit["unit_id"] != decision["adaptive_unit_id"]:
             raise ValueError("Adaptive unit history is inconsistent")
+        # Protected slots are forced branch-development opportunities.  They
+        # remain part of the global budget, but cannot change the length or
+        # reward of an adaptive ordinary-action unit.
+        if decision["allocation"].get("protected"):
+            return
         self.adaptive_unit["steps_used"] += 1
+        tokens_added = event.get("costs", {}).get("tokens_added")
+        if type(tokens_added) is int and tokens_added >= 0:
+            self.adaptive_unit["ordinary_tokens"] += tokens_added
+        else:
+            self.adaptive_unit["ordinary_usage_complete"] = False
+        before = event.get("global_best_loss_before")
+        after = event.get("global_best_loss_after")
+        if isinstance(before, (int, float)) and isinstance(after, (int, float)):
+            self.adaptive_unit["ordinary_global_improvement"] += max(0.0, before - after)
         if self.adaptive_unit["steps_used"] < self.adaptive_unit_steps:
             return
         unit = self.adaptive_unit
-        tokens = (self.cumulative_tokens - unit["tokens_before"]
-                  if self.cumulative_tokens_complete else None)
-        improvement = max(0.0, unit["best_before"] - self.best["evaluation"]["loss"])
+        tokens = unit["ordinary_tokens"] if unit["ordinary_usage_complete"] else None
+        improvement = unit["ordinary_global_improvement"]
         reward = improvement / (tokens / 1000.0) if tokens else None
         completed = {
             "unit_id": unit["unit_id"], "action": unit["action"],
             "start_step": unit["start_step"], "end_step": decision["step"],
             "proposal_slots": unit["steps_used"], "global_best_improvement": improvement,
-            "tokens": tokens, "reward_per_1000_tokens": reward,
+            "tokens": tokens, "tokens_before_global": unit["tokens_before"],
+            "ordinary_usage_complete": unit["ordinary_usage_complete"],
+            "reward_per_1000_tokens": reward,
             "selection_draw": unit["selection_draw"],
         }
         self.adaptive_units.append(completed)

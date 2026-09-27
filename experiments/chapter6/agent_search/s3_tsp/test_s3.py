@@ -188,6 +188,16 @@ def test_ad_uses_equal_length_global_gain_per_token_units():
     assert .25 <= decision["evidence"]["p_develop"] <= .75
 
 
+def test_adaptive_units_exclude_forced_protection_slots():
+    state = SearchState("AD", 0, steps=8, protection=True, grant=2)
+    state.initialize(_seeds())
+    _candidate(state, 0, loss=.120, mode=3)
+    _candidate(state, 1, loss=.115, mode=3)
+    assert not state.adaptive_units
+    assert state.adaptive_unit["steps_used"] == 1
+    assert state.adaptive_unit["ordinary_tokens"] == 1000
+
+
 def test_replay_preserves_decisions_events_and_cost_accounting():
     state = SearchState("AD", 9, steps=4, protection=False)
     seeds = _seeds()

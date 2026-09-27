@@ -80,11 +80,18 @@ def _brief_selection(selection):
                 "trajectory_values": value.get("trajectory_values", []),
             },
         }
+    # Keep controller-private scheduling evidence out of model prompts.  The
+    # complete evidence remains in decision.json and checkpoint.json for
+    # replay, while the model sees only facts needed to write the proposal.
+    prompt_evidence = {
+        "parent_available": selection["parent"] is not None,
+        "reference_available": selection["reference"] is not None,
+    }
     return {
         "target": selection["target"], "action": selection["action"],
         "parent": prompt_node(selection["parent"]),
         "reference": prompt_node(selection["reference"]),
-        "evidence": selection["evidence"], "recent": [],
+        "evidence": prompt_evidence, "recent": [],
     }
 
 
