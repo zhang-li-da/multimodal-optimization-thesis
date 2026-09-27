@@ -24,6 +24,24 @@ from ..s3_tsp_r3.evaluator import evaluate_search
 from .service import DiagnosticDurableCalls
 
 
+class BudgetStop(RuntimeError):
+    pass
+
+
+def _check_budget(calls, parameters, started):
+    usage = calls.usage()
+    limit = parameters.get("request_limit")
+    if limit is not None and usage.get("call_attempts", 0) >= int(limit):
+        raise BudgetStop("request_limit")
+    token_limit = parameters.get("token_budget")
+    known = usage.get("known_tokens")
+    if token_limit is not None and known is not None and known >= int(token_limit):
+        raise BudgetStop("token_budget")
+    wall_limit = parameters.get("wall_limit_seconds")
+    if wall_limit is not None and time.perf_counter() - started >= float(wall_limit):
+        raise BudgetStop("wall_limit")
+
+
 def _brief(node: dict | None) -> dict | None:
     if node is None:
         return None
@@ -220,6 +238,7 @@ def run_continuation(job: dict, checkpoint: dict, snapshot: dict, directory: Pat
                     "tags": [selection["target"]]}
             code, failure = "", None
             try:
+                _check_budget(calls, parameters, start)
                 plan_value, failure = _parse_response(calls.complete(
                     step, "planner", SYSTEM,
                     planner_prompt("tsp", {"target": selection["target"],
@@ -228,6 +247,7 @@ def run_continuation(job: dict, checkpoint: dict, snapshot: dict, directory: Pat
                                             "reference": None, "evidence": {"same_state": True}},
                                      step), parameters["planner_max_tokens"]), "planner")
                 if failure is None:
+                    _check_budget(calls, parameters, start)
                     plan.update(plan_value)
                     coded, failure = _parse_response(calls.complete(
                         step, "coder", SYSTEM,
@@ -241,6 +261,11 @@ def run_continuation(job: dict, checkpoint: dict, snapshot: dict, directory: Pat
                         if not isinstance(code, str):
                             code, failure = "", {"kind": "proposal_parse_failure", "stage": "coder",
                                                    "error_type": "missing_code"}
+            except BudgetStop as exc:
+                status = "budget_exhausted"
+                stop_details = {"reason": str(exc), "reserved_step": step,
+                                "completed_proposals": len(records), "no_automatic_retry": True}
+                break
             except (IndeterminateCall, ProviderFailure) as exc:
                 status = "infrastructure_incomplete"
                 stop_details = {"error_type": type(exc).__name__, "reserved_step": step,
