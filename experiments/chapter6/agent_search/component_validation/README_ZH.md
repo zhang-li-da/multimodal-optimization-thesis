@@ -26,7 +26,10 @@ python -m experiments.chapter6.agent_search.component_validation.study_e1 prepar
 该命令只读取归档和本地实例并写入 8 个检查点、48 个任务（192 个延续
 提案），不会调用模型，也不会读取 test。`e1_runner.py` 的 fixture 入口
 可验证三种延续的父代合同；真实搜索必须在独立冻结 manifest 和完整
-planner/coder 服务验收后另行启动。离线准备本身不构成 E1 结果。
+planner/coder 服务验收后另行启动。冻结并完成所有延续任务后，使用
+`study_e1 test-all --study <frozen-study>` 才会读取独立 test 快照；该步骤
+只评价已冻结的 validation 选择，不会调用模型。离线准备本身不构成 E1
+结果。
 
 两个 E2 失败批次的原始请求、状态、部分响应、成本和 manifest 均保留；分析报告明确把提供方失败与方法效果分开。当前没有可支持 P-S/P-E 质量效应的真实 test 数值。
 
