@@ -214,7 +214,8 @@ def search_all(study, preflight_dir):
     study = Path(study).resolve(); (study / "dispatch").mkdir(parents=True, exist_ok=True)
     if (study / "dispatch" / "halt.json").exists():
         raise ValueError("Study explicitly halted; no restart or replacement")
-    workers = min(6, len(manifest["jobs"]))
+    workers = int(manifest["protocol"].get("execution", {}).get("max_concurrency", 6))
+    workers = max(1, min(workers, len(manifest["jobs"])))
     with ProcessPoolExecutor(max_workers=workers) as pool:
         futures = [pool.submit(run_one, job, str(study), manifest) for job in manifest["jobs"]]
         for future in as_completed(futures):
