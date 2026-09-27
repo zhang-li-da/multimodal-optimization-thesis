@@ -13,6 +13,8 @@ from pathlib import Path
 
 from chapter6_demo.v12_1.audit_r2 import offline_only
 from chapter6_demo.v12_2.common import digest, environment, file_sha, git, read_json, save_json, source_record, utcnow
+from chapter6_demo.v12_2.data import content_hash
+from chapter6_demo import benchmarks
 
 from .e1 import (DEFAULT_SOURCE_STUDY, NEW_BLOCKS, SOURCE_ARMS, SOURCE_BLOCK_FOR_NEW,
                  SOURCE_STEP, continuation_jobs, load_search_snapshot, load_test_snapshot,
@@ -31,6 +33,25 @@ def tooling_source() -> dict:
     return {"format": "e1-source-files-sha256-v1", "files": files, "sha256": digest(files)}
 
 
+def _check_new_data_overlap() -> dict:
+    """Check IDs and exact coordinate content against all earlier blocks."""
+    old_ids, old_hashes = set(), set()
+    for block in range(3, 44):
+        for split in ("probe", "validation", "test"):
+            for item in benchmarks._instances_cached("tsp", split, benchmarks.V12_TSP_PROFILE, block):
+                old_ids.add(item["id"]); old_hashes.add(content_hash(item))
+    seen_ids, seen_hashes = set(old_ids), set(old_hashes)
+    checked = 0
+    for block in NEW_BLOCKS:
+        for split in ("probe", "validation", "test"):
+            for item in benchmarks._instances_cached("tsp", split, benchmarks.V12_TSP_PROFILE, block):
+                if item["id"] in seen_ids or content_hash(item) in seen_hashes:
+                    raise ValueError(f"E1 data overlap at block {block}/{split}/{item['id']}")
+                seen_ids.add(item["id"]); seen_hashes.add(content_hash(item)); checked += 1
+    return {"old_instances_checked": len(old_ids), "new_instances": checked,
+            "id_or_exact_coordinate_collisions": 0, "geometric_equivalence_checked": False}
+
+
 def prepare(output: Path, *, source_study: Path = DEFAULT_SOURCE_STUDY) -> dict:
     """Create the eight new-block checkpoints and immutable 48-job manifest."""
     output = Path(output).resolve()
@@ -38,6 +59,7 @@ def prepare(output: Path, *, source_study: Path = DEFAULT_SOURCE_STUDY) -> dict:
         raise ValueError("Use a new E1 draft directory")
     protocol = read_json(PROTOCOL)
     output.mkdir(parents=True)
+    overlap_check = _check_new_data_overlap()
     data_records = []
     for block in NEW_BLOCKS:
         for role, snapshot in (("search", load_search_snapshot(block)),
@@ -83,6 +105,7 @@ def prepare(output: Path, *, source_study: Path = DEFAULT_SOURCE_STUDY) -> dict:
                           "source_blocks": SOURCE_BLOCK_FOR_NEW,
                           "source_arms": list(SOURCE_ARMS), "source_step": SOURCE_STEP},
         "continuation_blocks": list(NEW_BLOCKS),
+        "overlap_check": overlap_check,
         "data": data_records,
         "checkpoints": checkpoint_records,
         "jobs": jobs,
@@ -102,6 +125,8 @@ def verify(study: Path, *, frozen: bool = False) -> dict:
         raise ValueError("E1 manifest digest mismatch")
     if file_sha(ROOT / manifest["protocol_path"]) != manifest["protocol_sha256"]:
         raise ValueError("E1 protocol changed after preparation")
+    if manifest.get("source") != source_record() or manifest.get("tooling_source") != tooling_source():
+        raise ValueError("E1 source files changed; create a new study version")
     if frozen and manifest["status"] != "FROZEN_PENDING_EXECUTION":
         raise ValueError("E1 study is not frozen")
     for record in manifest["checkpoints"]:
