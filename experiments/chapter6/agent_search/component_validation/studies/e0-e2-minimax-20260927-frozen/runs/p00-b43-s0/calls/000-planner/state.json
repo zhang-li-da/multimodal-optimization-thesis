@@ -1,0 +1,6 @@
+{
+  "status": "provider_failed",
+  "request_sha256": "a87d7aa3edf4864605c67caa36456a8b2830cf25b08f6d385a1127aa26ddbed0",
+  "error_type": "ProviderFailure",
+  "usage": null
+}

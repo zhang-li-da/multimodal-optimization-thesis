@@ -1,0 +1,36 @@
+{
+  "status": "infrastructure_incomplete",
+  "completed_proposals": 0,
+  "usage": {
+    "calls": [
+      {
+        "step": 0,
+        "stage": "coder",
+        "requested_model": "MiniMax-M3",
+        "status": "provider_failed",
+        "returned_model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "usage_complete": null,
+        "seconds": null,
+        "request_id": null
+      },
+      {
+        "step": 0,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 1006,
+        "output_tokens": 11033,
+        "usage_complete": true,
+        "seconds": 56.7769281999208,
+        "request_id": "07085eca068719e028a41d6a8c9a96af"
+      }
+    ],
+    "call_attempts": 2,
+    "usage_complete": false,
+    "known_tokens": 12039,
+    "total_tokens": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "status": "infrastructure_incomplete",
+  "completed_proposals": 1,
+  "usage": {
+    "calls": [
+      {
+        "step": 0,
+        "stage": "coder",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 719,
+        "output_tokens": 725,
+        "usage_complete": true,
+        "seconds": 3.1795411999337375,
+        "request_id": "07085ed32e8e4521e9bbc2af0abdefda"
+      },
+      {
+        "step": 0,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 1002,
+        "output_tokens": 2544,
+        "usage_complete": true,
+        "seconds": 10.02942409995012,
+        "request_id": "07085ec8a01e344dfbc934c11207d14d"
+      },
+      {
+        "step": 1,
+        "stage": "coder",
+        "requested_model": "MiniMax-M3",
+        "status": "provider_failed",
+        "returned_model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "usage_complete": null,
+        "seconds": null,
+        "request_id": null
+      },
+      {
+        "step": 1,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 1075,
+        "output_tokens": 3758,
+        "usage_complete": true,
+        "seconds": 14.415344199864194,
+        "request_id": "07085ed62e477b65a57905122b021c88"
+      }
+    ],
+    "call_attempts": 4,
+    "usage_complete": false,
+    "known_tokens": 9823,
+    "total_tokens": null
+  }
+}
