@@ -1,0 +1,187 @@
+{
+  "utc": "2026-09-27T08:22:12.771427+00:00",
+  "test_evaluated": false,
+  "checks": [
+    {
+      "job": "ad_p-b24-s0",
+      "node": 0,
+      "valid_equal": true,
+      "loss_before": 0.1008083797058619,
+      "loss_reexecuted": 0.1008083797058619,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "ad_p-b24-s0",
+      "node": 1,
+      "valid_equal": true,
+      "loss_before": 0.054270559762497624,
+      "loss_reexecuted": 0.054270559762497624,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "ad_p-b24-s0",
+      "node": 2,
+      "valid_equal": true,
+      "loss_before": 0.08939370864816924,
+      "loss_reexecuted": 0.08939370864816924,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "ad_p-b24-s0",
+      "node": 3,
+      "valid_equal": true,
+      "loss_before": 0.04299691615182655,
+      "loss_reexecuted": 0.04299691615182655,
+      "behavior_equal": true,
+      "solutions_equal": true
+    },
+    {
+      "job": "ad_p-b24-s0",
+      "node": 4,
+      "valid_equal": true,
+      "loss_before": 0.037558611384674166,
+      "loss_reexecuted": 0.037558611384674166,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "sp-b31-s0",
+      "node": 0,
+      "valid_equal": true,
+      "loss_before": 0.1057100148854226,
+      "loss_reexecuted": 0.1057100148854226,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "sp-b31-s0",
+      "node": 1,
+      "valid_equal": true,
+      "loss_before": 0.07003267752339445,
+      "loss_reexecuted": 0.07003267752339445,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "sp-b31-s0",
+      "node": 2,
+      "valid_equal": true,
+      "loss_before": 0.08389170937142865,
+      "loss_reexecuted": 0.08389170937142865,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "sp-b31-s0",
+      "node": 3,
+      "valid_equal": true,
+      "loss_before": 0.07595780134176966,
+      "loss_reexecuted": 0.07595780134176966,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "sp-b31-s0",
+      "node": 4,
+      "valid_equal": true,
+      "loss_before": 0.06298985419037265,
+      "loss_reexecuted": 0.06298985419037265,
+      "behavior_equal": true,
+      "solutions_equal": true
+    },
+    {
+      "job": "wr-b27-s0",
+      "node": 0,
+      "valid_equal": true,
+      "loss_before": 0.1268788903454824,
+      "loss_reexecuted": 0.1268788903454824,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "wr-b27-s0",
+      "node": 1,
+      "valid_equal": true,
+      "loss_before": 0.07366541235909733,
+      "loss_reexecuted": 0.07366541235909733,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "wr-b27-s0",
+      "node": 2,
+      "valid_equal": true,
+      "loss_before": 0.10438469230657525,
+      "loss_reexecuted": 0.10438469230657525,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "wr-b27-s0",
+      "node": 3,
+      "valid_equal": true,
+      "loss_before": 0.1530155408084096,
+      "loss_reexecuted": 0.1530155408084096,
+      "behavior_equal": true,
+      "solutions_equal": true
+    },
+    {
+      "job": "wr-b27-s0",
+      "node": 4,
+      "valid_equal": true,
+      "loss_before": 0.06044790383319343,
+      "loss_reexecuted": 0.06044790383319343,
+      "behavior_equal": true,
+      "solutions_equal": true
+    },
+    {
+      "job": "ts_p-b28-s0",
+      "node": 0,
+      "valid_equal": true,
+      "loss_before": 0.10985056341042831,
+      "loss_reexecuted": 0.10985056341042831,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "ts_p-b28-s0",
+      "node": 1,
+      "valid_equal": true,
+      "loss_before": 0.058287608502576936,
+      "loss_reexecuted": 0.058287608502576936,
+      "behavior_equal": true,
+      "solutions_equal": true
+    },
+    {
+      "job": "ts_p-b28-s0",
+      "node": 2,
+      "valid_equal": true,
+      "loss_before": 0.08696120152219658,
+      "loss_reexecuted": 0.08696120152219658,
+      "behavior_equal": true,
+      "solutions_equal": true
+    },
+    {
+      "job": "ts_p-b28-s0",
+      "node": 3,
+      "valid_equal": true,
+      "loss_before": 0.1264571969200035,
+      "loss_reexecuted": 0.1264571969200035,
+      "behavior_equal": false,
+      "solutions_equal": true
+    },
+    {
+      "job": "ts_p-b28-s0",
+      "node": 4,
+      "valid_equal": true,
+      "loss_before": 0.04170952954191898,
+      "loss_reexecuted": 0.04170952954191898,
+      "behavior_equal": true,
+      "solutions_equal": true
+    }
+  ],
+  "new_model_calls": 0
+}

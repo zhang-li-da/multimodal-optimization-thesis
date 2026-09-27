@@ -1,0 +1,620 @@
+{
+  "study_id": "s3-tsp-minimax-strategy-screen-20260927-r1",
+  "protocol_sha256": "b4d61575ad354d4352168ad2f744dd4c5d747d5bc70b4facfb59ab815ef49f69",
+  "jobs_planned": 48,
+  "jobs_tested": 0,
+  "status_counts": {
+    "not_started": 45,
+    "search_complete_test_not_run": 3
+  },
+  "independent_unit": "data block",
+  "group": {
+    "SP": {
+      "planned_jobs": 8,
+      "completed_searches": 0,
+      "tested_jobs": 0,
+      "status_counts": {
+        "not_started": 8
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 0.0,
+      "usage_complete_jobs": 0,
+      "total_requests": 0,
+      "valid_proposals": 0,
+      "proposal_slots": 0,
+      "proposal_validity_rate": null,
+      "truncated_model_responses": 0,
+      "new_direction_candidates": 0,
+      "competitive_new_direction_candidates": 0,
+      "branch_entries_created": 0,
+      "pool_evictions": 0,
+      "protection_grants_awarded": 0,
+      "protected_slots_scheduled": 0,
+      "multi_branch_protection_slots": 0,
+      "protected_slots_with_complete_output": 0,
+      "protected_slots_with_valid_program": 0,
+      "protected_slots_on_lagging_parent": 0,
+      "protected_local_improvements": 0,
+      "protected_global_improvements": 0,
+      "adaptive_units": 0
+    },
+    "WR": {
+      "planned_jobs": 8,
+      "completed_searches": 2,
+      "tested_jobs": 0,
+      "status_counts": {
+        "not_started": 6,
+        "search_complete_test_not_run": 2
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 56474.375,
+      "usage_complete_jobs": 2,
+      "total_requests": 128,
+      "valid_proposals": 64,
+      "proposal_slots": 64,
+      "proposal_validity_rate": 1.0,
+      "truncated_model_responses": 0,
+      "new_direction_candidates": 54,
+      "competitive_new_direction_candidates": 17,
+      "branch_entries_created": 0,
+      "pool_evictions": 0,
+      "protection_grants_awarded": 0,
+      "protected_slots_scheduled": 0,
+      "multi_branch_protection_slots": 0,
+      "protected_slots_with_complete_output": 0,
+      "protected_slots_with_valid_program": 0,
+      "protected_slots_on_lagging_parent": 0,
+      "protected_local_improvements": 0,
+      "protected_global_improvements": 0,
+      "adaptive_units": 0
+    },
+    "FB_U": {
+      "planned_jobs": 8,
+      "completed_searches": 0,
+      "tested_jobs": 0,
+      "status_counts": {
+        "not_started": 8
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 0.0,
+      "usage_complete_jobs": 0,
+      "total_requests": 0,
+      "valid_proposals": 0,
+      "proposal_slots": 0,
+      "proposal_validity_rate": null,
+      "truncated_model_responses": 0,
+      "new_direction_candidates": 0,
+      "competitive_new_direction_candidates": 0,
+      "branch_entries_created": 0,
+      "pool_evictions": 0,
+      "protection_grants_awarded": 0,
+      "protected_slots_scheduled": 0,
+      "multi_branch_protection_slots": 0,
+      "protected_slots_with_complete_output": 0,
+      "protected_slots_with_valid_program": 0,
+      "protected_slots_on_lagging_parent": 0,
+      "protected_local_improvements": 0,
+      "protected_global_improvements": 0,
+      "adaptive_units": 0
+    },
+    "FB_P": {
+      "planned_jobs": 8,
+      "completed_searches": 0,
+      "tested_jobs": 0,
+      "status_counts": {
+        "not_started": 8
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 0.0,
+      "usage_complete_jobs": 0,
+      "total_requests": 0,
+      "valid_proposals": 0,
+      "proposal_slots": 0,
+      "proposal_validity_rate": null,
+      "truncated_model_responses": 0,
+      "new_direction_candidates": 0,
+      "competitive_new_direction_candidates": 0,
+      "branch_entries_created": 0,
+      "pool_evictions": 0,
+      "protection_grants_awarded": 0,
+      "protected_slots_scheduled": 0,
+      "multi_branch_protection_slots": 0,
+      "protected_slots_with_complete_output": 0,
+      "protected_slots_with_valid_program": 0,
+      "protected_slots_on_lagging_parent": 0,
+      "protected_local_improvements": 0,
+      "protected_global_improvements": 0,
+      "adaptive_units": 0
+    },
+    "TS_P": {
+      "planned_jobs": 8,
+      "completed_searches": 1,
+      "tested_jobs": 0,
+      "status_counts": {
+        "not_started": 7,
+        "search_complete_test_not_run": 1
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 29693.125,
+      "usage_complete_jobs": 1,
+      "total_requests": 64,
+      "valid_proposals": 31,
+      "proposal_slots": 32,
+      "proposal_validity_rate": 0.96875,
+      "truncated_model_responses": 0,
+      "new_direction_candidates": 13,
+      "competitive_new_direction_candidates": 9,
+      "branch_entries_created": 10,
+      "pool_evictions": 4,
+      "protection_grants_awarded": 20,
+      "protected_slots_scheduled": 20,
+      "multi_branch_protection_slots": 4,
+      "protected_slots_with_complete_output": 20,
+      "protected_slots_with_valid_program": 19,
+      "protected_slots_on_lagging_parent": 18,
+      "protected_local_improvements": 10,
+      "protected_global_improvements": 0,
+      "adaptive_units": 0
+    },
+    "AD_P": {
+      "planned_jobs": 8,
+      "completed_searches": 0,
+      "tested_jobs": 0,
+      "status_counts": {
+        "not_started": 8
+      },
+      "mean_test_gap": null,
+      "median_test_gap": null,
+      "mean_improvement_vs_shared_seed_pp": null,
+      "mean_tokens": 0.0,
+      "usage_complete_jobs": 0,
+      "total_requests": 0,
+      "valid_proposals": 0,
+      "proposal_slots": 0,
+      "proposal_validity_rate": null,
+      "truncated_model_responses": 0,
+      "new_direction_candidates": 0,
+      "competitive_new_direction_candidates": 0,
+      "branch_entries_created": 0,
+      "pool_evictions": 0,
+      "protection_grants_awarded": 0,
+      "protected_slots_scheduled": 0,
+      "multi_branch_protection_slots": 0,
+      "protected_slots_with_complete_output": 0,
+      "protected_slots_with_valid_program": 0,
+      "protected_slots_on_lagging_parent": 0,
+      "protected_local_improvements": 0,
+      "protected_global_improvements": 0,
+      "adaptive_units": 0
+    }
+  },
+  "contrasts": {
+    "FB_P_minus_FB_U": {
+      "definition": "100 * (FB_P test gap - FB_U test gap); negative favors FB_P",
+      "pairs": [],
+      "paired_difference_pp": {
+        "lower": null,
+        "upper": null,
+        "mean": null,
+        "n_blocks": 0
+      },
+      "mean_token_increase_fraction": null,
+      "primary_contrast": true,
+      "screening_signal_met": false,
+      "wins_left": 0,
+      "ties": 0,
+      "losses_left": 0
+    },
+    "TS_P_minus_FB_P": {
+      "definition": "100 * (TS_P test gap - FB_P test gap); negative favors TS_P",
+      "pairs": [],
+      "paired_difference_pp": {
+        "lower": null,
+        "upper": null,
+        "mean": null,
+        "n_blocks": 0
+      },
+      "mean_token_increase_fraction": null,
+      "primary_contrast": true,
+      "screening_signal_met": false,
+      "wins_left": 0,
+      "ties": 0,
+      "losses_left": 0
+    },
+    "AD_P_minus_FB_P": {
+      "definition": "100 * (AD_P test gap - FB_P test gap); negative favors AD_P",
+      "pairs": [],
+      "paired_difference_pp": {
+        "lower": null,
+        "upper": null,
+        "mean": null,
+        "n_blocks": 0
+      },
+      "mean_token_increase_fraction": null,
+      "primary_contrast": true,
+      "screening_signal_met": false,
+      "wins_left": 0,
+      "ties": 0,
+      "losses_left": 0
+    },
+    "SP_minus_FB_P": {
+      "definition": "100 * (SP test gap - FB_P test gap); negative favors SP",
+      "pairs": [],
+      "paired_difference_pp": {
+        "lower": null,
+        "upper": null,
+        "mean": null,
+        "n_blocks": 0
+      },
+      "mean_token_increase_fraction": null,
+      "primary_contrast": false,
+      "screening_signal_met": false,
+      "wins_left": 0,
+      "ties": 0,
+      "losses_left": 0
+    },
+    "WR_minus_FB_P": {
+      "definition": "100 * (WR test gap - FB_P test gap); negative favors WR",
+      "pairs": [],
+      "paired_difference_pp": {
+        "lower": null,
+        "upper": null,
+        "mean": null,
+        "n_blocks": 0
+      },
+      "mean_token_increase_fraction": null,
+      "primary_contrast": false,
+      "screening_signal_met": false,
+      "wins_left": 0,
+      "ties": 0,
+      "losses_left": 0
+    }
+  },
+  "block_results": [
+    {
+      "block": 24,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    },
+    {
+      "block": 25,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    },
+    {
+      "block": 26,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 237545,
+          "valid_proposals": 31
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    },
+    {
+      "block": 27,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 216686,
+          "valid_proposals": 32
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    },
+    {
+      "block": 28,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    },
+    {
+      "block": 29,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    },
+    {
+      "block": 30,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "search_complete_test_not_run",
+          "test_gap": null,
+          "tokens": 235109,
+          "valid_proposals": 32
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    },
+    {
+      "block": 31,
+      "arms": {
+        "SP": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "WR": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_U": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "FB_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "TS_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        },
+        "AD_P": {
+          "status": "not_started",
+          "test_gap": null,
+          "tokens": null,
+          "valid_proposals": 0
+        }
+      }
+    }
+  ],
+  "interpretation_limits": [
+    "This is a single-model TSP14 strategy screen, not a confirmatory multi-task study.",
+    "Confidence intervals resample data blocks; proposal and instance counts are not independent search replicates.",
+    "No p-values or post-hoc stopping are used. Missing jobs remain visible and are not replaced.",
+    "A prespecified screening signal requires at least 6 complete blocks, mean gain of at least 0.3 percentage points, a descriptive interval below zero, and no more than 10% mean token increase."
+  ],
+  "new_model_calls_in_analysis": 0
+}

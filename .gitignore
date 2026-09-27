@@ -40,3 +40,12 @@ experiments/chapter6/agent_search/results/*/browser-check/profile/
 experiments/chapter6/agent_search/s2_tsp/studies/*/runs/
 experiments/chapter6/agent_search/s2_tsp/studies/*/tests/
 experiments/chapter6/agent_search/s2_tsp/studies/*/dispatch/
+experiments/chapter6/agent_search/s3_tsp/studies/*/runs/
+experiments/chapter6/agent_search/s3_tsp/studies/*/tests/
+experiments/chapter6/agent_search/s3_tsp/studies/*/dispatch/
+experiments/chapter6/agent_search/s3_tsp_r3/studies/*/runs/
+experiments/chapter6/agent_search/s3_tsp_r3/studies/*/tests/
+experiments/chapter6/agent_search/s3_tsp_r3/studies/*/dispatch/
+# S3 publication uses verified per-block ZIP parts to keep downloads small.
+experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw-study.zip
+experiments/chapter6/agent_search/s3_tsp_r3/results/*/browser-check/profile/

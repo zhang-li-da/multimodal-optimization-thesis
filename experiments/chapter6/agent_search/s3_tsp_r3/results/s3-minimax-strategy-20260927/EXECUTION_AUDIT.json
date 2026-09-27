@@ -1,0 +1,2310 @@
+{
+  "utc": "2026-09-27T11:17:28.545216+00:00",
+  "study_id": "s3-tsp-minimax-strategy-screen-20260927-r3",
+  "manifest_sha256": "0cfe897a63031982b7a334cdd3bb9eefa6f06faa2779288afef10367b490c7c3",
+  "partial": false,
+  "planned_jobs": 48,
+  "audited_jobs": 48,
+  "passed_jobs": 48,
+  "failed_jobs": 0,
+  "excluded": [],
+  "test_data_opened_by_this_audit": false,
+  "new_model_calls": 0,
+  "numeric_comparison": "abs_tol=rel_tol=1e-12; exact routes, behaviors, identities and IDs",
+  "replayed_proposals": 1536,
+  "reexecuted_evaluations": 1680,
+  "rows": [
+    {
+      "audit_status": "passed",
+      "job_id": "wr-b35-s0",
+      "arm": "WR",
+      "block": 35,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 236273,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.0,
+        0.0
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 12.28751579974778,
+      "evaluation_cpu_seconds": 11.78125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ts_p-b34-s0",
+      "arm": "TS_P",
+      "block": 34,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 220982,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 9,
+        "develop": 23
+      },
+      "branch_admissions": 18,
+      "lagging_branch_admissions": 17,
+      "parentless_explore_admissions": 2,
+      "branch_slots": 16,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 16,
+      "protected_valid": 16,
+      "lagging_protected_slots": 14,
+      "lagging_protected_valid": 14,
+      "lagging_protected_local_improvements": 4,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.15,
+        0.85
+      ],
+      "known_reproductions": 1,
+      "evaluation_wall_seconds": 12.775799399940297,
+      "evaluation_cpu_seconds": 12.53125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "wr-b38-s0",
+      "arm": "WR",
+      "block": 38,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 198175,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.0,
+        0.0
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 12.38904230017215,
+      "evaluation_cpu_seconds": 11.703125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ad_p-b32-s0",
+      "arm": "AD_P",
+      "block": 32,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 263615,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 20,
+        "explore": 12
+      },
+      "branch_admissions": 10,
+      "lagging_branch_admissions": 8,
+      "parentless_explore_admissions": 4,
+      "branch_slots": 16,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 16,
+      "protected_valid": 16,
+      "lagging_protected_slots": 14,
+      "lagging_protected_valid": 14,
+      "lagging_protected_local_improvements": 2,
+      "lagging_protected_global_improvements": 1,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 8,
+      "adaptive_probability_range": [
+        0.49474821702425414,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 13.12585230031982,
+      "evaluation_cpu_seconds": 12.859375,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "sp-b39-s0",
+      "arm": "SP",
+      "block": 39,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 255932,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        1.0,
+        1.0
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 12.882783899083734,
+      "evaluation_cpu_seconds": 12.578125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ts_p-b36-s0",
+      "arm": "TS_P",
+      "block": 36,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 232627,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 4,
+        "develop": 28
+      },
+      "branch_admissions": 10,
+      "lagging_branch_admissions": 8,
+      "parentless_explore_admissions": 2,
+      "branch_slots": 18,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 18,
+      "protected_valid": 18,
+      "lagging_protected_slots": 16,
+      "lagging_protected_valid": 16,
+      "lagging_protected_local_improvements": 4,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.15,
+        0.85
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 12.781014999141917,
+      "evaluation_cpu_seconds": 12.296875,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ts_p-b37-s0",
+      "arm": "TS_P",
+      "block": 37,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 235423,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 6,
+        "develop": 26
+      },
+      "branch_admissions": 10,
+      "lagging_branch_admissions": 9,
+      "parentless_explore_admissions": 3,
+      "branch_slots": 18,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 18,
+      "protected_valid": 18,
+      "lagging_protected_slots": 14,
+      "lagging_protected_valid": 14,
+      "lagging_protected_local_improvements": 3,
+      "lagging_protected_global_improvements": 1,
+      "best_has_lagging_protected_ancestor": true,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.15,
+        0.85
+      ],
+      "known_reproductions": 3,
+      "evaluation_wall_seconds": 12.005295100156218,
+      "evaluation_cpu_seconds": 11.484375,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_p-b37-s0",
+      "arm": "FB_P",
+      "block": 37,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 228424,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 20,
+        "explore": 12
+      },
+      "branch_admissions": 14,
+      "lagging_branch_admissions": 12,
+      "parentless_explore_admissions": 2,
+      "branch_slots": 10,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 10,
+      "protected_valid": 10,
+      "lagging_protected_slots": 8,
+      "lagging_protected_valid": 8,
+      "lagging_protected_local_improvements": 1,
+      "lagging_protected_global_improvements": 1,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 2,
+      "unspent_B_eligibility": 2,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 2,
+      "evaluation_wall_seconds": 11.61467400053516,
+      "evaluation_cpu_seconds": 11.3125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ad_p-b37-s0",
+      "arm": "AD_P",
+      "block": 37,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 252519,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 22,
+        "explore": 10
+      },
+      "branch_admissions": 12,
+      "lagging_branch_admissions": 9,
+      "parentless_explore_admissions": 2,
+      "branch_slots": 16,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 16,
+      "protected_valid": 16,
+      "lagging_protected_slots": 12,
+      "lagging_protected_valid": 12,
+      "lagging_protected_local_improvements": 2,
+      "lagging_protected_global_improvements": 1,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 2,
+      "unspent_B_eligibility": 2,
+      "adaptive_units": 8,
+      "adaptive_probability_range": [
+        0.5,
+        0.5259683192131095
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.611351299565285,
+      "evaluation_cpu_seconds": 11.109375,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ts_p-b38-s0",
+      "arm": "TS_P",
+      "block": 38,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 223912,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 14,
+        "develop": 18
+      },
+      "branch_admissions": 6,
+      "lagging_branch_admissions": 6,
+      "parentless_explore_admissions": 2,
+      "branch_slots": 12,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 12,
+      "protected_valid": 12,
+      "lagging_protected_slots": 12,
+      "lagging_protected_valid": 12,
+      "lagging_protected_local_improvements": 1,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 2,
+      "unspent_B_eligibility": 2,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.15,
+        0.85
+      ],
+      "known_reproductions": 2,
+      "evaluation_wall_seconds": 11.3985933996737,
+      "evaluation_cpu_seconds": 10.875,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_p-b34-s0",
+      "arm": "FB_P",
+      "block": 34,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 215863,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 28,
+        "explore": 4
+      },
+      "branch_admissions": 19,
+      "lagging_branch_admissions": 17,
+      "parentless_explore_admissions": 2,
+      "branch_slots": 22,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 22,
+      "protected_valid": 22,
+      "lagging_protected_slots": 19,
+      "lagging_protected_valid": 19,
+      "lagging_protected_local_improvements": 4,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.712767799617723,
+      "evaluation_cpu_seconds": 11.125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_u-b33-s0",
+      "arm": "FB_U",
+      "block": 33,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 217595,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 14,
+        "develop": 18
+      },
+      "branch_admissions": 3,
+      "lagging_branch_admissions": 2,
+      "parentless_explore_admissions": 1,
+      "branch_slots": 8,
+      "ordinary_branch_slots": 8,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.298231100197881,
+      "evaluation_cpu_seconds": 10.984375,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_u-b34-s0",
+      "arm": "FB_U",
+      "block": 34,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 223410,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 19,
+        "explore": 13
+      },
+      "branch_admissions": 19,
+      "lagging_branch_admissions": 16,
+      "parentless_explore_admissions": 4,
+      "branch_slots": 13,
+      "ordinary_branch_slots": 13,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 2,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.678272599587217,
+      "evaluation_cpu_seconds": 11.34375,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_u-b37-s0",
+      "arm": "FB_U",
+      "block": 37,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 228500,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 14,
+        "explore": 18
+      },
+      "branch_admissions": 14,
+      "lagging_branch_admissions": 13,
+      "parentless_explore_admissions": 5,
+      "branch_slots": 13,
+      "ordinary_branch_slots": 13,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 4,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 6.706448200624436,
+      "evaluation_cpu_seconds": 6.40625,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_u-b32-s0",
+      "arm": "FB_U",
+      "block": 32,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 63,
+      "returned_models": {
+        "MiniMax-M3": 63
+      },
+      "finish_reasons": {
+        "stop": 62,
+        "length": 1
+      },
+      "request_attempts": 63,
+      "known_tokens": 240596,
+      "usage_complete": true,
+      "valid_generated": 31,
+      "action_counts": {
+        "develop": 14,
+        "explore": 18
+      },
+      "branch_admissions": 7,
+      "lagging_branch_admissions": 7,
+      "parentless_explore_admissions": 4,
+      "branch_slots": 12,
+      "ordinary_branch_slots": 12,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 4,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 1,
+      "evaluation_wall_seconds": 11.442476200405508,
+      "evaluation_cpu_seconds": 10.9375,
+      "instance_evaluations": 1632
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ad_p-b33-s0",
+      "arm": "AD_P",
+      "block": 33,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 215435,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 10,
+        "develop": 22
+      },
+      "branch_admissions": 9,
+      "lagging_branch_admissions": 8,
+      "parentless_explore_admissions": 3,
+      "branch_slots": 16,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 16,
+      "protected_valid": 16,
+      "lagging_protected_slots": 16,
+      "lagging_protected_valid": 16,
+      "lagging_protected_local_improvements": 4,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 8,
+      "adaptive_probability_range": [
+        0.5,
+        0.5201079510552364
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.88905130000785,
+      "evaluation_cpu_seconds": 11.421875,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ts_p-b32-s0",
+      "arm": "TS_P",
+      "block": 32,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 248629,
+      "usage_complete": true,
+      "valid_generated": 31,
+      "action_counts": {
+        "explore": 9,
+        "develop": 23
+      },
+      "branch_admissions": 12,
+      "lagging_branch_admissions": 12,
+      "parentless_explore_admissions": 2,
+      "branch_slots": 19,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 19,
+      "protected_valid": 19,
+      "lagging_protected_slots": 19,
+      "lagging_protected_valid": 19,
+      "lagging_protected_local_improvements": 7,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 1,
+      "unspent_B_eligibility": 1,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.15,
+        0.85
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 7.049251499818638,
+      "evaluation_cpu_seconds": 6.75,
+      "instance_evaluations": 1632
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ts_p-b33-s0",
+      "arm": "TS_P",
+      "block": 33,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 226471,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 10,
+        "develop": 22
+      },
+      "branch_admissions": 10,
+      "lagging_branch_admissions": 7,
+      "parentless_explore_admissions": 2,
+      "branch_slots": 10,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 10,
+      "protected_valid": 10,
+      "lagging_protected_slots": 6,
+      "lagging_protected_valid": 6,
+      "lagging_protected_local_improvements": 2,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.15,
+        0.85
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.868659599684179,
+      "evaluation_cpu_seconds": 11.1875,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "sp-b34-s0",
+      "arm": "SP",
+      "block": 34,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 207484,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        1.0,
+        1.0
+      ],
+      "known_reproductions": 9,
+      "evaluation_wall_seconds": 6.546333999605849,
+      "evaluation_cpu_seconds": 6.234375,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_u-b38-s0",
+      "arm": "FB_U",
+      "block": 38,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 213852,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 14,
+        "explore": 18
+      },
+      "branch_admissions": 14,
+      "lagging_branch_admissions": 13,
+      "parentless_explore_admissions": 6,
+      "branch_slots": 13,
+      "ordinary_branch_slots": 13,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 3,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.761473099235445,
+      "evaluation_cpu_seconds": 11.359375,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ad_p-b36-s0",
+      "arm": "AD_P",
+      "block": 36,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 208009,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 4,
+        "develop": 28
+      },
+      "branch_admissions": 17,
+      "lagging_branch_admissions": 15,
+      "parentless_explore_admissions": 3,
+      "branch_slots": 18,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 18,
+      "protected_valid": 18,
+      "lagging_protected_slots": 14,
+      "lagging_protected_valid": 14,
+      "lagging_protected_local_improvements": 6,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 2,
+      "unspent_B_eligibility": 2,
+      "adaptive_units": 7,
+      "adaptive_probability_range": [
+        0.3716260946649972,
+        0.5
+      ],
+      "known_reproductions": 1,
+      "evaluation_wall_seconds": 6.84065829962492,
+      "evaluation_cpu_seconds": 6.578125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "wr-b34-s0",
+      "arm": "WR",
+      "block": 34,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 227908,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.0,
+        0.0
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.186062699882314,
+      "evaluation_cpu_seconds": 10.796875,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ad_p-b34-s0",
+      "arm": "AD_P",
+      "block": 34,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 239071,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 28,
+        "explore": 4
+      },
+      "branch_admissions": 23,
+      "lagging_branch_admissions": 20,
+      "parentless_explore_admissions": 3,
+      "branch_slots": 24,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 24,
+      "protected_valid": 24,
+      "lagging_protected_slots": 22,
+      "lagging_protected_valid": 22,
+      "lagging_protected_local_improvements": 9,
+      "lagging_protected_global_improvements": 2,
+      "best_has_lagging_protected_ancestor": true,
+      "unspent_protected_slots": 2,
+      "unspent_B_eligibility": 2,
+      "adaptive_units": 4,
+      "adaptive_probability_range": [
+        0.5,
+        0.6160986204071028
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 12.1673668990843,
+      "evaluation_cpu_seconds": 11.421875,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_u-b36-s0",
+      "arm": "FB_U",
+      "block": 36,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 211137,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 16,
+        "develop": 16
+      },
+      "branch_admissions": 15,
+      "lagging_branch_admissions": 13,
+      "parentless_explore_admissions": 7,
+      "branch_slots": 14,
+      "ordinary_branch_slots": 14,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 4,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.473140300484374,
+      "evaluation_cpu_seconds": 11.015625,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_p-b35-s0",
+      "arm": "FB_P",
+      "block": 35,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 231478,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 22,
+        "explore": 10
+      },
+      "branch_admissions": 10,
+      "lagging_branch_admissions": 6,
+      "parentless_explore_admissions": 3,
+      "branch_slots": 14,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 14,
+      "protected_valid": 14,
+      "lagging_protected_slots": 10,
+      "lagging_protected_valid": 10,
+      "lagging_protected_local_improvements": 3,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 2,
+      "unspent_B_eligibility": 2,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.96726950071752,
+      "evaluation_cpu_seconds": 11.40625,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "sp-b36-s0",
+      "arm": "SP",
+      "block": 36,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 220900,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        1.0,
+        1.0
+      ],
+      "known_reproductions": 2,
+      "evaluation_wall_seconds": 7.1016580001451075,
+      "evaluation_cpu_seconds": 6.78125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_u-b39-s0",
+      "arm": "FB_U",
+      "block": 39,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 217464,
+      "usage_complete": true,
+      "valid_generated": 31,
+      "action_counts": {
+        "develop": 17,
+        "explore": 15
+      },
+      "branch_admissions": 18,
+      "lagging_branch_admissions": 17,
+      "parentless_explore_admissions": 9,
+      "branch_slots": 16,
+      "ordinary_branch_slots": 16,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 2,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.636635398957878,
+      "evaluation_cpu_seconds": 11.109375,
+      "instance_evaluations": 1632
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_p-b38-s0",
+      "arm": "FB_P",
+      "block": 38,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 63,
+      "returned_models": {
+        "MiniMax-M3": 63
+      },
+      "finish_reasons": {
+        "stop": 62,
+        "length": 1
+      },
+      "request_attempts": 63,
+      "known_tokens": 250642,
+      "usage_complete": true,
+      "valid_generated": 31,
+      "action_counts": {
+        "develop": 26,
+        "explore": 6
+      },
+      "branch_admissions": 18,
+      "lagging_branch_admissions": 16,
+      "parentless_explore_admissions": 2,
+      "branch_slots": 24,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 24,
+      "protected_valid": 23,
+      "lagging_protected_slots": 21,
+      "lagging_protected_valid": 20,
+      "lagging_protected_local_improvements": 11,
+      "lagging_protected_global_improvements": 2,
+      "best_has_lagging_protected_ancestor": true,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.947376900119707,
+      "evaluation_cpu_seconds": 11.546875,
+      "instance_evaluations": 1632
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "sp-b35-s0",
+      "arm": "SP",
+      "block": 35,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 226735,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        1.0,
+        1.0
+      ],
+      "known_reproductions": 2,
+      "evaluation_wall_seconds": 11.815682000014931,
+      "evaluation_cpu_seconds": 11.453125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "wr-b32-s0",
+      "arm": "WR",
+      "block": 32,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 204775,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.0,
+        0.0
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 6.63451710017398,
+      "evaluation_cpu_seconds": 6.40625,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "wr-b36-s0",
+      "arm": "WR",
+      "block": 36,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 231479,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.0,
+        0.0
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.731655498966575,
+      "evaluation_cpu_seconds": 10.953125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ts_p-b39-s0",
+      "arm": "TS_P",
+      "block": 39,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 242859,
+      "usage_complete": true,
+      "valid_generated": 31,
+      "action_counts": {
+        "explore": 4,
+        "develop": 28
+      },
+      "branch_admissions": 19,
+      "lagging_branch_admissions": 17,
+      "parentless_explore_admissions": 3,
+      "branch_slots": 27,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 27,
+      "protected_valid": 26,
+      "lagging_protected_slots": 25,
+      "lagging_protected_valid": 24,
+      "lagging_protected_local_improvements": 12,
+      "lagging_protected_global_improvements": 1,
+      "best_has_lagging_protected_ancestor": true,
+      "unspent_protected_slots": 1,
+      "unspent_B_eligibility": 1,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.15,
+        0.85
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.792904400266707,
+      "evaluation_cpu_seconds": 11.21875,
+      "instance_evaluations": 1632
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ad_p-b35-s0",
+      "arm": "AD_P",
+      "block": 35,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 242647,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 26,
+        "explore": 6
+      },
+      "branch_admissions": 19,
+      "lagging_branch_admissions": 17,
+      "parentless_explore_admissions": 4,
+      "branch_slots": 24,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 24,
+      "protected_valid": 24,
+      "lagging_protected_slots": 24,
+      "lagging_protected_valid": 24,
+      "lagging_protected_local_improvements": 15,
+      "lagging_protected_global_improvements": 3,
+      "best_has_lagging_protected_ancestor": true,
+      "unspent_protected_slots": 2,
+      "unspent_B_eligibility": 2,
+      "adaptive_units": 4,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 12.193483300041407,
+      "evaluation_cpu_seconds": 11.9375,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ad_p-b38-s0",
+      "arm": "AD_P",
+      "block": 38,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 215332,
+      "usage_complete": true,
+      "valid_generated": 31,
+      "action_counts": {
+        "develop": 24,
+        "explore": 8
+      },
+      "branch_admissions": 13,
+      "lagging_branch_admissions": 13,
+      "parentless_explore_admissions": 3,
+      "branch_slots": 22,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 22,
+      "protected_valid": 21,
+      "lagging_protected_slots": 22,
+      "lagging_protected_valid": 21,
+      "lagging_protected_local_improvements": 8,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 4,
+      "unspent_B_eligibility": 4,
+      "adaptive_units": 5,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.926978300092742,
+      "evaluation_cpu_seconds": 11.4375,
+      "instance_evaluations": 1632
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "wr-b37-s0",
+      "arm": "WR",
+      "block": 37,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 229825,
+      "usage_complete": true,
+      "valid_generated": 31,
+      "action_counts": {
+        "explore": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.0,
+        0.0
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.15471830079332,
+      "evaluation_cpu_seconds": 10.734375,
+      "instance_evaluations": 1632
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "sp-b37-s0",
+      "arm": "SP",
+      "block": 37,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 231696,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        1.0,
+        1.0
+      ],
+      "known_reproductions": 1,
+      "evaluation_wall_seconds": 11.826037698658183,
+      "evaluation_cpu_seconds": 11.234375,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_u-b35-s0",
+      "arm": "FB_U",
+      "block": 35,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 227664,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 12,
+        "explore": 20
+      },
+      "branch_admissions": 11,
+      "lagging_branch_admissions": 9,
+      "parentless_explore_admissions": 4,
+      "branch_slots": 11,
+      "ordinary_branch_slots": 11,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 6,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.725450100377202,
+      "evaluation_cpu_seconds": 11.28125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_p-b32-s0",
+      "arm": "FB_P",
+      "block": 32,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 225442,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 21,
+        "explore": 11
+      },
+      "branch_admissions": 8,
+      "lagging_branch_admissions": 6,
+      "parentless_explore_admissions": 4,
+      "branch_slots": 12,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 12,
+      "protected_valid": 12,
+      "lagging_protected_slots": 10,
+      "lagging_protected_valid": 10,
+      "lagging_protected_local_improvements": 2,
+      "lagging_protected_global_improvements": 1,
+      "best_has_lagging_protected_ancestor": true,
+      "unspent_protected_slots": 2,
+      "unspent_B_eligibility": 2,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.773329900344834,
+      "evaluation_cpu_seconds": 11.25,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_p-b39-s0",
+      "arm": "FB_P",
+      "block": 39,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 63,
+        "length": 1
+      },
+      "request_attempts": 64,
+      "known_tokens": 243881,
+      "usage_complete": true,
+      "valid_generated": 31,
+      "action_counts": {
+        "develop": 23,
+        "explore": 9
+      },
+      "branch_admissions": 11,
+      "lagging_branch_admissions": 10,
+      "parentless_explore_admissions": 6,
+      "branch_slots": 19,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 19,
+      "protected_valid": 18,
+      "lagging_protected_slots": 15,
+      "lagging_protected_valid": 14,
+      "lagging_protected_local_improvements": 11,
+      "lagging_protected_global_improvements": 2,
+      "best_has_lagging_protected_ancestor": true,
+      "unspent_protected_slots": 5,
+      "unspent_B_eligibility": 5,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 1,
+      "evaluation_wall_seconds": 6.583106700098142,
+      "evaluation_cpu_seconds": 6.484375,
+      "instance_evaluations": 1632
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_p-b36-s0",
+      "arm": "FB_P",
+      "block": 36,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 234424,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 6,
+        "develop": 26
+      },
+      "branch_admissions": 11,
+      "lagging_branch_admissions": 10,
+      "parentless_explore_admissions": 2,
+      "branch_slots": 17,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 17,
+      "protected_valid": 17,
+      "lagging_protected_slots": 15,
+      "lagging_protected_valid": 15,
+      "lagging_protected_local_improvements": 7,
+      "lagging_protected_global_improvements": 1,
+      "best_has_lagging_protected_ancestor": true,
+      "unspent_protected_slots": 1,
+      "unspent_B_eligibility": 1,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 2,
+      "evaluation_wall_seconds": 11.733988699270412,
+      "evaluation_cpu_seconds": 11.40625,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ts_p-b35-s0",
+      "arm": "TS_P",
+      "block": 35,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 240047,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 7,
+        "develop": 25
+      },
+      "branch_admissions": 13,
+      "lagging_branch_admissions": 11,
+      "parentless_explore_admissions": 1,
+      "branch_slots": 12,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 12,
+      "protected_valid": 12,
+      "lagging_protected_slots": 8,
+      "lagging_protected_valid": 8,
+      "lagging_protected_local_improvements": 3,
+      "lagging_protected_global_improvements": 1,
+      "best_has_lagging_protected_ancestor": true,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.15,
+        0.85
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 12.106505399569869,
+      "evaluation_cpu_seconds": 11.71875,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "wr-b39-s0",
+      "arm": "WR",
+      "block": 39,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 206344,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.0,
+        0.0
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.237791299587116,
+      "evaluation_cpu_seconds": 10.921875,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "wr-b33-s0",
+      "arm": "WR",
+      "block": 33,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 210390,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.0,
+        0.0
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.586166799999774,
+      "evaluation_cpu_seconds": 11.296875,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "sp-b33-s0",
+      "arm": "SP",
+      "block": 33,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 290264,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        1.0,
+        1.0
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 13.204764700029045,
+      "evaluation_cpu_seconds": 12.8125,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "sp-b32-s0",
+      "arm": "SP",
+      "block": 32,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 63,
+      "returned_models": {
+        "MiniMax-M3": 63
+      },
+      "finish_reasons": {
+        "length": 1,
+        "stop": 62
+      },
+      "request_attempts": 63,
+      "known_tokens": 250996,
+      "usage_complete": true,
+      "valid_generated": 31,
+      "action_counts": {
+        "develop": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        1.0,
+        1.0
+      ],
+      "known_reproductions": 3,
+      "evaluation_wall_seconds": 11.888922800309956,
+      "evaluation_cpu_seconds": 11.421875,
+      "instance_evaluations": 1632
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "fb_p-b33-s0",
+      "arm": "FB_P",
+      "block": 33,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 231030,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "explore": 9,
+        "develop": 23
+      },
+      "branch_admissions": 8,
+      "lagging_branch_admissions": 7,
+      "parentless_explore_admissions": 2,
+      "branch_slots": 14,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 14,
+      "protected_valid": 14,
+      "lagging_protected_slots": 12,
+      "lagging_protected_valid": 12,
+      "lagging_protected_local_improvements": 4,
+      "lagging_protected_global_improvements": 1,
+      "best_has_lagging_protected_ancestor": true,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        0.5,
+        0.5
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 12.068895499687642,
+      "evaluation_cpu_seconds": 11.671875,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "ad_p-b39-s0",
+      "arm": "AD_P",
+      "block": 39,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 247112,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 26,
+        "explore": 6
+      },
+      "branch_admissions": 18,
+      "lagging_branch_admissions": 16,
+      "parentless_explore_admissions": 3,
+      "branch_slots": 22,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 22,
+      "protected_valid": 22,
+      "lagging_protected_slots": 18,
+      "lagging_protected_valid": 18,
+      "lagging_protected_local_improvements": 10,
+      "lagging_protected_global_improvements": 1,
+      "best_has_lagging_protected_ancestor": true,
+      "unspent_protected_slots": 4,
+      "unspent_B_eligibility": 4,
+      "adaptive_units": 5,
+      "adaptive_probability_range": [
+        0.5,
+        0.596119011528295
+      ],
+      "known_reproductions": 0,
+      "evaluation_wall_seconds": 11.959484599763528,
+      "evaluation_cpu_seconds": 11.671875,
+      "instance_evaluations": 1680
+    },
+    {
+      "audit_status": "passed",
+      "job_id": "sp-b38-s0",
+      "arm": "SP",
+      "block": 38,
+      "status": "search_complete_test_not_run",
+      "checkpoint_replay": "passed",
+      "replayed_proposals": 32,
+      "program_evaluations_reexecuted": 35,
+      "fingerprint_checks": 64,
+      "returned_models": {
+        "MiniMax-M3": 64
+      },
+      "finish_reasons": {
+        "stop": 64
+      },
+      "request_attempts": 64,
+      "known_tokens": 212527,
+      "usage_complete": true,
+      "valid_generated": 32,
+      "action_counts": {
+        "develop": 32
+      },
+      "branch_admissions": 0,
+      "lagging_branch_admissions": 0,
+      "parentless_explore_admissions": 0,
+      "branch_slots": 0,
+      "ordinary_branch_slots": 0,
+      "protected_slots": 0,
+      "protected_valid": 0,
+      "lagging_protected_slots": 0,
+      "lagging_protected_valid": 0,
+      "lagging_protected_local_improvements": 0,
+      "lagging_protected_global_improvements": 0,
+      "best_has_lagging_protected_ancestor": false,
+      "unspent_protected_slots": 0,
+      "unspent_B_eligibility": 0,
+      "adaptive_units": 0,
+      "adaptive_probability_range": [
+        1.0,
+        1.0
+      ],
+      "known_reproductions": 1,
+      "evaluation_wall_seconds": 11.329855199204758,
+      "evaluation_cpu_seconds": 11.078125,
+      "instance_evaluations": 1680
+    }
+  ]
+}

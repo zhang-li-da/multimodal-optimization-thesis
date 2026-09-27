@@ -1,0 +1,62 @@
+{
+  "format": "independent ZIP files; extract all parts into the same directory",
+  "no_concatenation_required": true,
+  "members": 15710,
+  "parts": [
+    {
+      "path": "raw/block-32.zip",
+      "bytes": 8327985,
+      "sha256": "58e48178b81b8ade1a7b840350a46b2618ed0499f3a051fcf735e5bdb612c933",
+      "members": 1954
+    },
+    {
+      "path": "raw/block-33.zip",
+      "bytes": 8217343,
+      "sha256": "d841f8317d9c3c8de6aa506d94113dd7610c3b14814565fc1ec4bdae6b80d594",
+      "members": 1962
+    },
+    {
+      "path": "raw/block-34.zip",
+      "bytes": 8149220,
+      "sha256": "dcf0592f664002ab210e9797fcbdb73844dc0c16f109b81b3892caede1da583f",
+      "members": 1962
+    },
+    {
+      "path": "raw/block-35.zip",
+      "bytes": 8300917,
+      "sha256": "cf2337da2c03ce444fd41792d05a763022a319e8337e54c0dde272f15228dce9",
+      "members": 1962
+    },
+    {
+      "path": "raw/block-36.zip",
+      "bytes": 8183037,
+      "sha256": "9f815de28be6e005a6ee25bb2f5679a1fca90782cf69d598675a300f90784981",
+      "members": 1962
+    },
+    {
+      "path": "raw/block-37.zip",
+      "bytes": 8341775,
+      "sha256": "ea5b38ac11e9b2af6d18be9b5faad6785a640b2b3e7423cda37384159576fe02",
+      "members": 1962
+    },
+    {
+      "path": "raw/block-38.zip",
+      "bytes": 8060927,
+      "sha256": "a42d4b296f1039ea3a8c12242e2b77f40b3fd663667921f783336a893fe20243",
+      "members": 1958
+    },
+    {
+      "path": "raw/block-39.zip",
+      "bytes": 8305478,
+      "sha256": "e654679dba8c150a524373130d67b1aedb70cd1b41845b9934a323ab23bc4bd6",
+      "members": 1962
+    },
+    {
+      "path": "raw/common.zip",
+      "bytes": 1043408,
+      "sha256": "508c056abf58b12263e8df0ffc3ed38347d11f26efbccbbde6a1dc1d982ce59c",
+      "members": 26
+    }
+  ],
+  "new_model_calls": 0
+}

@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-09-27T11:31:11.275981+00:00",
+  "study_id": "s3-tsp-minimax-strategy-screen-20260927-r3",
+  "search_source_commit": "51e5d5ecba20c06517919dee2802b38bdf555fd5",
+  "search_freeze_commit": "62cf707dd0137317457b260e99ff47534f8d86b1",
+  "transfer_freeze_commit": "343b13ff5817906aa52f371019c119f8298f9a73",
+  "result_tag": "chapter6-s3-tsp-r3-results-20260927",
+  "branch": "experiment/chapter6-agent-search-s3-tsp-20260927",
+  "baseline_commit": "f0f18983f7c73b8d1e53db5d4a1697b058c3327c",
+  "model": "MiniMax-M3",
+  "provider": "minimax-cn-coding-plan",
+  "search_jobs_planned": 48,
+  "search_jobs_completed": 48,
+  "test_readouts": 48,
+  "proposal_slots": 1536,
+  "valid_proposals": 1527,
+  "search_requests": 3069,
+  "search_known_tokens": 11037795,
+  "replay_decisions": 1536,
+  "search_evaluations_reexecuted": 1680,
+  "test_evaluations_reexecuted": 96,
+  "transfer_program_size_readouts": 96,
+  "transfer_program_instance_executions": 2304,
+  "new_model_calls_after_search_completed": 0,
+  "python": "3.13.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.10.0",
+    "pytest": "8.3.4"
+  },
+  "claim": "Executable direction trial and protected-development mechanism; no prespecified primary superiority screen passed.",
+  "known_engineering_failures": [
+    "r1 stopped before test; control/accounting semantics",
+    "r2 invalidated before test; thread-global evaluator contamination"
+  ],
+  "results_sources": {
+    "primary": "S3_ANALYSIS.json",
+    "mechanism": "SUPPLEMENTAL_ANALYSIS.json",
+    "readout": "RUN_METRICS.csv",
+    "cost": "COST_LEDGER.json"
+  },
+  "archives": "RAW_PARTS.json",
+  "test_summary_sha256": "620649cd0098254c2c3db139942820711e43bf10dbe086f235d885f45d99c9c2"
+}

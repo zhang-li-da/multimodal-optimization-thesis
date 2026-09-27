@@ -1,0 +1,298 @@
+{
+  "status": "passed",
+  "jobs": 48,
+  "program_evaluations": 96,
+  "instance_evaluations": 5760,
+  "rows": [
+    {
+      "job_id": "wr-b35-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ts_p-b34-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "wr-b38-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ad_p-b32-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "sp-b39-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ts_p-b36-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ts_p-b37-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_p-b37-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ad_p-b37-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ts_p-b38-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_p-b34-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_u-b33-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_u-b34-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_u-b37-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_u-b32-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ad_p-b33-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ts_p-b32-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ts_p-b33-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "sp-b34-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_u-b38-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ad_p-b36-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "wr-b34-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ad_p-b34-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_u-b36-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_p-b35-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "sp-b36-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_u-b39-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_p-b38-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "sp-b35-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "wr-b32-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "wr-b36-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ts_p-b39-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ad_p-b35-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ad_p-b38-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "wr-b37-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "sp-b37-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_u-b35-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_p-b32-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_p-b39-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_p-b36-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ts_p-b35-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "wr-b39-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "wr-b33-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "sp-b33-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "sp-b32-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "fb_p-b33-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "ad_p-b39-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    },
+    {
+      "job_id": "sp-b38-s0",
+      "status": "passed",
+      "program_evaluations": 2,
+      "instance_evaluations": 120
+    }
+  ],
+  "new_model_calls": 0,
+  "numerics": "absolute and relative tolerance 1e-12; exact routes and identities"
+}
