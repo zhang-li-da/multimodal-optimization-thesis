@@ -1,0 +1,151 @@
+{
+  "created_utc": "2026-09-27T11:18:28.188197+00:00",
+  "new_model_calls": 0,
+  "studies": [
+    {
+      "study_id": "s3-tsp-minimax-strategy-screen-20260927-r1",
+      "planned_jobs": 48,
+      "status_counts": {
+        "search_complete_test_not_run": 3,
+        "not_started_or_no_terminal_status": 45
+      },
+      "completed_proposals": 96,
+      "stages": {
+        "search": {
+          "request_records": 192,
+          "state:response_persisted": 192,
+          "persisted_responses": 192,
+          "known_input_tokens": 166697,
+          "known_output_tokens": 522643,
+          "request_wall_seconds": 3152.964382999111,
+          "unknown_usage_requests": 0,
+          "returned_models": {
+            "MiniMax-M3": 192
+          },
+          "finish_reasons": {
+            "stop": 192
+          },
+          "known_tokens": 689340,
+          "usage_complete": true
+        },
+        "preflight": {
+          "request_records": 1,
+          "state:response_persisted": 1,
+          "persisted_responses": 1,
+          "known_input_tokens": 186,
+          "known_output_tokens": 25,
+          "request_wall_seconds": 1.8110579999629408,
+          "unknown_usage_requests": 0,
+          "returned_models": {
+            "MiniMax-M3": 1
+          },
+          "finish_reasons": {
+            "stop": 1
+          },
+          "known_tokens": 211,
+          "usage_complete": true
+        }
+      },
+      "dollar_cost": null,
+      "billing_note": "Coding plan actual invoice not available; tokens are observed usage, not a currency estimate."
+    },
+    {
+      "study_id": "s3-tsp-minimax-strategy-screen-20260927-r2",
+      "planned_jobs": 48,
+      "status_counts": {
+        "search_complete_test_not_run": 14,
+        "infrastructure_incomplete": 4,
+        "not_started_or_no_terminal_status": 30
+      },
+      "completed_proposals": 534,
+      "stages": {
+        "search": {
+          "request_records": 1074,
+          "state:response_persisted": 1072,
+          "persisted_responses": 1073,
+          "known_input_tokens": 1046853,
+          "known_output_tokens": 2752017,
+          "request_wall_seconds": 16739.749730201205,
+          "unknown_usage_requests": 1,
+          "state:sent_unknown": 2,
+          "requests_without_persisted_response": 1,
+          "returned_models": {
+            "MiniMax-M3": 1073
+          },
+          "finish_reasons": {
+            "stop": 1072,
+            "length": 1
+          },
+          "known_tokens": 3798870,
+          "usage_complete": false
+        },
+        "preflight": {
+          "request_records": 1,
+          "state:response_persisted": 1,
+          "persisted_responses": 1,
+          "known_input_tokens": 186,
+          "known_output_tokens": 24,
+          "request_wall_seconds": 2.382344099925831,
+          "unknown_usage_requests": 0,
+          "returned_models": {
+            "MiniMax-M3": 1
+          },
+          "finish_reasons": {
+            "stop": 1
+          },
+          "known_tokens": 210,
+          "usage_complete": true
+        }
+      },
+      "dollar_cost": null,
+      "billing_note": "Coding plan actual invoice not available; tokens are observed usage, not a currency estimate."
+    },
+    {
+      "study_id": "s3-tsp-minimax-strategy-screen-20260927-r3",
+      "planned_jobs": 48,
+      "status_counts": {
+        "search_complete_test_not_run": 48
+      },
+      "completed_proposals": 1536,
+      "stages": {
+        "search": {
+          "request_records": 3069,
+          "state:response_persisted": 3069,
+          "persisted_responses": 3069,
+          "known_input_tokens": 2912019,
+          "known_output_tokens": 8125776,
+          "request_wall_seconds": 50962.99491420016,
+          "unknown_usage_requests": 0,
+          "returned_models": {
+            "MiniMax-M3": 3069
+          },
+          "finish_reasons": {
+            "stop": 3065,
+            "length": 4
+          },
+          "known_tokens": 11037795,
+          "usage_complete": true
+        },
+        "preflight": {
+          "request_records": 1,
+          "state:response_persisted": 1,
+          "persisted_responses": 1,
+          "known_input_tokens": 186,
+          "known_output_tokens": 24,
+          "request_wall_seconds": 0.9637262998148799,
+          "unknown_usage_requests": 0,
+          "returned_models": {
+            "MiniMax-M3": 1
+          },
+          "finish_reasons": {
+            "stop": 1
+          },
+          "known_tokens": 210,
+          "usage_complete": true
+        }
+      },
+      "dollar_cost": null,
+      "billing_note": "Coding plan actual invoice not available; tokens are observed usage, not a currency estimate."
+    }
+  ]
+}

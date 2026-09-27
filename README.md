@@ -2,7 +2,31 @@
 
 本仓库汇集博士论文前五章对应文章材料、第六章 agent 原型与验证记录，以及总体技术报告，供跨设备查阅和复核。
 
-## 已完成：S0 输出校准与 S1 真实竞争验证（2026-09-26）
+## 最新完成：S3 方向试用与六组真实对照（2026-09-27）
+
+已完成 **MiniMax M3 × 六组 × 八个新区块 = 48 次真实搜索**，每次 32 提案；全部 48 次独立测试完成。1,527/1,536 个生成程序有效（99.414%）。探索方向可以获有限资格，落后父代得到 366 次保护机会、362 次有效评价；但三个主要比较均未达到冻结筛查标准。
+
+| 组 | 平均 TSP14 Test gap |
+|---|---:|
+| SP 单路径开发 | **5.0969%** |
+| WR 广泛探索 | 5.9095% |
+| FB_U 固定分配、无保障 | 5.5840% |
+| FB_P 固定分配、有保障 | 5.7748% |
+| TS_P 时间调度、有保障 | 5.3643% |
+| AD_P 反馈调度、有保障 | 5.8486% |
+
+保护 FB_P−FB_U 为 +0.1909 个百分点，AD_P−FB_P 为 +0.0738；TS_P−FB_P 为 −0.4105，但区间跨零。执行链和可复核性已建立，完整方法优势尚未成立。无需重新调用模型即可查看本轮结果和演示。
+
+- [完整技术报告、全部区块差值与缺陷](experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/TECHNICAL_REPORT_ZH.md)
+- [已实现架构、公式和前序章节文章映射](docs/chapter6/S3_ARCHITECTURE_ZH.md)、[S3 之后的开题章节修订](docs/proposal/PROPOSAL_CHAPTER6_S3.md)
+- [全部 48 次真实轨迹离线演示](experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/demo/index.html)、[下载/解压/复核与讲解脚本](experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/REPRODUCE_ZH.md)
+- [原始证据九个分包](experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/RAW_PARTS.json)、[48 次搜索完整重执行](experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/EXECUTION_AUDIT.json)、[独立测试重执行](experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/TEST_AUDIT.json)
+- [50/100 城市迁移评价：冻结程序、无新模型调用](experiments/chapter6/agent_search/studies/s3-transfer-20260927/TRANSFER_ANALYSIS.json)。参考是启发式上界，不是最优值；结果未建立稳定保护优势，不属于跨任务确认。
+- [r1/r2 工程失败说明](experiments/chapter6/agent_search/s3_tsp/results/S3_ABORTED_BATCHES_ZH.md)与[分批成本台账](experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/COST_LEDGER.json)。旧失败不混入 r3 效果统计，原始文件和历史标签保留。
+
+本轮源码标签 chapter6-s3-tsp-r3-source-20260927（51e5d5e），协议标签 chapter6-s3-tsp-r3-frozen-20260927（62cf707）；规模迁移另于 343b13f 冻结。S3 r3 使用 3,069 个搜索请求、11,037,795 token，模型搜索已经结束。结果使用独立标签，见本目录发布记录。
+
+## 历史：S0 输出校准与 S1 真实竞争验证（2026-09-26）
 
 本轮已调用本机 OpenCode 的 **MiniMax-M3 coding plan**，不是只更新文档。S0 r1 工程中止1请求；r2完成84请求但planner验收14/18不通过；另行冻结的r3完成48请求，planner/coder均18/18、端到端6/6，达到进入S1的工程门槛。两次校准不合并。
 
@@ -18,7 +42,7 @@ S1已完成**两控制器×三个新区块×两搜索种子=12次，每次32提�
 
 本批共完成 764 次 S1 模型请求（3,515,905 个已知 tokens）；FIFO 平均 Test gap 为 4.613%，组合排序为 5.017%，R−FIFO 为 +0.4039 个百分点，六个配对为 3 胜、3 负。多分支和评分差异实际出现，但该质量差异不支持组合排序优势。研究设计/历史版本中的“本次无模型调用”只指其原始提交，不描述本批真实运行。最终方法优势与博士章节收口仍待公平策略效果和机制归因证据。
 
-## 最新研究设计：智能体探索—开发协同（2026-09-26）
+## 研究设计来源：智能体探索—开发协同（2026-09-26）
 
 第六章的主体更新为**智能体在广泛外层决策空间中的方向探索、局部开发保护与反馈资源分配**；TSP、机器学习工程和数学优化是验证载体。最终可只输出一个最佳方案，算法集合部署或集成不再是章节成立的必要条件。此为待实施设计，不是新实验结果。
 
@@ -30,7 +54,7 @@ S1已完成**两控制器×三个新区块×两搜索种子=12次，每次32提�
 
 新增单路径、广泛重启、固定多方向、时间调度与反馈调度比较，并分别设计保护消融、TSP 规模/模块空间扩展及跨任务确认。已有 v1.2.3 结果与 demo 仍按原版本解释；本次没有新增模型调用。
 
-## 最新版本：v1.2.3 MiniMax M3 真实筛查与开题回放
+## 历史版本：v1.2.3 MiniMax M3 真实筛查与开题回放
 
 已完成 **MiniMax M3 × FIFO/完整排序 × 8 个新区块＝16 次真实搜索**，每次 8 个提案；16 次独立测试在全部搜索结束后执行。原双模型草案保留，本轮仅提供单模型证据。FIFO 平均 Test gap **5.9833%**，完整排序 **6.1019%**，R−F 为 **+0.1186 个百分点**；3 胜、2 平、3 负，未建立完整排序优势。
 
@@ -82,7 +106,7 @@ S1已完成**两控制器×三个新区块×两搜索种子=12次，每次32提�
 ```powershell
 git clone https://github.com/zhang-li-da/multimodal-optimization-thesis.git
 cd multimodal-optimization-thesis
-git switch --track origin/experiment/chapter6-agent-search-s0-20260926
+git switch --track origin/experiment/chapter6-agent-search-s3-tsp-20260927
 ```
 
 仓库为公开仓库，查阅论文和实验材料不需要 GitHub 登录。旧标签 `chapter6-v1.2-screening-20260924` 保留原始 r2 发布；最新离线审计修订使用 `chapter6-v1.2.1-mechanism-only-20260924-r1`，早期机制标签不改写；模型 API 搜索需要各自的服务凭据，凭据不包含在仓库中。若只需下载文件，可使用 GitHub 页面上的 **Code → Download ZIP**。
