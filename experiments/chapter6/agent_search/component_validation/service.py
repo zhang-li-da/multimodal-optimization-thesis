@@ -62,14 +62,17 @@ def diagnose_http_error(exc):
         return None
 
     code = None
+    body_retry_after = None
     try:
         body = exc.read(65536)
         parsed = json.loads(body.decode("utf-8", "replace")) if body else {}
         error = parsed.get("error", {}) if isinstance(parsed, dict) else {}
         if isinstance(error, dict):
             code = error.get("code") or error.get("type")
+            body_retry_after = error.get("retry_after")
         if code is None and isinstance(parsed, dict):
             code = parsed.get("code") or parsed.get("error_code")
+            body_retry_after = body_retry_after or parsed.get("retry_after")
     except Exception:
         code = None
     code = _safe_text(code)
@@ -78,7 +81,7 @@ def diagnose_http_error(exc):
         "business_code": code,
         "error_category": error_category(status, code),
         "trace_id": header("x-request-id", "request-id", "trace-id", "x-trace-id"),
-        "retry_after": header("Retry-After", "retry-after"),
+        "retry_after": header("Retry-After", "retry-after") or _safe_text(body_retry_after),
     }
 
 
