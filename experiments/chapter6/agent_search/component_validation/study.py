@@ -88,7 +88,7 @@ def prepare(output):
     seen_ids, seen_hashes = set(old_ids), set(old_hashes)
     output.mkdir(parents=True)
     files, splits, count = {}, {}, 0
-    for block in range(40, 48):
+    for block in protocol["e2"]["blocks"]:
         current = {split: copy.deepcopy(benchmarks._instances_cached(
             "tsp", split, benchmarks.V12_TSP_PROFILE, block))
                    for split in ("probe", "validation", "test")}
@@ -266,6 +266,12 @@ def search_all(study, preflight_dir):
     paused = None
 
     def mark_unstarted(job, reason, diagnostics=None):
+        run_dir = study / "runs" / job["job_id"]
+        run_dir.mkdir(parents=True, exist_ok=True)
+        save_json(run_dir / "status.json", {
+            "status": "not_started", "reason": reason,
+            "diagnostics": diagnostics, "no_automatic_retry": True,
+        })
         save_json(study / "dispatch" / f"{job['job_id']}.json", {
             "job_id": job["job_id"], "status": "not_started", "reason": reason,
             "diagnostics": diagnostics, "utc": utcnow()})
@@ -322,7 +328,8 @@ def test_all(study):
     statuses = {job["job_id"]: read_json(study / "runs" / job["job_id"] / "status.json")
                 if (study / "runs" / job["job_id"] / "status.json").exists() else {}
                 for job in manifest["jobs"]}
-    if any(v.get("status") not in TERMINAL for v in statuses.values()):
+    terminal = set(TERMINAL) | {"not_started"}
+    if any(v.get("status") not in terminal for v in statuses.values()):
         raise ValueError("Search jobs are not all terminal")
     manifest = verify(study, frozen=True); tested = 0
     from .evaluator import evaluate_test
