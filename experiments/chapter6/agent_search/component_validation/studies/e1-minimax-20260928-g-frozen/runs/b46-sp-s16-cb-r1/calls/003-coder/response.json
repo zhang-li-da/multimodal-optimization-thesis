@@ -1,0 +1,19 @@
+{
+  "request_sha256": "9ded4d50f4debbef447d3a6c2247774c93793d893c0a517db6f0a15fafa40603",
+  "text": "<think>We need to generate a JSON with a \"code\" field containing the Python code for the priority function. The formula is:\n\npriority = -distance + 0.2*cluster_density + 0.25*(1+progress)*return_distance + 0.1*regret + 0.1*regret/(0.5+nearest_remaining) - 0.03*spread\n\nWe need to follow the language constraints: allowed Python: exactly def priority(f), scalar local assignments, return, if/else or conditional expression, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh. No imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls. Access only listed features with f['feature']. Guard denominators with 1e-9 and log domains. <=25 source lines and <=320 AST nodes. Higher returned value is chosen.\n\nWe need to write the code accordingly. Let's craft the code:\n\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    p = f['progress']\n    cd = f['cluster_density']\n    s = f['spread']\n    denom = 0.5 + nr\n    if denom < 1e-9:\n        denom = 1e-9\n    return -d + 0.2 * cd + 0.25 * (1 + p) * rd + 0.1 * r + 0.1 * r / denom - 0.03 * s\n\nWe need to ensure we don't exceed 25 lines. This is about 11 lines. Good.\n\nCheck constraints: we use f['distance'] etc. No f.get(). No other calls. We use abs? Not needed. The formula includes log? No. So we don't need log.\n\nWe need to guard denominators: denom is guarded. The other terms: 0.5 + nr is denom, but we guard it. We also have 0.1 * r / denom. That's fine.\n\nWe need to ensure that the code doesn't include any import or annotation. It's just def.\n\nWe need to output JSON with exactly one code field, using newline escapes valid inside JSON. We must not include markdown. So output:\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    nr = f['nearest_remaining']\\n    r = f['regret']\\n    p = f['progress']\\n    cd = f['cluster_density']\\n    s = f['spread']\\n    denom = 0.5 + nr\\n    if denom < 1e-9:\\n        denom = 1e-9\\n    return -d + 0.2 * cd + 0.25 * (1 + p) * rd + 0.1 * r + 0.1 * r / denom - 0.03 * s\"}\n\nThat's it.\n\nMake sure newline escapes are correct. Use \\n inside the string.\n\nDouble-check the formula: cluster_density term: +0.2*cluster_density. Yes.\n\nReturn distance term: +0.25*(1+progress)*return_distance. Yes.\n\nRegret term: +0.1*regret. Yes.\n\nRegret correction: +0.1*regret/(0.5+nearest_remaining). Yes.\n\nSpread penalty: -0.03*spread. Yes.\n\nDistance term: -distance. Yes.\n\nEverything correct.\n\nNow output JSON.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    nr = f['nearest_remaining']\\n    r = f['regret']\\n    p = f['progress']\\n    cd = f['cluster_density']\\n    s = f['spread']\\n    denom = 0.5 + nr\\n    if denom < 1e-9:\\n        denom = 1e-9\\n    return -d + 0.2 * cd + 0.25 * (1 + p) * rd + 0.1 * r + 0.1 * r / denom - 0.03 * s\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1848,
+    "total_characters": 0,
+    "prompt_tokens": 907,
+    "completion_tokens": 941,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 907,
+  "output_tokens": 941,
+  "usage_complete": true,
+  "seconds": 8.646880500018597,
+  "request_id": "070982788cdcae1b8d712b72b6eea2d9"
+}

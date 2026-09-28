@@ -1,0 +1,50 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-I",
+    "action": "develop",
+    "target": "cluster",
+    "parent": {
+      "id": 21,
+      "intent": "Increase regret coefficient from (0.25 - 0.15*p) to (0.40 - 0.25*p) to better handle uniform instances where local distance has low discriminative power and strong lookahead reduces structurally poor insertions. Keep return-aware weighting identical to parent (0.15 + 0.40*p) to preserve strong grid performance and late-stage tour closure behavior.",
+      "tags": [
+        "regret",
+        "return_aware"
+      ],
+      "code": "def priority(f):\n    d = f[\"distance\"]\n    r = f[\"return_distance\"]\n    g = f[\"regret\"]\n    p = f[\"progress\"]\n    return -d + (0.15 + 0.4 * p) * r + (0.4 - 0.25 * p) * g",
+      "loss": 0.04236208926426713,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.05643602197042289,
+        "clustered": 0.05103035442972544,
+        "grid": 0.01961989139265304
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          4.403521253849381,
+          4.3590959197479995,
+          4.357516972861557,
+          4.357516972861557
+        ],
+        [
+          3.2572588577137527,
+          3.2572588577137527
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "incumbent",
+      "start_incumbent_id": 12,
+      "start_branch_id": 13,
+      "current_incumbent_id": 21,
+      "current_branch_id": 13
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-I",
+      "checkpoint_best_loss": 0.04413748591638146
+    }
+  }
+}

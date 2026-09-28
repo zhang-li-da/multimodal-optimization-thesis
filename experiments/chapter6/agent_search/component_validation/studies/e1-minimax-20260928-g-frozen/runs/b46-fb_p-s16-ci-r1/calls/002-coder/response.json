@@ -1,0 +1,22 @@
+{
+  "request_sha256": "6ab979f444dbda151569851703d1785bdd196f75e5e5d6588475565472df7485",
+  "text": "<think>We need to generate a priority function following the contract. The parent code is:\n\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    p = f['progress']\n    reg = f['regret']\n    return -d + (0.1 + 0.4 * p) * rd + 0.25 * reg\n\nNow the plan says: \"Build on parent's progress-modulated return+regret baseline by adding a fading cluster_density term.\"\n\nThe formula: \"-d + (0.1 + 0.4*p)*rd + 0.25*reg + 0.15*(1-p)*cd\"\n\nSo we need to incorporate cluster_density (cd) with weight 0.15*(1-p). That decays as progress increases.\n\nWe also need to ensure we handle denominators? The formula doesn't require division. However we must guard denominators in any division. There's no division in the formula. But we might need to ensure log domains etc. Not needed.\n\nWe have to output JSON with exactly one code field, with newline escapes valid inside JSON. The code must be valid Python, with <=25 lines and <=320 AST nodes.\n\nThe language restrictions: Allowed Python: exactly def priority(f), scalar local assignments, return, if/else or conditional expression, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh. No imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls. Access only listed features with f['feature']. Guard denominators with 1e-9 and log domains.\n\nThus we can write:\n\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    p = f['progress']\n    reg = f['regret']\n    cd = f['cluster_density']\n    return -d + (0.1 + 0.4 * p) * rd + 0.25 * reg + 0.15 * (1 - p) * cd\n\nThat's straightforward. It uses only allowed operations. No division needed. It's less than 25 lines.\n\nWe need to ensure we use f['cluster_density'] as a key. The features include cluster_density. So we can use it.\n\nThus code:\n\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    p = f['progress']\n    reg = f['regret']\n    cd = f['cluster_density']\n    return -d + (0.1 + 0.4 * p) * rd + 0.25 * reg + 0.15 * (1 - p) * cd\n\nWe need to output JSON: {\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    p = f['progress']\\n    reg = f['regret']\\n    cd = f['cluster_density']\\n    return -d + (0.1 + 0.4 * p) * rd + 0.25 * reg + 0.15 * (1 - p) * cd\"}\n\nBut need to escape newlines. JSON string with newline escapes: \\n. So we can embed \\n in the string. The final output should be a JSON object with one field code.\n\nThus final answer.</think>\n\n{\"code\":\"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    p = f['progress']\\n    reg = f['regret']\\n    cd = f['cluster_density']\\n    return -d + (0.1 + 0.4 * p) * rd + 0.25 * reg + 0.15 * (1 - p) * cd\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1632,
+    "total_characters": 0,
+    "prompt_tokens": 813,
+    "completion_tokens": 819,
+    "completion_tokens_details": {
+      "reasoning_tokens": 719
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 813,
+  "output_tokens": 819,
+  "usage_complete": true,
+  "seconds": 3.591818300075829,
+  "request_id": "07097ce3988b4b14c569c8b8bc27aab9"
+}

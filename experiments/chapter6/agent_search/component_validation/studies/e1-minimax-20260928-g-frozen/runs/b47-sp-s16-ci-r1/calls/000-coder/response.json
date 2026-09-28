@@ -1,0 +1,22 @@
+{
+  "request_sha256": "d473860bb71afd129b4c19362f5895439121ce96a37caeb743a0e62952cf5b82",
+  "text": "<think>The user wants me to implement a priority function for TSP construction heuristic. Let me analyze the requirements:\n\n1. Generate a sequential TSP construction heuristic\n2. Starting at city 0, candidate with HIGHEST priority is visited next\n3. Features available: distance, return_distance, nearest_remaining, mean_remaining, regret, progress, cluster_density, spread\n4. Must use only the allowed Python operations\n5. Higher returned value = higher priority\n\nThe plan says:\n- Formula: `-dist + (0.20 + 0.25*prog)*ret + (0.05 + 0.25*prog)*regret - 0.10*prog*nearest_remaining`\n\nLet me write this out:\n\n```python\ndef priority(f):\n    dist = f['distance']\n    ret = f['return_distance']\n    prog = f['progress']\n    regret = f['regret']\n    near = f['nearest_remaining']\n    ret_coeff = 0.20 + 0.25 * prog\n    reg_coeff = 0.05 + 0.25 * prog\n    return -dist + ret_coeff * ret + reg_coeff * regret - 0.10 * prog * near\n```\n\nLet me check the constraints:\n- Only allowed operations: scalar local assignments, return, if/else, + - * / % **, comparisons, boolean ops, calls to abs/min/max/sqrt/log/log1p/exp/tanh\n- No imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random\n- Access only listed features with f['feature']\n- <=25 source lines and <=320 AST nodes\n\nThe code I have uses:\n- def priority(f): - allowed\n- dist = f['distance'] - allowed (scalar assignment, f['feature'])\n- ret = f['return_distance'] - allowed\n- prog = f['progress'] - allowed\n- regret = f['regret'] - allowed\n- near = f['nearest_remaining'] - allowed\n- ret_coeff = 0.20 + 0.25 * prog - allowed\n- reg_coeff = 0.05 + 0.25 * prog - allowed\n- return -dist + ret_coeff * ret + reg_coeff * regret - 0.10 * prog * near - allowed\n\nThis looks valid. Let me count lines: 8 lines total. Well within 25.\n\nLet me verify the formula matches the plan:\n- `-dist + (0.20 + 0.25*prog)*ret + (0.05 + 0.25*prog)*regret - 0.10*prog*nearest_remaining`\n\nYes, this matches perfectly. The code returns:\n`-dist + ret_coeff * ret + reg_coeff * regret - 0.10 * prog * near`\n\nwhere ret_coeff = 0.20 + 0.25*prog, reg_coeff = 0.05 + 0.25*prog, near = nearest_remaining.\n\nNow I need to output as JSON with exactly one code field, with newline escapes valid inside JSON.</think>\n\n{\"code\": \"def priority(f):\\n    dist = f['distance']\\n    ret = f['return_distance']\\n    prog = f['progress']\\n    regret = f['regret']\\n    near = f['nearest_remaining']\\n    ret_coeff = 0.20 + 0.25 * prog\\n    reg_coeff = 0.05 + 0.25 * prog\\n    return -dist + ret_coeff * ret + reg_coeff * regret - 0.10 * prog * near\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1601,
+    "total_characters": 0,
+    "prompt_tokens": 835,
+    "completion_tokens": 766,
+    "completion_tokens_details": {
+      "reasoning_tokens": 649
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    }
+  },
+  "input_tokens": 835,
+  "output_tokens": 766,
+  "usage_complete": true,
+  "seconds": 7.849438000004739,
+  "request_id": "0709886fb4e93178f1f8e4699a1a6c24"
+}

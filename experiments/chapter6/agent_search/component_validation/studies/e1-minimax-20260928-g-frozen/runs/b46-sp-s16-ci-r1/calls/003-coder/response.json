@@ -1,0 +1,22 @@
+{
+  "request_sha256": "0accad96ef8d912d3832999d4fb788159fffde47ea1366660358291c88048734",
+  "text": "<think>The task is to implement a TSP construction heuristic as a priority function. The plan specifies:\n- formula: `-distance + (0.25 + 0.15 * progress) * return_distance + 0.2 * regret + 0.12 * cluster_density`\n\nI need to implement this exactly, with the constraints:\n- Only the listed features from f\n- No imports, annotations, loops, etc.\n- ≤25 source lines and ≤320 AST nodes\n- Guard denominators with 1e-9 (not strictly needed here since no denominators in this formula)\n- Guard log domains (no log used here)\n\nLet me write it:\n\n```python\ndef priority(f):\n    d = f[\"distance\"]\n    rd = f[\"return_distance\"]\n    rg = f[\"regret\"]\n    pr = f[\"progress\"]\n    cd = f[\"cluster_density\"]\n    return -d + (0.25 + 0.15 * pr) * rd + 0.2 * rg + 0.12 * cd\n```\n\nThis is straightforward and follows the plan exactly. Let me count lines: 7 lines of code (including def line and blank). Well within limits.\n\nLet me verify the formula matches:\n- -distance ✓\n- (0.25 + 0.15 * progress) * return_distance ✓\n- + 0.2 * regret ✓\n- + 0.12 * cluster_density ✓\n\nNo denominators to guard. No logs. Good.\n\nOutput as JSON with newline escapes.</think>\n\n{\"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    pr = f[\\\"progress\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    return -d + (0.25 + 0.15 * pr) * rd + 0.2 * rg + 0.12 * cd\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1203,
+    "total_characters": 0,
+    "prompt_tokens": 786,
+    "completion_tokens": 417,
+    "completion_tokens_details": {
+      "reasoning_tokens": 312
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 786,
+  "output_tokens": 417,
+  "usage_complete": true,
+  "seconds": 2.7511684999335557,
+  "request_id": "0709804bfa1c9f4586982d03a7aab955"
+}

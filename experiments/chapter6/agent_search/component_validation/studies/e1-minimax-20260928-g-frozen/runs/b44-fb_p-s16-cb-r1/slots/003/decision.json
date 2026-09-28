@@ -1,0 +1,50 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-B",
+    "action": "develop",
+    "target": "cluster",
+    "parent": {
+      "id": 21,
+      "intent": "Amplify the regret term relative to the parent by scaling it with cluster density, since regret (second-nearest minus nearest among unvisited) is most informative when nearest-other distances are small and reliable (dense regions). Keep local distance dominant, retain a mild late-game return boost for closure, and add a small spread penalty to avoid candidates that are unevenly connected to the remaining set. Distance still dominates; regret becomes a stronger tie-breaker, especially in clustered instances where pure nearest-neighbor can prematurely anchor the tour on a boundary node.",
+      "tags": [
+        "regret",
+        "cluster"
+      ],
+      "code": "def priority(f):\n    d = f['distance']\n    r = f['return_distance']\n    g = f['regret']\n    p = f['progress']\n    cd = f['cluster_density']\n    sp = f['spread']\n    return -d + 0.25 * r + 0.15 * p * r + (0.35 + 0.25 * cd) * g - 0.05 * sp",
+      "loss": 0.04161600520312816,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.056702184694024806,
+        "clustered": 0.05136303786877061,
+        "grid": 0.016782793046589046
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          4.402544291308234,
+          4.3581189572068535,
+          4.35654001032041,
+          4.35654001032041
+        ],
+        [
+          3.2572588577137527,
+          3.2572588577137527
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "lagging_branch",
+      "start_incumbent_id": 16,
+      "start_branch_id": 12,
+      "current_incumbent_id": 21,
+      "current_branch_id": 21
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-B",
+      "checkpoint_best_loss": 0.04503311952337811
+    }
+  }
+}

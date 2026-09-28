@@ -1,0 +1,49 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-B",
+    "action": "develop",
+    "target": "cluster",
+    "parent": {
+      "id": 21,
+      "intent": "Combine the parent's progress-scaled return-awareness with a progress-modulated regret term. Early steps act like a soft nearest-neighbor with light return penalty (good for clustered exploration). As progress grows, both return-awareness and regret weight increase, pushing late picks toward candidates that shorten the closing leg and that would be costly to defer. This mitigates the parent's weakness of committing too greedily to locally close but globally expensive early neighbors.",
+      "tags": [
+        "regret",
+        "return_aware"
+      ],
+      "code": "def priority(f):\n    d = f[\"distance\"]\n    rd = f[\"return_distance\"]\n    r = f[\"regret\"]\n    p = f[\"progress\"]\n    return -d + (0.2 + 0.3 * p) * rd + 0.25 * p * r\n",
+      "loss": 0.036887254319328724,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.031458778563640155,
+        "clustered": 0.033944251044194795,
+        "grid": 0.045258733350151216
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.9623146489847163,
+          3.885715514970267,
+          3.885715514970267
+        ],
+        [
+          3.0759670065316422,
+          3.0759670065316422
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "lagging_branch",
+      "start_incumbent_id": 10,
+      "start_branch_id": 1,
+      "current_incumbent_id": 10,
+      "current_branch_id": 21
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-B",
+      "checkpoint_best_loss": 0.033078752700824415
+    }
+  }
+}

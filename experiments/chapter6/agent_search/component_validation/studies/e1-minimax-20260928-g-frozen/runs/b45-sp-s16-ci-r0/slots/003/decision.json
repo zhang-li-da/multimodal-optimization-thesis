@@ -1,0 +1,50 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-I",
+    "action": "develop",
+    "target": "cluster",
+    "parent": {
+      "id": 5,
+      "intent": "Strengthen the parent's regret signal to address uniform-instance weakness (where local distances collapse to ties), while keeping the progress-adaptive return bias that works well on clustered/grid. Regret weight ramps from 0.1 to 0.35 along the tour — early picks benefit from ranking by 'how uniquely positioned' each candidate is, late picks benefit from committing to must-take nodes before the closing leg dominates. A small nearest_remaining term adds bounded 1-step lookahead for connectivity, biasing away from dead-end candidates without ignoring distance.",
+      "tags": [
+        "regret",
+        "lookahead"
+      ],
+      "code": "def priority(f):\n    rw = 0.15 + 0.55 * f[\"progress\"]\n    rgw = 0.1 + 0.25 * f[\"progress\"]\n    return -f[\"distance\"] + rw * f[\"return_distance\"] + rgw * f[\"regret\"] + 0.08 * f[\"nearest_remaining\"]",
+      "loss": 0.04621097896720469,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.05790305750546545,
+        "clustered": 0.03051839931796572,
+        "grid": 0.050211480078182914
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.7878168758392703,
+          3.7322978425484106,
+          3.7322978425484106
+        ],
+        [
+          3.953701704827539,
+          3.4858276621196613,
+          3.4858276621196613
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "incumbent",
+      "start_incumbent_id": 5,
+      "start_branch_id": 17,
+      "current_incumbent_id": 5,
+      "current_branch_id": 17
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-I",
+      "checkpoint_best_loss": 0.04621097896720469
+    }
+  }
+}

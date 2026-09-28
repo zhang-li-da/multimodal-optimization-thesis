@@ -1,0 +1,11 @@
+{
+  "schema": "chapter6-e1-selection-v1",
+  "selected_on": "validation",
+  "strategy": "C-I",
+  "best_id": 20,
+  "code": "def priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    p = f['progress']\n    reg = f['regret']\n    cd = f['cluster_density']\n    return -d + (0.1 + 0.4 * p) * (1 - 0.3 * cd) * rd + (0.2 + 0.25 * cd + 0.05 * p) * reg",
+  "validation_loss": 0.03882608704577785,
+  "checkpoint_best_loss": 0.03938007399141782,
+  "completed_proposals": 4,
+  "status": "continuation_complete"
+}

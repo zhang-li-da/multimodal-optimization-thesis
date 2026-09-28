@@ -1,0 +1,22 @@
+{
+  "request_sha256": "b257344692e0fbfc407522d204f3f6c1f70035d632ea65af565ebdf021b55743",
+  "text": "<think>The user wants me to implement a priority function for a TSP construction heuristic. Let me analyze the requirements:\n\n1. The function should be `def priority(f):`\n2. It should access features from the dictionary `f` using only listed features with `f['feature']`\n3. Available features: distance, return_distance, nearest_remaining, mean_remaining, regret, progress, cluster_density, spread\n4. Allowed Python: scalar local assignments, return, if/else, arithmetic operations (+ - * / % ** with constant exponent <=4), comparisons, boolean operations, calls to abs/min/max/sqrt/log/log1p/exp/tanh\n5. NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls\n6. Guard denominators with 1e-9 and log domains\n7. <=25 source lines and <=320 AST nodes\n8. Higher returned value is chosen\n\nThe plan specifies:\n- Name: cluster_density_amplifier\n- Formula:\n```\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    mr = f['mean_remaining']\n    r = f['regret']\n    cd = f['cluster_density']\n    cr = (mr - nr) / (mr + 1e-9)\n    denom = 0.5 + nr\n    if denom < 1e-9:\n        denom = 1e-9\n    return -d + 0.25 * rd + 0.2 * r * cr + 0.15 * r / denom + 0.35 * cd\n```\n\nThis adds 0.35 * cluster_density to the parent's formula. The cluster_density acts as a cluster-detection signal - in uniform layouts it's roughly constant (~0.5) so it's a near-constant offset that preserves ranking, but in clustered instances it boosts candidates in dense local neighborhoods.\n\nLet me verify the code:\n- Uses only listed features: distance, return_distance, nearest_remaining, mean_remaining, regret, cluster_density ✓\n- Uses only allowed operations: scalar assignments, arithmetic, if statement, return ✓\n- Guards denominators with 1e-9 ✓\n- No imports, annotations, loops, lists, etc. ✓\n- Source lines: ~11 lines, well under 25 ✓\n- AST nodes should be well under 320 ✓\n\nLet me count AST nodes roughly:\n- FunctionDef: 1\n- arguments (f): 1\n- Assign statements: 7 (d, rd, nr, mr, r, cd, cr)\n- Binary operations for cr: 1\n- Assign denom: 1\n- If statement: 1\n- Compare: 1\n- Return: 1\n- Binary operations in return: several\n\nShould be fine. Let me format it as JSON with escaped newlines.\n\nThe output should be:\n```json\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    nr = f['nearest_remaining']\\n    mr = f['mean_remaining']\\n    r = f['regret']\\n    cd = f['cluster_density']\\n    cr = (mr - nr) / (mr + 1e-9)\\n    denom = 0.5 + nr\\n    if denom < 1e-9:\\n        denom = 1e-9\\n    return -d + 0.25 * rd + 0.2 * r * cr + 0.15 * r / denom + 0.35 * cd\"}\n```\n\nWait, let me check the operation: `0.2 * r * cr` - this is `(r * (mr - nr) / (mr + 1e-9)) * 0.2`. Actually it's `0.2 * r * cr` which means `0.2 * r * ((mr - nr) / (mr + 1e-9))`. This is correct.\n\nLet me also double-check that all features used are in the allowed list:\n- distance ✓\n- return_distance ✓\n- nearest_remaining ✓\n- mean_remaining ✓\n- regret ✓\n- cluster_density ✓\n\nAll good. The formula follows the plan exactly.\n\nLet me also verify the budget mentions:\n- \"A fixed budget of 24 deterministic 2-opt delta tests then refines every tour for ALL methods\" - this is just context, not something we need to implement\n- \"Higher priority wins; ties use city index\" - not something we implement\n\nThe code looks complete and correct. Let me format the JSON output.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    nr = f['nearest_remaining']\\n    mr = f['mean_remaining']\\n    r = f['regret']\\n    cd = f['cluster_density']\\n    cr = (mr - nr) / (mr + 1e-9)\\n    denom = 0.5 + nr\\n    if denom < 1e-9:\\n        denom = 1e-9\\n    return -d + 0.25 * rd + 0.2 * r * cr + 0.15 * r / denom + 0.35 * cd\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 2144,
+    "total_characters": 0,
+    "prompt_tokens": 989,
+    "completion_tokens": 1155,
+    "completion_tokens_details": {
+      "reasoning_tokens": 994
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 989,
+  "output_tokens": 1155,
+  "usage_complete": true,
+  "seconds": 4.588115399936214,
+  "request_id": "07098160cfc1a9f63113d31f8a6bc4da"
+}

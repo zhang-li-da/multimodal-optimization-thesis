@@ -1,0 +1,19 @@
+{
+  "request_sha256": "530cfe1f2ba18a156b9b4f4f313c369a58b3d9e7811abcc7478dc081056b96c0",
+  "text": "<think>We need to produce a JSON object with one field \"code\" containing the Python source implementing the priority heuristic. Must obey language constraints:\n\n- Allowed Python: exactly `def priority(f)`, scalar local assignments, return, if/else or conditional expression, `+ - * / % **` (constant exponent <=4), comparisons, boolean ops, calls `abs/min/max/sqrt/log/log1p/exp/tanh`. No imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls.\n- Access only listed features with `f['feature']`.\n- Guard denominators with `1e-9` and log domains.\n- <=25 source lines and <=320 AST nodes.\n- Higher returned value is chosen.\n\nThe plan formula: \"-f['distance'] + 0.5 * f['cluster_density'] + 0.05 * (f['cluster_density'] ** 2) - 0.2 * f['spread']\"\n\nWe need to implement this with local variable assignments and a final return.\n\nPotential issues: The plan uses cluster_density squared. That's allowed: exponent 2 constant. Use f['cluster_density']**2.\n\nAlso the distance is negative, as plan suggests reward lower distance.\n\nReturn value: priority = -f['distance'] + 0.5*f['cluster_density'] + 0.05*f['cluster_density']**2 - 0.2*f['spread']\n\nPotentially we could incorporate a guard for cluster_density between 0 and 1? Actually we trust it's between 0 and 1. No need.\n\nAdditionally we could maybe add a fallback if cluster_density >1? Not needed.\n\nThus we can implement:\n\ndef priority(f):\n    d = f['distance']\n    cd = f['cluster_density']\n    sp = f['spread']\n    # Compute priority\n    p = -d + 0.5 * cd + 0.05 * (cd ** 2) - 0.2 * sp\n    return p\n\nThat's about 5 lines.\n\nWe should ensure <=320 AST nodes - trivial.\n\nAlso ensure usage only allowed functions: we use **, multiplication etc.\n\nWe don't need to guard denominators as there are no divisions.\n\nBut possibly use max(cd, 1e-9) for safety. However we don't have division, but could still optionally clamp.\n\nGiven spec: \"Guard denominators with 1e-9 and log domains.\" Since no division or log used, fine.\n\nWe need to produce JSON with newline escapes. Provide code as a string with escaped newlines (\\\\n). Provide exactly one field \"code\".\n\nThus JSON: {\"code\": \"def priority(f):\\\\n    d = f['distance']\\\\n    cd = f['cluster_density']\\\\n    sp = f['spread']\\\\n    p = -d + 0.5 * cd + 0.05 * (cd ** 2) - 0.2 * sp\\\\n    return p\\\\n\"}\n\nCheck indentation: Use 4 spaces.\n\nThus final.\n\nDouble-check for using any disallowed constructs: we use `def`, local assignments, return, arithmetic, exponent with constant 2 (allowed), dictionary access `f['feature']`. That's allowed. No imports, no lists, no loops. Good.\n\nWe need to ensure <25 source lines: we have 6 lines (including def and return). Good.\n\nThus produce final answer.</think>\n\n{\"code\": \"def priority(f):\\\\n    d = f['distance']\\\\n    cd = f['cluster_density']\\\\n    sp = f['spread']\\\\n    p = -d + 0.5 * cd + 0.05 * (cd ** 2) - 0.2 * sp\\\\n    return p\\\\n\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1483,
+    "total_characters": 0,
+    "prompt_tokens": 688,
+    "completion_tokens": 795,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 688,
+  "output_tokens": 795,
+  "usage_complete": true,
+  "seconds": 7.983680000063032,
+  "request_id": "0709842d642ad717896b5517479cee7e"
+}

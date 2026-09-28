@@ -1,0 +1,22 @@
+{
+  "request_sha256": "7e6c5d582678c19c9270cbc3f2011e1f25b408a533b8f30451d6bd7e6b6ec1e0",
+  "text": "<think>We need to write a Python function `priority(f)` with only the allowed operations and return a scalar. The plan says:\n\n\"-d + (0.25 + 0.15*pr)*rd + 0.2*rg + 0.15*(1-pr)*cluster_density\"\n\nWhere:\n- d = f[\"distance\"]\n- rd = f[\"return_distance\"]\n- rg = f[\"regret\"]\n- pr = f[\"progress\"]\n- cluster_density = f[\"cluster_density\"]\n\nWe need to implement this with guards for denominators (though there are no denominators here). Also log domains are not used. The expression is straightforward.\n\nWe must ensure ≤25 source lines and ≤320 AST nodes. We should write it in a minimal form.\n\nWe need to return one valid JSON object with exactly one \"code\" field, with newline escapes valid inside JSON. No markdown.\n\nLet's write:\n\n```python\ndef priority(f):\n    d = f[\"distance\"]\n    rd = f[\"return_distance\"]\n    rg = f[\"regret\"]\n    pr = f[\"progress\"]\n    cd = f[\"cluster_density\"]\n    return -d + (0.25 + 0.15 * pr) * rd + 0.2 * rg + 0.15 * (1.0 - pr) * cd\n```\n\nThat's 8 lines. No denominators needed. This satisfies all constraints.\n\nCheck: Allowed operations: scalar local assignments, return, + - * /, comparisons not needed, boolean not needed, calls to abs/min/max/sqrt/log/log1p/exp/tanh not needed. Access f['feature'] is allowed. No loops, no lists, no annotations. Good.\n\nCount AST nodes: each assignment is a few nodes. Should be well under 320.\n\nThus output JSON: {\"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    pr = f[\\\"progress\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    return -d + (0.25 + 0.15 * pr) * rd + 0.2 * rg + 0.15 * (1.0 - pr) * cd\"}\n\nMake sure double quotes inside string are escaped. JSON string uses double quotes, so we need to escape the inner double quotes. The code field string must have escaped newlines \\n and escaped double quotes \\\".\n\nThus final JSON:\n\n{\"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    pr = f[\\\"progress\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    return -d + (0.25 + 0.15 * pr) * rd + 0.2 * rg + 0.15 * (1.0 - pr) * cd\"}\n\nThat's it.</think>\n\n{\"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    pr = f[\\\"progress\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    return -d + (0.25 + 0.15 * pr) * rd + 0.2 * rg + 0.15 * (1.0 - pr) * cd\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1521,
+    "total_characters": 0,
+    "prompt_tokens": 770,
+    "completion_tokens": 751,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 770,
+  "output_tokens": 751,
+  "usage_complete": true,
+  "seconds": 10.069234499940649,
+  "request_id": "07097fb3b60ab2c47e046143d3fd7379"
+}

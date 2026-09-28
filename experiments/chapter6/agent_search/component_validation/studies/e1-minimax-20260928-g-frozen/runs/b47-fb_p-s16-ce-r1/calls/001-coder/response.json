@@ -1,0 +1,22 @@
+{
+  "request_sha256": "a8f984d64873869cb4735c41a9a4a78917958473893227f5fb84d66379d1d776",
+  "text": "<think>We need to implement priority(f) according to plan formula: priority = -f[\"distance\"] + 0.25 * f[\"return_distance\"] * (1 - 0.6 * f[\"progress\"]) + 0.12 * f[\"regret\"]\n\nNeed to obey language constraints: exactly def priority(f), scalar local assignments, return, if/else or conditional expression, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh. No imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, etc. Access only listed features with f['feature'].\n\nWe need to implement it in Python with limited language constructs, and output a JSON object with code field (string) containing the source code with newline escapes.\n\nConstraints: <=25 source lines and <=320 AST nodes. Use only allowed syntax.\n\nImplementation:\n\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    prog = f['progress']\n    reg = f['regret']\n    # formula\n    term_return = 0.25 * rd * (1 - 0.6 * prog)\n    term_regret = 0.12 * reg\n    p = -d + term_return + term_regret\n    return p\n\nWe could also incorporate guard for denominators, but no denominator here.\n\nWe must ensure we don't use any forbidden constructs. We use only assignment, multiplication, subtraction, addition, return.\n\nBut note: f['distance'] returns maybe a scalar. That's allowed.\n\nWe need to ensure no extra spaces? It's fine.\n\nThus final code:\n\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    prog = f['progress']\n    reg = f['regret']\n    return -d + 0.25 * rd * (1 - 0.6 * prog) + 0.12 * reg\n\nCheck length: 6 lines (including def). Should be <=25 lines. AST nodes: small.\n\nPotential concerns: Using f['distance'] etc. That's allowed. Use only constant exponent <=4; we have no exponent.\n\nPotential issues: Might need to cast to float? Not required.\n\nThe formula matches plan: -distance + 0.25 * return_distance * (1 - 0.6 * progress) + 0.12 * regret.\n\nWe need to ensure we have guard denominators with 1e-9 but no denominators present.\n\nBut we might want to guard in case of missing keys? Not allowed to use f.get. Must assume keys exist.\n\nThus code.\n\nNow output JSON with one code field, using newline escapes \\n. Provide as string.\n\nExample:\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    prog = f['progress']\\n    reg = f['regret']\\n    return -d + 0.25 * rd * (1 - 0.6 * prog) + 0.12 * reg\"}\n\nMake sure to escape newline correctly inside JSON string. That's it.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    prog = f['progress']\\n    reg = f['regret']\\n    return -d + 0.25 * rd * (1 - 0.6 * prog) + 0.12 * reg\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1459,
+    "total_characters": 0,
+    "prompt_tokens": 710,
+    "completion_tokens": 749,
+    "completion_tokens_details": {
+      "reasoning_tokens": 668
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 710,
+  "output_tokens": 749,
+  "usage_complete": true,
+  "seconds": 4.40337930014357,
+  "request_id": "0709878acef3afd25da5bd43470d17f1"
+}

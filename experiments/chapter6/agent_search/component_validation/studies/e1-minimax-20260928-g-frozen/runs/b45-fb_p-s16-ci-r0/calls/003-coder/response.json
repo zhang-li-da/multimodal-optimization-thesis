@@ -1,0 +1,22 @@
+{
+  "request_sha256": "3c87be5f60928884723e9713afda98b2be0388fd2cdb0b8a24342abf9f07a039",
+  "text": "<think>The user wants me to implement a priority function for a TSP heuristic. Let me analyze the formula and the constraints:\n\nFormula:\n```\ns = -distance + 0.05 * (nearest_remaining / (distance + 0.1)) * (1 - 0.5 * cluster_density) + (0.15 + 0.25 * progress**1.5) * regret + 0.30 * return_distance * (1 + 0.5 * progress) - 0.02 * spread + 0.20 * cluster_density * (1 - progress)\n```\n\nI need to:\n1. Translate this formula into valid Python\n2. Follow the strict language constraints (no imports, no loops, no lists, only allowed operations)\n3. Keep it under 25 lines and 320 AST nodes\n4. Use only allowed functions: abs/min/max/sqrt/log/log1p/exp/tanh\n5. Guard denominators with 1e-9 and log domains\n6. Output JSON with one code field\n\nLet me write the code:\n\n```python\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    p = f['progress']\n    cd = f['cluster_density']\n    sp = f['spread']\n    denom = d + 0.1 + 1e-9\n    ratio = nr / denom\n    dampen = 1 - 0.5 * cd\n    regret_weight = 0.15 + 0.25 * (p ** 1.5)\n    return_w = 1 + 0.5 * p\n    cluster_bonus = 0.20 * cd * (1 - p)\n    s = -d + 0.05 * ratio * dampen + regret_weight * r + 0.30 * rd * return_w - 0.02 * sp + cluster_bonus\n    return s\n```\n\nWait, the formula says `0.05 * (nearest_remaining / (distance + 0.1))`. I should make sure to handle the division safely. The + 1e-9 guard is already included in the parent.\n\nLet me count lines - that's about 12 lines, well under 25.\n\nLet me also check that I'm only using allowed operations:\n- def, scalar assignments ✓\n- return ✓\n- +, -, *, /, ** ✓\n- comparisons not needed here\n- boolean not needed\n- abs/min/max/sqrt/log/log1p/exp/tanh - not needed but allowed\n- Access only f['feature'] ✓\n- No imports, annotations, loops, lists, arrays ✓\n\nThe formula breakdown:\n- `-d`: negative distance (closer is better)\n- `0.05 * (nr / (d + 0.1)) * (1 - 0.5 * cd)`: lookahead term dampened by cluster density\n- `(0.15 + 0.25 * p**1.5) * r`: regret weighted by progress\n- `0.30 * rd * (1 + 0.5 * p)`: return to start with progress scaling\n- `- 0.02 * sp`: spread penalty\n- `0.20 * cd * (1 - p)`: cluster density bonus that decays with progress\n\nThe code looks correct. Let me finalize it.\n\nActually, I should double-check the formula has proper precedence. The original is:\n`0.05 * (nearest_remaining / (distance + 0.1)) * (1 - 0.5 * cluster_density)`\n\nSo it's `(nr / (d + 0.1))` multiplied by `(1 - 0.5 * cd)`, all times 0.05. That's what I have.\n\nLet me write the final code as a JSON string with newline escapes.\n\n```python\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    p = f['progress']\n    cd = f['cluster_density']\n    sp = f['spread']\n    denom = d + 0.1 + 1e-9\n    base = nr / denom\n    damp = 1 - 0.5 * cd\n    rw = 0.15 + 0.25 * (p ** 1.5)\n    rwt = 1 + 0.5 * p\n    cb = 0.20 * cd * (1 - p)\n    s = -d + 0.05 * base * damp + rw * r + 0.30 * rd * rwt - 0.02 * sp + cb\n    return s\n```\n\nThat's 15 lines, well within limits. Let me output this as JSON.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    nr = f['nearest_remaining']\\n    r = f['regret']\\n    p = f['progress']\\n    cd = f['cluster_density']\\n    sp = f['spread']\\n    denom = d + 0.1 + 1e-9\\n    base = nr / denom\\n    damp = 1 - 0.5 * cd\\n    rw = 0.15 + 0.25 * (p ** 1.5)\\n    rwt = 1 + 0.5 * p\\n    cb = 0.20 * cd * (1 - p)\\n    s = -d + 0.05 * base * damp + rw * r + 0.30 * rd * rwt - 0.02 * sp + cb\\n    return s\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 2180,
+    "total_characters": 0,
+    "prompt_tokens": 943,
+    "completion_tokens": 1237,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1025
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 943,
+  "output_tokens": 1237,
+  "usage_complete": true,
+  "seconds": 6.387786800041795,
+  "request_id": "070973ef35879572b2b8a3f8a2335041"
+}

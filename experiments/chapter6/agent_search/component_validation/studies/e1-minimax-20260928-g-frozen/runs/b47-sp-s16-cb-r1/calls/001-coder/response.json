@@ -1,0 +1,22 @@
+{
+  "request_sha256": "3ee2343f4b635f0e3fb1f7a9ef6d8ccbaba95f78ae9d6a25fb6d4cd815259e3c",
+  "text": "<think>We need to produce a JSON object with one field \"code\" containing the Python code implementing the heuristic as described. The plan: \"progress_weighted_return\": intent: increase penalty for return distance as the tour progresses. The formula is: -f['distance'] + (0.25 + 0.5 * f['progress']) * f['return_distance'].\n\nWe need to implement that exactly. The allowed language: def priority(f): ... return ... We cannot import, annotate, loops, etc. We can use constants: 0.25, 0.5.\n\nThe code must be <=25 source lines and <=320 AST nodes.\n\nWe need to embed the formula: return -f['distance'] + (0.25 + 0.5 * f['progress']) * f['return_distance']\n\nThat's one line.\n\nPotentially we could add some guard for denominator but not needed.\n\nThe code will be:\n\ndef priority(f):\n    return -f[\"distance\"] + (0.25 + 0.5 * f[\"progress\"]) * f[\"return_distance\"]\n\nWe need to ensure string keys exactly as given: f[\"distance\"] etc. Use double quotes.\n\nThus output JSON: {\"code\": \"def priority(f):\\n    return -f[\\\"distance\\\"] + (0.25 + 0.5 * f[\\\"progress\\\"]) * f[\\\"return_distance\\\"]\\n\"}\n\nMake sure newline escapes are valid: \\n. That's fine.\n\nThus final.</think>\n\n{\"code\": \"def priority(f):\\n    return -f[\\\"distance\\\"] + (0.25 + 0.5 * f[\\\"progress\\\"]) * f[\\\"return_distance\\\"]\\n\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1051,
+    "total_characters": 0,
+    "prompt_tokens": 694,
+    "completion_tokens": 357,
+    "completion_tokens_details": {
+      "reasoning_tokens": 307
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 694,
+  "output_tokens": 357,
+  "usage_complete": true,
+  "seconds": 3.4582624998874962,
+  "request_id": "07098aae4f151fce93889cca4303f74c"
+}

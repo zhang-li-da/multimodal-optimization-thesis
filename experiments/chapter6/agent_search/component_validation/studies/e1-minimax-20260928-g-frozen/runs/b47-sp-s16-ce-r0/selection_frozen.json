@@ -1,0 +1,11 @@
+{
+  "schema": "chapter6-e1-selection-v1",
+  "selected_on": "validation",
+  "strategy": "C-E",
+  "best_id": 10,
+  "code": "def priority(f):\n    dist = f['distance']\n    ret = f['return_distance']\n    prog = f['progress']\n    regret = f['regret']\n    return_coeff = 0.20 + 0.25 * prog\n    regret_coeff = 0.05 + 0.25 * prog\n    return -dist + return_coeff * ret + regret_coeff * regret",
+  "validation_loss": 0.033078752700824415,
+  "checkpoint_best_loss": 0.033078752700824415,
+  "completed_proposals": 4,
+  "status": "continuation_complete"
+}

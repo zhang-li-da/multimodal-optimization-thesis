@@ -1,0 +1,49 @@
+{
+  "decision": {
+    "step": 1,
+    "strategy": "C-B",
+    "action": "develop",
+    "target": "return_aware",
+    "parent": {
+      "id": 12,
+      "intent": "Hybrid of return_aware (balance current edge vs future return-to-start edge) and regret_aware (grab candidates with uniquely best connections to remaining set). Hypothesis: combining these two secondary signals gives more robust early construction than either alone, since both are TSP-relevant lookahead/bias terms with bounded magnitudes. Weights (0.25, 0.15) stay below primary distance weight to preserve return_aware anchor ordering while breaking ties usefully when multiple candidates have similar current distances.",
+      "tags": [
+        "return_aware",
+        "regret"
+      ],
+      "code": "def priority(f):\n    d = f['distance']\n    r = f['return_distance']\n    g = f['regret']\n    return -d + 0.25 * r + 0.15 * g",
+      "loss": 0.04613998322258331,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.05819244983340823,
+        "clustered": 0.05240309461605976,
+        "grid": 0.027824405218281945
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          4.026141584453368,
+          3.981716250351987,
+          3.981716250351987
+        ],
+        [
+          3.2572588577137527,
+          3.2572588577137527
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "lagging_branch",
+      "start_incumbent_id": 16,
+      "start_branch_id": 12,
+      "current_incumbent_id": 16,
+      "current_branch_id": 12
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-B",
+      "checkpoint_best_loss": 0.04503311952337811
+    }
+  }
+}

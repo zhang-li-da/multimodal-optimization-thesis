@@ -1,0 +1,22 @@
+{
+  "request_sha256": "05af07fa24f3cf060aeb1a8791b18e3377b742fee2a1304aebcb59116bad17f2",
+  "text": "<think>The user wants me to implement a priority function based on the given formula. Let me analyze the constraints:\n\n1. Only allowed Python: `def priority(f)`, scalar local assignments, `return`, `if/else` or conditional expression, `+ - * / % **` (constant exponent <=4), comparisons, boolean operations, calls to `abs/min/max/sqrt/log/log1p/exp/tanh`. \n2. NO imports, annotations, loops, lists, arrays, attributes, `f.get()`, helpers, mutation, I/O, random, or other calls.\n3. Access only listed features with `f['feature']`.\n4. Guard denominators with 1e-9 and log domains.\n5. <=25 source lines and <=320 AST nodes.\n\nThe formula is:\n`-f['distance'] + (0.15 + 0.40*f['progress'])*f['return_distance'] + (0.35 - 0.20*f['progress'])*f['regret'] + 0.06*(1-f['progress'])*f['cluster_density'] - 0.08*(1-f['progress'])*f['nearest_remaining'] - 0.05*(1-f['progress'])*f['spread']`\n\nThis is a straightforward linear combination. There are no denominators to guard against (no divisions), no log calls needed. \n\nLet me write it:\n\n```python\ndef priority(f):\n    d = f[\"distance\"]\n    r = f[\"return_distance\"]\n    nr = f[\"nearest_remaining\"]\n    g = f[\"regret\"]\n    p = f[\"progress\"]\n    cd = f[\"cluster_density\"]\n    sp = f[\"spread\"]\n    return -d + (0.15 + 0.40 * p) * r + (0.35 - 0.20 * p) * g + 0.06 * (1 - p) * cd - 0.08 * (1 - p) * nr - 0.05 * (1 - p) * sp\n```\n\nThis is straightforward. Let me check the constraints:\n- Uses only `def`, assignments, arithmetic, return - ✓\n- Uses `f[\"feature\"]` notation - ✓\n- No annotations, imports, loops, lists - ✓\n- Lines: 10 lines - well under 25 - ✓\n- No denominators needed, no logs needed - ✓\n\nWait, I need to output JSON. The code needs to be in a JSON object with a \"code\" field. Let me format this correctly with newline escapes.\n\nActually, looking at the request: \"Output JSON with exactly one code field. Use newline escapes valid inside JSON.\"\n\nSo I need to produce:\n```json\n{\"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    r = f[\\\"return_distance\\\"]\\n    nr = f[\\\"nearest_remaining\\\"]\\n    g = f[\\\"regret\\\"]\\n    p = f[\\\"progress\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    sp = f[\\\"spread\\\"]\\n    return -d + (0.15 + 0.40 * p) * r + (0.35 - 0.20 * p) * g + 0.06 * (1 - p) * cd - 0.08 * (1 - p) * nr - 0.05 * (1 - p) * sp\"}\n```\n\nLet me verify the formula one more time:\n- `-f['distance']` → `-d`\n- `(0.15 + 0.40*f['progress'])*f['return_distance']` → `(0.15 + 0.40 * p) * r`\n- `(0.35 - 0.20*f['progress'])*f['regret']` → `(0.35 - 0.20 * p) * g`\n- `0.06*(1-f['progress'])*f['cluster_density']` → `0.06 * (1 - p) * cd`\n- `- 0.08*(1-f['progress'])*f['nearest_remaining']` → `- 0.08 * (1 - p) * nr`\n- `- 0.05*(1-f['progress'])*f['spread']` → `- 0.05 * (1 - p) * sp`\n\nGood, that's correct.\n\nI should not over-engineer this. The parent code structure is already given and I just need to add the `spread` term. Let me keep it simple and clean.\n\nThe JSON needs to be returned as a single line object (well, it's parsed but I should write valid JSON).</think>\n\n{\"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    r = f[\\\"return_distance\\\"]\\n    nr = f[\\\"nearest_remaining\\\"]\\n    g = f[\\\"regret\\\"]\\n    p = f[\\\"progress\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    sp = f[\\\"spread\\\"]\\n    return -d + (0.15 + 0.40 * p) * r + (0.35 - 0.20 * p) * g + 0.06 * (1 - p) * cd - 0.08 * (1 - p) * nr - 0.05 * (1 - p) * sp\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 2113,
+    "total_characters": 0,
+    "prompt_tokens": 952,
+    "completion_tokens": 1161,
+    "completion_tokens_details": {
+      "reasoning_tokens": 991
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 952,
+  "output_tokens": 1161,
+  "usage_complete": true,
+  "seconds": 4.941088899970055,
+  "request_id": "070970b7f1d91bc85812c6c6be9ee57e"
+}

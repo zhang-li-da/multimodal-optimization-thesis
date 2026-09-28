@@ -1,0 +1,50 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-I",
+    "action": "develop",
+    "target": "cluster",
+    "parent": {
+      "id": 17,
+      "intent": "Builds on the parent return+regret baseline and adds two nonlinear corrections: (1) a bounded lookahead ratio nearest_remaining/(distance+0.1) that softly prefers candidates whose next hop stays local, without overpowering distance when the current step is already short; and (2) a progress-superlinear regret weight (constant + p^1.5) so that delaying a high-regret node gets increasingly costly as the tour shrinks, which helps avoid the long detours that hurt the parent's uniform loss. Return penalty grows ~linearly with progress. All extra terms are small relative to distance to preserve nearest-neighbor structure.",
+      "tags": [
+        "nonlinear",
+        "lookahead"
+      ],
+      "code": "def priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    p = f['progress']\n    s = -d + 0.05 * nr / (d + 0.1 + 1e-9) + (0.15 + 0.25 * (p ** 1.5)) * r + 0.30 * rd * (1 + 0.5 * p)\n    return s",
+      "loss": 0.0443142310348197,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.051584746838948314,
+        "clustered": 0.033387881909809014,
+        "grid": 0.04797006435570176
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.7878168758392703,
+          3.7322978425484106,
+          3.7322978425484106
+        ],
+        [
+          3.953701704827539,
+          3.4858276621196613,
+          3.4858276621196613
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "incumbent",
+      "start_incumbent_id": 17,
+      "start_branch_id": 11,
+      "current_incumbent_id": 17,
+      "current_branch_id": 11
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-I",
+      "checkpoint_best_loss": 0.0443142310348197
+    }
+  }
+}

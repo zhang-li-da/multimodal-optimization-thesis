@@ -1,0 +1,22 @@
+{
+  "request_sha256": "b57e6c0205d0069bede399041e1d6d3191651c50373887f309b4f380356e81fb",
+  "text": "<think>We need to produce a JSON object with a single field \"code\" containing the Python code as a string with newline escapes valid inside JSON.\n\nThe task: \"Generate a sequential TSP construction heuristic. Starting at city 0, the candidate with the HIGHEST priority is visited next. A fixed budget of 24 deterministic 2-opt delta tests then refines every tour for ALL methods.\"\n\nWe are to implement the priority function per the plan: formula \"-distance + 0.3*return_distance + 0.25*regret + 0.1*cluster_density\". The parent code is \"-distance + 0.3*return_distance + 0.2*regret\". So we need to adjust.\n\nWe must ensure the code adheres to the language constraints: exactly def priority(f): scalar local assignments, return, if/else or conditional expression, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh. No imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls. Access only listed features with f['feature']. Guard denominators with 1e-9 and log domains. <=25 source lines and <=320 AST nodes. Higher returned value is chosen.\n\nWe need to implement priority accordingly.\n\nPotential pitfalls: The formula uses features distance, return_distance, regret, cluster_density. The code can directly compute using f[...] and arithmetic. Should guard denominators? Not needed.\n\nBut we might want to include a small epsilon guard if any division. No division needed.\n\nSo code:\n\ndef priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"return_distance\"] + 0.25 * f[\"regret\"] + 0.1 * f[\"cluster_density\"]\n\nThat's within constraints.\n\nBut we might also include a guard for cluster_density? Not needed.\n\nWe must ensure we use double quotes inside string.\n\nWe need to output JSON with exactly one code field. Use newline escapes: \\n.\n\nThus:\n\n{\n  \"code\": \"def priority(f):\\n    return -f[\\\"distance\\\"] + 0.3 * f[\\\"return_distance\\\"] + 0.25 * f[\\\"regret\\\"] + 0.1 * f[\\\"cluster_density\\\"]\\n\"\n}\n\nCheck line count: 2 lines (def line, return line). Within <=25 lines.\n\nCheck AST nodes: trivial.\n\nThus final answer.</think>\n\n{\"code\": \"def priority(f):\\n    return -f[\\\"distance\\\"] + 0.3 * f[\\\"return_distance\\\"] + 0.25 * f[\\\"regret\\\"] + 0.1 * f[\\\"cluster_density\\\"]\\n\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1352,
+    "total_characters": 0,
+    "prompt_tokens": 766,
+    "completion_tokens": 586,
+    "completion_tokens_details": {
+      "reasoning_tokens": 522
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 766,
+  "output_tokens": 586,
+  "usage_complete": true,
+  "seconds": 4.684605400077999,
+  "request_id": "070989f474a0be5c776b53b7233cbcd3"
+}

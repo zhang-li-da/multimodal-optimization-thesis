@@ -1,0 +1,22 @@
+{
+  "request_sha256": "84c6a3eda6a3f260e4c77e8d0fcb3e91be1a129bf2ecaa393301a16b00c3b126",
+  "text": "<think>The user wants me to implement a priority function for a TSP heuristic. The formula provided is:\n\n`-d + (0.3 + 0.3 * p + 0.15 * (1 - c)) * r + (0.15 - 0.1 * p + 0.1 * (1 - c)) * g`\n\nWhere:\n- d = distance (current-to-candidate)\n- r = return_distance (candidate-to-start)\n- g = regret (second-nearest minus nearest among other unvisited nodes)\n- p = progress (visited fraction)\n- c = cluster_density (fraction of other unvisited cities within mean distance)\n\nThe constraints:\n- Only allowed Python features: scalar local assignments, return, if/else or conditional expressions, arithmetic operators (+ - * / % ** with constant exponent <=4), comparisons, boolean operations, calls to abs/min/max/sqrt/log/log1p/exp/tanh\n- NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random\n- Access only listed features with f['feature']\n- Guard denominators with 1e-9 and log domains\n- <=25 source lines and <=320 AST nodes\n\nLet me write the code:\n\n```python\ndef priority(f):\n    d = f['distance']\n    r = f['return_distance']\n    g = f['regret']\n    p = f['progress']\n    c = f['cluster_density']\n    return -d + (0.3 + 0.3 * p + 0.15 * (1 - c)) * r + (0.15 - 0.1 * p + 0.1 * (1 - c)) * g\n```\n\nThis looks correct. Let me verify:\n- The formula matches exactly\n- All features accessed by string key f['feature']\n- No forbidden operations\n- Uses only scalar assignments and arithmetic\n- No imports or annotations\n\nThe code should be valid. Let me count the lines: 8 lines, well under 25.\n\nThe AST nodes should be well under 320.\n\nI'll output the JSON with exactly one code field, with newline escapes valid inside JSON.\n\nActually, looking again at the formula in the plan:\n`-d + (0.3 + 0.3 * p + 0.15 * (1 - c)) * r + (0.15 - 0.1 * p + 0.1 * (1 - c)) * g`\n\nThis is exactly what I have. \n\nLet me format the JSON output properly. The code field should contain the Python code as a string with newline escapes.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    r = f['return_distance']\\n    g = f['regret']\\n    p = f['progress']\\n    c = f['cluster_density']\\n    return -d + (0.3 + 0.3 * p + 0.15 * (1 - c)) * r + (0.15 - 0.1 * p + 0.1 * (1 - c)) * g\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1495,
+    "total_characters": 0,
+    "prompt_tokens": 833,
+    "completion_tokens": 662,
+    "completion_tokens_details": {
+      "reasoning_tokens": 546
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 833,
+  "output_tokens": 662,
+  "usage_complete": true,
+  "seconds": 3.8829448998440057,
+  "request_id": "07096b735b976b5d4f7b60c7642e900c"
+}

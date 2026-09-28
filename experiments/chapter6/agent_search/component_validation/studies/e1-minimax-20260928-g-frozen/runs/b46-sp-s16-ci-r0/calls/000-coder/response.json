@@ -1,0 +1,22 @@
+{
+  "request_sha256": "c967d9010621ef14c02e39fa4b8fcda6559f5fa7e72eb31a5e6ae5a23bce46e2",
+  "text": "<think>We need to generate a Python function `priority(f)` that implements the formula:\n-d + (0.25 + 0.15*pr)*rd + 0.20*rg + 0.10*cluster_density\n\nFeatures available: distance, return_distance, nearest_remaining, mean_remaining, regret, progress, cluster_density, spread.\n\nWe need to write code using only allowed operations. The parent code is:\n\n```python\ndef priority(f):\n    d = f[\"distance\"]\n    rd = f[\"return_distance\"]\n    rg = f[\"regret\"]\n    pr = f[\"progress\"]\n    return -d + (0.25 + 0.15 * pr) * rd + 0.2 * rg\n```\n\nNow we add cluster_density term with weight 0.10. So final code:\n\n```python\ndef priority(f):\n    d = f[\"distance\"]\n    rd = f[\"return_distance\"]\n    rg = f[\"regret\"]\n    pr = f[\"progress\"]\n    cd = f[\"cluster_density\"]\n    return -d + (0.25 + 0.15 * pr) * rd + 0.2 * rg + 0.1 * cd\n```\n\nCheck constraints:\n- Exactly def priority(f), scalar local assignments, return, if/else or conditional expression, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh. NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls. Access only listed features with f['feature'].\n- <=25 source lines and <=320 AST nodes.\n\nOur code has 7 lines. Uses only allowed operations. No log/exp calls needed. All features accessed via f[\"...\"].\n\nWe need to output JSON with exactly one code field. The code must be valid Python and the JSON must have the code as a string with newline escapes.\n\nLet's format the JSON:\n\n{\n  \"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    pr = f[\\\"progress\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    return -d + (0.25 + 0.15 * pr) * rd + 0.2 * rg + 0.1 * cd\"\n}\n\nCheck quoting: The code contains double quotes. In JSON, we need to escape them as \\\". Also newlines as \\n.\n\nThe code string will be:\n\"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    pr = f[\\\"progress\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    return -d + (0.25 + 0.15 * pr) * rd + 0.2 * rg + 0.1 * cd\"\n\nWait, we need to ensure the double quotes inside the string are escaped. So:\n\ndef priority(f):\\n    d = f[\\\"distance\\\"]\\n    ...\n\nYes.\n\nDouble-check the formula: -d + (0.25 + 0.15*pr)*rd + 0.20*rg + 0.10*cluster_density. Yes.\n\nThe plan says: \"Add a cluster_density term to the parent's progress-scaled return+regret formula to improve the highest-loss family (clustered). ... Weight kept small (0.10)\". So 0.1 * cd is correct.\n\nWe must ensure no trailing spaces or extra lines. The code is exactly 7 lines. \n\nIs there any need for guard denominators? The formula doesn't have any denominators, so no need. Also no log calls. So it's fine.\n\nThus output JSON.</think>\n\n{\"code\":\"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    pr = f[\\\"progress\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    return -d + (0.25 + 0.15 * pr) * rd + 0.2 * rg + 0.1 * cd\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1737,
+    "total_characters": 0,
+    "prompt_tokens": 800,
+    "completion_tokens": 937,
+    "completion_tokens_details": {
+      "reasoning_tokens": 833
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 800,
+  "output_tokens": 937,
+  "usage_complete": true,
+  "seconds": 6.921670000068843,
+  "request_id": "07097f9a18ef3fc2a05af66d1f94750c"
+}

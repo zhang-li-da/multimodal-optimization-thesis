@@ -1,0 +1,49 @@
+{
+  "decision": {
+    "step": 0,
+    "strategy": "C-B",
+    "action": "develop",
+    "target": "local_distance",
+    "parent": {
+      "id": 1,
+      "intent": "shared hand-written seed: return_aware",
+      "tags": [
+        "local_distance",
+        "return_aware"
+      ],
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+      "loss": 0.04960169342744744,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.052843487009581414,
+        "clustered": 0.041331655032843195,
+        "grid": 0.05462993823991771
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.7612366792295795,
+          3.6846375452151303,
+          3.6846375452151303
+        ],
+        [
+          3.602213611130041,
+          3.602213611130041
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "lagging_branch",
+      "start_incumbent_id": 10,
+      "start_branch_id": 1,
+      "current_incumbent_id": 10,
+      "current_branch_id": 1
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-B",
+      "checkpoint_best_loss": 0.033078752700824415
+    }
+  }
+}

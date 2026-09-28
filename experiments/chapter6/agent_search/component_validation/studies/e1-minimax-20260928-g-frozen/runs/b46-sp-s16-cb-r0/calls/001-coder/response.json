@@ -1,0 +1,22 @@
+{
+  "request_sha256": "ac597f2054b676a2b1b5f6f3cde6efc3223832c4dd06d514a15abce31a7eefb4",
+  "text": "<think>The task is to implement a priority function for a sequential TSP construction heuristic. The plan specifies:\n\npriority = -d + 0.25*rd + 0.2*r + 0.15*r/(0.5 + nr) + 0.1*cluster_density\n\nWhere:\n- d = distance\n- rd = return_distance\n- nr = nearest_remaining\n- r = regret\n- cluster_density = fraction of other unvisited cities within mean distance\n\nConstraints:\n- Exactly def priority(f), scalar local assignments, return, if/else or conditional expression\n- Allowed operations: + - * / % ** (constant exponent <=4), comparisons, boolean operations\n- Allowed calls: abs/min/max/sqrt/log/log1p/exp/tanh\n- NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls\n- Access only listed features with f['feature']\n- Guard denominators with 1e-9 and log domains\n- <=25 source lines and <=320 AST nodes\n\nLet me write the code:\n\n```python\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    cd = f['cluster_density']\n    denom = 0.5 + nr\n    if denom < 1e-9:\n        denom = 1e-9\n    return -d + 0.25 * rd + 0.2 * r + 0.15 * r / denom + 0.1 * cd\n```\n\nLet me check:\n- Uses f['distance'], f['return_distance'], f['nearest_remaining'], f['regret'], f['cluster_density'] - all valid features\n- denom guarded with 1e-9\n- <=25 source lines: yes, 9 lines\n- Allowed operations only\n- Returns a scalar\n\nThis should work. Let me make it even tighter:\n\n```python\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    cd = f['cluster_density']\n    denom = 0.5 + nr\n    if denom < 1e-9:\n        denom = 1e-9\n    return -d + 0.25 * rd + 0.2 * r + 0.15 * r / denom + 0.1 * cd\n```\n\nLooks good. Let me format as JSON with newline escapes.\n\nThe JSON should have one field \"code\" with the Python code, using \\n for newlines.\n\n```json\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    nr = f['nearest_remaining']\\n    r = f['regret']\\n    cd = f['cluster_density']\\n    denom = 0.5 + nr\\n    if denom < 1e-9:\\n        denom = 1e-9\\n    return -d + 0.25 * rd + 0.2 * r + 0.15 * r / denom + 0.1 * cd\"}\n```\n\nThis matches the parent code structure but adds the cluster_density bonus term.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    nr = f['nearest_remaining']\\n    r = f['regret']\\n    cd = f['cluster_density']\\n    denom = 0.5 + nr\\n    if denom < 1e-9:\\n        denom = 1e-9\\n    return -d + 0.25 * rd + 0.2 * r + 0.15 * r / denom + 0.1 * cd\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1738,
+    "total_characters": 0,
+    "prompt_tokens": 898,
+    "completion_tokens": 840,
+    "completion_tokens_details": {
+      "reasoning_tokens": 711
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 898,
+  "output_tokens": 840,
+  "usage_complete": true,
+  "seconds": 7.110107500106096,
+  "request_id": "070980edef6c254995319a05548df858"
+}

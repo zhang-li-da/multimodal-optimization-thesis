@@ -1,0 +1,49 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-B",
+    "action": "develop",
+    "target": "cluster",
+    "parent": {
+      "id": 20,
+      "intent": "Enhance the return-aware seed by adding a regret term (weight 0.2) to prioritize candidates that are critical bridges, reducing future detours. The return distance weight is increased from 0.25 to 0.3 to slightly emphasize the cost of returning to the start, especially later in the tour. The distance term remains dominant to ensure local optimality.",
+      "tags": [
+        "return_aware",
+        "regret"
+      ],
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"return_distance\"] + 0.2 * f[\"regret\"]\n",
+      "loss": 0.0369932419204262,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.04000912268390061,
+        "clustered": 0.03298606381725814,
+        "grid": 0.03798453926011983
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.9623146489847163,
+          3.885715514970267,
+          3.885715514970267
+        ],
+        [
+          2.7923145857394407,
+          2.7923145857394407
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "lagging_branch",
+      "start_incumbent_id": 10,
+      "start_branch_id": 1,
+      "current_incumbent_id": 10,
+      "current_branch_id": 20
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-B",
+      "checkpoint_best_loss": 0.033078752700824415
+    }
+  }
+}
