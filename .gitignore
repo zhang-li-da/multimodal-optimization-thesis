@@ -46,6 +46,11 @@ experiments/chapter6/agent_search/s3_tsp/studies/*/dispatch/
 experiments/chapter6/agent_search/s3_tsp_r3/studies/*/runs/
 experiments/chapter6/agent_search/s3_tsp_r3/studies/*/tests/
 experiments/chapter6/agent_search/s3_tsp_r3/studies/*/dispatch/
+
+# Component-validation live state is preserved in the published raw-study.zip.
+experiments/chapter6/agent_search/component_validation/studies/*/runs/
+experiments/chapter6/agent_search/component_validation/studies/*/tests/
+experiments/chapter6/agent_search/component_validation/studies/*/dispatch/
 # S3 publication uses verified per-block ZIP parts to keep downloads small.
 experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw-study.zip
 experiments/chapter6/agent_search/s3_tsp_r3/results/*/browser-check/profile/

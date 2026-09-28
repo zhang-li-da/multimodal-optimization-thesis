@@ -104,7 +104,7 @@ def package(study, output):
             if path.is_file() and path.name != ".run.lock":
                 rel = f"study/{path.relative_to(study).as_posix()}"; zf.write(path, rel)
                 index.append({"path": rel, "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "bytes": path.stat().st_size})
-        for name in ("ANALYSIS.json", "REPORT_ZH.md", "ARCHIVE_AUDIT.json"):
+        for name in ("ANALYSIS.json", "REPORT_ZH.md", "TECHNICAL_REPORT.md", "ARCHIVE_AUDIT.json"):
             path = output / name; zf.write(path, name)
             index.append({"path": name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "bytes": path.stat().st_size})
     save_json(output / "ARCHIVE_INDEX.json", index, immutable=False)

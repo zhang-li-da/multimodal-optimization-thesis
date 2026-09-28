@@ -324,7 +324,54 @@ def analyze(study, output):
         interval = "NA" if effect["lower"] is None else f"[{100 * effect['lower']:+.3f}, {100 * effect['upper']:+.3f}]"
         lines.append(f"| {name} | {effect['n_blocks']} | {mean} | {interval} |")
     lines += ["", "分析只读取归档，没有新增模型调用。完整机制计数、区块配对值和状态保存在 `E2_R3_ANALYSIS.json`。", ""]
-    (output / "REPORT_ZH.md").write_text("\n".join(lines), encoding="utf-8")
+    # Rewrite the human-readable table with UTF-8 literals; older generated
+    # copies of this module contained mojibake in the report template.
+    report_lines = [
+        "# E2 r3 离线分析", "",
+        f"实验 `{report['study_id']}`：{report['jobs_tested']}/{report['jobs_planned']} 个任务已完成独立 test。", "",
+        "| 组别 | test 任务 | 平均 Test gap | 已知 token | 分支开发 | 保护槽位 | 淘汰 |",
+        "|---|---:|---:|---:|---:|---:|---:|",
+    ]
+    for arm, group in groups.items():
+        gap = "NA" if group["mean_test_gap"] is None else f"{group['mean_test_gap']:.4%}"
+        report_lines.append(
+            f"| {arm} | {group['tested_jobs']}/{group['planned_jobs']} | {gap} | "
+            f"{group['mean_known_tokens'] or 0:.0f} | {group['branch_entries_created']} | "
+            f"{group['protected_slots_scheduled']} | {group['pool_evictions']} |"
+        )
+    report_lines += [
+        "", "## 因子效应", "",
+        "负值表示开启因素后 Test gap 更低；区间按数据块进行描述性重采样。", "",
+        "| 因子 | 数据块 | 平均差值（百分点） | 区间 |", "|---|---:|---:|---:|",
+    ]
+    for name in ("P_S_scheduling_priority", "P_E_eviction_protection", "P_S_by_P_E_interaction"):
+        effect = factor_effects[name]["difference"]
+        mean = "NA" if effect["mean"] is None else f"{100 * effect['mean']:+.3f}"
+        interval = "NA" if effect["lower"] is None else f"[{100 * effect['lower']:+.3f}, {100 * effect['upper']:+.3f}]"
+        report_lines.append(f"| {name} | {effect['n_blocks']} | {mean} | {interval} |")
+    report_lines += [
+        "", "分析只读取归档，没有新增模型调用。完整机制计数、区块配对值和状态保存在 `E2_R3_ANALYSIS.json`。", "",
+    ]
+    (output / "REPORT_ZH.md").write_text("\n".join(report_lines), encoding="utf-8")
+    # Keep the checked-in summary ASCII-only so it remains readable regardless
+    # of the shell's code page; the JSON artifact retains all numeric detail.
+    ascii_lines = [
+        "# E2 r3 Offline Analysis", "",
+        f"Study `{report['study_id']}`: {report['jobs_tested']}/{report['jobs_planned']} jobs have independent test results.", "",
+        "| Arm | Tested | Mean test gap | Mean known tokens | Branch entries | Protected slots | Evictions |",
+        "|---|---:|---:|---:|---:|---:|---:|",
+    ]
+    for arm, group in groups.items():
+        gap = "NA" if group["mean_test_gap"] is None else f"{group['mean_test_gap']:.4%}"
+        ascii_lines.append(f"| {arm} | {group['tested_jobs']}/{group['planned_jobs']} | {gap} | {group['mean_known_tokens'] or 0:.0f} | {group['branch_entries_created']} | {group['protected_slots_scheduled']} | {group['pool_evictions']} |")
+    ascii_lines += ["", "## Factor effects", "", "Negative values favor the factor-on condition; intervals resample data blocks.", "", "| Factor | Blocks | Mean difference (pp) | Interval |", "|---|---:|---:|---:|"]
+    for name in ("P_S_scheduling_priority", "P_E_eviction_protection", "P_S_by_P_E_interaction"):
+        effect = factor_effects[name]["difference"]
+        mean = "NA" if effect["mean"] is None else f"{100 * effect['mean']:+.3f}"
+        interval = "NA" if effect["lower"] is None else f"[{100 * effect['lower']:+.3f}, {100 * effect['upper']:+.3f}]"
+        ascii_lines.append(f"| {name} | {effect['n_blocks']} | {mean} | {interval} |")
+    ascii_lines += ["", "This report reads the archive only and makes no model calls. Full mechanism counts and block pairs are in E2_R3_ANALYSIS.json.", ""]
+    (output / "REPORT_ZH.md").write_text("\n".join(ascii_lines), encoding="utf-8")
     return report
 
 
