@@ -122,3 +122,24 @@ def test_e1_test_all_skips_infrastructure_incomplete_jobs(tmp_path, monkeypatch)
     assert result["status"] == "test_complete"
     assert result["tested_jobs"] == 0
     assert not (study / "tests" / "job-a.json").exists()
+
+
+def test_e1_verify_rejects_manifest_without_embedded_protocol(tmp_path, monkeypatch):
+    from . import study_e1 as module
+
+    study = tmp_path / "study"
+    study.mkdir()
+    manifest = {
+        "schema": "chapter6-e1-same-state-study-v1",
+        "status": "FROZEN_PENDING_EXECUTION",
+        "protocol_path": "protocol.final.json",
+        "protocol_sha256": "protocol-hash",
+        "checkpoints": [], "data": [],
+    }
+    manifest["manifest_sha256"] = digest(manifest)
+    (study / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+    monkeypatch.setattr(module, "ROOT", tmp_path)
+    monkeypatch.setattr(module, "file_sha", lambda _: "protocol-hash")
+
+    with pytest.raises(ValueError, match="does not embed"):
+        module.verify(study, frozen=True)

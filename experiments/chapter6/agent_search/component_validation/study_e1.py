@@ -131,6 +131,7 @@ def prepare(output: Path, *, source_study: Path = DEFAULT_SOURCE_STUDY) -> dict:
         "study_id": "chapter6-component-validation-e1-20260927",
         "source_commit": git("rev-parse", "HEAD"), "source": source_record(),
         "tooling_source": tooling_source(), "environment": environment(),
+        "protocol": protocol,
         "protocol_path": PROTOCOL.relative_to(ROOT).as_posix(),
         "protocol_sha256": file_sha(PROTOCOL),
         "source_study": {"path": str(Path(source_study).resolve()),
@@ -158,6 +159,8 @@ def verify(study: Path, *, frozen: bool = False) -> dict:
         raise ValueError("E1 manifest digest mismatch")
     if file_sha(ROOT / manifest["protocol_path"]) != manifest["protocol_sha256"]:
         raise ValueError("E1 protocol changed after preparation")
+    if manifest.get("protocol") != read_json(PROTOCOL):
+        raise ValueError("E1 manifest does not embed the current frozen protocol")
     if manifest.get("source") != source_record() or manifest.get("tooling_source") != tooling_source():
         raise ValueError("E1 source files changed; create a new study version")
     if frozen and manifest["status"] != "FROZEN_PENDING_EXECUTION":
@@ -347,6 +350,7 @@ def search_all(study: Path, acceptance_dir: Path, *, max_concurrency: int | None
             "job_id": job["job_id"], "status": "not_started", "reason": "dispatcher_exit"})
     summary = {
         "schema": "chapter6-e1-dispatch-summary-v1", "study_id": manifest["study_id"],
+        "status": "provider_paused" if paused is not None else "dispatch_complete",
         "manifest_sha256": manifest["manifest_sha256"], "acceptance": acceptance,
         "planned_jobs": len(jobs), "submitted_jobs": len(submitted),
         "completed_jobs": sum(record.get("status") in E1_TERMINAL for record in records),
