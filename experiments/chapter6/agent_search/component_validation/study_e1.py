@@ -375,6 +375,11 @@ def test_all(study: Path) -> dict:
     for job in manifest["jobs"]:
         run_dir = study / "runs" / job["job_id"]
         selection_path = run_dir / "selection_frozen.json"
+        # Provider/budget terminal states may have no validation selection.
+        # Keep them in the audit, but never manufacture a test observation for
+        # an incomplete continuation.
+        if statuses[job["job_id"]]["status"] != "continuation_complete":
+            continue
         if not selection_path.exists():
             continue
         selection = read_json(selection_path)
@@ -426,7 +431,8 @@ def main() -> None:
         result = search_all(args.study, args.acceptance, max_concurrency=args.max_concurrency)
     else:
         with offline_only(): result = verify(args.study, frozen=args.frozen)
-    print(json.dumps({"status": result["status"], "jobs": len(result["jobs"]),
+    print(json.dumps({"status": result["status"],
+                      "jobs": len(result.get("jobs", [])) or result.get("planned_jobs", 0),
                       "checkpoints": len(result.get("checkpoints", [])),
                       "manifest_sha256": result.get("manifest_sha256")}, ensure_ascii=False))
 

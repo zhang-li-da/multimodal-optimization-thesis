@@ -102,3 +102,23 @@ def test_e1_acceptance_requires_full_planner_coder_workload(tmp_path):
     }), encoding="utf-8")
     with pytest.raises(ValueError, match="3\\+3"):
         _acceptance_summary(summary, expected_model="MiniMax-M3")
+
+
+def test_e1_test_all_skips_infrastructure_incomplete_jobs(tmp_path, monkeypatch):
+    from . import study_e1 as module
+
+    study = tmp_path / "study"
+    run = study / "runs" / "job-a"
+    run.mkdir(parents=True)
+    (run / "status.json").write_text(json.dumps({"status": "infrastructure_incomplete"}),
+                                      encoding="utf-8")
+    monkeypatch.setattr(module, "verify", lambda *args, **kwargs: {
+        "manifest_sha256": "manifest", "jobs": [{"job_id": "job-a", "data_block": 44}],
+        "data": [],
+    })
+
+    result = module.test_all(study)
+
+    assert result["status"] == "test_complete"
+    assert result["tested_jobs"] == 0
+    assert not (study / "tests" / "job-a.json").exists()
