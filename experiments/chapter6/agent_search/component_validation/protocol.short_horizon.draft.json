@@ -1,0 +1,135 @@
+{
+  "schema": "chapter6-component-validation-short-horizon-v1",
+  "study_id": "chapter6-component-validation-short-horizon-20260929",
+  "status": "DRAFT_OFFLINE_ONLY",
+  "purpose": "same-state short-horizon opportunity-cost diagnostic before a natural-search confirmation",
+  "model": {
+    "provider": "minimax-cn-coding-plan",
+    "requested_model": "MiniMax-M3",
+    "provider_endpoint": "OpenCode catalog endpoint",
+    "service_acceptance_required": "the existing full planner/coder acceptance record must be referenced at freeze"
+  },
+  "task": "tsp",
+  "profile": "chapter6-v12-tsp14-v1",
+  "source_state": {
+    "study": "s3-tsp-minimax-strategy-screen-20260927-r3",
+    "source_arm": "FB_P",
+    "source_blocks": [32, 33, 34, 35, 36, 37, 38, 39],
+    "continuation_blocks": [52, 53, 54, 55, 56, 57, 58, 59],
+    "source_block_for_continuation": {
+      "52": 32,
+      "53": 33,
+      "54": 34,
+      "55": 35,
+      "56": 36,
+      "57": 37,
+      "58": 38,
+      "59": 39
+    },
+    "source_manifest_required": true,
+    "source_history_is_immutable": true,
+    "checkpoint_selection_must_precede_continuation": true
+  },
+  "checkpoints": {
+    "phases": [
+      {"id": "early", "source_step": 8},
+      {"id": "late", "source_step": 24}
+    ],
+    "per_block": 2,
+    "planned_total": 16,
+    "selection": {
+      "incumbent": "lowest valid continuation-block validation loss in the fixed source prefix",
+      "branch": "valid node with loss strictly above incumbent and within 0.035 loss units, and behavior distance above 0.08",
+      "missing_branch": "record preparation_incomplete; do not substitute a later node or inspect continuation outcomes",
+      "selection_data": ["probe", "validation"],
+      "test_is_forbidden": true
+    }
+  },
+  "actions": {
+    "C-I": {
+      "name": "incumbent_development",
+      "step_0": "develop current validation incumbent",
+      "later_steps": "develop the best valid child on the incumbent project; update global incumbent independently"
+    },
+    "C-B": {
+      "name": "branch_development",
+      "step_0": "develop the frozen quality-close behavior-different branch",
+      "later_steps": "continue the branch investment project through locally improving children; do not relabel a behavior cell as a new budget project"
+    },
+    "C-E": {
+      "name": "explore_then_develop",
+      "step_0": "one parentless exploration",
+      "later_steps": "develop the first valid exploration result and its locally improving children",
+      "invalid_exploration": "consume the step; later steps remain parentless exploration and are marked explore_followup_not_started"
+    },
+    "common_budget": "exactly four proposals per job and at most eight model requests; invalid or truncated proposals consume their proposal slot"
+  },
+  "matrix": {
+    "actions": ["C-I", "C-B", "C-E"],
+    "repetitions": [0, 1],
+    "steps_per_job": 4,
+    "planned_checkpoints": 16,
+    "planned_jobs": 96,
+    "planned_proposals": 384,
+    "planned_model_requests": 768
+  },
+  "state_contract": {
+    "behavior_cell_id": "diagnostic behavior grouping; may change after a proposal",
+    "investment_id": "stable project identity inherited by valid locally improving children",
+    "lineage_id": "immutable ancestor ledger for cost and duplicate-budget accounting",
+    "global_incumbent": "best valid node over the complete checkpoint plus continuation",
+    "branch_project": "separate from behavior_cell_id; no automatic budget reset on behavior change",
+    "exploration_project": "created only by a valid C-E step 0 result"
+  },
+  "endpoints": {
+    "primary": "test loss improvement over the checkpoint incumbent under equal four-proposal budgets",
+    "secondary": [
+      "test loss and validation loss",
+      "improvement over checkpoint incumbent",
+      "improvement over selected parent",
+      "first global improvement step",
+      "exploration-to-development follow-up rate",
+      "valid proposal and truncation rate",
+      "known tokens and wall time",
+      "whether continuation project crossed a behavior-cell boundary"
+    ],
+    "opportunity_cost": "C-B or C-E is valuable only when its test improvement exceeds C-I from the same block-phase checkpoint after equal cost accounting",
+    "unit_of_inference": "data block; early and late checkpoints are paired within block; repetitions are within-checkpoint repeats"
+  },
+  "isolation": {
+    "search_access": ["probe", "validation"],
+    "test_access": "only after all live jobs reach a terminal status",
+    "test_selection": "best validation node after four proposals; test is never read during selection",
+    "fresh_data": "blocks 52-59 must have no ID or exact-coordinate overlap with blocks 3-51",
+    "analysis": "report block-paired differences and descriptive block bootstrap; do not treat 96 jobs or 384 proposals as independent experiments"
+  },
+  "generation": {
+    "temperature": 0.7,
+    "planner_max_tokens": 16384,
+    "coder_max_tokens": 8192,
+    "timeout_seconds": 180,
+    "request_limit_per_job": 8,
+    "token_budget_per_job": 50000,
+    "wall_limit_seconds_per_job": 900,
+    "retry_policy": "none",
+    "provider_failure": "terminate only the affected job, preserve partial records, and retain an explicit infrastructure_incomplete status",
+    "global_pause": "reuse the provider diagnostics and global pause gate from E1/E2; never dispatch remaining jobs after a frozen global halt"
+  },
+  "freeze_rules": {
+    "new_model_calls_before_freeze": 0,
+    "append_jobs_after_freeze": false,
+    "post_hoc_checkpoint_substitution": false,
+    "parameter_tuning_after_continuation": false,
+    "claims": "diagnostic evidence about conditional opportunity cost only; this study cannot establish universal superiority or the final Chapter 6 method"
+  },
+  "required_offline_checks": [
+    "source study manifest and every source run hash are recorded",
+    "all 16 checkpoint identities and source steps are frozen before any continuation response",
+    "early and late checkpoints have independent data snapshot hashes",
+    "each checkpoint has a valid incumbent and an explicitly eligible branch or a preparation_incomplete record",
+    "C-E fixture test confirms step 0 exploration followed by development of its valid result",
+    "invalid C-E step 0 fixture test confirms no fabricated parent or budget reset",
+    "request and proposal counts are exactly 8 and 4 per job respectively",
+    "no test split is loaded by preparation or live continuation"
+  ]
+}
