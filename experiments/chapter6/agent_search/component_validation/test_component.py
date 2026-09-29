@@ -162,6 +162,51 @@ def test_trial_is_one_shot_and_behavior_mutation_does_not_reset_lineage_budget()
     assert awarded <= 1
 
 
+def test_cross_behavior_progress_continues_same_investment_and_can_renew():
+    state = ComponentSearchState("P11", 0, steps=32, capacity=2, grant=1)
+    state.initialize(_seeds())
+    # Step 6 is an exploration slot.  It creates the first funded project.
+    _, first, trial = _candidate(state, 0, loss=.120, mode=3)
+    assert trial["investment_id"] is not None
+    investment_id = trial["investment_id"]
+    assert trial["behavior_cell_id"] == trial["direction_id"]
+    # Step 1 is an incumbent slot in this fixture, but it is still a child of
+    # the current best only when explicitly supplied through the allocation.
+    # Use the next branch slot after advancing with valid no-op candidates.
+    _to_step(state, 3)
+    _, child, event = _candidate(state, 3, loss=.110, mode=4)
+    assert event["new_direction"] is True
+    assert event["investment_id"] == investment_id
+    assert event["investment_progress"] is True
+    assert event["admission_reason"] == "direction_progression"
+    assert event["development_grant_awarded"] == 1
+    assert state.ledgers[event["lineage_id"]]["grant_awarded"] == 2
+    assert state.investments[investment_id]["best_node_id"] == child["id"]
+
+
+def test_behavior_change_without_project_progress_does_not_reset_trial():
+    state = ComponentSearchState("P11", 0, steps=32, capacity=2, grant=1)
+    state.initialize(_seeds())
+    _, first, trial = _candidate(state, 0, loss=.120, mode=3)
+    investment_id = trial["investment_id"]
+    _to_step(state, 3)
+    _, _, event = _candidate(state, 3, loss=.125, mode=4)
+    assert event["investment_id"] == investment_id
+    assert event["investment_progress"] is False
+    assert event["admission_reason"] in {"no_investment_evidence", "not_eligible"}
+    assert state.ledgers[event["lineage_id"]]["grant_awarded"] == 1
+
+
+def test_snapshot_contains_separate_identity_ledgers():
+    state = ComponentSearchState("P00", 0, steps=32)
+    state.initialize(_seeds())
+    snapshot = state.snapshot()
+    assert snapshot["behavior_cell_id"]
+    assert snapshot["node_investment_id"] == {}
+    assert snapshot["direction_investment_id"] == {}
+    assert snapshot["investments"] == {}
+
+
 def test_eviction_factor_changes_only_eviction_eligibility():
     unprotected = ComponentSearchState("P00", 0, steps=32, capacity=2)
     protected = ComponentSearchState("P01", 0, steps=32, capacity=2)
