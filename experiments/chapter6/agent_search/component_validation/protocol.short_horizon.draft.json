@@ -115,6 +115,12 @@
     "provider_failure": "terminate only the affected job, preserve partial records, and retain an explicit infrastructure_incomplete status",
     "global_pause": "reuse the provider diagnostics and global pause gate from E1/E2; never dispatch remaining jobs after a frozen global halt"
   },
+  "execution": {
+    "max_concurrency": 1,
+    "dispatch_interval_seconds": 2.0,
+    "global_pause_after_rate_limits": 2,
+    "request_pacing_is_distinct_from_concurrency": true
+  },
   "freeze_rules": {
     "new_model_calls_before_freeze": 0,
     "append_jobs_after_freeze": false,
