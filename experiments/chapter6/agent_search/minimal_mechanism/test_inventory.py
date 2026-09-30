@@ -9,6 +9,7 @@ from experiments.chapter6.agent_search.minimal_mechanism.inventory import (
     source_index_bytes,
     verify_source_index,
 )
+from experiments.chapter6.agent_search.minimal_mechanism.freeze_sources import canonical_source_bytes
 
 
 def test_json_inventory_parser_accepts_utf16_bom():
@@ -56,3 +57,7 @@ def test_scan_exclusions_are_relative_to_repository_root(tmp_path):
     (root / "batch.json").write_text('{"block": 60}', encoding="utf-8")
 
     assert [row["path"] for row in source_artifact_rows(root)] == ["batch.json"]
+
+
+def test_source_hash_bytes_match_git_lf_normalization():
+    assert canonical_source_bytes(b"first\r\nsecond\n") == b"first\nsecond\n"

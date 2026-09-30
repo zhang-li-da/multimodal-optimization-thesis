@@ -83587,6 +83587,11 @@
       "sha256": "4486551a4309c649ad71e4b0c744ccc66dfe76becdfbf2ace3cab5c6ba6cfbd0"
     },
     {
+      "bytes": 15125736,
+      "path": "experiments/chapter6/agent_search/minimal_mechanism/ignored-artifacts.zip",
+      "sha256": "96ff158e6e19a3aa7cb5092984b87034708fc296332895fba85c160027215e03"
+    },
+    {
       "bytes": 66929914,
       "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw-study.zip",
       "sha256": "126259c683cbbfe27bc2ef9829eb5f4917032365f8a16ef7c21242f0380a3d3c"
@@ -83769,7 +83774,7 @@
   "data_source_index": {
     "file_count": 55015,
     "path": "experiments/chapter6/agent_search/minimal_mechanism/DATA_SOURCE_SHA256.tsv",
-    "sha256": "b5eb4137f3b93f7d999af59f8af519a269baa72223def6acbbf7a8165d6918ec",
+    "sha256": "a49cb081bcf273f726ebabb5775b768e519f12ddd5727af421ebc599fba4bc10",
     "total_bytes": 2951536714
   },
   "historical_tsp14_blocks": {
@@ -83780,7 +83785,7 @@
       59
     ]
   },
-  "inventory_sha256": "f7865a66f2d5d46a7fd0027a2c226fcc110d4ba7b0f02bad815e52c64b721784",
+  "inventory_sha256": "c5254f3971956459c0814070a63b5f61fbc9710da4450270aaced80c9b8f7ef0",
   "manifest_scan": {
     "claimed_block_ids": [
       0,
@@ -92570,7 +92575,7 @@
     "historical_tsp_profile": "chapter6-v12-tsp14-v1",
     "test_outputs_computed": false
   },
-  "source_commit": "6d491ac6391ccc2c7a00baa5e695fbe66e66f16a",
+  "source_commit": "8b4aaa89a16e50eb9e95472b2f2e09d003aac256",
   "source_dependency_files": [
     {
       "bytes": 3394,
@@ -92743,9 +92748,9 @@
       "sha256": "e15e7b6b60f225178c05c1acf859bfd12fbbe15ecc71ad79ec3fae3e4597a43b"
     },
     {
-      "bytes": 14062,
+      "bytes": 14353,
       "path": "experiments/chapter6/agent_search/minimal_mechanism/REPORT_ZH.md",
-      "sha256": "f433d022300c9176af12a3b6c689a44a9b3c3a7f935b7f8e41174d41a5119b07"
+      "sha256": "c57e7ad401d275425ef16ede5646a7bb973e7a746cec7f1742a8a752fc9d0d3c"
     },
     {
       "bytes": 33071,
@@ -92768,14 +92773,14 @@
       "sha256": "3afbd940f09458fb059de680ccb9015c881b360ab82f0222e096a4da1993b5fc"
     },
     {
-      "bytes": 3405,
+      "bytes": 3596,
       "path": "experiments/chapter6/agent_search/minimal_mechanism/freeze_sources.py",
-      "sha256": "c6fb8fa8b520fe0d526005f547a3d0aa7e809d00b36f818573ac9c5818a05c87"
+      "sha256": "2fb8827d81a1fc525c5bf4cca34f6f5f00451d2915c096cdf191a46335c44789"
     },
     {
-      "bytes": 21488,
+      "bytes": 22663,
       "path": "experiments/chapter6/agent_search/minimal_mechanism/inventory.py",
-      "sha256": "a3a6735437d1ed32c827f649b7eaa5d3a166b3953d555447234b761a13c8aa3b"
+      "sha256": "f8232b74e81d76417d1abe3ce28d67f1df4e116340787a338749fae71507d599"
     },
     {
       "bytes": 25605,
@@ -92803,9 +92808,9 @@
       "sha256": "c7249f392bea926338a2984fb52023baebdfd7ca2a955ff748dac54dc781c9b1"
     },
     {
-      "bytes": 2113,
+      "bytes": 2352,
       "path": "experiments/chapter6/agent_search/minimal_mechanism/test_inventory.py",
-      "sha256": "069cdd6a136d11137ea472034d982e581aa402f9b44b8bb893d3d5a178f79cc4"
+      "sha256": "455cb7ef1b167a77ed6041accd8e8c4b449274ecfee53ac915257c7441f81ac1"
     },
     {
       "bytes": 8782,

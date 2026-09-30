@@ -18,6 +18,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = Path(__file__).resolve().parents[4]
 OUTPUT = Path(__file__).with_name("DATA_INVENTORY.json")
 SOURCE_INDEX = Path(__file__).with_name("DATA_SOURCE_SHA256.tsv")
+PUBLISHED_IGNORED_ARCHIVE = Path(__file__).with_name("ignored-artifacts.zip")
 SKIP_PARTS = {".git", ".pytest_cache", "__pycache__", ".venv", "venv", "node_modules"}
 SENSITIVE_NAMES = {"credentials.json", "secrets.json"}
 DATA_ARTIFACT_SUFFIXES = {".json", ".csv", ".zip"}
@@ -132,6 +133,21 @@ def source_artifact_rows(root: Path):
     return rows
 
 
+def published_archive_rows(root: Path):
+    """Return data rows covered by the published supplement archive."""
+    if not PUBLISHED_IGNORED_ARCHIVE.is_file():
+        return []
+    rows = []
+    with zipfile.ZipFile(PUBLISHED_IGNORED_ARCHIVE) as archive:
+        for member in archive.infolist():
+            if member.is_dir():
+                continue
+            raw = archive.read(member)
+            rows.append({"kind": Path(member.filename).suffix.lower().lstrip("."),
+                         "path": member.filename, "bytes": len(raw), "sha256": sha256(raw)})
+    return rows
+
+
 def source_index_bytes(rows: list[dict]) -> bytes:
     stream = io.StringIO(newline="")
     writer = csv.DictWriter(stream, fieldnames=("kind", "path", "bytes", "sha256"),
@@ -164,6 +180,11 @@ def verify_source_index(path: Path = SOURCE_INDEX, root: Path = ROOT,
     except (OSError, KeyError, TypeError, ValueError) as exc:
         raise ValueError("data source hash index is missing or malformed") from exc
     current = source_artifact_rows(root)
+    current_paths = {row["path"] for row in current}
+    if root == ROOT.resolve() and PUBLISHED_IGNORED_ARCHIVE.is_file():
+        current.extend(row for row in published_archive_rows(root)
+                       if row["path"] not in current_paths)
+        current.sort(key=lambda row: row["path"])
     if current != recorded:
         current_paths = {row["path"] for row in current}
         recorded_paths = {row["path"] for row in recorded}
@@ -410,6 +431,10 @@ def main():
     if root != ROOT.resolve():
         parser.error(f"--root must be the current repository root: {ROOT.resolve()}")
     rows = source_artifact_rows(root)
+    existing_paths = {row["path"] for row in rows}
+    rows.extend(row for row in published_archive_rows(root)
+                if row["path"] not in existing_paths)
+    rows.sort(key=lambda row: row["path"])
     SOURCE_INDEX.write_bytes(source_index_bytes(rows))
     inventory = build_inventory(root, source_rows=rows, source_index_path=SOURCE_INDEX)
     verify_source_index(SOURCE_INDEX, root, expected=inventory["data_source_index"])

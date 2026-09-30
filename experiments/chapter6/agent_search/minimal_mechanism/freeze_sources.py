@@ -21,6 +21,11 @@ def canonical_digest(value: dict) -> str:
     return sha256(payload.encode("utf-8"))
 
 
+def canonical_source_bytes(raw: bytes) -> bytes:
+    """Match GitHub/Git archive bytes for text files under core.autocrlf."""
+    return raw.replace(b"\r\n", b"\n")
+
+
 def source_rows() -> list[dict]:
     rows = []
     for path in HERE.rglob("*"):
@@ -28,7 +33,7 @@ def source_rows() -> list[dict]:
             continue
         if path == OUTPUT or path.suffix.lower() not in {".py", ".json", ".md", ".txt", ".tsv"}:
             continue
-        raw = path.read_bytes()
+        raw = canonical_source_bytes(path.read_bytes())
         rows.append({"path": path.relative_to(HERE).as_posix(),
                      "bytes": len(raw), "sha256": sha256(raw)})
     return sorted(rows, key=lambda row: row["path"])
