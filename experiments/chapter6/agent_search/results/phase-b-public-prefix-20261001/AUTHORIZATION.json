@@ -1,0 +1,8 @@
+{
+  "status": "approved",
+  "study_manifest_sha256": "29cc55e3443fa84c2156671c9b087585df6c6b224b81ba2d4cafa24421bf0550",
+  "approved_stages": ["public_prefix"],
+  "requested_model": "MiniMax-M3",
+  "max_requests": 384,
+  "max_tokens": 2000000
+}
