@@ -83772,10 +83772,10 @@
     "status": "offline-generated only; no evaluation results and no authorization to execute"
   },
   "data_source_index": {
-    "file_count": 55015,
+    "file_count": 55016,
     "path": "experiments/chapter6/agent_search/minimal_mechanism/DATA_SOURCE_SHA256.tsv",
-    "sha256": "a49cb081bcf273f726ebabb5775b768e519f12ddd5727af421ebc599fba4bc10",
-    "total_bytes": 2951536714
+    "sha256": "90f0ca3b9f9897e85211d42cca5fd3b0055dee97e352400507181fec4f95c5ab",
+    "total_bytes": 2966662450
   },
   "historical_tsp14_blocks": {
     "id_count": 6156,
@@ -83785,7 +83785,7 @@
       59
     ]
   },
-  "inventory_sha256": "c5254f3971956459c0814070a63b5f61fbc9710da4450270aaced80c9b8f7ef0",
+  "inventory_sha256": "3a3653dba7db766bc2be169a48c46e359ac8e4ca86de9829f6ee867454091807",
   "manifest_scan": {
     "claimed_block_ids": [
       0,
@@ -92547,8 +92547,8 @@
     "filesystem_json_bytes": 2569722042,
     "filesystem_json_files": 54925,
     "json_parse_failures": [],
-    "zip_json_members": 73209,
-    "zip_json_uncompressed_bytes": 2856290851
+    "zip_json_members": 75443,
+    "zip_json_uncompressed_bytes": 3005321112
   },
   "schema": "chapter6-minimal-mechanism-data-inventory-v1",
   "scope": {
@@ -92575,7 +92575,7 @@
     "historical_tsp_profile": "chapter6-v12-tsp14-v1",
     "test_outputs_computed": false
   },
-  "source_commit": "8b4aaa89a16e50eb9e95472b2f2e09d003aac256",
+  "source_commit": "b13c4ee005ac1ad134b95b7028a3f4fb8727646c",
   "source_dependency_files": [
     {
       "bytes": 3394,
@@ -92748,9 +92748,9 @@
       "sha256": "e15e7b6b60f225178c05c1acf859bfd12fbbe15ecc71ad79ec3fae3e4597a43b"
     },
     {
-      "bytes": 14353,
+      "bytes": 14389,
       "path": "experiments/chapter6/agent_search/minimal_mechanism/REPORT_ZH.md",
-      "sha256": "c57e7ad401d275425ef16ede5646a7bb973e7a746cec7f1742a8a752fc9d0d3c"
+      "sha256": "961dc7adf65cbe6e15056457b68d765306c3a70bc3117576175cc7b5a54f7273"
     },
     {
       "bytes": 33071,
@@ -92773,14 +92773,14 @@
       "sha256": "3afbd940f09458fb059de680ccb9015c881b360ab82f0222e096a4da1993b5fc"
     },
     {
-      "bytes": 3596,
+      "bytes": 3618,
       "path": "experiments/chapter6/agent_search/minimal_mechanism/freeze_sources.py",
-      "sha256": "2fb8827d81a1fc525c5bf4cca34f6f5f00451d2915c096cdf191a46335c44789"
+      "sha256": "951c4a0854a34b35d98149552c076ed5dca129e837b997c31fbfcef66d96c427"
     },
     {
-      "bytes": 22663,
+      "bytes": 22754,
       "path": "experiments/chapter6/agent_search/minimal_mechanism/inventory.py",
-      "sha256": "f8232b74e81d76417d1abe3ce28d67f1df4e116340787a338749fae71507d599"
+      "sha256": "5f5fc12a60b1162c8e59f02f2eca90b1f3ab7ec0b315497466ab253d72307240"
     },
     {
       "bytes": 25605,
@@ -92808,9 +92808,9 @@
       "sha256": "c7249f392bea926338a2984fb52023baebdfd7ca2a955ff748dac54dc781c9b1"
     },
     {
-      "bytes": 2352,
+      "bytes": 3029,
       "path": "experiments/chapter6/agent_search/minimal_mechanism/test_inventory.py",
-      "sha256": "455cb7ef1b167a77ed6041accd8e8c4b449274ecfee53ac915257c7441f81ac1"
+      "sha256": "ab6e2e9c6bcea4cd7f8ba2927a67e57e2c63832262bcde17e0980b9c3c076c1a"
     },
     {
       "bytes": 8782,

@@ -114,8 +114,8 @@ def is_skipped(path: Path, root: Path) -> bool:
 
 def _is_package_file(path: Path) -> bool:
     try:
-        path.resolve().relative_to(HERE)
-        return True
+        relative = path.resolve().relative_to(HERE).as_posix()
+        return relative not in {PUBLISHED_IGNORED_ARCHIVE.name, "ignored-artifacts.zip"}
     except ValueError:
         return False
 

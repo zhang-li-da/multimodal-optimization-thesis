@@ -3,6 +3,7 @@ import zipfile
 import pytest
 
 from experiments.chapter6.agent_search.minimal_mechanism.inventory import (
+    _is_package_file,
     block_claims,
     load_json_bytes,
     source_artifact_rows,
@@ -61,3 +62,17 @@ def test_scan_exclusions_are_relative_to_repository_root(tmp_path):
 
 def test_source_hash_bytes_match_git_lf_normalization():
     assert canonical_source_bytes(b"first\r\nsecond\n") == b"first\nsecond\n"
+
+
+def test_supplement_archive_is_indexed_but_generated_inventory_is_excluded(tmp_path, monkeypatch):
+    package = tmp_path / "minimal_mechanism"
+    package.mkdir()
+    inventory = package / "DATA_INVENTORY.json"
+    archive = package / "ignored-artifacts.zip"
+    inventory.write_text("{}", encoding="utf-8")
+    archive.write_bytes(b"archive")
+    monkeypatch.setattr("experiments.chapter6.agent_search.minimal_mechanism.inventory.HERE", package)
+    monkeypatch.setattr("experiments.chapter6.agent_search.minimal_mechanism.inventory.PUBLISHED_IGNORED_ARCHIVE", archive)
+
+    assert _is_package_file(inventory)
+    assert not _is_package_file(archive)

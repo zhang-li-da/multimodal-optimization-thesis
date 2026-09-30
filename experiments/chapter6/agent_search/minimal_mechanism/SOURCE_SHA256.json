@@ -12,12 +12,12 @@
     {
       "path": "DATA_INVENTORY.json",
       "bytes": 3823791,
-      "sha256": "c28e4c711d6a8b2205a2153cbde6c81e52dd6c49494f84b1e4d14c693111a6bf"
+      "sha256": "1dff097230e728d49cb47025072738a2d14aa62713dc6300a0ae524debb98f96"
     },
     {
       "path": "DATA_SOURCE_SHA256.tsv",
-      "bytes": 11714520,
-      "sha256": "a49cb081bcf273f726ebabb5775b768e519f12ddd5727af421ebc599fba4bc10"
+      "bytes": 11714672,
+      "sha256": "90f0ca3b9f9897e85211d42cca5fd3b0055dee97e352400507181fec4f95c5ab"
     },
     {
       "path": "HISTORY_AUDIT.json",
@@ -71,8 +71,8 @@
     },
     {
       "path": "inventory.py",
-      "bytes": 22663,
-      "sha256": "f8232b74e81d76417d1abe3ce28d67f1df4e116340787a338749fae71507d599"
+      "bytes": 22754,
+      "sha256": "5f5fc12a60b1162c8e59f02f2eca90b1f3ab7ec0b315497466ab253d72307240"
     },
     {
       "path": "phase_b_runner.py",
@@ -101,8 +101,8 @@
     },
     {
       "path": "test_inventory.py",
-      "bytes": 2352,
-      "sha256": "455cb7ef1b167a77ed6041accd8e8c4b449274ecfee53ac915257c7441f81ac1"
+      "bytes": 3029,
+      "sha256": "ab6e2e9c6bcea4cd7f8ba2927a67e57e2c63832262bcde17e0980b9c3c076c1a"
     },
     {
       "path": "test_phase_b_runner.py",
@@ -120,5 +120,5 @@
       "sha256": "cdcf16150fb4480891b36a2d24256a31f7d879749c371dd09b9bac37f3c64abe"
     }
   ],
-  "manifest_sha256": "38471adc2f8a8b2a94de76b5077ae07ecfd098ed8b6835332dc9772437f18d85"
+  "manifest_sha256": "958da8078c0dcd472039fcd7dda45a2e816fa219409334b060862a05f4d2ca33"
 }
