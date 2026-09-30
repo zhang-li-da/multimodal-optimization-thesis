@@ -1,0 +1,20 @@
+{
+ "schema": "s0-r3-fixed-cap-acceptance",
+ "study_id": "s0-minimax-output-acceptance-20260926-r3",
+ "status": "FINAL_PROTOCOL_PENDING_EXECUTION",
+ "provider": "minimax-cn-coding-plan",
+ "model": "MiniMax-M3",
+ "provider_endpoint": "https://api.minimaxi.com/v1",
+ "immutable_model_version": "unknown; record returned alias",
+ "temperature": 0.7,
+ "timeout_seconds": 180,
+ "configs": [{"id": "fixed_headroom", "planner_max_tokens": 16384, "coder_max_tokens": 8192}],
+ "budget": {"acceptance_planner": 18, "acceptance_coder": 18, "e2e_requests_maximum": 12, "total_requests_maximum": 48},
+ "selection": "none; single fixed engineering configuration chosen after r2 output truncation, not by quality",
+ "failure_policy": "No retries/replacements. Provider or unknown status halts whole cohort. Invalid planner skips dependent coder; no substitute plan.",
+ "acceptance": "18 new planner contexts and 18 new coder fixtures; each at least 17 complete valid outputs; coder executable under bounded Program. 6 new E2E contexts; at least5/6 complete pairs. Same gates as r2.",
+ "prompt_policy": "Unchanged discovery.SYSTEM/planner_prompt/coder_prompt; new synthetic contexts include two recent records in half of cases to reflect search prompt length. No generated task coordinate or hidden result is loaded.",
+ "runtime_policy": "Single foreground supervised batch; one request at a time. Raw persistence and no repeat after durable response.",
+ "provenance": "r2 had 14/18 planner acceptance, all four failures finish_reason=length. r3 is a separate fixed-cap engineering revision, not pooled, no claim of superiority from increased cap.",
+ "stop_rule": "If r3 gates fail, stop further calibration/search expansion in this round; do not keep raising caps until a positive result. If all gates pass, freeze a separate S1 protocol."
+}

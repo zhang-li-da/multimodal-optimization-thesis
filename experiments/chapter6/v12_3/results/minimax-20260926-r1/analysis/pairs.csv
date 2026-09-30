@@ -1,0 +1,9 @@
+block,fixed_status,relation_status,complete_pair,fixed_gap,relation_gap,delta_pp,fixed_tokens,relation_tokens
+3,search_complete_test_not_run,search_complete_test_not_run,True,0.06199573319786921,0.06199573319786921,0.0,27466,26792
+4,search_complete_test_not_run,search_complete_test_not_run,True,0.057677048982274146,0.05897169945735859,0.12946504750844454,30294,26514
+5,search_complete_test_not_run,search_complete_test_not_run,True,0.050479672190885415,0.05299685524891637,0.2517183058030954,28460,23199
+6,search_complete_test_not_run,search_complete_test_not_run,True,0.05941781465186916,0.056825466908731505,-0.25923477431376574,25292,24948
+7,search_complete_test_not_run,search_complete_test_not_run,True,0.05188510367850751,0.07254178629288655,2.065668261437904,27062,28596
+8,search_complete_test_not_run,search_complete_test_not_run,True,0.06383083076373745,0.05860891442021594,-0.522191634352151,23286,28489
+9,search_complete_test_not_run,search_complete_test_not_run,True,0.06827474441027198,0.06827474441027198,0.0,28367,22887
+10,search_complete_test_not_run,search_complete_test_not_run,True,0.06510128537110076,0.05793525811252704,-0.7166027258573716,22809,27696

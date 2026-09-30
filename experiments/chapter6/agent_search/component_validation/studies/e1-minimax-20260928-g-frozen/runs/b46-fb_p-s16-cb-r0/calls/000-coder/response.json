@@ -1,0 +1,19 @@
+{
+  "request_sha256": "56401a9d51e0abe08e4fac58f0b34a55fcf9a0097b6066a2c436e72796553254",
+  "text": "<think>The task is to implement a priority function for a TSP construction heuristic. I need to write Python code that follows the plan and uses the allowed features.\n\nThe formula is: -d + 0.25 * (1 + p) * rd + 0.15 * (1 - p) * reg - 0.12 * nr + 0.06 * cd * (1 - p)\n\nWhere:\n- d = distance\n- rd = return_distance\n- p = progress\n- reg = regret\n- nr = nearest_remaining\n- cd = cluster_density\n\nLet me write this following the constraints:\n- Only def priority(f), scalar local assignments, return, if/else or conditional expression\n- Math operators: + - * / % ** (constant exponent <=4), comparisons, boolean operations\n- Calls: abs/min/max/sqrt/log/log1p/exp/tanh\n- Access only f['feature']\n- Guard denominators with 1e-9 and log domains\n- <=25 source lines, <=320 AST nodes\n\nThe code should be straightforward - just compute the formula. Let me check if there are any divisions or log domains to guard. Looking at the formula, there are no divisions or logs, so no guarding needed.\n\nLet me write it:\n\n```python\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    p = f['progress']\n    reg = f['regret']\n    nr = f['nearest_remaining']\n    cd = f['cluster_density']\n    return -d + 0.25 * (1 + p) * rd + 0.15 * (1 - p) * reg - 0.12 * nr + 0.06 * cd * (1 - p)\n```\n\nLet me verify the AST nodes. This is simple. Let's count nodes:\n- FunctionDef: 1\n- arguments: 1\n- Assign: 6\n- Return: 1\n- BinOp, Name, Constant, Subscript: many\n\nThis should be well within limits. Let me make sure I include all features mentioned in the plan: distance, return_distance, progress, regret, nearest_remaining, cluster_density. All are included.\n\nThe output needs to be JSON with exactly one code field. The code should be a string with newline escapes valid inside JSON.\n\nLet me format:\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    p = f['progress']\\n    reg = f['regret']\\n    nr = f['nearest_remaining']\\n    cd = f['cluster_density']\\n    return -d + 0.25 * (1 + p) * rd + 0.15 * (1 - p) * reg - 0.12 * nr + 0.06 * cd * (1 - p)\"}\n\nThat looks correct.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    p = f['progress']\\n    reg = f['regret']\\n    nr = f['nearest_remaining']\\n    cd = f['cluster_density']\\n    return -d + 0.25 * (1 + p) * rd + 0.15 * (1 - p) * reg - 0.12 * nr + 0.06 * cd * (1 - p)\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1587,
+    "total_characters": 0,
+    "prompt_tokens": 848,
+    "completion_tokens": 739,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 848,
+  "output_tokens": 739,
+  "usage_complete": true,
+  "seconds": 10.421208000043407,
+  "request_id": "07097d1ba694dcb3c8e0e120bdf02d68"
+}

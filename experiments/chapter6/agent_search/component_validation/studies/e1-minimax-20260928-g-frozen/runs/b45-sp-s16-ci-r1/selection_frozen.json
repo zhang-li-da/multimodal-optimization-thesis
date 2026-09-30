@@ -1,0 +1,11 @@
+{
+  "schema": "chapter6-e1-selection-v1",
+  "selected_on": "validation",
+  "strategy": "C-I",
+  "best_id": 22,
+  "code": "def priority(f):\n    progress = f['progress']\n    cluster_density = f['cluster_density']\n    d_amp = 1.0 + 0.25 * cluster_density * (1.0 - 0.3 * progress)\n    rw = 0.2 + 0.45 * progress\n    rgw = 0.35 - 0.25 * progress\n    cl = 0.15 * cluster_density * (1.0 - progress)\n    return -d_amp * f['distance'] + rw * f['return_distance'] + rgw * f['regret'] + cl * f['nearest_remaining']",
+  "validation_loss": 0.03641128737536282,
+  "checkpoint_best_loss": 0.04621097896720469,
+  "completed_proposals": 4,
+  "status": "continuation_complete"
+}

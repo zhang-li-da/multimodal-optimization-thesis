@@ -1,0 +1,22 @@
+{
+  "request_sha256": "1d3eb9ddf6023b9520b63dc4bd00e15c9e815267838e7f2bc0d5329b950accda",
+  "text": "<think>The user wants me to implement a priority function for a TSP construction heuristic. The formula provided is:\n\n```\nreturn -d + (0.15 + 0.20*p)*r + (0.20 - 0.10*p)*g + 0.15*c**2 - 0.05*spread\n```\n\nWhere:\n- d = distance (current-to-candidate)\n- r = return_distance (candidate-to-start)\n- g = regret (second-nearest minus nearest)\n- p = progress (visited fraction)\n- c = cluster_density\n- spread = std of candidate-to-unvisited distances\n\nThe language constraints are strict:\n- Only `def priority(f)`, scalar local assignments, return, if/else\n- Math: + - * / % ** (constant exponent <=4), comparisons, boolean ops\n- Calls: abs/min/max/sqrt/log/log1p/exp/tanh\n- No imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random\n- Access only listed features with f['feature']\n- Guard denominators with 1e-9 and log domains\n- <=25 source lines and <=320 AST nodes\n\nLet me write the code:\n\n```python\ndef priority(f):\n    d = f['distance']\n    r = f['return_distance']\n    g = f['regret']\n    p = f['progress']\n    c = f['cluster_density']\n    s = f['spread']\n    return -d + (0.15 + 0.20 * p) * r + (0.20 - 0.10 * p) * g + 0.15 * c ** 2 - 0.05 * s\n```\n\nThis is straightforward and matches the formula exactly. Let me check:\n- Uses only allowed operations (+, -, *, **)\n- Exponent is 2 (constant, <=4)\n- No imports, annotations, loops, lists\n- All features accessed via f['feature']\n- No denominators needed here, so no 1e-9 guards needed\n- No log calls needed\n\nSource lines: 9 (well under 25)\nAST nodes: let me count... should be well under 320\n\nThis looks correct. Let me format as JSON with newline escapes.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    r = f['return_distance']\\n    g = f['regret']\\n    p = f['progress']\\n    c = f['cluster_density']\\n    s = f['spread']\\n    return -d + (0.15 + 0.20 * p) * r + (0.20 - 0.10 * p) * g + 0.15 * c ** 2 - 0.05 * s\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1415,
+    "total_characters": 0,
+    "prompt_tokens": 819,
+    "completion_tokens": 596,
+    "completion_tokens_details": {
+      "reasoning_tokens": 474
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 819,
+  "output_tokens": 596,
+  "usage_complete": true,
+  "seconds": 3.767681200057268,
+  "request_id": "07096c85ec8f72a41b860948fbd2e1e1"
+}

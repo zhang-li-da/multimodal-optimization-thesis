@@ -1,0 +1,22 @@
+{
+  "request_sha256": "cfb1945ec19d6916c474979f048d3247215dbe27470a9376ca0e4975d412e4da",
+  "text": "<think>The user wants me to implement a priority function for a TSP construction heuristic. Let me analyze the requirements:\n\n1. It's a sequential TSP construction starting at city 0\n2. Highest priority is chosen next\n3. Fixed budget of 24 deterministic 2-opt delta tests\n4. All distances normalized by instance mean distance\n5. Features available: distance, return_distance, nearest_remaining, mean_remaining, regret, progress, cluster_density, spread\n\nThe plan is \"central_lookahead_return\" with this formula:\n- rw = 0.15 + 0.4*p + 0.3*p²\n- rel = s / (0.4 + s + 1e-9)\n- rgw = (0.05 + 0.15*p) * (0.3 + 0.7*rel) * (0.6 + 0.4*cd)\n- lw = 0.2 * (1-p)\n- nw = 0.05 + 0.1*cd\n- priority = -distance + rw*return_distance + rgw*regret - lw*mean_remaining + nw*nearest_remaining\n\nConstraints:\n- Allowed Python: exactly def priority(f), scalar local assignments, return, if/else or conditional expression, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh\n- NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random\n- Access only listed features with f['feature']\n- Guard denominators with 1e-9 and log domains\n- <=25 source lines and <=320 AST nodes\n- Higher returned value is chosen\n\nLet me write the code:\n\n```python\ndef priority(f):\n    p = f['progress']\n    s = f['spread']\n    cd = f['cluster_density']\n    rw = 0.15 + 0.4*p + 0.3*p*p\n    rel = s / (0.4 + s + 1e-9)\n    rgw = (0.05 + 0.15*p) * (0.3 + 0.7*rel) * (0.6 + 0.4*cd)\n    lw = 0.2 * (1 - p)\n    nw = 0.05 + 0.1*cd\n    return -f['distance'] + rw*f['return_distance'] + rgw*f['regret'] - lw*f['mean_remaining'] + nw*f['nearest_remaining']\n```\n\nLet me check:\n- The bounds mentioned in plan: rw∈[0.15,0.85], rgw∈[0.009,0.20], lw∈[0,0.2], nw∈[0.05,0.15]\n- rw at p=0: 0.15, at p=1: 0.15 + 0.4 + 0.3 = 0.85 ✓\n- rgw bounds check: at p=0, rel=0 (s≈0), cd=0: (0.05)*(0.3)*(0.6) = 0.009 ✓; at p=1, rel=1, cd=1: (0.20)*(1.0)*(1.0) = 0.20 ✓\n- lw at p=0: 0.2, at p=1: 0 ✓\n- nw at cd=0: 0.05, at cd=1: 0.15 ✓\n\nAll bounds match. Let me count lines: 9 lines. AST nodes should be well under 320.\n\nLet me verify no forbidden constructs:\n- def priority(f): ✓\n- scalar local assignments ✓\n- return ✓\n- arithmetic +, -, * ✓\n- ** not used but allowed\n- f['feature'] access ✓\n- 1e-9 guard ✓\n\nLooks good. Let me output the JSON.</think>\n\n{\"code\": \"def priority(f):\\n    p = f['progress']\\n    s = f['spread']\\n    cd = f['cluster_density']\\n    rw = 0.15 + 0.4*p + 0.3*p*p\\n    rel = s / (0.4 + s + 1e-9)\\n    rgw = (0.05 + 0.15*p) * (0.3 + 0.7*rel) * (0.6 + 0.4*cd)\\n    lw = 0.2 * (1 - p)\\n    nw = 0.05 + 0.1*cd\\n    return -f['distance'] + rw*f['return_distance'] + rgw*f['regret'] - lw*f['mean_remaining'] + nw*f['nearest_remaining']\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 2039,
+    "total_characters": 0,
+    "prompt_tokens": 990,
+    "completion_tokens": 1049,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 990,
+  "output_tokens": 1049,
+  "usage_complete": true,
+  "seconds": 10.808144200127572,
+  "request_id": "070979c22553148afca577eedbb035db"
+}

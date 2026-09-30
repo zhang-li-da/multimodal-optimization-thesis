@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "requested_model": "MiniMax-M3",
+  "returned_model": "MiniMax-M3",
+  "response_text_present": true,
+  "usage": {
+    "calls": [
+      {
+        "step": 0,
+        "stage": "connectivity",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 186,
+        "output_tokens": 25,
+        "usage_complete": true,
+        "seconds": 1.8110579999629408,
+        "request_id": "0707dbb78db2c93d26489fbd35cf164d"
+      }
+    ],
+    "call_attempts": 1,
+    "usage_complete": true,
+    "known_tokens": 211,
+    "total_tokens": 211
+  },
+  "new_search_runs": 0,
+  "utc": "2026-09-27T05:25:13.232827+00:00"
+}

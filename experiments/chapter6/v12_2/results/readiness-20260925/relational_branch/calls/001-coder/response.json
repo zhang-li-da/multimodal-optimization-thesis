@@ -1,0 +1,14 @@
+{
+  "request_sha256": "de501a7ebd73120528cf43511b9bc0f1c684be1d17f37cb5563c8e4be91b500b",
+  "text": "{\"code\": \"def priority(f):\\n    return -f[\\\"distance\\\"] + 0.10 * f[\\\"return_distance\\\"]\\n\"}",
+  "returned_model": "fixture-no-api",
+  "usage_raw": {
+    "prompt_tokens": 17,
+    "completion_tokens": 11
+  },
+  "input_tokens": 17,
+  "output_tokens": 11,
+  "usage_complete": true,
+  "seconds": 0.0,
+  "request_id": "fixture-1-coder"
+}

@@ -1,0 +1,49 @@
+{
+  "decision": {
+    "step": 2,
+    "strategy": "C-B",
+    "action": "develop",
+    "target": "regret",
+    "parent": {
+      "id": 19,
+      "intent": "Increase the weight of regret from 0.25 to 0.30 to better balance immediate edge cost with future flexibility, while reducing the nearest_remaining lookahead penalty from 0.15 to 0.10 to lessen myopic bias. Add a small penalty proportional to the spread of distances to unvisited nodes (0.05*spread) to discourage selecting outlier candidates that might isolate parts of the tour. The progress-weighted return penalty is retained to maintain end-of-tour proximity. Expected to improve tie-breaking on uniform instances without harming clustered or grid performance.",
+      "tags": [
+        "regret",
+        "progress"
+      ],
+      "code": "def priority(f):\n    progress = f['progress']\n    return_weight = 0.20 + 0.30 * progress\n    return_penalty = return_weight * f['return_distance']\n    spread_penalty = 0.05 * f['spread']\n    return -f['distance'] + return_penalty + 0.30 * f['regret'] - 0.10 * f['nearest_remaining'] - spread_penalty",
+      "loss": 0.03057807927017231,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.03449406291270344,
+        "clustered": 0.027055949981115268,
+        "grid": 0.030184224916698216
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.9623146489847163,
+          3.885715514970267,
+          3.885715514970267
+        ],
+        [
+          2.7923145857394407,
+          2.7923145857394407
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "lagging_branch",
+      "start_incumbent_id": 4,
+      "start_branch_id": 7,
+      "current_incumbent_id": 19,
+      "current_branch_id": 19
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-B",
+      "checkpoint_best_loss": 0.038955930465600315
+    }
+  }
+}

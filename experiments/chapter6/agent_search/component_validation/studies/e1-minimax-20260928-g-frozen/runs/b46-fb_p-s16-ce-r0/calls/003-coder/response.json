@@ -1,0 +1,19 @@
+{
+  "request_sha256": "9c2466fac8999fe382f8b93a99d3d894d027350640d2548d036aab8ee2738240",
+  "text": "<think>The user wants me to implement a priority function for a TSP construction heuristic. Let me analyze the requirements:\n\n1. The function signature is `def priority(f)` where f is a dictionary with various features\n2. I can only use the allowed Python constructs listed\n3. Need to implement the cluster_density_lookahead formula: `priority = -f[\"distance\"] + 0.4 * f[\"cluster_density\"] - 0.25 * f[\"nearest_remaining\"]`\n4. Higher priority wins\n5. Output a JSON object with exactly one \"code\" field\n6. Use newline escapes valid inside JSON\n7. No annotations or imports\n\nLet me write this carefully. The formula is straightforward:\n\n```python\ndef priority(f):\n    return -f[\"distance\"] + 0.4 * f[\"cluster_density\"] - 0.25 * f[\"nearest_remaining\"]\n```\n\nThis is simple and follows the plan. Let me check the constraints:\n- No annotations: ✓\n- No imports: ✓\n- Only allowed operations: - (unary and binary), +, *, f[\"...\"], function definition, return ✓\n- Within 25 lines: ✓\n- Within 320 AST nodes: ✓\n\nThe features are accessed as f[\"feature\"] which is allowed.\n\nLet me also consider if I should guard denominators - but the formula doesn't involve division, so no denominator guards needed. The features are pre-normalized as per the task contract.\n\nLet me output this as a JSON object with the code field containing the function with proper newline escaping.\n\nActually, looking more carefully, the formula is simple and direct. Let me just implement it as planned.\n\n```python\ndef priority(f):\n    return -f[\"distance\"] + 0.4 * f[\"cluster_density\"] - 0.25 * f[\"nearest_remaining\"]\n```\n\nWait, I should double-check: is `f[\"distance\"]` allowed? Yes, the constraint says \"Access only listed features with f['feature']\". So f[\"distance\"] is fine.\n\nLet me format the JSON output. The code needs to have newline escapes. Since the code is only 2 lines, I could put it all on one line, but let me follow the instruction to use newline escapes.\n\nActually, the instruction says \"Use newline escapes valid inside JSON\" - this means I need to represent newlines as \\n in the JSON string. So I'll use \\\\n in my JSON output to represent actual \\n characters when parsed.\n\nLet me construct the JSON:\n```json\n{\"code\": \"def priority(f):\\n    return -f[\\\"distance\\\"] + 0.4 * f[\\\"cluster_density\\\"] - 0.25 * f[\\\"nearest_remaining\\\"]\"}\n```\n\nThis should be the correct output.</think>\n\n{\"code\": \"def priority(f):\\n    return -f[\\\"distance\\\"] + 0.4 * f[\\\"cluster_density\\\"] - 0.25 * f[\\\"nearest_remaining\\\"]\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1353,
+    "total_characters": 0,
+    "prompt_tokens": 724,
+    "completion_tokens": 629,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 724,
+  "output_tokens": 629,
+  "usage_complete": true,
+  "seconds": 7.237746699946001,
+  "request_id": "07097ec5c7d3169b0de29cc71b914051"
+}

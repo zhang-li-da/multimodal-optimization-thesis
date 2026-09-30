@@ -1,0 +1,22 @@
+{
+  "request_sha256": "15fe39b9e0217be93677e73b5c5f6466f8d006e01c2a0d150607ebd45b03f047",
+  "text": "<think>We need to implement the priority function based on the plan and the formula given.\n\nPlan formula:\npriority = -f['distance'] + (0.20 + 0.45*f['progress'])*f['regret'] + 0.10*f['return_distance']*f['progress'] + 0.05*f['cluster_density']\n\nLanguage constraints: allowed operations include scalar local assignments, arithmetic, comparisons, boolean ops, abs/min/max/sqrt/log/log1p/exp/tanh. No f.get(), no loops, etc. Only access f['feature'] with listed feature keys.\n\nWe need to write the priority function. We should be careful about the budget of 25 lines and 320 AST nodes. The formula is simple.\n\nLet me implement:\n\ndef priority(f):\n    p = f['progress']\n    d = f['distance']\n    r = f['return_distance']\n    reg = f['regret']\n    den = f['cluster_density']\n    return -d + (0.20 + 0.45 * p) * reg + 0.10 * r * p + 0.05 * den\n\nThat is straightforward.\n\nNeed to ensure that it's <=25 lines and the AST nodes count is <=320. This is small.\n\nLet's double-check: the function reads f values, computes a single expression, returns it. This meets the constraints.\n\nBut let's also verify the intent: \"Make regret the dominant late-stage signal by scaling its weight with progress\". The weight is 0.20 + 0.45*p, which is between 0.20 and 0.65 as progress goes from 0 to 1. The return distance is gated by progress (0.10 * r * p). That matches.\n\nWe don't use other features like nearest_remaining, mean_remaining, spread. The formula uses only distance, return_distance, progress, regret, cluster_density. That's fine.\n\nWe need to output JSON with a single \"code\" field, with newline escapes. Since it's a single-line function, we can write it as a single string with newlines. The code itself is:\n\ndef priority(f):\n    p = f['progress']\n    d = f['distance']\n    r = f['return_distance']\n    reg = f['regret']\n    den = f['cluster_density']\n    return -d + (0.20 + 0.45 * p) * reg + 0.10 * r * p + 0.05 * den\n\nThat's 6 lines. Acceptable.\n\nNow format JSON: {\"code\": \"def priority(f):\\n    p = f['progress']\\n    d = f['distance']\\n    r = f['return_distance']\\n    reg = f['regret']\\n    den = f['cluster_density']\\n    return -d + (0.20 + 0.45 * p) * reg + 0.10 * r * p + 0.05 * den\"}\n\nMake sure to escape newlines properly in JSON string: \\n.\n\nThus output that JSON object.</think>\n\n{\"code\": \"def priority(f):\\n    p = f['progress']\\n    d = f['distance']\\n    r = f['return_distance']\\n    reg = f['regret']\\n    den = f['cluster_density']\\n    return -d + (0.20 + 0.45 * p) * reg + 0.10 * r * p + 0.05 * den\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1621,
+    "total_characters": 0,
+    "prompt_tokens": 885,
+    "completion_tokens": 736,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 885,
+  "output_tokens": 736,
+  "usage_complete": true,
+  "seconds": 10.104732299922034,
+  "request_id": "07098517a8944f56eabf7fea18672b3c"
+}

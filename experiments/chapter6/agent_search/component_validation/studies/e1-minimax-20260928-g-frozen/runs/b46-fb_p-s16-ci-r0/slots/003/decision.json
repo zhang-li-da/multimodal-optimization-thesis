@@ -1,0 +1,49 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-I",
+    "action": "develop",
+    "target": "cluster",
+    "parent": {
+      "id": 20,
+      "intent": "Modulate the parent's progress-ramped return weight by cluster_density: when many unvisited cities sit within mean distance (cd high), the return leg from a cluster-internal candidate is unavoidable, so reducing the return_distance penalty prevents premature jumps out of dense regions. Bumping regret by cd forces intra-cluster completion before cluster-exit pivots. Distance remains the dominant grounding term; coefficients stay bounded (return weight in [0.07, 0.5], regret weight in [0.2, 0.5]), preserving the parent's uniform-instance strength while targeting the clustered weakness.",
+      "tags": [
+        "return_aware",
+        "cluster"
+      ],
+      "code": "def priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    p = f['progress']\n    reg = f['regret']\n    cd = f['cluster_density']\n    return -d + (0.1 + 0.4 * p) * (1 - 0.3 * cd) * rd + (0.2 + 0.25 * cd + 0.05 * p) * reg",
+      "loss": 0.03882608704577785,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.0560056996779732,
+        "clustered": 0.04721588376092375,
+        "grid": 0.0132566776984366
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.7492887063352334,
+          3.7492887063352334
+        ],
+        [
+          3.5656459387359356,
+          3.5573382255969808,
+          3.5573382255969808
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "incumbent",
+      "start_incumbent_id": 8,
+      "start_branch_id": 15,
+      "current_incumbent_id": 20,
+      "current_branch_id": 15
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-I",
+      "checkpoint_best_loss": 0.03938007399141782
+    }
+  }
+}

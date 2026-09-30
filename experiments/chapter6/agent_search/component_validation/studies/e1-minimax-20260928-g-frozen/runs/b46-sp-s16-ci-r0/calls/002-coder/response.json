@@ -1,0 +1,22 @@
+{
+  "request_sha256": "e11ae292bde087ac2170c54fe9bd62a7d0c94be35e4d386471e75fce3360af59",
+  "text": "<think>We need to generate Python code for a priority function based on the plan. The plan describes:\n\n- Name: \"regret_dominant_progress\"\n- Intent: Emphasizes regret family, scales regret inversely with progress (0.40 early to 0.30 late), return-distance slightly progress-scaled (0.20 to 0.25).\n- Formula: \"-f[\\\"distance\\\"] + (0.20 + 0.05 * f[\\\"progress\\\"]) * f[\\\"return_distance\\\"] + (0.40 - 0.10 * f[\\\"progress\\\"]) * f[\\\"regret\\\"]\"\n\nWe need to implement this as a function priority(f) that returns the computed value. Use allowed Python subset: exactly def priority(f), scalar local assignments, return, if/else, +, -, *, /, %, ** (constant exponent <=4), comparisons, boolean ops, calls abs/min/max/sqrt/log/log1p/exp/tanh. No imports, loops, lists, etc.\n\nWe can directly compute expression.\n\nPotential issues: use parentheses correctly. The expression is: -d + (0.20 + 0.05 * pr) * rd + (0.40 - 0.10 * pr) * rg\n\nThat's straightforward.\n\nWe must guard denominators? Not needed because we only multiply. But maybe we could use 1e-9 for safety? Not required but can be done.\n\nWe also need to obey <=25 source lines and <=320 AST nodes. Our code will be maybe 3-4 lines.\n\nWe need to output JSON with exactly one code field. JSON string must have newline escapes valid inside JSON.\n\nThus final output:\n\n{\n  \"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    pr = f[\\\"progress\\\"]\\n    return -d + (0.20 + 0.05 * pr) * rd + (0.40 - 0.10 * pr) * rg\"\n}\n\nMake sure newline escapes: use \\n.\n\nThus final answer.\n\nBut before final, ensure the code respects allowed Python: No annotation, no imports. Uses f[\"...\"] indexing (allowed). The language allowed \"Access only listed features with f['feature']\". Yes.\n\nCheck for potential errors: The expression uses -d, addition and multiplication, fine.\n\nNow output JSON.\n\nWe must not include any extra text, only JSON object.\n\nThus final.</think>\n\n{\"code\":\"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    pr = f[\\\"progress\\\"]\\n    return -d + (0.20 + 0.05 * pr) * rd + (0.40 - 0.10 * pr) * rg\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1448,
+    "total_characters": 0,
+    "prompt_tokens": 822,
+    "completion_tokens": 626,
+    "completion_tokens_details": {
+      "reasoning_tokens": 533
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 822,
+  "output_tokens": 626,
+  "usage_complete": true,
+  "seconds": 3.6265946000348777,
+  "request_id": "07097fd675293365dae1241ae388b512"
+}

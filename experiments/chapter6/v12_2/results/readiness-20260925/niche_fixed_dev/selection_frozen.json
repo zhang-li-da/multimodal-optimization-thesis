@@ -1,0 +1,51 @@
+{
+  "run_config_sha256": "e42449b6fde6f0538b5ce40825a551eaa83daf156d3e64d64afc25aa74c0c028",
+  "execution_mode": "fixture",
+  "selected_on": "validation",
+  "best_id": 1,
+  "seed_best_id": 1,
+  "archive_ids": [
+    1,
+    4,
+    2,
+    10
+  ],
+  "programs": [
+    {
+      "id": 0,
+      "code": "def priority(f):\n    return -f[\"distance\"]\n",
+      "raw_code_sha256": "6171987802a190f299d458683bea0caa168d1b413d30eb6ec7d1e6e99bc059c5",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "5ccdf9cd7a728d1af1b86eec930d0edd5df85340ce12ca4db193482c6946f3de"
+    },
+    {
+      "id": 1,
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+      "raw_code_sha256": "17c20cc6336cf4b18c89e5964d6df9e1e182d62f6a182ec1bc3df0e95007e28b",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "b11ab831748c31d4b990e8c2fd81fad1e07dc03bd788d9e655cbb38e9609ad20"
+    },
+    {
+      "id": 2,
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+      "raw_code_sha256": "c0dd5a578b60f0175f0035576e61dade51faacc613025314b326b2d3918986da",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "b0ec4ececa1c5d712639e933551f269c8c0e32f9140fb3ffb170d5efad847c87"
+    },
+    {
+      "id": 4,
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.10 * f[\"return_distance\"]\n",
+      "raw_code_sha256": "65aea557c060283a6cd01b0861d937551f5c1b355282209abc510840789dc8a3",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "b985325231ac2be285585eede0426ece61b35a570cbb027bb17e91c61d19c675"
+    },
+    {
+      "id": 10,
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.07 * f[\"regret\"]\n",
+      "raw_code_sha256": "9630a56c126d5469524210091485f2b8893428fa8d9eb7affb72fb59f71d1667",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "16eb77f1a60933ce1bc5a9760f10154d024dc1b8c88b1527ad70073043f22fd3"
+    }
+  ],
+  "frozen_utc": "2026-09-25T05:24:21.969653+00:00"
+}

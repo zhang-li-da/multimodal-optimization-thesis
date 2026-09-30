@@ -1,0 +1,18 @@
+{
+  "selected_config": "expanded_caps",
+  "calibration_statistics": [
+    {
+      "id": "legacy_caps",
+      "planner_valid": 1,
+      "coder_valid": 6,
+      "median_tokens": 2506.5
+    },
+    {
+      "id": "expanded_caps",
+      "planner_valid": 7,
+      "coder_valid": 9,
+      "median_tokens": 2651.5
+    }
+  ],
+  "selection_uses_acceptance": false
+}

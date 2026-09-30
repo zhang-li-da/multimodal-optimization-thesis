@@ -1,0 +1,48 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-B",
+    "action": "develop",
+    "target": "cluster",
+    "parent": {
+      "id": 15,
+      "intent": "Add bounded nearest_remaining lookahead (0.12 weight) to the parent's progress-modulated return+regret base. Targets the uniform weakness by breaking distance-ties when raw d values are similar. The constant lookahead weight stays well below id 7's 0.5, avoiding the loose-packing failure mode that hurt grids. Preserves parent's late-game return bias for closure and early-game regret decay for dead-end avoidance.",
+      "tags": [
+        "lookahead",
+        "return_aware"
+      ],
+      "code": "def priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    p = f['progress']\n    reg = f['regret']\n    nr = f['nearest_remaining']\n    return -d + 0.25 * (1 + p) * rd + 0.15 * (1 - p) * reg - 0.12 * nr",
+      "loss": 0.04194119607570625,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.04422930182468989,
+        "clustered": 0.04269562396309536,
+        "grid": 0.03889866243933349
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          4.207867895778546,
+          4.207867895778546
+        ],
+        [
+          3.4755769822801956,
+          3.4755769822801956
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "lagging_branch",
+      "start_incumbent_id": 8,
+      "start_branch_id": 15,
+      "current_incumbent_id": 8,
+      "current_branch_id": 15
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-B",
+      "checkpoint_best_loss": 0.03938007399141782
+    }
+  }
+}

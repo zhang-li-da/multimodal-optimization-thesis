@@ -1,0 +1,12 @@
+{
+  "analysis_summary_sha256": "e3d353d78d664b93056106035a2b49b3d9ceb33d50544c2a2768baa36e00d4fd",
+  "paired_csv_sha256": "f9698a7a312a0c99eaea5d264e043011adeca39eee393d2f42907df07a5bdf45",
+  "files": {
+    "mechanism_exposure.pdf": "d30880baf1e864fce2b044919f3526096b99a211c713c032763b8f600fc3787b",
+    "mechanism_exposure.png": "213277888546fb5973acbeb52b7eed0ddf76d410c22547a2d670c6c69ffe1867",
+    "paired_test_gap.pdf": "6bab3f323d1cdb9260dfa54ea24140a9cdf2d6d0f715562fe2e5094998512031",
+    "paired_test_gap.png": "3b672ccabf6595d6d2675f02617d8d013ce998fe24d31ed20a76571ece070164"
+  },
+  "new_model_calls": 0,
+  "new_program_evaluations": 0
+}

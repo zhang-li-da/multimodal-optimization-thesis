@@ -1,0 +1,122 @@
+{
+  "source_bindings_and_replay": [
+    {
+      "job_id": "minimax-relational_branch-b8",
+      "restored": true,
+      "checkpoint_sha256": "8fdb22f2cf8999beb3af64700bd7cbed69600a61eceb594f9d0d6e3f9ed6c021",
+      "search_sha256": "4e5758f3cfde559615588e3ab04871718ef018e2b008c316aa72a81e3e538a0f",
+      "test_sha256": "e664cb424450121cbc23b60d732de3067a855c0640423b8b8315dc7d5691b0e6"
+    },
+    {
+      "job_id": "minimax-relational_branch-b3",
+      "restored": true,
+      "checkpoint_sha256": "ea7add3108fcf3216b0b1dd76766462c13322a8244f487d99561dc187a94de27",
+      "search_sha256": "f25884e1a812e60efb5b28224d9f166c533e6b43c065d15e410e39978600912e",
+      "test_sha256": "f70bf68c9b70c73a0698f72fcf7cd4d4b978a601d7aca6013e565855c2ed324a"
+    },
+    {
+      "job_id": "minimax-relational_branch-b7",
+      "restored": true,
+      "checkpoint_sha256": "9b20ce6504bc4b3262097e9d0315b0672cf07e5aefa8841b8e344f2c28bd31c7",
+      "search_sha256": "2333445120ceeeafbd7c0bd1bd8987ce61da1a3235ad1b347d3b27fc8bfdd576",
+      "test_sha256": "01121f5ee4afb5f32af31be729cd7b4564dc976725c2284258178135e575bbde"
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b8",
+      "restored": true,
+      "checkpoint_sha256": "ff8c01cf1ba56ee94abea30e16cfe16ce4b1335647c26626631677b101695c2b",
+      "search_sha256": "578e8f44b9da66e565cc6cbf0a15e6f549a62ae9e7c110043a95ec7fb153c163",
+      "test_sha256": "09af8f250284c3d3b15e3da662110f2125c35b9cd7019f1dac28872fb3eacd57"
+    },
+    {
+      "job_id": "minimax-relational_branch-b6",
+      "restored": true,
+      "checkpoint_sha256": "dbf33eb9312ae48ddfda6194b205cfc02413d30febf7c525f02b216d8c2e1852",
+      "search_sha256": "1481f7a69701bd16eeaa9db018133a3f92b5c4958e8fc2d55390d15740fd2c21",
+      "test_sha256": "a64fbfbb71a221f0d2ece7716a99ec58fab7661193a6e7de638bfd88b5c913e8"
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b10",
+      "restored": true,
+      "checkpoint_sha256": "b2654d76648c56a3a500ae0d693c7bc35c32436861f01d5c16c916d0f05af4f3",
+      "search_sha256": "f033b4edbaa46831decb9a08bf8c5e97e530e36bdbb4a6d558d93a5ce0254a94",
+      "test_sha256": "053205ce193e5df3edc6778967f99db92087c8c349dbf2d9286e5796dc379f1c"
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b5",
+      "restored": true,
+      "checkpoint_sha256": "fd8267c139fbf7462bf57747295b90f1613eb5b1cd5be6ba595c68abac7ea7e6",
+      "search_sha256": "aec595fca46af9c02795b7bc82a1685b05961bb28b3bb51166c50ff77683de56",
+      "test_sha256": "7cfdf9373cb8a1bc074c5bb270db9e30f0e20d66c238aa7dde34ae7c0c385a55"
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b6",
+      "restored": true,
+      "checkpoint_sha256": "518ca5d4b5630b872655a7a398fbaf44830489b7ab62ef84f56c8023bb4ff404",
+      "search_sha256": "4a9f90fa947202585a110ceb9fe3b2ff46f20c5da817adc1303eee990d9b0902",
+      "test_sha256": "3d1c8b8d0834334b50cb40ebf642f73f7d18439e0f5be38d4526c2d5f0706115"
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b7",
+      "restored": true,
+      "checkpoint_sha256": "5c6801619200df71aa303c921f529aa1d5084f58d071a865d08d1c69b13ecbdb",
+      "search_sha256": "61058c8ec68085c7f0747e5a89c1794122b59d2e58fb830d567d1c5b35313404",
+      "test_sha256": "33d7d627041eea36bdaa70b1f786349f884228c8decec5c1f0acea008511cb7d"
+    },
+    {
+      "job_id": "minimax-relational_branch-b5",
+      "restored": true,
+      "checkpoint_sha256": "6e24690a7d832a4bff20ffb4496e772ff2ed7800b576be061acb9a2b54528990",
+      "search_sha256": "dd03d8d87d57fc2839d114448320ccf4a4c97ba5010dbc37851d9a53d6814d08",
+      "test_sha256": "1753e94962377e473b874323e2f5c96a2c0370d3ee7a962dafb20db56674d987"
+    },
+    {
+      "job_id": "minimax-relational_branch-b10",
+      "restored": true,
+      "checkpoint_sha256": "3a48c6ff143041abe87544387edd9370cdb2a1f790412c1fc013722657d6e40e",
+      "search_sha256": "ee047c1ba3ec387814699651139be89dd076e2a5d31513d1c4324a7e2234e84b",
+      "test_sha256": "d18d3f15365b089bac4a1c0c88b9fec105deaf4f0bb2a93a21a339c13668acd3"
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b3",
+      "restored": true,
+      "checkpoint_sha256": "08f48aa4e37fd36cb5c17c62388ac97547f883cfa378291770a94a8a632c2688",
+      "search_sha256": "b73b48117e2ffbb2a7c6a7f39ed925c29400ca8a55f681054c48224dc5669eb2",
+      "test_sha256": "db08a46676c3d42b2a9889bf3b92064097372ceb5dbc06015ea39828edb0eb85"
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b9",
+      "restored": true,
+      "checkpoint_sha256": "3370aacbf30e8ce5f9ac3d7868bd2574f322f6e038d282361c749884c626737f",
+      "search_sha256": "1980d7043b0148d897b5c2ac1c0ab50fff03d774f85970aa173ce9d3d6c3b8b4",
+      "test_sha256": "07d2323372b82e870cffd5d07dd4daaa080b64efc17e2c06ecf6107d16a07529"
+    },
+    {
+      "job_id": "minimax-relational_branch-b4",
+      "restored": true,
+      "checkpoint_sha256": "20833d4292e9c4535c7c667d7740ad0c6f2da70af7386b9aa67db802733e4d13",
+      "search_sha256": "dd8699fe4ca4b69fe1ba7cf0a39b7355f59ef9871743b3942d90d22baa30c285",
+      "test_sha256": "4e2fb3c149c62bd3a67b600379686b60c882487a25f21f266e0cb9fdb0729283"
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b4",
+      "restored": true,
+      "checkpoint_sha256": "3340c1b601f4f38ae88c7e9c7d51702271242e9348101b41b540cb4e71cd953c",
+      "search_sha256": "5539aebae7bf6fc70d8481d5602bde04ae06b0cc50ca54766952fe10b85d8d92",
+      "test_sha256": "c258b5a445d716b2abf5ba0a3706fc5f300408dc972c7c87bbc077bf14d89672"
+    },
+    {
+      "job_id": "minimax-relational_branch-b9",
+      "restored": true,
+      "checkpoint_sha256": "b124d49b5e94a6afcda0be4ce1b23c838d9e2b6a002097d0b332a7d31b6c3bfd",
+      "search_sha256": "1b1afd31344982e1171008dd51dd827bc8645723ea7539c19726ccfee1f9a217",
+      "test_sha256": "c6e636fd567353490b4cf89425c02ddf666bb2963f763e8f68b4332e5a74cad4"
+    }
+  ],
+  "all_tests_after_all_searches": true,
+  "last_search_finished_utc": "2026-09-25T19:20:19.608906+00:00",
+  "first_test_evaluated_utc": "2026-09-25T19:21:23.387367+00:00",
+  "unique_proposal_decisions_and_pool_exposures_verified": 128,
+  "new_model_calls_by_analysis": 0,
+  "program_evaluation_reruns": 0
+}

@@ -1,0 +1,127 @@
+{
+  "study_id": "s0-minimax-output-acceptance-20260926-r3",
+  "manifest_sha256": "d592e9b76d8d9c0da4bf83a3012c191f027d579908bddd2f58fbdb9db1dd6d2a",
+  "source_commit": "069b649f6cc9d61070d7799a848e28f30f2b76cb",
+  "new_model_calls_by_analysis": 0,
+  "result": {
+    "status": "complete",
+    "completed_slots": 48,
+    "dispatched_requests": 48,
+    "fixed_config": "fixed_headroom",
+    "acceptance": {
+      "planner": {
+        "planned": 18,
+        "observed": 18,
+        "valid": 18
+      },
+      "coder": {
+        "planned": 18,
+        "observed": 18,
+        "valid": 18
+      }
+    },
+    "e2e_successes": 6,
+    "e2e_planned": 6,
+    "ready_for_s1": true
+  },
+  "cohorts": [
+    {
+      "cohort": "acceptance",
+      "config_id": "fixed_headroom",
+      "role": "coder",
+      "planned": 18,
+      "observed_slots": 18,
+      "dispatched": 18,
+      "valid": 18,
+      "complete": 18,
+      "schema_valid": 18,
+      "executable": 18,
+      "wilson_95": [
+        0.8241207763533425,
+        1.0
+      ],
+      "known_tokens": 45985,
+      "usage_complete": true,
+      "median_tokens": 2165.5,
+      "total_seconds": 184.16415099985898,
+      "finish_reasons": {
+        "stop": 18
+      }
+    },
+    {
+      "cohort": "acceptance",
+      "config_id": "fixed_headroom",
+      "role": "planner",
+      "planned": 18,
+      "observed_slots": 18,
+      "dispatched": 18,
+      "valid": 18,
+      "complete": 18,
+      "schema_valid": 18,
+      "executable": null,
+      "wilson_95": [
+        0.8241207763533425,
+        1.0
+      ],
+      "known_tokens": 77519,
+      "usage_complete": true,
+      "median_tokens": 3861.0,
+      "total_seconds": 323.90686540002935,
+      "finish_reasons": {
+        "stop": 18
+      }
+    },
+    {
+      "cohort": "end_to_end",
+      "config_id": "fixed_headroom",
+      "role": "coder",
+      "planned": 6,
+      "observed_slots": 6,
+      "dispatched": 6,
+      "valid": 6,
+      "complete": 6,
+      "schema_valid": 6,
+      "executable": 6,
+      "wilson_95": [
+        0.6096657120978346,
+        1.0
+      ],
+      "known_tokens": 14290,
+      "usage_complete": true,
+      "median_tokens": 2186.0,
+      "total_seconds": 51.34613399987575,
+      "finish_reasons": {
+        "stop": 6
+      }
+    },
+    {
+      "cohort": "end_to_end",
+      "config_id": "fixed_headroom",
+      "role": "planner",
+      "planned": 6,
+      "observed_slots": 6,
+      "dispatched": 6,
+      "valid": 6,
+      "complete": 6,
+      "schema_valid": 6,
+      "executable": null,
+      "wilson_95": [
+        0.6096657120978346,
+        1.0
+      ],
+      "known_tokens": 32930,
+      "usage_complete": true,
+      "median_tokens": 4992.0,
+      "total_seconds": 125.91691509995144,
+      "finish_reasons": {
+        "stop": 6
+      }
+    }
+  ],
+  "known_tokens": 170724,
+  "total_requests": 48,
+  "returned_models": [
+    "MiniMax-M3"
+  ],
+  "claim": "Engineering calibration, not search superiority. Synthetic feedback; four feature inputs do not prove universal executability."
+}

@@ -1,0 +1,3699 @@
+{
+  "schema": "s0-r3-manifest",
+  "status": "FROZEN_PENDING_EXECUTION",
+  "source_commit": "069b649f6cc9d61070d7799a848e28f30f2b76cb",
+  "source": {
+    "format": "s0-r3-named-lf-sha256",
+    "files": {
+      "chapter6_demo/__init__.py": "8ac4e98e568b6d6740f704f161a820a9f1210146b43f4b941042d6269b1e3398",
+      "experiments/chapter6/demo/__init__.py": "9e0a96a7c80110ea9a785b5f0b8797f79550c8d21b9d44f4294ad6611423c0b9",
+      "experiments/chapter6/demo/analyze.py": "01381fbcd2e292a795e430d0105930a808bae51575226476439db22dd9fcd248",
+      "experiments/chapter6/demo/benchmarks.py": "a4f461c8496a066b96dd92811145c86c1b1ba19fd08eb956cb0c017d7635dff3",
+      "experiments/chapter6/demo/classification.py": "8a6dc688c5bb8c897f2ed110d70264105f51886426b20adcaabd334e1f36623f",
+      "experiments/chapter6/demo/dashboard.py": "aea6d42b88d7959f2d89a06a9d822eafbd8a8c02772f6f49a254b74d522ecee6",
+      "experiments/chapter6/demo/discovery.py": "da8863bebf19981d283d47e67637d0ff76367e50997a6a76e43fb2dd990eef5a",
+      "experiments/chapter6/demo/inspect_environment.py": "5c9b9c4e8b68c7b24d3c6eee4e5532b7bc3de7da46106e8767bc732e3d18814d",
+      "experiments/chapter6/demo/mmo_agent_demo.py": "96a179c7ff32ed8eb6ff0d429d1a5b720aecb33c9f377a56eaed8fd8ffb2bea3",
+      "experiments/chapter6/demo/programs.py": "6036ae160339384e2807770951fba2c34b978712de24b67c730ac3ce0e4c6868",
+      "experiments/chapter6/demo/providers.py": "a6dcacdebd896f71d9a54816d09b2d1a239b9f2f9cb68525c1e44514bcebadad",
+      "experiments/chapter6/demo/run_suite.py": "10d7489d87f27de91e35cd65dbd73a5bd41c4cb912993c7b757a06156f0deca1",
+      "experiments/chapter6/demo/test_classification.py": "77f64e9756243e24ac272646f30c8410f0ba9a52c6f2e5ae51384a819f0f289e",
+      "experiments/chapter6/demo/test_science.py": "1f4a73ef98d90eced8c8a6a5c81c2db7516e30d1a614b5e99ccef47ae90fd1a9",
+      "experiments/chapter6/demo/v12_1_controller.py": "a96d3f569e42f8c6fc11780226d50a32b3b3bb26bd070fe5763d6abc64de8a38",
+      "experiments/chapter6/demo/v12_controller.py": "ec542df06bffed6197e623f897086936cd17894c2be029ce2de470a66db11cb0",
+      "experiments/chapter6/demo/verify_experiments.py": "209270bfed77eba0f06a715b0a6647cb6d37d4fe613b584148e0e33e9ae6ec6e",
+      "experiments/chapter6/v12/__init__.py": "5c8695673a1b1d1444ca99ea27522d0d94252976ce5c4d47fe12ba7a8767228e",
+      "experiments/chapter6/v12/analyze_v12.py": "88955df2584e466c8f3509657659ba60533277893e4677643b676b8e6bbabc84",
+      "experiments/chapter6/v12/run_v12.py": "f6da99e1d89ce4eb56e75915885af690175bc145d83db611a86ba65c3a25fdfd",
+      "experiments/chapter6/v12/test_v12.py": "8b4ef79dc8a01db0d4e3b8de1ec75c10fcd590ac7fbde1e4f4f4f80c139d2f17",
+      "experiments/chapter6/v12/verify_v12.py": "7c5c78d198c37cf4e44a74d61da521dc483e303175a731836e5a4ba4f58b201d",
+      "experiments/chapter6/v12_1/__init__.py": "aa812a55b5255beb9f4a3c227f9bd6774b5a408b16e8c3d38a0a855f2aab785b",
+      "experiments/chapter6/v12_1/audit_r2.py": "7450314f2bc109e8ab63ea96fa5d6370bdb2011475830cb65f11e0e7f569afc8",
+      "experiments/chapter6/v12_1/report.py": "5fbdfbac2a95c0978cfeec7f3ef565c3850125251401a8c77fe6969d042ff5de",
+      "experiments/chapter6/v12_1/test_mechanism.py": "122677f1020bb403e8aa0a6b9d8950241ca8a9f994abbe45ae91664b3e29a6ed",
+      "experiments/chapter6/v12_1/test_numeric.py": "710aa5dfbbd8b63aa04be614469cc5c31dfc95baaa45dfd2e155b75031fa1fd5",
+      "experiments/chapter6/v12_1/verify_numeric.py": "8eed2ee6fff6c9e7eb778071ae0d9ca871b2caaa1a4a04752b4fb73609f1716c",
+      "experiments/chapter6/v12_2/__init__.py": "63606dac4f6df54e95f3bca591432d6a66444ff6531099aba9e39689b18e9954",
+      "experiments/chapter6/v12_2/archives.py": "3f7bb331327fb359043d705ee129831d4d2abd85572afe75a6471936babd07a6",
+      "experiments/chapter6/v12_2/calls.py": "5465027d502246cbaa3b4f4015d0d35b71e27eb40114d12515186ca43bb8b983",
+      "experiments/chapter6/v12_2/cli.py": "d62b72ae7aeba4201b4404a4649a0e99398cef441013d75e29d49fb24fc16596",
+      "experiments/chapter6/v12_2/common.py": "db4d0160b77f73f36e3f2859c1f4646759f4f1e85a74df57c9e2c5e28a0c0dbc",
+      "experiments/chapter6/v12_2/conftest.py": "f43ba223d371e464bf83c82866d7589db6c5dc19ee95776c0d2db7fa19b42896",
+      "experiments/chapter6/v12_2/data.py": "ccbfbb393fe32859e23d31b14bed8380b735e4f8e7583be8d13cc041f87c2a7b",
+      "experiments/chapter6/v12_2/fixtures.py": "c56b2b38745fb76d669cf7c1599db5507df5e309a4290a52ce5f7578dec7ece2",
+      "experiments/chapter6/v12_2/identity.py": "d371b797cc10a5f992ffca7502a743296cd37133fbe7a4d61751d983861949ad",
+      "experiments/chapter6/v12_2/protocol.draft.json": "17f34c6f9e84cdb410cf1b9c3d107d0e1b7a3a37f44218fc1e7606fc29584324",
+      "experiments/chapter6/v12_2/replay_r2.py": "002e200e63b64cb10708c7311da6e979d77f68595a2b55742d91e6ca11645fb8",
+      "experiments/chapter6/v12_2/requirements.lock.txt": "5ba9cb4cc6ba20cac0392bb6e2cd7bf5708389c5953ae87acd5331ee5239c88d",
+      "experiments/chapter6/v12_2/runner.py": "a3edda6018dba52fabdf4099b27b336fb8942cf07da336abdd6827b14392dc62",
+      "experiments/chapter6/v12_2/smoke.py": "1cb70685cec0a9c20334eee96e8f83d70e23bd5ead5d5419a2be47a65036de7e",
+      "experiments/chapter6/v12_2/test_portable.py": "eaa5d46e3f538e4c6d1668daf99c1050fc4443266782c8ec674b9e0fe8172586",
+      "experiments/chapter6/v12_2/test_runner.py": "c0143f23da335223230f890b613e30f04df2f5dfedc78fd6a0fa3cd9d7644a94",
+      "experiments/chapter6/v12_2/test_stage.py": "46afe666518e59534820d9d3ce5b0731fe1705b154d0a0479b2e2eda47159f72",
+      "experiments/chapter6/v12_2/verify_identity.py": "7e416295715ea3ff366099626a85bc523a624b822377d1825abcabebeea1b2e5",
+      "experiments/chapter6/s0_output_calibration/__init__.py": "c6a87deac93c2069c146777920d3bf67cacbfbaa39c471910e4e5cfd79c299db",
+      "experiments/chapter6/s0_output_calibration/calibration.py": "f1d9f36a3d43ebb8478cd2005cee2e72662021bb809616370c647d5e7c26f6b1",
+      "experiments/chapter6/s0_output_calibration/test_calibration.py": "f397de67bafada11ab48f8722ff22e52b3188ec0e045a75249e5a8fc1efad06a",
+      "experiments/chapter6/s0_output_calibration/protocol.final.json": "f6bad17ea1e5fa4acedc96d4c4fc596ff6f6f1ba974fd6596f48eab5313f3b65",
+      "experiments/chapter6/agent_search/__init__.py": "ba3ea5a439f9d70e441de52a4fb3e878de63736f7e962baede76b4b21cb08653",
+      "experiments/chapter6/agent_search/s0_r3.py": "c924fa202eca14aa1ef47ecd1d951273a93d9c8d367f35cd5be97599b721e8c3",
+      "experiments/chapter6/agent_search/s0_r3.protocol.json": "ea74d054b485c76ef4c4bb730fb28d2a7cc6b650d673cba65c9ae8c9ff3fd8f9",
+      "experiments/chapter6/agent_search/test_s0_r3.py": "e864db3ea42ba2ca4471c00e63c6f6acd94a6256ebc0ee0b65c8756a693b87a9"
+    },
+    "sha256": "a2bee52a9e3a6fb55002dc897d8fc4fb6192954a4183321ef069f728b5d3c575"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "implementation": "CPython",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": {
+      "numpy": "2.1.3",
+      "scikit-learn": "1.6.1",
+      "matplotlib": "3.10.0",
+      "pytest": "8.3.4"
+    }
+  },
+  "protocol": {
+    "schema": "s0-r3-fixed-cap-acceptance",
+    "study_id": "s0-minimax-output-acceptance-20260926-r3",
+    "status": "FINAL_PROTOCOL_PENDING_EXECUTION",
+    "provider": "minimax-cn-coding-plan",
+    "model": "MiniMax-M3",
+    "provider_endpoint": "https://api.minimaxi.com/v1",
+    "immutable_model_version": "unknown; record returned alias",
+    "temperature": 0.7,
+    "timeout_seconds": 180,
+    "configs": [
+      {
+        "id": "fixed_headroom",
+        "planner_max_tokens": 16384,
+        "coder_max_tokens": 8192
+      }
+    ],
+    "budget": {
+      "acceptance_planner": 18,
+      "acceptance_coder": 18,
+      "e2e_requests_maximum": 12,
+      "total_requests_maximum": 48
+    },
+    "selection": "none; single fixed engineering configuration chosen after r2 output truncation, not by quality",
+    "failure_policy": "No retries/replacements. Provider or unknown status halts whole cohort. Invalid planner skips dependent coder; no substitute plan.",
+    "acceptance": "18 new planner contexts and 18 new coder fixtures; each at least 17 complete valid outputs; coder executable under bounded Program. 6 new E2E contexts; at least5/6 complete pairs. Same gates as r2.",
+    "prompt_policy": "Unchanged discovery.SYSTEM/planner_prompt/coder_prompt; new synthetic contexts include two recent records in half of cases to reflect search prompt length. No generated task coordinate or hidden result is loaded.",
+    "runtime_policy": "Single foreground supervised batch; one request at a time. Raw persistence and no repeat after durable response.",
+    "provenance": "r2 had 14/18 planner acceptance, all four failures finish_reason=length. r3 is a separate fixed-cap engineering revision, not pooled, no claim of superiority from increased cap.",
+    "stop_rule": "If r3 gates fail, stop further calibration/search expansion in this round; do not keep raising caps until a positive result. If all gates pass, freeze a separate S1 protocol."
+  },
+  "jobs": [
+    {
+      "job_id": "r3-acc-p-t0-r0",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "nonlinear",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 70
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.33 * progress * return_distance + 0.22 * regret / (1 + regret)"
+        },
+        "step": 70,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t0-r1",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "hybrid",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 71
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0922,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0892,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.333 * progress * return_distance + 0.222 * regret / (1 + regret)"
+        },
+        "step": 71,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t0-r2",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 2,
+      "fixture": {
+        "selection": {
+          "target": "local_distance",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 72
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_62",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.336 * progress * return_distance + 0.224 * regret / (1 + regret)"
+        },
+        "step": 72,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t0-r3",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 3,
+      "fixture": {
+        "selection": {
+          "target": "return_aware",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 73
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0926,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0896,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_63",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.339 * progress * return_distance + 0.226 * regret / (1 + regret)"
+        },
+        "step": 73,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t0-r4",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 4,
+      "fixture": {
+        "selection": {
+          "target": "regret",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 74
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_64",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.342 * progress * return_distance + 0.228 * regret / (1 + regret)"
+        },
+        "step": 74,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t0-r5",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 5,
+      "fixture": {
+        "selection": {
+          "target": "cluster",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 75
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.093,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.09,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_65",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.345 * progress * return_distance + 0.23 * regret / (1 + regret)"
+        },
+        "step": 75,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t1-r0",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "hybrid",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.092,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 70
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.33 * progress * return_distance + 0.22 * regret / (1 + regret)"
+        },
+        "step": 70,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t1-r1",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "local_distance",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0922,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 71
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0922,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0892,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.333 * progress * return_distance + 0.222 * regret / (1 + regret)"
+        },
+        "step": 71,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t1-r2",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 2,
+      "fixture": {
+        "selection": {
+          "target": "return_aware",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0924,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 72
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_62",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.336 * progress * return_distance + 0.224 * regret / (1 + regret)"
+        },
+        "step": 72,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t1-r3",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 3,
+      "fixture": {
+        "selection": {
+          "target": "regret",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0926,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 73
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0926,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0896,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_63",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.339 * progress * return_distance + 0.226 * regret / (1 + regret)"
+        },
+        "step": 73,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t1-r4",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 4,
+      "fixture": {
+        "selection": {
+          "target": "cluster",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0928,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 74
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_64",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.342 * progress * return_distance + 0.228 * regret / (1 + regret)"
+        },
+        "step": 74,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t1-r5",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 5,
+      "fixture": {
+        "selection": {
+          "target": "lookahead",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.093,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 75
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.093,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.09,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_65",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.345 * progress * return_distance + 0.23 * regret / (1 + regret)"
+        },
+        "step": 75,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t2-r0",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "local_distance",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.092,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.089,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 70
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.33 * progress * return_distance + 0.22 * regret / (1 + regret)"
+        },
+        "step": 70,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t2-r1",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "return_aware",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0922,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.0892,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 71
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0922,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0892,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.333 * progress * return_distance + 0.222 * regret / (1 + regret)"
+        },
+        "step": 71,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t2-r2",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 2,
+      "fixture": {
+        "selection": {
+          "target": "regret",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0924,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.0894,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 72
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_62",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.336 * progress * return_distance + 0.224 * regret / (1 + regret)"
+        },
+        "step": 72,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t2-r3",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 3,
+      "fixture": {
+        "selection": {
+          "target": "cluster",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0926,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.0896,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 73
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0926,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0896,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_63",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.339 * progress * return_distance + 0.226 * regret / (1 + regret)"
+        },
+        "step": 73,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t2-r4",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 4,
+      "fixture": {
+        "selection": {
+          "target": "lookahead",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0928,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.08979999999999999,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 74
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_64",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.342 * progress * return_distance + 0.228 * regret / (1 + regret)"
+        },
+        "step": 74,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-p-t2-r5",
+      "cohort": "acceptance",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 5,
+      "fixture": {
+        "selection": {
+          "target": "progress",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.093,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.09,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 75
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.093,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.09,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_65",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.345 * progress * return_distance + 0.23 * regret / (1 + regret)"
+        },
+        "step": 75,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t0-r0",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "nonlinear",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 70
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.33 * progress * return_distance + 0.22 * regret / (1 + regret)"
+        },
+        "step": 70,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t0-r1",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "hybrid",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 71
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0922,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0892,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.333 * progress * return_distance + 0.222 * regret / (1 + regret)"
+        },
+        "step": 71,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t0-r2",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 2,
+      "fixture": {
+        "selection": {
+          "target": "local_distance",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 72
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_62",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.336 * progress * return_distance + 0.224 * regret / (1 + regret)"
+        },
+        "step": 72,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t0-r3",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 3,
+      "fixture": {
+        "selection": {
+          "target": "return_aware",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 73
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0926,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0896,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_63",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.339 * progress * return_distance + 0.226 * regret / (1 + regret)"
+        },
+        "step": 73,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t0-r4",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 4,
+      "fixture": {
+        "selection": {
+          "target": "regret",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 74
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_64",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.342 * progress * return_distance + 0.228 * regret / (1 + regret)"
+        },
+        "step": 74,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t0-r5",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "from_scratch",
+      "repeat": 5,
+      "fixture": {
+        "selection": {
+          "target": "cluster",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 75
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.093,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.09,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_from_scratch_65",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.345 * progress * return_distance + 0.23 * regret / (1 + regret)"
+        },
+        "step": 75,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t1-r0",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "hybrid",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.092,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 70
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.33 * progress * return_distance + 0.22 * regret / (1 + regret)"
+        },
+        "step": 70,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t1-r1",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "local_distance",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0922,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 71
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0922,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0892,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.333 * progress * return_distance + 0.222 * regret / (1 + regret)"
+        },
+        "step": 71,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t1-r2",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 2,
+      "fixture": {
+        "selection": {
+          "target": "return_aware",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0924,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 72
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_62",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.336 * progress * return_distance + 0.224 * regret / (1 + regret)"
+        },
+        "step": 72,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t1-r3",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 3,
+      "fixture": {
+        "selection": {
+          "target": "regret",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0926,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 73
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0926,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0896,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_63",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.339 * progress * return_distance + 0.226 * regret / (1 + regret)"
+        },
+        "step": 73,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t1-r4",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 4,
+      "fixture": {
+        "selection": {
+          "target": "cluster",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0928,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 74
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_64",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.342 * progress * return_distance + 0.228 * regret / (1 + regret)"
+        },
+        "step": 74,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t1-r5",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "parent_revision",
+      "repeat": 5,
+      "fixture": {
+        "selection": {
+          "target": "lookahead",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.093,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 75
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.093,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.09,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_parent_revision_65",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.345 * progress * return_distance + 0.23 * regret / (1 + regret)"
+        },
+        "step": 75,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t2-r0",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "local_distance",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.092,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.089,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 70
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.33 * progress * return_distance + 0.22 * regret / (1 + regret)"
+        },
+        "step": 70,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t2-r1",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "return_aware",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0922,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.0892,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 71
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0922,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0892,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.333 * progress * return_distance + 0.222 * regret / (1 + regret)"
+        },
+        "step": 71,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t2-r2",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 2,
+      "fixture": {
+        "selection": {
+          "target": "regret",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0924,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.0894,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 72
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_62",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.336 * progress * return_distance + 0.224 * regret / (1 + regret)"
+        },
+        "step": 72,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t2-r3",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 3,
+      "fixture": {
+        "selection": {
+          "target": "cluster",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0926,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.0896,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 73
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.0926,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0896,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_63",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.339 * progress * return_distance + 0.226 * regret / (1 + regret)"
+        },
+        "step": 73,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t2-r4",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 4,
+      "fixture": {
+        "selection": {
+          "target": "lookahead",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.0928,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.08979999999999999,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 74
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_64",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.342 * progress * return_distance + 0.228 * regret / (1 + regret)"
+        },
+        "step": 74,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-acc-c-t2-r5",
+      "cohort": "acceptance",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "template": "reference_revision",
+      "repeat": 5,
+      "fixture": {
+        "selection": {
+          "target": "progress",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.093,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.09,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 75
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.093,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.09,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_acceptance_reference_revision_65",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.345 * progress * return_distance + 0.23 * regret / (1 + regret)"
+        },
+        "step": 75,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t0-r0-p",
+      "cohort": "end_to_end",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t0-r0",
+      "template": "from_scratch",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "regret",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 90
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_from_scratch_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.39 * progress * return_distance + 0.26 * regret / (1 + regret)"
+        },
+        "step": 90,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t0-r0-c",
+      "cohort": "end_to_end",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t0-r0",
+      "template": "from_scratch",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "regret",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 90
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_from_scratch_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.39 * progress * return_distance + 0.26 * regret / (1 + regret)"
+        },
+        "step": 90,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t0-r1-p",
+      "cohort": "end_to_end",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t0-r1",
+      "template": "from_scratch",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "cluster",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 91
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.09620000000000001,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0932,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_from_scratch_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.393 * progress * return_distance + 0.262 * regret / (1 + regret)"
+        },
+        "step": 91,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t0-r1-c",
+      "cohort": "end_to_end",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t0-r1",
+      "template": "from_scratch",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "cluster",
+          "action": "restart",
+          "parent": null,
+          "reference": null,
+          "evidence": {
+            "decision_step": 91
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.09620000000000001,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0932,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_from_scratch_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.393 * progress * return_distance + 0.262 * regret / (1 + regret)"
+        },
+        "step": 91,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t1-r0-p",
+      "cohort": "end_to_end",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t1-r0",
+      "template": "parent_revision",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "cluster",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.096,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 90
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_parent_revision_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.39 * progress * return_distance + 0.26 * regret / (1 + regret)"
+        },
+        "step": 90,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t1-r0-c",
+      "cohort": "end_to_end",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t1-r0",
+      "template": "parent_revision",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "cluster",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.096,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 90
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_parent_revision_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.39 * progress * return_distance + 0.26 * regret / (1 + regret)"
+        },
+        "step": 90,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t1-r1-p",
+      "cohort": "end_to_end",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t1-r1",
+      "template": "parent_revision",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "lookahead",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.09620000000000001,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 91
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.09620000000000001,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0932,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_parent_revision_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.393 * progress * return_distance + 0.262 * regret / (1 + regret)"
+        },
+        "step": 91,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t1-r1-c",
+      "cohort": "end_to_end",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t1-r1",
+      "template": "parent_revision",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "lookahead",
+          "action": "refine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.09620000000000001,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": null,
+          "evidence": {
+            "decision_step": 91
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.09620000000000001,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0932,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_parent_revision_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.393 * progress * return_distance + 0.262 * regret / (1 + regret)"
+        },
+        "step": 91,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t2-r0-p",
+      "cohort": "end_to_end",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t2-r0",
+      "template": "reference_revision",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "lookahead",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.096,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.093,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 90
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_reference_revision_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.39 * progress * return_distance + 0.26 * regret / (1 + regret)"
+        },
+        "step": 90,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t2-r0-c",
+      "cohort": "end_to_end",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t2-r0",
+      "template": "reference_revision",
+      "repeat": 0,
+      "fixture": {
+        "selection": {
+          "target": "lookahead",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.096,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.093,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 90
+          },
+          "recent": []
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_reference_revision_60",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.39 * progress * return_distance + 0.26 * regret / (1 + regret)"
+        },
+        "step": 90,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t2-r1-p",
+      "cohort": "end_to_end",
+      "role": "planner",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t2-r1",
+      "template": "reference_revision",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "progress",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.09620000000000001,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.0932,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 91
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.09620000000000001,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0932,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_reference_revision_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.393 * progress * return_distance + 0.262 * regret / (1 + regret)"
+        },
+        "step": 91,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    },
+    {
+      "job_id": "r3-e2e-t2-r1-c",
+      "cohort": "end_to_end",
+      "role": "coder",
+      "config_id": "fixed_headroom",
+      "case_id": "e2e-t2-r1",
+      "template": "reference_revision",
+      "repeat": 1,
+      "fixture": {
+        "selection": {
+          "target": "progress",
+          "action": "recombine",
+          "parent": {
+            "id": 1,
+            "name": "return_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "return_aware"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+            "evaluation": {
+              "loss": 0.09620000000000001,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "reference": {
+            "id": 2,
+            "name": "regret_aware",
+            "intent": "synthetic interface fixture",
+            "tags": [
+              "local_distance",
+              "regret"
+            ],
+            "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+            "evaluation": {
+              "loss": 0.0932,
+              "valid": true,
+              "family_loss": {
+                "uniform": 0.1,
+                "clustered": 0.04,
+                "grid": 0.08
+              },
+              "trajectory_values": [],
+              "failure_type": null,
+              "error": null
+            }
+          },
+          "evidence": {
+            "decision_step": 91
+          },
+          "recent": [
+            {
+              "id": 1,
+              "name": "return_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+              "evaluation": {
+                "loss": 0.09620000000000001,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            },
+            {
+              "id": 2,
+              "name": "regret_aware",
+              "intent": "synthetic interface fixture",
+              "tags": [
+                "local_distance",
+                "regret"
+              ],
+              "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+              "evaluation": {
+                "loss": 0.0932,
+                "valid": true,
+                "family_loss": {
+                  "uniform": 0.1,
+                  "clustered": 0.04,
+                  "grid": 0.08
+                },
+                "trajectory_values": [],
+                "failure_type": null,
+                "error": null
+              }
+            }
+          ]
+        },
+        "plan": {
+          "name": "bounded_fixture_end_to_end_reference_revision_61",
+          "intent": "Retain local distance and introduce a bounded progress-dependent return and regret correction.",
+          "tags": [
+            "return_aware",
+            "regret"
+          ],
+          "formula": "-distance + 0.393 * progress * return_distance + 0.262 * regret / (1 + regret)"
+        },
+        "step": 91,
+        "synthetic_feedback_not_measured_quality": true
+      }
+    }
+  ],
+  "created_utc": "2026-09-26T09:50:34.442094+00:00",
+  "manifest_sha256": "d592e9b76d8d9c0da4bf83a3012c191f027d579908bddd2f58fbdb9db1dd6d2a"
+}

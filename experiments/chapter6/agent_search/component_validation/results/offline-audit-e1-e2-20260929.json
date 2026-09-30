@@ -1,0 +1,479 @@
+{
+  "e2": {
+    "study": "e2-minimax-20260928-r3-frozen",
+    "runs": 32,
+    "records": 1024,
+    "branch_development": 113,
+    "new_direction_children": 96,
+    "parent_improvements": 18,
+    "improvement_admission_reasons": {
+      "budget_window_exhausted": 1,
+      "no_remaining_trial_or_renewal": 16,
+      "not_eligible": 1
+    },
+    "improvements_with_new_grant": 0,
+    "improvement_details": [
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": false,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": false,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": false,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": false,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": false,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": false,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": true,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": true,
+        "global_improvement": true,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": true,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": true,
+        "global_improvement": true,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "budget_window_exhausted",
+        "protected_development": true,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": true,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": true,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": true,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": true,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": true,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "not_eligible",
+        "protected_development": true,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      },
+      {
+        "admission_reason": "no_remaining_trial_or_renewal",
+        "protected_development": true,
+        "global_improvement": false,
+        "branch_remaining_after": 0,
+        "protection_grant_awarded": 0,
+        "development_grant_awarded": 0
+      }
+    ],
+    "run_summary": {
+      "p00-b48-s0": {
+        "branch_development": 6,
+        "new_direction_children": 6,
+        "parent_improvements": 0
+      },
+      "p00-b48-s1": {
+        "branch_development": 5,
+        "new_direction_children": 3,
+        "parent_improvements": 0
+      },
+      "p00-b49-s0": {
+        "branch_development": 2,
+        "new_direction_children": 2,
+        "parent_improvements": 1
+      },
+      "p00-b49-s1": {
+        "branch_development": 5,
+        "new_direction_children": 4,
+        "parent_improvements": 0
+      },
+      "p00-b50-s0": {
+        "branch_development": 2,
+        "new_direction_children": 1,
+        "parent_improvements": 0
+      },
+      "p00-b50-s1": {
+        "branch_development": 2,
+        "new_direction_children": 2,
+        "parent_improvements": 0
+      },
+      "p00-b51-s0": {
+        "branch_development": 3,
+        "new_direction_children": 3,
+        "parent_improvements": 0
+      },
+      "p00-b51-s1": {
+        "branch_development": 4,
+        "new_direction_children": 4,
+        "parent_improvements": 0
+      },
+      "p01-b48-s0": {
+        "branch_development": 3,
+        "new_direction_children": 2,
+        "parent_improvements": 0
+      },
+      "p01-b48-s1": {
+        "branch_development": 2,
+        "new_direction_children": 2,
+        "parent_improvements": 1
+      },
+      "p01-b49-s0": {
+        "branch_development": 3,
+        "new_direction_children": 2,
+        "parent_improvements": 2
+      },
+      "p01-b49-s1": {
+        "branch_development": 4,
+        "new_direction_children": 4,
+        "parent_improvements": 0
+      },
+      "p01-b50-s0": {
+        "branch_development": 4,
+        "new_direction_children": 3,
+        "parent_improvements": 1
+      },
+      "p01-b50-s1": {
+        "branch_development": 3,
+        "new_direction_children": 2,
+        "parent_improvements": 0
+      },
+      "p01-b51-s0": {
+        "branch_development": 3,
+        "new_direction_children": 3,
+        "parent_improvements": 1
+      },
+      "p01-b51-s1": {
+        "branch_development": 4,
+        "new_direction_children": 3,
+        "parent_improvements": 0
+      },
+      "p10-b48-s0": {
+        "branch_development": 5,
+        "new_direction_children": 5,
+        "parent_improvements": 0
+      },
+      "p10-b48-s1": {
+        "branch_development": 4,
+        "new_direction_children": 3,
+        "parent_improvements": 2
+      },
+      "p10-b49-s0": {
+        "branch_development": 2,
+        "new_direction_children": 2,
+        "parent_improvements": 0
+      },
+      "p10-b49-s1": {
+        "branch_development": 2,
+        "new_direction_children": 2,
+        "parent_improvements": 0
+      },
+      "p10-b50-s0": {
+        "branch_development": 4,
+        "new_direction_children": 4,
+        "parent_improvements": 0
+      },
+      "p10-b50-s1": {
+        "branch_development": 2,
+        "new_direction_children": 2,
+        "parent_improvements": 0
+      },
+      "p10-b51-s0": {
+        "branch_development": 4,
+        "new_direction_children": 3,
+        "parent_improvements": 1
+      },
+      "p10-b51-s1": {
+        "branch_development": 5,
+        "new_direction_children": 3,
+        "parent_improvements": 2
+      },
+      "p11-b48-s0": {
+        "branch_development": 5,
+        "new_direction_children": 5,
+        "parent_improvements": 1
+      },
+      "p11-b48-s1": {
+        "branch_development": 3,
+        "new_direction_children": 2,
+        "parent_improvements": 1
+      },
+      "p11-b49-s0": {
+        "branch_development": 4,
+        "new_direction_children": 2,
+        "parent_improvements": 0
+      },
+      "p11-b49-s1": {
+        "branch_development": 2,
+        "new_direction_children": 2,
+        "parent_improvements": 1
+      },
+      "p11-b50-s0": {
+        "branch_development": 3,
+        "new_direction_children": 3,
+        "parent_improvements": 1
+      },
+      "p11-b50-s1": {
+        "branch_development": 2,
+        "new_direction_children": 2,
+        "parent_improvements": 0
+      },
+      "p11-b51-s0": {
+        "branch_development": 5,
+        "new_direction_children": 4,
+        "parent_improvements": 3
+      },
+      "p11-b51-s1": {
+        "branch_development": 6,
+        "new_direction_children": 6,
+        "parent_improvements": 0
+      }
+    },
+    "note": "The frozen E2 r3 archive contains 113 branch-development events. The reviewed narrative's count of 112 is therefore off by one; the 96/18/0 and 16/1/1 subdivisions are reproduced exactly."
+  },
+  "e1_cb": {
+    "study": "e1-minimax-20260928-g-frozen",
+    "strategy": "C-B",
+    "jobs": 16,
+    "validation_improved_jobs": 8,
+    "validation_improved_but_test_worse_jobs": 5,
+    "rows": [
+      {
+        "job": "b44-fb_p-s16-cb-r0",
+        "block": 44,
+        "repetition": 0,
+        "validation_global_improvements": 1,
+        "baseline_test_gap": 0.04559332625089405,
+        "final_test_gap": 0.06724309982355005,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b44-fb_p-s16-cb-r1",
+        "block": 44,
+        "repetition": 1,
+        "validation_global_improvements": 1,
+        "baseline_test_gap": 0.04559332625089405,
+        "final_test_gap": 0.046967843426518635,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b44-sp-s16-cb-r0",
+        "block": 44,
+        "repetition": 0,
+        "validation_global_improvements": 1,
+        "baseline_test_gap": 0.04676337951205009,
+        "final_test_gap": 0.045168332659464856,
+        "test_improved_over_start_incumbent": true
+      },
+      {
+        "job": "b44-sp-s16-cb-r1",
+        "block": 44,
+        "repetition": 1,
+        "validation_global_improvements": 1,
+        "baseline_test_gap": 0.04676337951205009,
+        "final_test_gap": 0.040729583963587106,
+        "test_improved_over_start_incumbent": true
+      },
+      {
+        "job": "b45-fb_p-s16-cb-r0",
+        "block": 45,
+        "repetition": 0,
+        "validation_global_improvements": 0,
+        "baseline_test_gap": 0.04697223222073215,
+        "final_test_gap": 0.04697223222073215,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b45-fb_p-s16-cb-r1",
+        "block": 45,
+        "repetition": 1,
+        "validation_global_improvements": 0,
+        "baseline_test_gap": 0.04697223222073215,
+        "final_test_gap": 0.04697223222073215,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b45-sp-s16-cb-r0",
+        "block": 45,
+        "repetition": 0,
+        "validation_global_improvements": 2,
+        "baseline_test_gap": 0.04204978906971484,
+        "final_test_gap": 0.043942180275585406,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b45-sp-s16-cb-r1",
+        "block": 45,
+        "repetition": 1,
+        "validation_global_improvements": 0,
+        "baseline_test_gap": 0.04204978906971484,
+        "final_test_gap": 0.04204978906971484,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b46-fb_p-s16-cb-r0",
+        "block": 46,
+        "repetition": 0,
+        "validation_global_improvements": 0,
+        "baseline_test_gap": 0.044929780522166306,
+        "final_test_gap": 0.044929780522166306,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b46-fb_p-s16-cb-r1",
+        "block": 46,
+        "repetition": 1,
+        "validation_global_improvements": 0,
+        "baseline_test_gap": 0.044929780522166306,
+        "final_test_gap": 0.044929780522166306,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b46-sp-s16-cb-r0",
+        "block": 46,
+        "repetition": 0,
+        "validation_global_improvements": 0,
+        "baseline_test_gap": 0.04643576527837522,
+        "final_test_gap": 0.04643576527837522,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b46-sp-s16-cb-r1",
+        "block": 46,
+        "repetition": 1,
+        "validation_global_improvements": 1,
+        "baseline_test_gap": 0.04643576527837522,
+        "final_test_gap": 0.04403643793678829,
+        "test_improved_over_start_incumbent": true
+      },
+      {
+        "job": "b47-fb_p-s16-cb-r0",
+        "block": 47,
+        "repetition": 0,
+        "validation_global_improvements": 1,
+        "baseline_test_gap": 0.05316094118889323,
+        "final_test_gap": 0.054818324995918495,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b47-fb_p-s16-cb-r1",
+        "block": 47,
+        "repetition": 1,
+        "validation_global_improvements": 1,
+        "baseline_test_gap": 0.05316094118889323,
+        "final_test_gap": 0.054818324995918495,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b47-sp-s16-cb-r0",
+        "block": 47,
+        "repetition": 0,
+        "validation_global_improvements": 0,
+        "baseline_test_gap": 0.05227275087431213,
+        "final_test_gap": 0.05227275087431213,
+        "test_improved_over_start_incumbent": false
+      },
+      {
+        "job": "b47-sp-s16-cb-r1",
+        "block": 47,
+        "repetition": 1,
+        "validation_global_improvements": 0,
+        "baseline_test_gap": 0.05227275087431213,
+        "final_test_gap": 0.05227275087431213,
+        "test_improved_over_start_incumbent": false
+      }
+    ],
+    "note": "The baseline Test gap is an offline evaluation of the frozen start_incumbent code on the frozen independent Test split."
+  }
+}

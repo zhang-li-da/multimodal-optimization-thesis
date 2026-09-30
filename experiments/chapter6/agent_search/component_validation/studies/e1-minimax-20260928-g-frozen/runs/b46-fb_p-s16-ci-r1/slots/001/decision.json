@@ -1,0 +1,49 @@
+{
+  "decision": {
+    "step": 1,
+    "strategy": "C-I",
+    "action": "develop",
+    "target": "return_aware",
+    "parent": {
+      "id": 8,
+      "intent": "Evolve the parent's static return_distance + regret baseline into a progress-modulated score. As the tour builds, the return_distance weight ramps from 0.1 to 0.5, biasing late-tour pivots toward cities that keep the eventual loop short. This targets the parent's main weakness (uniform instances) where a static 0.2 return weight underweights closure near the end of construction. Regret stays at 0.25 to preserve inherited pivot flexibility, while distance remains the primary grounding term to avoid loose packing.",
+      "tags": [
+        "progress",
+        "return_aware"
+      ],
+      "code": "def priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    p = f['progress']\n    reg = f['regret']\n    return -d + (0.1 + 0.4 * p) * rd + 0.25 * reg",
+      "loss": 0.03938007399141782,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.034177485392450135,
+        "clustered": 0.04540753534749139,
+        "grid": 0.03855520123431192
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.7492887063352334,
+          3.7492887063352334
+        ],
+        [
+          3.5656459387359356,
+          3.5573382255969808,
+          3.5573382255969808
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "incumbent",
+      "start_incumbent_id": 8,
+      "start_branch_id": 15,
+      "current_incumbent_id": 8,
+      "current_branch_id": 15
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-I",
+      "checkpoint_best_loss": 0.03938007399141782
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-E",
+    "action": "explore",
+    "target": "cluster",
+    "parent": null,
+    "reference": null,
+    "allocation": {
+      "continuation_target": "explore",
+      "start_incumbent_id": 5,
+      "start_branch_id": 17,
+      "current_incumbent_id": 5,
+      "current_branch_id": 17
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-E",
+      "checkpoint_best_loss": 0.04621097896720469
+    }
+  }
+}

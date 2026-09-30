@@ -1,0 +1,22 @@
+{
+  "request_sha256": "65f285abb1b59ed584df70d9876fcfbaa1af0b73281ecb009239555d9fc7319b",
+  "text": "<think>We need to generate a JSON object with a single field \"code\" containing the implementation of the heuristic function priority(f) according to the plan.\n\nConstraints:\n\n- The function must access only listed features with f['feature'].\n- Allowed Python operations: def, scalar local assignments, return, if/else, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh.\n- No imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls.\n- Must guard denominators with 1e-9 and log domains.\n- <=25 source lines and <=320 AST nodes.\n- Must be a JSON object: {\"code\": \"...\"} where code string has newline escapes valid inside JSON.\n\nGoal: implement the priority rule: priority = -distance + (0.15 + 0.45*progress)*return_distance + (0.30 - 0.20*progress)*regret + 0.08*cluster_density.\n\nWe need to compute those terms using f features. Use local assignments for each term.\n\nWe also need to guard denominators, but we aren't dividing by anything except maybe not needed. The formula has no division.\n\nWe need to check for log domains? Not using logs.\n\nThus implement:\n\ndef priority(f):\n    d = f[\"distance\"]\n    r = f[\"return_distance\"]\n    g = f[\"regret\"]\n    p = f[\"progress\"]\n    cd = f[\"cluster_density\"]\n    # compute weights\n    w_r = 0.15 + 0.45 * p\n    w_g = 0.30 - 0.20 * p\n    # priority\n    val = -d + w_r * r + w_g * g + 0.08 * cd\n    return val\n\nThat matches the plan.\n\nWe must check if we need to clamp weights? Not required.\n\nBut we must ensure we use only allowed functions. No function calls besides allowed. That's fine.\n\nCheck that we use only f[...] accessing.\n\nAll good.\n\nNow produce JSON with newline escapes: \"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    r = f[\\\"return_distance\\\"]\\n    g = f[\\\"regret\\\"]\\n    p = f[\\\"progress\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    w_r = 0.15 + 0.45 * p\\n    w_g = 0.30 - 0.20 * p\\n    val = -d + w_r * r + w_g * g + 0.08 * cd\\n    return val\"\n\nMake sure to escape double quotes within the string: use \\\" inside.\n\nThus final output: {\"code\":\"...\"}.\n\nCheck line count: 9 lines, within 25.\n\nAST nodes: number of expressions, assignments, etc. Should be <320.\n\nThus final.\n\nPotential concerns: Are we allowed to use f[\"cluster_density\"]? Yes, features list includes cluster_density.\n\nThus output.\n\nMake sure to output only JSON object, no markdown.\n\nWill deliver.</think>\n\n{\"code\":\"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    r = f[\\\"return_distance\\\"]\\n    g = f[\\\"regret\\\"]\\n    p = f[\\\"progress\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    w_r = 0.15 + 0.45 * p\\n    w_g = 0.30 - 0.20 * p\\n    val = -d + w_r * r + w_g * g + 0.08 * cd\\n    return val\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1636,
+    "total_characters": 0,
+    "prompt_tokens": 841,
+    "completion_tokens": 795,
+    "completion_tokens_details": {
+      "reasoning_tokens": 666
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 841,
+  "output_tokens": 795,
+  "usage_complete": true,
+  "seconds": 5.36673799995333,
+  "request_id": "07097040e1c60f03d38a7931ed2c98cc"
+}

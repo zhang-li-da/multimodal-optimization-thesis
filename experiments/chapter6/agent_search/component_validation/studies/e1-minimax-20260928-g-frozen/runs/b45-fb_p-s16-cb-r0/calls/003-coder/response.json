@@ -1,0 +1,22 @@
+{
+  "request_sha256": "161f7a111e41d1a946c01f56908f919d048a40630cd149e9714a20ccf8adf90e",
+  "text": "<think>The task is to implement a priority function for TSP construction heuristic. Let me analyze the requirements:\n\n1. Must return higher value for higher priority\n2. The formula from the plan is: `-f['distance'] + 0.25 * f['return_distance'] * (1 + f['progress']) + 0.08 * f['regret'] - 0.12 * f['nearest_remaining'] + 0.03 * f['cluster_density'] - 0.03 * f['spread']`\n3. Constraints:\n   - Only def priority(f)\n   - Scalar local assignments\n   - return, if/else or conditional expression\n   - + - * / % ** (constant exponent <=4)\n   - comparisons, boolean operations\n   - calls abs/min/max/sqrt/log/log1p/exp/tanh\n   - NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls\n   - Access only listed features with f['feature']\n   - Guard denominators with 1e-9 and log domains\n   - <=25 source lines and <=320 AST nodes\n\nLet me write the code:\n\n```python\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    p = f['progress']\n    cd = f['cluster_density']\n    s = f['spread']\n    return -d + 0.25 * rd * (1 + p) + 0.08 * r - 0.12 * nr + 0.03 * cd - 0.03 * s\n```\n\nLet me check the line count and constraints:\n- def priority(f): - 1 line\n- 7 assignment lines\n- 1 return line\n- Total: 9 lines, well under 25\n\nAST nodes - let me count:\n- def priority(f): - function def\n- d = f['distance'] - assignment, subscript\n- rd = f['return_distance'] - assignment, subscript\n- nr = f['nearest_remaining'] - assignment, subscript\n- r = f['regret'] - assignment, subscript\n- p = f['progress'] - assignment, subscript\n- cd = f['cluster_density'] - assignment, subscript\n- s = f['spread'] - assignment, subscript\n- return -d + 0.25 * rd * (1 + p) + 0.08 * r - 0.12 * nr + 0.03 * cd - 0.03 * s\n\nThis should be well within 320 AST nodes.\n\nThe formula matches the plan:\n- `-f['distance']` ✓\n- `0.25 * f['return_distance'] * (1 + f['progress'])` ✓\n- `0.08 * f['regret']` ✓\n- `-0.12 * f['nearest_remaining']` ✓\n- `0.03 * f['cluster_density']` ✓\n- `-0.03 * f['spread']` ✓\n\nI don't need any guards for denominators since there are no divisions. The formula only uses additions, subtractions, and multiplications.\n\nLet me verify all features used are in the allowed list:\n- distance ✓\n- return_distance ✓\n- nearest_remaining ✓\n- regret ✓\n- progress ✓\n- cluster_density ✓\n- spread ✓\n\nAll 7 features are used. This matches the parent_code which uses 5 features, and the plan adds spread.\n\nThe output should be JSON with exactly one code field. Let me format it properly with newline escapes.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    nr = f['nearest_remaining']\\n    r = f['regret']\\n    p = f['progress']\\n    cd = f['cluster_density']\\n    s = f['spread']\\n    return -d + 0.25 * rd * (1 + p) + 0.08 * r - 0.12 * nr + 0.03 * cd - 0.03 * s\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1794,
+    "total_characters": 0,
+    "prompt_tokens": 894,
+    "completion_tokens": 900,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    }
+  },
+  "input_tokens": 894,
+  "output_tokens": 900,
+  "usage_complete": true,
+  "seconds": 8.123153900029138,
+  "request_id": "070975255299587cdbfc875647b6e546"
+}

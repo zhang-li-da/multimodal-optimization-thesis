@@ -1,0 +1,80 @@
+{
+  "study_id": "chapter6-component-validation-20260927-e0-e2-r2",
+  "manifest_sha256": "b9145c9126f95a98d96d677f4aaab40d2a71885e71fdda9d30d32759576af4b8",
+  "jobs_planned": 32,
+  "jobs_tested": 0,
+  "all_jobs_infrastructure_failed": true,
+  "group": {
+    "P00": {
+      "planned_jobs": 8,
+      "status_counts": {
+        "infrastructure_incomplete": 8
+      },
+      "tested_jobs": 0,
+      "mean_test_gap": null,
+      "completed_proposals": 2,
+      "valid_proposals": 2,
+      "request_attempts": 14,
+      "known_tokens": 26560,
+      "provider_failures": 8,
+      "branch_entries": 2,
+      "zero_credit_pool_entries": 0,
+      "evictions": 0,
+      "protected_slots": 0
+    },
+    "P01": {
+      "planned_jobs": 8,
+      "status_counts": {
+        "infrastructure_incomplete": 8
+      },
+      "tested_jobs": 0,
+      "mean_test_gap": null,
+      "completed_proposals": 0,
+      "valid_proposals": 0,
+      "request_attempts": 8,
+      "known_tokens": 0,
+      "provider_failures": 8,
+      "branch_entries": 0,
+      "zero_credit_pool_entries": 0,
+      "evictions": 0,
+      "protected_slots": 0
+    },
+    "P10": {
+      "planned_jobs": 8,
+      "status_counts": {
+        "infrastructure_incomplete": 8
+      },
+      "tested_jobs": 0,
+      "mean_test_gap": null,
+      "completed_proposals": 2,
+      "valid_proposals": 2,
+      "request_attempts": 12,
+      "known_tokens": 15775,
+      "provider_failures": 8,
+      "branch_entries": 2,
+      "zero_credit_pool_entries": 0,
+      "evictions": 0,
+      "protected_slots": 0
+    },
+    "P11": {
+      "planned_jobs": 8,
+      "status_counts": {
+        "infrastructure_incomplete": 8
+      },
+      "tested_jobs": 0,
+      "mean_test_gap": null,
+      "completed_proposals": 2,
+      "valid_proposals": 2,
+      "request_attempts": 12,
+      "known_tokens": 14148,
+      "provider_failures": 8,
+      "branch_entries": 1,
+      "zero_credit_pool_entries": 0,
+      "evictions": 0,
+      "protected_slots": 0
+    }
+  },
+  "model_calls_in_analysis": 0,
+  "interpretation": "No quality or component-effect conclusion is estimable because every job terminated on provider failure before a complete search.",
+  "failure_policy": "Failed requests and partial histories remain visible; no replacement or automatic retry is included."
+}

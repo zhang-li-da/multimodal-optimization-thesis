@@ -1,0 +1,49 @@
+{
+  "decision": {
+    "step": 1,
+    "strategy": "C-I",
+    "action": "develop",
+    "target": "return_aware",
+    "parent": {
+      "id": 4,
+      "intent": "Layer regret on top of the parent's progress-weighted return penalty to better handle uniform instances, where cluster density is unreliable. High regret flags candidates with a clearly closer next neighbor than the second nearest, reducing forced long jumps in flat topologies. Halve the density weight so cluster/uniform families balance, while distance stays dominant for local coherence. The growing return penalty still bounds late-stage tour length.",
+      "tags": [
+        "regret",
+        "return_aware"
+      ],
+      "code": "def priority(f):\n    return_weight = 0.20 + 0.30 * f['progress']\n    return_penalty = return_weight * f['return_distance']\n    density_bonus = 0.05 * f['cluster_density']\n    regret_bonus = 0.25 * f['regret']\n    return -f['distance'] + return_penalty + density_bonus + regret_bonus\n",
+      "loss": 0.038955930465600315,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.04045025875855731,
+        "clustered": 0.023989412670587112,
+        "grid": 0.05242811996765653
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.9623146489847163,
+          3.885715514970267,
+          3.885715514970267
+        ],
+        [
+          2.7923145857394407,
+          2.7923145857394407
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "incumbent",
+      "start_incumbent_id": 4,
+      "start_branch_id": 7,
+      "current_incumbent_id": 4,
+      "current_branch_id": 7
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-I",
+      "checkpoint_best_loss": 0.038955930465600315
+    }
+  }
+}

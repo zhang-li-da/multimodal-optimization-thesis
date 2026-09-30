@@ -1,0 +1,22 @@
+{
+  "request_sha256": "fc4978616e8136bef63a8dc569dca82acb7fa19e981bc97721309f852c0a4f58",
+  "text": "<think>The user wants me to implement a priority function for a TSP heuristic. Let me analyze the requirements:\n\n1. **Task contract**: Generate a sequential TSP construction heuristic. Starting at city 0, the candidate with the HIGHEST priority is visited next. A fixed budget of 24 deterministic 2-opt delta tests then refines every tour for ALL methods. All distances are normalized by instance mean distance.\n\n2. **Features available**: distance, return_distance, nearest_remaining, mean_remaining, regret, progress, cluster_density, spread\n\n3. **Language constraints**: \n   - Exactly `def priority(f):`\n   - Scalar local assignments\n   - return, if/else or conditional expression\n   - + - * / % ** (constant exponent <=4)\n   - comparisons, boolean operations\n   - calls abs/min/max/sqrt/log/log1p/exp/tanh\n   - NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random\n   - Access only listed features with f['feature']\n   - Guard denominators with 1e-9 and log domains\n   - <=25 source lines and <=320 AST nodes\n\n4. **Plan**: The proposed formula is:\n   `priority = -f['distance'] + (0.25 + 0.3 * f['progress']) * f['return_distance'] + (0.15 - 0.1 * f['progress']) * f['regret'] + 0.15 * f['cluster_density']`\n\n5. **Parent code**: \n```python\ndef priority(f):\n    d = f['distance']\n    r = f['return_distance']\n    g = f['regret']\n    p = f['progress']\n    return -d + (0.25 + 0.3 * p) * r + (0.15 - 0.1 * p) * g\n```\n\nI need to extend this to add the cluster_density term as specified in the plan.\n\nLet me write the code:\n\n```python\ndef priority(f):\n    d = f['distance']\n    r = f['return_distance']\n    g = f['regret']\n    p = f['progress']\n    c = f['cluster_density']\n    return -d + (0.25 + 0.3 * p) * r + (0.15 - 0.1 * p) * g + 0.15 * c\n```\n\nLet me check the constraints:\n- Uses only scalar local assignments: yes\n- Uses only f['feature'] access: yes\n- Uses return: yes\n- Uses +, -, *: yes\n- No imports, annotations, loops, etc.: yes\n- Source lines: 7 lines (well under 25)\n- AST nodes: very small\n\nThe code looks valid. Let me verify it matches the formula exactly:\n- `-f['distance']` = -d ✓\n- `(0.25 + 0.3 * f['progress']) * f['return_distance']` = (0.25 + 0.3*p)*r ✓\n- `(0.15 - 0.1 * f['progress']) * f['regret']` = (0.15 - 0.1*p)*g ✓\n- `0.15 * f['cluster_density']` = 0.15*c ✓\n\nThis matches the plan exactly. The formula adds cluster_density with weight 0.15 as specified.\n\nI should output valid JSON with exactly one code field, using newline escapes.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    r = f['return_distance']\\n    g = f['regret']\\n    p = f['progress']\\n    c = f['cluster_density']\\n    return -d + (0.25 + 0.3 * p) * r + (0.15 - 0.1 * p) * g + 0.15 * c\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1670,
+    "total_characters": 0,
+    "prompt_tokens": 832,
+    "completion_tokens": 838,
+    "completion_tokens_details": {
+      "reasoning_tokens": 735
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 832,
+  "output_tokens": 838,
+  "usage_complete": true,
+  "seconds": 5.110957900062203,
+  "request_id": "07096a33d8f575874c887b1cd520aacf"
+}

@@ -1,0 +1,14 @@
+{
+  "request_sha256": "23d9558970ec37402f6026e77eaf09931a174fda3fb46cfed23e5d2cb4ab3077",
+  "text": "{\"name\": \"fixture_1\", \"intent\": \"deterministic engineering fixture\", \"tags\": [\"local_distance\"], \"formula\": \"bounded return-distance adjustment\"}",
+  "returned_model": "fixture-no-api",
+  "usage_raw": {
+    "prompt_tokens": 17,
+    "completion_tokens": 11
+  },
+  "input_tokens": 17,
+  "output_tokens": 11,
+  "usage_complete": true,
+  "seconds": 0.0,
+  "request_id": "fixture-1-planner"
+}

@@ -1,0 +1,7 @@
+model,controller,runs,runs_without_admission,mean_test_gap,admissions,followups,valid_children,parent_improvements,global_improvements,multi_branch_slots,restarts,restarts_to_untried_tags,w_only_references,max_attempt_depth,max_success_depth,proposed_exposure_gate_diagnostic_only
+MiniMax-M3,niche,3,3,0.06211775804627386,0,0,0,0,0,0,3,3,0,0,0,False
+MiniMax-M3,niche_fixed_dev,3,0,0.05244950550461994,8,11,11,2,1,8,3,3,0,4,3,True
+MiniMax-M3,relational_branch,3,2,0.06442974243603088,3,4,4,2,2,2,14,12,17,4,3,True
+qwen3.7-plus,niche,3,3,0.05306913998067536,0,0,0,0,0,0,3,3,0,0,0,False
+qwen3.7-plus,niche_fixed_dev,3,0,0.058921308221175216,8,9,9,1,1,4,3,3,0,2,2,True
+qwen3.7-plus,relational_branch,3,1,0.06315792316697126,3,6,6,1,1,2,11,11,11,3,2,True

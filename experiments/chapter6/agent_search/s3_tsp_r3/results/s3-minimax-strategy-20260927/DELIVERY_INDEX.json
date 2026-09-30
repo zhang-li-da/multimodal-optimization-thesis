@@ -1,0 +1,732 @@
+{
+  "format": "SHA-256 of staged Git blob bytes; excludes this index itself",
+  "files": [
+    {
+      "path": ".gitignore",
+      "git_blob_sha256": "c767087f135c3ac72103d653e78fb6152d83b69f40691723c2bb3a98ba4f00ca",
+      "bytes": 1781
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha256": "9c869cca5ce14ecdef2bae2a9b3d40bfa03ff1ad6319523265b1e8e68b3f6630",
+      "bytes": 13849
+    },
+    {
+      "path": "docs/proposal/PROPOSAL_CHAPTER6_S3.md",
+      "git_blob_sha256": "374ac5284fe1efc4ba09da4255eb879770c2dbfbe00ee93a3a47e9ae7bccd7ed",
+      "bytes": 4690
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_browser.py",
+      "git_blob_sha256": "3abbd9c19d865afc31307aab4a14107733cf609c9d82cf31d6652ce49127b068",
+      "bytes": 4697
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_demo.py",
+      "git_blob_sha256": "0d22b71b8271fb306df079ea7521ea08e914c6c36959b806a1abd0ca2f762cbe",
+      "bytes": 9507
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_readout.py",
+      "git_blob_sha256": "0df30fb1a5b906b6871db8b75bd955da4fcd11a5f669f2b617e641dc0ab9a5cd",
+      "bytes": 18641
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_release.py",
+      "git_blob_sha256": "036766ff5736b89aecdc954de236e4b0154fb3256eb87054b3a48e9211e144fd",
+      "bytes": 3122
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_test_audit.py",
+      "git_blob_sha256": "937d74f52c21499374f923566934822faec39a84376b27abb3f03b8d730ce5e8",
+      "bytes": 2379
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp/results/S3_ABORTED_BATCHES_ZH.md",
+      "git_blob_sha256": "30d910a6c31a3a2557633bca96f8b9e522fa5ccb62cb1e13f9dabbc98f99d363",
+      "bytes": 2271
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/readiness-20260927/tests-current.xml",
+      "git_blob_sha256": "ec5ecd370a64a6665daf98d8602d6a19a9cefa30123aa1a9bd3bc185c09afd08",
+      "bytes": 4287
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/ARCHIVE_INDEX.json",
+      "git_blob_sha256": "7ef8d7bae9d4b710376befbe343866423c554ce08e835d7682ccea7dc63aa7dc",
+      "bytes": 2760771
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/ARCHIVE_VERIFICATION.json",
+      "git_blob_sha256": "06b71ca2de95d512b42e90bc0ae380a6eedd85a8a4add7a8d4fb4a118728b889",
+      "bytes": 124
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/COST_LEDGER.json",
+      "git_blob_sha256": "be744e7f891f53698ecbfc1de7a0537f7a6e596c3e18c4f2b1dc4aa6e4f88b74",
+      "bytes": 4660
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/EXECUTION_AUDIT.json",
+      "git_blob_sha256": "f95eab53ef8e4039d04fdead3982f361cd5ba91e7bbd0e3fae0b2a464888a150",
+      "bytes": 67703
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/LINK_AUDIT.json",
+      "git_blob_sha256": "22e90b257c17da0d63c9da2e7c77eadf7af94280ed70a6dbc5787f8483b4cc65",
+      "bytes": 84
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/PUBLICATION.json",
+      "git_blob_sha256": "c7ff2a343c94732dc7f3bcfaea617176ce828860de1d8fe0df6990cc44b3af0c",
+      "bytes": 1826
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/RAW_PARTS.json",
+      "git_blob_sha256": "0ff06184789de00a29c831cad14b3089c30258a5f687c489b7ac241eed4b4757",
+      "bytes": 1770
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/REPLAY_DATA.json",
+      "git_blob_sha256": "b2664bf10c9d1472f4b277786bb889549d29202a594cf8625cb892778e72b73e",
+      "bytes": 5499572
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/REPORT_ZH.md",
+      "git_blob_sha256": "3e76680c1e9602f816d2b133b1c933d482b394c9d0a135dc1b07100581f8d620",
+      "bytes": 2008
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/REPRODUCE_ZH.md",
+      "git_blob_sha256": "d2c7fcb5451a8b98f66065924403f816036e224d6ae051b5bce7186247e0e83f",
+      "bytes": 5619
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/RUN_METRICS.csv",
+      "git_blob_sha256": "33f42d9bb46aa8f60c51d2f7f690d4874ff1fa18558b359b92423b29e6f7836d",
+      "bytes": 13507
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/S3_ANALYSIS.json",
+      "git_blob_sha256": "620649cd0098254c2c3db139942820711e43bf10dbe086f235d885f45d99c9c2",
+      "bytes": 30035
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/S3_AUDIT.json",
+      "git_blob_sha256": "052a8454498d95c3eba0aaf7daa5b10d49c1d6157bff44831aef0a05cb68a5f8",
+      "bytes": 2823312
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/SAME_STATE_NEXT_DECISION.csv",
+      "git_blob_sha256": "aafda3d17dfb22c349ef831b23edc961a94fde549870a78dc3cb0e3a199a0e04",
+      "bytes": 14545
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/SECRET_SCAN.json",
+      "git_blob_sha256": "951e55b42389d9cddafa67556c099a23125e68423d45693ccac6baeacbecefc5",
+      "bytes": 374
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/SUPPLEMENTAL_ANALYSIS.json",
+      "git_blob_sha256": "40ee0ce86c6a1618086c6eb01a9de75318bfd8943d5fb6ef697cdfafec7f5103",
+      "bytes": 20825
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/TECHNICAL_REPORT_ZH.md",
+      "git_blob_sha256": "0b793fd8f8924ae3d6c228b8a49315a69445a9c00c861ad7f61b962600506896",
+      "bytes": 19810
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/TEST_AUDIT.json",
+      "git_blob_sha256": "4083881076121df79259820c2991ea62c047c9caf212c478de8b15057dae9e67",
+      "bytes": 6720
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/VALIDATION_CURVES.csv",
+      "git_blob_sha256": "02e2f09efe20dac5d2f67915ce51ab6830973e704cba7aaa78f928e69209e01b",
+      "bytes": 104288
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/browser-check/browser_check.json",
+      "git_blob_sha256": "01c2bc82919272e57098dffd2e5147e9c67c2ed559b29ee826a13ade62c08afc",
+      "bytes": 361
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/browser-check/desktop.png",
+      "git_blob_sha256": "ada4e73a7eb88f8f7f0c7f912c77cb153d319be80ad1953678363a162764b62a",
+      "bytes": 100597
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/browser-check/mobile.png",
+      "git_blob_sha256": "ee597f827f914e02328fc6e3a4ebfc0152c5abe2465611ad5b4eedbbb5518233",
+      "bytes": 65609
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/demo/index.html",
+      "git_blob_sha256": "fd8f96538d55a4eba841c3b09c3834b36d007d0345a43c5e36e5b89e28076d9c",
+      "bytes": 3593400
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/figures/paired_differences.png",
+      "git_blob_sha256": "28f3dbe0c9950581c1b6d05dfa94f026790028faa4e0dac218dd3a59574aa905",
+      "bytes": 39048
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/figures/paired_differences.svg",
+      "git_blob_sha256": "bc9d026f3803b42c2e763835b1e234aa3e56f84d3a345b8ae0341d2b7f99a406",
+      "bytes": 44760
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/figures/test_by_block.png",
+      "git_blob_sha256": "b969a080f6f701f1f73c97c6a97875e203e2b043f6c309959a275107bec83a42",
+      "bytes": 88454
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/figures/test_by_block.svg",
+      "git_blob_sha256": "2058b0e30fe5a896910fccec07ca4c79470df23896dbb0b32f7844ac07994261",
+      "bytes": 46646
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/figures/validation_efficiency.png",
+      "git_blob_sha256": "666a63d3eece587a0e1ecde3eaef9cb833fdd7d8e648607f91cf1a8745c74810",
+      "bytes": 118421
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/figures/validation_efficiency.svg",
+      "git_blob_sha256": "180e0cc4355db5cc32b32cd27bb03fa9e2f5a87d5214a8a36cb5702e22caf012",
+      "bytes": 83155
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw/block-32.zip",
+      "git_blob_sha256": "58e48178b81b8ade1a7b840350a46b2618ed0499f3a051fcf735e5bdb612c933",
+      "bytes": 8327985
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw/block-33.zip",
+      "git_blob_sha256": "d841f8317d9c3c8de6aa506d94113dd7610c3b14814565fc1ec4bdae6b80d594",
+      "bytes": 8217343
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw/block-34.zip",
+      "git_blob_sha256": "dcf0592f664002ab210e9797fcbdb73844dc0c16f109b81b3892caede1da583f",
+      "bytes": 8149220
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw/block-35.zip",
+      "git_blob_sha256": "cf2337da2c03ce444fd41792d05a763022a319e8337e54c0dde272f15228dce9",
+      "bytes": 8300917
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw/block-36.zip",
+      "git_blob_sha256": "9f815de28be6e005a6ee25bb2f5679a1fca90782cf69d598675a300f90784981",
+      "bytes": 8183037
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw/block-37.zip",
+      "git_blob_sha256": "ea5b38ac11e9b2af6d18be9b5faad6785a640b2b3e7423cda37384159576fe02",
+      "bytes": 8341775
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw/block-38.zip",
+      "git_blob_sha256": "a42d4b296f1039ea3a8c12242e2b77f40b3fd663667921f783336a893fe20243",
+      "bytes": 8060927
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw/block-39.zip",
+      "git_blob_sha256": "e654679dba8c150a524373130d67b1aedb70cd1b41845b9934a323ab23bc4bd6",
+      "bytes": 8305478
+    },
+    {
+      "path": "experiments/chapter6/agent_search/s3_tsp_r3/results/s3-minimax-strategy-20260927/raw/common.zip",
+      "git_blob_sha256": "508c056abf58b12263e8df0ffc3ed38347d11f26efbccbbde6a1dc1d982ce59c",
+      "bytes": 1043408
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/TRANSFER_ANALYSIS.json",
+      "git_blob_sha256": "2e3383c94998c8cc165228f02bc62d96545b86095c10f8077f7f27a15fa6305a",
+      "bytes": 10173
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b32-s0-n100.json",
+      "git_blob_sha256": "a196d4f0deee3f0ffb160d5c99e13fa2ee1b95662bbf7858b93a22600e825c67",
+      "bytes": 216568
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b32-s0-n50.json",
+      "git_blob_sha256": "b753bf74abec14fb5f139b2075e5808b195f1de5ef0fc3f18bbd0fa2e527fc37",
+      "bytes": 115761
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b33-s0-n100.json",
+      "git_blob_sha256": "3a1b2e6ae37aabb9a3d04552715bb32269cc795cf4f8949ce335cd9fa645bb24",
+      "bytes": 216559
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b33-s0-n50.json",
+      "git_blob_sha256": "1d69e3c4437113cf98ca41ce12e214fabf3902a4e8f9eadd5be2eb98bf1c1a44",
+      "bytes": 115757
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b34-s0-n100.json",
+      "git_blob_sha256": "ae97ef8c2de519b48b3a727a508f48544d544c12a4ac1d8fef0f88fbd4d96057",
+      "bytes": 216555
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b34-s0-n50.json",
+      "git_blob_sha256": "61bdd305c5f18e44993707362d787b8b7ea9fca7d601b617812f7e0080647c14",
+      "bytes": 115760
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b35-s0-n100.json",
+      "git_blob_sha256": "59c3f5be7899f30fbf93febf7515f1baa46aec0276d380002c81c70bdb8bb676",
+      "bytes": 216549
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b35-s0-n50.json",
+      "git_blob_sha256": "0a7c783e9c419c394f96e56bda4a4e137dcb34110d4cb18f2d1f4de9ef7f93f9",
+      "bytes": 115753
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b36-s0-n100.json",
+      "git_blob_sha256": "09cbe307ae49a45d609ef14efba2d094f3fceea2b9c76e68a9877adea8f26928",
+      "bytes": 216552
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b36-s0-n50.json",
+      "git_blob_sha256": "1903992b20be9b23326e9b7dafa0681b4cef31f0c896fa21059a008341cfefa4",
+      "bytes": 115754
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b37-s0-n100.json",
+      "git_blob_sha256": "8577ca2d0da154e32b526933c6b0abcdca0995422feade713cbfb1ccbec03953",
+      "bytes": 216560
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b37-s0-n50.json",
+      "git_blob_sha256": "6ef6cc068716e5db67cf59895317b1413d2ef428e06d746714b8299c605f9441",
+      "bytes": 115751
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b38-s0-n100.json",
+      "git_blob_sha256": "134de7a9f501e7ec47efac29467f46ae62473bbe91ba8652756b62f13a383eac",
+      "bytes": 216583
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b38-s0-n50.json",
+      "git_blob_sha256": "6dc8be215b15e8c3991546a7818d6c71ec88bcc73b48ae3d227b1f92f64e2093",
+      "bytes": 115761
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b39-s0-n100.json",
+      "git_blob_sha256": "41db6373153f3b2542ccbc8fc44ef5990e33d87dfbb877fd09a26f222288b4be",
+      "bytes": 216547
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ad_p-b39-s0-n50.json",
+      "git_blob_sha256": "fee74438d3a55214c8503f3254c182bad5b13514d4d1c63f86074b0ae9a09ad4",
+      "bytes": 115735
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b32-s0-n100.json",
+      "git_blob_sha256": "cb5f80de7085617a95bc9d3d4fd9c353b1b1a4b15fc049ff07c50e1043d9e78c",
+      "bytes": 216544
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b32-s0-n50.json",
+      "git_blob_sha256": "60f0957317502dc8844397f7b9e9aaac1a10a4e9e76e5332e5ce9093cc39726a",
+      "bytes": 115748
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b33-s0-n100.json",
+      "git_blob_sha256": "d71754c0d3c438626e5949d08a5264a396cb210b0794222138bb6496e8f8688e",
+      "bytes": 216550
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b33-s0-n50.json",
+      "git_blob_sha256": "dfb20576a80bdb4aa85ab042d819dd5705f1231631c9df529faa494c8d6fc4a0",
+      "bytes": 115758
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b34-s0-n100.json",
+      "git_blob_sha256": "50b1a52389c8675eb3393c8c772692152797bfc0ee0db3f56e1e01c4c67883e9",
+      "bytes": 216571
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b34-s0-n50.json",
+      "git_blob_sha256": "ac8e78da7e9aafc17e0416f23ba4b422398490e3e7b7ffe66927166a877981d9",
+      "bytes": 115762
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b35-s0-n100.json",
+      "git_blob_sha256": "9b1f7b7af93e540444fccf3b0bcb9e22baa96e933cdd3ac18a3870caa1f98320",
+      "bytes": 216554
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b35-s0-n50.json",
+      "git_blob_sha256": "4d8460a01ccad74e2a609f02503b4fa0dfffdba5555c62eba187fbedce9b03a5",
+      "bytes": 115770
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b36-s0-n100.json",
+      "git_blob_sha256": "cf11fee93ca374082a32705642dd801c7edc41ca417f6da0556d0495dd590bf7",
+      "bytes": 216563
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b36-s0-n50.json",
+      "git_blob_sha256": "2b527156b476fc0774c57e4efb99093c22f2131afbf9bdda3835b28deef4bc66",
+      "bytes": 115763
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b37-s0-n100.json",
+      "git_blob_sha256": "d75864d353f070763fdc7f2c4a0ec0f2c7363a3061a5d8a268c7a46b37670254",
+      "bytes": 216552
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b37-s0-n50.json",
+      "git_blob_sha256": "8582ecfb3a01a6579f4ffa06703b3dfd8b42cd7d0a83768413c304a82297af21",
+      "bytes": 115748
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b38-s0-n100.json",
+      "git_blob_sha256": "71c3279e0a965a3ebc9656bd758df3509c977d6cdf2d6acfa4c351cb908b0852",
+      "bytes": 216580
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b38-s0-n50.json",
+      "git_blob_sha256": "9073a2aaa3e5f6635bcb823a54263ac4d7af6cbdc9f431210536da7e0e64f233",
+      "bytes": 115750
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b39-s0-n100.json",
+      "git_blob_sha256": "3ccc5929ac3912ba76fa3a75b5913ca61acc4f6d9b932a932fd7e2dabb6ca681",
+      "bytes": 216554
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_p-b39-s0-n50.json",
+      "git_blob_sha256": "103a8e4749a90e0c018ad2fe8b9055f541dda5bc7477999b37920a9baec2e731",
+      "bytes": 115734
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b32-s0-n100.json",
+      "git_blob_sha256": "ef90ca7d18911c1ae307ba30d62a9efc79dec478169e54957a1f9ae4726a522e",
+      "bytes": 216548
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b32-s0-n50.json",
+      "git_blob_sha256": "a3adb781d17fcf932b9b72c303a2a2fe39d1f97c254243893b3231f7c40493a0",
+      "bytes": 115731
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b33-s0-n100.json",
+      "git_blob_sha256": "509478aeaf997655a7bad20d6706d9f79f073229fe1b3156ff8516362cebadf0",
+      "bytes": 216558
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b33-s0-n50.json",
+      "git_blob_sha256": "0f36629d033189e1d1ce3b32974a0d69c60fbf4b8263fad900e0d986a366eeb0",
+      "bytes": 115758
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b34-s0-n100.json",
+      "git_blob_sha256": "ec705398008251ae1f8bb7e8f9be64a6812444a445af32fdad7fb12577f52851",
+      "bytes": 216571
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b34-s0-n50.json",
+      "git_blob_sha256": "82e23160d81d7583d54516ad91822404c384728b580eb59a6e5a47a161c56603",
+      "bytes": 115768
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b35-s0-n100.json",
+      "git_blob_sha256": "e27c084be9a5c8c4bee93bb151a9253a10b215132d2d2449974552cba3836b8b",
+      "bytes": 216555
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b35-s0-n50.json",
+      "git_blob_sha256": "a6f861f261ecb5e4e7e506003da5d4ce0eb3cd4909f78fae4a060af829a45aa4",
+      "bytes": 115762
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b36-s0-n100.json",
+      "git_blob_sha256": "b43775c55d430b4e2809eb6f0de0fe4abe918baffe2b343edf6f0ed262c4d304",
+      "bytes": 216558
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b36-s0-n50.json",
+      "git_blob_sha256": "9a72f2007cf25cf418ceb4ae991267a8bd4166e292283f9895c951a0708276e4",
+      "bytes": 115764
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b37-s0-n100.json",
+      "git_blob_sha256": "d675b38020d6ef33326fb34483b59a3f18c5fb0327457a382f3f6e4aa54c4a3b",
+      "bytes": 216553
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b37-s0-n50.json",
+      "git_blob_sha256": "60ddd019643673de888a0abf7c1c4deb00f2f37368b618acfd98d5fa3a1b2407",
+      "bytes": 115746
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b38-s0-n100.json",
+      "git_blob_sha256": "1c62a2acad3a512667c235621a6a76b7fb690874218b729bf6a0511c8adfe4d7",
+      "bytes": 216567
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b38-s0-n50.json",
+      "git_blob_sha256": "6dfb6c60039b29099a01f8090a79396cdc2a58307754bae8ef1db0d556f09fb6",
+      "bytes": 115750
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b39-s0-n100.json",
+      "git_blob_sha256": "cd01290042bfcffb2c861a81b4429953a4c24abe557238b52a15a2187331dbd1",
+      "bytes": 216546
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/fb_u-b39-s0-n50.json",
+      "git_blob_sha256": "e49dae918a23def7dcd5eb5f50fcdeeef60af26dd719c268ad7e495a24c022ac",
+      "bytes": 115742
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b32-s0-n100.json",
+      "git_blob_sha256": "f5a06ef91b8db89af2b4d6792b3ee3e4f648bc4e3bbb4aedbd72da5dd86d3e7b",
+      "bytes": 216557
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b32-s0-n50.json",
+      "git_blob_sha256": "a07305709de1aa032ba68c050d99b5c35dc4c45bcc1100123df2c07233a55321",
+      "bytes": 115753
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b33-s0-n100.json",
+      "git_blob_sha256": "e4c6231b00f0d32a86f1a4ccefeed0a6b8cc7a9d43cc7282827e44d3d1b59c85",
+      "bytes": 216545
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b33-s0-n50.json",
+      "git_blob_sha256": "9baa7dee6fb803b20000e858cd88c7b93ed12cd670747b28c7fdf41ee2394e3a",
+      "bytes": 115748
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b34-s0-n100.json",
+      "git_blob_sha256": "702e17e7993d489dee4285c410c8281101f76cf38fd100bb0ef767704aad010e",
+      "bytes": 216577
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b34-s0-n50.json",
+      "git_blob_sha256": "10c65f38d92e666e020104929da38f8af58b4f725567ec8a046383a13f35b10f",
+      "bytes": 115750
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b35-s0-n100.json",
+      "git_blob_sha256": "ccd37cb78384c0bb85e0afd18f91673b22a6868cab4ec92c9e4d1c07ae2e8cf6",
+      "bytes": 216546
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b35-s0-n50.json",
+      "git_blob_sha256": "a73702b272c4678295083bb1d35f843acacfa118ce9b9a133f027279d1045340",
+      "bytes": 115767
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b36-s0-n100.json",
+      "git_blob_sha256": "34eb105e3112d6b3e258a5fbcfab2f1a82e5e6188ea74a7149c7748effa82252",
+      "bytes": 216554
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b36-s0-n50.json",
+      "git_blob_sha256": "409139147009585ddb3eaa1e8452e91973451acc34748f18c22a23233a04c2c5",
+      "bytes": 115750
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b37-s0-n100.json",
+      "git_blob_sha256": "7adc924c61724e438b503535f7ac6b734a7b9de633c7c77bbfe1743f61abc53b",
+      "bytes": 216564
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b37-s0-n50.json",
+      "git_blob_sha256": "572b8bcf909fdec7a66fed43e3c9ec8140558ea7188d8adfdcf0df1c540a03ca",
+      "bytes": 115745
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b38-s0-n100.json",
+      "git_blob_sha256": "cd087f643890eca2d79404a7ff00442baa81d07b840830f5854b3995a148dee2",
+      "bytes": 216581
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b38-s0-n50.json",
+      "git_blob_sha256": "3d50445d94184f47357c83898b8251787cb51f2169dfcba40977bd90d351a9df",
+      "bytes": 115759
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b39-s0-n100.json",
+      "git_blob_sha256": "066ea7008a44029db554c7029ad864d2c876d3ed83b98f3de17e825a2544ae59",
+      "bytes": 216549
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/sp-b39-s0-n50.json",
+      "git_blob_sha256": "344a2e2cf1fd5f47f68b0401bfc2dad45c67fdd1a896323e526feff15477e141",
+      "bytes": 115737
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b32-s0-n100.json",
+      "git_blob_sha256": "da82eb17213dd49eb6537a244be5caac6b57c16c27eafc73f2b1c47781fea147",
+      "bytes": 216554
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b32-s0-n50.json",
+      "git_blob_sha256": "da3b1174b044f767366dd9ee6286917b2f571af076d34252c0f2cb6400203cec",
+      "bytes": 115733
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b33-s0-n100.json",
+      "git_blob_sha256": "3245628026cabd8f738334be09991f4cdcb30c2d532bf97ecaa5746e7ae1252d",
+      "bytes": 216545
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b33-s0-n50.json",
+      "git_blob_sha256": "8a4eb08ae170500dd4f9d82855c2cb6c306f759b44616001cdafa38b6a3edf43",
+      "bytes": 115760
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b34-s0-n100.json",
+      "git_blob_sha256": "b93656b4e6e1dcf4edb63c40122413d75eb803b04dce4bdc4a9701b86a05255d",
+      "bytes": 216578
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b34-s0-n50.json",
+      "git_blob_sha256": "533a440a979d1d8e3b55ddb0a8863fa60c803eaf93ff5e0dc6de99ebc7f9c275",
+      "bytes": 115753
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b35-s0-n100.json",
+      "git_blob_sha256": "c780adad926a83a2f0babe44c42e081c2b484e24a6ee340324d7069010a0f8e0",
+      "bytes": 216555
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b35-s0-n50.json",
+      "git_blob_sha256": "e3dff3b498a41372dea402b9ee83c4984cd6c335737318c90387981e91e8d5c3",
+      "bytes": 115771
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b36-s0-n100.json",
+      "git_blob_sha256": "1ae89182b57a551485ff5e9af93b9dc337fed91021fe672a83245ac3175c0e0d",
+      "bytes": 216558
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b36-s0-n50.json",
+      "git_blob_sha256": "57c2e19d148d1d01a61d6baf52d7f25b4bb38930628a642e1d42549d3f838832",
+      "bytes": 115753
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b37-s0-n100.json",
+      "git_blob_sha256": "7c57f9fa8c537913f9a19e5a476cdde6bd769ffc489cf11e47da9b414be692a3",
+      "bytes": 216559
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b37-s0-n50.json",
+      "git_blob_sha256": "1ac6356e2a7d4d8fde33b4a48f800057bf220eef668ce0bfe1d588f7b081cce0",
+      "bytes": 115752
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b38-s0-n100.json",
+      "git_blob_sha256": "817999ee88b66ad1b39f8cf4c11e799322d8c61d8636cf70542af48bbfc43400",
+      "bytes": 216591
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b38-s0-n50.json",
+      "git_blob_sha256": "dac16f4db626ecc9888dbb4833c4a243755a83b3501863087fc8f66880a26439",
+      "bytes": 115765
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b39-s0-n100.json",
+      "git_blob_sha256": "faf3285308784dbd97f8b0d766d54626ad359ef41d093bfd536daeb823f66b49",
+      "bytes": 216553
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/ts_p-b39-s0-n50.json",
+      "git_blob_sha256": "e84037cffbc57df07dd29fb4bf55fe3162c79dd7c6f234e7af81d917ef4e243f",
+      "bytes": 115734
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b32-s0-n100.json",
+      "git_blob_sha256": "c213a1983b624e88774363af094cd5961811b5b79479d436a9f2846bc2e40545",
+      "bytes": 216546
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b32-s0-n50.json",
+      "git_blob_sha256": "24b3cb0d7ecf776261041087ed955349bb47612fd9324b4d97173ccfecda2e57",
+      "bytes": 115745
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b33-s0-n100.json",
+      "git_blob_sha256": "30d81c854a8d8c242813237a43b150666c3c2fa5da9526c344d53c41cfe3a947",
+      "bytes": 216528
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b33-s0-n50.json",
+      "git_blob_sha256": "f0ff5db83698b4e9c2751335251e75e18ead324e72b7c801ab8e0c205fca3149",
+      "bytes": 115756
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b34-s0-n100.json",
+      "git_blob_sha256": "1f76a108940f435477e8ac62ec0d5823bd59d865d71c53c205eb407728758546",
+      "bytes": 216569
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b34-s0-n50.json",
+      "git_blob_sha256": "318faec34c8f2bddfdfdba3f6394368a644dee024b612d8d6d2fdf988705463d",
+      "bytes": 115755
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b35-s0-n100.json",
+      "git_blob_sha256": "389a2307567f77dac84b32f4356486bf7379a6de5652c2b0a659ef6c6adfdda2",
+      "bytes": 216568
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b35-s0-n50.json",
+      "git_blob_sha256": "3a7fc7bef34bfac5d3609fa446f9049de0ef483a2fca399ffbd3542d0982b1b4",
+      "bytes": 115758
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b36-s0-n100.json",
+      "git_blob_sha256": "63d9a7ea9974b11280d7d75f4a357af1a279ed8a8ebbb3bfb6b6e07fce7f7ed7",
+      "bytes": 216561
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b36-s0-n50.json",
+      "git_blob_sha256": "c3cfaf45d8c51163e7b1017850052e7b112c3bf6759719c95cd527b59cfade84",
+      "bytes": 115758
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b37-s0-n100.json",
+      "git_blob_sha256": "7bc3feaf253b0dfc1edecfd810242f16a0351d32cd2840853e5323ca306448d7",
+      "bytes": 216557
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b37-s0-n50.json",
+      "git_blob_sha256": "9669ff9383af3da569f4818ef7a290eb0da6b15ca22ed0caed7c941363147a2f",
+      "bytes": 115742
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b38-s0-n100.json",
+      "git_blob_sha256": "344622ba6af4a3fd1b5abc2795b3f73fef0990d51259b8a1e54b1f6d076dbe5d",
+      "bytes": 216563
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b38-s0-n50.json",
+      "git_blob_sha256": "19cd6542882cf4f0d336a59328030b2d94b4236b67597deb4f901e15b47a16b4",
+      "bytes": 115765
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b39-s0-n100.json",
+      "git_blob_sha256": "5fdec449513ea2e2af980836fab1231a1dfb2e1e1d36179bc289b98c0af07a63",
+      "bytes": 216553
+    },
+    {
+      "path": "experiments/chapter6/agent_search/studies/s3-transfer-20260927/evaluations/wr-b39-s0-n50.json",
+      "git_blob_sha256": "53e01465f4e93b9af1259529ac22daa9b38e3cbf4e57b50559f076ccb686cf1b",
+      "bytes": 115724
+    }
+  ],
+  "file_count": 145,
+  "note": "Raw ZIP hashes and member hashes are separately byte-exact in RAW_PARTS and ARCHIVE_INDEX; Git text checkout may translate line endings."
+}

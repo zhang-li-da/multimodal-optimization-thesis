@@ -1,0 +1,11 @@
+{
+  "request_sha256": "715e47fb6fa95d7e978aee5711a20ea3e3a23fa9901b63392cc7e32eda8b62d9",
+  "envelope": {
+    "body_base64": "eyJtb2RlbCI6ICJmaXh0dXJlLW5vLWFwaSIsICJjaG9pY2VzIjogW3sibWVzc2FnZSI6IHsiY29udGVudCI6ICJ7XCJjb2RlXCI6IFwiZGVmIHByaW9yaXR5KGYpOlxcbiAgICByZXR1cm4gLWZbXFxcImRpc3RhbmNlXFxcIl0gKyAwLjEwICogZltcXFwicmV0dXJuX2Rpc3RhbmNlXFxcIl1cXG5cIn0ifX1dLCAidXNhZ2UiOiB7InByb21wdF90b2tlbnMiOiAxNywgImNvbXBsZXRpb25fdG9rZW5zIjogMTF9fQ==",
+    "seconds": 0.0,
+    "request_id": "fixture-1-coder",
+    "protocol": "openai"
+  },
+  "envelope_sha256": "fbb5cd6ecf45b1ced55bd1c3b830aa0958a9611410e4de3ad5f3bc38331acc6e",
+  "received_utc": "2026-09-25T05:24:20.128076+00:00"
+}

@@ -1,0 +1,409 @@
+{
+  "schema": "chapter6-s1-study-v1",
+  "status": "DRAFT_NOT_EXECUTABLE",
+  "created_utc": "2026-09-26T10:18:18.171412+00:00",
+  "study_id": "s1-minimax-observability-20260926-r1",
+  "source_commit": "14aa21c92c5412e1fb0be383512ac2c2c37440f9",
+  "source": {
+    "format": "named-source-files-lf-sha256-v1",
+    "files": {
+      "chapter6_demo/__init__.py": "8ac4e98e568b6d6740f704f161a820a9f1210146b43f4b941042d6269b1e3398",
+      "experiments/chapter6/demo/__init__.py": "9e0a96a7c80110ea9a785b5f0b8797f79550c8d21b9d44f4294ad6611423c0b9",
+      "experiments/chapter6/demo/analyze.py": "01381fbcd2e292a795e430d0105930a808bae51575226476439db22dd9fcd248",
+      "experiments/chapter6/demo/benchmarks.py": "a4f461c8496a066b96dd92811145c86c1b1ba19fd08eb956cb0c017d7635dff3",
+      "experiments/chapter6/demo/classification.py": "8a6dc688c5bb8c897f2ed110d70264105f51886426b20adcaabd334e1f36623f",
+      "experiments/chapter6/demo/dashboard.py": "aea6d42b88d7959f2d89a06a9d822eafbd8a8c02772f6f49a254b74d522ecee6",
+      "experiments/chapter6/demo/discovery.py": "da8863bebf19981d283d47e67637d0ff76367e50997a6a76e43fb2dd990eef5a",
+      "experiments/chapter6/demo/inspect_environment.py": "5c9b9c4e8b68c7b24d3c6eee4e5532b7bc3de7da46106e8767bc732e3d18814d",
+      "experiments/chapter6/demo/mmo_agent_demo.py": "96a179c7ff32ed8eb6ff0d429d1a5b720aecb33c9f377a56eaed8fd8ffb2bea3",
+      "experiments/chapter6/demo/programs.py": "6036ae160339384e2807770951fba2c34b978712de24b67c730ac3ce0e4c6868",
+      "experiments/chapter6/demo/providers.py": "a6dcacdebd896f71d9a54816d09b2d1a239b9f2f9cb68525c1e44514bcebadad",
+      "experiments/chapter6/demo/run_suite.py": "10d7489d87f27de91e35cd65dbd73a5bd41c4cb912993c7b757a06156f0deca1",
+      "experiments/chapter6/demo/test_classification.py": "77f64e9756243e24ac272646f30c8410f0ba9a52c6f2e5ae51384a819f0f289e",
+      "experiments/chapter6/demo/test_science.py": "1f4a73ef98d90eced8c8a6a5c81c2db7516e30d1a614b5e99ccef47ae90fd1a9",
+      "experiments/chapter6/demo/v12_1_controller.py": "a96d3f569e42f8c6fc11780226d50a32b3b3bb26bd070fe5763d6abc64de8a38",
+      "experiments/chapter6/demo/v12_controller.py": "ec542df06bffed6197e623f897086936cd17894c2be029ce2de470a66db11cb0",
+      "experiments/chapter6/demo/verify_experiments.py": "209270bfed77eba0f06a715b0a6647cb6d37d4fe613b584148e0e33e9ae6ec6e",
+      "experiments/chapter6/v12/__init__.py": "5c8695673a1b1d1444ca99ea27522d0d94252976ce5c4d47fe12ba7a8767228e",
+      "experiments/chapter6/v12/analyze_v12.py": "88955df2584e466c8f3509657659ba60533277893e4677643b676b8e6bbabc84",
+      "experiments/chapter6/v12/run_v12.py": "f6da99e1d89ce4eb56e75915885af690175bc145d83db611a86ba65c3a25fdfd",
+      "experiments/chapter6/v12/test_v12.py": "8b4ef79dc8a01db0d4e3b8de1ec75c10fcd590ac7fbde1e4f4f4f80c139d2f17",
+      "experiments/chapter6/v12/verify_v12.py": "7c5c78d198c37cf4e44a74d61da521dc483e303175a731836e5a4ba4f58b201d",
+      "experiments/chapter6/v12_1/__init__.py": "aa812a55b5255beb9f4a3c227f9bd6774b5a408b16e8c3d38a0a855f2aab785b",
+      "experiments/chapter6/v12_1/audit_r2.py": "7450314f2bc109e8ab63ea96fa5d6370bdb2011475830cb65f11e0e7f569afc8",
+      "experiments/chapter6/v12_1/report.py": "5fbdfbac2a95c0978cfeec7f3ef565c3850125251401a8c77fe6969d042ff5de",
+      "experiments/chapter6/v12_1/test_mechanism.py": "122677f1020bb403e8aa0a6b9d8950241ca8a9f994abbe45ae91664b3e29a6ed",
+      "experiments/chapter6/v12_1/test_numeric.py": "710aa5dfbbd8b63aa04be614469cc5c31dfc95baaa45dfd2e155b75031fa1fd5",
+      "experiments/chapter6/v12_1/verify_numeric.py": "8eed2ee6fff6c9e7eb778071ae0d9ca871b2caaa1a4a04752b4fb73609f1716c",
+      "experiments/chapter6/v12_2/__init__.py": "63606dac4f6df54e95f3bca591432d6a66444ff6531099aba9e39689b18e9954",
+      "experiments/chapter6/v12_2/archives.py": "3f7bb331327fb359043d705ee129831d4d2abd85572afe75a6471936babd07a6",
+      "experiments/chapter6/v12_2/calls.py": "5465027d502246cbaa3b4f4015d0d35b71e27eb40114d12515186ca43bb8b983",
+      "experiments/chapter6/v12_2/cli.py": "d62b72ae7aeba4201b4404a4649a0e99398cef441013d75e29d49fb24fc16596",
+      "experiments/chapter6/v12_2/common.py": "db4d0160b77f73f36e3f2859c1f4646759f4f1e85a74df57c9e2c5e28a0c0dbc",
+      "experiments/chapter6/v12_2/conftest.py": "f43ba223d371e464bf83c82866d7589db6c5dc19ee95776c0d2db7fa19b42896",
+      "experiments/chapter6/v12_2/data.py": "ccbfbb393fe32859e23d31b14bed8380b735e4f8e7583be8d13cc041f87c2a7b",
+      "experiments/chapter6/v12_2/fixtures.py": "c56b2b38745fb76d669cf7c1599db5507df5e309a4290a52ce5f7578dec7ece2",
+      "experiments/chapter6/v12_2/identity.py": "d371b797cc10a5f992ffca7502a743296cd37133fbe7a4d61751d983861949ad",
+      "experiments/chapter6/v12_2/protocol.draft.json": "17f34c6f9e84cdb410cf1b9c3d107d0e1b7a3a37f44218fc1e7606fc29584324",
+      "experiments/chapter6/v12_2/replay_r2.py": "002e200e63b64cb10708c7311da6e979d77f68595a2b55742d91e6ca11645fb8",
+      "experiments/chapter6/v12_2/requirements.lock.txt": "5ba9cb4cc6ba20cac0392bb6e2cd7bf5708389c5953ae87acd5331ee5239c88d",
+      "experiments/chapter6/v12_2/runner.py": "a3edda6018dba52fabdf4099b27b336fb8942cf07da336abdd6827b14392dc62",
+      "experiments/chapter6/v12_2/smoke.py": "1cb70685cec0a9c20334eee96e8f83d70e23bd5ead5d5419a2be47a65036de7e",
+      "experiments/chapter6/v12_2/test_portable.py": "eaa5d46e3f538e4c6d1668daf99c1050fc4443266782c8ec674b9e0fe8172586",
+      "experiments/chapter6/v12_2/test_runner.py": "c0143f23da335223230f890b613e30f04df2f5dfedc78fd6a0fa3cd9d7644a94",
+      "experiments/chapter6/v12_2/test_stage.py": "46afe666518e59534820d9d3ce5b0731fe1705b154d0a0479b2e2eda47159f72",
+      "experiments/chapter6/v12_2/verify_identity.py": "7e416295715ea3ff366099626a85bc523a624b822377d1825abcabebeea1b2e5"
+    },
+    "sha256": "ec1a3b7c784992b6324e64c28b7b506692b1fbfc217287bf7a995953dc258825"
+  },
+  "tooling_source": {
+    "format": "s1-named-source-files-lf-sha256-v1",
+    "files": {
+      "experiments/chapter6/agent_search/s1_observability/__init__.py": "4077ff0b1a0a339a67ee5e5992e7125e40a0bf343a886b8162c111469163e95a",
+      "experiments/chapter6/agent_search/s1_observability/protocol.final.json": "4850c555b97f6ae62d6b1e8c598ab514f6fe186e1ce138573f628074e8cb3c7d",
+      "experiments/chapter6/agent_search/s1_observability/study.py": "cd9e27c4c7126343fc1760a288723a3757c3cfb3d051a3ce96cf48902d94fba6",
+      "experiments/chapter6/agent_search/s1_observability/analyze.py": "a02c8ac232cbc3c668bfa3d8738191edcdcf4f5d53a92c197e3293bb4ca08b5f"
+    },
+    "sha256": "e74333932c634e9723b64062df8b1ec0acf52b79e35508c5f4f1ee0f598069f2"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "implementation": "CPython",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": {
+      "numpy": "2.1.3",
+      "scikit-learn": "1.6.1",
+      "matplotlib": "3.10.0",
+      "pytest": "8.3.4"
+    }
+  },
+  "protocol": {
+    "schema": "chapter6-s1-observability-v1",
+    "status": "FINAL_PROTOCOL_PENDING_EXECUTION",
+    "study_id": "s1-minimax-observability-20260926-r1",
+    "provider": "minimax-cn-coding-plan",
+    "model": "MiniMax-M3",
+    "provider_endpoint": "https://api.minimaxi.com/v1",
+    "provider_model_version": "catalog alias; immutable service snapshot unknown",
+    "temperature": 0.7,
+    "timeout_seconds": 180,
+    "planner_max_tokens": 16384,
+    "coder_max_tokens": 8192,
+    "controllers": [
+      "niche_fixed_dev",
+      "relational_branch"
+    ],
+    "blocks": [
+      11,
+      12,
+      13
+    ],
+    "search_seeds": [
+      0,
+      1
+    ],
+    "steps": 32,
+    "profile": "chapter6-v12-tsp14-v1",
+    "data_split": {
+      "search": [
+        "probe",
+        "validation"
+      ],
+      "held_out": [
+        "test"
+      ]
+    },
+    "planned_searches": 12,
+    "planned_model_requests": 768,
+    "order_seed": 2026092603,
+    "data_independence": "Blocks 11-13 are generated from the frozen benchmark generator and checked against all archived v1.2.3 block 3-10 IDs and exact coordinate hashes. Same block is shared by controllers and search seeds; seeds are paired within block.",
+    "primary_purpose": "Mechanism observability: determine whether natural generation creates valid nonduplicate candidates, multiple active B branches, differentiated family scores, and actual FIFO-versus-family ranking choices under 32 proposals.",
+    "not_a_confirmatory_test": "This stage does not estimate a strategy superiority effect and has no inclusion filter. Any quality/test result is descriptive; no automatic expansion is permitted from a single positive run.",
+    "search_policy": "Reuse frozen V121SearchState implementation. Only niche_fixed_dev versus relational_branch differs in B selection. Both arms share the ordinary niche scheduler, disabled W, capacity 3, two continuation opportunities, fixed 24 2-opt checks, and identical prompts/model/caps.",
+    "failure_policy": "One request is dispatched at most once. Parse failures consume the proposal slot. Indeterminate/provider failures stop that job, preserve missingness, and never retry or replace. Dispatcher proceeds to other jobs only after a terminal status; no test data is opened until all jobs are terminal or an explicit infrastructure halt is recorded.",
+    "observability_fields": [
+      "valid_generated",
+      "branch_admissions",
+      "branch_development_attempts",
+      "multi_branch_slots",
+      "family_differentiated_branch_slots",
+      "full_vs_gain_choice_differences",
+      "model_calls",
+      "known_tokens",
+      "test_gap",
+      "test_valid"
+    ],
+    "entry_gate": "S0 r3 fixed-headroom acceptance passed: planner18/18, coder18/18, E2E6/6. S0 is engineering evidence only.",
+    "claims": "Single-model MiniMax M3 exploratory observability screening on TSP14. It can establish whether the planned mechanism is exercised; it cannot establish causal strategy superiority, cross-model generality, cross-task transfer, or doctoral chapter completion."
+  },
+  "protocol_file": {
+    "path": "experiments/chapter6/agent_search/s1_observability/protocol.final.json",
+    "sha256": "4850c555b97f6ae62d6b1e8c598ab514f6fe186e1ce138573f628074e8cb3c7d"
+  },
+  "data": {
+    "11": {
+      "search": {
+        "path": "data/search-b11.json",
+        "sha256": "4b3e17f3d5ec59a439788a2e446e88b5d38f08f8d1054380aa9aa22fe38671f4"
+      },
+      "test": {
+        "path": "data/test-b11.json",
+        "sha256": "29984433057f7049d27cba9a824f323c47ae0ef423f25191fa05d0abfba51d81"
+      }
+    },
+    "12": {
+      "search": {
+        "path": "data/search-b12.json",
+        "sha256": "5dc2020363bd2343a1c00d694cf3d85bb9e183c8ea1d2440193b375fab6c1508"
+      },
+      "test": {
+        "path": "data/test-b12.json",
+        "sha256": "9f3f467e768130219ed6e4b31be115be8390fa64ac30525e63de555097f6a362"
+      }
+    },
+    "13": {
+      "search": {
+        "path": "data/search-b13.json",
+        "sha256": "7c6dcc3b80b58023df0de3af752c3df873acd1aa7991b5fb6b39b6ffee015fc7"
+      },
+      "test": {
+        "path": "data/test-b13.json",
+        "sha256": "121196795b2f0c4d5b01ee784e095c5016bbc3441d88280a3280739018348ba9"
+      }
+    }
+  },
+  "splits": {
+    "11": {
+      "probe": {
+        "count": 12,
+        "sha256": "8c1063574e032f7b5fc9616a163ea191db26bd60ce314ff90ad08ef2b805e10f"
+      },
+      "validation": {
+        "count": 36,
+        "sha256": "d76d9de60bf811985659d73805948006d375304b47b0b8763bf3ca8bfc375708"
+      },
+      "test": {
+        "count": 60,
+        "sha256": "606cf93149fb40f7819932f058a653ca0d5d2dd11ffbcb458a89b3b8bf5f59ae"
+      }
+    },
+    "12": {
+      "probe": {
+        "count": 12,
+        "sha256": "db3a830d79fa4a8afdc7a7cc0ef92270ff4e3c1643403da1a3b97c22db17ec1e"
+      },
+      "validation": {
+        "count": 36,
+        "sha256": "0134f411d4f16a58ee2a8b3002d31afd5482367599cd94dcc89fbf66ca42b028"
+      },
+      "test": {
+        "count": 60,
+        "sha256": "d2a4b767137ad6aed88b0871a49e8c68618f2ebd540109e71719be9c7d508a05"
+      }
+    },
+    "13": {
+      "probe": {
+        "count": 12,
+        "sha256": "12454dfce52ada159e941d6e7d6d2de22cd852f008b7a027e6f72811d5f077d0"
+      },
+      "validation": {
+        "count": 36,
+        "sha256": "33a948f6dfdb330bf3142d8df9537476d6c2b8a011b36608b3f0f20488a7b4bd"
+      },
+      "test": {
+        "count": 60,
+        "sha256": "a8a933b16599bc8f47c499669c6122f4c683b47041899bf6387d3523c42b2315"
+      }
+    }
+  },
+  "jobs": [
+    {
+      "job_id": "minimax-niche_fixed_dev-b11-s0",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 11,
+      "search_seed": 1100,
+      "search_seed_label": 0,
+      "steps": 32,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b12-s1",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 12,
+      "search_seed": 1201,
+      "search_seed_label": 1,
+      "steps": 32,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-relational_branch-b12-s0",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 12,
+      "search_seed": 1200,
+      "search_seed_label": 0,
+      "steps": 32,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-relational_branch-b13-s1",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 13,
+      "search_seed": 1301,
+      "search_seed_label": 1,
+      "steps": 32,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b13-s0",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 13,
+      "search_seed": 1300,
+      "search_seed_label": 0,
+      "steps": 32,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-relational_branch-b12-s1",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 12,
+      "search_seed": 1201,
+      "search_seed_label": 1,
+      "steps": 32,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-relational_branch-b11-s0",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 11,
+      "search_seed": 1100,
+      "search_seed_label": 0,
+      "steps": 32,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b13-s1",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 13,
+      "search_seed": 1301,
+      "search_seed_label": 1,
+      "steps": 32,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b12-s0",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 12,
+      "search_seed": 1200,
+      "search_seed_label": 0,
+      "steps": 32,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-relational_branch-b11-s1",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 11,
+      "search_seed": 1101,
+      "search_seed_label": 1,
+      "steps": 32,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-relational_branch-b13-s0",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "relational_branch",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 13,
+      "search_seed": 1300,
+      "search_seed_label": 0,
+      "steps": 32,
+      "token_budget": null
+    },
+    {
+      "job_id": "minimax-niche_fixed_dev-b11-s1",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "controller": "niche_fixed_dev",
+      "controller_class": "chapter6_demo.v12_1_controller.V121SearchState",
+      "task": "tsp",
+      "data_block": 11,
+      "search_seed": 1101,
+      "search_seed_label": 1,
+      "steps": 32,
+      "token_budget": null
+    }
+  ],
+  "s0_gate": {
+    "study_id": "s0-minimax-output-acceptance-20260926-r3",
+    "manifest_sha256": "d592e9b76d8d9c0da4bf83a3012c191f027d579908bddd2f58fbdb9db1dd6d2a",
+    "result": {
+      "status": "complete",
+      "completed_slots": 48,
+      "dispatched_requests": 48,
+      "fixed_config": "fixed_headroom",
+      "acceptance": {
+        "planner": {
+          "planned": 18,
+          "observed": 18,
+          "valid": 18
+        },
+        "coder": {
+          "planned": 18,
+          "observed": 18,
+          "valid": 18
+        }
+      },
+      "e2e_successes": 6,
+      "e2e_planned": 6,
+      "ready_for_s1": true
+    }
+  },
+  "overlap_check": {
+    "old_instances_checked": 864,
+    "new_instances": 324,
+    "id_or_exact_coordinate_collisions": 0
+  },
+  "new_model_calls": 0,
+  "manifest_sha256": "374057c4600422f09e98e255c1240264e4c7dc90eb1f199d632afb24705bb8e1"
+}

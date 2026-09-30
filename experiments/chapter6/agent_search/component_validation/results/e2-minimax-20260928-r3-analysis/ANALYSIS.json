@@ -1,0 +1,876 @@
+{
+  "study_id": "chapter6-component-validation-20260928-e0-e2-r3",
+  "manifest_sha256": "8368b1958a810a9ae6f4dd1baa49242a70752a2daf1be9e99a6357cc075ec750",
+  "jobs_planned": 32,
+  "jobs_tested": 32,
+  "status_counts": {
+    "search_complete_test_not_run": 32
+  },
+  "groups": {
+    "P00": {
+      "planned_jobs": 8,
+      "tested_jobs": 8,
+      "completed_searches": 8,
+      "status_counts": {
+        "search_complete_test_not_run": 8
+      },
+      "mean_test_gap": 0.05471989658689318,
+      "median_test_gap": 0.05367649149287061,
+      "mean_known_tokens": 228201.625,
+      "mean_total_tokens": 228201.625,
+      "usage_complete_jobs": 8,
+      "total_requests": 512,
+      "decision_metrics": {
+        "decision_count": 256,
+        "action_counts": {
+          "develop": 208,
+          "explore": 48
+        },
+        "slot_type_counts": {
+          "branch": 48,
+          "explore": 48,
+          "incumbent": 160
+        },
+        "selected_direction_count": 29,
+        "unique_selected_directions": 13,
+        "direction_switches": 27,
+        "mean_available_direction_count": 0.25,
+        "steps_with_multiple_investment_choices": 3,
+        "steps_with_multiple_protected_choices": 0,
+        "protected_decisions": 0,
+        "priority_selected_decisions": 0,
+        "lagging_protected_decisions_diagnostic": 0,
+        "eviction_steps_from_decisions": 0
+      },
+      "completed_proposals": 256,
+      "valid_generated": 255,
+      "new_direction_candidates": 186,
+      "competitive_new_direction_candidates": 91,
+      "branch_entries_created": 30,
+      "zero_credit_pool_entries": 75,
+      "pool_evictions": 14,
+      "protection_grants_awarded": 0,
+      "protected_slots_scheduled": 0,
+      "branch_slots_scheduled": 29,
+      "ordinary_branch_slots_scheduled": 29,
+      "protected_slots_with_complete_output": 0,
+      "protected_slots_with_valid_program": 0,
+      "protected_local_improvements": 0,
+      "protected_direction_improvements": 0,
+      "protected_global_improvements": 0,
+      "protected_slots_on_lagging_parent": 0,
+      "multi_branch_protection_slots": 0,
+      "protected_best_ancestor": 0,
+      "valid_generated_rate_per_proposal": 0.99609375,
+      "branch_entries_created_rate_per_proposal": 0.1171875,
+      "protected_slots_scheduled_rate_per_proposal": 0.0,
+      "protected_slots_with_complete_output_rate_per_proposal": 0.0,
+      "protected_slots_with_valid_program_rate_per_proposal": 0.0,
+      "protected_local_improvements_rate_per_proposal": 0.0,
+      "protected_global_improvements_rate_per_proposal": 0.0
+    },
+    "P10": {
+      "planned_jobs": 8,
+      "tested_jobs": 8,
+      "completed_searches": 8,
+      "status_counts": {
+        "search_complete_test_not_run": 8
+      },
+      "mean_test_gap": 0.052479570693336766,
+      "median_test_gap": 0.048531867532899446,
+      "mean_known_tokens": 229494.5,
+      "mean_total_tokens": 229494.5,
+      "usage_complete_jobs": 8,
+      "total_requests": 512,
+      "decision_metrics": {
+        "decision_count": 256,
+        "action_counts": {
+          "develop": 208,
+          "explore": 48
+        },
+        "slot_type_counts": {
+          "branch": 48,
+          "explore": 48,
+          "incumbent": 160
+        },
+        "selected_direction_count": 28,
+        "unique_selected_directions": 17,
+        "direction_switches": 26,
+        "mean_available_direction_count": 0.265625,
+        "steps_with_multiple_investment_choices": 4,
+        "steps_with_multiple_protected_choices": 4,
+        "protected_decisions": 28,
+        "priority_selected_decisions": 28,
+        "lagging_protected_decisions_diagnostic": 28,
+        "eviction_steps_from_decisions": 0
+      },
+      "completed_proposals": 256,
+      "valid_generated": 256,
+      "new_direction_candidates": 170,
+      "competitive_new_direction_candidates": 104,
+      "branch_entries_created": 28,
+      "zero_credit_pool_entries": 88,
+      "pool_evictions": 12,
+      "protection_grants_awarded": 29,
+      "protected_slots_scheduled": 28,
+      "branch_slots_scheduled": 28,
+      "ordinary_branch_slots_scheduled": 0,
+      "protected_slots_with_complete_output": 28,
+      "protected_slots_with_valid_program": 28,
+      "protected_local_improvements": 5,
+      "protected_direction_improvements": 0,
+      "protected_global_improvements": 2,
+      "protected_slots_on_lagging_parent": 25,
+      "multi_branch_protection_slots": 4,
+      "protected_best_ancestor": 2,
+      "valid_generated_rate_per_proposal": 1.0,
+      "branch_entries_created_rate_per_proposal": 0.109375,
+      "protected_slots_scheduled_rate_per_proposal": 0.109375,
+      "protected_slots_with_complete_output_rate_per_proposal": 0.109375,
+      "protected_slots_with_valid_program_rate_per_proposal": 0.109375,
+      "protected_local_improvements_rate_per_proposal": 0.01953125,
+      "protected_global_improvements_rate_per_proposal": 0.0078125
+    },
+    "P01": {
+      "planned_jobs": 8,
+      "tested_jobs": 8,
+      "completed_searches": 8,
+      "status_counts": {
+        "search_complete_test_not_run": 8
+      },
+      "mean_test_gap": 0.0519239461341158,
+      "median_test_gap": 0.04679055279837272,
+      "mean_known_tokens": 225517.625,
+      "mean_total_tokens": 225517.625,
+      "usage_complete_jobs": 8,
+      "total_requests": 512,
+      "decision_metrics": {
+        "decision_count": 256,
+        "action_counts": {
+          "develop": 208,
+          "explore": 48
+        },
+        "slot_type_counts": {
+          "branch": 48,
+          "explore": 48,
+          "incumbent": 160
+        },
+        "selected_direction_count": 26,
+        "unique_selected_directions": 13,
+        "direction_switches": 25,
+        "mean_available_direction_count": 0.2890625,
+        "steps_with_multiple_investment_choices": 8,
+        "steps_with_multiple_protected_choices": 0,
+        "protected_decisions": 0,
+        "priority_selected_decisions": 0,
+        "lagging_protected_decisions_diagnostic": 0,
+        "eviction_steps_from_decisions": 0
+      },
+      "completed_proposals": 256,
+      "valid_generated": 256,
+      "new_direction_candidates": 181,
+      "competitive_new_direction_candidates": 94,
+      "branch_entries_created": 26,
+      "zero_credit_pool_entries": 78,
+      "pool_evictions": 10,
+      "protection_grants_awarded": 0,
+      "protected_slots_scheduled": 0,
+      "branch_slots_scheduled": 26,
+      "ordinary_branch_slots_scheduled": 26,
+      "protected_slots_with_complete_output": 0,
+      "protected_slots_with_valid_program": 0,
+      "protected_local_improvements": 0,
+      "protected_direction_improvements": 0,
+      "protected_global_improvements": 0,
+      "protected_slots_on_lagging_parent": 0,
+      "multi_branch_protection_slots": 0,
+      "protected_best_ancestor": 0,
+      "valid_generated_rate_per_proposal": 1.0,
+      "branch_entries_created_rate_per_proposal": 0.1015625,
+      "protected_slots_scheduled_rate_per_proposal": 0.0,
+      "protected_slots_with_complete_output_rate_per_proposal": 0.0,
+      "protected_slots_with_valid_program_rate_per_proposal": 0.0,
+      "protected_local_improvements_rate_per_proposal": 0.0,
+      "protected_global_improvements_rate_per_proposal": 0.0
+    },
+    "P11": {
+      "planned_jobs": 8,
+      "tested_jobs": 8,
+      "completed_searches": 8,
+      "status_counts": {
+        "search_complete_test_not_run": 8
+      },
+      "mean_test_gap": 0.05291140163938546,
+      "median_test_gap": 0.0467536141435866,
+      "mean_known_tokens": 227308.75,
+      "mean_total_tokens": 227308.75,
+      "usage_complete_jobs": 8,
+      "total_requests": 512,
+      "decision_metrics": {
+        "decision_count": 256,
+        "action_counts": {
+          "develop": 208,
+          "explore": 48
+        },
+        "slot_type_counts": {
+          "branch": 48,
+          "explore": 48,
+          "incumbent": 160
+        },
+        "selected_direction_count": 30,
+        "unique_selected_directions": 15,
+        "direction_switches": 24,
+        "mean_available_direction_count": 0.37109375,
+        "steps_with_multiple_investment_choices": 15,
+        "steps_with_multiple_protected_choices": 15,
+        "protected_decisions": 30,
+        "priority_selected_decisions": 30,
+        "lagging_protected_decisions_diagnostic": 30,
+        "eviction_steps_from_decisions": 0
+      },
+      "completed_proposals": 256,
+      "valid_generated": 256,
+      "new_direction_candidates": 172,
+      "competitive_new_direction_candidates": 91,
+      "branch_entries_created": 25,
+      "zero_credit_pool_entries": 78,
+      "pool_evictions": 10,
+      "protection_grants_awarded": 30,
+      "protected_slots_scheduled": 30,
+      "branch_slots_scheduled": 30,
+      "ordinary_branch_slots_scheduled": 0,
+      "protected_slots_with_complete_output": 30,
+      "protected_slots_with_valid_program": 30,
+      "protected_local_improvements": 7,
+      "protected_direction_improvements": 0,
+      "protected_global_improvements": 0,
+      "protected_slots_on_lagging_parent": 22,
+      "multi_branch_protection_slots": 15,
+      "protected_best_ancestor": 0,
+      "valid_generated_rate_per_proposal": 1.0,
+      "branch_entries_created_rate_per_proposal": 0.09765625,
+      "protected_slots_scheduled_rate_per_proposal": 0.1171875,
+      "protected_slots_with_complete_output_rate_per_proposal": 0.1171875,
+      "protected_slots_with_valid_program_rate_per_proposal": 0.1171875,
+      "protected_local_improvements_rate_per_proposal": 0.02734375,
+      "protected_global_improvements_rate_per_proposal": 0.0
+    }
+  },
+  "factor_effects": {
+    "P_S_scheduling_priority": {
+      "pairs": [
+        {
+          "block": 48,
+          "on_mean": 0.051262148001711125,
+          "off_mean": 0.05003792535251829,
+          "difference": 0.0012242226491928354,
+          "on_arms": [
+            "P10",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P01"
+          ]
+        },
+        {
+          "block": 49,
+          "on_mean": 0.04339758374451057,
+          "off_mean": 0.04368725010463864,
+          "difference": -0.0002896663601280741,
+          "on_arms": [
+            "P10",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P01"
+          ]
+        },
+        {
+          "block": 50,
+          "on_mean": 0.043151237540463905,
+          "off_mean": 0.04399421054419488,
+          "difference": -0.0008429730037309777,
+          "on_arms": [
+            "P10",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P01"
+          ]
+        },
+        {
+          "block": 51,
+          "on_mean": 0.07297097537875888,
+          "off_mean": 0.07556829944066615,
+          "difference": -0.002597324061907269,
+          "on_arms": [
+            "P10",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P01"
+          ]
+        }
+      ],
+      "difference": {
+        "mean": -0.0006264351941433714,
+        "lower": -0.0020204096364624703,
+        "upper": 0.0007074237359618821,
+        "n_blocks": 4
+      },
+      "negative_favors_on": true
+    },
+    "P_E_eviction_protection": {
+      "pairs": [
+        {
+          "block": 48,
+          "on_mean": 0.05084382878722232,
+          "off_mean": 0.050456244567007084,
+          "difference": 0.00038758422021523825,
+          "on_arms": [
+            "P01",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P10"
+          ]
+        },
+        {
+          "block": 49,
+          "on_mean": 0.04132660941979403,
+          "off_mean": 0.04575822442935518,
+          "difference": -0.004431615009561143,
+          "on_arms": [
+            "P01",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P10"
+          ]
+        },
+        {
+          "block": 50,
+          "on_mean": 0.04398602329062358,
+          "off_mean": 0.0431594247940352,
+          "difference": 0.0008265984965883794,
+          "on_arms": [
+            "P01",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P10"
+          ]
+        },
+        {
+          "block": 51,
+          "on_mean": 0.0735142340493626,
+          "off_mean": 0.07502504077006242,
+          "difference": -0.0015108067206998227,
+          "on_arms": [
+            "P01",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P10"
+          ]
+        }
+      ],
+      "difference": {
+        "mean": -0.0011820597533643371,
+        "lower": -0.003226815202117048,
+        "upper": 0.0006070913584018088,
+        "n_blocks": 4
+      },
+      "negative_favors_on": true
+    },
+    "P_S_token_cost": {
+      "pairs": [
+        {
+          "block": 48,
+          "on_mean": 226452.5,
+          "off_mean": 219792.25,
+          "difference": 6660.25,
+          "on_arms": [
+            "P10",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P01"
+          ]
+        },
+        {
+          "block": 49,
+          "on_mean": 218090.75,
+          "off_mean": 234730.0,
+          "difference": -16639.25,
+          "on_arms": [
+            "P10",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P01"
+          ]
+        },
+        {
+          "block": 50,
+          "on_mean": 234603.25,
+          "off_mean": 227757.5,
+          "difference": 6845.75,
+          "on_arms": [
+            "P10",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P01"
+          ]
+        },
+        {
+          "block": 51,
+          "on_mean": 234460.0,
+          "off_mean": 225158.75,
+          "difference": 9301.25,
+          "on_arms": [
+            "P10",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P01"
+          ]
+        }
+      ],
+      "difference": {
+        "mean": 1542.0,
+        "lower": -10768.0,
+        "upper": 8641.0,
+        "n_blocks": 4
+      },
+      "negative_favors_on": false
+    },
+    "P_E_token_cost": {
+      "pairs": [
+        {
+          "block": 48,
+          "on_mean": 216074.0,
+          "off_mean": 230170.75,
+          "difference": -14096.75,
+          "on_arms": [
+            "P01",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P10"
+          ]
+        },
+        {
+          "block": 49,
+          "on_mean": 225530.25,
+          "off_mean": 227290.5,
+          "difference": -1760.25,
+          "on_arms": [
+            "P01",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P10"
+          ]
+        },
+        {
+          "block": 50,
+          "on_mean": 236161.75,
+          "off_mean": 226199.0,
+          "difference": 9962.75,
+          "on_arms": [
+            "P01",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P10"
+          ]
+        },
+        {
+          "block": 51,
+          "on_mean": 227886.75,
+          "off_mean": 231732.0,
+          "difference": -3845.25,
+          "on_arms": [
+            "P01",
+            "P11"
+          ],
+          "off_arms": [
+            "P00",
+            "P10"
+          ]
+        }
+      ],
+      "difference": {
+        "mean": -2434.875,
+        "lower": -11012.625,
+        "upper": 6510.75,
+        "n_blocks": 4
+      },
+      "negative_favors_on": false
+    },
+    "P_S_by_P_E_interaction": {
+      "pairs": [
+        {
+          "block": 48,
+          "P00": 0.047706165632371136,
+          "P10": 0.05320632350164303,
+          "P01": 0.052369685072665435,
+          "P11": 0.04931797250177922,
+          "difference": -0.008551870440158114
+        },
+        {
+          "block": 49,
+          "P00": 0.04857145474507745,
+          "P10": 0.04294499411363291,
+          "P01": 0.03880304546419984,
+          "P11": 0.04385017337538823,
+          "difference": 0.01067358854263293
+        },
+        {
+          "block": 50,
+          "P00": 0.045778155275901414,
+          "P10": 0.04054069431216899,
+          "P01": 0.04221026581248835,
+          "P11": 0.045761780768758815,
+          "difference": 0.00878897592000289
+        },
+        {
+          "block": 51,
+          "P00": 0.0768238106942227,
+          "P10": 0.07322627084590215,
+          "P01": 0.0743127881871096,
+          "P11": 0.0727156799116156,
+          "difference": 0.002000431572826547
+        }
+      ],
+      "difference": {
+        "mean": 0.003227781398826063,
+        "lower": -0.004216658850117863,
+        "upper": 0.00973128223131791,
+        "n_blocks": 4
+      },
+      "definition": "P11 - P10 - P01 + P00; outcome is test gap when key=test_gap"
+    }
+  },
+  "pairwise_test_gap_contrasts": {
+    "P10_minus_P00": {
+      "pairs": [
+        {
+          "block": 48,
+          "left": "P10",
+          "right": "P00",
+          "difference_pp": 0.5500157869271896
+        },
+        {
+          "block": 49,
+          "left": "P10",
+          "right": "P00",
+          "difference_pp": -0.5626460631444542
+        },
+        {
+          "block": 50,
+          "left": "P10",
+          "right": "P00",
+          "difference_pp": -0.5237460963732427
+        },
+        {
+          "block": 51,
+          "left": "P10",
+          "right": "P00",
+          "difference_pp": -0.35975398483205495
+        }
+      ],
+      "difference_pp": {
+        "mean": -0.22403258935564058,
+        "lower": -0.5431960797588484,
+        "upper": 0.28157531610208153,
+        "n_blocks": 4
+      },
+      "definition": "100 * (P10 test gap - P00 test gap); negative favors P10"
+    },
+    "P01_minus_P00": {
+      "pairs": [
+        {
+          "block": 48,
+          "left": "P01",
+          "right": "P00",
+          "difference_pp": 0.4663519440294299
+        },
+        {
+          "block": 49,
+          "left": "P01",
+          "right": "P00",
+          "difference_pp": -0.9768409280877611
+        },
+        {
+          "block": 50,
+          "left": "P01",
+          "right": "P00",
+          "difference_pp": -0.35678894634130626
+        },
+        {
+          "block": 51,
+          "left": "P01",
+          "right": "P00",
+          "difference_pp": -0.2511022507113103
+        }
+      ],
+      "difference_pp": {
+        "mean": -0.27959504527773693,
+        "lower": -0.7954062587436485,
+        "upper": 0.26056672143674586,
+        "n_blocks": 4
+      },
+      "definition": "100 * (P01 test gap - P00 test gap); negative favors P01"
+    },
+    "P11_minus_P00": {
+      "pairs": [
+        {
+          "block": 48,
+          "left": "P11",
+          "right": "P00",
+          "difference_pp": 0.16118068694080806
+        },
+        {
+          "block": 49,
+          "left": "P11",
+          "right": "P00",
+          "difference_pp": -0.4721281369689224
+        },
+        {
+          "block": 50,
+          "left": "P11",
+          "right": "P00",
+          "difference_pp": -0.0016374507142598305
+        },
+        {
+          "block": 51,
+          "left": "P11",
+          "right": "P00",
+          "difference_pp": -0.41081307826071056
+        }
+      ],
+      "difference_pp": {
+        "mean": -0.1808494947507712,
+        "lower": -0.4414706076148165,
+        "upper": 0.07977161811327411,
+        "n_blocks": 4
+      },
+      "definition": "100 * (P11 test gap - P00 test gap); negative favors P11"
+    },
+    "P11_minus_P10": {
+      "pairs": [
+        {
+          "block": 48,
+          "left": "P11",
+          "right": "P10",
+          "difference_pp": -0.38883509998638155
+        },
+        {
+          "block": 49,
+          "left": "P11",
+          "right": "P10",
+          "difference_pp": 0.09051792617553178
+        },
+        {
+          "block": 50,
+          "left": "P11",
+          "right": "P10",
+          "difference_pp": 0.5221086456589829
+        },
+        {
+          "block": 51,
+          "left": "P11",
+          "right": "P10",
+          "difference_pp": -0.05105909342865561
+        }
+      ],
+      "difference_pp": {
+        "mean": 0.04318309460486937,
+        "lower": -0.26899684344590324,
+        "upper": 0.37881671088707325,
+        "n_blocks": 4
+      },
+      "definition": "100 * (P11 test gap - P10 test gap); negative favors P11"
+    },
+    "P11_minus_P01": {
+      "pairs": [
+        {
+          "block": 48,
+          "left": "P11",
+          "right": "P01",
+          "difference_pp": -0.3051712570886218
+        },
+        {
+          "block": 49,
+          "left": "P11",
+          "right": "P01",
+          "difference_pp": 0.5047127911188387
+        },
+        {
+          "block": 50,
+          "left": "P11",
+          "right": "P01",
+          "difference_pp": 0.3551514956270464
+        },
+        {
+          "block": 51,
+          "left": "P11",
+          "right": "P01",
+          "difference_pp": -0.15971082754940025
+        }
+      ],
+      "difference_pp": {
+        "mean": 0.09874555052696576,
+        "lower": -0.23244104231901103,
+        "upper": 0.42993214337294255,
+        "n_blocks": 4
+      },
+      "definition": "100 * (P11 test gap - P01 test gap); negative favors P11"
+    }
+  },
+  "block_results": [
+    {
+      "block": 48,
+      "arms": {
+        "P00": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.047706165632371136,
+          "mean_known_tokens": 228174.0
+        },
+        "P10": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.05320632350164303,
+          "mean_known_tokens": 232167.5
+        },
+        "P01": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.052369685072665435,
+          "mean_known_tokens": 211410.5
+        },
+        "P11": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.04931797250177922,
+          "mean_known_tokens": 220737.5
+        }
+      }
+    },
+    {
+      "block": 49,
+      "arms": {
+        "P00": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.04857145474507745,
+          "mean_known_tokens": 236465.0
+        },
+        "P10": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.04294499411363291,
+          "mean_known_tokens": 218116.0
+        },
+        "P01": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.03880304546419984,
+          "mean_known_tokens": 232995.0
+        },
+        "P11": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.04385017337538823,
+          "mean_known_tokens": 218065.5
+        }
+      }
+    },
+    {
+      "block": 50,
+      "arms": {
+        "P00": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.045778155275901414,
+          "mean_known_tokens": 226734.0
+        },
+        "P10": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.04054069431216899,
+          "mean_known_tokens": 225664.0
+        },
+        "P01": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.04221026581248835,
+          "mean_known_tokens": 228781.0
+        },
+        "P11": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.045761780768758815,
+          "mean_known_tokens": 243542.5
+        }
+      }
+    },
+    {
+      "block": 51,
+      "arms": {
+        "P00": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.0768238106942227,
+          "mean_known_tokens": 221433.5
+        },
+        "P10": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.07322627084590215,
+          "mean_known_tokens": 242030.5
+        },
+        "P01": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.0743127881871096,
+          "mean_known_tokens": 228884.0
+        },
+        "P11": {
+          "n_jobs": 2,
+          "tested_jobs": 2,
+          "mean_test_gap": 0.0727156799116156,
+          "mean_known_tokens": 226889.5
+        }
+      }
+    }
+  ],
+  "minimum_practical_gain_percentage_points": 0.3,
+  "independent_unit": "data block; seed is a within-block repeat",
+  "model_calls_in_analysis": 0,
+  "interpretation_limits": [
+    "This is a single-model TSP14 component screen, not universal or cross-task validation.",
+    "Test-gap effects resample data blocks; proposals, instances and model requests are not independent replicates.",
+    "Missing and infrastructure-incomplete jobs remain visible and are not replaced.",
+    "A negative test-gap contrast favors the factor-on condition; the descriptive intervals are not confirmatory p-values."
+  ]
+}

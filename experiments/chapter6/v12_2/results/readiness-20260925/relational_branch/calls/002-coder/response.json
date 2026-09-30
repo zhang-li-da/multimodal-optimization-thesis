@@ -1,0 +1,14 @@
+{
+  "request_sha256": "7775289dead805e1af3d2b63429279f222d3c414c5a6d7e20f16a96b79e0e93f",
+  "text": "{\"code\": \"import os\\ndef priority(f):\\n    return 0\\n\"}",
+  "returned_model": "fixture-no-api",
+  "usage_raw": {
+    "prompt_tokens": 17,
+    "completion_tokens": 11
+  },
+  "input_tokens": 17,
+  "output_tokens": 11,
+  "usage_complete": true,
+  "seconds": 0.0,
+  "request_id": "fixture-2-coder"
+}

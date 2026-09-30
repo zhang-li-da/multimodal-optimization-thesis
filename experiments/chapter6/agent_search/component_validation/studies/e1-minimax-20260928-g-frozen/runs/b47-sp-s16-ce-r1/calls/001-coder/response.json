@@ -1,0 +1,22 @@
+{
+  "request_sha256": "3d3970bd2ca10480d9f3dc30d58b6002f130682e53210952b6403b5b0b93f6cc",
+  "text": "<think>The user wants me to implement a TSP construction heuristic as a Python function called `priority` that takes a feature dictionary `f` and returns a priority value. The function must:\n\n1. Follow the plan: `priority = -f['distance'] + 0.25 * f['return_distance'] + 0.15 * f['cluster_density']`\n2. Use only allowed Python constructs\n3. Be within 25 lines and 320 AST nodes\n4. Access features only via `f['feature']`\n5. Return a single valid JSON object with one `code` field\n6. No imports, annotations, loops, etc.\n\nLet me write the code:\n\n```python\ndef priority(f):\n    d = f['distance']\n    r = f['return_distance']\n    c = f['cluster_density']\n    return -d + 0.25 * r + 0.15 * c\n```\n\nThat's very simple. Let me check:\n- Uses only f['distance'], f['return_distance'], f['cluster_density'] - all listed features ✓\n- Uses + - * operations ✓\n- No imports ✓\n- No annotations ✓\n- No loops ✓\n- No lists ✓\n- Return statement ✓\n- Scalar local assignments ✓\n\nLet me verify the formula matches the plan exactly:\n- `-f['distance']` = `-d` ✓\n- `0.25 * f['return_distance']` = `0.25 * r` ✓\n- `0.15 * f['cluster_density']` = `0.15 * c` ✓\n\nThis is exactly 6 lines, well within limits. No denominators to guard, no logs needed since the features are all normalized values that should be in reasonable ranges.\n\nLet me output the JSON. The code needs newline escapes valid inside JSON, so I'll use `\\n` for newlines.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    r = f['return_distance']\\n    c = f['cluster_density']\\n    return -d + 0.25 * r + 0.15 * c\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1134,
+    "total_characters": 0,
+    "prompt_tokens": 689,
+    "completion_tokens": 445,
+    "completion_tokens_details": {
+      "reasoning_tokens": 384
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 689,
+  "output_tokens": 445,
+  "usage_complete": true,
+  "seconds": 2.256919200066477,
+  "request_id": "07098c1aadf542229e26c79ac5b9789d"
+}

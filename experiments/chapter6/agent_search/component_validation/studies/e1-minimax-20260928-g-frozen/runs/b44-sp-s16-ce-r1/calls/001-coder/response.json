@@ -1,0 +1,19 @@
+{
+  "request_sha256": "e6a733b0c4f0366305e57eb96f2c589aae2dd47144f7dfae12878239fce805f2",
+  "text": "<think>The user wants me to implement a heuristic for TSP construction. I need to create a single Python function called `priority` that takes a feature dictionary `f` and returns a scalar value. Higher value = higher priority to be visited next.\n\nLet me analyze the constraints:\n- Allowed Python: `def priority(f)`, scalar local assignments, `return`, `if/else` or conditional expression\n- Operators: `+ - * / % **` (constant exponent <=4), comparisons, boolean operations\n- Function calls: `abs/min/max/sqrt/log/log1p/exp/tanh`\n- NO imports, annotations, loops, lists, arrays, attributes, `f.get()`, helpers, mutation, I/O, random, or other calls\n- Access only listed features with `f['feature']`\n- Guard denominators with 1e-9 and log domains\n- <=25 source lines and <=320 AST nodes\n\nThe plan says:\n- name: return_aware_progressive\n- intent: Modulate return-distance penalty by tour progress\n- formula: `priority = -f['distance'] + (0.15 + 0.25 * f['progress']) * f['return_distance']`\n\nLet me write this:\n\n```python\ndef priority(f):\n    p = f['progress']\n    w = 0.15 + 0.25 * p\n    return -f['distance'] + w * f['return_distance']\n```\n\nThis is very simple and follows the formula exactly. Let me count lines: 4 lines. AST nodes should be minimal.\n\nLet me double-check: the formula uses only `f['distance']`, `f['return_distance']`, and `f['progress']`. All are allowed features. The operations are `+`, `-`, `*` which are allowed. The constants 0.15 and 0.25 are just literals.\n\nThis should work. Let me make sure I'm outputting valid JSON with just one `code` field and newline escapes.\n\nThe output should be:\n```json\n{\"code\": \"def priority(f):\\n    p = f['progress']\\n    w = 0.15 + 0.25 * p\\n    return -f['distance'] + w * f['return_distance']\"}\n```</think>\n\n{\"code\": \"def priority(f):\\n    p = f['progress']\\n    w = 0.15 + 0.25 * p\\n    return -f['distance'] + w * f['return_distance']\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1249,
+    "total_characters": 0,
+    "prompt_tokens": 729,
+    "completion_tokens": 520,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 729,
+  "output_tokens": 520,
+  "usage_complete": true,
+  "seconds": 5.363265300169587,
+  "request_id": "070972e2b4022a25f9501aaf62807381"
+}

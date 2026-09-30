@@ -1,0 +1,19 @@
+{
+  "request_sha256": "03c9c80a482ade0920dbee94741fa5f55f4aa335914598359e17ce707c702459",
+  "text": "<think>The task is to implement a TSP construction heuristic priority function. I need to:\n\n1. Compute `progress` from f['progress']\n2. Compute dynamic weights based on progress as described:\n   - return_distance weight: 0.18 + 0.30*progress (grows from 0.18 to 0.48)\n   - regret weight: 0.35 - 0.15*progress (shrinks from 0.35 to 0.20)\n3. Implement the formula:\n   `-distance + (0.18 + 0.30*progress)*return_distance + (0.35 - 0.15*progress)*regret - 0.08*nearest_remaining - 0.04*spread + 0.08*cluster_density`\n\nLet me verify the formula from the plan:\n- `-distance` ✓\n- `+ (0.18 + 0.30*progress)*return_distance` ✓\n- `+ (0.35 - 0.15*progress)*regret` ✓\n- `- 0.08*nearest_remaining` ✓\n- `- 0.04*spread` ✓\n- `+ 0.08*cluster_density` ✓\n\nConstraints:\n- No imports, no annotations, no loops, no lists\n- Allowed: def, scalar local assignments, return, if/else, math via abs/min/max/sqrt/log/log1p/exp/tanh\n- Access features via f['feature']\n- Guard denominators with 1e-9\n- <25 lines, <320 AST nodes\n\nLet me write it concisely:\n\n```python\ndef priority(f):\n    progress = f['progress']\n    ret_w = 0.18 + 0.30 * progress\n    reg_w = 0.35 - 0.15 * progress\n    return -f['distance'] + ret_w * f['return_distance'] + reg_w * f['regret'] - 0.08 * f['nearest_remaining'] - 0.04 * f['spread'] + 0.08 * f['cluster_density']\n```\n\nThat's one line for the return. Let me count lines and AST nodes.\n\nLines: 1 (def) + 1 (progress) + 1 (ret_w) + 1 (reg_w) + 1 (return) = 5 lines. Well under 25.\n\nAST nodes:\n- def: 1\n- arguments (f): 1\n- progress = f['progress']: assignment, f, subscript, string - approx 5 nodes\n- ret_w = 0.18 + 0.30 * progress: approx 7 nodes\n- reg_w = 0.35 - 0.15 * progress: approx 7 nodes\n- return -f['distance'] + ret_w * f['return_distance'] + reg_w * f['regret'] - 0.08 * f['nearest_remaining'] - 0.04 * f['spread'] + 0.08 * f['cluster_density']: about 40 nodes\n\nTotal roughly under 100. Well under 320.\n\nNo denominators to guard here since we don't divide. Good.\n\nLet me double-check the task: higher priority value is chosen. My formula returns a scalar. ✓\n\nThe plan mentions cluster_density reward of 0.08 (positive). ✓\nThe plan mentions spread penalty 0.04 (lowered from 0.05). ✓\nThe plan mentions nearest_remaining weight 0.08 (different from parent's 0.10). ✓\n\nLet me finalize and return as JSON.</think>\n\n{\"code\": \"def priority(f):\\n    progress = f['progress']\\n    ret_w = 0.18 + 0.30 * progress\\n    reg_w = 0.35 - 0.15 * progress\\n    return -f['distance'] + ret_w * f['return_distance'] + reg_w * f['regret'] - 0.08 * f['nearest_remaining'] - 0.04 * f['spread'] + 0.08 * f['cluster_density']\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1739,
+    "total_characters": 0,
+    "prompt_tokens": 866,
+    "completion_tokens": 873,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 866,
+  "output_tokens": 873,
+  "usage_complete": true,
+  "seconds": 7.358917200006545,
+  "request_id": "070985e70d79fdc23f04850f42f55fb4"
+}

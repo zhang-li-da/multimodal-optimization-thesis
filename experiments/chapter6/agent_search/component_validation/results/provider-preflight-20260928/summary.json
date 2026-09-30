@@ -1,0 +1,41 @@
+{
+  "status": "failed",
+  "error_type": "ProviderFailure",
+  "error": "HTTP 429; category=rate_limit; code=rate_limit_error; no retry; token usage unknown",
+  "diagnostics": {
+    "http_status": 429,
+    "business_code": "rate_limit_error",
+    "error_category": "rate_limit",
+    "trace_id": "070894f24199a557cee683e1595a521b",
+    "retry_after": null
+  },
+  "usage": {
+    "calls": [
+      {
+        "step": 0,
+        "stage": "connectivity",
+        "requested_model": "MiniMax-M3",
+        "status": "provider_failed",
+        "returned_model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "usage_complete": null,
+        "seconds": null,
+        "request_id": null,
+        "diagnostics": {
+          "http_status": 429,
+          "business_code": "rate_limit_error",
+          "error_category": "rate_limit",
+          "trace_id": "070894f24199a557cee683e1595a521b",
+          "retry_after": null
+        }
+      }
+    ],
+    "call_attempts": 1,
+    "usage_complete": false,
+    "known_tokens": 0,
+    "total_tokens": null
+  },
+  "new_search_runs": 0,
+  "utc": "2026-09-27T18:35:30.581200+00:00"
+}

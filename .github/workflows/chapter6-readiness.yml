@@ -1,0 +1,43 @@
+name: Chapter 6 offline readiness
+on:
+  push:
+    branches: [experiment/v1.2.2-runner-readiness]
+  pull_request:
+    paths: ['experiments/chapter6/**', 'chapter6_demo/**', '.github/workflows/chapter6-readiness.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.12.14', '3.13.5']
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install recorded dependencies
+        run: python -m pip install -r experiments/chapter6/v12_2/requirements.lock.txt
+      - name: Verify portable archive and integration tests without model access
+        run: python -m pytest experiments/chapter6/v12_2 experiments/chapter6/v12_1 experiments/chapter6/v12/test_v12.py experiments/chapter6/v11/test_v11.py -q --junitxml=readiness-tests.xml
+      - name: Repeat r2 evaluation using saved coordinates (no model calls)
+        run: python -m chapter6_demo.v12_2.replay_r2 --output replay-local
+      - name: Compare structural identity with recorded Windows 3.13 identity
+        run: python -m chapter6_demo.v12_2.verify_identity --output identity-local.json --reference experiments/chapter6/v12_2/results/readiness-20260925/evidence/identity/windows313.json
+      - name: Verify release manifests
+        run: |
+          python -m chapter6_demo.v12_2.archives experiments/chapter6/v12/results/screening-20260924-r2
+          python -m chapter6_demo.v12_2.archives experiments/chapter6/v12_2/results/readiness-20260925
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: offline-readiness-${{ matrix.os }}-${{ matrix.python }}
+          path: |
+            readiness-tests.xml
+            replay-local/
+            identity-local.json

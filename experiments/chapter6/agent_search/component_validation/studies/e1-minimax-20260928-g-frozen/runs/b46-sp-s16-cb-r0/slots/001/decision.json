@@ -1,0 +1,49 @@
+{
+  "decision": {
+    "step": 1,
+    "strategy": "C-B",
+    "action": "develop",
+    "target": "return_aware",
+    "parent": {
+      "id": 17,
+      "intent": "The parent's regret term is purely linear and treats every regret magnitude uniformly. In uniform instances, isolated candidates can have spuriously high regret and waste the 2-opt budget. Dividing regret by (0.5 + nearest_remaining) creates a nonlinear correction that amplifies regret when the candidate's nearest other unvisited node is itself close (a true pick-now signal unique to dense neighborhoods), and dampens regret when that nearest other is already far (the candidate is the best of bad options and should yield). This preserves parent behavior in clustered/grid layouts where cluster density keeps nearest_remaining small, while discouraging isolated picks in uniform layouts.",
+      "tags": [
+        "regret",
+        "nonlinear"
+      ],
+      "code": "def priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    denom = 0.5 + nr\n    if denom < 1e-9:\n        denom = 1e-9\n    return -d + 0.25 * rd + 0.2 * r + 0.15 * r / denom",
+      "loss": 0.048489777936637,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.059076091823573706,
+        "clustered": 0.05339595703522717,
+        "grid": 0.03299728495111013
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          4.207867895778546,
+          4.207867895778546
+        ],
+        [
+          3.4457739329398214,
+          3.443118580794226,
+          3.443118580794226
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "lagging_branch",
+      "start_incumbent_id": 4,
+      "start_branch_id": 17,
+      "current_incumbent_id": 4,
+      "current_branch_id": 17
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-B",
+      "checkpoint_best_loss": 0.04579270249782831
+    }
+  }
+}

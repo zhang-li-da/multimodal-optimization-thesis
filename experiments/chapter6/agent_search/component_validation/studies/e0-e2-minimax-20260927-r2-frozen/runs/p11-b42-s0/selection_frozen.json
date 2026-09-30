@@ -1,0 +1,36 @@
+{
+  "run_config_sha256": "0291edb96d8f5a47270f62d7936b88582bc92cafe05ba0d49ddead8c7b1ed3e9",
+  "execution_mode": "live",
+  "selected_on": "validation",
+  "best_id": 3,
+  "seed_best_id": 1,
+  "archive_ids": [
+    3,
+    1,
+    2
+  ],
+  "programs": [
+    {
+      "id": 1,
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+      "raw_code_sha256": "17c20cc6336cf4b18c89e5964d6df9e1e182d62f6a182ec1bc3df0e95007e28b",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "b11ab831748c31d4b990e8c2fd81fad1e07dc03bd788d9e655cbb38e9609ad20"
+    },
+    {
+      "id": 2,
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+      "raw_code_sha256": "c0dd5a578b60f0175f0035576e61dade51faacc613025314b326b2d3918986da",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "b0ec4ececa1c5d712639e933551f269c8c0e32f9140fb3ffb170d5efad847c87"
+    },
+    {
+      "id": 3,
+      "code": "def priority(f):\n    return -f[\"distance\"] + f[\"progress\"] * 0.3 * f[\"return_distance\"] + 0.15 * f[\"regret\"]",
+      "raw_code_sha256": "d54e6b84ffc8229b1481a722bc9b0ac224097d9844cbb3c9556065cecc48adbb",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "673ea48603ecf08e02d7940108288b997027bce2c494ea21df9705608fb87176"
+    }
+  ],
+  "frozen_utc": "2026-09-27T14:53:43.436288+00:00"
+}

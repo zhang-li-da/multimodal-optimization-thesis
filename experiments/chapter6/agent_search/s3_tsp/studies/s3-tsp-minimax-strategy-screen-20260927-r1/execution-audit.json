@@ -1,0 +1,57 @@
+{
+  "schema": "s3-preperformance-audit-v1",
+  "utc": "2026-09-27T06:20:35.785357+00:00",
+  "fixture": "synthetic_controller_regression_no_model_call",
+  "test_results_accessed": false,
+  "steps": [
+    {
+      "step": 0,
+      "action": "explore",
+      "protected": false,
+      "loss": 0.12,
+      "tokens": 1000
+    },
+    {
+      "step": 1,
+      "action": "develop",
+      "protected": true,
+      "loss": 0.08,
+      "tokens": 1000
+    },
+    {
+      "step": 2,
+      "action": "develop",
+      "protected": true,
+      "loss": 0.08,
+      "tokens": 1000
+    },
+    {
+      "step": 3,
+      "action": "explore",
+      "protected": false,
+      "loss": 0.08,
+      "tokens": 1000
+    }
+  ],
+  "observed_ad_unit": {
+    "unit_id": 0,
+    "action": "explore",
+    "start_step": 0,
+    "end_step": 3,
+    "proposal_slots": 2,
+    "global_best_improvement": 0.020000000000000004,
+    "tokens": 4000,
+    "reward_per_1000_tokens": 0.005000000000000001,
+    "selection_draw": 0.8444218515250481
+  },
+  "expected_direct_ordinary_tokens": 2000,
+  "expected_direct_ordinary_global_gain": 0.0,
+  "new_model_calls": 0,
+  "findings": [
+    "AD unit wall-span includes protected-step tokens and quality increments even though proposal_slots excludes protected steps.",
+    "FB_U records a shadow pool but ordinary development never selects its branches, so FB_P minus FB_U is a bundle of pool exploitation and guarantee.",
+    "Scheduler evidence is serialized in model prompts, confounding policy routing with prompt differences.",
+    "protected_parent_was_behind_global reads a branch after its representative may have been updated.",
+    "Direction matching is online nearest-linked assignment; it does not merge all connected components."
+  ]
+}

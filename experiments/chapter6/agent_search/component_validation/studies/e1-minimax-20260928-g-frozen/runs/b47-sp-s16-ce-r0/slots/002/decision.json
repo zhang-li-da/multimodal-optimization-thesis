@@ -1,0 +1,22 @@
+{
+  "decision": {
+    "step": 2,
+    "strategy": "C-E",
+    "action": "explore",
+    "target": "regret",
+    "parent": null,
+    "reference": null,
+    "allocation": {
+      "continuation_target": "explore",
+      "start_incumbent_id": 10,
+      "start_branch_id": 1,
+      "current_incumbent_id": 10,
+      "current_branch_id": 1
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-E",
+      "checkpoint_best_loss": 0.033078752700824415
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "chapter6-e1-dispatch-summary-v1",
+  "study_id": "chapter6-component-validation-e1-20260927",
+  "status": "dispatch_complete",
+  "manifest_sha256": "1f36fb7810e3d5bdd3a1fcde8e9bcc2fcb245cb574fdf0b4bfc1b818daf23060",
+  "acceptance": {
+    "path": "C:\\Users\\67473\\Desktop\\5\\_delivery\\multimodal-optimization-thesis\\experiments\\chapter6\\agent_search\\component_validation\\results\\service-acceptance-minimax-m3-20260928-r1\\summary.json",
+    "sha256": "847c1bcb6536ac1e3c2ffec54943def59081513f248fa925daaadf21d63b4173",
+    "status": "passed",
+    "returned_model": "MiniMax-M3",
+    "planner_completed": 3,
+    "coder_completed": 3
+  },
+  "planned_jobs": 48,
+  "submitted_jobs": 48,
+  "completed_jobs": 48,
+  "not_started_jobs": 0,
+  "paused": false,
+  "utc": "2026-09-28T12:11:07.069469+00:00",
+  "new_model_calls": null
+}

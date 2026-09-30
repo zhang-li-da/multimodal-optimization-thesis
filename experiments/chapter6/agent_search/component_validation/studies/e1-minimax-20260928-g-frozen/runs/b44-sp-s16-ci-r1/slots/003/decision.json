@@ -1,0 +1,49 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-I",
+    "action": "develop",
+    "target": "cluster",
+    "parent": {
+      "id": 12,
+      "intent": "Combine the parent's progress-modulated return-to-start weighting with a regret term that is stronger early in the tour (to avoid myopic local choices that create poor long-term structure, especially in uniform instances) and weaker late (when the adaptive return weight dominates to focus on tour closure). This adds look-ahead diversity without disturbing the return-aware core.",
+      "tags": [
+        "return_aware",
+        "regret"
+      ],
+      "code": "def priority(f):\n    d = f[\"distance\"]\n    r = f[\"return_distance\"]\n    g = f[\"regret\"]\n    p = f[\"progress\"]\n    return -d + (0.15 + 0.4 * p) * r + (0.25 - 0.15 * p) * g",
+      "loss": 0.04413748591638146,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.053260941041300434,
+        "clustered": 0.051327111489562004,
+        "grid": 0.027824405218281945
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          4.026141584453368,
+          3.981716250351987,
+          3.981716250351987
+        ],
+        [
+          3.2572588577137527,
+          3.2572588577137527
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "incumbent",
+      "start_incumbent_id": 12,
+      "start_branch_id": 13,
+      "current_incumbent_id": 12,
+      "current_branch_id": 13
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-I",
+      "checkpoint_best_loss": 0.04413748591638146
+    }
+  }
+}

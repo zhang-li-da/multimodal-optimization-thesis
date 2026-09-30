@@ -1,0 +1,22 @@
+{
+  "decision": {
+    "step": 1,
+    "strategy": "C-E",
+    "action": "explore",
+    "target": "return_aware",
+    "parent": null,
+    "reference": null,
+    "allocation": {
+      "continuation_target": "explore",
+      "start_incumbent_id": 8,
+      "start_branch_id": 15,
+      "current_incumbent_id": 8,
+      "current_branch_id": 15
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-E",
+      "checkpoint_best_loss": 0.03938007399141782
+    }
+  }
+}

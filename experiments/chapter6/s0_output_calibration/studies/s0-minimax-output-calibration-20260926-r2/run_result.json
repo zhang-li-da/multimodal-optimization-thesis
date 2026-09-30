@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "completed_slots": 84,
+  "dispatched_requests": 84,
+  "selected_config": "expanded_caps",
+  "calibration_statistics": [
+    {
+      "id": "legacy_caps",
+      "planner_valid": 1,
+      "coder_valid": 6,
+      "median_tokens": 2506.5
+    },
+    {
+      "id": "expanded_caps",
+      "planner_valid": 7,
+      "coder_valid": 9,
+      "median_tokens": 2651.5
+    }
+  ],
+  "selection_uses_acceptance": false,
+  "acceptance": {
+    "planner": {
+      "planned": 18,
+      "observed": 18,
+      "valid": 14
+    },
+    "coder": {
+      "planned": 18,
+      "observed": 18,
+      "valid": 18
+    }
+  },
+  "e2e_successes": 6,
+  "e2e_planned": 6,
+  "ready_for_s1": false
+}

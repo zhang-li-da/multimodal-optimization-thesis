@@ -1,0 +1,22 @@
+{
+  "request_sha256": "d7a02a3e28fc3f0425021c30663e1365ba9023934009a0c32a65ddd9d074ce9a",
+  "text": "<think>The task is to implement the proposed priority rule as a Python function called `priority` that takes a dictionary `f` with the listed features. The function should follow the given formula:\n\n```\n-f['distance'] + (0.15 + 0.4 * f['progress']) * f['return_distance'] + (0.25 - 0.15 * f['progress']) * f['regret'] + 0.15 * f['cluster_density'] - 0.1 * f['nearest_remaining']\n```\n\nConstraints:\n- Exactly `def priority(f):` \n- Scalar local assignments\n- return, if/else or conditional expression\n- Allowed math operators: + - * / % ** (constant exponent <=4)\n- Comparisons, boolean operations\n- Calls: abs/min/max/sqrt/log/log1p/exp/tanh\n- NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls\n- Access only listed features with f['feature']\n- Guard denominators with 1e-9 and log domains\n- <=25 source lines and <=320 AST nodes\n- Higher returned value is chosen\n\nThe formula uses: distance, return_distance, progress, regret, cluster_density, nearest_remaining\n\nI need to translate this to Python code with the constraints. The formula uses:\n- `-f['distance']`\n- `(0.15 + 0.4 * f['progress']) * f['return_distance']`\n- `(0.25 - 0.15 * f['progress']) * f['regret']`\n- `0.15 * f['cluster_density']`\n- `-0.1 * f['nearest_remaining']`\n\nLet me write the code:\n\n```python\ndef priority(f):\n    d = f['distance']\n    r = f['return_distance']\n    g = f['regret']\n    p = f['progress']\n    c = f['cluster_density']\n    n = f['nearest_remaining']\n    return -d + (0.15 + 0.4 * p) * r + (0.25 - 0.15 * p) * g + 0.15 * c - 0.1 * n\n```\n\nThis should satisfy all constraints. Let me check:\n- Exact function name and parameter\n- Scalar local assignments\n- return statement\n- Math operators used\n- No forbidden constructs\n- Features accessed by f['feature']\n- No annotations or imports\n\nThe formula has no denominators that need guarding (no division), and no log calls. So the guards aren't needed here, but I should be careful about the constraint about guarding denominators. Since there are no denominators, I don't need to add guards.\n\nLet me verify the AST node count. The function is quite simple. Each line is roughly:\n1. def priority(f):\n2. d = f['distance']\n3. r = f['return_distance']\n4. g = f['regret']\n5. p = f['progress']\n6. c = f['cluster_density']\n7. n = f['nearest_remaining']\n8. return -d + (0.15 + 0.4 * p) * r + (0.25 - 0.15 * p) * g + 0.15 * c - 0.1 * n\n\nThat's well within 25 lines and AST nodes.\n\nThe output needs to be a JSON object with exactly one field \"code\", with newline escapes valid inside JSON.\n\nLet me format the JSON properly with \\n escapes.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    r = f['return_distance']\\n    g = f['regret']\\n    p = f['progress']\\n    c = f['cluster_density']\\n    n = f['nearest_remaining']\\n    return -d + (0.15 + 0.4 * p) * r + (0.25 - 0.15 * p) * g + 0.15 * c - 0.1 * n\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1701,
+    "total_characters": 0,
+    "prompt_tokens": 834,
+    "completion_tokens": 867,
+    "completion_tokens_details": {
+      "reasoning_tokens": 745
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 834,
+  "output_tokens": 867,
+  "usage_complete": true,
+  "seconds": 4.682691700058058,
+  "request_id": "07096fdcd6e0790885cba6c7fb2664b1"
+}

@@ -1,0 +1,22 @@
+{
+  "request_sha256": "cbc0b2a775008ad7f4eabaa1a6c39dbfd4b0701db5ceb3e1ac3eec27dccbfb82",
+  "text": "<think>We need to generate a Python function priority(f) that follows the plan: \"cluster_aware_return_regret\". The formula given:\n\npriority = -f['distance'] + 0.35 * f['cluster_density'] + 0.2 * f['return_distance'] + 0.1 * f['regret']\n\nWe need to adhere to language restrictions: exactly def priority(f): scalar local assignments, return, if/else or conditional expression, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh. No imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls. Access only listed features with f['feature'].\n\nWe can implement straightforwardly: compute the expression. However, we must guard denominators with 1e-9 and log domains. But no denominators present except maybe 0? There is no division. The expression uses only multiplication and addition, no division, no log. So no need to guard.\n\nBut we must keep under <=25 source lines and <=320 AST nodes. The code should be simple.\n\nWe must output JSON with exactly one code field. Use newline escapes valid inside JSON. No annotations or imports.\n\nThus code:\n\ndef priority(f):\n    d = f[\"distance\"]\n    cd = f[\"cluster_density\"]\n    rd = f[\"return_distance\"]\n    rg = f[\"regret\"]\n    return -d + 0.35 * cd + 0.2 * rd + 0.1 * rg\n\nThat's within restrictions.\n\nMake sure to use f['distance'] with quotes. Could also use f['distance']. The features list says access with f['feature']. So either double or single quotes okay. Use double quotes consistent.\n\nCheck allowed calls: none needed. So it's fine.\n\nNow we need to output JSON with code field. The code must be a string with newline escapes. So we need to escape newlines as \\n. Let's produce:\n\n{\n  \"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    return -d + 0.35 * cd + 0.2 * rd + 0.1 * rg\"\n}\n\nWe need to ensure JSON is valid: no trailing commas. Only one field \"code\". That's it.\n\nWe should not include any markdown. So final answer is just that JSON.</think>\n\n{\"code\": \"def priority(f):\\n    d = f[\\\"distance\\\"]\\n    cd = f[\\\"cluster_density\\\"]\\n    rd = f[\\\"return_distance\\\"]\\n    rg = f[\\\"regret\\\"]\\n    return -d + 0.35 * cd + 0.2 * rd + 0.1 * rg\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1369,
+    "total_characters": 0,
+    "prompt_tokens": 738,
+    "completion_tokens": 631,
+    "completion_tokens_details": {
+      "reasoning_tokens": 545
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 738,
+  "output_tokens": 631,
+  "usage_complete": true,
+  "seconds": 3.5910414999816567,
+  "request_id": "07098a02c03e63999c3692099fe82b44"
+}

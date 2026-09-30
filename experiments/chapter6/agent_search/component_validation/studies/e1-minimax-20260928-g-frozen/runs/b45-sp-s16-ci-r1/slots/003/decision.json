@@ -1,0 +1,51 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-I",
+    "action": "develop",
+    "target": "cluster",
+    "parent": {
+      "id": 20,
+      "intent": "Invert the regret ramp so early picks (where uniform instances need uniqueness ranking because distances collapse) get strong regret weighting (~0.35), decaying to ~0.10 as local distance structure emerges and progress-ramped return bias takes over for late-stage commit. Add a cluster_density-modulated nearest_remaining term (decays with progress) so dense early candidates get bounded lookahead boost without overriding return-aware commitment. Hypothesis: uniform benefits from early regret dominance; clustered/grid are protected because their informative distance ranking makes regret less critical early, and the return ramp still drives final assembly.",
+      "tags": [
+        "return_aware",
+        "regret"
+      ],
+      "code": "def priority(f):\n    progress = f[\"progress\"]\n    cluster_density = f[\"cluster_density\"]\n    rw = 0.2 + 0.45 * progress\n    rgw = 0.35 - 0.25 * progress\n    cl = 0.12 * cluster_density * (1.0 - progress)\n    return -f[\"distance\"] + rw * f[\"return_distance\"] + rgw * f[\"regret\"] + cl * f[\"nearest_remaining\"]",
+      "loss": 0.043073212228075405,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.0546870019064419,
+        "clustered": 0.02707191184907391,
+        "grid": 0.04746072292871042
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.7878168758392703,
+          3.7322978425484106,
+          3.7322978425484106
+        ],
+        [
+          3.7948235087553734,
+          3.789073805873295,
+          3.5208894339187777,
+          3.5208894339187777
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "incumbent",
+      "start_incumbent_id": 5,
+      "start_branch_id": 17,
+      "current_incumbent_id": 20,
+      "current_branch_id": 17
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-I",
+      "checkpoint_best_loss": 0.04621097896720469
+    }
+  }
+}

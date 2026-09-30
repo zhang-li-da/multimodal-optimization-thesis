@@ -1,0 +1,17 @@
+{
+  "schema": "chapter6-component-validation-e0-e2-v1-r2",
+  "study_id": "chapter6-component-validation-20260927-e0-e2-r2",
+  "status": "FINAL_PROTOCOL_PENDING_EXECUTION",
+  "model": {"provider": "minimax-cn-coding-plan", "requested_model": "MiniMax-M3", "provider_endpoint": "OpenCode catalog endpoint", "immutable_service_version": "unknown; record returned model and request time"},
+  "task": "tsp",
+  "profile": "chapter6-v12-tsp14-v1",
+  "e0": {"purpose": "same E0 implementation as v1; no method parameter change", "new_direction_trial_slots": 1, "renewal_slots": 1, "max_lineage_slots": 4, "active_pool_capacity": 2, "quality_tolerance": 0.035, "gain_epsilon": 0.0001, "behavior_radius": 0.08, "zero_credit_entries_occupy_pool": false, "behavior_change_resets_trial": false, "renewal_requires_local_progress": true, "renewal_requires_budget_window": true},
+  "e2": {"purpose": "2x2 attribution of scheduling priority and eviction protection", "blocks": [40, 41, 42, 43], "search_seeds": [0, 1], "groups": [{"id":"P00","scheduling_priority":false,"eviction_protection":false},{"id":"P10","scheduling_priority":true,"eviction_protection":false},{"id":"P01","scheduling_priority":false,"eviction_protection":true},{"id":"P11","scheduling_priority":true,"eviction_protection":true}], "fixed_slots":{"incumbent":20,"explore":6,"branch":6,"total":32}, "active_pool_capacity":2, "trial_slots_per_new_direction":1, "renewal_slots_per_progress":1, "maximum_lineage_slots":4, "planned_searches":32, "planned_proposals":1024, "primary_endpoint":"validation-selected single-program test gap", "factor_endpoints":["decision differences","premature eviction","branch opportunity redemption","paired test gap"]},
+  "generation": {"temperature":0.7,"planner_max_tokens":16384,"coder_max_tokens":8192,"timeout_seconds":180,"request_limit_per_job":64,"token_budget_per_job":300000,"wall_limit_seconds_per_job":3600,"retry_policy":"none","invalid_or_truncated_slot":"consume the slot and record the failure","provider_failure":"stop only the affected job; retain partial output; no automatic retry"},
+  "execution": {"max_concurrency":1,"reason":"v1 all jobs hit provider HTTP 429 at first request; v1 is retained as infrastructure-failed and this is an independently frozen low-concurrency batch"},
+  "isolation": {"search_access":["probe","validation"],"test_access":"only after all live search jobs in this stage are terminal","test_selection":"validation-selected single program plus shared seed comparator","independent_unit":"data block; seed is a within-block repeat","bootstrap":"descriptive block bootstrap only; no confirmatory p-values"},
+  "decision_rules": {"minimum_practical_gain_percentage_points":0.3,"token_increase_limit_fraction":0.1,"post_hoc_parameter_tuning":false,"append_jobs_after_freeze":false,"component_retention":"retain, simplify, or delete only from preregistered endpoint and evidence; inconclusive remains evidence_insufficient"},
+  "prior_batch": {"study_id":"chapter6-component-validation-20260927-e0-e2","manifest_sha256":"185aa22e26b9af1b138ebe9c861cda5774764abd97a2bfce3d12f7d33e4a3276","status":"infrastructure_failed_before_first_proposal","failure":"32/32 jobs received provider HTTP 429 on first planner request","new_model_calls_before_freeze":0},
+  "new_model_calls_before_freeze":0,
+  "claims":"This r2 is an infrastructure-recovery execution batch for the preregistered E2 component screen. It does not establish universal superiority, cross-task transfer, or a final doctoral-method claim."
+}

@@ -1,0 +1,12 @@
+{
+  "request_sha256": "6b212ffbfcef811b5aaca63649969ce6b5625602d8be48397654d7609c3747ba",
+  "envelope": {
+    "body_base64": "eyJpZCI6IjA3MDg2MDVjYThjNDI3MDkyMzU3MjNkMDE2OTczMzhkIiwiY2hvaWNlcyI6W3siZmluaXNoX3JlYXNvbiI6InN0b3AiLCJpbmRleCI6MCwibWVzc2FnZSI6eyJjb250ZW50IjoiPHRoaW5rPlRoZSB1c2VyIGlzIGFza2luZyBtZSB0byByZXR1cm4gZXhhY3RseSBhIHNwZWNpZmljIEpTT04gb2JqZWN0LiBUaGlzIGlzIGEgc3RyYWlnaHRmb3J3YXJkIHJlcXVlc3QuPC90aGluaz5cblxue1wicmVhZHlcIjp0cnVlfSIsInJvbGUiOiJhc3Npc3RhbnQifX1dLCJjcmVhdGVkIjoxNzkwNTIwNjY4LCJtb2RlbCI6Ik1pbmlNYXgtTTMiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJ1c2FnZSI6eyJ0b3RhbF90b2tlbnMiOjIxMywidG90YWxfY2hhcmFjdGVycyI6MCwicHJvbXB0X3Rva2VucyI6MTg2LCJjb21wbGV0aW9uX3Rva2VucyI6MjcsImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6MTl9LCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MTI4fX0sImlucHV0X3NlbnNpdGl2ZSI6ZmFsc2UsIm91dHB1dF9zZW5zaXRpdmUiOmZhbHNlLCJpbnB1dF9zZW5zaXRpdmVfdHlwZSI6MCwib3V0cHV0X3NlbnNpdGl2ZV90eXBlIjowLCJvdXRwdXRfc2Vuc2l0aXZlX2ludCI6MCwic2VydmljZV90aWVyIjoic3RhbmRhcmQiLCJiYXNlX3Jlc3AiOnsic3RhdHVzX2NvZGUiOjAsInN0YXR1c19tc2ciOiIifX0K",
+    "seconds": 0.9817081999499351,
+    "request_id": "",
+    "protocol": "openai",
+    "endpoint": "https://api.minimaxi.com/v1/chat/completions"
+  },
+  "envelope_sha256": "e47d4717d58183b6833fb82b1b1a222c604e0808bae6c03263f8efe801a06ed1",
+  "received_utc": "2026-09-27T14:51:09.437274+00:00"
+}

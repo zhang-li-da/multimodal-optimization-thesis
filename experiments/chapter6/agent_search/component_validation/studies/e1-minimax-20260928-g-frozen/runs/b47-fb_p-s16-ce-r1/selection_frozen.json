@@ -1,0 +1,11 @@
+{
+  "schema": "chapter6-e1-selection-v1",
+  "selected_on": "validation",
+  "strategy": "C-E",
+  "best_id": 4,
+  "code": "def priority(f):\n    return_weight = 0.20 + 0.30 * f['progress']\n    return_penalty = return_weight * f['return_distance']\n    density_bonus = 0.05 * f['cluster_density']\n    regret_bonus = 0.25 * f['regret']\n    return -f['distance'] + return_penalty + density_bonus + regret_bonus\n",
+  "validation_loss": 0.038955930465600315,
+  "checkpoint_best_loss": 0.038955930465600315,
+  "completed_proposals": 4,
+  "status": "continuation_complete"
+}

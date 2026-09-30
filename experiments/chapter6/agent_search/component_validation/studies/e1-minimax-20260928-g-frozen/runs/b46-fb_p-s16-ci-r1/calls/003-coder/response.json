@@ -1,0 +1,22 @@
+{
+  "request_sha256": "d444eb53379f65286b35a895d95b8adf8d77e386ee0150a350e52de7dffd9702",
+  "text": "<think>The user wants me to implement a priority function for a TSP construction heuristic. Let me analyze the plan:\n\nFormula: `-distance + (0.1 + 0.4*progress)*return_distance + 0.2*regret + 0.15*cluster_density`\n\nI need to:\n1. Access features: distance, return_distance, progress, regret, cluster_density\n2. Compute the formula\n3. Return the value\n4. Use only allowed Python constructs\n5. Keep it ≤25 source lines and ≤320 AST nodes\n6. No annotations, imports, loops, lists, etc.\n7. Output as JSON with one \"code\" field\n\nLet me write this carefully:\n\n```python\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    p = f['progress']\n    reg = f['regret']\n    cd = f['cluster_density']\n    return -d + (0.1 + 0.4 * p) * rd + 0.2 * reg + 0.15 * cd\n```\n\nThis is clean and follows all the constraints. Let me check:\n- Access only listed features with f['feature'] ✓\n- No annotations ✓\n- No imports ✓\n- Uses only +, -, *, /, comparisons ✓\n- Scalar local assignments ✓\n- return ✓\n- All operations are within allowed functions\n\nThe formula exactly matches the plan: `-distance + (0.1 + 0.4*progress)*return_distance + 0.2*regret + 0.15*cluster_density`\n\nLet me format the JSON output properly with newline escapes.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    p = f['progress']\\n    reg = f['regret']\\n    cd = f['cluster_density']\\n    return -d + (0.1 + 0.4 * p) * rd + 0.2 * reg + 0.15 * cd\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1225,
+    "total_characters": 0,
+    "prompt_tokens": 793,
+    "completion_tokens": 432,
+    "completion_tokens_details": {
+      "reasoning_tokens": 339
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    }
+  },
+  "input_tokens": 793,
+  "output_tokens": 432,
+  "usage_complete": true,
+  "seconds": 5.935138000175357,
+  "request_id": "07097cf7044495b58d5a7796c9253549"
+}

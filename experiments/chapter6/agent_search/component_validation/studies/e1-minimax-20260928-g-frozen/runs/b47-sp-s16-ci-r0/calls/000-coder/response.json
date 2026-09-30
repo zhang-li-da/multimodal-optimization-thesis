@@ -1,0 +1,22 @@
+{
+  "request_sha256": "6148c7fdb32eb78dd044ad1d99a3a8090b6849d73cd5fb04cacd9eb074bc5bb8",
+  "text": "<think>The user wants me to implement a TSP construction heuristic priority function. Let me analyze the plan:\n\nFormula: `-dist + (0.20 + 0.25*prog) * ret + (0.05 + 0.25*prog) * regret - (0.05 + 0.10*prog) * nearest_remaining`\n\nI need to:\n1. Access features via f['feature']\n2. Use only allowed Python (def, scalar assignments, return, if/else, basic arithmetic, abs/min/max/sqrt/log/log1p/exp/tanh)\n3. No imports, annotations, loops, lists, etc.\n4. Guard denominators with 1e-9\n5. Keep ≤25 source lines and ≤320 AST nodes\n6. Return JSON with one code field\n\nLet me write the code:\n\n```python\ndef priority(f):\n    dist = f['distance']\n    ret = f['return_distance']\n    nr = f['nearest_remaining']\n    mr = f['mean_remaining']\n    regret = f['regret']\n    prog = f['progress']\n    cd = f['cluster_density']\n    sp = f['spread']\n    ret_coeff = 0.20 + 0.25 * prog\n    regret_coeff = 0.05 + 0.25 * prog\n    nr_coeff = 0.05 + 0.10 * prog\n    score = -dist + ret_coeff * ret + regret_coeff * regret - nr_coeff * nr\n    return score\n```\n\nWait, let me re-read the plan. The formula says:\n`-dist + (0.20 + 0.25*prog) * ret + (0.05 + 0.25*prog) * regret - (0.05 + 0.10*prog) * nearest_remaining`\n\nThat's pretty straightforward. Let me also think about whether to include the additional features (cluster_density, spread) - the plan doesn't mention them, but they're listed as features. The plan says \"Add a small progress-modulated penalty for being far from the nearest unvisited neighbor to discourage isolated picks and reduce future long jumps, while preserving the parent's local-greedy, return-aware, and regret-driven behavior.\"\n\nSo I should stick to the formula given. Let me count lines and AST nodes.\n\nActually, the plan mentions adding lookahead. Let me think... the formula literally specifies `-dist + (0.20 + 0.25*prog) * ret + (0.05 + 0.25*prog) * regret - (0.05 + 0.10*prog) * nearest_remaining`. That's a parent code + nearest_remaining penalty.\n\nLet me keep it simple and follow the formula exactly:\n\n```python\ndef priority(f):\n    dist = f['distance']\n    ret = f['return_distance']\n    nr = f['nearest_remaining']\n    regret = f['regret']\n    prog = f['progress']\n    ret_coeff = 0.20 + 0.25 * prog\n    regret_coeff = 0.05 + 0.25 * prog\n    nr_coeff = 0.05 + 0.10 * prog\n    return -dist + ret_coeff * ret + regret_coeff * regret - nr_coeff * nr\n```\n\nThis is clean and follows the plan. Let me check constraints:\n- ≤25 source lines: Yes, ~10 lines\n- ≤320 AST nodes: Easily\n- No imports, annotations, loops, etc.: Yes\n- Access only listed features with f['feature']: Yes (using distance, return_distance, nearest_remaining, regret, progress)\n- Guard denominators with 1e-9: No divisions in this formula, so no guards needed\n- Higher returned value is chosen: Higher score wins, yes\n\nThe code looks good. Let me format the JSON output.\n\nActually, I should double-check that I should not add extra complexity. The plan is explicit, and I should implement it as proposed. Let me finalize.\n\n```python\ndef priority(f):\n    dist = f['distance']\n    ret = f['return_distance']\n    nr = f['nearest_remaining']\n    regret = f['regret']\n    prog = f['progress']\n    ret_coeff = 0.20 + 0.25 * prog\n    regret_coeff = 0.05 + 0.25 * prog\n    nr_coeff = 0.05 + 0.10 * prog\n    return -dist + ret_coeff * ret + regret_coeff * regret - nr_coeff * nr\n```\n\nFor JSON output, newlines need to be escaped as \\n.</think>\n\n{\"code\": \"def priority(f):\\n    dist = f['distance']\\n    ret = f['return_distance']\\n    nr = f['nearest_remaining']\\n    regret = f['regret']\\n    prog = f['progress']\\n    ret_coeff = 0.20 + 0.25 * prog\\n    regret_coeff = 0.05 + 0.25 * prog\\n    nr_coeff = 0.05 + 0.10 * prog\\n    return -dist + ret_coeff * ret + regret_coeff * regret - nr_coeff * nr\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1877,
+    "total_characters": 0,
+    "prompt_tokens": 785,
+    "completion_tokens": 1092,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    }
+  },
+  "input_tokens": 785,
+  "output_tokens": 1092,
+  "usage_complete": true,
+  "seconds": 10.480085899820551,
+  "request_id": "070987f10eab5b091e390f1c3c856909"
+}

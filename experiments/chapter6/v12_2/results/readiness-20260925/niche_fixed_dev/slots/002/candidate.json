@@ -1,0 +1,109 @@
+{
+  "id": 5,
+  "name": "fixture_2",
+  "intent": "deterministic engineering fixture",
+  "tags": [
+    "regret"
+  ],
+  "reported_tags": [
+    "regret"
+  ],
+  "allocated_tag": "regret",
+  "code": "import os\ndef priority(f):\n    return 0\n",
+  "source": "live_llm",
+  "parent_id": 1,
+  "reference_id": 2,
+  "action": "recombine",
+  "allocation": {
+    "available_branch_ids": [
+      3,
+      4
+    ],
+    "branch_scores": {
+      "3": 0.7513090945693072,
+      "4": 0.7502259531454221
+    },
+    "decision_step": 2,
+    "family_statistics": {
+      "cluster": {
+        "eligible_improvements": 0,
+        "fallback": true,
+        "observations": 0,
+        "priority": 0.75
+      },
+      "hybrid": {
+        "eligible_improvements": 0,
+        "fallback": true,
+        "observations": 0,
+        "priority": 0.75
+      },
+      "local_distance": {
+        "eligible_improvements": 2,
+        "fallback": false,
+        "observations": 2,
+        "priority": 0.75
+      },
+      "lookahead": {
+        "eligible_improvements": 0,
+        "fallback": true,
+        "observations": 0,
+        "priority": 0.75
+      },
+      "nonlinear": {
+        "eligible_improvements": 0,
+        "fallback": true,
+        "observations": 0,
+        "priority": 0.75
+      },
+      "progress": {
+        "eligible_improvements": 0,
+        "fallback": true,
+        "observations": 0,
+        "priority": 0.75
+      },
+      "regret": {
+        "eligible_improvements": 0,
+        "fallback": true,
+        "observations": 0,
+        "priority": 0.75
+      },
+      "return_aware": {
+        "eligible_improvements": 0,
+        "fallback": true,
+        "observations": 0,
+        "priority": 0.75
+      }
+    },
+    "ordinary_decision": {
+      "action": "recombine",
+      "parent_id": 1,
+      "reference_id": 2,
+      "target": "regret"
+    },
+    "ordinary_scheduler": "shared_niche",
+    "working_memory_policy": "disabled"
+  },
+  "generation_mode": "fixture",
+  "proposal_failure": null,
+  "evaluation": {
+    "valid": false,
+    "loss": null,
+    "behavior": [],
+    "trajectory_behavior": [],
+    "failure_type": "ProgramError",
+    "error": "Provide exactly one def priority(f) function.",
+    "split": "validation",
+    "features_called": 0,
+    "local_checks": 0,
+    "instance_evaluations": 0,
+    "wall_seconds": 8.359993807971478e-05,
+    "cpu_seconds": 0.0,
+    "legacy_runtime_program_hash": null,
+    "program_identity": {
+      "raw_code_sha256": "82359f8e24b8c743a62d827bd302a85cf9f45103394f1f59f70a16bcac037f7a",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": null
+    },
+    "program_hash": null
+  }
+}

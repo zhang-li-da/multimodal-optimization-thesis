@@ -1,0 +1,12 @@
+{
+  "scope": "Post-hoc policy substitution on every recorded history; no new offspring, model calls, or counterfactual quality estimate.",
+  "manifest_sha256": "9a623fec5a481ad4645ae014887a4b4f820bf61b2e89d234bd75c35ad5af22b8",
+  "decisions": 128,
+  "ordinary_decision_equal": 128,
+  "full_decision_equal": 128,
+  "planner_prompt_equal": 128,
+  "branch_development_slots": 18,
+  "development_slots_with_multiple_B": 0,
+  "new_model_calls": 0,
+  "new_program_evaluations": 0
+}

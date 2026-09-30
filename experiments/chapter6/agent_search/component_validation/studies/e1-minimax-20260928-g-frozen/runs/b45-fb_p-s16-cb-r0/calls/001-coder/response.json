@@ -1,0 +1,22 @@
+{
+  "request_sha256": "80dbe00224c076fa20f5224cc2c922958c6885872e104641aaeaf167d72eb2ba",
+  "text": "<think>The task is to implement a priority function for a sequential TSP construction heuristic. I need to write Python code that uses only the allowed features and operations.\n\nLet me look at the plan:\n- Formula: `-distance + 0.25*return_distance*(1+progress) + 0.07*regret - 0.12*nearest_remaining + 0.06*cluster_density - 0.05*spread`\n\nLet me verify the parent code matches this. The parent has:\n- `-d + 0.25 * rd * (1 + p) + 0.06 * r - 0.12 * nr + 0.04 * cd`\n\nThe plan changes:\n- regret weight: 0.06 → 0.07\n- cluster_density weight: 0.04 → 0.06\n- Add spread term: -0.05 * spread\n\nSo new formula:\n- `-distance + 0.25*return_distance*(1+progress) + 0.07*regret - 0.12*nearest_remaining + 0.06*cluster_density - 0.05*spread`\n\nConstraints:\n- Allowed Python: def priority(f), scalar local assignments, return, if/else or conditional expression, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh\n- NO imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls\n- Access only listed features with f['feature']\n- Guard denominators with 1e-9 and log domains\n- <=25 source lines and <=320 AST nodes\n- Higher returned value is chosen\n\nThe formula doesn't need any log or sqrt guards since it's just a linear combination. Let me write it:\n\n```python\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    p = f['progress']\n    cd = f['cluster_density']\n    sp = f['spread']\n    return -d + 0.25 * rd * (1 + p) + 0.07 * r - 0.12 * nr + 0.06 * cd - 0.05 * sp\n```\n\nLet me count lines: 10 lines. Well within 25.\nAST nodes: should be fine.\n\nNo log domains or denominators are needed since this is purely a linear combination. The formula doesn't divide by anything or use log.\n\nLet me double-check the formula from the plan:\n`-distance + 0.25*return_distance*(1+progress) + 0.07*regret - 0.12*nearest_remaining + 0.06*cluster_density - 0.05*spread`\n\nTranslating:\n- -distance → -d\n- 0.25*return_distance*(1+progress) → 0.25 * rd * (1 + p)\n- 0.07*regret → 0.07 * r\n- -0.12*nearest_remaining → -0.12 * nr\n- 0.06*cluster_density → 0.06 * cd\n- -0.05*spread → -0.05 * sp\n\nYes, that's correct.\n\nOutput should be JSON with one code field. The code should use newline escapes.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    nr = f['nearest_remaining']\\n    r = f['regret']\\n    p = f['progress']\\n    cd = f['cluster_density']\\n    sp = f['spread']\\n    return -d + 0.25 * rd * (1 + p) + 0.07 * r - 0.12 * nr + 0.06 * cd - 0.05 * sp\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1705,
+    "total_characters": 0,
+    "prompt_tokens": 852,
+    "completion_tokens": 853,
+    "completion_tokens_details": {
+      "reasoning_tokens": 725
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 852,
+  "output_tokens": 853,
+  "usage_complete": true,
+  "seconds": 3.2407241999171674,
+  "request_id": "07097500adeb235c6c270388e5a1e17a"
+}

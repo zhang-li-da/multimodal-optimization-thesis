@@ -1,0 +1,22 @@
+{
+  "request_sha256": "1a1c624cce9b9ccdf0b2bf2762007d41500d837df83e7455f787b99201a59768",
+  "text": "<think>We need to generate a function `priority(f)` that implements the proposed formula. The formula is:\n\nscore = -distance + 0.05 * nearest_remaining / (distance + 0.1) + (0.15 + 0.25 * progress^1.5) * regret + 0.30 * return_distance * (1 + 0.5 * progress) - 0.04 * mean_remaining + 0.02 * cluster_density\n\nWe need to guard denominators with 1e-9 and log domains. But the formula doesn't have log or exp. It has division by (distance + 0.1). We should add 1e-9 to denominator: distance + 0.1 + 1e-9. Or we can guard as per language: we can use max(denom, 1e-9) or add 1e-9.\n\nThe parent code uses:\n\ns = -d + 0.05 * nr / (d + 0.1 + 1e-9) + (0.15 + 0.25 * (p ** 1.5)) * r + 0.30 * rd * (1 + 0.5 * p)\n\nWe need to extend it to include -0.04 * mean_remaining + 0.02 * cluster_density.\n\nAlso the formula includes cluster_density and mean_remaining. So we need to compute those.\n\nWe need to write the function in <=25 source lines and <=320 AST nodes. We need to avoid loops, lists, etc. Use only allowed operations.\n\nWe need to return the score. Higher returned value is chosen.\n\nWe need to ensure we only access f['distance'], f['return_distance'], f['nearest_remaining'], f['regret'], f['progress'], f['cluster_density'], f['mean_remaining'].\n\nWe need to compute p ** 1.5. That's allowed because exponent is constant <=4.\n\nWe need to guard denominators: distance + 0.1 + 1e-9.\n\nWe need to ensure we don't use any other features.\n\nWe need to write the code exactly as per the plan.\n\nThus:\n\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    p = f['progress']\n    cd = f['cluster_density']\n    mr = f['mean_remaining']\n    p15 = p ** 1.5\n    weight_regret = 0.15 + 0.25 * p15\n    term1 = -d\n    term2 = 0.05 * nr / (d + 0.1 + 1e-9)\n    term3 = weight_regret * r\n    term4 = 0.30 * rd * (1 + 0.5 * p)\n    term5 = -0.04 * mr\n    term6 = 0.02 * cd\n    s = term1 + term2 + term3 + term4 + term5 + term6\n    return s\n\nThat's about 15 lines.\n\nWe need to ensure no annotations, no imports, no lists, etc.\n\nWe need to output JSON with exactly one code field, and newline escapes valid inside JSON. So we need to represent the code as a string with newlines escaped as \\n.\n\nThus:\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    nr = f['nearest_remaining']\\n    r = f['regret']\\n    p = f['progress']\\n    cd = f['cluster_density']\\n    mr = f['mean_remaining']\\n    p15 = p ** 1.5\\n    weight_regret = 0.15 + 0.25 * p15\\n    term1 = -d\\n    term2 = 0.05 * nr / (d + 0.1 + 1e-9)\\n    term3 = weight_regret * r\\n    term4 = 0.30 * rd * (1 + 0.5 * p)\\n    term5 = -0.04 * mr\\n    term6 = 0.02 * cd\\n    s = term1 + term2 + term3 + term4 + term5 + term6\\n    return s\"}\n\nWe need to ensure the JSON is properly formatted with double quotes around the string and escape newlines.\n\nThus final answer.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    nr = f['nearest_remaining']\\n    r = f['regret']\\n    p = f['progress']\\n    cd = f['cluster_density']\\n    mr = f['mean_remaining']\\n    p15 = p ** 1.5\\n    weight_regret = 0.15 + 0.25 * p15\\n    term1 = -d\\n    term2 = 0.05 * nr / (d + 0.1 + 1e-9)\\n    term3 = weight_regret * r\\n    term4 = 0.30 * rd * (1 + 0.5 * p)\\n    term5 = -0.04 * mr\\n    term6 = 0.02 * cd\\n    s = term1 + term2 + term3 + term4 + term5 + term6\\n    return s\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 2087,
+    "total_characters": 0,
+    "prompt_tokens": 902,
+    "completion_tokens": 1185,
+    "completion_tokens_details": {
+      "reasoning_tokens": 960
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 902,
+  "output_tokens": 1185,
+  "usage_complete": true,
+  "seconds": 10.304677400039509,
+  "request_id": "0709742fb453a6ddd36a8e17fd7cfbfa"
+}

@@ -1,0 +1,49 @@
+{
+  "decision": {
+    "step": 2,
+    "strategy": "C-B",
+    "action": "develop",
+    "target": "regret",
+    "parent": {
+      "id": 20,
+      "intent": "Modulate return-distance emphasis by tour progress (1+progress) so end-game picks favor tour closure; helps uniform instances where local structure is weak and tour closure dominates quality. Add small spread penalty to discourage candidates with uneven neighbor distance distributions (neutral on uniform where spreads are similar, helps clustered/grid by preferring interior nodes). Keep modest regret with parent-style nonlinear correction.",
+      "tags": [
+        "return_aware",
+        "progress"
+      ],
+      "code": "def priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    p = f['progress']\n    s = f['spread']\n    denom = 0.5 + nr\n    if denom < 1e-9:\n        denom = 1e-9\n    return -d + 0.25 * (1 + p) * rd + 0.1 * r + 0.1 * r / denom - 0.05 * s",
+      "loss": 0.040283046172876355,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.03233596332652072,
+        "clustered": 0.04540753534749139,
+        "grid": 0.04310563984461696
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.7492887063352334,
+          3.7492887063352334
+        ],
+        [
+          3.501098810213182,
+          3.4827327337108565,
+          3.4827327337108565
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "lagging_branch",
+      "start_incumbent_id": 4,
+      "start_branch_id": 17,
+      "current_incumbent_id": 20,
+      "current_branch_id": 20
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-B",
+      "checkpoint_best_loss": 0.04579270249782831
+    }
+  }
+}

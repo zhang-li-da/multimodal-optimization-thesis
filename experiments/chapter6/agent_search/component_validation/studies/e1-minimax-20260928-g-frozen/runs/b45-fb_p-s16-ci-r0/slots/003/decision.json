@@ -1,0 +1,50 @@
+{
+  "decision": {
+    "step": 3,
+    "strategy": "C-I",
+    "action": "develop",
+    "target": "cluster",
+    "parent": {
+      "id": 21,
+      "intent": "This heuristic refines the parent by incorporating instance structure via cluster_density and spread. The lookahead term is dampened in dense clusters to avoid overemphasizing nearest neighbors when many options are close, which can hurt uniform and clustered distributions. A small penalty for high spread discourages nodes that are far from some unvisited nodes, potentially preventing long detours. The core regret and return terms remain unchanged to preserve the parent's TSP-aware backbone.",
+      "tags": [
+        "regret",
+        "cluster"
+      ],
+      "code": "def priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    nr = f['nearest_remaining']\n    r = f['regret']\n    p = f['progress']\n    cd = f['cluster_density']\n    sp = f['spread']\n    s = -d + 0.05 * (nr / (d + 0.1 + 1e-9)) * (1 - 0.5 * cd) + (0.15 + 0.25 * (p ** 1.5)) * r + 0.30 * rd * (1 + 0.5 * p) - 0.02 * sp\n    return s",
+      "loss": 0.04375620669071985,
+      "valid": true,
+      "family_loss": {
+        "uniform": 0.06253010506125067,
+        "clustered": 0.033387881909809014,
+        "grid": 0.03535063310109985
+      },
+      "failure_type": null,
+      "trajectory_values": [
+        [
+          3.7878168758392703,
+          3.7322978425484106,
+          3.7322978425484106
+        ],
+        [
+          3.953701704827539,
+          3.4858276621196613,
+          3.4858276621196613
+        ]
+      ]
+    },
+    "reference": null,
+    "allocation": {
+      "continuation_target": "incumbent",
+      "start_incumbent_id": 17,
+      "start_branch_id": 11,
+      "current_incumbent_id": 21,
+      "current_branch_id": 11
+    },
+    "evidence": {
+      "same_state": true,
+      "strategy": "C-I",
+      "checkpoint_best_loss": 0.0443142310348197
+    }
+  }
+}

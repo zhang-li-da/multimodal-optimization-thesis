@@ -1,0 +1,22 @@
+{
+  "request_sha256": "faedb92f23770c00d71c8a6df429d0c08b14ea7bdbaee2a54b63fb7eeeeb7ed8",
+  "text": "<think>We need to write Python code with the priority rule as described. The plan says:\n\n\"formula\": \"-f[\\\"distance\\\"] - 0.25 * f[\\\"return_distance\\\"] * f[\\\"progress\\\"] + 0.15 * f[\\\"regret\\\"]\"\n\nWe need to return a scalar. The function priority takes a dict f with features. We must compute priority accordingly.\n\nBut we also need to respect constraints: Allowed Python: exactly def priority(f), scalar local assignments, return, if/else or conditional expression, + - * / % ** (constant exponent <=4), comparisons, boolean operations, calls abs/min/max/sqrt/log/log1p/exp/tanh. No imports, annotations, loops, lists, arrays, attributes, f.get(), helpers, mutation, I/O, random, or other calls. Access only listed features with f['feature'].\n\nGuard denominators with 1e-9 and log domains.\n\n<=25 source lines and <=320 AST nodes.\n\nThe formula uses f[\"distance\"], f[\"return_distance\"], f[\"progress\"], f[\"regret\"].\n\nPotentially need to guard denominators. The formula doesn't have division; multiplication only.\n\nWe need to compute as per the formula: -distance - 0.25*return_distance*progress + 0.15*regret\n\nWe need to implement as a priority function. Also consider potential issues like negative values? The problem states \"Higher priority wins\". So we need to compute priority as a scalar, larger wins. The formula yields maybe negative, but relative ordering still fine.\n\nWe can optionally incorporate log domain for something? Not needed.\n\nWe need to keep code <=25 lines and AST nodes <=320. Let's just define priority with a single line return.\n\nBut we might need to add guards for denominator; not needed.\n\nPotentially we need to guard progress denominator? But it's used as multiplication, no denominator.\n\nWe need to guard log domains; not using log.\n\nThus code could be:\n\ndef priority(f):\n    d = f['distance']\n    rd = f['return_distance']\n    pr = f['progress']\n    rg = f['regret']\n    return -d - 0.25*rd*pr + 0.15*rg\n\nThat's 4 local assignments and return. That's within constraints. Use scalar assignments.\n\nWe need to ensure parentheses for readability, but fine.\n\nCheck AST node count: def line, assignment nodes, return node etc. Should be fine.\n\nThe code must not import, annotate, or use other features.\n\nThus final answer: JSON with code field containing the Python code with newline escapes.\n\nWe need to output JSON object only, no markdown.\n\nThus output: {\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    pr = f['progress']\\n    rg = f['regret']\\n    return -d - 0.25*rd*pr + 0.15*rg\\n\"}\n\nWe need to ensure newline escapes are proper inside JSON: \\n inside string.\n\nYes.\n\nWe should ensure no trailing spaces.\n\nThus final answer.</think>\n\n{\"code\": \"def priority(f):\\n    d = f['distance']\\n    rd = f['return_distance']\\n    pr = f['progress']\\n    rg = f['regret']\\n    return -d - 0.25*rd*pr + 0.15*rg\\n\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1444,
+    "total_characters": 0,
+    "prompt_tokens": 719,
+    "completion_tokens": 725,
+    "completion_tokens_details": {
+      "reasoning_tokens": 652
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 719,
+  "output_tokens": 725,
+  "usage_complete": true,
+  "seconds": 3.1795411999337375,
+  "request_id": "07085ed32e8e4521e9bbc2af0abdefda"
+}

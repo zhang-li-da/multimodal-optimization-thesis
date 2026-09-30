@@ -1,0 +1,491 @@
+"""Component-validation controller with separate direction memory and investment.
+
+The implementation deliberately keeps the treatment factors small.  A valid
+direction is remembered in ``direction_members``; only a direction with an
+unused trial or a qualifying local improvement receives a development slot.
+Zero-credit directions are never inserted into the active pool.
+"""
+from __future__ import annotations
+
+import copy
+from typing import Any
+
+from chapter6_demo import benchmarks
+from chapter6_demo.benchmarks import TAGS
+from chapter6_demo.discovery import BEHAVIOR_RADIUS
+from chapter6_demo.v12_2.common import canonical, digest
+
+from ..s3_tsp_r3.controller import SearchState as _S3SearchState
+
+
+def plain(value):
+    import json
+    return json.loads(canonical(value))
+
+
+def _compatible(actual, expected):
+    """Compare a new replay value against an older, subset-shaped record.
+
+    E0 added identity and investment diagnostics to decisions/events.  Old
+    E2 archives do not contain those keys, so replay must compare every field
+    they do contain while allowing additive fields in the new controller.
+    Lists remain exact because their ordering is part of the immutable trace.
+    """
+    if isinstance(expected, dict):
+        return (isinstance(actual, dict) and
+                all(key in actual and _compatible(actual[key], value)
+                    for key, value in expected.items()))
+    if isinstance(expected, list):
+        return (isinstance(actual, list) and len(actual) == len(expected) and
+                all(_compatible(left, right) for left, right in zip(actual, expected)))
+    return actual == expected
+
+
+def brief(node: dict[str, Any] | None) -> dict[str, Any] | None:
+    if node is None:
+        return None
+    ev = node["evaluation"]
+    return {
+        "id": node["id"], "intent": node.get("intent", "")[:800],
+        "tags": node.get("tags", []), "code": node.get("code", ""),
+        "loss": ev.get("loss"), "valid": ev.get("valid", False),
+        "family_loss": ev.get("family_loss", {}),
+        "failure_type": ev.get("failure_type"),
+        "trajectory_values": ev.get("trajectory_values", [])[:2],
+    }
+
+
+class ComponentSearchState(_S3SearchState):
+    """Fixed-slot E2 state with independently toggled P-S and P-E factors."""
+
+    # Interleave opportunities so a direction admitted early can be tried
+    # before the search is over.  The counts remain the frozen 20/6/6
+    # allocation, but branch slots are distributed across the first 24 steps.
+    SLOT_TYPES = tuple(("incumbent", "incumbent", "explore", "branch") * 6 +
+                       ("incumbent",) * 8)
+
+    def __init__(self, policy: str = "FB", seed: int = 0, *, steps: int = 32,
+                 capacity: int = 2, grant: int = 1,
+                 maximum_direction_attempts: int = 4,
+                 quality_tolerance: float = .035, gain_epsilon: float = 1e-4,
+                 protection: bool = False, scheduling_priority: bool | None = None,
+                 eviction_protection: bool = False,
+                 behavior_radius: float = BEHAVIOR_RADIUS,
+                 adaptive_unit_steps: int = 2, **kwargs):
+        if steps != 32:
+            raise ValueError("E2 uses the frozen 20/6/6 slot table")
+        factor_policy = policy if policy in {"P00", "P10", "P01", "P11"} else None
+        if factor_policy is not None:
+            scheduling_priority = factor_policy in {"P10", "P11"}
+            eviction_protection = factor_policy in {"P01", "P11"}
+            protection = scheduling_priority
+        super().__init__("FB", seed, steps=steps, capacity=capacity, grant=grant,
+                         maximum_direction_attempts=maximum_direction_attempts,
+                         quality_tolerance=quality_tolerance,
+                         gain_epsilon=gain_epsilon,
+                         protection=bool(protection),
+                         behavior_radius=behavior_radius,
+                         adaptive_unit_steps=adaptive_unit_steps)
+        self.scheduling_priority = bool(protection if scheduling_priority is None else scheduling_priority)
+        self.eviction_protection = bool(eviction_protection)
+        self.trial_slots = grant
+        self.renewal_slots = grant
+        self.factor_events: list[dict[str, Any]] = []
+        # These identities are intentionally separate.  A behavior cell may
+        # change after a proposal while the investment project continues from
+        # its parent; the lineage ledger is the cumulative budget boundary.
+        self.behavior_cell_id: dict[int, str] = {}
+        self.node_investment_id: dict[int, str | None] = {}
+        self.direction_investment_id: dict[str, str] = {}
+        self.investments: dict[str, dict[str, Any]] = {}
+        self.investment_serial = 0
+
+    def _register_direction(self, node, parent_id):
+        """Register a behavior cell without assigning a new investment.
+
+        ``_S3SearchState`` calls this during initialization and observation.
+        Keeping the call separate lets a child cross a behavior boundary while
+        still inheriting its parent's investment project below.
+        """
+        direction, is_new, distance = super()._register_direction(node, parent_id)
+        self.behavior_cell_id[node["id"]] = direction
+        return direction, is_new, distance
+
+    def _new_investment(self, *, direction, node, lineage):
+        investment_id = f"I{self.investment_serial:04d}"
+        self.investment_serial += 1
+        self.investments[investment_id] = {
+            "investment_id": investment_id,
+            "lineage_id": lineage,
+            "behavior_cell_id": direction,
+            "started_node_id": node["id"],
+            "best_node_id": node["id"],
+            "best_loss": node["evaluation"]["loss"],
+            "trial_slots_awarded": 0,
+            "renewal_slots_awarded": 0,
+            "attempts": 0,
+            "progress_events": 0,
+            "last_progress_step": None,
+            "active": False,
+        }
+        self.direction_investment_id.setdefault(direction, investment_id)
+        return investment_id
+
+    def _investment_for_node(self, node_id):
+        return self.node_investment_id.get(node_id)
+
+    def _investment_progress(self, investment_id, node):
+        if investment_id is None or investment_id not in self.investments:
+            return None, None
+        record = self.investments[investment_id]
+        before = record["best_loss"]
+        gain = before - node["evaluation"]["loss"]
+        return before, gain
+
+    def _pool_entry(self, direction):
+        return self.pool.get(direction)
+
+    def _current_step(self):
+        """Return the step whose observation is currently being processed."""
+        return self.decisions[-1]["step"] if self.decisions else -1
+
+    def _future_branch_slots(self):
+        """Count branch slots that can still redeem a new commitment."""
+        next_step = len(self.decisions)
+        return sum(slot == "branch" for slot in self.SLOT_TYPES[next_step:])
+
+    def _next_branch_deadline(self):
+        """Return the next branch slot index, or ``steps`` if none remains."""
+        current = self._current_step()
+        for step in range(current + 1, self.steps):
+            if self.SLOT_TYPES[step] == "branch":
+                return step
+        return self.steps
+
+    def _reserved_branch_slots(self):
+        return sum(max(0, int(entry.get("remaining", 0)))
+                   for entry in self.pool.values())
+
+    def _admit(self, node, direction, reason, gain, investment_id=None):
+        """Admit a funded project without coupling it to a behavior cell.
+
+        A new behavior cell can inherit ``investment_id`` from its parent.  A
+        project receives a fresh id only for a genuine, parentless trial.  The
+        lineage ledger remains the hard cumulative budget cap across all cells.
+        """
+        lineage = self.direction_lineage[direction]
+        ledger = self.ledgers[lineage]
+        entry = self.pool.get(direction)
+        parent_investment_id = self.node_investment_id.get(node.get("parent_id"))
+        entry_investment_id = entry.get("investment_id") if entry else None
+        investment_id = investment_id or parent_investment_id or entry_investment_id \
+            or self.direction_investment_id.get(direction)
+        # A behavior-cell mutation of an existing project is not a fresh trial.
+        # It may renew only when it beats that project's own best result.
+        if reason == "new_direction_trial" and parent_investment_id is not None:
+            project = self.investments.get(parent_investment_id)
+            project_gain = (project["best_loss"] - node["evaluation"]["loss"]
+                            if project is not None else None)
+            if project_gain is None or project_gain <= self.gain_epsilon:
+                return {"entry_created": False, "grant_awarded": 0,
+                        "development_grant_awarded": 0,
+                        "reason": "no_investment_evidence",
+                        "evicted_direction_id": None, "zero_credit_pool_entry": False,
+                        "investment_id": parent_investment_id}
+            reason = "direction_progression"
+        is_trial = reason == "new_direction_trial"
+        is_renewal = reason == "direction_progression"
+        if not (is_trial or is_renewal):
+            return {"entry_created": False, "grant_awarded": 0,
+                    "development_grant_awarded": 0, "reason": "no_investment_evidence",
+                    "evicted_direction_id": None, "zero_credit_pool_entry": False}
+        if is_renewal and ledger["grant_awarded"] >= self.maximum_direction_attempts:
+            return {"entry_created": False, "grant_awarded": 0,
+                    "development_grant_awarded": 0, "reason": "lineage_budget_exhausted",
+                    "evicted_direction_id": None, "zero_credit_pool_entry": False,
+                    "investment_id": investment_id}
+
+        if investment_id is None:
+            investment_id = self._new_investment(direction=direction, node=node,
+                                                 lineage=lineage)
+        elif investment_id not in self.investments:
+            # Fixture/replay compatibility: reconstruct a project from a
+            # persisted pool entry when an older checkpoint has no project map.
+            self.investments[investment_id] = {
+                "investment_id": investment_id, "lineage_id": lineage,
+                "behavior_cell_id": direction, "started_node_id": node["id"],
+                "best_node_id": node["id"], "best_loss": node["evaluation"]["loss"],
+                "trial_slots_awarded": 0, "renewal_slots_awarded": 0,
+                "attempts": 0, "progress_events": 0,
+                "last_progress_step": None, "active": False,
+            }
+        self.direction_investment_id.setdefault(direction, investment_id)
+
+        # Compute the grant before touching the pool.  This prevents an
+        # unfunded direction from occupying a slot or evicting a funded one.
+        requested = (self.trial_slots if is_trial and ledger["grant_awarded"] == 0
+                     else self.renewal_slots if is_renewal else 0)
+        lineage_remaining = self.maximum_direction_attempts - ledger["grant_awarded"]
+        branch_slots = self._future_branch_slots()
+        unreserved_slots = max(0, branch_slots - self._reserved_branch_slots())
+        extra = min(requested, lineage_remaining, unreserved_slots)
+        if extra <= 0 and entry is None:
+            reason_code = "budget_window_exhausted" if branch_slots <= 0 or unreserved_slots <= 0 else "no_remaining_trial_or_renewal"
+            return {"entry_created": False, "grant_awarded": 0,
+                    "development_grant_awarded": 0, "reason": reason_code,
+                    "evicted_direction_id": None, "zero_credit_pool_entry": True,
+                    "investment_id": investment_id}
+
+        if entry is None:
+            if len(self.pool) >= self.capacity:
+                replaceable = list(self.pool.values())
+                if self.eviction_protection:
+                    replaceable = [x for x in replaceable if x["remaining"] <= 0]
+                if not replaceable:
+                    return {"entry_created": False, "grant_awarded": 0,
+                        "development_grant_awarded": 0, "reason": "pool_full_protected",
+                        "evicted_direction_id": None, "zero_credit_pool_entry": False,
+                        "investment_id": investment_id}
+                victim = max(replaceable, key=lambda value: (value["loss"], -value["created_order"]))
+                evicted_direction = victim["direction_id"]
+                self.pool.pop(evicted_direction)
+            else:
+                evicted_direction = None
+            entry = {
+                "direction_id": direction, "lineage_id": lineage,
+                "behavior_cell_id": direction, "investment_id": investment_id,
+                "node_id": node["id"], "remaining": 0,
+                "protection_remaining": 0, "attempts": 0,
+                "loss": node["evaluation"]["loss"],
+                "created_order": self.serial, "last_gain": max(0.0, gain),
+                "last_admission_reason": reason,
+                "deadline_step": self._next_branch_deadline(),
+            }
+            self.serial += 1
+            self.pool[direction] = entry
+            ledger["branch_admissions"] += 1
+            created = True
+        else:
+            evicted_direction = None
+            created = False
+            entry.setdefault("behavior_cell_id", direction)
+            entry.setdefault("investment_id", investment_id)
+            investment_id = entry["investment_id"]
+            current = self.by_id.get(entry["node_id"])
+            if current is None or node["evaluation"]["loss"] < current["evaluation"]["loss"]:
+                entry["node_id"] = node["id"]
+                entry["loss"] = node["evaluation"]["loss"]
+                entry["last_gain"] = max(0.0, gain)
+            entry["last_admission_reason"] = reason
+        # A trial is awarded once. A renewal is awarded only after evidence;
+        # the lineage ledger prevents a behavior mutation from resetting it.
+        if extra <= 0:
+            return {"entry_created": created, "grant_awarded": 0,
+                    "development_grant_awarded": 0, "reason": "no_remaining_trial_or_renewal",
+                    "evicted_direction_id": evicted_direction, "zero_credit_pool_entry": False,
+                    "investment_id": investment_id}
+        ledger["grant_awarded"] += extra
+        entry["remaining"] += extra
+        if self.scheduling_priority:
+            entry["protection_remaining"] += extra
+        project = self.investments[investment_id]
+        project["active"] = True
+        if is_trial:
+            project["trial_slots_awarded"] += extra
+        else:
+            project["renewal_slots_awarded"] += extra
+        return {"entry_created": created, "grant_awarded": extra if self.scheduling_priority else 0,
+                "development_grant_awarded": extra, "reason": reason,
+                "evicted_direction_id": evicted_direction, "zero_credit_pool_entry": False,
+                "investment_id": investment_id}
+
+    def _available_investments(self):
+        return sorted((entry for entry in self.pool.values() if entry["remaining"] > 0),
+                      # Without P-S, quality is the ordinary branch policy.
+                      key=lambda e: (e["loss"], e["created_order"], e["direction_id"]))
+
+    def _available_priority(self):
+        if not self.scheduling_priority:
+            return []
+        return sorted((e for e in self.pool.values() if e["protection_remaining"] > 0),
+                      # P-S gives the earliest commitment deadline priority;
+                      # creation order only breaks equal-deadline ties.
+                      key=lambda e: (e.get("deadline_step", self.steps),
+                                     e["created_order"], e["direction_id"]))
+
+    def choose(self, step: int):
+        if self.pending is not None:
+            raise ValueError("Observe the previous proposal before choosing again")
+        if step != len(self.decisions) or step >= self.steps:
+            raise ValueError("E2 step does not follow decision history")
+        slot_type = self.SLOT_TYPES[step]
+        branch = None
+        if slot_type == "incumbent":
+            action, intended, parent = "develop", "incumbent", self.best
+        elif slot_type == "explore":
+            action, intended, parent = "explore", "explore", None
+        else:
+            action, intended = "develop", "branch"
+            choices = self._available_priority() or self._available_investments()
+            branch = choices[0] if choices else None
+            parent = self.by_id[branch["node_id"]] if branch else self.best
+        target = TAGS["tsp"][step % len(TAGS["tsp"])]
+        allocation = {
+            "slot_type": slot_type,
+            "branch_parent_id": branch["node_id"] if branch else None,
+            "direction_id": branch["direction_id"] if branch else None,
+            "lineage_id": branch["lineage_id"] if branch else None,
+            "investment_id": branch.get("investment_id") if branch else None,
+            "protected": bool(branch and self.scheduling_priority and branch in self._available_priority()),
+            "protection_remaining_before": branch["protection_remaining"] if branch else None,
+            "created_order": branch["created_order"] if branch else None,
+        }
+        available = self._available_investments()
+        decision = {
+            "step": step, "target": target, "policy": "E2",
+            "action": action, "intended_action": intended,
+            "parent": brief(parent), "reference": self._reference(parent),
+            "allocation": allocation, "adaptive_unit_id": None,
+            "evidence": {
+                "slot_type": slot_type,
+                "scheduling_priority": self.scheduling_priority,
+                "eviction_protection": self.eviction_protection,
+                "available_direction_ids": [e["direction_id"] for e in available],
+                "available_investment_ids": [e.get("investment_id") for e in available],
+                "priority_direction_ids": [e["direction_id"] for e in self._available_priority()],
+                "multiple_investment_choices": len(available) >= 2,
+                "multi_branch_protection_slot": len(self._available_priority()) >= 2,
+                "pool_size": len(self.pool),
+            },
+        }
+        self.pending = copy.deepcopy(decision)
+        self.decisions.append(copy.deepcopy(decision))
+        return copy.deepcopy(decision)
+
+    def observe(self, node, costs=None):
+        pending = copy.deepcopy(self.pending)
+        event = super().observe(node, costs)
+        # Resolve project identity after the base controller has classified the
+        # behavior cell.  The scheduled branch project takes precedence over a
+        # parent map; parentless exploration creates a project only when the
+        # admission code actually funded it.
+        scheduled_investment_id = pending.get("allocation", {}).get("investment_id") if pending else None
+        parent_investment_id = self.node_investment_id.get(node.get("parent_id"))
+        direction = event.get("direction_id")
+        investment_id = (scheduled_investment_id or parent_investment_id or
+                         self.direction_investment_id.get(direction))
+        if investment_id is not None and investment_id in self.investments:
+            self.node_investment_id[node["id"]] = investment_id
+            self.direction_investment_id.setdefault(direction, investment_id)
+            project = self.investments[investment_id]
+            best_before = project["best_loss"]
+            project_gain = best_before - node["evaluation"]["loss"] if event.get("valid") else None
+            project_progress = bool(project_gain is not None and project_gain > self.gain_epsilon)
+            if project_progress:
+                project["best_loss"] = node["evaluation"]["loss"]
+                project["best_node_id"] = node["id"]
+                project["progress_events"] += 1
+                project["last_progress_step"] = pending.get("step") if pending else None
+            event.update({
+                "investment_id": investment_id,
+                "investment_gain": project_gain,
+                "investment_best_loss_before": best_before,
+                "investment_best_loss_after": project["best_loss"],
+                "investment_progress": project_progress,
+                "investment_renewal_eligible": project_progress,
+            })
+        else:
+            event.update({
+                "investment_id": None,
+                "investment_gain": None,
+                "investment_best_loss_before": None,
+                "investment_best_loss_after": None,
+                "investment_progress": False,
+                "investment_renewal_eligible": False,
+            })
+        event["behavior_cell_id"] = direction
+        event["scheduled_investment_id"] = scheduled_investment_id
+        # ``SearchState.observe`` serializes the admission reason but not the
+        # component-only zero-credit diagnostic.  A zero-credit admission is
+        # only the case where a new entry was refused because no future branch
+        # slot (or reservation) could redeem it.
+        event["zero_credit_pool_entry"] = bool(
+            not event.get("branch_entry_created")
+            and event.get("direction_id") not in self.pool
+            and event.get("admission_reason") in {
+                "budget_window_exhausted", "no_remaining_trial_or_renewal"
+            }
+        )
+        event.update({
+            "scheduling_priority": self.scheduling_priority,
+            "eviction_protection": self.eviction_protection,
+            "slot_type": (pending.get("evidence", {}).get("slot_type")
+                           if pending is not None else None),
+            "trial_or_renewal": event.get("admission_reason") in ("new_direction_trial", "direction_progression"),
+            "zero_credit_pool_entry": event["zero_credit_pool_entry"],
+        })
+        self.factor_events.append({
+            "step": pending.get("step") if pending is not None else None,
+            "scheduling_priority": self.scheduling_priority,
+            "eviction_protection": self.eviction_protection,
+            "branch_development": event.get("branch_development", False),
+            "protected_development": event.get("protected_development", False),
+            "pool_evicted_direction_id": event.get("pool_evicted_direction_id"),
+        })
+        return event
+
+    def summary(self):
+        value = super().summary()
+        value.update({
+            "controller": "component_e2",
+            "scheduling_priority": self.scheduling_priority,
+            "eviction_protection": self.eviction_protection,
+            "trial_slots": self.trial_slots,
+            "renewal_slots": self.renewal_slots,
+            "zero_credit_pool_entries": sum(e.get("zero_credit_pool_entry", False) for e in self.events),
+            "behavior_cells": len(self.direction_members),
+            "investment_projects": len(self.investments),
+            "active_investment_projects": sum(bool(p.get("active")) for p in self.investments.values()),
+            "investment_progress_events": sum(int(p.get("progress_events", 0)) for p in self.investments.values()),
+            "behavior_cell_id_by_node": self.behavior_cell_id,
+            "investment_id_by_node": self.node_investment_id,
+            "direction_investment_id": self.direction_investment_id,
+            "investments": self.investments,
+            "factor_events": self.factor_events,
+        })
+        return value
+
+    def snapshot(self):
+        value = super().snapshot()
+        value.update({
+            "behavior_cell_id": self.behavior_cell_id,
+            "node_investment_id": self.node_investment_id,
+            "direction_investment_id": self.direction_investment_id,
+            "investments": self.investments,
+            "investment_serial": self.investment_serial,
+        })
+        return value
+
+
+def restore_state(checkpoint):
+    config = checkpoint["config"]
+    state = ComponentSearchState(
+        config.get("policy", "FB"), config["search_seed"], steps=config["steps"],
+        capacity=config["capacity"], grant=config["grant"],
+        maximum_direction_attempts=config["maximum_direction_attempts"],
+        quality_tolerance=config["quality_tolerance"], gain_epsilon=config["gain_epsilon"],
+        protection=config.get("scheduling_priority", False),
+        scheduling_priority=config.get("scheduling_priority", False),
+        eviction_protection=config.get("eviction_protection", False),
+        behavior_radius=config["behavior_radius"],
+        adaptive_unit_steps=config.get("adaptive_unit_steps", 2),
+    )
+    state.initialize(checkpoint["seeds"])
+    for record in checkpoint["records"]:
+        decision = state.choose(record["decision"]["step"])
+        if not _compatible(plain(decision), plain(record["decision"])):
+            raise ValueError("Replay decision differs from immutable checkpoint")
+        event = state.observe(record["node"], record["costs"])
+        if not _compatible(plain(event), plain(record["event"])):
+            raise ValueError("Replay event differs from immutable checkpoint")
+    return state

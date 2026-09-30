@@ -1,0 +1,153 @@
+{
+  "decision": {
+    "action": "restart",
+    "audit": {
+      "available_branch_ids": [
+        4
+      ],
+      "branch_scores": {
+        "4": 0.600225953145422
+      },
+      "decision_step": 4,
+      "family_statistics": {
+        "cluster": {
+          "eligible_improvements": 0,
+          "fallback": true,
+          "observations": 0,
+          "priority": 0.5
+        },
+        "hybrid": {
+          "eligible_improvements": 0,
+          "fallback": true,
+          "observations": 0,
+          "priority": 0.5
+        },
+        "local_distance": {
+          "eligible_improvements": 2,
+          "fallback": false,
+          "observations": 3,
+          "priority": 0.6
+        },
+        "lookahead": {
+          "eligible_improvements": 0,
+          "fallback": true,
+          "observations": 0,
+          "priority": 0.5
+        },
+        "nonlinear": {
+          "eligible_improvements": 0,
+          "fallback": true,
+          "observations": 0,
+          "priority": 0.5
+        },
+        "progress": {
+          "eligible_improvements": 0,
+          "fallback": true,
+          "observations": 0,
+          "priority": 0.5
+        },
+        "regret": {
+          "eligible_improvements": 0,
+          "fallback": true,
+          "observations": 1,
+          "priority": 0.5
+        },
+        "return_aware": {
+          "eligible_improvements": 0,
+          "fallback": true,
+          "observations": 0,
+          "priority": 0.5
+        }
+      },
+      "ordinary_decision": {
+        "action": "restart",
+        "parent_id": null,
+        "reference_id": null,
+        "target": "lookahead"
+      },
+      "ordinary_scheduler": "shared_niche",
+      "working_memory_policy": "disabled"
+    },
+    "branch_development_scheduled": false,
+    "evidence": {
+      "decision_step": 4
+    },
+    "parent": null,
+    "recent": [
+      {
+        "code": "import os\ndef priority(f):\n    return 0\n",
+        "error": "Provide exactly one def priority(f) function.",
+        "failure_type": "ProgramError",
+        "family_loss": {},
+        "id": 5,
+        "intent": "deterministic engineering fixture",
+        "loss": null,
+        "tags": [
+          "regret"
+        ],
+        "trajectory_values": [],
+        "valid": false
+      },
+      {
+        "code": "def priority(f):\n    return -f[\"distance\"] + 0.12 * f[\"return_distance\"]\n",
+        "error": null,
+        "failure_type": null,
+        "family_loss": {
+          "clustered": 0.05705084579391765,
+          "grid": 0.0766599951674528,
+          "uniform": 0.08763383514342928
+        },
+        "id": 6,
+        "intent": "deterministic engineering fixture",
+        "loss": 0.07378155870159991,
+        "tags": [
+          "local_distance"
+        ],
+        "trajectory_values": [
+          [
+            3.3462028476525685,
+            3.235828617634385,
+            3.235828617634385
+          ],
+          [
+            3.547033218630278,
+            3.53694262380091,
+            3.4684024752231446,
+            3.4684024752231446
+          ]
+        ],
+        "valid": true
+      }
+    ],
+    "reference": null,
+    "target": "lookahead"
+  },
+  "exposure": {
+    "branch_slot": false,
+    "entries": [
+      {
+        "node_id": 4,
+        "parent_id": 3,
+        "tag": "local_distance",
+        "loss": 0.07287774611991178,
+        "parent_gain": 0.0009038125816881321,
+        "remaining": 2,
+        "attempts": 0,
+        "depth": 2,
+        "created_order": 1,
+        "family_priority": 0.6,
+        "family_observations": 3,
+        "family_fallback": false,
+        "gain_term": 0.0009038125816881321,
+        "selection_time_gap_to_best": 0.01464866968167388
+      }
+    ],
+    "multi_branch_slot": false,
+    "distinct_available_tags": 1,
+    "family_priority_varies": false,
+    "full_rank_parent_id": 4,
+    "gain_only_parent_id": 4,
+    "full_vs_gain_choice_differs": false,
+    "selected_parent_gap_to_best": null
+  }
+}
