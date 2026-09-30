@@ -1,0 +1,110 @@
+{
+  "schema": "chapter6-real-trajectory-demo-v1",
+  "record_type": "real_archived_trajectory",
+  "synthetic": false,
+  "source": {
+    "git_commit": "6d491ac6391ccc2c7a00baa5e695fbe66e66f16a",
+    "study_id": "chapter6-component-validation-short-horizon-20260929",
+    "raw_archive": "experiments/chapter6/agent_search/component_validation/results/short-horizon-20260929/raw-study.zip",
+    "raw_archive_sha256": "387d951ae7250eaf42b1e6a157b1a9145f3d7b00a8d1e41c64ac145320aa2c0f",
+    "job_id": "b59-early-ce-r0",
+    "checkpoint": "study/checkpoints/b59-early.json",
+    "run_prefix": "study/runs/b59-early-ce-r0",
+    "test_record": "study/tests/b59-early-ce-r0.json"
+  },
+  "data_boundary": {
+    "search_selection_split": "validation",
+    "test_readout": "after all study jobs were terminal; test did not select the final candidate",
+    "test_is_not_a_new_confirmation_observation": true
+  },
+  "initial_comparison": {
+    "incumbent_validation_loss": 0.07978960267824992,
+    "exploration_start_validation_loss": 0.10339267432997717,
+    "exploration_start_minus_incumbent_percentage_points": 2.360307165172726
+  },
+  "trajectory": [
+    {
+      "step": 0,
+      "candidate_id": 11,
+      "action": "explore",
+      "parent_id": null,
+      "investment_id": "C-E-I0",
+      "project_best_id_before": null,
+      "validation_loss": 0.10339267432997717,
+      "valid": true,
+      "project_progress_recomputed": false,
+      "global_improvement_recomputed": false,
+      "program_hash": "8c5790ece6600851667b7bda2ee5a0ff129ddade6fd7998173144f7800dc1b93",
+      "behavior_cell": [
+        "local_distance",
+        "return_aware"
+      ]
+    },
+    {
+      "step": 1,
+      "candidate_id": 12,
+      "action": "develop",
+      "parent_id": 11,
+      "investment_id": "C-E-I0",
+      "project_best_id_before": 11,
+      "validation_loss": 0.07687291169001023,
+      "valid": true,
+      "project_progress_recomputed": true,
+      "global_improvement_recomputed": true,
+      "program_hash": "7e4aeb4a37d15363b6adc14dc32caf1af1a57620627926bb59f3532fa39b68f8",
+      "behavior_cell": [
+        "regret",
+        "return_aware"
+      ]
+    },
+    {
+      "step": 2,
+      "candidate_id": 13,
+      "action": "develop",
+      "parent_id": 12,
+      "investment_id": "C-E-I0",
+      "project_best_id_before": 12,
+      "validation_loss": 0.04573976527348278,
+      "valid": true,
+      "project_progress_recomputed": true,
+      "global_improvement_recomputed": true,
+      "program_hash": "6871bc31de85cbec4b2c770c33ede52fc6bdffa7ff658a2708202a1008b69b59",
+      "behavior_cell": [
+        "regret",
+        "progress"
+      ]
+    },
+    {
+      "step": 3,
+      "candidate_id": 14,
+      "action": "develop",
+      "parent_id": 13,
+      "investment_id": "C-E-I0",
+      "project_best_id_before": 13,
+      "validation_loss": 0.088985980520455,
+      "valid": true,
+      "project_progress_recomputed": false,
+      "global_improvement_recomputed": false,
+      "program_hash": "569e1c8ab4704aa4f26cb8e09149ceffd267c8ccb1901c64db1a6311f514b85e",
+      "behavior_cell": [
+        "cluster",
+        "regret"
+      ]
+    }
+  ],
+  "accounting": {
+    "reported_project_progress": 2,
+    "recomputed_project_progress": 2,
+    "reported_global_improvements": 2,
+    "recomputed_global_improvements": 2,
+    "known_tokens": 21500,
+    "request_count": 8
+  },
+  "final_validation_selection_id": 13,
+  "test_outcome": {
+    "incumbent_test_gap": 0.05835762750473412,
+    "selected_test_gap": 0.046416586696167085,
+    "improvement_percentage_points": 1.1941040808567034,
+    "interpretation": "One realized trajectory in the previously used screening archive; descriptive only, not a method confirmation."
+  }
+}

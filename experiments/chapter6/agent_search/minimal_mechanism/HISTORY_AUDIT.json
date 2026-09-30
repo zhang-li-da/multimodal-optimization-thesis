@@ -1,0 +1,5317 @@
+{
+  "schema": "chapter6-history-audit-v1",
+  "baseline_commit": "6d491ac6391ccc2c7a00baa5e695fbe66e66f16a",
+  "working_branch_at_audit": "research/chapter6-minimal-mechanism-20260930",
+  "scope": "read-only evidence reanalysis; no model calls; no historical archive changes; no counterfactual performance claims",
+  "source_files_sha256": {
+    "experiments/chapter6/agent_search/component_validation/protocol.short_horizon.draft.json": "a72d5bcf818076b3d6952a148956229b7faa85a8fb6208a43a88f14505048c09",
+    "experiments/chapter6/agent_search/component_validation/analyze_short_horizon.py": "8d4089a67b31475e304b4d10d78dfdb0ec3a0ecffc5f9413d27c27b4bcc54b53",
+    "experiments/chapter6/agent_search/component_validation/study_short_horizon.py": "374ae71e7114651863b041e061348033ced3fd8b3adb69d2366a291e13a985ec",
+    "experiments/chapter6/agent_search/component_validation/controller.py": "7f9b0d0bad1cbae97f412e7f627cdf3a9799113b84dc65a749e9849c36b3f66f",
+    "experiments/chapter6/agent_search/component_validation/evaluator.py": "f6f9a0fa0514afc9f6115f66e6c6020b6d2173d5cfad869bee255e737a653824",
+    "experiments/chapter6/agent_search/minimal_mechanism/audit_history.py": "88c779c7f7fb1555f2c2915d18ebbbe45f65c5abc16515bc080dc867ac8fbaff"
+  },
+  "archive_integrity": {
+    "raw_zip": {
+      "path": "experiments/chapter6/agent_search/component_validation/results/short-horizon-20260929/raw-study.zip",
+      "bytes": 32187364,
+      "sha256": "387d951ae7250eaf42b1e6a157b1a9145f3d7b00a8d1e41c64ac145320aa2c0f",
+      "member_count": 4527,
+      "directory_members": 0
+    },
+    "archive_index": {
+      "record_count": 4527,
+      "indexed_study_payload_count": 4524,
+      "index_matches_zip_members": true,
+      "unindexed_members": [],
+      "mismatches": []
+    },
+    "archive_audit": {
+      "declared_study_file_count": 4524,
+      "records": 4524,
+      "matches_indexed_study_paths": true,
+      "matches_zip_hashes_and_sizes": true,
+      "mismatches": []
+    },
+    "frozen_manifest": {
+      "study_id": "chapter6-component-validation-short-horizon-20260929",
+      "declared_sha256": "e05de389de11964acc4339ffa6275832bb23752e6a601b671375fcae2289852c",
+      "recomputed_canonical_sha256": "e05de389de11964acc4339ffa6275832bb23752e6a601b671375fcae2289852c",
+      "canonical_hash_matches": true,
+      "planned_checkpoints": 16,
+      "planned_jobs": 96,
+      "planned_proposals": 384,
+      "planned_model_requests": 768,
+      "job_count": 96,
+      "checkpoint_count": 16,
+      "data_record_count": 16,
+      "source_commit": "271325df0b4ee3fe26482e93be21fde7c968220b",
+      "protocol_sha256": "a72d5bcf818076b3d6952a148956229b7faa85a8fb6208a43a88f14505048c09",
+      "protocol_path": "experiments/chapter6/agent_search/component_validation/protocol.short_horizon.draft.json",
+      "protocol_declared_status": "DRAFT_OFFLINE_ONLY",
+      "manifest_freeze_status": "FROZEN_PENDING_EXECUTION",
+      "data_overlap_audit": {
+        "old_instances_checked": 5292,
+        "new_instances": 864,
+        "id_or_exact_coordinate_collisions": 0,
+        "geometric_equivalence_checked": false
+      }
+    },
+    "source_file_integrity": {
+      "source": {
+        "declared_file_count": 46,
+        "checked_file_count": 46,
+        "matching_file_count": 46,
+        "mismatches": []
+      },
+      "tooling_source": {
+        "declared_file_count": 6,
+        "checked_file_count": 6,
+        "matching_file_count": 6,
+        "mismatches": []
+      }
+    },
+    "reported_analysis_manifest_sha256": "e05de389de11964acc4339ffa6275832bb23752e6a601b671375fcae2289852c",
+    "analysis_manifest_hash_matches": true
+  },
+  "short_horizon": {
+    "source_protocol": "protocol.short_horizon.draft.json; archived manifest binds final protocol digest",
+    "status_counts_recomputed": {
+      "continuation_complete": 95,
+      "infrastructure_incomplete": 1
+    },
+    "planned_jobs": 96,
+    "jobs_with_test": 95,
+    "sent_unknown_jobs": [
+      "b56-late-ce-r0"
+    ],
+    "task_level_gap_means_vs_analysis": {
+      "C-I": {
+        "recomputed_task_mean_gap": 0.051004252317768284,
+        "reported_task_mean_gap": 0.0510042523,
+        "absolute_difference": 1.776828684185716e-11,
+        "task_count": 32
+      },
+      "C-B": {
+        "recomputed_task_mean_gap": 0.051342170268783974,
+        "reported_task_mean_gap": 0.0513421703,
+        "absolute_difference": -3.121602282218916e-11,
+        "task_count": 32
+      },
+      "C-E": {
+        "recomputed_task_mean_gap": 0.053099975177596626,
+        "reported_task_mean_gap": 0.0530999752,
+        "absolute_difference": -2.240337776404644e-11,
+        "task_count": 31
+      }
+    },
+    "baseline_test_recomputation": {
+      "recomputed_jobs": 95,
+      "reported_baselines_matched": 95,
+      "maximum_absolute_difference": 0.0,
+      "all_final_test_records_match_reported_evaluation": true
+    },
+    "cost_by_strategy": {
+      "C-I": {
+        "planned_jobs": 32,
+        "tested_jobs": 32,
+        "known_token_total_including_partial": 937586,
+        "known_tokens_mean_per_tested_job": 29299.5625,
+        "request_count_total_known": 256,
+        "request_count_mean_per_tested_job": 8.0,
+        "unknown_cost_jobs": []
+      },
+      "C-B": {
+        "planned_jobs": 32,
+        "tested_jobs": 32,
+        "known_token_total_including_partial": 905875,
+        "known_tokens_mean_per_tested_job": 28308.59375,
+        "request_count_total_known": 255,
+        "request_count_mean_per_tested_job": 7.96875,
+        "unknown_cost_jobs": []
+      },
+      "C-E": {
+        "planned_jobs": 32,
+        "tested_jobs": 31,
+        "known_token_total_including_partial": 804864,
+        "known_tokens_mean_per_tested_job": 25280.1935483871,
+        "request_count_total_known": 253,
+        "request_count_mean_per_tested_job": 7.967741935483871,
+        "unknown_cost_jobs": [
+          "b56-late-ce-r0"
+        ]
+      }
+    },
+    "pairing": {
+      "C-B_minus_C-I": {
+        "task_pairs": 32,
+        "task_weighted_difference_pp": 0.033791795101569155,
+        "block_equal_difference_pp": {
+          "n": 8,
+          "mean": 0.033791795101569155,
+          "lower": -0.18587671584700477,
+          "upper": 0.2534603060501431
+        },
+        "block_differences_pp": {
+          "52": 0.12652816833825523,
+          "53": -0.11344775487494835,
+          "54": 0.40165737741404123,
+          "55": 0.05720511923328758,
+          "56": -0.36617956251831285,
+          "57": 0.3634708938705542,
+          "58": -0.1799350096898052,
+          "59": -0.01896487096051863
+        },
+        "complete_blocks_only": {
+          "blocks": [
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59
+          ],
+          "difference_pp": {
+            "n": 8,
+            "mean": 0.033791795101569155,
+            "lower": -0.18587671584700477,
+            "upper": 0.2534603060501431
+          }
+        },
+        "paired_job_count_by_block": {
+          "52": 4,
+          "53": 4,
+          "54": 4,
+          "55": 4,
+          "56": 4,
+          "57": 4,
+          "58": 4,
+          "59": 4
+        }
+      },
+      "C-E_minus_C-I": {
+        "task_pairs": 31,
+        "task_weighted_difference_pp": 0.226462683664157,
+        "block_equal_difference_pp": {
+          "n": 8,
+          "mean": 0.21906859091983613,
+          "lower": 0.049032087670241586,
+          "upper": 0.3891050941694307
+        },
+        "block_differences_pp": {
+          "52": 0.15814248191330235,
+          "53": 0.002773141334815564,
+          "54": 0.40165737741404123,
+          "55": 0.3686222312696972,
+          "56": -0.010148284154110296,
+          "57": 0.3634708938705542,
+          "58": 0.0,
+          "59": 0.4680308857103889
+        },
+        "complete_blocks_only": {
+          "blocks": [
+            52,
+            53,
+            54,
+            55,
+            57,
+            58,
+            59
+          ],
+          "difference_pp": {
+            "n": 7,
+            "mean": 0.25181385878754275,
+            "lower": 0.07092820096875499,
+            "upper": 0.43269951660633055
+          }
+        },
+        "paired_job_count_by_block": {
+          "52": 4,
+          "53": 4,
+          "54": 4,
+          "55": 4,
+          "56": 3,
+          "57": 4,
+          "58": 4,
+          "59": 4
+        }
+      },
+      "missing_test_pairs": [
+        {
+          "strategy": "C-E",
+          "job_id": "b56-late-ce-r0",
+          "paired_incumbent_job_id": "b56-late-ci-r0",
+          "reason": "infrastructure_incomplete"
+        }
+      ]
+    },
+    "C_E_starting_quality": {
+      "count": 32,
+      "valid_count": 32,
+      "all_valid_starts_worse_than_incumbent": true,
+      "start_minus_incumbent_validation_gap_pp": {
+        "n": 32,
+        "mean": 6.614747363641542,
+        "sd": 3.384851959498217,
+        "median": 6.4380331144497465,
+        "min": 1.007104839766839,
+        "max": 17.77578375087759
+      },
+      "by_block": {
+        "52": {
+          "n": 4,
+          "mean": 5.989849233798849,
+          "sd": 3.911407193103641,
+          "median": 5.23654486213081,
+          "min": 2.0994415573982197,
+          "max": 11.386865653535557
+        },
+        "53": {
+          "n": 4,
+          "mean": 8.991532286482963,
+          "sd": 1.9221923738099786,
+          "median": 9.467537967344537,
+          "min": 6.424779316933335,
+          "max": 10.60627389430944
+        },
+        "54": {
+          "n": 4,
+          "mean": 7.271953746370335,
+          "sd": 2.4510375213116906,
+          "median": 8.42592088856492,
+          "min": 3.603349001902866,
+          "max": 8.632624206448632
+        },
+        "55": {
+          "n": 4,
+          "mean": 7.2645864761768255,
+          "sd": 1.3932747212338505,
+          "median": 7.162702881919347,
+          "min": 5.822142236915198,
+          "max": 8.91079790395341
+        },
+        "56": {
+          "n": 4,
+          "mean": 4.567598987776732,
+          "sd": 1.7176600806743605,
+          "median": 4.58620895165207,
+          "min": 2.447965938660486,
+          "max": 6.650012109142299
+        },
+        "57": {
+          "n": 4,
+          "mean": 3.977701868281992,
+          "sd": 2.4091184114529773,
+          "median": 4.035255160551719,
+          "min": 1.007104839766839,
+          "max": 6.833192312257691
+        },
+        "58": {
+          "n": 4,
+          "mean": 10.014769683372661,
+          "sd": 5.84070503677367,
+          "median": 9.300423672187526,
+          "min": 3.6824476382380054,
+          "max": 17.77578375087759
+        },
+        "59": {
+          "n": 4,
+          "mean": 4.83998662687198,
+          "sd": 2.2171541210700263,
+          "median": 4.6723954343762895,
+          "min": 2.360307165172726,
+          "max": 7.654848473562614
+        }
+      }
+    },
+    "C_E_progress_translation": {
+      "completed_test_jobs": 31,
+      "jobs_with_local_project_progress": 27,
+      "local_project_progress_events_reported": 45,
+      "local_project_progress_events_recomputed": 45,
+      "global_improvement_events_reported": 5,
+      "global_improvement_events_recomputed": 5,
+      "jobs_with_global_improvement": 4,
+      "test_positive_jobs": 3,
+      "test_positive_blocks": [
+        59
+      ],
+      "test_improvement_pp": {
+        "n": 31,
+        "mean": 0.1468114442784036,
+        "sd": 0.5504104978646812,
+        "median": 0.0,
+        "min": -0.1264572543001885,
+        "max": 2.801806634896236
+      },
+      "positive_test_rows": [
+        {
+          "job_id": "b59-early-ce-r0",
+          "block": 59,
+          "phase": "early",
+          "repetition": 0,
+          "baseline_test_gap": 0.05835762750473412,
+          "final_test_gap": 0.046416586696167085,
+          "improvement_pp": 1.1941040808567034
+        },
+        {
+          "job_id": "b59-early-ce-r1",
+          "block": 59,
+          "phase": "early",
+          "repetition": 1,
+          "baseline_test_gap": 0.05835762750473412,
+          "final_test_gap": 0.05154061439295652,
+          "improvement_pp": 0.6817013111777598
+        },
+        {
+          "job_id": "b59-late-ce-r0",
+          "block": 59,
+          "phase": "late",
+          "repetition": 0,
+          "baseline_test_gap": 0.07603248003356235,
+          "final_test_gap": 0.04801441368459999,
+          "improvement_pp": 2.801806634896236
+        }
+      ],
+      "run_recomputation": {
+        "b52-early-ce-r0": {
+          "recomputed_project_progress": 1,
+          "reported_project_progress": 1,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.10403740486889129,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "f2a7fb6a909ab45e8441bddd51c57eb0f4e3e4f480dd1a0b5ac534bf6b24b4ab",
+              "behavior_cell": [
+                "local_distance",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.15537324187678825,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "40dc5f0e430336de13b9f667a3acff246126e8f9b1a4b77173abd2e7653fc599",
+              "behavior_cell": [
+                "return_aware",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.08796444717877273,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "b0ec4ececa1c5d712639e933551f269c8c0e32f9140fb3ffb170d5efad847c87",
+              "behavior_cell": [
+                "regret",
+                "local_distance"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 13,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 13,
+              "validation_loss": 0.09944781174392586,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "2a0a0edf698da64f8337c0c8165bd65b44927400a24cc66436e7777d2484260e",
+              "behavior_cell": [
+                "cluster",
+                "regret"
+              ]
+            }
+          ]
+        },
+        "b52-early-ce-r1": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 1,
+          "reported_global_improvements": 1,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.09404415099904706,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "126156538437b9162320b7b334c4ac7d3033def88cea1f81b353c2d11d7aa880",
+              "behavior_cell": [
+                "local_distance",
+                "cluster"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.05127173531564313,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "7e4c5a6ddabf4243c4ecf47451d9659c15bb8ab7ff7ed031ac06fc584d48f8b8",
+              "behavior_cell": [
+                "return_aware",
+                "local_distance"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.04192235293808293,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": true,
+              "program_hash": "92895ad4a16c5555987fd74ee67110ac7a79e11ed739b8c4ccb1202665646657",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 13,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 13,
+              "validation_loss": 0.08949696346390436,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "1f1b6faf0a78e1d2ce975c89fb29a223134d7d94dd90fa9f85fed35070c66407",
+              "behavior_cell": [
+                "cluster",
+                "regret"
+              ]
+            }
+          ]
+        },
+        "b52-late-ce-r0": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.14877787829744787,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "d78e41c61c4f362c03ba6b86de2d1b334e296dde41aa16431e9148b92b3e5234",
+              "behavior_cell": [
+                "local_distance",
+                "cluster"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.10004194925724283,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "a5a399761d3894e05405367ae3ef2a09871b7ba34976b9aeca41db6eb2d40e4f",
+              "behavior_cell": [
+                "return_aware",
+                "cluster"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.0825844094678551,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "67be0a4059dbd83022fe7c7d3116ac98da2b81f1ab9104194a52d72484d27227",
+              "behavior_cell": [
+                "regret",
+                "cluster"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 29,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 29,
+              "validation_loss": 0.10406103233707113,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "1ab6cd6a12fc341e28dce7551d160ea5e461843c6ab48ec7d7792b37fd444bd9",
+              "behavior_cell": [
+                "regret",
+                "lookahead"
+              ]
+            }
+          ]
+        },
+        "b52-late-ce-r1": {
+          "recomputed_project_progress": 0,
+          "reported_project_progress": 0,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.05590363733607451,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "b61f51f2a452f8f3ddcb631b572b6d6e6991b56556f0cfeb9e03415ca892cd6a",
+              "behavior_cell": [
+                "local_distance",
+                "hybrid"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.09291124887893822,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "254fd23fde58404e530283e5dd615cdbee432c05bb3b13c09963455d24a99934",
+              "behavior_cell": [
+                "return_aware",
+                "progress"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.07343375112642152,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "8c43bc0aedb1cf6561cc62d1eaf5a23f9ea3a205a3c5294d66d19ae7b01f9091",
+              "behavior_cell": [
+                "regret",
+                "local_distance"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.1325411388216851,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "4981ba5c2bb64950e3a31af169c64e4ad41278c54b0fae38cc621201316cf308",
+              "behavior_cell": [
+                "cluster",
+                "local_distance"
+              ]
+            }
+          ]
+        },
+        "b53-early-ce-r0": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.11874172449383942,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "99036898ca4db0c650260aefb3b8dba36862522f06b03d76aaf1efb98928f34c",
+              "behavior_cell": [
+                "nonlinear",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.10330671960259956,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "bb1ca3039796678ae7c90feee6fe47523f97c9bbc925b1986f823085965d671c",
+              "behavior_cell": [
+                "return_aware",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.06561602949256312,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "731b8560c1b66ceb66d93d1d5a13c639c58d7d9bdabae0c6413631acb87c825a",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 13,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 13,
+              "validation_loss": 0.10039700861872165,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "fad0bdde6c73548e64c6fcb8f2e5eceae34bef9471a7be39449a95e97523d665",
+              "behavior_cell": [
+                "cluster",
+                "regret"
+              ]
+            }
+          ]
+        },
+        "b53-early-ce-r1": {
+          "recomputed_project_progress": 1,
+          "reported_project_progress": 1,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.15764190352514423,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "2d2d7f90dcc151696c037260859f0d71772147509db69077219c97acec1c4685",
+              "behavior_cell": [
+                "lookahead",
+                "local_distance"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.06112896341365437,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "35d6b41d24af8ce51bdc3ff6aef0506c4affa2a36faaab6c621b7728e46e96f0",
+              "behavior_cell": [
+                "return_aware",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.12477923839124376,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "c219ed48a90dda1ba7d5b2165a11b3808f4c52c665ce040496159e2933f4610d",
+              "behavior_cell": [
+                "regret",
+                "cluster"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.13977898266959754,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "2b5aac97e4e719f447b39911a1d5978a7458f0d97345543628289158a07397bc",
+              "behavior_cell": [
+                "cluster",
+                "regret"
+              ]
+            }
+          ]
+        },
+        "b53-late-ce-r0": {
+          "recomputed_project_progress": 1,
+          "reported_project_progress": 1,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.1591582085735753,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "0fab46bfa3f50c0614eddda860c777f805b4150883193e1e05f40ee4fe6ae8cb",
+              "behavior_cell": [
+                "local_distance",
+                "cluster"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.08409461917878305,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "1df5f2eea332bb506d55a8a8005337a4cce898b013eb6ca689404455a5e43b4a",
+              "behavior_cell": [
+                "return_aware",
+                "cluster"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.13584897283049158,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "f4b5552d0102adf9030cbca4a2807d6269cd285e580e19ef84bd014f4537c231",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.10112819952575447,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "f568956a2904c7807428268e1dee0aa3d82a0c82bc4620fce260ef5e8bf3d61a",
+              "behavior_cell": [
+                "cluster",
+                "nonlinear"
+              ]
+            }
+          ]
+        },
+        "b53-late-ce-r1": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.13929825677673346,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "396a6e68165621e54200867405957720cac3ee2fbbbb0c014777448be4628726",
+              "behavior_cell": [
+                "local_distance",
+                "cluster"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.08144432899435203,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "f4ae0b49f80f37162f4b4918c2aea4d503acc6fb56ee6a12cbc6abb50364608f",
+              "behavior_cell": [
+                "return_aware",
+                "cluster"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.06471193887287294,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "60c600f21028b1be31fb7b9342cbbabef0abac78785281c3db57fb62cdb73b7e",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 29,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 29,
+              "validation_loss": 0.12857630558753408,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "21110320a627fb093cebeab24908cef0615e7fb51212f53d1782503a8faeb6d4",
+              "behavior_cell": [
+                "cluster",
+                "return_aware"
+              ]
+            }
+          ]
+        },
+        "b54-early-ce-r0": {
+          "recomputed_project_progress": 1,
+          "reported_project_progress": 1,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.12222320246131366,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "d6a829adbc1919c9923155db84e3064c0b869792de3a69918046f3075b398adf",
+              "behavior_cell": [
+                "local_distance",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.05119521263806095,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "320d643484df29a1d4818cf091d7c7ab5562999a507c1cdf414fd7e8da7fd599",
+              "behavior_cell": [
+                "return_aware",
+                "progress"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.07025583272291962,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "e2cf58558746e4ff29a50c029341ac5a4ac77bab997c07fd149cc3fa28ab42c0",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.13706837555455817,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "42e5185a04fd54085953a45964b5645eeef939b6ac73043931d0a6b3b593e0e3",
+              "behavior_cell": [
+                "cluster",
+                "regret"
+              ]
+            }
+          ]
+        },
+        "b54-early-ce-r1": {
+          "recomputed_project_progress": 0,
+          "reported_project_progress": 0,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.07242602583126327,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "398b5f8b8c2a461aa02e1781dfbdb112a1e5f48d595207e9a5de0061eeaa97b1",
+              "behavior_cell": [
+                "local_distance",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.09035711999177336,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "bb82d13041f667f0c1ed2c4e920101e00a4e68594b57523b196dd1f3a417ba03",
+              "behavior_cell": [
+                "return_aware",
+                "cluster"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.0937581447003622,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "7f4f91b02fd1b262cd8d2fcba159e7c7aa1c8e23730f2eb4eaaff01f8b14eb9b",
+              "behavior_cell": [
+                "regret",
+                "cluster"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.11327608869711635,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "aa6ecaaefaa2a3902724c7144b65560c2834ab4f9050e7ef2d8b70ed337b6f1a",
+              "behavior_cell": [
+                "cluster",
+                "lookahead"
+              ]
+            }
+          ]
+        },
+        "b54-late-ce-r0": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.12271877787672095,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "b32f179c938e97d48a1cdc0869aec2569f017bf8a36b4d78b44a53ee1b9155aa",
+              "behavior_cell": [
+                "local_distance",
+                "cluster"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.06869879160407869,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "f3697255e2edb5dc392c8a8ca2dd13c7bd58ccb6f2541b179fb2ff08467a13f9",
+              "behavior_cell": [
+                "return_aware",
+                "cluster"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.06335754664364833,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "4ad40db85e123196e33dbbd99fe44fab6bee7a4801e448404dba071403040384",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 29,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 29,
+              "validation_loss": 0.08692511871447617,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "ce5aa958683186be216c65bc766eeec3653346facf45f482e6f6932eca0f163b",
+              "behavior_cell": [
+                "cluster",
+                "nonlinear"
+              ]
+            }
+          ]
+        },
+        "b54-late-ce-r1": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.11908028693445402,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "55b27d87d79e604e42319fa55b4f132ee456c409202168fb3941f71c84e1155b",
+              "behavior_cell": [
+                "local_distance",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.07560040668508003,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "00ef9d07c525f378f218a798a3e81e86d01faebc8710700c00d3d5363281e26a",
+              "behavior_cell": [
+                "return_aware",
+                "regret"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.07337746964394581,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "d479ca2ab1bd8bdab44c7ea560f4996a24a5ddfd1c60b288c9ed9118c531aafc",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 29,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 29,
+              "validation_loss": 0.11253636241756786,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "45e264c250a95f9d16600f2c133afd6943acf02b886be5de1a488c8031f64b26",
+              "behavior_cell": [
+                "cluster",
+                "local_distance"
+              ]
+            }
+          ]
+        },
+        "b55-early-ce-r0": {
+          "recomputed_project_progress": 3,
+          "reported_project_progress": 3,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.11919618509625098,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "f1748406fd824eb62e694088dcee0eb2c14ce1ef4dfe5d5c29a604ebc66b09b2",
+              "behavior_cell": [
+                "local_distance",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.08233057726672113,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "9deb7f2b3db0408705af3aa8bf4f4e9d034e8cfece54e36ef02a9056b9fad5fc",
+              "behavior_cell": [
+                "return_aware",
+                "regret"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.07912299758577473,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "938a7fc2d0fba7928000f00383c56ff0f16c002d5593c7b40ba41978ee36563b",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 13,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 13,
+              "validation_loss": 0.0651737752496751,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "45f611da81b10add22579bea8f6ef677566e89cdf230f432161e00d93b817105",
+              "behavior_cell": [
+                "cluster",
+                "nonlinear"
+              ]
+            }
+          ]
+        },
+        "b55-early-ce-r1": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.09867641894667761,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "53d5feded0b09c5ab091f9e09f34243352cc1e047625057d7d05b50ebb18f8fc",
+              "behavior_cell": [
+                "local_distance",
+                "progress"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.05341904470770997,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "b4444c25a26465c3cb4b89353bbb9b8c1b262e64c18a6b553fca52455768003f",
+              "behavior_cell": [
+                "return_aware",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.05247253700019192,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "6ac30a875f4613f7db677d7266a0251ee874c92c6c7d1bfad1875cf5b64d1bbb",
+              "behavior_cell": [
+                "regret",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 13,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 13,
+              "validation_loss": 0.0735786806574967,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "6e747fee43651e0c7a9d1fae0023c8dc09f63aab0144faceb84778639baaadc2",
+              "behavior_cell": [
+                "cluster",
+                "lookahead"
+              ]
+            }
+          ]
+        },
+        "b55-late-ce-r0": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.12956297561705973,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "d936a4e841c89efa75001054766fe824603f21a9558b16ecf632b9b253e0ba5b",
+              "behavior_cell": [
+                "local_distance",
+                "cluster"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.060966582092798295,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "d386d0c6d11ba41fccb75b591e8fa8fd71d7b9bf2ec93f285541cad80d5a799b",
+              "behavior_cell": [
+                "return_aware",
+                "cluster"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.05019436913711718,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "10295a19473af398e764988710d6088440ea0886827f665bb025e61e7dacc99f",
+              "behavior_cell": [
+                "regret",
+                "cluster"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 29,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 29,
+              "validation_loss": 0.06301406391038016,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "9f1c93503aa8e9d642fe43c196557838cf90a29a09cc9ca77a5cbaa99be8f253",
+              "behavior_cell": [
+                "cluster",
+                "nonlinear"
+              ]
+            }
+          ]
+        },
+        "b55-late-ce-r1": {
+          "recomputed_project_progress": 1,
+          "reported_project_progress": 1,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.10496786569718722,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "313b29a0c052fda8b3f66c13c42050cdd3b01531de39eedaca54f8075f9c1112",
+              "behavior_cell": [
+                "local_distance",
+                "cluster"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.04971530883807442,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "11f70b44536f11dde36a5d24893fd81ebe44e4af2eddffe989c32c5ed6177125",
+              "behavior_cell": [
+                "return_aware",
+                "cluster"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.04978216167611125,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "d733a8de5c84b11e5d2565de363ae03af805583d9b14dbb2ab65c82d0b8cc5f6",
+              "behavior_cell": [
+                "lookahead",
+                "cluster"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.053582762478980056,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "fcd586c672c3679812741e211cedb65ac0882fc7673e315eed5f2ceb0d86e6b5",
+              "behavior_cell": [
+                "cluster",
+                "progress"
+              ]
+            }
+          ]
+        },
+        "b56-early-ce-r0": {
+          "recomputed_project_progress": 1,
+          "reported_project_progress": 1,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.10456067652735918,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "7d01719ef3ed7cf4ded1da097694a1f91e5b5e90a695f06da811749bf051d865",
+              "behavior_cell": [
+                "local_distance",
+                "regret"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.11000495352513276,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "bd64cc37db0483dacffcfd33e9976942cffb7850a6e1dd64d409a3169ab8071a",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.09141204877694924,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "b813c68ac1febf65eff75f6d4236dc5b7ba0875b30f4b7442840f1a384b0d757",
+              "behavior_cell": [
+                "regret",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 13,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 13,
+              "validation_loss": 0.12268633267301654,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "f7221d228d07c76423b4ca9592776c9b058ad8eba0977e1fc612999f650eed09",
+              "behavior_cell": [
+                "cluster",
+                "regret"
+              ]
+            }
+          ]
+        },
+        "b56-early-ce-r1": {
+          "recomputed_project_progress": 1,
+          "reported_project_progress": 1,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.08420506492509444,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "2a384270097485d3fa0ca44d8237058dce7ec6fd2005643682150400802b3101",
+              "behavior_cell": [
+                "local_distance",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.06006630970384666,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "8e698d5acec20b0418f75f01801bdd094b239d50b405344b79496d20deef58b4",
+              "behavior_cell": [
+                "return_aware",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.06126127013733488,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "d7fe5c3c3541bd58f3761fa45ba14fab41de26883123e3a5a797b5087f472fd3",
+              "behavior_cell": [
+                "regret",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.0929812446306476,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "294e8dcb083201835f772fe68a789a5492793ac6c57dbd710cbdac379cd984a4",
+              "behavior_cell": [
+                "cluster",
+                "hybrid"
+              ]
+            }
+          ]
+        },
+        "b56-late-ce-r0": {
+          "recomputed_project_progress": 0,
+          "reported_project_progress": 0,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.1066143135826614,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "fa0c1bf32198b5a0e6720756d5eedceef6b96da78b8e3ae20e69409c3af4d918",
+              "behavior_cell": [
+                "local_distance",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.13036418231319472,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "03546fd7e092a5de7ddf3fe029052858fab224f7bee3a91b392c28370c82a4bd",
+              "behavior_cell": [
+                "return_aware",
+                "progress"
+              ]
+            }
+          ]
+        },
+        "b56-late-ce-r1": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.12622552662991257,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "db4b5ab758685c3420c540aa2643f792dc6f0265e8297fa9d8e8fa3856bc18f9",
+              "behavior_cell": [
+                "local_distance",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.11297005052766224,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "529ffae57f03bbf6c475cc71fd9cd649bec55bdde790edc977367a9705827bee",
+              "behavior_cell": [
+                "return_aware",
+                "cluster"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.10061975463803242,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "2a5be7246e9136688537c17c44471c72b336efc53109912d2fc13ffd0a87c1f7",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 29,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 29,
+              "validation_loss": 0.10428327768909976,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "47365b9a490b0489abf403aaeb375fe42f89262f2468ad16b39fb7be956d0341",
+              "behavior_cell": [
+                "cluster",
+                "progress"
+              ]
+            }
+          ]
+        },
+        "b57-early-ce-r0": {
+          "recomputed_project_progress": 1,
+          "reported_project_progress": 1,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.07138317376882165,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "43b86f0fbe1dc11a970f5176433e3a362e47fd55c81ef134277007d613b2e123",
+              "behavior_cell": [
+                "local_distance",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.04450419969803358,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "08f1cfa0edb885280c6f6fffdc9ef604a0b25eb9b13d285f6e7f0ff0bafd07c0",
+              "behavior_cell": [
+                "return_aware",
+                "regret"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.06793556027021785,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "9b5b15f2e47226f3b4afb46780afc9fc76a7e6219992926e3b9c58f0f1104241",
+              "behavior_cell": [
+                "cluster",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.08046081171139735,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "4770add0b1c77a2f7a38e81ec2616b1679b1fa1976a151beabb0d78cc68a5334",
+              "behavior_cell": [
+                "cluster",
+                "return_aware"
+              ]
+            }
+          ]
+        },
+        "b57-early-ce-r1": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.10398129737298992,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "75566a3620e4003a5082facb555a85523bf8e1d936bd9e5de4f9fcf8fe279c81",
+              "behavior_cell": [
+                "lookahead",
+                "local_distance"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.0593524795137395,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "11f6d2bfbaf1c07f17bbda33275f99c30873e68132ac31d0ae262e86b7dcd62c",
+              "behavior_cell": [
+                "return_aware",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.052860594920832664,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "f82cacc560689a2fa8ecf738c8cd58529c72654f0948a987353454b1fed50336",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 13,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 13,
+              "validation_loss": 0.09892076974024638,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "bc8185a4df1ed990419357759aa31a74ceb50b9125a787cd214cf51ce0704f95",
+              "behavior_cell": [
+                "cluster",
+                "regret"
+              ]
+            }
+          ]
+        },
+        "b57-late-ce-r0": {
+          "recomputed_project_progress": 0,
+          "reported_project_progress": 0,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.043675122836742394,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "29bba02c3bff54219a297d04ee0e0e05c3316aff4dca10b53960c5ca754f2a94",
+              "behavior_cell": [
+                "local_distance",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.05882582439384936,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "d1c6818db48485532520d52fdff6a842db858c06c38faf8b0bceb9fe39314be5",
+              "behavior_cell": [
+                "nonlinear",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.04413324321913881,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "95d995e6da73ba041754993332ca443f40782ee80024f7cefa2d806304b6ea2e",
+              "behavior_cell": [
+                "return_aware",
+                "regret"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.09635509564080229,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "63b6ecd7bae8414c77f6c7116d0ee86c958475df4fef9a1926cf0d950f7a6215",
+              "behavior_cell": [
+                "cluster",
+                "lookahead"
+              ]
+            }
+          ]
+        },
+        "b57-late-ce-r1": {
+          "recomputed_project_progress": 1,
+          "reported_project_progress": 1,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.07857537813169972,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "1dad2d53e8c380dcdaca4e69e623f640b4a76b8b9533871ff7d7671a33f2371b",
+              "behavior_cell": [
+                "local_distance",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.07918045222111274,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "523da39160ac729e1276138b2ef21bb1306f4578cb4b4c8741d83cf9519c5091",
+              "behavior_cell": [
+                "return_aware",
+                "regret"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.058712595587707965,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "1da69e88d25e31ca06d9797fb3d662897511305fc59bf17f9d26ea83e717b717",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 29,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 29,
+              "validation_loss": 0.08834653915846628,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "02d733283cb7ff8953c00b0b72466275318e4700166df986a29fc2e161b8a189",
+              "behavior_cell": [
+                "cluster",
+                "nonlinear"
+              ]
+            }
+          ]
+        },
+        "b58-early-ce-r0": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.2251707579380248,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "7189c96544ac25b6a4663969a9de2c8d6748129f388e18a27d4c011c9b267afa",
+              "behavior_cell": [
+                "local_distance",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.0985810468632423,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "69e8fe5a4df69d83b8f646325c106f33b21dba6d2571f688dcd4e99f09b6c660",
+              "behavior_cell": [
+                "return_aware",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.06211053874859629,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "3ac825caca09c318873ec26e853cca1507c23ffbd00eb4e68b6221af7ad94b31",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 13,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 13,
+              "validation_loss": 0.11414639767144481,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "7002748682ecef1b3545ac51f6021b8a856e726f5c65795a8459aa94588c28e5",
+              "behavior_cell": [
+                "cluster",
+                "lookahead"
+              ]
+            }
+          ]
+        },
+        "b58-early-ce-r1": {
+          "recomputed_project_progress": 0,
+          "reported_project_progress": 0,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.08423739681162894,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "61cb5d8ff7167c87ebf4be3cf5c359cfde648c071a56e2d99a82845fa977d78a",
+              "behavior_cell": [
+                "hybrid",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.10424493718887606,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "1391fd72d9e866cc242cde6fba2d0c9c9d71cdbebdb65fe94358cd881a89cbb8",
+              "behavior_cell": [
+                "lookahead"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.11512719580586807,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "43747573fc7fbdc7a74a77a5831eb288e418bc9743daf0efc8aba664baa34a30",
+              "behavior_cell": [
+                "regret",
+                "hybrid"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": null,
+              "valid": false,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": null,
+              "behavior_cell": [
+                "cluster",
+                "progress"
+              ]
+            }
+          ]
+        },
+        "b58-late-ce-r0": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.1333840792577691,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "7ed0f9d3216df86265400fae286e6e6274bf1456b15067d40e944f657fb5a713",
+              "behavior_cell": [
+                "local_distance",
+                "cluster"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.07275082634710678,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "38297eb226b664cfb44b978ae6f6351f31ddcf827c14c854eb11fc39a864eb78",
+              "behavior_cell": [
+                "return_aware",
+                "cluster"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.07024947848594339,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "4602d6bb04d3a9afc5eb480007e8932233d5d7f38e1525916f49951e86d43466",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 29,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 29,
+              "validation_loss": 0.13641567888657904,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "67e9a1f96e127821c974fd02fc41b2685327f504d312e1419b28630addbc59af",
+              "behavior_cell": [
+                "cluster",
+                "return_aware"
+              ]
+            }
+          ]
+        },
+        "b58-late-ce-r1": {
+          "recomputed_project_progress": 1,
+          "reported_project_progress": 1,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.14745023504447918,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "2fd28e7101d22fa82d6168d46b2f1e9d2d9c9733e812d4a6969e99539f968421",
+              "behavior_cell": [
+                "local_distance",
+                "cluster"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.08487930852725699,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "804a904239713c45c9bec0eb37a14c628a6fbe18ad05a8faa9c5cfd97c912713",
+              "behavior_cell": [
+                "return_aware",
+                "cluster"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.12888970595538118,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "434708eca3aab9df5f7e119249eff5bb961d1ca5421ea87390f3385ee90d3136",
+              "behavior_cell": [
+                "regret",
+                "cluster"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.10640227770966194,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "de9ec85268fd0764eeb49c45d7a318d98366fd2673a0392dc4a2f7e5e4a717ff",
+              "behavior_cell": [
+                "cluster",
+                "progress"
+              ]
+            }
+          ]
+        },
+        "b59-early-ce-r0": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 2,
+          "reported_global_improvements": 2,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.10339267432997717,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "8c5790ece6600851667b7bda2ee5a0ff129ddade6fd7998173144f7800dc1b93",
+              "behavior_cell": [
+                "local_distance",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.07687291169001023,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": true,
+              "program_hash": "7e4aeb4a37d15363b6adc14dc32caf1af1a57620627926bb59f3532fa39b68f8",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.04573976527348278,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": true,
+              "program_hash": "6871bc31de85cbec4b2c770c33ede52fc6bdffa7ff658a2708202a1008b69b59",
+              "behavior_cell": [
+                "regret",
+                "progress"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 13,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 13,
+              "validation_loss": 0.088985980520455,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "569e1c8ab4704aa4f26cb8e09149ceffd267c8ccb1901c64db1a6311f514b85e",
+              "behavior_cell": [
+                "cluster",
+                "regret"
+              ]
+            }
+          ]
+        },
+        "b59-early-ce-r1": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 1,
+          "reported_global_improvements": 1,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 11,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.12095079635215907,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "f1748406fd824eb62e694088dcee0eb2c14ce1ef4dfe5d5c29a604ebc66b09b2",
+              "behavior_cell": [
+                "local_distance",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 12,
+              "action": "develop",
+              "parent_id": 11,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 11,
+              "validation_loss": 0.09052193770597888,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "7117bb678f8cf980f6879e864cfe4be0ecac52312a6d6076ea0533ba7da00d03",
+              "behavior_cell": [
+                "return_aware",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 13,
+              "action": "develop",
+              "parent_id": 12,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 12,
+              "validation_loss": 0.0647132569541731,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": true,
+              "program_hash": "a81c456adc8b183fec504e46ac723558c394bc8c139d4caddbc89fe25c534552",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 14,
+              "action": "develop",
+              "parent_id": 13,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 13,
+              "validation_loss": 0.09097092549889942,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "c844aedd7d1b2aff4767c6084b2af4ed93a13b9339ead15fc3e3b9113c769288",
+              "behavior_cell": [
+                "cluster",
+                "return_aware"
+              ]
+            }
+          ]
+        },
+        "b59-late-ce-r0": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 1,
+          "reported_global_improvements": 1,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.13157296462158607,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "5c8db560c8dce751165577b2b45a041db908f1da11c41dbe47235644cfa805aa",
+              "behavior_cell": [
+                "local_distance",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.09052193770597888,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "398b5f8b8c2a461aa02e1781dfbdb112a1e5f48d595207e9a5de0061eeaa97b1",
+              "behavior_cell": [
+                "return_aware",
+                "lookahead"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.055480680374600265,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": true,
+              "program_hash": "122160ca4eb2cb516ff6cb8588fb3b3b1001af0d496540d6861bb5c283d6d171",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 29,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 29,
+              "validation_loss": null,
+              "valid": false,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": null,
+              "behavior_cell": [
+                "cluster"
+              ]
+            }
+          ]
+        },
+        "b59-late-ce-r1": {
+          "recomputed_project_progress": 2,
+          "reported_project_progress": 2,
+          "recomputed_global_improvements": 0,
+          "reported_global_improvements": 0,
+          "steps": [
+            {
+              "step": 0,
+              "candidate_id": 27,
+              "action": "explore",
+              "parent_id": null,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": null,
+              "validation_loss": 0.15583473434359557,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "0a1769985d6271a2dfd9fe1a65e3298b35c7f3fe38a6d7a50d7ec10967af0e54",
+              "behavior_cell": [
+                "lookahead",
+                "cluster"
+              ]
+            },
+            {
+              "step": 1,
+              "candidate_id": 28,
+              "action": "develop",
+              "parent_id": 27,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 27,
+              "validation_loss": 0.1368611260798264,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "e454ac131ac919c887a309bcb4242f56c846265e00c02811cf918e06b32b3b3c",
+              "behavior_cell": [
+                "return_aware",
+                "nonlinear"
+              ]
+            },
+            {
+              "step": 2,
+              "candidate_id": 29,
+              "action": "develop",
+              "parent_id": 28,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 28,
+              "validation_loss": 0.10564716857559325,
+              "valid": true,
+              "project_progress_recomputed": true,
+              "global_improvement_recomputed": false,
+              "program_hash": "495850f9c6becdbf97ba1126529651eb44589ff3ae6b87b08e95b0481b769bab",
+              "behavior_cell": [
+                "regret",
+                "return_aware"
+              ]
+            },
+            {
+              "step": 3,
+              "candidate_id": 30,
+              "action": "develop",
+              "parent_id": 29,
+              "investment_id": "C-E-I0",
+              "project_best_id_before": 29,
+              "validation_loss": 0.13700799477819495,
+              "valid": true,
+              "project_progress_recomputed": false,
+              "global_improvement_recomputed": false,
+              "program_hash": "0f14bcfac71ad8563d914b0125e99078d1cbeb7490a32e4687be834da3c63ef7",
+              "behavior_cell": [
+                "cluster",
+                "regret"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rows": [
+      {
+        "job_id": "b52-early-ci-r0",
+        "block": 52,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.046315952816011814,
+        "baseline_test_gap": 0.06470220823273341,
+        "test_improvement": 0.0183862554167216,
+        "checkpoint_incumbent_validation_loss": 0.04667532931266107,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 19511,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b52-early-ci-r1",
+        "block": 52,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.07895262285751835,
+        "baseline_test_gap": 0.06470220823273341,
+        "test_improvement": -0.014250414624784935,
+        "checkpoint_incumbent_validation_loss": 0.04667532931266107,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 24814,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b52-early-cb-r0",
+        "block": 52,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.06470220823273341,
+        "baseline_test_gap": 0.06470220823273341,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.04667532931266107,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 23462,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b52-early-cb-r1",
+        "block": 52,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.06470220823273341,
+        "baseline_test_gap": 0.06470220823273341,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.04667532931266107,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 18354,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b52-early-ce-r0",
+        "block": 52,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.06470220823273341,
+        "baseline_test_gap": 0.06470220823273341,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.04667532931266107,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 26307,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b52-early-ce-r1",
+        "block": 52,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.0659667807757353,
+        "baseline_test_gap": 0.06470220823273341,
+        "test_improvement": -0.001264572543001885,
+        "checkpoint_incumbent_validation_loss": 0.04667532931266107,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 23659,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b52-late-ci-r0",
+        "block": 52,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.03749391437498133,
+        "baseline_test_gap": 0.037184691820591045,
+        "test_improvement": -0.00030922255439028157,
+        "checkpoint_incumbent_validation_loss": 0.03490922176209231,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 37263,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b52-late-ci-r1",
+        "block": 52,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.03595018332460722,
+        "baseline_test_gap": 0.037184691820591045,
+        "test_improvement": 0.0012345084959838257,
+        "checkpoint_incumbent_validation_loss": 0.03490922176209231,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 35151,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b52-late-cb-r0",
+        "block": 52,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.037184691820591045,
+        "baseline_test_gap": 0.037184691820591045,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03490922176209231,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 25090,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b52-late-cb-r1",
+        "block": 52,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.037184691820591045,
+        "baseline_test_gap": 0.037184691820591045,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03490922176209231,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 27578,
+        "request_count": 7,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b52-late-ce-r0",
+        "block": 52,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.037184691820591045,
+        "baseline_test_gap": 0.037184691820591045,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03490922176209231,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 26390,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b52-late-ce-r1",
+        "block": 52,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.037184691820591045,
+        "baseline_test_gap": 0.037184691820591045,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03490922176209231,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 34696,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b53-early-ci-r0",
+        "block": 53,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04849646640516603,
+        "baseline_test_gap": 0.04849646640516603,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.05449393132450606,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 25118,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b53-early-ci-r1",
+        "block": 53,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.04849646640516603,
+        "baseline_test_gap": 0.04849646640516603,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.05449393132450606,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 35153,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b53-early-cb-r0",
+        "block": 53,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05543383796292731,
+        "baseline_test_gap": 0.04849646640516603,
+        "test_improvement": -0.006937371557761279,
+        "checkpoint_incumbent_validation_loss": 0.05449393132450606,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 30402,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b53-early-cb-r1",
+        "block": 53,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.03691025899901419,
+        "baseline_test_gap": 0.04849646640516603,
+        "test_improvement": 0.011586207406151836,
+        "checkpoint_incumbent_validation_loss": 0.05449393132450606,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 41916,
+        "request_count": 8,
+        "global_improvements": 2,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b53-early-ce-r0",
+        "block": 53,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04849646640516603,
+        "baseline_test_gap": 0.04849646640516603,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.05449393132450606,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 20594,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b53-early-ce-r1",
+        "block": 53,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.04849646640516603,
+        "baseline_test_gap": 0.04849646640516603,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.05449393132450606,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 23725,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b53-late-ci-r0",
+        "block": 53,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.049722727552173177,
+        "baseline_test_gap": 0.0498336532055658,
+        "test_improvement": 0.00011092565339262256,
+        "checkpoint_incumbent_validation_loss": 0.053095469630480896,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 28747,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b53-late-ci-r1",
+        "block": 53,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.0498336532055658,
+        "baseline_test_gap": 0.0498336532055658,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.053095469630480896,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 29644,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b53-late-cb-r0",
+        "block": 53,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.0498336532055658,
+        "baseline_test_gap": 0.0498336532055658,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.053095469630480896,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 23465,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b53-late-cb-r1",
+        "block": 53,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.0498336532055658,
+        "baseline_test_gap": 0.0498336532055658,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.053095469630480896,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 24892,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b53-late-ce-r0",
+        "block": 53,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.0498336532055658,
+        "baseline_test_gap": 0.0498336532055658,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.053095469630480896,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 27639,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b53-late-ce-r1",
+        "block": 53,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.0498336532055658,
+        "baseline_test_gap": 0.0498336532055658,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.053095469630480896,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 22890,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b54-early-ci-r0",
+        "block": 54,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05682841062281369,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 27859,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b54-early-ci-r1",
+        "block": 54,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.04970445482346821,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.00712395579934548,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 26058,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b54-early-cb-r0",
+        "block": 54,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05682841062281369,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 35422,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b54-early-cb-r1",
+        "block": 54,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05682841062281369,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 26498,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b54-early-ce-r0",
+        "block": 54,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05682841062281369,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 25504,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b54-early-ce-r1",
+        "block": 54,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05682841062281369,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 27083,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b54-late-ci-r0",
+        "block": 54,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04788607132559752,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.008942339297216169,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 37515,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b54-late-ci-r1",
+        "block": 54,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05682841062281369,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 28790,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b54-late-cb-r0",
+        "block": 54,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05682841062281369,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 42359,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b54-late-cb-r1",
+        "block": 54,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05682841062281369,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 33396,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b54-late-ce-r0",
+        "block": 54,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05682841062281369,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 20567,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b54-late-ce-r1",
+        "block": 54,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05682841062281369,
+        "baseline_test_gap": 0.05682841062281369,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.03639253581223461,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 20045,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b55-early-ci-r0",
+        "block": 55,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.046782931842477664,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": 0.013274419498718056,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 34358,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b55-early-ci-r1",
+        "block": 55,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.06005735134119572,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 26296,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b55-early-cb-r0",
+        "block": 55,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.06079288982773305,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": -0.0007355384865373321,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 30312,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b55-early-cb-r1",
+        "block": 55,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05211888960723557,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": 0.00793846173396015,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 24489,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b55-early-ce-r0",
+        "block": 55,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.06005735134119572,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 33410,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 3,
+        "project_progress": 3,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b55-early-ce-r1",
+        "block": 55,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.06005735134119572,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 24092,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b55-late-ci-r0",
+        "block": 55,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.06005735134119572,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 33287,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b55-late-ci-r1",
+        "block": 55,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05858688158912589,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": 0.001470469752069832,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 41746,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b55-late-cb-r0",
+        "block": 55,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.06005735134119572,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 29914,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b55-late-cb-r1",
+        "block": 55,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05480359010716215,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": 0.005253761234033566,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 30768,
+        "request_count": 8,
+        "global_improvements": 2,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b55-late-ce-r0",
+        "block": 55,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.06005735134119572,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 28677,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b55-late-ce-r1",
+        "block": 55,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.06005735134119572,
+        "baseline_test_gap": 0.06005735134119572,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.04045499657752563,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 27220,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b56-early-ci-r0",
+        "block": 56,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05654472412360164,
+        "baseline_test_gap": 0.05624027559897833,
+        "test_improvement": -0.0003044485246233089,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 26523,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b56-early-ci-r1",
+        "block": 56,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05624027559897833,
+        "baseline_test_gap": 0.05624027559897833,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 25064,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b56-early-cb-r0",
+        "block": 56,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05315222358919953,
+        "baseline_test_gap": 0.05624027559897833,
+        "test_improvement": 0.0030880520097788036,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 28172,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b56-early-cb-r1",
+        "block": 56,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05024024668046361,
+        "baseline_test_gap": 0.05624027559897833,
+        "test_improvement": 0.00600002891851472,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 28739,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b56-early-ce-r0",
+        "block": 56,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05624027559897833,
+        "baseline_test_gap": 0.05624027559897833,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 24887,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b56-early-ce-r1",
+        "block": 56,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05624027559897833,
+        "baseline_test_gap": 0.05624027559897833,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 26023,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b56-late-ci-r0",
+        "block": 56,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05624027559897833,
+        "baseline_test_gap": 0.05624027559897833,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 24290,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b56-late-ci-r1",
+        "block": 56,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05624027559897833,
+        "baseline_test_gap": 0.05624027559897833,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 28732,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b56-late-cb-r0",
+        "block": 56,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05711158299976112,
+        "baseline_test_gap": 0.05624027559897833,
+        "test_improvement": -0.0008713074007827906,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 26330,
+        "request_count": 8,
+        "global_improvements": 2,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b56-late-cb-r1",
+        "block": 56,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05011431515037986,
+        "baseline_test_gap": 0.05624027559897833,
+        "test_improvement": 0.006125960448598471,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 26266,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b56-late-ce-r0",
+        "block": 56,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "infrastructure_incomplete",
+        "test_gap": null,
+        "baseline_test_gap": null,
+        "test_improvement": null,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": false,
+        "known_tokens": 21178,
+        "request_count": 6,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 1
+      },
+      {
+        "job_id": "b56-late-ce-r1",
+        "block": 56,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05624027559897833,
+        "baseline_test_gap": 0.05624027559897833,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.05972540553848958,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 21525,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b57-early-ci-r0",
+        "block": 57,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04150879489880143,
+        "baseline_test_gap": 0.05174376507410001,
+        "test_improvement": 0.010234970175298577,
+        "checkpoint_incumbent_validation_loss": 0.035649374250413,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 34873,
+        "request_count": 8,
+        "global_improvements": 2,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b57-early-ci-r1",
+        "block": 57,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.047439899494576415,
+        "baseline_test_gap": 0.05174376507410001,
+        "test_improvement": 0.004303865579523593,
+        "checkpoint_incumbent_validation_loss": 0.035649374250413,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 22330,
+        "request_count": 8,
+        "global_improvements": 2,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b57-early-cb-r0",
+        "block": 57,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05174376507410001,
+        "baseline_test_gap": 0.05174376507410001,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.035649374250413,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 22228,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b57-early-cb-r1",
+        "block": 57,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05174376507410001,
+        "baseline_test_gap": 0.05174376507410001,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.035649374250413,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 23201,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b57-early-ce-r0",
+        "block": 57,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05174376507410001,
+        "baseline_test_gap": 0.05174376507410001,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.035649374250413,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 28385,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b57-early-ce-r1",
+        "block": 57,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05174376507410001,
+        "baseline_test_gap": 0.05174376507410001,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.035649374250413,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 18572,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b57-late-ci-r0",
+        "block": 57,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.0468243102428427,
+        "baseline_test_gap": 0.0468243102428427,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.033604074439074004,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 22737,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b57-late-ci-r1",
+        "block": 57,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.0468243102428427,
+        "baseline_test_gap": 0.0468243102428427,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.033604074439074004,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 29278,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b57-late-cb-r0",
+        "block": 57,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.0468243102428427,
+        "baseline_test_gap": 0.0468243102428427,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.033604074439074004,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 25232,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b57-late-cb-r1",
+        "block": 57,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.0468243102428427,
+        "baseline_test_gap": 0.0468243102428427,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.033604074439074004,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 28960,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b57-late-ce-r0",
+        "block": 57,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.0468243102428427,
+        "baseline_test_gap": 0.0468243102428427,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.033604074439074004,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 27682,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b57-late-ce-r1",
+        "block": 57,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.0468243102428427,
+        "baseline_test_gap": 0.0468243102428427,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.033604074439074004,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 28799,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b58-early-ci-r0",
+        "block": 58,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04724912463505923,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 31418,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b58-early-ci-r1",
+        "block": 58,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.04724912463505923,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 19954,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b58-early-cb-r0",
+        "block": 58,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04724912463505923,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 29840,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b58-early-cb-r1",
+        "block": 58,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.04724912463505923,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 31932,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b58-early-ce-r0",
+        "block": 58,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04724912463505923,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 24305,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b58-early-ce-r1",
+        "block": 58,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.04724912463505923,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 35755,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b58-late-ci-r0",
+        "block": 58,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04724912463505923,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 26933,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b58-late-ci-r1",
+        "block": 58,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.04724912463505923,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 39877,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b58-late-cb-r0",
+        "block": 58,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04724912463505923,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 32934,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b58-late-cb-r1",
+        "block": 58,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.04005172424746702,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.007197400387592208,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 27124,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b58-late-ce-r0",
+        "block": 58,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04724912463505923,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 26646,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b58-late-ce-r1",
+        "block": 58,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.04724912463505923,
+        "baseline_test_gap": 0.04724912463505923,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.047412920429248884,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 19086,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b59-early-ci-r0",
+        "block": 59,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04039143829510954,
+        "baseline_test_gap": 0.05835762750473412,
+        "test_improvement": 0.017966189209624575,
+        "checkpoint_incumbent_validation_loss": 0.07978960267824992,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 27874,
+        "request_count": 8,
+        "global_improvements": 2,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b59-early-ci-r1",
+        "block": 59,
+        "phase": "early",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.03431812572908114,
+        "baseline_test_gap": 0.05835762750473412,
+        "test_improvement": 0.024039501775652977,
+        "checkpoint_incumbent_validation_loss": 0.07978960267824992,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 27972,
+        "request_count": 8,
+        "global_improvements": 2,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b59-early-cb-r0",
+        "block": 59,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.05105227329773722,
+        "baseline_test_gap": 0.05835762750473412,
+        "test_improvement": 0.007305354206996899,
+        "checkpoint_incumbent_validation_loss": 0.07978960267824992,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 31036,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b59-early-cb-r1",
+        "block": 59,
+        "phase": "early",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05835762750473412,
+        "baseline_test_gap": 0.05835762750473412,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.07978960267824992,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 25276,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 0,
+        "project_progress": 0,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b59-early-ce-r0",
+        "block": 59,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.046416586696167085,
+        "baseline_test_gap": 0.05835762750473412,
+        "test_improvement": 0.011941040808567033,
+        "checkpoint_incumbent_validation_loss": 0.07978960267824992,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 21500,
+        "request_count": 8,
+        "global_improvements": 2,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b59-early-ce-r1",
+        "block": 59,
+        "phase": "early",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.05154061439295652,
+        "baseline_test_gap": 0.05835762750473412,
+        "test_improvement": 0.006817013111777598,
+        "checkpoint_incumbent_validation_loss": 0.07978960267824992,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 19812,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b59-late-ci-r0",
+        "block": 59,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.061717152179240876,
+        "baseline_test_gap": 0.07603248003356235,
+        "test_improvement": 0.01431532785432147,
+        "checkpoint_incumbent_validation_loss": 0.07928624960796943,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 33307,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b59-late-ci-r1",
+        "block": 59,
+        "phase": "late",
+        "strategy": "C-I",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.06685614317543882,
+        "baseline_test_gap": 0.07603248003356235,
+        "test_improvement": 0.009176336858123524,
+        "checkpoint_incumbent_validation_loss": 0.07928624960796943,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 25114,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b59-late-cb-r0",
+        "block": 59,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04455259056597537,
+        "baseline_test_gap": 0.07603248003356235,
+        "test_improvement": 0.03147988946758698,
+        "checkpoint_incumbent_validation_loss": 0.07928624960796943,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 29946,
+        "request_count": 8,
+        "global_improvements": 1,
+        "parent_improvements": 1,
+        "project_progress": 1,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b59-late-cb-r1",
+        "block": 59,
+        "phase": "late",
+        "strategy": "C-B",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.048561773172002935,
+        "baseline_test_gap": 0.07603248003356235,
+        "test_improvement": 0.02747070686155941,
+        "checkpoint_incumbent_validation_loss": 0.07928624960796943,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 20342,
+        "request_count": 8,
+        "global_improvements": 2,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 0
+      },
+      {
+        "job_id": "b59-late-ce-r0",
+        "block": 59,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "test_gap": 0.04801441368459999,
+        "baseline_test_gap": 0.07603248003356235,
+        "test_improvement": 0.02801806634896236,
+        "checkpoint_incumbent_validation_loss": 0.07928624960796943,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 19184,
+        "request_count": 7,
+        "global_improvements": 1,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      },
+      {
+        "job_id": "b59-late-ce-r1",
+        "block": 59,
+        "phase": "late",
+        "strategy": "C-E",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "test_gap": 0.07603248003356235,
+        "baseline_test_gap": 0.07603248003356235,
+        "test_improvement": 0.0,
+        "checkpoint_incumbent_validation_loss": 0.07928624960796943,
+        "test_evaluation_matches_primary": true,
+        "known_tokens": 29027,
+        "request_count": 8,
+        "global_improvements": 0,
+        "parent_improvements": 2,
+        "project_progress": 2,
+        "exploration_followups": 3
+      }
+    ],
+    "exploration_starts": [
+      {
+        "job_id": "b52-early-ce-r0",
+        "block": 52,
+        "phase": "early",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.10403740486889129,
+        "incumbent_loss": 0.04667532931266107,
+        "start_minus_incumbent_pp": 5.736207555623022,
+        "valid_start": true
+      },
+      {
+        "job_id": "b52-early-ce-r1",
+        "block": 52,
+        "phase": "early",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.09404415099904706,
+        "incumbent_loss": 0.04667532931266107,
+        "start_minus_incumbent_pp": 4.736882168638599,
+        "valid_start": true
+      },
+      {
+        "job_id": "b52-late-ce-r0",
+        "block": 52,
+        "phase": "late",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.14877787829744787,
+        "incumbent_loss": 0.03490922176209231,
+        "start_minus_incumbent_pp": 11.386865653535557,
+        "valid_start": true
+      },
+      {
+        "job_id": "b52-late-ce-r1",
+        "block": 52,
+        "phase": "late",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.05590363733607451,
+        "incumbent_loss": 0.03490922176209231,
+        "start_minus_incumbent_pp": 2.0994415573982197,
+        "valid_start": true
+      },
+      {
+        "job_id": "b53-early-ce-r0",
+        "block": 53,
+        "phase": "early",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.11874172449383942,
+        "incumbent_loss": 0.05449393132450606,
+        "start_minus_incumbent_pp": 6.424779316933335,
+        "valid_start": true
+      },
+      {
+        "job_id": "b53-early-ce-r1",
+        "block": 53,
+        "phase": "early",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.15764190352514423,
+        "incumbent_loss": 0.05449393132450606,
+        "start_minus_incumbent_pp": 10.314797220063818,
+        "valid_start": true
+      },
+      {
+        "job_id": "b53-late-ce-r0",
+        "block": 53,
+        "phase": "late",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.1591582085735753,
+        "incumbent_loss": 0.053095469630480896,
+        "start_minus_incumbent_pp": 10.60627389430944,
+        "valid_start": true
+      },
+      {
+        "job_id": "b53-late-ce-r1",
+        "block": 53,
+        "phase": "late",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.13929825677673346,
+        "incumbent_loss": 0.053095469630480896,
+        "start_minus_incumbent_pp": 8.620278714625258,
+        "valid_start": true
+      },
+      {
+        "job_id": "b54-early-ce-r0",
+        "block": 54,
+        "phase": "early",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.12222320246131366,
+        "incumbent_loss": 0.03639253581223461,
+        "start_minus_incumbent_pp": 8.583066664907903,
+        "valid_start": true
+      },
+      {
+        "job_id": "b54-early-ce-r1",
+        "block": 54,
+        "phase": "early",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.07242602583126327,
+        "incumbent_loss": 0.03639253581223461,
+        "start_minus_incumbent_pp": 3.603349001902866,
+        "valid_start": true
+      },
+      {
+        "job_id": "b54-late-ce-r0",
+        "block": 54,
+        "phase": "late",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.12271877787672095,
+        "incumbent_loss": 0.03639253581223461,
+        "start_minus_incumbent_pp": 8.632624206448632,
+        "valid_start": true
+      },
+      {
+        "job_id": "b54-late-ce-r1",
+        "block": 54,
+        "phase": "late",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.11908028693445402,
+        "incumbent_loss": 0.03639253581223461,
+        "start_minus_incumbent_pp": 8.26877511222194,
+        "valid_start": true
+      },
+      {
+        "job_id": "b55-early-ce-r0",
+        "block": 55,
+        "phase": "early",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.11919618509625098,
+        "incumbent_loss": 0.04045499657752563,
+        "start_minus_incumbent_pp": 7.8741188518725345,
+        "valid_start": true
+      },
+      {
+        "job_id": "b55-early-ce-r1",
+        "block": 55,
+        "phase": "early",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.09867641894667761,
+        "incumbent_loss": 0.04045499657752563,
+        "start_minus_incumbent_pp": 5.822142236915198,
+        "valid_start": true
+      },
+      {
+        "job_id": "b55-late-ce-r0",
+        "block": 55,
+        "phase": "late",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.12956297561705973,
+        "incumbent_loss": 0.04045499657752563,
+        "start_minus_incumbent_pp": 8.91079790395341,
+        "valid_start": true
+      },
+      {
+        "job_id": "b55-late-ce-r1",
+        "block": 55,
+        "phase": "late",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.10496786569718722,
+        "incumbent_loss": 0.04045499657752563,
+        "start_minus_incumbent_pp": 6.451286911966159,
+        "valid_start": true
+      },
+      {
+        "job_id": "b56-early-ce-r0",
+        "block": 56,
+        "phase": "early",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.10456067652735918,
+        "incumbent_loss": 0.05972540553848958,
+        "start_minus_incumbent_pp": 4.4835270988869595,
+        "valid_start": true
+      },
+      {
+        "job_id": "b56-early-ce-r1",
+        "block": 56,
+        "phase": "early",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.08420506492509444,
+        "incumbent_loss": 0.05972540553848958,
+        "start_minus_incumbent_pp": 2.447965938660486,
+        "valid_start": true
+      },
+      {
+        "job_id": "b56-late-ce-r0",
+        "block": 56,
+        "phase": "late",
+        "repetition": 0,
+        "status": "infrastructure_incomplete",
+        "start_loss": 0.1066143135826614,
+        "incumbent_loss": 0.05972540553848958,
+        "start_minus_incumbent_pp": 4.6888908044171815,
+        "valid_start": true
+      },
+      {
+        "job_id": "b56-late-ce-r1",
+        "block": 56,
+        "phase": "late",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.12622552662991257,
+        "incumbent_loss": 0.05972540553848958,
+        "start_minus_incumbent_pp": 6.650012109142299,
+        "valid_start": true
+      },
+      {
+        "job_id": "b57-early-ce-r0",
+        "block": 57,
+        "phase": "early",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.07138317376882165,
+        "incumbent_loss": 0.035649374250413,
+        "start_minus_incumbent_pp": 3.5733799518408653,
+        "valid_start": true
+      },
+      {
+        "job_id": "b57-early-ce-r1",
+        "block": 57,
+        "phase": "early",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.10398129737298992,
+        "incumbent_loss": 0.035649374250413,
+        "start_minus_incumbent_pp": 6.833192312257691,
+        "valid_start": true
+      },
+      {
+        "job_id": "b57-late-ce-r0",
+        "block": 57,
+        "phase": "late",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.043675122836742394,
+        "incumbent_loss": 0.033604074439074004,
+        "start_minus_incumbent_pp": 1.007104839766839,
+        "valid_start": true
+      },
+      {
+        "job_id": "b57-late-ce-r1",
+        "block": 57,
+        "phase": "late",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.07857537813169972,
+        "incumbent_loss": 0.033604074439074004,
+        "start_minus_incumbent_pp": 4.497130369262572,
+        "valid_start": true
+      },
+      {
+        "job_id": "b58-early-ce-r0",
+        "block": 58,
+        "phase": "early",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.2251707579380248,
+        "incumbent_loss": 0.047412920429248884,
+        "start_minus_incumbent_pp": 17.77578375087759,
+        "valid_start": true
+      },
+      {
+        "job_id": "b58-early-ce-r1",
+        "block": 58,
+        "phase": "early",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.08423739681162894,
+        "incumbent_loss": 0.047412920429248884,
+        "start_minus_incumbent_pp": 3.6824476382380054,
+        "valid_start": true
+      },
+      {
+        "job_id": "b58-late-ce-r0",
+        "block": 58,
+        "phase": "late",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.1333840792577691,
+        "incumbent_loss": 0.047412920429248884,
+        "start_minus_incumbent_pp": 8.597115882852021,
+        "valid_start": true
+      },
+      {
+        "job_id": "b58-late-ce-r1",
+        "block": 58,
+        "phase": "late",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.14745023504447918,
+        "incumbent_loss": 0.047412920429248884,
+        "start_minus_incumbent_pp": 10.00373146152303,
+        "valid_start": true
+      },
+      {
+        "job_id": "b59-early-ce-r0",
+        "block": 59,
+        "phase": "early",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.10339267432997717,
+        "incumbent_loss": 0.07978960267824992,
+        "start_minus_incumbent_pp": 2.360307165172726,
+        "valid_start": true
+      },
+      {
+        "job_id": "b59-early-ce-r1",
+        "block": 59,
+        "phase": "early",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.12095079635215907,
+        "incumbent_loss": 0.07978960267824992,
+        "start_minus_incumbent_pp": 4.116119367390915,
+        "valid_start": true
+      },
+      {
+        "job_id": "b59-late-ce-r0",
+        "block": 59,
+        "phase": "late",
+        "repetition": 0,
+        "status": "continuation_complete",
+        "start_loss": 0.13157296462158607,
+        "incumbent_loss": 0.07928624960796943,
+        "start_minus_incumbent_pp": 5.2286715013616645,
+        "valid_start": true
+      },
+      {
+        "job_id": "b59-late-ce-r1",
+        "block": 59,
+        "phase": "late",
+        "repetition": 1,
+        "status": "continuation_complete",
+        "start_loss": 0.15583473434359557,
+        "incumbent_loss": 0.07928624960796943,
+        "start_minus_incumbent_pp": 7.654848473562614,
+        "valid_start": true
+      }
+    ]
+  },
+  "historical_studies": {
+    "E1": {
+      "protocol": "same-state continuation: C-I, C-B, C-E; blocks 44-47; 4 proposals/job; two source arms × checkpoints × repetitions",
+      "study_id": "chapter6-component-validation-e1-20260927",
+      "planned_jobs": 48,
+      "observed_run_status_counts": {
+        "continuation_complete": 47,
+        "infrastructure_incomplete": 1
+      },
+      "C_B_validation_to_test_audit": {
+        "C_B_jobs_with_test": 16,
+        "validation_improved_jobs": 8,
+        "validation_improved_but_test_not_better": 5,
+        "matches_prior_offline_audit": true,
+        "rows": [
+          {
+            "job_id": "b44-fb_p-s16-cb-r0",
+            "validation_global_improvement_events": 1,
+            "baseline_test_gap": 0.04559332625089405,
+            "final_test_gap": 0.06724309982355005,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b44-fb_p-s16-cb-r1",
+            "validation_global_improvement_events": 1,
+            "baseline_test_gap": 0.04559332625089405,
+            "final_test_gap": 0.046967843426518635,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b44-sp-s16-cb-r0",
+            "validation_global_improvement_events": 1,
+            "baseline_test_gap": 0.04676337951205009,
+            "final_test_gap": 0.045168332659464856,
+            "test_not_better_than_start": false
+          },
+          {
+            "job_id": "b44-sp-s16-cb-r1",
+            "validation_global_improvement_events": 1,
+            "baseline_test_gap": 0.04676337951205009,
+            "final_test_gap": 0.040729583963587106,
+            "test_not_better_than_start": false
+          },
+          {
+            "job_id": "b45-fb_p-s16-cb-r0",
+            "validation_global_improvement_events": 0,
+            "baseline_test_gap": 0.04697223222073215,
+            "final_test_gap": 0.04697223222073215,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b45-fb_p-s16-cb-r1",
+            "validation_global_improvement_events": 0,
+            "baseline_test_gap": 0.04697223222073215,
+            "final_test_gap": 0.04697223222073215,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b45-sp-s16-cb-r0",
+            "validation_global_improvement_events": 2,
+            "baseline_test_gap": 0.04204978906971484,
+            "final_test_gap": 0.043942180275585406,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b45-sp-s16-cb-r1",
+            "validation_global_improvement_events": 0,
+            "baseline_test_gap": 0.04204978906971484,
+            "final_test_gap": 0.04204978906971484,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b46-fb_p-s16-cb-r0",
+            "validation_global_improvement_events": 0,
+            "baseline_test_gap": 0.044929780522166306,
+            "final_test_gap": 0.044929780522166306,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b46-fb_p-s16-cb-r1",
+            "validation_global_improvement_events": 0,
+            "baseline_test_gap": 0.044929780522166306,
+            "final_test_gap": 0.044929780522166306,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b46-sp-s16-cb-r0",
+            "validation_global_improvement_events": 0,
+            "baseline_test_gap": 0.04643576527837522,
+            "final_test_gap": 0.04643576527837522,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b46-sp-s16-cb-r1",
+            "validation_global_improvement_events": 1,
+            "baseline_test_gap": 0.04643576527837522,
+            "final_test_gap": 0.04403643793678829,
+            "test_not_better_than_start": false
+          },
+          {
+            "job_id": "b47-fb_p-s16-cb-r0",
+            "validation_global_improvement_events": 1,
+            "baseline_test_gap": 0.05316094118889323,
+            "final_test_gap": 0.054818324995918495,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b47-fb_p-s16-cb-r1",
+            "validation_global_improvement_events": 1,
+            "baseline_test_gap": 0.05316094118889323,
+            "final_test_gap": 0.054818324995918495,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b47-sp-s16-cb-r0",
+            "validation_global_improvement_events": 0,
+            "baseline_test_gap": 0.05227275087431213,
+            "final_test_gap": 0.05227275087431213,
+            "test_not_better_than_start": true
+          },
+          {
+            "job_id": "b47-sp-s16-cb-r1",
+            "validation_global_improvement_events": 0,
+            "baseline_test_gap": 0.05227275087431213,
+            "final_test_gap": 0.05227275087431213,
+            "test_not_better_than_start": true
+          }
+        ],
+        "unit_note": "descriptive jobs nested in 4 blocks and two source arms; not independent samples"
+      },
+      "evidence_boundary": "pilot; cannot identify a general branch-development benefit; validation progress did not reliably transfer to Test",
+      "manifest_sha256": "1f36fb7810e3d5bdd3a1fcde8e9bcc2fcb245cb574fdf0b4bfc1b818daf23060"
+    },
+    "E2": {
+      "v1": {
+        "study_id": "chapter6-component-validation-20260927-e0-e2",
+        "planned_jobs": 32,
+        "tested_jobs": 0,
+        "all_jobs_infrastructure_failed": true,
+        "group_outcomes": {
+          "P00": {
+            "status_counts": {
+              "infrastructure_incomplete": 8
+            },
+            "completed_proposals": 2,
+            "provider_failures": 8,
+            "known_tokens": 19566
+          },
+          "P01": {
+            "status_counts": {
+              "infrastructure_incomplete": 8
+            },
+            "completed_proposals": 0,
+            "provider_failures": 8,
+            "known_tokens": 12039
+          },
+          "P10": {
+            "status_counts": {
+              "infrastructure_incomplete": 8
+            },
+            "completed_proposals": 0,
+            "provider_failures": 8,
+            "known_tokens": 10870
+          },
+          "P11": {
+            "status_counts": {
+              "infrastructure_incomplete": 8
+            },
+            "completed_proposals": 1,
+            "provider_failures": 8,
+            "known_tokens": 7712
+          }
+        },
+        "interpretation": "No quality or component-effect conclusion is estimable because every job terminated on provider failure before a complete search."
+      },
+      "r2": {
+        "study_id": "chapter6-component-validation-20260927-e0-e2-r2",
+        "planned_jobs": 32,
+        "tested_jobs": 0,
+        "all_jobs_infrastructure_failed": true,
+        "group_outcomes": {
+          "P00": {
+            "status_counts": {
+              "infrastructure_incomplete": 8
+            },
+            "completed_proposals": 2,
+            "provider_failures": 8,
+            "known_tokens": 26560
+          },
+          "P01": {
+            "status_counts": {
+              "infrastructure_incomplete": 8
+            },
+            "completed_proposals": 0,
+            "provider_failures": 8,
+            "known_tokens": 0
+          },
+          "P10": {
+            "status_counts": {
+              "infrastructure_incomplete": 8
+            },
+            "completed_proposals": 2,
+            "provider_failures": 8,
+            "known_tokens": 15775
+          },
+          "P11": {
+            "status_counts": {
+              "infrastructure_incomplete": 8
+            },
+            "completed_proposals": 2,
+            "provider_failures": 8,
+            "known_tokens": 14148
+          }
+        },
+        "interpretation": "No quality or component-effect conclusion is estimable because every job terminated on provider failure before a complete search."
+      },
+      "r3": {
+        "planned_jobs": 32,
+        "tested_jobs": 32,
+        "blocks": 4,
+        "repetitions_per_group_block": 2,
+        "P11_minus_P00_pp": {
+          "mean": -0.1808494947507712,
+          "lower": -0.4414706076148165,
+          "upper": 0.07977161811327411,
+          "n_blocks": 4
+        },
+        "P_S_scheduling_priority_pp": {
+          "mean": -0.06264351941433713,
+          "lower": -0.20204096364624702,
+          "upper": 0.07074237359618821,
+          "n_blocks": 4
+        },
+        "P_E_eviction_protection_pp": {
+          "mean": -0.1182059753364337,
+          "lower": -0.3226815202117048,
+          "upper": 0.06070913584018088,
+          "n_blocks": 4
+        },
+        "interpretation_limits": [
+          "This is a single-model TSP14 component screen, not universal or cross-task validation.",
+          "Test-gap effects resample data blocks; proposals, instances and model requests are not independent replicates.",
+          "Missing and infrastructure-incomplete jobs remain visible and are not replaced.",
+          "A negative test-gap contrast favors the factor-on condition; the descriptive intervals are not confirmatory p-values."
+        ],
+        "manifest_sha256": "8368b1958a810a9ae6f4dd1baa49242a70752a2daf1be9e99a6357cc075ec750"
+      },
+      "offline_mechanism_audit": {
+        "runs": 32,
+        "records": 1024,
+        "branch_development_events": 113,
+        "new_direction_children": 96,
+        "parent_improvement_events": 18,
+        "improvements_with_new_grant": 0,
+        "admission_reasons": {
+          "budget_window_exhausted": 1,
+          "no_remaining_trial_or_renewal": 16,
+          "not_eligible": 1
+        },
+        "matches_prior_offline_audit": true,
+        "known_narrative_discrepancy": "prior narrative said 112 branch-development events; frozen run records count 113"
+      },
+      "evidence_boundary": "r3 is a 4-block component screen; r1 and r2 stopped on provider failures before usable quality estimates"
+    },
+    "S3": {
+      "study_id": "s3-tsp-minimax-strategy-screen-20260927-r3",
+      "protocol_sha256": "0cfe897a63031982b7a334cdd3bb9eefa6f06faa2779288afef10367b490c7c3",
+      "blocks": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "arms": [
+        "SP",
+        "WR",
+        "FB_U",
+        "FB_P",
+        "TS_P",
+        "AD_P"
+      ],
+      "planned_jobs": 48,
+      "tested_jobs": 48,
+      "groups": {
+        "SP": {
+          "mean_test_gap": 0.05096905668576741,
+          "mean_tokens": 237066.75,
+          "protected_local_improvements": 0,
+          "protected_global_improvements": 0,
+          "protected_slots_scheduled": 0
+        },
+        "WR": {
+          "mean_test_gap": 0.059094624278451774,
+          "mean_tokens": 218146.125,
+          "protected_local_improvements": 0,
+          "protected_global_improvements": 0,
+          "protected_slots_scheduled": 0
+        },
+        "FB_U": {
+          "mean_test_gap": 0.05583967362450478,
+          "mean_tokens": 222527.25,
+          "protected_local_improvements": 0,
+          "protected_global_improvements": 0,
+          "protected_slots_scheduled": 0
+        },
+        "FB_P": {
+          "mean_test_gap": 0.05774845419731574,
+          "mean_tokens": 232648.0,
+          "protected_local_improvements": 47,
+          "protected_global_improvements": 12,
+          "protected_slots_scheduled": 132
+        },
+        "TS_P": {
+          "mean_test_gap": 0.05364307023626266,
+          "mean_tokens": 233868.75,
+          "protected_local_improvements": 38,
+          "protected_global_improvements": 5,
+          "protected_slots_scheduled": 132
+        },
+        "AD_P": {
+          "mean_test_gap": 0.05848636752249289,
+          "mean_tokens": 235467.5,
+          "protected_local_improvements": 56,
+          "protected_global_improvements": 8,
+          "protected_slots_scheduled": 158
+        }
+      },
+      "FB_P_minus_FB_U_pp": {
+        "lower": -0.558932980351715,
+        "upper": 0.8021544114687259,
+        "mean": 0.19087805728109633,
+        "n_blocks": 8
+      },
+      "TS_P_minus_FB_P_pp": {
+        "lower": -1.0866204519550005,
+        "upper": 0.4322297467044055,
+        "mean": -0.4105383961053075,
+        "n_blocks": 8
+      },
+      "AD_P_minus_FB_P_pp": {
+        "lower": -0.5399185311120919,
+        "upper": 0.6444172128075718,
+        "mean": 0.07379133251771447,
+        "n_blocks": 8
+      },
+      "evidence_boundary": "one model, one seed, eight TSP14 blocks; screening evidence, not confirmation or cross-task validation"
+    },
+    "protocol_and_source_hashes": {
+      "e1_g_manifest": "f5a291358f3d5fd4224e4f5573a54d369394eca6661dd7e6cef84f5db1dbf173",
+      "s3_r3_protocol": "e6aa2fe3648712062c2adc17f19e1c0a2d602a30b017e891173cc165ceb34441",
+      "s3_r3_analysis": "620649cd0098254c2c3db139942820711e43bf10dbe086f235d885f45d99c9c2",
+      "e2_r3_protocol": "4f480917327d30c68dfb7a706c01a9ce65470472b731336f7ac79558382f1189",
+      "e2_r3_analysis": "3276c0c050a3f89939fc479b9ed95fade7919f1da5013ee86d936436c6d1fad8"
+    }
+  }
+}
