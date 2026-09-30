@@ -1,0 +1,26 @@
+{
+  "schema": "chapter6-short-horizon-publication-metadata-v1",
+  "study_id": "chapter6-component-validation-short-horizon-20260929",
+  "canonical_manifest_sha256": "e05de389de11964acc4339ffa6275832bb23752e6a601b671375fcae2289852c",
+  "manifest_file_sha256": "d11d0e3aa4d142a3d35fdc919c2e352270ed5ee5d830ed698e9cf938f3d9711d",
+  "archive_sha256": "387d951ae7250eaf42b1e6a157b1a9145f3d7b00a8d1e41c64ac145320aa2c0f",
+  "archive_bytes": 32187364,
+  "study_file_count_in_archive": 4524,
+  "study_file_count_on_disk_including_locks": 4620,
+  "excluded_from_archive": {
+    "pattern": ".run.lock",
+    "count": 96,
+    "bytes": 96,
+    "reason": "ephemeral local run locks"
+  },
+  "zip_member_count": 4527,
+  "index_sha256": "5e8273e532cda22d49b4ae83db5e89996a4c2f2c8d2247dcfa337ee3a61dc59b",
+  "audit_new_model_calls": 0,
+  "archive_validation": {
+    "missing_members": 0,
+    "extra_members": 0,
+    "hash_mismatches": 0,
+    "size_mismatches": 0
+  },
+  "note": "ARCHIVE_METADATA.json is an external publication record and is not embedded in raw-study.zip; ZIP and external index are mutually verified."
+}
