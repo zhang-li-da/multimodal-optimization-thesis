@@ -66,8 +66,8 @@
     },
     {
       "path": "freeze_sources.py",
-      "bytes": 3596,
-      "sha256": "2fb8827d81a1fc525c5bf4cca34f6f5f00451d2915c096cdf191a46335c44789"
+      "bytes": 3618,
+      "sha256": "951c4a0854a34b35d98149552c076ed5dca129e837b997c31fbfcef66d96c427"
     },
     {
       "path": "inventory.py",
@@ -120,5 +120,5 @@
       "sha256": "cdcf16150fb4480891b36a2d24256a31f7d879749c371dd09b9bac37f3c64abe"
     }
   ],
-  "manifest_sha256": "5cad472814b73f01e67be4d11727d2973de8cf5658bb4564495885d2d19009bf"
+  "manifest_sha256": "38471adc2f8a8b2a94de76b5077ae07ecfd098ed8b6835332dc9772437f18d85"
 }

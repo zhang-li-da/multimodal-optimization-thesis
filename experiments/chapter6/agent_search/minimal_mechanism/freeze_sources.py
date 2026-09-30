@@ -23,7 +23,7 @@ def canonical_digest(value: dict) -> str:
 
 def canonical_source_bytes(raw: bytes) -> bytes:
     """Match GitHub/Git archive bytes for text files under core.autocrlf."""
-    return raw.replace(b"\r\n", b"\n")
+    return raw.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
 
 
 def source_rows() -> list[dict]:
