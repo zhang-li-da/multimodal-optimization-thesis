@@ -1,0 +1,83 @@
+{
+  "kind": "offline_reconstruction_not_an_executed_EG_action",
+  "source_node_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "summary": {
+    "source": "frozen search prefix and proposals already observed in this run",
+    "test_data_access": false,
+    "quality_level": {
+      "incumbent_validation_loss": 0.04155953832395905,
+      "best_validation_loss": 0.04155953832395905,
+      "median_valid_validation_loss": 0.06632895295648383,
+      "valid_program_count": 11
+    },
+    "recorded_program_summaries": [
+      {
+        "node_id": 3,
+        "intent": "This heuristic extends the return-aware approach with two modifications. First, it scales the return distance penalty by (1 + progress), increasing the penalty for being far from the start as the tour advances. Second, it adds a small regre",
+        "tags": [
+          "return_aware",
+          "regret"
+        ],
+        "validation_loss": 0.04155953832395905,
+        "strategy_hypothesis": null
+      },
+      {
+        "node_id": 5,
+        "intent": "Increase regret weight to 0.4 to align with the regret_aware seed family and strengthen look-ahead selection, addressing the parent's underweighting (0.1). Slightly reduce return_distance coefficient to 0.2 since progress scaling already am",
+        "tags": [
+          "regret",
+          "hybrid"
+        ],
+        "validation_loss": 0.04843277513515749,
+        "strategy_hypothesis": null
+      },
+      {
+        "node_id": 4,
+        "intent": "We add a nearest-neighbor lookahead term (-0.1 * nearest_remaining) so candidates closer to an unvisited neighbor receive a bonus, promoting chaining of short edges. The existing progress-scaled return penalty and regret term are kept. This",
+        "tags": [
+          "return_aware",
+          "lookahead"
+        ],
+        "validation_loss": 0.048461791868495294,
+        "strategy_hypothesis": null
+      },
+      {
+        "node_id": 1,
+        "intent": "shared hand-written seed: return_aware",
+        "tags": [
+          "local_distance",
+          "return_aware"
+        ],
+        "validation_loss": 0.05861685599396909,
+        "strategy_hypothesis": null
+      },
+      {
+        "node_id": 7,
+        "intent": "This heuristic extends the parent by adding a 2-step lookahead: it penalizes the candidate's nearest remaining distance to reduce long next-step edges, and incorporates a cluster density term to favor candidates that are centrally located a",
+        "tags": [
+          "lookahead",
+          "cluster"
+        ],
+        "validation_loss": 0.06308657160288958,
+        "strategy_hypothesis": null
+      }
+    ],
+    "observed_failures": [],
+    "not_yet_observed_operator_tags": []
+  },
+  "summary_sha256": "219853690b12646643c033e51fbe824306e98cd178049ffc195fa365c9618708",
+  "new_model_calls": 0,
+  "used_in_search": false
+}

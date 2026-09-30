@@ -1,0 +1,213 @@
+{
+  "kind": "real_record_projection_no_synthetic_or_counterfactual_results",
+  "study_manifest_sha256": "29cc55e3443fa84c2156671c9b087585df6c6b224b81ba2d4cafa24421bf0550",
+  "trajectory": [
+    {
+      "block": 65,
+      "proposal": 1,
+      "parent_id": 1,
+      "node_id": 3,
+      "valid": true,
+      "validation_gap_percent": 4.155953832395904,
+      "global_improvement": true,
+      "known_tokens_cumulative": 6861,
+      "elapsed_seconds": 46.02887109993026,
+      "source": "prefix_runs/prefix-sp-b65/slots/000/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 2,
+      "parent_id": 3,
+      "node_id": 4,
+      "valid": true,
+      "validation_gap_percent": 4.846179186849529,
+      "global_improvement": false,
+      "known_tokens_cumulative": 20708,
+      "elapsed_seconds": 123.83453159988858,
+      "source": "prefix_runs/prefix-sp-b65/slots/001/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 3,
+      "parent_id": 3,
+      "node_id": 5,
+      "valid": true,
+      "validation_gap_percent": 4.843277513515749,
+      "global_improvement": false,
+      "known_tokens_cumulative": 27622,
+      "elapsed_seconds": 185.65519499988295,
+      "source": "prefix_runs/prefix-sp-b65/slots/002/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 4,
+      "parent_id": 3,
+      "node_id": 6,
+      "valid": true,
+      "validation_gap_percent": 6.838075740038679,
+      "global_improvement": false,
+      "known_tokens_cumulative": 33646,
+      "elapsed_seconds": 209.20195489982143,
+      "source": "prefix_runs/prefix-sp-b65/slots/003/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 5,
+      "parent_id": 3,
+      "node_id": 7,
+      "valid": true,
+      "validation_gap_percent": 6.308657160288958,
+      "global_improvement": false,
+      "known_tokens_cumulative": 39099,
+      "elapsed_seconds": 260.4911886998452,
+      "source": "prefix_runs/prefix-sp-b65/slots/004/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 6,
+      "parent_id": 3,
+      "node_id": 8,
+      "valid": true,
+      "validation_gap_percent": 6.6328952956483835,
+      "global_improvement": false,
+      "known_tokens_cumulative": 44815,
+      "elapsed_seconds": 312.8504925998859,
+      "source": "prefix_runs/prefix-sp-b65/slots/005/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 7,
+      "parent_id": 3,
+      "node_id": 9,
+      "valid": true,
+      "validation_gap_percent": 7.145510903906871,
+      "global_improvement": false,
+      "known_tokens_cumulative": 53939,
+      "elapsed_seconds": 427.02808739989996,
+      "source": "prefix_runs/prefix-sp-b65/slots/006/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 8,
+      "parent_id": 3,
+      "node_id": 10,
+      "valid": true,
+      "validation_gap_percent": 6.7941447392155085,
+      "global_improvement": false,
+      "known_tokens_cumulative": 63343,
+      "elapsed_seconds": 470.1493908998091,
+      "source": "prefix_runs/prefix-sp-b65/slots/007/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 9,
+      "parent_id": 3,
+      "node_id": 11,
+      "valid": true,
+      "validation_gap_percent": 6.250474031780186,
+      "global_improvement": false,
+      "known_tokens_cumulative": 72824,
+      "elapsed_seconds": 585.524924099911,
+      "source": "prefix_runs/prefix-sp-b65/slots/008/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 10,
+      "parent_id": 3,
+      "node_id": 12,
+      "valid": true,
+      "validation_gap_percent": 5.245829231119179,
+      "global_improvement": false,
+      "known_tokens_cumulative": 81765,
+      "elapsed_seconds": 698.175665399991,
+      "source": "prefix_runs/prefix-sp-b65/slots/009/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 11,
+      "parent_id": 3,
+      "node_id": 13,
+      "valid": true,
+      "validation_gap_percent": 4.26613425970082,
+      "global_improvement": false,
+      "known_tokens_cumulative": 86295,
+      "elapsed_seconds": 736.8724833999295,
+      "source": "prefix_runs/prefix-sp-b65/slots/010/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 12,
+      "parent_id": 3,
+      "node_id": 14,
+      "valid": true,
+      "validation_gap_percent": 18.44843695748587,
+      "global_improvement": false,
+      "known_tokens_cumulative": 92498,
+      "elapsed_seconds": 793.8687146999873,
+      "source": "prefix_runs/prefix-sp-b65/slots/011/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 13,
+      "parent_id": 3,
+      "node_id": 15,
+      "valid": true,
+      "validation_gap_percent": 5.716702607910576,
+      "global_improvement": false,
+      "known_tokens_cumulative": 101120,
+      "elapsed_seconds": 859.339892399963,
+      "source": "prefix_runs/prefix-sp-b65/slots/012/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 14,
+      "parent_id": 3,
+      "node_id": 16,
+      "valid": true,
+      "validation_gap_percent": 4.492638735436264,
+      "global_improvement": false,
+      "known_tokens_cumulative": 113222,
+      "elapsed_seconds": 958.3839706999715,
+      "source": "prefix_runs/prefix-sp-b65/slots/013/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 15,
+      "parent_id": 3,
+      "node_id": 17,
+      "valid": true,
+      "validation_gap_percent": 4.737509928425833,
+      "global_improvement": false,
+      "known_tokens_cumulative": 120552,
+      "elapsed_seconds": 1003.410543399863,
+      "source": "prefix_runs/prefix-sp-b65/slots/014/candidate.json"
+    },
+    {
+      "block": 65,
+      "proposal": 16,
+      "parent_id": 3,
+      "node_id": 18,
+      "valid": true,
+      "validation_gap_percent": 4.214152493670048,
+      "global_improvement": false,
+      "known_tokens_cumulative": 127470,
+      "elapsed_seconds": 1072.4655249000061,
+      "source": "prefix_runs/prefix-sp-b65/slots/015/candidate.json"
+    }
+  ],
+  "terminal_unknown_request": [
+    {
+      "job_id": "prefix-sp-b65",
+      "call": "016-planner",
+      "status": "sent_unknown",
+      "request_sha256": "43a29d9ec4fad4e75a461bc27bde8377d7650bed05752b9ac86e6d4fe69ffe60",
+      "requested_model": "MiniMax-M3",
+      "sent_utc_if_retained": "2026-09-30T16:06:27.156602+00:00",
+      "known_tokens": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "request_token_reserve": 21302
+    }
+  ],
+  "test_access": false
+}
