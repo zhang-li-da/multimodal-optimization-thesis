@@ -1,0 +1,13 @@
+{
+  "provider": "minimax-cn-coding-plan",
+  "requested_model": "MiniMax-M3",
+  "ok": true,
+  "code": "def priority(f):\n    return -f[\"gap\"]",
+  "usage": {
+    "model": "MiniMax-M3",
+    "input_tokens": 209,
+    "output_tokens": 382,
+    "seconds": 5.3645482999272645,
+    "request_id": "070db26c8103ecdff1fcdb7e7c42b62d"
+  }
+}

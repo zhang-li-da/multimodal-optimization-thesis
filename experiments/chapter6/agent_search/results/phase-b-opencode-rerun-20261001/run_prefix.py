@@ -116,6 +116,22 @@ def prepare(out: Path, old: dict) -> dict:
 
 
 def run(out: Path, manifest: dict) -> dict:
+    # Added after the archived run: a saved halt and a changed execution
+    # revision must never silently dispatch another request.
+    out = Path(out).resolve()
+    if (out / "dispatch" / "halt.json").exists():
+        raise ValueError("Archived run is halted; automatic dispatch is forbidden")
+    expected = digest({k: v for k, v in manifest.items() if k != "manifest_sha256"})
+    if expected != manifest.get("manifest_sha256"):
+        raise ValueError("Run manifest digest mismatch")
+    if manifest.get("source_commit") != git("rev-parse", "HEAD"):
+        raise ValueError("Execution source changed since manifest preparation")
+    for rec in manifest["data"]:
+        path = (out / rec["path"]).resolve()
+        if not path.is_relative_to(out) or rec["role"] != "search" or file_sha(path) != rec["sha256"]:
+            raise ValueError("Frozen search snapshot changed")
+        if "test" in read_json(path):
+            raise ValueError("Test data in search snapshot")
     gate = GlobalPauseGate(2)
     statuses = {}
     for job in manifest["prefix_jobs"]:

@@ -1,0 +1,44 @@
+{
+  "files": {
+    "run_prefix.py": {
+      "sha256": "69a4350a0d9a72bb44893a2101bdad317b0fbc6bf9f4d881c24f51beaa15dc33",
+      "bytes": 12430
+    },
+    "REPORT_ZH.md": {
+      "sha256": "3aa83997de21320864b98ca36514ea7e65d1f20b8e11d4589652962528168b8e",
+      "bytes": 3752
+    },
+    "supplement_audit.py": {
+      "sha256": "53c9f0a26a28a0caadd9ce05fca520d72db3bf7255904c38240e5f2fa56859ac",
+      "bytes": 4633
+    },
+    "verify_delivery.py": {
+      "sha256": "4130c3e02ce899aaac3267c908165f0c4281db0f4c7d524a469edddff6742967",
+      "bytes": 3712
+    },
+    "opencode-rerun-evidence.zip": {
+      "sha256": "62557cbf5fe5a696549904a71582cec7a30f5a5f8425ffb7af6d4f1bfd0d894f",
+      "bytes": 251460
+    },
+    "evidence/HASHES.json": {
+      "sha256": "8cea5b3ff657174795a2b19307aa0f881b25a1fd29836a0207a0195910065c3a",
+      "bytes": 12515
+    },
+    "supplement/PROBE.json": {
+      "sha256": "db0e799b6d81c4762161722cbdbf037f63bd3f98f80844d2125b1eaa405d41c3",
+      "bytes": 341
+    },
+    "supplement/AUDIT.json": {
+      "sha256": "4ac09b0497dc0a4e7b0f1a6b81a2c47dcf11f2034f69766ce503343cd9638a07",
+      "bytes": 3951
+    },
+    "supplement/ARCHIVE_INDEX.json": {
+      "sha256": "934fec963e31ec2c827df2f004f0910fffee8bd6a76e9cf6cd39ffee23dee493",
+      "bytes": 4555
+    },
+    "supplement/acceptance-and-source.zip": {
+      "sha256": "560cc34b6cd06d179c6e959cf6f8fb1442f137e535ef1a1a9dc0b85a77856a88",
+      "bytes": 74466
+    }
+  }
+}
