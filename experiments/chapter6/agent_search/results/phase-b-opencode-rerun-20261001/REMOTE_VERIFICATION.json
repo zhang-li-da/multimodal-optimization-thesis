@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "archive_members_verified": 99,
+  "search_requests": 5,
+  "search_responses": 4,
+  "acceptance_requests": 6,
+  "probe_requests": 1,
+  "all_requests": 12,
+  "known_tokens": 32652,
+  "unknown_requests": 1,
+  "completed_proposals": 2,
+  "ready_checkpoints": 0,
+  "test_executed": false,
+  "new_model_calls": 0,
+  "remote_commit": "3aac49e4a910ac0978ffb405d97be0adb2126d4e"
+}
