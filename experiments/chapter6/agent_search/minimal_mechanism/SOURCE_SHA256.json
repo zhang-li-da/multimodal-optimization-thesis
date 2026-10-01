@@ -41,8 +41,8 @@
     },
     {
       "path": "REPORT_ZH.md",
-      "bytes": 14606,
-      "sha256": "ebbd3e1b4d6c8c2961d4d6bceeefde824cbda1f3b9a0006a22b563572b9bc947"
+      "bytes": 14611,
+      "sha256": "63447fef58db2b56c2b89947e7bc2ac2b79af2d038a83c4bd5d23044376742ce"
     },
     {
       "path": "REVISION_20261001_ZH.md",
@@ -125,5 +125,5 @@
       "sha256": "39536f01173649ae54715d21c0382cafbdbe147e087337981e1292891e7dfce3"
     }
   ],
-  "manifest_sha256": "b55e57cb0ee31c4c87964888c1286ffea7a773768b66720327575923088fb8f2"
+  "manifest_sha256": "cb54f9b8ea7c63d83e83c9f3e3e6ec5662843a819bebc61585d47a7e4cbd67ea"
 }
