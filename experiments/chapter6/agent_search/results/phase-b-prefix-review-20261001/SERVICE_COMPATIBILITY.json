@@ -1,0 +1,32 @@
+{
+  "existing_acceptance_file_sha256": "847c1bcb6536ac1e3c2ffec54943def59081513f248fa925daaadf21d63b4173",
+  "acceptance_time": "2026-09-28T09:30:29.415795+00:00",
+  "requested_model": "MiniMax-M3",
+  "returned_model": "MiniMax-M3",
+  "completed_planner_coder": [
+    3,
+    3
+  ],
+  "existing_prefix_returned_models": [
+    "MiniMax-M3"
+  ],
+  "existing_prefix_endpoints": [
+    "https://api.minimaxi.com/v1/chat/completions"
+  ],
+  "existing_prefix_generation": {
+    "temperature": 0.7,
+    "planner_max_tokens": 16384,
+    "coder_max_tokens": 8192,
+    "timeout_seconds": 180,
+    "wall_deadline_policy": "Before each request, use the absolute task wall deadline; after pacing, provider timeout is min(180 seconds, remaining task time), and no request starts after the deadline.",
+    "source_basis": "S1 full-workload acceptance caps; unchanged MiniMax M3 and generation interface",
+    "eg_e0_contract": "Both arms receive and must return the same four-field strategy_hypothesis schema; EG alone receives deterministic history context."
+  },
+  "new_acceptance_calls": 0,
+  "current_live_service_availability": "not_tested; old success does not resolve sent_unknown",
+  "limitations": [
+    "acceptance summary alone lacks provider and cap fields; prior prefix request/raw-response records provide those",
+    "no current quota assertion",
+    "no claimed immutable provider version"
+  ]
+}

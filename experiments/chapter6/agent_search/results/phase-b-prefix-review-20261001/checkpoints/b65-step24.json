@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "b65-step24",
+  "block": 65,
+  "prefix_step": 24,
+  "status": "preparation_incomplete",
+  "prefix_status": "sent_unknown",
+  "completed_proposals": 16,
+  "path": "checkpoints/b65-step24.json"
+}

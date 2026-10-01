@@ -1,0 +1,182 @@
+{
+  "schema": "publication-file-sha256-v1",
+  "self_excluded": true,
+  "files": {
+    "ARCHIVE_INDEX.json": {
+      "bytes": 61275,
+      "sha256": "ff4a45de3f79bf4ae4d87d369b36b8cbe241b63935da4a83d6b70397ffa04698"
+    },
+    "BLOCK_USAGE_CONFLICT.json": {
+      "bytes": 1370,
+      "sha256": "f2528f2f04effe74355a6247e04b2e15736156bac5adcaefd2a1b3f88edae19e"
+    },
+    "BUDGET_LEDGER.json": {
+      "bytes": 640,
+      "sha256": "7ef9e9bdce990c75e5cfcec8811e93ce7ba6e18ab1118307e471bf579b1e6b53"
+    },
+    "build_review.py": {
+      "bytes": 13496,
+      "sha256": "80a1ebdbda2c035ee71a99624ea2b2b55dd3850174148a3b578cbd8039f8cbfa"
+    },
+    "CALL_AUDIT.json": {
+      "bytes": 20267,
+      "sha256": "e52477c163fd637d6fde5c0b6b8c8f0ef3336861753d7ab1f03dc0c5cc0ca2dd"
+    },
+    "checkpoint_manifest.json": {
+      "bytes": 5463,
+      "sha256": "7b4b4f61af3e56f96e188b2a7a65a7ec4cc1194fb4b8a90858bd4ebc86e03cac"
+    },
+    "checkpoints/b60-step08.json": {
+      "bytes": 212,
+      "sha256": "280018da0e33ee6082a36da2f216278556d5695a022ad361b5249d6c5e667949"
+    },
+    "checkpoints/b60-step24.json": {
+      "bytes": 213,
+      "sha256": "256969c5857123a1a2b360472b22e651c93d47554ccbc9d5d28dcabb3648df70"
+    },
+    "checkpoints/b61-step08.json": {
+      "bytes": 212,
+      "sha256": "1f844850418dc5481f7232e1350bf75a76e010c83e6e4541555267ff630ef788"
+    },
+    "checkpoints/b61-step24.json": {
+      "bytes": 213,
+      "sha256": "9783fa76b5812d002cbce17eddd49b4943f5fbef2f1fa447d265333a92aaae6c"
+    },
+    "checkpoints/b62-step08.json": {
+      "bytes": 212,
+      "sha256": "2b4c9ca2a3446af171ec9d755e47e7327404fcba1d8ccc9aa17987e6e511724e"
+    },
+    "checkpoints/b62-step24.json": {
+      "bytes": 213,
+      "sha256": "4cc9b486db75d13872443c2bcb212fac714cc4614d80096efe3900fd9e104e2b"
+    },
+    "checkpoints/b63-step08.json": {
+      "bytes": 212,
+      "sha256": "0466e99326f332d4f34a5737dbf11bea470742fe5221670d01144ca547c89dd5"
+    },
+    "checkpoints/b63-step24.json": {
+      "bytes": 213,
+      "sha256": "18efefe6f7c49bf37a41068cd07d940e65f8dd3d1578031ea08d2174619d942c"
+    },
+    "checkpoints/b64-step08.json": {
+      "bytes": 212,
+      "sha256": "3da1874769def940103b1f54b1395cbb96b3a50a25c56604230ef82b028e2e51"
+    },
+    "checkpoints/b64-step24.json": {
+      "bytes": 213,
+      "sha256": "8c59698d45fd9d8b71a57435e879345693f9b0c40179900163d03b317f50c61f"
+    },
+    "checkpoints/b65-step08.json": {
+      "bytes": 545355,
+      "sha256": "4e20fb647f49062a6890bf684e8ca6866d2e5017eb24417a04e50f147d6ab498"
+    },
+    "checkpoints/b65-step24.json": {
+      "bytes": 215,
+      "sha256": "0e54ed7791ebc5878ffbbb158871635fd6b18c69224d8564e6576eca3af1047b"
+    },
+    "checkpoints/b66-step08.json": {
+      "bytes": 212,
+      "sha256": "e40ab244fe8127719d3ec26c8c2fd7ebe217a5f9198d7ff75c74bd2c596b9af2"
+    },
+    "checkpoints/b66-step24.json": {
+      "bytes": 213,
+      "sha256": "cdd0f40d72156b860dde326247175c552cdb11acfcb391a996a95bd17598408f"
+    },
+    "checkpoints/b67-step08.json": {
+      "bytes": 212,
+      "sha256": "a3e7a6dc32f7a9b0e196fa378277929de6c41ac6dad7934cea43a79e1a2721d8"
+    },
+    "checkpoints/b67-step24.json": {
+      "bytes": 213,
+      "sha256": "8bd88bcead0640d89f7dc9c3f480255ff21ff643dda46e60550aa1b901cdb925"
+    },
+    "COMMON_SEEDS.json": {
+      "bytes": 1025,
+      "sha256": "46751039b1b0f13c5f0a606bc0246c87476cefcd370df711065c48f45373803e"
+    },
+    "CONTINUATION_REQUEST.json": {
+      "bytes": 98823,
+      "sha256": "c985939309dea34a24c75fb4a7e9e189add2f4a28f126d9f9b024e5ef640fbfb"
+    },
+    "COVERAGE.csv": {
+      "bytes": 2212,
+      "sha256": "7d7d97795dc1ebf8a5b95fa89577e859bace4fb6eb9b04b57f9ab11b17d56b7d"
+    },
+    "COVERAGE_DETAIL.json": {
+      "bytes": 15423,
+      "sha256": "4875351cb4cafc70d0abccfbe31d4e0ff0a6dba3d7293c11431c4953c67aac83"
+    },
+    "DEMO_REAL.json": {
+      "bytes": 6382,
+      "sha256": "f82325345928543aba39af9779c326f8cabee711a71d0e1c5a455f71cf0326cf"
+    },
+    "E0_PROMPT_b65-step08.txt": {
+      "bytes": 2780,
+      "sha256": "f741c96a431c5619c7ee2b037984fe14d45fef0eeac65b51fb04c991f6c47e65"
+    },
+    "EG_HISTORY_PREVIEW_b65-step08.json": {
+      "bytes": 2878,
+      "sha256": "60eb2765eb91dbf04f558e91d1e10a6ab175fe0f84995a48294a3b1708a5326d"
+    },
+    "EG_INPUT_AUDIT.json": {
+      "bytes": 1298,
+      "sha256": "d50a9f31b9344ce411adcecf5f75ac50c02c20466dbd9c42ca2a1af69833e5cb"
+    },
+    "EG_PROMPT_b65-step08.txt": {
+      "bytes": 4881,
+      "sha256": "e5381cb5e714f62bdf139eb30f48369137f8d76a8df8adf5d7df06c566cd3300"
+    },
+    "manifest.json": {
+      "bytes": 69044,
+      "sha256": "b21720c98e90c13cf4ebc4028e2b2a0d8acd0d61fe74679c7eee7873c07a4b61"
+    },
+    "OFFLINE_TESTS.xml": {
+      "bytes": 8722,
+      "sha256": "fe409631e9931477235843ee61388e381e13b2b7286b590a166a75286855952d"
+    },
+    "package_review.py": {
+      "bytes": 3221,
+      "sha256": "30767384727c0b7c401c7ada1d1d4d518a5cf5767a8335479af19c606e73f593"
+    },
+    "PREFIX_AUDIT.json": {
+      "bytes": 14841,
+      "sha256": "bcd8002e70749d98cb287d8f90a8f04ce875179a1865c2e1366d6030dc4ad4dd"
+    },
+    "raw-study.zip": {
+      "bytes": 908287,
+      "sha256": "512e314d59df9bcc00a927f41ebc39e387446d3a2fffde4963b57da421ceb669"
+    },
+    "REMOTE_REVIEW_FILES.json": {
+      "bytes": 5066,
+      "sha256": "6cbebce490c2fd84072a465f76dfa34287c972fb846a5ae06ecea4a1bfe55ffa"
+    },
+    "REPORT_ZH.md": {
+      "bytes": 9893,
+      "sha256": "93cc27bb395db2459801a5fcfc97bdc296c05378e12636c18077a56c497c3cea"
+    },
+    "review-sources.zip": {
+      "bytes": 3704046,
+      "sha256": "49334e3e0c4214146ab3abc98144023e3fc236b689b80273854e3a2a40937c32"
+    },
+    "REVIEW_MANIFEST.json": {
+      "bytes": 2469,
+      "sha256": "5f7c78a4448a1f93c0d257afb9133367bde1ddd6df459781f9c61016d7e4a5e0"
+    },
+    "SERVICE_COMPATIBILITY.json": {
+      "bytes": 1395,
+      "sha256": "48c2aed9cf72f6a5a32b863ca839d9f258adb4851c9e92ab830c425c61e618b9"
+    },
+    "supporting-evidence.zip": {
+      "bytes": 3873638,
+      "sha256": "f636398ec08c531d680c4e263075b0d75269f1a929311612dc8ea80cfa2fa021"
+    },
+    "USER_SCOPE.json": {
+      "bytes": 1002,
+      "sha256": "fc5a1832daae9ad234981ad27b4bdf487ae067e5555df8d7748aaf39f5c63ad0"
+    },
+    "verify_remote.py": {
+      "bytes": 9216,
+      "sha256": "95fc8716522f2dc901fe7cd11a1860200623d2517e4b753c0283103b55c69aaa"
+    }
+  }
+}

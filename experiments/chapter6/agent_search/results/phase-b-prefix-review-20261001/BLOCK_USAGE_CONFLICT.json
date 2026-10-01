@@ -1,0 +1,61 @@
+{
+  "status": "CONFLICT_NO_NEW_BATCH",
+  "basis_commit": "e40ce1023846b293327c94859aafc3f7a58bba97",
+  "remote_updates": [
+    "be06a83",
+    "bac0b9e"
+  ],
+  "prior_manifest_sha256": "29cc55e3443fa84c2156671c9b087585df6c6b224b81ba2d4cafa24421bf0550",
+  "blocks": [
+    {
+      "block": 60,
+      "claimed": true,
+      "actually_called": false,
+      "status": "not_started"
+    },
+    {
+      "block": 61,
+      "claimed": true,
+      "actually_called": false,
+      "status": "not_started"
+    },
+    {
+      "block": 62,
+      "claimed": true,
+      "actually_called": false,
+      "status": "not_started"
+    },
+    {
+      "block": 63,
+      "claimed": true,
+      "actually_called": false,
+      "status": "not_started"
+    },
+    {
+      "block": 64,
+      "claimed": true,
+      "actually_called": false,
+      "status": "not_started"
+    },
+    {
+      "block": 65,
+      "claimed": true,
+      "actually_called": true,
+      "status": "sent_unknown"
+    },
+    {
+      "block": 66,
+      "claimed": true,
+      "actually_called": false,
+      "status": "not_started"
+    },
+    {
+      "block": 67,
+      "claimed": true,
+      "actually_called": false,
+      "status": "not_started"
+    }
+  ],
+  "scan_scope": "Git changes since e40ce10 and both published archives; no Test scores or full repository download",
+  "replacement_or_resumption_created": false
+}

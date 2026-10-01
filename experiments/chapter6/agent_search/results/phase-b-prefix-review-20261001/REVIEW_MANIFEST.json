@@ -1,0 +1,83 @@
+{
+  "schema": "chapter6-prefix-review-not-run-manifest-v1",
+  "status": "offline_review_blocked",
+  "revised_source_commit": "e9195d7e4ecbc8bba6fb64f6c55d1fd7402c0523",
+  "executed_source_commit": "e40ce1023846b293327c94859aafc3f7a58bba97",
+  "executed_manifest_sha256": "29cc55e3443fa84c2156671c9b087585df6c6b224b81ba2d4cafa24421bf0550",
+  "revised_source_index_digest": "cb54f9b8ea7c63d83e83c9f3e3e6ec5662843a819bebc61585d47a7e4cbd67ea",
+  "revised_protocol_file_sha256": "4fa809dc586c8c5def57e8f5228e2b823c9b7f8c9819adcd533f27ff43140c7c",
+  "planned_prefixes": 8,
+  "ready_checkpoints": 1,
+  "planned_checkpoints": 16,
+  "no_new_run_manifest": true,
+  "no_new_model_calls": true,
+  "no_test_access": true,
+  "data_records": [
+    {
+      "block": 60,
+      "role": "search",
+      "path": "data/search-b60.json",
+      "sha256": "374b2701a08c0e73cbad9b2013739864fc87fcb67ff751c37d6ab205a9f05765",
+      "instance_count": 48
+    },
+    {
+      "block": 61,
+      "role": "search",
+      "path": "data/search-b61.json",
+      "sha256": "07516e1300962ccb45dec25c766873d84c1b910bb475612f5104393ae3fb9602",
+      "instance_count": 48
+    },
+    {
+      "block": 62,
+      "role": "search",
+      "path": "data/search-b62.json",
+      "sha256": "e3d9dae31e4efd219d9c7d8a8cbbbe297697c2304ef86925d56a4e400f241793",
+      "instance_count": 48
+    },
+    {
+      "block": 63,
+      "role": "search",
+      "path": "data/search-b63.json",
+      "sha256": "0e0dabfabc8fb3b6b8a4761e98248b511e7697ae539da24d05e524781a4c3096",
+      "instance_count": 48
+    },
+    {
+      "block": 64,
+      "role": "search",
+      "path": "data/search-b64.json",
+      "sha256": "ac0505464fadb533d080747ff9ad21c6ea72425709716113886a9af66bb059ec",
+      "instance_count": 48
+    },
+    {
+      "block": 65,
+      "role": "search",
+      "path": "data/search-b65.json",
+      "sha256": "30a99e04f08b0ac3725ccfa7839e5ac428f5ba919c325f07e9c39f4cacb7bd15",
+      "instance_count": 48
+    },
+    {
+      "block": 66,
+      "role": "search",
+      "path": "data/search-b66.json",
+      "sha256": "9b01409e78df0e7ef215e02585ab68566bcf409da11072f8c5ffd8179013d7fb",
+      "instance_count": 48
+    },
+    {
+      "block": 67,
+      "role": "search",
+      "path": "data/search-b67.json",
+      "sha256": "658d4bc25c4a9fc5a264c55696d3ffee2cc524a19207ca86a2df3e4c6b813964",
+      "instance_count": 48
+    }
+  ],
+  "frozen_prefix_order": [
+    65,
+    63,
+    66,
+    60,
+    67,
+    62,
+    64,
+    61
+  ]
+}

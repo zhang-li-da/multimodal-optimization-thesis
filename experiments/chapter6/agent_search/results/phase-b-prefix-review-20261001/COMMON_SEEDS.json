@@ -1,0 +1,36 @@
+{
+  "source_commit": "e40ce1023846b293327c94859aafc3f7a58bba97",
+  "programs": [
+    {
+      "id": 0,
+      "name": "nearest_neighbor",
+      "tags": [
+        "local_distance"
+      ],
+      "code": "def priority(f):\n    return -f[\"distance\"]\n",
+      "raw_code_sha256": "6171987802a190f299d458683bea0caa168d1b413d30eb6ec7d1e6e99bc059c5"
+    },
+    {
+      "id": 1,
+      "name": "return_aware",
+      "tags": [
+        "local_distance",
+        "return_aware"
+      ],
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+      "raw_code_sha256": "17c20cc6336cf4b18c89e5964d6df9e1e182d62f6a182ec1bc3df0e95007e28b"
+    },
+    {
+      "id": 2,
+      "name": "regret_aware",
+      "tags": [
+        "local_distance",
+        "regret"
+      ],
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+      "raw_code_sha256": "c0dd5a578b60f0175f0035576e61dade51faacc613025314b326b2d3918986da"
+    }
+  ],
+  "model_calls": 0,
+  "new_evaluations": 0
+}

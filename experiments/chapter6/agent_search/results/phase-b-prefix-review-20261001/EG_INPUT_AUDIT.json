@@ -1,0 +1,50 @@
+[
+  {
+    "checkpoint_id": "b65-step08",
+    "source_node_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "summary_program_ids": [
+      3,
+      5,
+      4,
+      1,
+      7
+    ],
+    "nonempty_intents": 5,
+    "hypothesis_field_missing_or_null": 11,
+    "source_node_count": 11,
+    "observed_failures_count": 0,
+    "unseen_tag_count": 0,
+    "same_output_schema": true,
+    "same_model": "MiniMax-M3",
+    "same_provider": "minimax-cn-coding-plan",
+    "same_interface": "def priority(f): -> numeric priority",
+    "EG_history_reaches_actual_planner_builder": true,
+    "E0_excludes_history": true,
+    "system_sha256": "96862ffde0c5ad793fbc4e6bf337e1eac16ff09b5bde9ef04c3cc7438c61eaf2",
+    "prompt_sha256": {
+      "E0": "f741c96a431c5619c7ee2b037984fe14d45fef0eeac65b51fb04c991f6c47e65",
+      "EG": "e5381cb5e714f62bdf139eb30f48369137f8d76a8df8adf5d7df06c566cd3300"
+    },
+    "no_future_nodes": true,
+    "prompt_sent": false,
+    "model_calls": 0,
+    "limitations": [
+      "all strategy_hypothesis fields missing/null",
+      "valid but inferior attempts are not in observed_failures",
+      "top five summary is not a complete attempt history",
+      "no unseen tags does not prove direction coverage"
+    ]
+  }
+]

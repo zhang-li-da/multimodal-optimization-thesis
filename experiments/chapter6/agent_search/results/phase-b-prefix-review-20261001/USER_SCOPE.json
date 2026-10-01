@@ -1,0 +1,44 @@
+{
+  "status": "RECORDED_USER_SCOPE_BLOCKED_BY_EXISTING_BATCH",
+  "date": "2026-10-01",
+  "allowed_stage": "public_prefix",
+  "provider": "minimax-cn-coding-plan",
+  "requested_model": "MiniMax-M3",
+  "blocks": [
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67
+  ],
+  "max_proposals": 192,
+  "max_requests": 384,
+  "max_tokens": 2000000,
+  "per_block": {
+    "proposals": 24,
+    "requests": 48,
+    "tokens": 250000,
+    "wall_seconds": 3600
+  },
+  "concurrency": 1,
+  "automatic_retries": false,
+  "pause_after_consecutive_rate_limits": 2,
+  "forbidden": [
+    "continuation",
+    "C",
+    "D",
+    "E",
+    "Test",
+    "replacement_batch",
+    "resampling",
+    "cross_stage_budget_transfer"
+  ],
+  "existing_batch": "29cc55e3443fa84c2156671c9b087585df6c6b224b81ba2d4cafa24421bf0550",
+  "new_requests": 0,
+  "new_acceptance_requests": 0,
+  "not_an_executable_approval_file": true,
+  "reason": "all requested blocks claimed since e40ce10; halt cannot be silently resumed or replaced"
+}

@@ -1,0 +1,21 @@
+{
+  "requests": 33,
+  "known_tokens_lower_bound": 127470,
+  "unknown_requests": 1,
+  "request_ceiling": 384,
+  "token_ceiling": 2000000,
+  "unspent_request_slots": 351,
+  "token_balance_exact": null,
+  "ceiling_minus_known_tokens_is_only_an_upper_bound": 1872530,
+  "unknown_request_reservation": 21302,
+  "allocation_released_for_further_calls": false,
+  "new_review_requests": 0,
+  "new_review_tokens": 0,
+  "completed_proposals": 16,
+  "evaluation_instances": 912,
+  "task_wall_seconds": 1253.4073335998692,
+  "confirmed_total_tokens": null,
+  "unknown_cost_is_not_zero": true,
+  "continuation_authorized": false,
+  "test_open": false
+}

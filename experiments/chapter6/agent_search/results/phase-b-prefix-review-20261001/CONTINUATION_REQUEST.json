@@ -1,0 +1,3488 @@
+{
+  "status": "REQUEST_ONLY_NOT_AUTHORIZATION",
+  "old_study_manifest_sha256": "29cc55e3443fa84c2156671c9b087585df6c6b224b81ba2d4cafa24421bf0550",
+  "planned_task_rows": 128,
+  "eligible_tasks": 8,
+  "unavailable_tasks": 120,
+  "requested_if_separately_approved": {
+    "proposals": 64,
+    "requests": 128,
+    "tokens": 800000,
+    "serial_wall_seconds": 7200,
+    "search_instance_evaluations": 3072
+  },
+  "current_approved_continuation_requests": 0,
+  "old_maximum": {
+    "tasks": 128,
+    "proposals": 1024,
+    "requests": 2048,
+    "tokens": 12800000
+  },
+  "conditional_branch_estimand": "B-I only on ready branch-eligible checkpoints; currently one block, not confirmatory",
+  "all_state_definition": "on a READY state lacking B, B_policy uses the matched I result without an extra call; keep literal B unavailable. Missing checkpoints stay missing for every arm.",
+  "conditions_before_dispatch": [
+    "separate explicit continuation authorization",
+    "resolve frozen global halt and service integrity in a new reviewed continuation protocol",
+    "bind immutable old prefix provenance to newly frozen continuation source",
+    "decide whether to revise EG summary before freezing; do not alter prefix",
+    "keep final Test closed until all continuation terminal statuses and candidate freezes reviewed"
+  ],
+  "tasks": [
+    {
+      "job_id": "eg-b64-step24-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b64-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "8c59698d45fd9d8b71a57435e879345693f9b0c40179900163d03b317f50c61f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b62-step24-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b62-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "4cc9b486db75d13872443c2bcb212fac714cc4614d80096efe3900fd9e104e2b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b63-step24-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b63-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "18efefe6f7c49bf37a41068cd07d940e65f8dd3d1578031ea08d2174619d942c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b65-step08-r0",
+      "strategy": "B",
+      "checkpoint_id": "b65-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "4e20fb647f49062a6890bf684e8ca6866d2e5017eb24417a04e50f147d6ab498",
+      "feasibility": "ready_but_not_authorized",
+      "eligible_for_future_request": true,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b63-step24-r1",
+      "strategy": "B",
+      "checkpoint_id": "b63-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "18efefe6f7c49bf37a41068cd07d940e65f8dd3d1578031ea08d2174619d942c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b62-step08-r0",
+      "strategy": "B",
+      "checkpoint_id": "b62-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "2b4c9ca2a3446af171ec9d755e47e7327404fcba1d8ccc9aa17987e6e511724e",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b61-step24-r0",
+      "strategy": "B",
+      "checkpoint_id": "b61-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "9783fa76b5812d002cbce17eddd49b4943f5fbef2f1fa447d265333a92aaae6c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b60-step08-r1",
+      "strategy": "B",
+      "checkpoint_id": "b60-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "280018da0e33ee6082a36da2f216278556d5695a022ad361b5249d6c5e667949",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b64-step24-r1",
+      "strategy": "B",
+      "checkpoint_id": "b64-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "8c59698d45fd9d8b71a57435e879345693f9b0c40179900163d03b317f50c61f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b67-step08-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b67-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "a3e7a6dc32f7a9b0e196fa378277929de6c41ac6dad7934cea43a79e1a2721d8",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b60-step24-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b60-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "256969c5857123a1a2b360472b22e651c93d47554ccbc9d5d28dcabb3648df70",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b66-step24-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b66-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "cdd0f40d72156b860dde326247175c552cdb11acfcb391a996a95bd17598408f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b66-step08-r1",
+      "strategy": "B",
+      "checkpoint_id": "b66-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "e40ab244fe8127719d3ec26c8c2fd7ebe217a5f9198d7ff75c74bd2c596b9af2",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b61-step08-r0",
+      "strategy": "B",
+      "checkpoint_id": "b61-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "1f844850418dc5481f7232e1350bf75a76e010c83e6e4541555267ff630ef788",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b61-step08-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b61-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "1f844850418dc5481f7232e1350bf75a76e010c83e6e4541555267ff630ef788",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b67-step08-r1",
+      "strategy": "I",
+      "checkpoint_id": "b67-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "a3e7a6dc32f7a9b0e196fa378277929de6c41ac6dad7934cea43a79e1a2721d8",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b61-step24-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b61-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "9783fa76b5812d002cbce17eddd49b4943f5fbef2f1fa447d265333a92aaae6c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b65-step24-r0",
+      "strategy": "I",
+      "checkpoint_id": "b65-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "0e54ed7791ebc5878ffbbb158871635fd6b18c69224d8564e6576eca3af1047b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b63-step24-r1",
+      "strategy": "I",
+      "checkpoint_id": "b63-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "18efefe6f7c49bf37a41068cd07d940e65f8dd3d1578031ea08d2174619d942c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b61-step24-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b61-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "9783fa76b5812d002cbce17eddd49b4943f5fbef2f1fa447d265333a92aaae6c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b67-step24-r1",
+      "strategy": "I",
+      "checkpoint_id": "b67-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "8bd88bcead0640d89f7dc9c3f480255ff21ff643dda46e60550aa1b901cdb925",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b64-step08-r0",
+      "strategy": "B",
+      "checkpoint_id": "b64-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "3da1874769def940103b1f54b1395cbb96b3a50a25c56604230ef82b028e2e51",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b65-step24-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b65-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "0e54ed7791ebc5878ffbbb158871635fd6b18c69224d8564e6576eca3af1047b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b66-step24-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b66-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "cdd0f40d72156b860dde326247175c552cdb11acfcb391a996a95bd17598408f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b63-step24-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b63-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "18efefe6f7c49bf37a41068cd07d940e65f8dd3d1578031ea08d2174619d942c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b66-step24-r0",
+      "strategy": "B",
+      "checkpoint_id": "b66-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "cdd0f40d72156b860dde326247175c552cdb11acfcb391a996a95bd17598408f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b62-step08-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b62-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "2b4c9ca2a3446af171ec9d755e47e7327404fcba1d8ccc9aa17987e6e511724e",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b64-step08-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b64-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "3da1874769def940103b1f54b1395cbb96b3a50a25c56604230ef82b028e2e51",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b62-step24-r1",
+      "strategy": "I",
+      "checkpoint_id": "b62-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "4cc9b486db75d13872443c2bcb212fac714cc4614d80096efe3900fd9e104e2b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b63-step24-r0",
+      "strategy": "I",
+      "checkpoint_id": "b63-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "18efefe6f7c49bf37a41068cd07d940e65f8dd3d1578031ea08d2174619d942c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b66-step08-r0",
+      "strategy": "B",
+      "checkpoint_id": "b66-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "e40ab244fe8127719d3ec26c8c2fd7ebe217a5f9198d7ff75c74bd2c596b9af2",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b61-step24-r0",
+      "strategy": "I",
+      "checkpoint_id": "b61-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "9783fa76b5812d002cbce17eddd49b4943f5fbef2f1fa447d265333a92aaae6c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b60-step24-r0",
+      "strategy": "B",
+      "checkpoint_id": "b60-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "256969c5857123a1a2b360472b22e651c93d47554ccbc9d5d28dcabb3648df70",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b65-step24-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b65-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "0e54ed7791ebc5878ffbbb158871635fd6b18c69224d8564e6576eca3af1047b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b66-step08-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b66-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "e40ab244fe8127719d3ec26c8c2fd7ebe217a5f9198d7ff75c74bd2c596b9af2",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b62-step08-r1",
+      "strategy": "I",
+      "checkpoint_id": "b62-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "2b4c9ca2a3446af171ec9d755e47e7327404fcba1d8ccc9aa17987e6e511724e",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b63-step08-r0",
+      "strategy": "I",
+      "checkpoint_id": "b63-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "0466e99326f332d4f34a5737dbf11bea470742fe5221670d01144ca547c89dd5",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b67-step24-r0",
+      "strategy": "I",
+      "checkpoint_id": "b67-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "8bd88bcead0640d89f7dc9c3f480255ff21ff643dda46e60550aa1b901cdb925",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b67-step24-r0",
+      "strategy": "B",
+      "checkpoint_id": "b67-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "8bd88bcead0640d89f7dc9c3f480255ff21ff643dda46e60550aa1b901cdb925",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b62-step24-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b62-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "4cc9b486db75d13872443c2bcb212fac714cc4614d80096efe3900fd9e104e2b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b60-step08-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b60-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "280018da0e33ee6082a36da2f216278556d5695a022ad361b5249d6c5e667949",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b65-step24-r1",
+      "strategy": "B",
+      "checkpoint_id": "b65-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "0e54ed7791ebc5878ffbbb158871635fd6b18c69224d8564e6576eca3af1047b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b66-step24-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b66-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "cdd0f40d72156b860dde326247175c552cdb11acfcb391a996a95bd17598408f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b67-step24-r1",
+      "strategy": "B",
+      "checkpoint_id": "b67-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "8bd88bcead0640d89f7dc9c3f480255ff21ff643dda46e60550aa1b901cdb925",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b61-step24-r1",
+      "strategy": "B",
+      "checkpoint_id": "b61-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "9783fa76b5812d002cbce17eddd49b4943f5fbef2f1fa447d265333a92aaae6c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b66-step08-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b66-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "e40ab244fe8127719d3ec26c8c2fd7ebe217a5f9198d7ff75c74bd2c596b9af2",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b66-step08-r1",
+      "strategy": "I",
+      "checkpoint_id": "b66-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "e40ab244fe8127719d3ec26c8c2fd7ebe217a5f9198d7ff75c74bd2c596b9af2",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b62-step24-r0",
+      "strategy": "B",
+      "checkpoint_id": "b62-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "4cc9b486db75d13872443c2bcb212fac714cc4614d80096efe3900fd9e104e2b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b66-step08-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b66-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "e40ab244fe8127719d3ec26c8c2fd7ebe217a5f9198d7ff75c74bd2c596b9af2",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b66-step08-r0",
+      "strategy": "I",
+      "checkpoint_id": "b66-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "e40ab244fe8127719d3ec26c8c2fd7ebe217a5f9198d7ff75c74bd2c596b9af2",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b62-step24-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b62-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "4cc9b486db75d13872443c2bcb212fac714cc4614d80096efe3900fd9e104e2b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b61-step08-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b61-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "1f844850418dc5481f7232e1350bf75a76e010c83e6e4541555267ff630ef788",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b63-step24-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b63-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "18efefe6f7c49bf37a41068cd07d940e65f8dd3d1578031ea08d2174619d942c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b65-step08-r1",
+      "strategy": "I",
+      "checkpoint_id": "b65-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "4e20fb647f49062a6890bf684e8ca6866d2e5017eb24417a04e50f147d6ab498",
+      "feasibility": "ready_but_not_authorized",
+      "eligible_for_future_request": true,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b65-step08-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b65-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "4e20fb647f49062a6890bf684e8ca6866d2e5017eb24417a04e50f147d6ab498",
+      "feasibility": "ready_but_not_authorized",
+      "eligible_for_future_request": true,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b67-step24-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b67-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "8bd88bcead0640d89f7dc9c3f480255ff21ff643dda46e60550aa1b901cdb925",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b67-step24-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b67-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "8bd88bcead0640d89f7dc9c3f480255ff21ff643dda46e60550aa1b901cdb925",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b60-step08-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b60-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "280018da0e33ee6082a36da2f216278556d5695a022ad361b5249d6c5e667949",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b64-step08-r0",
+      "strategy": "I",
+      "checkpoint_id": "b64-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "3da1874769def940103b1f54b1395cbb96b3a50a25c56604230ef82b028e2e51",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b66-step24-r0",
+      "strategy": "I",
+      "checkpoint_id": "b66-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "cdd0f40d72156b860dde326247175c552cdb11acfcb391a996a95bd17598408f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b67-step08-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b67-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "a3e7a6dc32f7a9b0e196fa378277929de6c41ac6dad7934cea43a79e1a2721d8",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b64-step08-r1",
+      "strategy": "I",
+      "checkpoint_id": "b64-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "3da1874769def940103b1f54b1395cbb96b3a50a25c56604230ef82b028e2e51",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b61-step24-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b61-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "9783fa76b5812d002cbce17eddd49b4943f5fbef2f1fa447d265333a92aaae6c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b64-step24-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b64-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "8c59698d45fd9d8b71a57435e879345693f9b0c40179900163d03b317f50c61f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b65-step24-r1",
+      "strategy": "I",
+      "checkpoint_id": "b65-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "0e54ed7791ebc5878ffbbb158871635fd6b18c69224d8564e6576eca3af1047b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b64-step08-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b64-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "3da1874769def940103b1f54b1395cbb96b3a50a25c56604230ef82b028e2e51",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b63-step08-r0",
+      "strategy": "B",
+      "checkpoint_id": "b63-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "0466e99326f332d4f34a5737dbf11bea470742fe5221670d01144ca547c89dd5",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b60-step24-r1",
+      "strategy": "B",
+      "checkpoint_id": "b60-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "256969c5857123a1a2b360472b22e651c93d47554ccbc9d5d28dcabb3648df70",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b63-step08-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b63-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "0466e99326f332d4f34a5737dbf11bea470742fe5221670d01144ca547c89dd5",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b64-step24-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b64-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "8c59698d45fd9d8b71a57435e879345693f9b0c40179900163d03b317f50c61f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b62-step24-r1",
+      "strategy": "B",
+      "checkpoint_id": "b62-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "4cc9b486db75d13872443c2bcb212fac714cc4614d80096efe3900fd9e104e2b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b65-step24-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b65-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "0e54ed7791ebc5878ffbbb158871635fd6b18c69224d8564e6576eca3af1047b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b64-step08-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b64-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "3da1874769def940103b1f54b1395cbb96b3a50a25c56604230ef82b028e2e51",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b62-step08-r1",
+      "strategy": "B",
+      "checkpoint_id": "b62-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "2b4c9ca2a3446af171ec9d755e47e7327404fcba1d8ccc9aa17987e6e511724e",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b60-step08-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b60-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "280018da0e33ee6082a36da2f216278556d5695a022ad361b5249d6c5e667949",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b63-step08-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b63-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "0466e99326f332d4f34a5737dbf11bea470742fe5221670d01144ca547c89dd5",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b60-step24-r1",
+      "strategy": "I",
+      "checkpoint_id": "b60-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "256969c5857123a1a2b360472b22e651c93d47554ccbc9d5d28dcabb3648df70",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b62-step24-r0",
+      "strategy": "I",
+      "checkpoint_id": "b62-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "4cc9b486db75d13872443c2bcb212fac714cc4614d80096efe3900fd9e104e2b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b60-step08-r0",
+      "strategy": "I",
+      "checkpoint_id": "b60-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "280018da0e33ee6082a36da2f216278556d5695a022ad361b5249d6c5e667949",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b61-step24-r1",
+      "strategy": "I",
+      "checkpoint_id": "b61-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "9783fa76b5812d002cbce17eddd49b4943f5fbef2f1fa447d265333a92aaae6c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b64-step24-r0",
+      "strategy": "B",
+      "checkpoint_id": "b64-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "8c59698d45fd9d8b71a57435e879345693f9b0c40179900163d03b317f50c61f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b62-step08-r0",
+      "strategy": "I",
+      "checkpoint_id": "b62-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "2b4c9ca2a3446af171ec9d755e47e7327404fcba1d8ccc9aa17987e6e511724e",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b60-step24-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b60-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "256969c5857123a1a2b360472b22e651c93d47554ccbc9d5d28dcabb3648df70",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b60-step24-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b60-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "256969c5857123a1a2b360472b22e651c93d47554ccbc9d5d28dcabb3648df70",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b65-step08-r1",
+      "strategy": "B",
+      "checkpoint_id": "b65-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "4e20fb647f49062a6890bf684e8ca6866d2e5017eb24417a04e50f147d6ab498",
+      "feasibility": "ready_but_not_authorized",
+      "eligible_for_future_request": true,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b67-step08-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b67-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "a3e7a6dc32f7a9b0e196fa378277929de6c41ac6dad7934cea43a79e1a2721d8",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b61-step08-r0",
+      "strategy": "I",
+      "checkpoint_id": "b61-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "1f844850418dc5481f7232e1350bf75a76e010c83e6e4541555267ff630ef788",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b63-step08-r1",
+      "strategy": "I",
+      "checkpoint_id": "b63-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "0466e99326f332d4f34a5737dbf11bea470742fe5221670d01144ca547c89dd5",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b66-step24-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b66-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "cdd0f40d72156b860dde326247175c552cdb11acfcb391a996a95bd17598408f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b65-step08-r0",
+      "strategy": "I",
+      "checkpoint_id": "b65-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "4e20fb647f49062a6890bf684e8ca6866d2e5017eb24417a04e50f147d6ab498",
+      "feasibility": "ready_but_not_authorized",
+      "eligible_for_future_request": true,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b67-step08-r1",
+      "strategy": "B",
+      "checkpoint_id": "b67-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "a3e7a6dc32f7a9b0e196fa378277929de6c41ac6dad7934cea43a79e1a2721d8",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b62-step24-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b62-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "4cc9b486db75d13872443c2bcb212fac714cc4614d80096efe3900fd9e104e2b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b63-step08-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b63-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "0466e99326f332d4f34a5737dbf11bea470742fe5221670d01144ca547c89dd5",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b64-step24-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b64-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "8c59698d45fd9d8b71a57435e879345693f9b0c40179900163d03b317f50c61f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b67-step08-r0",
+      "strategy": "B",
+      "checkpoint_id": "b67-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "a3e7a6dc32f7a9b0e196fa378277929de6c41ac6dad7934cea43a79e1a2721d8",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b60-step08-r0",
+      "strategy": "B",
+      "checkpoint_id": "b60-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "280018da0e33ee6082a36da2f216278556d5695a022ad361b5249d6c5e667949",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b61-step08-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b61-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "1f844850418dc5481f7232e1350bf75a76e010c83e6e4541555267ff630ef788",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b65-step24-r0",
+      "strategy": "B",
+      "checkpoint_id": "b65-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "0e54ed7791ebc5878ffbbb158871635fd6b18c69224d8564e6576eca3af1047b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b65-step24-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b65-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "0e54ed7791ebc5878ffbbb158871635fd6b18c69224d8564e6576eca3af1047b",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b64-step08-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b64-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "3da1874769def940103b1f54b1395cbb96b3a50a25c56604230ef82b028e2e51",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b65-step08-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b65-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "4e20fb647f49062a6890bf684e8ca6866d2e5017eb24417a04e50f147d6ab498",
+      "feasibility": "ready_but_not_authorized",
+      "eligible_for_future_request": true,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b62-step08-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b62-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "2b4c9ca2a3446af171ec9d755e47e7327404fcba1d8ccc9aa17987e6e511724e",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b61-step08-r1",
+      "strategy": "I",
+      "checkpoint_id": "b61-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "1f844850418dc5481f7232e1350bf75a76e010c83e6e4541555267ff630ef788",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b66-step24-r1",
+      "strategy": "I",
+      "checkpoint_id": "b66-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "cdd0f40d72156b860dde326247175c552cdb11acfcb391a996a95bd17598408f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b67-step08-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b67-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "a3e7a6dc32f7a9b0e196fa378277929de6c41ac6dad7934cea43a79e1a2721d8",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b67-step24-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b67-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "8bd88bcead0640d89f7dc9c3f480255ff21ff643dda46e60550aa1b901cdb925",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b63-step24-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b63-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "18efefe6f7c49bf37a41068cd07d940e65f8dd3d1578031ea08d2174619d942c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b66-step24-r1",
+      "strategy": "B",
+      "checkpoint_id": "b66-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "cdd0f40d72156b860dde326247175c552cdb11acfcb391a996a95bd17598408f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b64-step24-r0",
+      "strategy": "I",
+      "checkpoint_id": "b64-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "8c59698d45fd9d8b71a57435e879345693f9b0c40179900163d03b317f50c61f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b62-step08-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b62-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "2b4c9ca2a3446af171ec9d755e47e7327404fcba1d8ccc9aa17987e6e511724e",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b66-step08-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b66-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 66,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "e40ab244fe8127719d3ec26c8c2fd7ebe217a5f9198d7ff75c74bd2c596b9af2",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b61-step08-r1",
+      "strategy": "B",
+      "checkpoint_id": "b61-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "1f844850418dc5481f7232e1350bf75a76e010c83e6e4541555267ff630ef788",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b67-step08-r0",
+      "strategy": "I",
+      "checkpoint_id": "b67-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "a3e7a6dc32f7a9b0e196fa378277929de6c41ac6dad7934cea43a79e1a2721d8",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b67-step24-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b67-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 67,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "8bd88bcead0640d89f7dc9c3f480255ff21ff643dda46e60550aa1b901cdb925",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b60-step24-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b60-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "256969c5857123a1a2b360472b22e651c93d47554ccbc9d5d28dcabb3648df70",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b62-step08-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b62-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 62,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "2b4c9ca2a3446af171ec9d755e47e7327404fcba1d8ccc9aa17987e6e511724e",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b60-step24-r0",
+      "strategy": "I",
+      "checkpoint_id": "b60-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "256969c5857123a1a2b360472b22e651c93d47554ccbc9d5d28dcabb3648df70",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b64-step24-r1",
+      "strategy": "I",
+      "checkpoint_id": "b64-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 24,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "8c59698d45fd9d8b71a57435e879345693f9b0c40179900163d03b317f50c61f",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b61-step24-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b61-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "9783fa76b5812d002cbce17eddd49b4943f5fbef2f1fa447d265333a92aaae6c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "i-b60-step08-r1",
+      "strategy": "I",
+      "checkpoint_id": "b60-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "280018da0e33ee6082a36da2f216278556d5695a022ad361b5249d6c5e667949",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b60-step08-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b60-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 60,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "280018da0e33ee6082a36da2f216278556d5695a022ad361b5249d6c5e667949",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b61-step08-r0",
+      "strategy": "EG",
+      "checkpoint_id": "b61-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 61,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "1f844850418dc5481f7232e1350bf75a76e010c83e6e4541555267ff630ef788",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b64-step08-r1",
+      "strategy": "B",
+      "checkpoint_id": "b64-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 64,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "3da1874769def940103b1f54b1395cbb96b3a50a25c56604230ef82b028e2e51",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b63-step24-r0",
+      "strategy": "B",
+      "checkpoint_id": "b63-step24",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 24,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "18efefe6f7c49bf37a41068cd07d940e65f8dd3d1578031ea08d2174619d942c",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "b-b63-step08-r1",
+      "strategy": "B",
+      "checkpoint_id": "b63-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "0466e99326f332d4f34a5737dbf11bea470742fe5221670d01144ca547c89dd5",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b65-step08-r1",
+      "strategy": "E0",
+      "checkpoint_id": "b65-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "4e20fb647f49062a6890bf684e8ca6866d2e5017eb24417a04e50f147d6ab498",
+      "feasibility": "ready_but_not_authorized",
+      "eligible_for_future_request": true,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "e0-b65-step08-r0",
+      "strategy": "E0",
+      "checkpoint_id": "b65-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 65,
+      "public_prefix_steps": 8,
+      "repetition": 0,
+      "steps": 8,
+      "checkpoint_sha256": "4e20fb647f49062a6890bf684e8ca6866d2e5017eb24417a04e50f147d6ab498",
+      "feasibility": "ready_but_not_authorized",
+      "eligible_for_future_request": true,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    },
+    {
+      "job_id": "eg-b63-step08-r1",
+      "strategy": "EG",
+      "checkpoint_id": "b63-step08",
+      "provider": "minimax-cn-coding-plan",
+      "model": "MiniMax-M3",
+      "data_block": 63,
+      "public_prefix_steps": 8,
+      "repetition": 1,
+      "steps": 8,
+      "checkpoint_sha256": "0466e99326f332d4f34a5737dbf11bea470742fe5221670d01144ca547c89dd5",
+      "feasibility": "checkpoint_unavailable",
+      "eligible_for_future_request": false,
+      "authorized": false,
+      "candidate_freeze_steps": [
+        4,
+        8
+      ],
+      "caps_if_approved": {
+        "proposals": 8,
+        "requests": 16,
+        "tokens": 100000,
+        "wall_seconds": 900
+      },
+      "planned_proposals_now": 0,
+      "planned_requests_now": 0
+    }
+  ]
+}
