@@ -210,7 +210,10 @@ def main():
     parser.add_argument("--prepare-only", action="store_true")
     args = parser.parse_args()
     old = load_old()
-    manifest = prepare(args.output, old)
+    manifest_path = args.output / "RUN_MANIFEST.json"
+    manifest = read_json(manifest_path) if manifest_path.exists() else prepare(args.output, old)
+    if manifest.get("historical_parent_manifest_sha256") != old["manifest_sha256"]:
+        raise ValueError("rerun manifest is bound to a different historical parent")
     if args.prepare_only:
         print(json.dumps({"prepared": True, "manifest_sha256": manifest["manifest_sha256"]}))
         return
