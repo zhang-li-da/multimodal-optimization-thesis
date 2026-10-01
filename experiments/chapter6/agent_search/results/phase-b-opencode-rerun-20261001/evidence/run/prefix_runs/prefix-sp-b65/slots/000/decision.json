@@ -1,0 +1,87 @@
+{
+  "decision": {
+    "action": "develop",
+    "adaptive_unit_id": null,
+    "allocation": {
+      "branch_parent_id": null,
+      "created_order": null,
+      "direction_id": null,
+      "lineage_id": null,
+      "protected": false,
+      "protection_remaining_before": null
+    },
+    "evidence": {
+      "adaptive_reward_means_per_1000_tokens": null,
+      "available_branch_ids": [],
+      "available_protected_direction_ids": [],
+      "budget_fraction": 0.0,
+      "multi_branch_protection_slot": false,
+      "p_develop": 1.0,
+      "pool_size": 0,
+      "protected_slot_forced": false,
+      "rng_draw": null
+    },
+    "intended_action": "develop",
+    "parent": {
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+      "failure_type": null,
+      "family_loss": {
+        "clustered": 0.05248794459544113,
+        "grid": 0.03636672030153156,
+        "uniform": 0.08699590308493459
+      },
+      "id": 1,
+      "intent": "shared hand-written seed: return_aware",
+      "loss": 0.05861685599396909,
+      "tags": [
+        "local_distance",
+        "return_aware"
+      ],
+      "trajectory_values": [
+        [
+          3.1107935056245264,
+          3.1107935056245264
+        ],
+        [
+          4.121671245193937,
+          3.955439939390491,
+          3.955439939390491
+        ]
+      ],
+      "valid": true
+    },
+    "policy": "SP",
+    "reference": {
+      "code": "def priority(f):\n    return -f[\"distance\"]\n",
+      "failure_type": null,
+      "family_loss": {
+        "clustered": 0.06911220561843047,
+        "grid": 0.18472403465165388,
+        "uniform": 0.09693387740162528
+      },
+      "id": 0,
+      "intent": "shared hand-written seed: nearest_neighbor",
+      "loss": 0.11692337255723653,
+      "tags": [
+        "local_distance"
+      ],
+      "trajectory_values": [
+        [
+          3.2431557594683835,
+          3.241534140570463,
+          3.241534140570463
+        ],
+        [
+          4.441259510628037,
+          4.368636121252154,
+          4.184371120663922,
+          4.184371120663922
+        ]
+      ],
+      "valid": true
+    },
+    "step": 0,
+    "target": "local_distance"
+  },
+  "policy": "SP"
+}

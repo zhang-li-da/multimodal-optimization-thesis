@@ -1,0 +1,11 @@
+{
+  "job_id": "prefix-sp-b65",
+  "status": "infrastructure_incomplete",
+  "service_pause": {
+    "pause": true,
+    "category": null,
+    "consecutive_rate_limits": 0,
+    "reason": "unclassified or non-rate-limit provider interruption"
+  },
+  "utc": "2026-10-01T16:24:34.919983+00:00"
+}

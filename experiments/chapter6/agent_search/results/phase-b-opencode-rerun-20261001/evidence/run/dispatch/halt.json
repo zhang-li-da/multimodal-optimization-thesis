@@ -1,0 +1,12 @@
+{
+  "status": "paused",
+  "after_job": "prefix-sp-b65",
+  "reason": {
+    "pause": true,
+    "category": null,
+    "consecutive_rate_limits": 0,
+    "reason": "unclassified or non-rate-limit provider interruption"
+  },
+  "new_model_calls": 0,
+  "no_automatic_retry": true
+}

@@ -1,0 +1,18 @@
+{
+  "statuses": {
+    "prefix-sp-b65": "infrastructure_incomplete",
+    "prefix-sp-b63": "not_started",
+    "prefix-sp-b66": "not_started",
+    "prefix-sp-b60": "not_started",
+    "prefix-sp-b67": "not_started",
+    "prefix-sp-b62": "not_started",
+    "prefix-sp-b64": "not_started",
+    "prefix-sp-b61": "not_started"
+  },
+  "completed_proposals": 2,
+  "requests": 5,
+  "known_tokens": 15152,
+  "unknown_requests": 1,
+  "test_access": false,
+  "new_model_calls": 5
+}

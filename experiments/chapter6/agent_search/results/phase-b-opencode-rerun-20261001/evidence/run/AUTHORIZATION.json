@@ -1,0 +1,17 @@
+{
+  "schema": "chapter6-opencode-user-authorization-v1",
+  "status": "approved",
+  "basis": "latest user instruction authorizing local OpenCode MiniMax-M3 complete experiment",
+  "approved_stage": "public_prefix_SP_only",
+  "provider": "minimax-cn-coding-plan",
+  "requested_model": "MiniMax-M3",
+  "max_requests": 384,
+  "max_tokens": 2000000,
+  "max_concurrency": 1,
+  "automatic_retries": false,
+  "test_authorized": false,
+  "continuation_authorized": false,
+  "historical_parent_manifest_sha256": "29cc55e3443fa84c2156671c9b087585df6c6b224b81ba2d4cafa24421bf0550",
+  "new_run_manifest_sha256": "e2552ee4cc51535da52a8e05e8d640568e0613da871c609c08ea2edcf7fd5dd2",
+  "sha256": "fb733507007b2b78c57c1ccc44e90d78b04389d9973e049ab3b568ea05cc09ec"
+}

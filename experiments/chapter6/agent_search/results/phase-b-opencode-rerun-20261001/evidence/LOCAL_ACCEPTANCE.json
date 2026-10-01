@@ -1,0 +1,127 @@
+{
+  "schema": "chapter6-minimax-workload-acceptance-v1",
+  "status": "passed",
+  "requested_model": "MiniMax-M3",
+  "returned_model": "MiniMax-M3",
+  "workload": {
+    "planner_planned": 3,
+    "coder_planned": 3,
+    "planner_responses": 3,
+    "coder_responses": 3,
+    "planner_completed": 3,
+    "coder_completed": 3,
+    "coder_bounded_executions": 3
+  },
+  "coder_executions": [
+    {
+      "step": 0,
+      "program_sha256": "e9d5a1236baf40d48b80b741c1da3f5bbf4069277c6c755288329cd999c1be31",
+      "valid": true,
+      "fixture_id": "uniform-918001",
+      "feature_calls": 91
+    },
+    {
+      "step": 1,
+      "program_sha256": "1a6119fa4d4f92460903f60f00c3b4438b05ab8514e1c91b8ad34bb31704776c",
+      "valid": true,
+      "fixture_id": "uniform-918001",
+      "feature_calls": 91
+    },
+    {
+      "step": 2,
+      "program_sha256": "b13c3ff61472c49ff0c6d9f873e0c3a823152d5efce53f156db6916380e5ad3a",
+      "valid": true,
+      "fixture_id": "uniform-918001",
+      "feature_calls": 91
+    }
+  ],
+  "usage": {
+    "calls": [
+      {
+        "step": 0,
+        "stage": "coder",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 723,
+        "output_tokens": 1204,
+        "usage_complete": true,
+        "seconds": 21.725741599919274,
+        "request_id": "070db803055522197311155cd090ad62",
+        "diagnostics": null
+      },
+      {
+        "step": 0,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 705,
+        "output_tokens": 2620,
+        "usage_complete": true,
+        "seconds": 81.36771719995886,
+        "request_id": "070db7b1a2a4a35017f2540866ad2b9a",
+        "diagnostics": null
+      },
+      {
+        "step": 1,
+        "stage": "coder",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 678,
+        "output_tokens": 2250,
+        "usage_complete": true,
+        "seconds": 32.863434000173584,
+        "request_id": "070db84b10a7339a1d196bdfa49e1f1b",
+        "diagnostics": null
+      },
+      {
+        "step": 1,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 705,
+        "output_tokens": 3197,
+        "usage_complete": true,
+        "seconds": 50.15178989991546,
+        "request_id": "070db8197d1ef77e8c69ebc6a4af949e",
+        "diagnostics": null
+      },
+      {
+        "step": 2,
+        "stage": "coder",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 752,
+        "output_tokens": 1137,
+        "usage_complete": true,
+        "seconds": 19.729065699968487,
+        "request_id": "070db890b189a586c5f643fe42e04dc1",
+        "diagnostics": null
+      },
+      {
+        "step": 2,
+        "stage": "planner",
+        "requested_model": "MiniMax-M3",
+        "status": "response_persisted",
+        "returned_model": "MiniMax-M3",
+        "input_tokens": 705,
+        "output_tokens": 2233,
+        "usage_complete": true,
+        "seconds": 35.98618180002086,
+        "request_id": "070db86cf69177f39d593bf3d3753309",
+        "diagnostics": null
+      }
+    ],
+    "call_attempts": 6,
+    "usage_complete": true,
+    "known_tokens": 16909,
+    "total_tokens": 16909
+  },
+  "failures": [],
+  "new_search_runs": 0,
+  "utc": "2026-10-01T16:09:07.969636+00:00"
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "chapter6-opencode-rerun-checkpoints-v1",
+  "run_manifest_sha256": "e2552ee4cc51535da52a8e05e8d640568e0613da871c609c08ea2edcf7fd5dd2",
+  "records": [
+    {
+      "checkpoint_id": "b65-step08",
+      "block": 65,
+      "prefix_step": 8,
+      "path": "checkpoints/b65-step08.json",
+      "sha256": "71a51590cc059099abff8025058a977cec554dd2f7e6e62aae646806b04017a3",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b65-step24",
+      "block": 65,
+      "prefix_step": 24,
+      "path": "checkpoints/b65-step24.json",
+      "sha256": "6c949a1622b60b3ab097e609ead038a8038ea2466d95a37f86056ab58eed7f25",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b63-step08",
+      "block": 63,
+      "prefix_step": 8,
+      "path": "checkpoints/b63-step08.json",
+      "sha256": "ecfa2d7ac55d1e76bac69597a8a5db8cdd3418239205ca99aa2e08062f33d2d9",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b63-step24",
+      "block": 63,
+      "prefix_step": 24,
+      "path": "checkpoints/b63-step24.json",
+      "sha256": "c57c1f6b6e64c56c175fbb47664066cd71f0c3b452b618b1c388a5cb9f1335e0",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b66-step08",
+      "block": 66,
+      "prefix_step": 8,
+      "path": "checkpoints/b66-step08.json",
+      "sha256": "fd81c22abc0d5c2289cbb6fdf8d3bab223d70a3acf2143620d47afe5296a982d",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b66-step24",
+      "block": 66,
+      "prefix_step": 24,
+      "path": "checkpoints/b66-step24.json",
+      "sha256": "6d9d87459a12923505a8027ea2ff277dcf471f2c1073bc57693a8cc0b8515c4a",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b60-step08",
+      "block": 60,
+      "prefix_step": 8,
+      "path": "checkpoints/b60-step08.json",
+      "sha256": "18aca55878114c7c79cf63e11a38fbf3c87d30ee2fbc9d9edf90a2ee84226a3a",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b60-step24",
+      "block": 60,
+      "prefix_step": 24,
+      "path": "checkpoints/b60-step24.json",
+      "sha256": "cf7e1ce921b15369163e6a2651d99136201f3a76cd4b2a79a6c0851682d8c13f",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b67-step08",
+      "block": 67,
+      "prefix_step": 8,
+      "path": "checkpoints/b67-step08.json",
+      "sha256": "f5ea4c0165b2863bbcb1a6436fdb3ab05fee5130905ff19fec05a54ea1e47bb8",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b67-step24",
+      "block": 67,
+      "prefix_step": 24,
+      "path": "checkpoints/b67-step24.json",
+      "sha256": "9ccf478bedda77509ed02f1a073b5b3cc83a55935e848d8b1840e7ce5a5bef18",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b62-step08",
+      "block": 62,
+      "prefix_step": 8,
+      "path": "checkpoints/b62-step08.json",
+      "sha256": "dd7749c2440c92ed834bc03d0362c9aab8fbfeaedbcaba67b1c1c36b9f647a67",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b62-step24",
+      "block": 62,
+      "prefix_step": 24,
+      "path": "checkpoints/b62-step24.json",
+      "sha256": "277186c7fca8b6a49fcddf3b37d0f1acbedbda51502e027da1a5c54833b59bef",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b64-step08",
+      "block": 64,
+      "prefix_step": 8,
+      "path": "checkpoints/b64-step08.json",
+      "sha256": "7d6bf4f2d194bcbff53175e309bfe8e7fb4e6d5ffc32709a13a2582b1c0d8534",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b64-step24",
+      "block": 64,
+      "prefix_step": 24,
+      "path": "checkpoints/b64-step24.json",
+      "sha256": "2dad8827f1e4000d12a41583aacc5c1975ac50e894b0569bea5042bb7a741227",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b61-step08",
+      "block": 61,
+      "prefix_step": 8,
+      "path": "checkpoints/b61-step08.json",
+      "sha256": "09e7848db8c1134bf9d2734561be1b9c3fd3cdc2808a3306bc6940dd010a12ed",
+      "status": "preparation_incomplete"
+    },
+    {
+      "checkpoint_id": "b61-step24",
+      "block": 61,
+      "prefix_step": 24,
+      "path": "checkpoints/b61-step24.json",
+      "sha256": "c5a957fde17b6a6e3b68fae1ba789d5c99f6bac30b326ce39ef3268a3a01d2a0",
+      "status": "preparation_incomplete"
+    }
+  ],
+  "test_access": false,
+  "created_utc": "2026-10-01T16:24:35.053307+00:00",
+  "checkpoint_manifest_sha256": "afc7425ce2c27062b573ce9da184a2859caa4907326b3b49009bee686e4d64ba"
+}

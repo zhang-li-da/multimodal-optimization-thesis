@@ -1,0 +1,93 @@
+{
+  "title": "阶段 B 本地 OpenCode MiniMax-M3 公共前缀重跑（中断批次）",
+  "status": "infrastructure_incomplete",
+  "new_model_calls": 5,
+  "provider": "minimax-cn-coding-plan",
+  "requested_model": "MiniMax-M3",
+  "historical_parent_manifest_sha256": "29cc55e3443fa84c2156671c9b087585df6c6b224b81ba2d4cafa24421bf0550",
+  "run_manifest_sha256": "e2552ee4cc51535da52a8e05e8d640568e0613da871c609c08ea2edcf7fd5dd2",
+  "jobs": [
+    {
+      "job_id": "prefix-sp-b65",
+      "status": "infrastructure_incomplete",
+      "completed_proposals": 2,
+      "requests": 5,
+      "known_tokens": 15152,
+      "usage_complete": false,
+      "unknown_requests": 1
+    },
+    {
+      "job_id": "prefix-sp-b63",
+      "status": "not_started",
+      "completed_proposals": 0,
+      "requests": 0,
+      "known_tokens": 0,
+      "usage_complete": null,
+      "unknown_requests": 0
+    },
+    {
+      "job_id": "prefix-sp-b66",
+      "status": "not_started",
+      "completed_proposals": 0,
+      "requests": 0,
+      "known_tokens": 0,
+      "usage_complete": null,
+      "unknown_requests": 0
+    },
+    {
+      "job_id": "prefix-sp-b60",
+      "status": "not_started",
+      "completed_proposals": 0,
+      "requests": 0,
+      "known_tokens": 0,
+      "usage_complete": null,
+      "unknown_requests": 0
+    },
+    {
+      "job_id": "prefix-sp-b67",
+      "status": "not_started",
+      "completed_proposals": 0,
+      "requests": 0,
+      "known_tokens": 0,
+      "usage_complete": null,
+      "unknown_requests": 0
+    },
+    {
+      "job_id": "prefix-sp-b62",
+      "status": "not_started",
+      "completed_proposals": 0,
+      "requests": 0,
+      "known_tokens": 0,
+      "usage_complete": null,
+      "unknown_requests": 0
+    },
+    {
+      "job_id": "prefix-sp-b64",
+      "status": "not_started",
+      "completed_proposals": 0,
+      "requests": 0,
+      "known_tokens": 0,
+      "usage_complete": null,
+      "unknown_requests": 0
+    },
+    {
+      "job_id": "prefix-sp-b61",
+      "status": "not_started",
+      "completed_proposals": 0,
+      "requests": 0,
+      "known_tokens": 0,
+      "usage_complete": null,
+      "unknown_requests": 0
+    }
+  ],
+  "completed_proposals": 2,
+  "requests": 5,
+  "known_tokens": 15152,
+  "unknown_requests": 1,
+  "test_access": false,
+  "checkpoint_count": 16,
+  "ready_checkpoints": 0,
+  "reason": "third planner request ended sent_unknown; no automatic retry or new job dispatch",
+  "interpretation": "This run demonstrates local OpenCode compatibility and two observed SP proposals; it is not a complete Phase-B experiment and provides no mechanism comparison or Test evidence.",
+  "security": "No API keys or authorization headers are included; persisted requests/responses are audited for credentials before publication."
+}

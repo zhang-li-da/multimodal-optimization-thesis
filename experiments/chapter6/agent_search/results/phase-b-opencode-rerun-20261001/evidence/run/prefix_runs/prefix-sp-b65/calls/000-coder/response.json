@@ -1,0 +1,22 @@
+{
+  "request_sha256": "98cd083b8a1a8d192c5637d8b1d853380ce2a56bf26ca80628fc135b33c39c83",
+  "text": "<think>We need to generate a function priority(f) that implements the formula given:\n\n\"-f[\\\"distance\\\"] + 0.2 * f[\\\"return_distance\\\"] + 0.3 * f[\\\"regret\\\"]\"\n\nBut we also need to consider guard denominators, log domains, etc. However we are not using any division or log. The formula does not require those. We need to implement with minimal operations.\n\nWe need to adhere to constraints: only allowed features: distance, return_distance, nearest_remaining, mean_remaining, regret, progress, cluster_density, spread.\n\nWe can use arithmetic and comparisons.\n\nThe plan is to implement:\n\nreturn -f[\"distance\"] + 0.2 * f[\"return_distance\"] + 0.3 * f[\"regret\"]\n\nBut we need to ensure no floats issues. We can use scalar local assignments.\n\nPotential improvement: Might consider also a small term for progress? But we should stay to plan.\n\nWe must ensure <=25 lines, <=320 AST nodes. Keep it simple.\n\nThus we produce JSON with a code field containing the function with proper escaping.\n\nThus output JSON: {\"code\": \"def priority(f):\\n    return -f[\\\"distance\\\"] + 0.2 * f[\\\"return_distance\\\"] + 0.3 * f[\\\"regret\\\"]\\n\"}\n\nBut need to escape quotes inside JSON.\n\nThus final output:\n\n{\"code\": \"def priority(f):\\n    return -f[\\\"distance\\\"] + 0.2 * f[\\\"return_distance\\\"] + 0.3 * f[\\\"regret\\\"]\\n\"}</think>\n\n{\"code\": \"def priority(f):\\n    return -f[\\\"distance\\\"] + 0.2 * f[\\\"return_distance\\\"] + 0.3 * f[\\\"regret\\\"]\\n\"}",
+  "returned_model": "MiniMax-M3",
+  "usage_raw": {
+    "total_tokens": 1160,
+    "total_characters": 0,
+    "prompt_tokens": 768,
+    "completion_tokens": 392,
+    "completion_tokens_details": {
+      "reasoning_tokens": 341
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    }
+  },
+  "input_tokens": 768,
+  "output_tokens": 392,
+  "usage_complete": true,
+  "seconds": 6.735401400132105,
+  "request_id": "070dbb4dcdd7c8e2514e55db0c7679b3"
+}

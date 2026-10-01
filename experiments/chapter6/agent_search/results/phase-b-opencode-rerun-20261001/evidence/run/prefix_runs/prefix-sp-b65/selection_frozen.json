@@ -1,0 +1,36 @@
+{
+  "run_config_sha256": "382beb5a3f7cae011d35c4ba7c0f6d2a15409c0fca5d8140d05a053f30c9e0bb",
+  "execution_mode": "live",
+  "selected_on": "validation",
+  "best_id": 3,
+  "seed_best_id": 1,
+  "archive_ids": [
+    3,
+    1,
+    2
+  ],
+  "programs": [
+    {
+      "id": 1,
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.25 * f[\"return_distance\"]\n",
+      "raw_code_sha256": "17c20cc6336cf4b18c89e5964d6df9e1e182d62f6a182ec1bc3df0e95007e28b",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "b11ab831748c31d4b990e8c2fd81fad1e07dc03bd788d9e655cbb38e9609ad20"
+    },
+    {
+      "id": 2,
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.3 * f[\"regret\"]\n",
+      "raw_code_sha256": "c0dd5a578b60f0175f0035576e61dade51faacc613025314b326b2d3918986da",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "b0ec4ececa1c5d712639e933551f269c8c0e32f9140fb3ffb170d5efad847c87"
+    },
+    {
+      "id": 3,
+      "code": "def priority(f):\n    return -f[\"distance\"] + 0.2 * f[\"return_distance\"] + 0.3 * f[\"regret\"]\n",
+      "raw_code_sha256": "a2afec41beb2bb784aeae6e99561d42a5681b6791e54d330a5ff7f9a2fc319ed",
+      "structural_format": "chapter6-priority-ast-json-v1",
+      "structural_sha256": "54acd10d8a28241cb20344c7b9e7b20869dc33a82f75c01bd65a237a48643146"
+    }
+  ],
+  "frozen_utc": "2026-10-01T16:24:34.897715+00:00"
+}
