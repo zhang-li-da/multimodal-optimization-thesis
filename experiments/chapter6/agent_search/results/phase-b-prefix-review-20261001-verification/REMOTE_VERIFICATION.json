@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "publication_files_verified": 44,
+  "source_files_verified": 26,
+  "archives": {
+    "raw-study.zip": {
+      "members": 214,
+      "files": 212,
+      "all_hashes_match": true
+    },
+    "review-sources.zip": {
+      "members": 29,
+      "files": 29,
+      "all_hashes_match": true
+    },
+    "supporting-evidence.zip": {
+      "members": 78,
+      "files": 78,
+      "all_hashes_match": true
+    }
+  },
+  "manifest_sha256": "29cc55e3443fa84c2156671c9b087585df6c6b224b81ba2d4cafa24421bf0550",
+  "prefix_tasks": 8,
+  "planned_checkpoints": 16,
+  "ready_checkpoints": 1,
+  "ready_checkpoints_with_branch": 1,
+  "requests": 33,
+  "responses": 32,
+  "unknown_requests": 1,
+  "known_tokens": 127470,
+  "completed_proposals": 16,
+  "all_member_hashes_match": true,
+  "archive_file_hashes_verified": 319,
+  "publication_hash_index_sha256": "c401012d0c8575a84ae93ec3cfc6496e59e7e1f5e20ade0d59c3c9e0c9f43be6",
+  "continuation_not_started": true,
+  "Test_not_materialized": true,
+  "remote_commit": "2c55b72022e581172bcb9bcb5a61fabb84258a21",
+  "verified_at_utc": "2026-10-01T13:03:46.311701+00:00",
+  "transport": "GitHub Contents API with raw media, fixed ref; raw host TLS failed",
+  "authentication": "existing Git credential used in memory only; never logged or saved",
+  "distinct_files_downloaded": 70,
+  "source_files_downloaded_individually": 25,
+  "source_files_read_from_verified_remote_archive": [
+    "experiments/chapter6/agent_search/minimal_mechanism/DATA_SOURCE_SHA256.tsv"
+  ],
+  "model_calls": 0,
+  "program_evaluations": 0
+}
