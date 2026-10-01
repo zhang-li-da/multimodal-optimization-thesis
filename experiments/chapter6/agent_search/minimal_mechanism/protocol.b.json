@@ -1,6 +1,9 @@
 {
   "schema": "chapter6-minimal-mechanism-protocol-v1",
   "status": "FROZEN_PENDING_AUTHORIZATION",
+  "revision": "20261001-pre-execution-review",
+  "revision_basis_commit": "e40ce1023846b293327c94859aafc3f7a58bba97",
+  "execution_status": "blocks_60_67_already_claimed_by_halted_manifest_29cc55e3; this revision does not authorize a replacement or resumption",
   "basis_commit": "6d491ac6391ccc2c7a00baa5e695fbe66e66f16a",
   "branch": "research/chapter6-minimal-mechanism-20260930",
   "study_family": "chapter6-minimal-mechanism",
@@ -106,13 +109,15 @@
       "expected_tokens_historical_extrapolation": 11040000,
       "wall_limit_per_search_seconds": 3600,
       "serial_wall_cap_seconds": 172800,
-      "search_proposal_evaluation_cap": 49152,
-      "shared_seed_evaluation_cap": 2304,
+      "search_proposal_evaluation_cap": 147456,
+      "shared_seed_evaluation_cap": 6912,
       "search_instance_evaluation_cap": 154368,
       "test_program_cap": 48,
       "test_instance_evaluation_cap": 2880,
       "practical_tsp_gain_threshold_percentage_points": 0.3,
       "interpretation": "Development screening only. Stage C estimates conditional component differences and selects or deletes components; no confirmatory claim or interaction inference is allowed.",
+      "component_progression_rule": "Assess G, P and F separately. Removing G does not veto C when P or F has a testable rationale; freeze a simplified candidate and merge identical arms before calls.",
+      "pre_C_reward_design_status": "unresolved: project-local progress is auxiliary renewal evidence; cross-action opportunity cost needs a common global search objective and independent validation of any local-to-global prediction; public-prefix SP does not run or validate F",
       "test_freeze": "open Test only after all 48 jobs are terminal and selection files are frozen"
     },
     "D": {
@@ -140,7 +145,11 @@
       "search_instance_evaluation_cap_per_block": 25728,
       "test_program_cap_per_block": 8,
       "test_instance_evaluation_cap_per_block": 480,
-      "sample_size_formula_normal_approximation": "ceil(((z[1 - 0.05/(2*2)] + z[0.80]) * conservative_s_delta / 0.003)^2)",
+      "sample_size_formula_normal_approximation": "ceil(((z[1-alpha/(2*m)] + z[power]) * sigma_block_pp / (expected_true_benefit_pp - 0.3))^2); requires expected_true_benefit_pp > 0.3; marginal planning approximation only",
+      "expected_true_benefit_pp": null,
+      "sigma_block_pp": null,
+      "power_estimand": "to_freeze: specify marginal or joint success for both primary comparisons; validate with locked t-based calculation or simulation",
+      "power_distinction": "Detecting a 0.3 pp benefit versus zero differs from a confidence lower bound above 0.3 pp. Retain the latter success criterion; no historical Test-based threshold changes or numeric N in this revision.",
       "final_sample_size": null,
       "authorization": "No new call budget identified; require powered fixed-N matrix and explicit budget authorization before dispatch."
     }

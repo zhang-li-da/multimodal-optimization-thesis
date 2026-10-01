@@ -48,7 +48,7 @@ def test_checkpoint_selects_incumbent_and_branch_only_from_validation_nodes():
             "valid": True, "loss": 0.13, "behavior": different_behavior}},
         {"id": 11, "code": "invalid", "evaluation": {"valid": False, "loss": None}},
     ])
-    checkpoint = study._select_prefix_checkpoint(60, 3, nodes, "search-hash")
+    checkpoint = study._select_prefix_checkpoint(60, 9, nodes, "search-hash")
     assert checkpoint["status"] == "ready"
     assert checkpoint["incumbent"] == {"id": 0, "loss": 0.10}
     assert checkpoint["branch"] == {"id": 10, "loss": 0.13}
@@ -56,7 +56,7 @@ def test_checkpoint_selects_incumbent_and_branch_only_from_validation_nodes():
     assert audit[8]["probe_behavior_distance"] == 0.0 and not audit[8]["eligible"]
     assert audit[10]["probe_behavior_distance"] == 1.0 and audit[10]["eligible"]
     assert checkpoint["selected_on"] == "validation"
-    no_branch = study._select_prefix_checkpoint(60, 3, nodes[:8] + [nodes[8]], "search-hash")
+    no_branch = study._select_prefix_checkpoint(60, 9, nodes[:8] + [nodes[8]], "search-hash")
     assert no_branch["branch"] is None
     assert no_branch["branch_unavailable"] is True
 
@@ -205,3 +205,101 @@ def test_inventory_gate_rejects_candidate_blocks_claimed_by_history(monkeypatch)
 
     with pytest.raises(ValueError, match="already claimed by a historical batch"):
         study._inventory_check()
+
+
+def test_checkpoint_truncates_future_incumbent_and_branch_before_selection():
+    nodes = [{"id": i, "code": str(i), "evaluation": {"valid": True,
+              "loss": .1 if i == 0 else .2, "behavior": [[0, 0]]}} for i in range(11)]
+    nodes.append({"id": 11, "code": "future", "evaluation": {
+        "valid": True, "loss": .09, "behavior": [[1, 1]]}})
+    cp = study._select_prefix_checkpoint(60, 8, nodes, "search-hash")
+    assert cp["incumbent"]["id"] == 0
+    assert len(cp["nodes"]) == 3 + 8
+    assert cp["branch_unavailable"]
+
+
+def test_search_snapshot_accessor_refuses_test_before_read(tmp_path, monkeypatch):
+    monkeypatch.setattr(study, "read_json", lambda *_: pytest.fail("opened Test"))
+    with pytest.raises(ValueError, match="cannot access a Test"):
+        study._snapshot_by_block(tmp_path, {}, 60, "test")
+
+
+def test_prefix_rejects_test_snapshot_before_runner(tmp_path, monkeypatch):
+    monkeypatch.setattr(study, "run_search", lambda *_args, **_kwargs: pytest.fail("runner entered"))
+    with pytest.raises(ValueError, match="Test data supplied"):
+        study._run_prefix_with_budget({}, {"test": []}, tmp_path, {}, {}, None)
+
+
+@pytest.mark.parametrize("kind", ["unknown", "tokens", "wall"])
+def test_prefix_resume_cannot_reset_usage_or_wall_budget(tmp_path, monkeypatch, kind):
+    from experiments.chapter6.agent_search.s3_tsp_r3 import runner as runtime
+    save_json(tmp_path / "checkpoint.json", {"elapsed_seconds": 59.5 if kind == "wall" else 0})
+    calls_seen = []
+    class PriorCalls:
+        def usage(self):
+            return {"call_attempts": 1, "known_tokens": 9999 if kind == "tokens" else 30,
+                    "usage_complete": kind != "unknown"}
+        def complete(self, *_):
+            calls_seen.append(True)
+            return {}
+    class Transport:
+        deadline = None
+        def set_wall_deadline(self, deadline):
+            self.deadline = deadline
+    transport = Transport()
+    monkeypatch.setattr(runtime, "DurableCalls", PriorCalls)
+    monkeypatch.setattr(study.time, "perf_counter", lambda: 100.0)
+    monkeypatch.setattr(study, "run_search", lambda *_args, **_kwargs:
+        runtime.DurableCalls().complete(1, "planner", "system", "prompt", 20))
+    args = ({}, {}, tmp_path, {}, {"request_limit": 48, "token_budget": 10000,
+            "wall_limit_seconds": 60}, transport)
+    if kind == "wall":
+        study._run_prefix_with_budget(*args)
+        assert transport.deadline == pytest.approx(100.5)
+    else:
+        with pytest.raises(runtime.BudgetStop):
+            study._run_prefix_with_budget(*args)
+        assert calls_seen == []
+
+
+def test_restart_reconstructs_halt_from_unknown_terminal_before_transport(tmp_path, monkeypatch):
+    job = {"job_id": "prefix-sp-b60"}
+    manifest = {"prefix_jobs": [job], "protocol": {"model": {
+        "requested_model": "MiniMax-M3", "pause_after_consecutive_rate_limits": 2}}}
+    run = tmp_path / "prefix_runs" / job["job_id"]
+    save_json(run / "terminal_status.json", {"status": "sent_unknown"})
+    save_json(run / "status.json", {"status": "sent_unknown"})
+    monkeypatch.setattr(study, "verify", lambda *_args, **_kwargs: manifest)
+    monkeypatch.setattr(study, "_authorization", lambda *_args: {})
+    monkeypatch.setattr(study, "_acceptance_record", lambda *_args: {})
+    result = study.dispatch_prefixes(tmp_path, authorization_path=tmp_path / "unused",
+        acceptance_path=tmp_path / "unused", transport_factory=lambda *_: pytest.fail("new request"))
+    assert result["halted"]
+    assert study.read_json(tmp_path / "dispatch" / "halt.json")["no_new_jobs"]
+
+
+def test_durable_restart_keeps_known_usage_and_does_not_resend_unknown(tmp_path):
+    from chapter6_demo.v12_2.calls import DurableCalls, IndeterminateCall, response_envelope
+    config = {"provider": "fixture", "model": "fixture",
+              "parameters": {"temperature": .7}}
+    sent = []
+    class Transport:
+        def send(self, request, persist):
+            sent.append(request["step"])
+            if request["step"] == 1:
+                raise TimeoutError("synthetic unknown response")
+            body = {"model": "fixture", "choices": [{"message": {"content": "{}"},
+                    "finish_reason": "stop"}], "usage": {"prompt_tokens": 17, "completion_tokens": 13}}
+            persist(response_envelope(json.dumps(body).encode(), seconds=.01,
+                                      request_id="fixture", protocol="openai"))
+    first = DurableCalls(tmp_path, config, Transport())
+    first.complete(0, "planner", "system", "prompt", 32)
+    with pytest.raises(IndeterminateCall):
+        first.complete(1, "planner", "system", "prompt", 32)
+    recovered = DurableCalls(tmp_path, config, Transport())
+    with pytest.raises(IndeterminateCall):
+        recovered.complete(1, "planner", "system", "prompt", 32)
+    assert sent == [0, 1]
+    assert recovered.usage()["known_tokens"] == 30
+    assert recovered.usage()["call_attempts"] == 2
+    assert recovered.usage()["total_tokens"] is None

@@ -6,8 +6,8 @@
   "files": [
     {
       "path": "BUDGET_ZH.md",
-      "bytes": 6618,
-      "sha256": "5e0829caa8b1ed96f0532e75dc110ff38c3bd45c1f183048468d142707948657"
+      "bytes": 7109,
+      "sha256": "182499b448f3c9521f8545a1139ab639d1df696db6ba34852fd46b4b5ad58b6a"
     },
     {
       "path": "DATA_INVENTORY.json",
@@ -31,18 +31,23 @@
     },
     {
       "path": "METHOD_ZH.md",
-      "bytes": 19131,
-      "sha256": "a1ed2bf61c7fed780ac738137655d023cf432da792e1be1bbe323d845782f200"
+      "bytes": 19817,
+      "sha256": "49e2db20c77eb8eed99a64af2ac41a09b70013220371ec777483af640cb0ce82"
     },
     {
       "path": "PROTOCOL_ZH.md",
-      "bytes": 16869,
-      "sha256": "e15e7b6b60f225178c05c1acf859bfd12fbbe15ecc71ad79ec3fae3e4597a43b"
+      "bytes": 17942,
+      "sha256": "f19d01c4ce999eeab90dbd4a996ca4fe73e0e4a20e36aefc2fce7e8435ca1ebe"
     },
     {
       "path": "REPORT_ZH.md",
-      "bytes": 14389,
-      "sha256": "961dc7adf65cbe6e15056457b68d765306c3a70bc3117576175cc7b5a54f7273"
+      "bytes": 14606,
+      "sha256": "ebbd3e1b4d6c8c2961d4d6bceeefde824cbda1f3b9a0006a22b563572b9bc947"
+    },
+    {
+      "path": "REVISION_20261001_ZH.md",
+      "bytes": 2586,
+      "sha256": "61daa6e47af6e8531069ce4352d8989447da3d558a05f07c790e04a3b93fd1c5"
     },
     {
       "path": "analyze_phase_b.py",
@@ -81,13 +86,13 @@
     },
     {
       "path": "phase_b_study.py",
-      "bytes": 67929,
-      "sha256": "d57977c3bdb4c933c26a913c4c6cac8b2826c42297d731e7812ad75c75dad64a"
+      "bytes": 69199,
+      "sha256": "c70f920bf4d32244ae335b5edcc812847a3926fe25e85829945abb07935a6da8"
     },
     {
       "path": "protocol.b.json",
-      "bytes": 10725,
-      "sha256": "01c7a2de5a91ba505042189f470d5eeee2aecaac59334bd6231bbddbd8e7d75f"
+      "bytes": 12030,
+      "sha256": "4fa809dc586c8c5def57e8f5228e2b823c9b7f8c9819adcd533f27ff43140c7c"
     },
     {
       "path": "test_analyze_phase_b.py",
@@ -111,14 +116,14 @@
     },
     {
       "path": "test_phase_b_study.py",
-      "bytes": 10778,
-      "sha256": "966d0ba8dfe2b7e8ffa38221c8fb3d006ddbfb15ec33dbc493fc9d3605d04d2b"
+      "bytes": 15792,
+      "sha256": "aec84e3f0eafce7b60e6ba473e8a425e98b53411150692e7387fedc64d806524"
     },
     {
       "path": "test_protocol_b.py",
-      "bytes": 1334,
-      "sha256": "cdcf16150fb4480891b36a2d24256a31f7d879749c371dd09b9bac37f3c64abe"
+      "bytes": 2319,
+      "sha256": "39536f01173649ae54715d21c0382cafbdbe147e087337981e1292891e7dfce3"
     }
   ],
-  "manifest_sha256": "958da8078c0dcd472039fcd7dda45a2e816fa219409334b060862a05f4d2ca33"
+  "manifest_sha256": "b55e57cb0ee31c4c87964888c1286ffea7a773768b66720327575923088fb8f2"
 }

@@ -114,8 +114,12 @@ def _validate_protocol(protocol: dict) -> None:
             or stage.get("test_instance_evaluation_cap") != 288 * 60):
         raise ValueError("phase-B evaluation resource caps do not match the adapter workload")
     stage_c = protocol["stages"]["C"]
-    c_search = stage_c["searches"] * (stage_c["proposals_per_search_safety_max"] + len(SEEDS["tsp"])) * 48
-    if (stage_c.get("search_instance_evaluation_cap") != c_search
+    c_proposals = stage_c["searches"] * stage_c["proposals_per_search_safety_max"] * 48
+    c_seeds = stage_c["searches"] * len(SEEDS["tsp"]) * 48
+    c_search = c_proposals + c_seeds
+    if (stage_c.get("search_proposal_evaluation_cap") != c_proposals
+            or stage_c.get("shared_seed_evaluation_cap") != c_seeds
+            or stage_c.get("search_instance_evaluation_cap") != c_search
             or stage_c.get("test_program_cap") != stage_c["searches"]
             or stage_c.get("test_instance_evaluation_cap") != stage_c["searches"] * 60):
         raise ValueError("phase-C evaluation resource caps do not match the adapter workload")
@@ -415,8 +419,13 @@ def _canonical_terminal(run_dir: Path, raw_status: str, *, prefix: bool = False)
 
 
 def _snapshot_by_block(study: Path, manifest: dict, block: int, role: str) -> dict:
+    if role != "search":
+        raise ValueError("search dispatch cannot access a Test snapshot")
     rec = next(r for r in manifest["data"] if r["block"] == block and r["role"] == role)
-    return read_json(study / rec["path"])
+    snapshot = read_json(study / rec["path"])
+    if "test" in snapshot:
+        raise ValueError("Test data supplied to search dispatch")
+    return snapshot
 
 
 def _latest_diagnostics(run_dir: Path) -> dict | None:
@@ -484,8 +493,13 @@ def _run_prefix_with_budget(job: dict, snapshot: dict, run_dir: Path,
     """Add a conservative pre-dispatch token reservation to the frozen S3 runner."""
     from ..s3_tsp_r3 import runner as s3_runtime
 
+    if "test" in snapshot:
+        raise ValueError("Test data supplied to public-prefix runner")
     base_calls = s3_runtime.DurableCalls
-    started = time.perf_counter()
+    checkpoint_path = Path(run_dir) / "checkpoint.json"
+    prior_elapsed = (float(read_json(checkpoint_path).get("elapsed_seconds", 0.0))
+                     if checkpoint_path.exists() else 0.0)
+    started = time.perf_counter() - prior_elapsed
 
     class BudgetedCalls(base_calls):
         def complete(self, step, stage, system, prompt, max_tokens):
@@ -539,6 +553,12 @@ def dispatch_prefixes(study: Path, *, authorization_path: Path, acceptance_path:
         status_path = run_dir / "status.json"
         canonical_path = run_dir / "terminal_status.json"
         if canonical_path.exists() and read_json(canonical_path).get("status") in PREFIX_TERMINAL:
+            status = read_json(canonical_path)["status"]
+            pause = _provider_gate(gate, run_dir, status)
+            if pause["pause"]:
+                _write_status(dispatch_dir / "halt.json", "paused", after_job=job["job_id"],
+                              reason=pause, no_new_jobs=True, new_model_calls=0)
+                break
             continue
         if status_path.exists() and read_json(status_path).get("status") in PREFIX_TERMINAL:
             status = read_json(status_path).get("status")
@@ -610,6 +630,9 @@ def _prefix_statuses(study: Path, manifest: dict) -> dict:
 def _select_prefix_checkpoint(block: int, prefix_step: int, nodes: list[dict], search_sha256: str,
                               *, quality_tolerance: float = 0.035,
                               minimum_behavior_distance: float = 0.08) -> dict:
+    # The committed prefix runner has three seeds. Never inspect later proposals,
+    # even if a caller accidentally supplies the complete run.
+    nodes = nodes[:len(SEEDS["tsp"]) + prefix_step]
     candidates = [node for node in nodes
                   if node.get("evaluation", {}).get("valid") and
                   isinstance(node.get("evaluation", {}).get("loss"), (int, float))]
@@ -641,7 +664,7 @@ def _select_prefix_checkpoint(block: int, prefix_step: int, nodes: list[dict], s
         "checkpoint_id": f"b{block}-step{prefix_step:02d}", "status": "ready",
         "prefix_step": prefix_step, "continuation": {"block": block,
             "snapshot_sha256": search_sha256, "public_prefix_steps": prefix_step},
-        "selected_on": "validation", "nodes": copy.deepcopy(nodes[:8 + prefix_step]),
+        "selected_on": "validation", "nodes": copy.deepcopy(nodes),
         "incumbent": {"id": incumbent["id"], "loss": incumbent["evaluation"]["loss"]},
         "branch": ({"id": branch["id"], "loss": branch["evaluation"]["loss"]}
                    if branch else None),
