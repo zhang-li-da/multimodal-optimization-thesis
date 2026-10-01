@@ -36,7 +36,7 @@ def load_old():
     manifest = read_json(OLD / "manifest.json")
     if len(manifest.get("prefix_jobs", [])) != 8:
         raise ValueError("historical prefix matrix is not the expected 8-job SP matrix")
-    if manifest.get("jobs") and any(job.get("role") != "continuation" for job in manifest["jobs"]):
+    if manifest.get("jobs") and any(job.get("steps") != 8 for job in manifest["jobs"]):
         raise ValueError("unexpected historical continuation matrix")
     for rec in manifest["data"]:
         if rec["role"] != "search" or rec["instance_count"] != 48:
