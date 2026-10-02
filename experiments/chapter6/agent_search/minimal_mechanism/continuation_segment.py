@@ -272,7 +272,10 @@ def verify_segment_inputs(out: Path, manifest: dict) -> dict:
         if status != 'not_started':
             marker = read_json(out / 'runs' / job_id / 'terminal_status.json')
             original = read_json(parent / 'runs' / job_id / 'terminal_status.json')
-            if any(marker.get(k) != v for k, v in original.items()) or not marker.get('parent_segment_read_only'):
+            inherited_keys = {'parent_output', 'parent_status_sha256', 'parent_segment_read_only'}
+            marker_core = {k: v for k, v in marker.items() if k not in inherited_keys}
+            original_core = {k: v for k, v in original.items() if k not in inherited_keys}
+            if marker_core != original_core or not marker.get('parent_segment_read_only'):
                 raise ValueError('parent terminal marker changed')
             if any((out / 'runs' / job_id).glob('calls/*/request.json')):
                 raise ValueError('parent task was restarted')

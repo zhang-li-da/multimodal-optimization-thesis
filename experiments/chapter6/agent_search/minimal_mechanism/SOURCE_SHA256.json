@@ -91,8 +91,8 @@
     },
     {
       "path": "continuation_segment.py",
-      "bytes": 20639,
-      "sha256": "382071804a2d8786e6758a2a72a71d8cb1673a7327e09a2a8bff03f32ff5cd57"
+      "bytes": 20892,
+      "sha256": "9475ade0bd62297bc3631f5157ac294e61e732c9ab71d1b3dadfd837b85fffc3"
     },
     {
       "path": "controller.py",
@@ -210,5 +210,5 @@
       "sha256": "2dad8dcbaccf2101820e2ef347604ad253d76201bb81d1ca2ebb2ace99a353c1"
     }
   ],
-  "manifest_sha256": "f56b4632959cca6d5d97b07019183c9f208c94235e2897da9fcfcf28e36d0641"
+  "manifest_sha256": "27c5b4adf9d493f3a10ba4d188eee9fc6d46f70183fb03e388934e1a4329ff40"
 }
