@@ -145,13 +145,20 @@ def audit(root):
             assert result['selection_candidates_sha256'] == file_sha(run / 'selection_candidates.json')
         if status == 'continuation_complete':
             assert len(records) == 8 and costs['unknown_requests'] == 0
-        integer_key_match = None
+        integer_key_match = reconciled_match = None
+        pending_included = False
         if result and saved:
             # PhaseBState uses integer node IDs; JSON object keys become str.
             # Python's sort_keys orders those differently once IDs reach 10.
             restored = copy.deepcopy(saved['state'])
             restored['behavior_cell_id'] = {int(k): v for k, v in restored['behavior_cell_id'].items()}
             integer_key_match = result['state_sha256'] == digest(restored)
+            pending = run / 'slots' / f'{len(records):03d}' / 'decision.json'
+            if status != 'continuation_complete' and pending.exists():
+                restored['decisions'].append(read_json(pending)['decision'])
+                pending_included = True
+            reconciled_match = result['state_sha256'] == digest(restored)
+            assert reconciled_match, (job['job_id'], 'state hash after key/pending reconciliation')
         rows.append({'job_id': job['job_id'], 'strategy': job['strategy'], 'block': job['data_block'],
                      'checkpoint_id': job['checkpoint_id'], 'repetition': job['repetition'],
                      'evidence_layer': layer.relative_to(root).as_posix(), 'status': status,
@@ -163,6 +170,8 @@ def audit(root):
                      'selections': {k: {a: b for a, b in v.items() if a != 'code'} for k, v in selections.items()},
                      'serialized_state_hash_matches': result.get('state_sha256') == digest(saved['state']) if result and saved else None,
                      'integer_key_state_hash_matches': integer_key_match,
+                     'pending_decision_included_for_hash': pending_included,
+                     'reconciled_state_hash_matches': reconciled_match,
                      'wall_seconds': term.get('wall_seconds'), **costs})
     lookup = {(r['checkpoint_id'], r['repetition'], r['strategy']): r for r in rows}
     pairs = []

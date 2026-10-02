@@ -31,6 +31,10 @@ def test_real_archive_replays_and_keeps_missing_pairs_and_costs(archived):
     complete = [r for r in result['rows'] if r['status'] == 'continuation_complete']
     assert all(r['integer_key_state_hash_matches'] for r in complete)
     assert any(not r['serialized_state_hash_matches'] for r in complete)
+    attempted = [r for r in result['rows'] if r['completed_proposals']]
+    assert all(r['reconciled_state_hash_matches'] for r in attempted)
+    incomplete = [r for r in attempted if r['status'] == 'infrastructure_incomplete']
+    assert all(r['pending_decision_included_for_hash'] for r in incomplete)
 
 
 def test_terminal_lookup_follows_all_parent_layers(tmp_path):
