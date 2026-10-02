@@ -36,6 +36,9 @@ def _call_rows(run: Path) -> dict:
     if not calls.exists():
         return totals
     for request_path in sorted(calls.glob("*/request.json")):
+        state_path = request_path.with_name('state.json')
+        if state_path.exists() and read_json(state_path).get('status') == 'prepared':
+            continue
         request = read_json(request_path)
         response_path = request_path.with_name("response.json")
         raw_path = request_path.with_name("raw_response.json")
@@ -62,7 +65,7 @@ def _parent_attempts(parent: Path, manifest: dict) -> list[dict]:
         costs = _call_rows(run)
         status_path = run / "terminal_status.json"
         status = read_json(status_path).get("status", "not_started") if status_path.exists() else "not_started"
-        if not any(costs.values()) and status == "not_started":
+        if not any(costs.values()):
             continue
         rows.append({"job_id": job["job_id"], "segment": "parent",
                      "status": status, "completed_proposals":
@@ -104,10 +107,19 @@ def prepare(parent: Path, out: Path, registry: Path) -> dict:
         raise ValueError("parent segment is not halted")
     owner_path = registry / "owner.json"
     owner = read_json(owner_path)
+    if registry != Path(parent_manifest['registry']).resolve():
+        raise ValueError('must preserve the parent registry')
     if owner.get("output") != str(parent) or owner.get("manifest_sha256") != parent_manifest["manifest_sha256"]:
         raise ValueError("registry owner does not point to the parent segment")
     if git("status", "--porcelain"):
         raise ValueError("commit source before freezing recovery segment")
+    base.verify_index()
+    for job in parent_manifest['jobs']:
+        run = parent / 'runs' / job['job_id']
+        if _parent_status(parent, job['job_id']) == 'not_started':
+            claim = registry / 'claims' / (job['job_id'] + '.json')
+            if claim.exists() or (run / 'config.json').exists() or any(run.glob('calls/*/request.json')):
+                raise ValueError('unresolved prior attempt cannot be released')
 
     out.mkdir(parents=True)
     snapshot = _copy_parent_snapshot(parent, out)
@@ -197,6 +209,82 @@ def prepare(parent: Path, out: Path, registry: Path) -> dict:
     return manifest
 
 
+def verify_segment_inputs(out: Path, manifest: dict) -> dict:
+    """Verify the immutable parent and any additive, pre-call source binding."""
+    snapshot = read_json(out / 'parent_snapshot_manifest.json')
+    if digest({k: v for k, v in snapshot.items() if k != 'snapshot_sha256'}) != manifest['parent_snapshot_sha256']:
+        raise ValueError('parent snapshot manifest changed')
+    for row in snapshot['files']:
+        path = (out / 'parent_snapshot' / row['path']).resolve()
+        if not path.is_relative_to((out / 'parent_snapshot').resolve()) or file_sha(path) != row['sha256']:
+            raise ValueError('parent snapshot evidence changed')
+    parent = out / 'parent_snapshot'
+    pm = read_json(parent / 'manifest.json')
+    if (digest({k: v for k, v in pm.items() if k != 'manifest_sha256'}) != manifest['parent_manifest_sha256']
+            or read_json(parent / 'halt.json') != manifest['parent_halt']):
+        raise ValueError('parent binding mismatch')
+    if base.ledger(parent, pm) != base.sum_cost(manifest['historical_attempts']):
+        raise ValueError('parent cumulative costs differ')
+    parent_jobs = {j['job_id']: j for j in pm['jobs']}
+    if [j['job_id'] for j in manifest['jobs']] != [j['job_id'] for j in pm['jobs']]:
+        raise ValueError('parent task order changed')
+    for job in manifest['jobs']:
+        job_id = job['job_id']
+        if {k: v for k, v in job.items() if k != 'eligibility'} != {k: v for k, v in parent_jobs[job_id].items() if k != 'eligibility'}:
+            raise ValueError('frozen task definition changed')
+        status = _parent_status(parent, job_id)
+        if status != 'not_started':
+            marker = read_json(out / 'runs' / job_id / 'terminal_status.json')
+            original = read_json(parent / 'runs' / job_id / 'terminal_status.json')
+            if any(marker.get(k) != v for k, v in original.items()) or not marker.get('parent_segment_read_only'):
+                raise ValueError('parent terminal marker changed')
+            if any((out / 'runs' / job_id).glob('calls/*/request.json')):
+                raise ValueError('parent task was restarted')
+        elif job['eligibility'] != 'ready':
+            raise ValueError('unstarted task eligibility changed')
+    if manifest['parameters'] != pm['parameters'] or manifest['model'] != pm['model']:
+        raise ValueError('frozen generation parameters changed')
+    binding_path = out / 'EXECUTION_BINDING.json'
+    if not binding_path.exists():
+        return manifest
+    binding = read_json(binding_path)
+    if digest({k: v for k, v in binding.items() if k != 'binding_sha256'}) != binding['binding_sha256']:
+        raise ValueError('execution binding changed')
+    if binding['manifest_sha256'] != manifest['manifest_sha256'] or not binding['zero_new_calls_at_binding']:
+        raise ValueError('execution binding targets a different manifest')
+    return binding
+
+
+def bind_prelaunch(out: Path) -> dict:
+    """Add a new source binding; never edit the original run manifest."""
+    manifest = read_json(out / 'manifest.json')
+    if (out / 'EXECUTION_BINDING.json').exists():
+        raise ValueError('execution binding already frozen')
+    if git('status', '--porcelain'):
+        raise ValueError('commit source before binding')
+    base.verify_index()
+    with run_lock(Path(manifest['registry'])):
+        verify_segment_inputs(out, manifest)
+        for job in manifest['jobs']:
+            if job['eligibility'] != 'ready':
+                continue
+            run = out / 'runs' / job['job_id']
+            claim = Path(manifest['registry']) / 'claims' / (job['job_id'] + '.json')
+            if claim.exists() or any(run.rglob('*.json')):
+                raise ValueError('cannot revise binding after a task started')
+        binding = {'schema': 'chapter6-prelaunch-source-binding-v1',
+                   'created_utc': utcnow(), 'manifest_sha256': manifest['manifest_sha256'],
+                   'source_commit': git('rev-parse', 'HEAD'),
+                   'source_index_sha256': file_sha(base.HERE / 'SOURCE_SHA256.json'),
+                   'prior_source_commit': manifest['source_commit'],
+                   'zero_new_calls_at_binding': True,
+                   'reason': 'Offline recovery verification and inherited-cost audit fixes; no changes to model, action, data, order, or budgets',
+                   'test_access': False}
+        binding['binding_sha256'] = digest(binding)
+        save_json(out / 'EXECUTION_BINDING.json', binding, immutable=True)
+    return binding
+
+
 def audit(out: Path) -> dict:
     manifest = base.verify(out)
     rows = []
@@ -221,7 +309,7 @@ def audit(out: Path) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("action", choices=("prepare", "run", "audit"))
+    parser.add_argument("action", choices=("prepare", "bind-prelaunch", "run", "audit"))
     parser.add_argument("--parent", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--registry", type=Path)
@@ -230,6 +318,8 @@ def main() -> None:
         if not args.parent or not args.registry:
             parser.error("prepare requires --parent and --registry")
         result = prepare(args.parent, args.output, args.registry)
+    elif args.action == 'bind-prelaunch':
+        result = bind_prelaunch(args.output.resolve())
     elif args.action == "run":
         result = base.dispatch(args.output.resolve())
     else:

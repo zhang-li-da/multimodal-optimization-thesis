@@ -277,14 +277,21 @@ def verify(out):
     if (owner.get('output') != m['output']
             or owner.get('manifest_sha256') != m['manifest_sha256']):
         raise ValueError('registry owner mismatch')
-    if git('rev-parse', 'HEAD') != m['source_commit'] or git('status', '--porcelain'):
+    execution = m
+    if m.get('schema') == 'chapter6-registered-continuation-segment-v1':
+        from .continuation_segment import verify_segment_inputs
+        execution = verify_segment_inputs(out, m)
+    if git('rev-parse', 'HEAD') != execution['source_commit'] or git('status', '--porcelain'):
         raise ValueError('execution source changed')
     verify_index()
-    if file_sha(HERE / 'SOURCE_SHA256.json') != m['source_index_sha256']:
+    if file_sha(HERE / 'SOURCE_SHA256.json') != execution['source_index_sha256']:
         raise ValueError('source index changed')
     for row in m['files']:
         if file_sha(out / row['path']) != row['sha256']:
             raise ValueError('frozen search input changed')
+    if execution is not m:
+        m = dict(m, source_commit=execution['source_commit'],
+                 execution_binding_sha256=execution['binding_sha256'])
     return m
 
 
@@ -319,14 +326,20 @@ def halt(out, job_id, reason):
 
 def audit(out, manifest=None):
     m = manifest or read_json(out / 'manifest.json')
-    historical = {row['job_id']: row for row in m.get('historical_attempts', [])}
+    historical = {}
+    for row in m.get('historical_attempts', []):
+        bucket = historical.setdefault(row['job_id'], [])
+        bucket.append(row)
     rows = []
     for job in m['jobs']:
         run = out / 'runs' / job['job_id']
         status = read_json(run / 'terminal_status.json') if (run / 'terminal_status.json').exists() else {}
-        result = read_json(run / 'search_result.json') if (run / 'search_result.json').exists() else {}
+        evidence_run = run
+        if status.get('parent_segment_read_only'):
+            evidence_run = out / 'parent_snapshot' / 'runs' / job['job_id']
+        result = read_json(evidence_run / 'search_result.json') if (evidence_run / 'search_result.json').exists() else {}
         call_audit = _run_call_audit(run)
-        prior = historical.get(job['job_id'], {})
+        prior = sum_cost(historical.get(job['job_id'], []))
         live_attempt_started = ((run / 'config.json').exists() or
                                 (run / 'attempt_claim.json').exists() or
                                 bool(call_audit['requests']))
@@ -343,7 +356,7 @@ def audit(out, manifest=None):
         rows.append({'job_id': job['job_id'], 'strategy': job['strategy'], 'checkpoint_id': job['checkpoint_id'],
                      'status': status_name,
                      'completed_proposals': result.get('summary', {}).get('completed_proposals', 0),
-                     'selections_sha256': file_sha(run / 'selection_candidates.json') if (run / 'selection_candidates.json').exists() else None,
+                     'selections_sha256': file_sha(evidence_run / 'selection_candidates.json') if (evidence_run / 'selection_candidates.json').exists() else None,
                      'terminal_status_present': terminal_present,
                      'attempt_started_without_terminal': bool(live_attempt_started and not terminal_present),
                      'requests': requests,
@@ -383,8 +396,10 @@ def dispatch(out, *, runner=run_phase_b, transport_factory=GuardedTransport):
             run = out / 'runs' / job['job_id']
             if (run / 'terminal_status.json').exists():
                 continue
+            if job.get('eligibility') != 'ready':
+                raise ValueError('preserved task lacks terminal marker; refusing dispatch')
             claim = registry / 'claims' / (job['job_id'] + '.json')
-            if claim.exists() or (run / 'config.json').exists():
+            if claim.exists() or (run / 'config.json').exists() or any(run.glob('calls/*/request.json')):
                 freeze(run / 'terminal_status.json', {'status': 'infrastructure_incomplete',
                        'reason': 'prior_started_attempt_will_not_restart', 'test_access': False})
                 halt(out, job['job_id'], 'interrupted_claim_preserved')
@@ -406,7 +421,9 @@ def dispatch(out, *, runner=run_phase_b, transport_factory=GuardedTransport):
                 data = read_json(out / 'data' / f"search-b{job['data_block']}.json")
                 transport = transport_factory(out, m, run)
                 result = runner(job, cp, data, run, {'manifest_sha256': m['manifest_sha256'],
-                    'source_commit': m['source_commit']}, m['parameters'], transport, mode='live')
+                    'source_commit': m['source_commit'],
+                    **({'execution_binding_sha256': m['execution_binding_sha256']}
+                       if m.get('execution_binding_sha256') else {})}, m['parameters'], transport, mode='live')
                 status = result['status']
                 if status not in TERMINAL:
                     raise ValueError('runner returned unknown status')

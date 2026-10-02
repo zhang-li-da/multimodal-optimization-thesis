@@ -65,6 +65,11 @@
       "sha256": "61daa6e47af6e8531069ce4352d8989447da3d558a05f07c790e04a3b93fd1c5"
     },
     {
+      "path": "SEGMENT_REVISION_ZH.md",
+      "bytes": 2473,
+      "sha256": "452a68c19ad5343da0de6d57040d154a1902d7b2768cfb7af59affc1b87f171e"
+    },
+    {
       "path": "analyze_phase_b.py",
       "bytes": 33071,
       "sha256": "36d419db41faa1579bcdf6de7a5fc728c0abe705c705ea595d73c9b79c864d5c"
@@ -81,13 +86,13 @@
     },
     {
       "path": "continuation_resume.py",
-      "bytes": 24857,
-      "sha256": "11ebe1bce769badcb7ef7b96a2fd31fac6c64de07ca306fbb60ca103cc9883c6"
+      "bytes": 25846,
+      "sha256": "21cf463fff3eee840e87b42fdfab069d1952b3a49381b3feb4da9e8062dc4c3c"
     },
     {
       "path": "continuation_segment.py",
-      "bytes": 12139,
-      "sha256": "98608c4b8048d3189ceef2982091ae1365e02d45b68faff76c5c8722773e15a5"
+      "bytes": 17491,
+      "sha256": "d2079a34e88d65990c6260c5dbcfbca5fb40872cf3ea4b660fed382d156199f8"
     },
     {
       "path": "controller.py",
@@ -170,6 +175,11 @@
       "sha256": "6c3e25228a1ac14a91c75e4b79fe63f35f7d4240c8f4963be775bcd65c6fbfcd"
     },
     {
+      "path": "test_continuation_segment.py",
+      "bytes": 4436,
+      "sha256": "1f42b67e14b5b676bcf69e47d275b1c6ce6761a8c4e9fa6a39d3d6f219a17452"
+    },
+    {
       "path": "test_controller.py",
       "bytes": 32588,
       "sha256": "c7249f392bea926338a2984fb52023baebdfd7ca2a955ff748dac54dc781c9b1"
@@ -200,5 +210,5 @@
       "sha256": "2dad8dcbaccf2101820e2ef347604ad253d76201bb81d1ca2ebb2ace99a353c1"
     }
   ],
-  "manifest_sha256": "dfc927cae1ec3b30cafa9f7551ee5b395326a0f555dcf42019171cc43134bc6d"
+  "manifest_sha256": "f39f51b90c8f71f7d54ab91c536e0688b16da15e4b04d427e2af8032e7bd07f4"
 }
