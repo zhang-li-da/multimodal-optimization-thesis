@@ -17,6 +17,9 @@ from .recovery_transport import RecoveryTransport
 PREFIX = Path('C:/Users/67473/Desktop/5/phase_b_recovery_20261002')
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[4]
+TERMINAL = {'continuation_complete', 'infrastructure_incomplete', 'budget_exhausted',
+            'branch_unavailable', 'preparation_incomplete', 'sent_unknown',
+            'provider_failed', 'not_started'}
 
 
 def write(path, value):
