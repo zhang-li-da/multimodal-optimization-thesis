@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import copy
 import json
+import math
 import time
 from pathlib import Path
 from statistics import median
@@ -40,9 +41,16 @@ def _check_request_budget(calls, parameters: dict, started: float,
     if int(usage.get("known_tokens", 0)) + request_reserve > int(parameters["token_budget"]):
         raise BudgetStop("token_budget_reservation")
     wall_limit = float(parameters["wall_limit_seconds"])
+    # Optional, prospective protocol field. Frozen studies which omit it
+    # keep their original admission rule; never infer it from live outcomes.
+    minimum_wall = float(parameters.get("minimum_request_wall_seconds", 0))
+    if not math.isfinite(minimum_wall) or not 0 <= minimum_wall <= wall_limit:
+        raise ValueError("minimum_request_wall_seconds must be finite and within the task wall limit")
     remaining = wall_limit - (time.perf_counter() - started)
     if remaining <= 0:
         raise BudgetStop("wall_limit")
+    if remaining < minimum_wall:
+        raise BudgetStop("wall_request_reservation")
     set_deadline = getattr(transport, "set_wall_deadline", None)
     if callable(set_deadline):
         set_deadline(started + wall_limit)
