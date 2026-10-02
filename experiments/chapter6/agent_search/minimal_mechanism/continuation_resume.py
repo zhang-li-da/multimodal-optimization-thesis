@@ -274,7 +274,8 @@ def verify(out):
     if str(out.resolve()) != m['output']:
         raise ValueError('not the registered output')
     owner = read_json(Path(m['registry']) / 'owner.json')
-    if owner != {'output': m['output'], 'manifest_sha256': m['manifest_sha256']}:
+    if (owner.get('output') != m['output']
+            or owner.get('manifest_sha256') != m['manifest_sha256']):
         raise ValueError('registry owner mismatch')
     if git('rev-parse', 'HEAD') != m['source_commit'] or git('status', '--porcelain'):
         raise ValueError('execution source changed')

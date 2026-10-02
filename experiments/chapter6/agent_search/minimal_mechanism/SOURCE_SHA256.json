@@ -81,8 +81,8 @@
     },
     {
       "path": "continuation_resume.py",
-      "bytes": 24826,
-      "sha256": "370ba08708c5cc6f8542d504bd2da5876caace0750deaeaa806befd96f101921"
+      "bytes": 24857,
+      "sha256": "11ebe1bce769badcb7ef7b96a2fd31fac6c64de07ca306fbb60ca103cc9883c6"
     },
     {
       "path": "continuation_segment.py",
@@ -200,5 +200,5 @@
       "sha256": "2dad8dcbaccf2101820e2ef347604ad253d76201bb81d1ca2ebb2ace99a353c1"
     }
   ],
-  "manifest_sha256": "9c140b4488131b7f9562c385590466209184e8bcbacd4f21d941e2a94b32894b"
+  "manifest_sha256": "dfc927cae1ec3b30cafa9f7551ee5b395326a0f555dcf42019171cc43134bc6d"
 }
