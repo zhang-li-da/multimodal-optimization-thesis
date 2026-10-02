@@ -142,6 +142,36 @@ def test_raw_response_only_cost_is_recovered_without_network(prepared):
     assert a==m.ledger(out,manifest)
 
 
+def test_audit_reports_unknown_calls_and_started_without_terminal(prepared):
+    out, manifest, registry = prepared
+    job = next(j for j in manifest['jobs'] if j['eligibility'] == 'ready')
+    run = out / 'runs' / job['job_id']
+    call = run / 'calls/000-planner'
+    save_json(run / 'config.json', {'started': True})
+    save_json(call / 'request.json', {'system': 's', 'prompt': 'p', 'max_tokens': 10})
+    save_json(call / 'state.json', {'status': 'provider_failed',
+                                    'diagnostics': {'error_category': 'provider_server'}})
+    progress = m.audit(out)
+    row = next(r for r in progress['rows'] if r['job_id'] == job['job_id'])
+    assert row['requests'] == 1
+    assert row['unknown_requests'] == 1
+    assert row['unknown_cost'] is True
+    assert row['provider_failure_categories'] == {'provider_server': 1}
+    assert row['attempt_started_without_terminal'] is True
+    assert job['job_id'] in progress['unknown_cost_job_ids']
+    assert job['job_id'] in progress['unfinished_started_jobs']
+    assert not progress['all_tasks_terminal']
+
+
+def test_prepare_records_continuation_timeout_revision(prepared):
+    _, manifest, _ = prepared
+    assert manifest['timeout_policy'] == {
+        'protocol_request_timeout_seconds': 180,
+        'continuation_request_timeout_seconds': 600,
+        'continuation_revision': manifest['timeout_policy']['continuation_revision'],
+    }
+
+
 def test_different_registry_is_rejected(prepared,tmp_path):
     out,manifest,registry=prepared
     with pytest.raises(ValueError,match='single family registry'):

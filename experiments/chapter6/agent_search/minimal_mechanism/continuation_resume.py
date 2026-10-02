@@ -89,6 +89,11 @@ def ledger(out, manifest, exclude_call=None):
     for p in sorted((out / 'runs').glob('*/calls/*/request.json')):
         if exclude_call is not None and p.parent == exclude_call:
             continue
+        state_path = p.with_name('state.json')
+        if state_path.exists() and read_json(state_path).get('status') == 'prepared':
+            # The durable call layer writes `prepared` before its sent marker;
+            # no provider request has been dispatched at this point.
+            continue
         response_path = p.with_name('response.json')
         raw_path = p.with_name('raw_response.json')
         response = read_json(response_path) if response_path.exists() else {}
@@ -104,6 +109,69 @@ def ledger(out, manifest, exclude_call=None):
     return sum_cost(rows)
 
 
+def _decode_stored_response(raw_path):
+    """Recover usage from a durable raw envelope without sending anything."""
+    if not raw_path.exists():
+        return {}
+    raw = read_json(raw_path)
+    if raw.get('envelope_sha256') != digest(raw.get('envelope', {})):
+        raise ValueError('raw response hash changed')
+    return decode_response(raw['envelope'])
+
+
+def _run_call_audit(run):
+    """Return a task-local call ledger and sanitized status categories.
+
+    The global ledger is authoritative for budget reservation. This helper adds
+    the per-task evidence needed to distinguish provider failure, unknown usage,
+    and a request that was prepared but never marked sent.
+    """
+    costs = []
+    categories = Counter()
+    state_counts = Counter()
+    prepared = 0
+    parse_errors = 0
+    calls_dir = run / 'calls'
+    for request_path in sorted(calls_dir.glob('*/request.json')):
+        folder = request_path.parent
+        state_path = folder / 'state.json'
+        state = read_json(state_path) if state_path.exists() else {}
+        state_status = state.get('status', 'state_missing')
+        state_counts[state_status] += 1
+        if state_status == 'prepared':
+            # DurableCalls writes this state before the sent marker and before
+            # transport dispatch. It is not an attempted provider request.
+            prepared += 1
+            continue
+        try:
+            request = read_json(request_path)
+            response_path = folder / 'response.json'
+            response = read_json(response_path) if response_path.exists() else {}
+            if not response:
+                response = _decode_stored_response(folder / 'raw_response.json')
+            cost = call_cost(request, response)
+        except Exception:
+            # A malformed durable record is itself an unknown-cost attempt;
+            # preserve the request count without inventing token usage.
+            parse_errors += 1
+            cost = {'requests': 1, 'known_tokens': 0, 'unknown_requests': 1,
+                    'unknown_reservation': 0}
+        costs.append(cost)
+        diagnostic = state.get('diagnostics') or {}
+        category = diagnostic.get('error_category')
+        if category:
+            categories[str(category)] += 1
+        elif state_status in {'provider_failed', 'sent_unknown', 'indeterminate'}:
+            categories[state_status] += 1
+    return {
+        **sum_cost(costs),
+        'state_counts': dict(state_counts),
+        'diagnostic_categories': dict(categories),
+        'prepared_requests': prepared,
+        'parse_errors': parse_errors,
+    }
+
+
 def prepare(out, prefix, registry):
     if registry.resolve() != family_registry(prefix):
         raise ValueError('use the single family registry, not a new per-batch registry')
@@ -113,6 +181,10 @@ def prepare(out, prefix, registry):
     if git('status', '--porcelain'):
         raise ValueError('commit source before freeze')
     protocol = read_json(HERE / 'protocol.b.json')
+    protocol_timeout = int(protocol['generation']['timeout_seconds'])
+    continuation_timeout = int(PARAMETERS['timeout_seconds'])
+    if protocol_timeout <= 0 or continuation_timeout < protocol_timeout:
+        raise ValueError('continuation timeout must cover the frozen protocol request timeout')
     jobs = continuation_jobs(protocol)
     attempts, archives = historical_attempts()
     attempted = {r['job_id'] for r in attempts}
@@ -157,6 +229,11 @@ def prepare(out, prefix, registry):
                 'model': {'provider': 'minimax-cn-coding-plan', 'model': 'MiniMax-M3',
                           'transport': 'direct HTTP via local OpenCode config', 'concurrency': 1},
                 'parameters': PARAMETERS, 'jobs': jobs, 'files': files,
+                'timeout_policy': {
+                    'protocol_request_timeout_seconds': protocol_timeout,
+                    'continuation_request_timeout_seconds': continuation_timeout,
+                    'continuation_revision': 'RESUME_METHOD_ZH.md explicitly raises the per-request wait bound to 600 seconds; the 900-second task wall remains authoritative',
+                },
                 'historical_attempts': attempts, 'historical_archives': archives,
                 'limits': {'max_requests_including_history': 2048, 'max_tokens_including_history': 12800000,
                            'new_jobs': sum(j['eligibility'] == 'ready' for j in jobs),
@@ -241,20 +318,55 @@ def halt(out, job_id, reason):
 
 def audit(out, manifest=None):
     m = manifest or read_json(out / 'manifest.json')
+    historical = {row['job_id']: row for row in m.get('historical_attempts', [])}
     rows = []
     for job in m['jobs']:
         run = out / 'runs' / job['job_id']
         status = read_json(run / 'terminal_status.json') if (run / 'terminal_status.json').exists() else {}
         result = read_json(run / 'search_result.json') if (run / 'search_result.json').exists() else {}
+        call_audit = _run_call_audit(run)
+        prior = historical.get(job['job_id'], {})
+        live_attempt_started = ((run / 'config.json').exists() or
+                                (run / 'attempt_claim.json').exists() or
+                                bool(call_audit['requests']))
+        terminal_present = (run / 'terminal_status.json').exists()
+        status_name = status.get('status', 'not_started')
+        # Historical attempts are represented by a preserved terminal status,
+        # but retain their archived resource ledger in the per-task row.
+        requests = prior.get('requests', 0) + call_audit['requests']
+        known_tokens = prior.get('known_tokens', 0) + call_audit['known_tokens']
+        unknown_requests = prior.get('unknown_requests', 0) + call_audit['unknown_requests']
+        unknown_reservation = prior.get('unknown_reservation', 0) + call_audit['unknown_reservation']
+        diagnostics = status.get('diagnostics') or {}
+        diagnostic_category = diagnostics.get('error_category')
         rows.append({'job_id': job['job_id'], 'strategy': job['strategy'], 'checkpoint_id': job['checkpoint_id'],
-                     'status': status.get('status', 'not_started'),
+                     'status': status_name,
                      'completed_proposals': result.get('summary', {}).get('completed_proposals', 0),
-                     'selections_sha256': file_sha(run / 'selection_candidates.json') if (run / 'selection_candidates.json').exists() else None})
+                     'selections_sha256': file_sha(run / 'selection_candidates.json') if (run / 'selection_candidates.json').exists() else None,
+                     'terminal_status_present': terminal_present,
+                     'attempt_started_without_terminal': bool(live_attempt_started and not terminal_present),
+                     'requests': requests,
+                     'known_tokens': known_tokens,
+                     'unknown_requests': unknown_requests,
+                     'unknown_reservation': unknown_reservation,
+                     'unknown_cost': bool(unknown_requests),
+                     'provider_failure_categories': call_audit['diagnostic_categories'],
+                     'terminal_error_category': diagnostic_category,
+                     'prepared_requests': call_audit['prepared_requests'],
+                     'call_parse_errors': call_audit['parse_errors']})
     costs = ledger(out, m)
     counts = dict(Counter(r['status'] for r in rows))
+    incomplete = [r['job_id'] for r in rows if r['attempt_started_without_terminal']]
+    unknown_cost_jobs = [r['job_id'] for r in rows if r['unknown_cost']]
+    provider_failure_jobs = [r['job_id'] for r in rows
+                             if r['provider_failure_categories'] or r['terminal_error_category']]
     value = {'manifest_sha256': m['manifest_sha256'], 'created_utc': utcnow(),
              'rows': rows, 'status_counts': counts, 'cost_including_history': costs,
-             'all_tasks_terminal': all(r['status'] in TERMINAL for r in rows),
+             'all_tasks_terminal': all(r['status'] in TERMINAL and
+                                       not r['attempt_started_without_terminal'] for r in rows),
+             'unfinished_started_jobs': incomplete,
+             'unknown_cost_job_ids': unknown_cost_jobs,
+             'provider_failure_job_ids': provider_failure_jobs,
              'halted': (out / 'halt.json').exists(), 'test_access': False}
     save_json(out / 'progress.json', value)
     return value
