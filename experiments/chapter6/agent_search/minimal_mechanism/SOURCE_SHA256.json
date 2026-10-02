@@ -10,6 +10,11 @@
       "sha256": "182499b448f3c9521f8545a1139ab639d1df696db6ba34852fd46b4b5ad58b6a"
     },
     {
+      "path": "CONTINUATION_METHOD_ZH.md",
+      "bytes": 1263,
+      "sha256": "d5254937194085f39bcc13222c5a86d203e9f478a47915ce91ad709fe48d81c4"
+    },
+    {
       "path": "DATA_INVENTORY.json",
       "bytes": 3823791,
       "sha256": "1dff097230e728d49cb47025072738a2d14aa62713dc6300a0ae524debb98f96"
@@ -65,6 +70,11 @@
       "sha256": "88c779c7f7fb1555f2c2915d18ebbbe45f65c5abc16515bc080dc867ac8fbaff"
     },
     {
+      "path": "continuation_recovery.py",
+      "bytes": 10507,
+      "sha256": "e23e79ca10fc346f8381ea3f37166cdac2a7637800e8d72a605ccc3557d9f4f2"
+    },
+    {
       "path": "controller.py",
       "bytes": 62753,
       "sha256": "9d4ac5e196375c5dd606aef8df819921a6079b2ff7e856cdfa361358c1f5c4e4"
@@ -86,8 +96,8 @@
     },
     {
       "path": "phase_b_runner.py",
-      "bytes": 25605,
-      "sha256": "20ca6aad04e45d5d83cb9a290578be42d7e83beee1e5a4570b2e27c17104c4e5"
+      "bytes": 26906,
+      "sha256": "6b645d5b5eb8dcbab8435fa66592dac7630e108697ffa86e5ca80857eaee550d"
     },
     {
       "path": "phase_b_study.py",
@@ -145,5 +155,5 @@
       "sha256": "2dad8dcbaccf2101820e2ef347604ad253d76201bb81d1ca2ebb2ace99a353c1"
     }
   ],
-  "manifest_sha256": "532f22c17e4c55f403da020b6833e23f80f4fade2b85ef811ee07079979b60dc"
+  "manifest_sha256": "a05aeed4a50e8cef9987173a5f7b72e69163cef27f04a0fa5aa2733dd3320f1b"
 }

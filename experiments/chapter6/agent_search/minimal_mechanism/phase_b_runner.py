@@ -75,6 +75,21 @@ def history_summary(nodes: list[dict], incumbent_loss: float) -> dict:
     ranked = sorted(valid, key=lambda n: (n["evaluation"]["loss"], n["id"]))
     represented = {tag for node in nodes for tag in node.get("tags", []) if isinstance(tag, str)}
     available_tags = list(TAGS["tsp"])
+    evidence_nodes = []
+    for node in nodes:
+        evaluation = node.get("evaluation", {})
+        evidence_nodes.append({
+            "node_id": node.get("id"),
+            "parent_id": node.get("parent_id"),
+            "intent": str(node.get("intent", ""))[:240],
+            "tags": node.get("tags", []),
+            "strategy_hypothesis_present": _valid_hypothesis(node.get("strategy_hypothesis")),
+            "program_fingerprint": node.get("program_fingerprint") or evaluation.get("program_identity", {}).get("raw_code_sha256"),
+            "structure_fingerprint": node.get("structure_fingerprint") or evaluation.get("program_identity", {}).get("structural_sha256"),
+            "valid": bool(evaluation.get("valid")),
+            "validation_loss": evaluation.get("loss"),
+            "failure_type": evaluation.get("failure_type"),
+        })
     return {
         "source": "frozen search prefix and proposals already observed in this run",
         "test_data_access": False,
@@ -96,6 +111,12 @@ def history_summary(nodes: list[dict], incumbent_loss: float) -> dict:
             for n in nodes if not n.get("evaluation", {}).get("valid")
         ][-5:],
         "not_yet_observed_operator_tags": [tag for tag in available_tags if tag not in represented],
+        "direction_evidence": evidence_nodes,
+        "strategy_hypothesis_status": {
+            "present_count": sum(item["strategy_hypothesis_present"] for item in evidence_nodes),
+            "missing_count": sum(not item["strategy_hypothesis_present"] for item in evidence_nodes),
+            "interpretation": "Missing hypotheses are missing evidence, not negative evidence; EG must not treat them as zero-value directions.",
+        },
     }
 
 
