@@ -1,0 +1,28 @@
+{
+  "schema": "chapter6-continuation-execution-summary-v1",
+  "status": "paused_infrastructure_incomplete",
+  "model": {"provider": "minimax-cn-coding-plan", "requested_model": "MiniMax-M3"},
+  "planned_jobs": 128,
+  "executable_jobs": 104,
+  "completed_full_jobs": 2,
+  "infrastructure_incomplete_jobs": 3,
+  "not_started_jobs": 123,
+  "completed_proposals": 40,
+  "requests": 83,
+  "responses_with_known_usage": 80,
+  "known_tokens": 323277,
+  "unknown_requests": 3,
+  "test_access": false,
+  "test_executed": false,
+  "component_effectiveness_claim": "not_estimable",
+  "batches": [
+    {"id":"r3","planned_jobs":128,"terminal_jobs":1,"completed_proposals":4,"requests":9,"known_tokens":45194,"unknown_requests":1,"status":"paused_infrastructure_incomplete"},
+    {"id":"r4","planned_jobs":128,"terminal_jobs":2,"completed_proposals":14,"requests":29,"known_tokens":106636,"unknown_requests":1,"status":"paused_infrastructure_incomplete"},
+    {"id":"r5","planned_jobs":128,"terminal_jobs":3,"completed_proposals":22,"requests":45,"known_tokens":171447,"unknown_requests":1,"status":"paused_infrastructure_incomplete"}
+  ],
+  "archives": [
+    "phase_b_continuation_20261002_r3.zip",
+    "phase_b_continuation_20261002_r4.zip",
+    "phase_b_continuation_20261002_r5.zip"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "chapter6-continuation-archive-sha256-v1",
+  "archives": [
+    {"path":"phase_b_continuation_20261002_r3.zip","bytes":1302998,"sha256":"13acd9b788a4e6b2649e35c238ab12f43cc17bb9e6f6a04e342084c61aacf56c"},
+    {"path":"phase_b_continuation_20261002_r4.zip","bytes":1799702,"sha256":"c68f1ac53f9ee9e5c1d138042a6f27679c77fb3585b27633298cd8e432841e73"},
+    {"path":"phase_b_continuation_20261002_r5.zip","bytes":2281025,"sha256":"9e924752618effc81084b1d7db6931c4adfa66ae93196b57ca92ff154eab0786"}
+  ]
+}

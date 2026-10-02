@@ -120,6 +120,21 @@
       "sha256": "9e2e95dbe3358715d5480dab136e2c249247cc6e1834fdf80377a62d9a293183"
     },
     {
+      "path": "results/continuation-recovery-20261002/ARCHIVE_SHA256.json",
+      "bytes": 513,
+      "sha256": "c77b982cd29719a1a4be72280eded0e5525e4beca3ab7490402de7139ad02b21"
+    },
+    {
+      "path": "results/continuation-recovery-20261002/EXECUTION_SUMMARY.json",
+      "bytes": 1280,
+      "sha256": "6fea24f6df2ec9843887d180a838999f26539baf5f7422cb22824e1b7f1c04cd"
+    },
+    {
+      "path": "results/continuation-recovery-20261002/REPORT_ZH.md",
+      "bytes": 2941,
+      "sha256": "343d903402705ab69462e117c8c78d95952addea712fe0e04cbb174a81e30468"
+    },
+    {
       "path": "test_analyze_phase_b.py",
       "bytes": 13430,
       "sha256": "141d3e11ab4d49af2e64f476f888c05d862f6a8c053eaf184748652a3f23abfa"
@@ -155,5 +170,5 @@
       "sha256": "2dad8dcbaccf2101820e2ef347604ad253d76201bb81d1ca2ebb2ace99a353c1"
     }
   ],
-  "manifest_sha256": "7f3a64c4d4097987248fd1f4064901e494811c8cc51c69318e6982811e59379f"
+  "manifest_sha256": "2ec17aefd12d7d6d019886e41770b86de28d8458e8e480bdb05ef42158351fff"
 }
