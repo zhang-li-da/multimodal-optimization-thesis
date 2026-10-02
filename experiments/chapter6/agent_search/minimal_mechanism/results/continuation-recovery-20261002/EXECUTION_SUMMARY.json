@@ -1,28 +1,306 @@
 {
-  "schema": "chapter6-continuation-execution-summary-v1",
+  "schema": "chapter6-continuation-execution-summary-v2",
   "status": "paused_infrastructure_incomplete",
-  "model": {"provider": "minimax-cn-coding-plan", "requested_model": "MiniMax-M3"},
+  "supersedes": "91c3312 summary mixed execution attempts with unique task IDs",
   "planned_jobs": 128,
   "executable_jobs": 104,
-  "completed_full_jobs": 2,
-  "infrastructure_incomplete_jobs": 3,
-  "not_started_jobs": 123,
-  "completed_proposals": 40,
-  "requests": 83,
-  "responses_with_known_usage": 80,
-  "known_tokens": 323277,
-  "unknown_requests": 3,
+  "execution_attempts": 6,
+  "completed_execution_attempts": 3,
+  "infrastructure_incomplete_execution_attempts": 3,
+  "unique_attempted_jobs": 3,
+  "unique_jobs_with_any_complete_attempt": 2,
+  "unique_jobs_without_complete_attempt": 1,
+  "unique_unattempted_jobs": 125,
+  "unattempted_executable_jobs": 101,
+  "unavailable_checkpoint_jobs": 24,
+  "repeated_job_ids": {
+    "eg-b64-step24-r0": 3,
+    "e0-b62-step24-r0": 2
+  },
+  "action_execution_attempts": {
+    "I": 0,
+    "B": 0,
+    "E0": 3,
+    "EG": 3
+  },
   "test_access": false,
   "test_executed": false,
-  "component_effectiveness_claim": "not_estimable",
-  "batches": [
-    {"id":"r3","planned_jobs":128,"terminal_jobs":1,"completed_proposals":4,"requests":9,"known_tokens":45194,"unknown_requests":1,"status":"paused_infrastructure_incomplete"},
-    {"id":"r4","planned_jobs":128,"terminal_jobs":2,"completed_proposals":14,"requests":29,"known_tokens":106636,"unknown_requests":1,"status":"paused_infrastructure_incomplete"},
-    {"id":"r5","planned_jobs":128,"terminal_jobs":3,"completed_proposals":22,"requests":45,"known_tokens":171447,"unknown_requests":1,"status":"paused_infrastructure_incomplete"}
-  ],
+  "component_effectiveness_claim": "not_estimable: repeated jobs and no same-checkpoint I/B/E0/EG comparisons",
+  "cost_interpretation": "all execution attempts counted; unknown usage is not zero",
+  "outcome_interpretation": "descriptive only; repeated attempts must not replace earlier failures or become independent planned repetitions",
   "archives": [
-    "phase_b_continuation_20261002_r3.zip",
-    "phase_b_continuation_20261002_r4.zip",
-    "phase_b_continuation_20261002_r5.zip"
-  ]
+    {
+      "path": "phase_b_continuation_20261002_r3.zip",
+      "sha256": "13acd9b788a4e6b2649e35c238ab12f43cc17bb9e6f6a04e342084c61aacf56c",
+      "file_members": 85,
+      "execution_attempts": 1
+    },
+    {
+      "path": "phase_b_continuation_20261002_r4.zip",
+      "sha256": "c68f1ac53f9ee9e5c1d138042a6f27679c77fb3585b27633298cd8e432841e73",
+      "file_members": 212,
+      "execution_attempts": 2
+    },
+    {
+      "path": "phase_b_continuation_20261002_r5.zip",
+      "sha256": "9e924752618effc81084b1d7db6931c4adfa66ae93196b57ca92ff154eab0786",
+      "file_members": 441,
+      "execution_attempts": 3
+    }
+  ],
+  "attempts": [
+    {
+      "batch": "r3",
+      "job_id": "eg-b64-step24-r0",
+      "strategy": "EG",
+      "status": "infrastructure_incomplete",
+      "completed_proposals": 4,
+      "valid_programs": 3,
+      "invalid_programs": 1,
+      "truncations": 0,
+      "requests": 9,
+      "responses": 8,
+      "known_tokens": 45194,
+      "unknown_requests": 1,
+      "returned_models": [
+        "MiniMax-M3"
+      ],
+      "start_validation_loss": 0.02260017209027511,
+      "best_new_validation_loss": 0.06602809396423037,
+      "final_validation_loss": 0.02260017209027511,
+      "new_candidates_beating_incumbent": 0,
+      "project_progress_events": 1,
+      "wall_seconds": 480.12552410014905,
+      "selections": {
+        "4": {
+          "status": "frozen_on_validation",
+          "selected_on": "validation",
+          "strategy": "EG",
+          "prefix_proposals": 4,
+          "best_id": 25,
+          "validation_loss": 0.02260017209027511,
+          "checkpoint_incumbent_loss": 0.02260017209027511
+        },
+        "8": {
+          "status": "missing_prefix",
+          "completed_proposals": 4
+        }
+      }
+    },
+    {
+      "batch": "r4",
+      "job_id": "e0-b62-step24-r0",
+      "strategy": "E0",
+      "status": "infrastructure_incomplete",
+      "completed_proposals": 6,
+      "valid_programs": 6,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "requests": 13,
+      "responses": 12,
+      "known_tokens": 46360,
+      "unknown_requests": 1,
+      "returned_models": [
+        "MiniMax-M3"
+      ],
+      "start_validation_loss": 0.06220311254429684,
+      "best_new_validation_loss": 0.07775940863022505,
+      "final_validation_loss": 0.06220311254429684,
+      "new_candidates_beating_incumbent": 0,
+      "project_progress_events": 2,
+      "wall_seconds": 900.2569824999664,
+      "selections": {
+        "4": {
+          "status": "frozen_on_validation",
+          "selected_on": "validation",
+          "strategy": "E0",
+          "prefix_proposals": 4,
+          "best_id": 24,
+          "validation_loss": 0.06220311254429684,
+          "checkpoint_incumbent_loss": 0.06220311254429684
+        },
+        "8": {
+          "status": "missing_prefix",
+          "completed_proposals": 6
+        }
+      }
+    },
+    {
+      "batch": "r4",
+      "job_id": "eg-b64-step24-r0",
+      "strategy": "EG",
+      "status": "continuation_complete",
+      "completed_proposals": 8,
+      "valid_programs": 8,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "requests": 16,
+      "responses": 16,
+      "known_tokens": 60276,
+      "unknown_requests": 0,
+      "returned_models": [
+        "MiniMax-M3"
+      ],
+      "start_validation_loss": 0.02260017209027511,
+      "best_new_validation_loss": 0.06462839399850144,
+      "final_validation_loss": 0.02260017209027511,
+      "new_candidates_beating_incumbent": 0,
+      "project_progress_events": 3,
+      "wall_seconds": 685.9859656998888,
+      "selections": {
+        "4": {
+          "status": "frozen_on_validation",
+          "selected_on": "validation",
+          "strategy": "EG",
+          "prefix_proposals": 4,
+          "best_id": 25,
+          "validation_loss": 0.02260017209027511,
+          "checkpoint_incumbent_loss": 0.02260017209027511
+        },
+        "8": {
+          "status": "frozen_on_validation",
+          "selected_on": "validation",
+          "strategy": "EG",
+          "prefix_proposals": 8,
+          "best_id": 25,
+          "validation_loss": 0.02260017209027511,
+          "checkpoint_incumbent_loss": 0.02260017209027511
+        }
+      }
+    },
+    {
+      "batch": "r5",
+      "job_id": "e0-b62-step24-r0",
+      "strategy": "E0",
+      "status": "continuation_complete",
+      "completed_proposals": 8,
+      "valid_programs": 8,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "requests": 16,
+      "responses": 16,
+      "known_tokens": 57513,
+      "unknown_requests": 0,
+      "returned_models": [
+        "MiniMax-M3"
+      ],
+      "start_validation_loss": 0.06220311254429684,
+      "best_new_validation_loss": 0.08166194542300026,
+      "final_validation_loss": 0.06220311254429684,
+      "new_candidates_beating_incumbent": 0,
+      "project_progress_events": 1,
+      "wall_seconds": 695.0085138001014,
+      "selections": {
+        "4": {
+          "status": "frozen_on_validation",
+          "selected_on": "validation",
+          "strategy": "E0",
+          "prefix_proposals": 4,
+          "best_id": 24,
+          "validation_loss": 0.06220311254429684,
+          "checkpoint_incumbent_loss": 0.06220311254429684
+        },
+        "8": {
+          "status": "frozen_on_validation",
+          "selected_on": "validation",
+          "strategy": "E0",
+          "prefix_proposals": 8,
+          "best_id": 24,
+          "validation_loss": 0.06220311254429684,
+          "checkpoint_incumbent_loss": 0.06220311254429684
+        }
+      }
+    },
+    {
+      "batch": "r5",
+      "job_id": "e0-b63-step24-r0",
+      "strategy": "E0",
+      "status": "infrastructure_incomplete",
+      "completed_proposals": 6,
+      "valid_programs": 6,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "requests": 13,
+      "responses": 12,
+      "known_tokens": 61153,
+      "unknown_requests": 1,
+      "returned_models": [
+        "MiniMax-M3"
+      ],
+      "start_validation_loss": 0.039226994277127704,
+      "best_new_validation_loss": 0.12738441321579494,
+      "final_validation_loss": 0.039226994277127704,
+      "new_candidates_beating_incumbent": 0,
+      "project_progress_events": 1,
+      "wall_seconds": 682.9834765000269,
+      "selections": {
+        "4": {
+          "status": "frozen_on_validation",
+          "selected_on": "validation",
+          "strategy": "E0",
+          "prefix_proposals": 4,
+          "best_id": 4,
+          "validation_loss": 0.039226994277127704,
+          "checkpoint_incumbent_loss": 0.039226994277127704
+        },
+        "8": {
+          "status": "missing_prefix",
+          "completed_proposals": 6
+        }
+      }
+    },
+    {
+      "batch": "r5",
+      "job_id": "eg-b64-step24-r0",
+      "strategy": "EG",
+      "status": "continuation_complete",
+      "completed_proposals": 8,
+      "valid_programs": 8,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "requests": 16,
+      "responses": 16,
+      "known_tokens": 52781,
+      "unknown_requests": 0,
+      "returned_models": [
+        "MiniMax-M3"
+      ],
+      "start_validation_loss": 0.02260017209027511,
+      "best_new_validation_loss": 0.04577689679842167,
+      "final_validation_loss": 0.02260017209027511,
+      "new_candidates_beating_incumbent": 0,
+      "project_progress_events": 1,
+      "wall_seconds": 575.7584418000188,
+      "selections": {
+        "4": {
+          "status": "frozen_on_validation",
+          "selected_on": "validation",
+          "strategy": "EG",
+          "prefix_proposals": 4,
+          "best_id": 25,
+          "validation_loss": 0.02260017209027511,
+          "checkpoint_incumbent_loss": 0.02260017209027511
+        },
+        "8": {
+          "status": "frozen_on_validation",
+          "selected_on": "validation",
+          "strategy": "EG",
+          "prefix_proposals": 8,
+          "best_id": 25,
+          "validation_loss": 0.02260017209027511,
+          "checkpoint_incumbent_loss": 0.02260017209027511
+        }
+      }
+    }
+  ],
+  "completed_proposals": 40,
+  "requests": 83,
+  "responses": 80,
+  "known_tokens": 323277,
+  "unknown_requests": 3,
+  "valid_programs": 39,
+  "invalid_programs": 1,
+  "truncations": 0,
+  "project_progress_events": 9,
+  "new_candidates_beating_incumbent": 0
 }
