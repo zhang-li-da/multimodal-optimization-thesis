@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 from chapter6_demo.v12_2.common import save_json
-from experiments.chapter6.agent_search.minimal_mechanism.audit_segments import audit, evidence_run, verify_layers
+from experiments.chapter6.agent_search.minimal_mechanism.audit_segments import audit, evidence_run, verify_layers, report_zh, archive
 
 
 @pytest.fixture
@@ -56,3 +56,20 @@ def test_parent_added_file_invalidates_archive(archived):
     save_json(archived / 'parent_snapshot/unrecorded.json', {'extra': True})
     with pytest.raises(AssertionError):
         verify_layers(archived)
+
+
+def test_archive_cannot_claim_live_dispatch_is_complete(archived, tmp_path, monkeypatch):
+    import experiments.chapter6.agent_search.minimal_mechanism.audit_segments as module
+    monkeypatch.setattr(module, 'audit', lambda root: {'halted': False, 'all_tasks_terminal': False})
+    output = tmp_path.with_name(tmp_path.name + '-publication')
+    with pytest.raises(ValueError, match='actively dispatching'):
+        archive(archived, output)
+    assert not output.exists()
+
+
+def test_report_distinguishes_partial_run_from_effectiveness(archived):
+    report = report_zh(audit(archived))
+    assert '完成 0 条完整轨迹' in report
+    assert '14 次请求' in report
+    assert '73,202 已知 token' in report
+    assert '不能证明 B 优于 I' in report
