@@ -1,12 +1,13 @@
 {
-  "schema": "chapter6-segment-delivery-hashes-v1",
+  "schema": "chapter6-segment-delivery-hashes-v2",
+  "hash_basis": "Git blob bytes for text; repository bytes for binary",
   "files": {
     "ANALYSIS.json": "2aaa8b59ebd6e111f0fc37080e55a41d8e2bc470d8d694c3ec9a805fb9f519f0",
     "ARCHIVE_INDEX.json": "87b39c8ff797b69504083c6f3fa35139211e632c53d13de4184767ede4525ebc",
     "deliver_segment_20261003.py": "931e11d08db9c2a5d87265e5541bbc540bf6a5cca5859e215f3879d3234d7ffe",
     "execution-source.zip": "9b6b71c2e88dec05aff76d3f483a3e744c0fce9064874cea7913662ba7a53da1",
     "EXECUTION_BINDING.json": "62cab9d2823cb22147236579091ebfa88e05902b12997ce93cf623bec34fb2c7",
-    "EXECUTION_SOURCE_INDEX.json": "e6d46ebaec94db3dea047142e7d47eb23c0400a2a674d739c49fb1863686621b",
+    "EXECUTION_SOURCE_INDEX.json": "8cbf1944410f41f3dcee6610949e37869c26d77c788ff0a3c7a5d162b306b5ee",
     "halt.json": "8ab153ebd78f893751a06ffdf539d45de93271c59501e6c36e437068d2959b07",
     "manifest.json": "3e52eb77fe473f63ad8586ebc7ff8ee3cfeea553c44e28fd6c81fed4b550eb3b",
     "parent_halt.json": "9ce597f076b9337d725d2a30f33f48e4a1b89eb8863f8fc8e044cd2874cf5b45",
