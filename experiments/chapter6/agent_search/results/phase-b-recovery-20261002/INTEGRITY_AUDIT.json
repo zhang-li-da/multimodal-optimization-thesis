@@ -1,0 +1,155 @@
+{
+  "utc": "2026-10-02T06:14:55.151386+00:00",
+  "controller_steps_replayed": 169,
+  "program_identities_verified": 193,
+  "main_trajectory_requests": 341,
+  "main_trajectory_responses": 338,
+  "main_trajectory_known_tokens": 1336018,
+  "main_trajectory_unknown_requests": 3,
+  "search_data_only": true,
+  "credential_leak_check": "passed",
+  "checkpoints": [
+    {
+      "checkpoint": "b65-step08",
+      "visible_nodes": 11,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b63-step08",
+      "visible_nodes": 11,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b63-step24",
+      "visible_nodes": 27,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b66-step08",
+      "visible_nodes": 11,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b60-step08",
+      "visible_nodes": 11,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b60-step24",
+      "visible_nodes": 27,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b67-step08",
+      "visible_nodes": 11,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b62-step08",
+      "visible_nodes": 11,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b62-step24",
+      "visible_nodes": 27,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b64-step08",
+      "visible_nodes": 11,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b64-step24",
+      "visible_nodes": 27,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b61-step08",
+      "visible_nodes": 11,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    },
+    {
+      "checkpoint": "b61-step24",
+      "visible_nodes": 27,
+      "summary_in_EG_request": true,
+      "summary_absent_from_E0_request": true,
+      "same_output_schema": true,
+      "selection_matches_prefix_only": true
+    }
+  ],
+  "invalid_candidates": [
+    {
+      "job": "prefix-sp-b63",
+      "step": 15,
+      "node_id": 18,
+      "proposal_failure": null,
+      "evaluation_failure": "ProgramError"
+    },
+    {
+      "job": "prefix-sp-b67",
+      "step": 6,
+      "node_id": 9,
+      "proposal_failure": null,
+      "evaluation_failure": "ProgramError"
+    },
+    {
+      "job": "prefix-sp-b62",
+      "step": 12,
+      "node_id": 15,
+      "proposal_failure": null,
+      "evaluation_failure": "ProgramError"
+    },
+    {
+      "job": "prefix-sp-b61",
+      "step": 19,
+      "node_id": 22,
+      "proposal_failure": {
+        "kind": "proposal_parse_failure",
+        "stage": "coder",
+        "error_type": "ValueError"
+      },
+      "evaluation_failure": "ProgramError"
+    }
+  ],
+  "numerical_evaluations_rerun": false,
+  "model_calls_added": 0,
+  "test_access": false,
+  "all_16_planned_checkpoint_states_accounted": true
+}

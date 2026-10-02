@@ -1,0 +1,4035 @@
+{
+  "created_utc": "2026-10-02T06:13:12.767089+00:00",
+  "manifest_sha256": "e9db0a08fb3bc524e3d8973272483118fce99e53516b8c22298a9cc90cbbeeda",
+  "rows": [
+    {
+      "block": 65,
+      "checkpoint": 8,
+      "task_status": "infrastructure_incomplete",
+      "completed_proposals": 16,
+      "valid_programs": 16,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 3,
+        "loss": 0.04155953832395905
+      },
+      "branch": {
+        "id": 5,
+        "loss": 0.04843277513515749
+      },
+      "branch_difference": {
+        "node_id": 5,
+        "validation_loss_delta": 0.00687323681119844,
+        "probe_behavior_distance": 0.1328976034858388,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 33,
+        "known_tokens": 127470,
+        "unknown_requests": 1,
+        "unknown_reservation": 21302
+      },
+      "wall_seconds": 1253.4073335998692,
+      "checkpoint_sha256": "b0c348bcadcbc4c406aca5814013ff33a048fdd7b8b3e4150df5f0250412f5aa"
+    },
+    {
+      "block": 65,
+      "checkpoint": 24,
+      "task_status": "infrastructure_incomplete",
+      "completed_proposals": 16,
+      "valid_programs": 16,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "checkpoint_status": "preparation_incomplete",
+      "incumbent": null,
+      "branch": null,
+      "branch_difference": {},
+      "cost": {
+        "requests": 33,
+        "known_tokens": 127470,
+        "unknown_requests": 1,
+        "unknown_reservation": 21302
+      },
+      "wall_seconds": 1253.4073335998692,
+      "checkpoint_sha256": "790414db951138d4bc4111302bdb7ff9ca608201f86d9c665bb6f9c0f11e64ff"
+    },
+    {
+      "block": 63,
+      "checkpoint": 8,
+      "task_status": "search_complete_test_not_run",
+      "completed_proposals": 24,
+      "valid_programs": 23,
+      "invalid_programs": 1,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 4,
+        "loss": 0.039226994277127704
+      },
+      "branch": {
+        "id": 3,
+        "loss": 0.044587369949167184
+      },
+      "branch_difference": {
+        "node_id": 3,
+        "validation_loss_delta": 0.00536037567203948,
+        "probe_behavior_distance": 0.0941047471620227,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 48,
+        "known_tokens": 171266,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 2251.449472000124,
+      "checkpoint_sha256": "a47309c776d9ef3d6928f2a1b301c5cd638dc2d8ad282e4b05dec5ea979528ac"
+    },
+    {
+      "block": 63,
+      "checkpoint": 24,
+      "task_status": "search_complete_test_not_run",
+      "completed_proposals": 24,
+      "valid_programs": 23,
+      "invalid_programs": 1,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 4,
+        "loss": 0.039226994277127704
+      },
+      "branch": {
+        "id": 3,
+        "loss": 0.044587369949167184
+      },
+      "branch_difference": {
+        "node_id": 3,
+        "validation_loss_delta": 0.00536037567203948,
+        "probe_behavior_distance": 0.0941047471620227,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 48,
+        "known_tokens": 171266,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 2251.449472000124,
+      "checkpoint_sha256": "1fd071adf3083ce4bb37c4cc92570ddd0606f1e48bfa137aa26ca380533a6d25"
+    },
+    {
+      "block": 66,
+      "checkpoint": 8,
+      "task_status": "infrastructure_incomplete",
+      "completed_proposals": 13,
+      "valid_programs": 13,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 9,
+        "loss": 0.046016743473758975
+      },
+      "branch": {
+        "id": 4,
+        "loss": 0.04929006817624098
+      },
+      "branch_difference": {
+        "node_id": 4,
+        "validation_loss_delta": 0.003273324702482004,
+        "probe_behavior_distance": 0.10049019607843139,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 27,
+        "known_tokens": 98514,
+        "unknown_requests": 1,
+        "unknown_reservation": 20905
+      },
+      "wall_seconds": 1551.0683925000485,
+      "checkpoint_sha256": "0b5956dbb407a85ea0fe53ef308dca5f8ebc3c11ff0a2bfcd4c5d7061b841d0e"
+    },
+    {
+      "block": 66,
+      "checkpoint": 24,
+      "task_status": "infrastructure_incomplete",
+      "completed_proposals": 13,
+      "valid_programs": 13,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "checkpoint_status": "preparation_incomplete",
+      "incumbent": null,
+      "branch": null,
+      "branch_difference": {},
+      "cost": {
+        "requests": 27,
+        "known_tokens": 98514,
+        "unknown_requests": 1,
+        "unknown_reservation": 20905
+      },
+      "wall_seconds": 1551.0683925000485,
+      "checkpoint_sha256": "a2bfc94ebb89b162c40ea296e57aac03d504658f91a157751e1c61acee7aa10b"
+    },
+    {
+      "block": 60,
+      "checkpoint": 8,
+      "task_status": "search_complete_test_not_run",
+      "completed_proposals": 24,
+      "valid_programs": 24,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 8,
+        "loss": 0.042945950990724534
+      },
+      "branch": {
+        "id": 5,
+        "loss": 0.045693859388963635
+      },
+      "branch_difference": {
+        "node_id": 5,
+        "validation_loss_delta": 0.0027479083982391017,
+        "probe_behavior_distance": 0.08728213507625272,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 48,
+        "known_tokens": 174481,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 2346.2788897999562,
+      "checkpoint_sha256": "c741d73d735fcc1f28109932390035219023ac3b2d1288b120d0c7509f78619c"
+    },
+    {
+      "block": 60,
+      "checkpoint": 24,
+      "task_status": "search_complete_test_not_run",
+      "completed_proposals": 24,
+      "valid_programs": 24,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 8,
+        "loss": 0.042945950990724534
+      },
+      "branch": {
+        "id": 5,
+        "loss": 0.045693859388963635
+      },
+      "branch_difference": {
+        "node_id": 5,
+        "validation_loss_delta": 0.0027479083982391017,
+        "probe_behavior_distance": 0.08728213507625272,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 48,
+        "known_tokens": 174481,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 2346.2788897999562,
+      "checkpoint_sha256": "07585de8e569e7505f53a1eb0892c6a4aedf22db5e0b1dc37dd95fa9ffecb1f5"
+    },
+    {
+      "block": 67,
+      "checkpoint": 8,
+      "task_status": "infrastructure_incomplete",
+      "completed_proposals": 20,
+      "valid_programs": 19,
+      "invalid_programs": 1,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 8,
+        "loss": 0.05947683432375466
+      },
+      "branch": {
+        "id": 4,
+        "loss": 0.06573229888527982
+      },
+      "branch_difference": {
+        "node_id": 4,
+        "validation_loss_delta": 0.006255464561525155,
+        "probe_behavior_distance": 0.0925925925925926,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 41,
+        "known_tokens": 139348,
+        "unknown_requests": 1,
+        "unknown_reservation": 20852
+      },
+      "wall_seconds": 1900.8493915998843,
+      "checkpoint_sha256": "8941b7af876c5d5684b84e686b2cce919effc50905ed07e700bd7d3c42b21ed3"
+    },
+    {
+      "block": 67,
+      "checkpoint": 24,
+      "task_status": "infrastructure_incomplete",
+      "completed_proposals": 20,
+      "valid_programs": 19,
+      "invalid_programs": 1,
+      "truncations": 0,
+      "checkpoint_status": "preparation_incomplete",
+      "incumbent": null,
+      "branch": null,
+      "branch_difference": {},
+      "cost": {
+        "requests": 41,
+        "known_tokens": 139348,
+        "unknown_requests": 1,
+        "unknown_reservation": 20852
+      },
+      "wall_seconds": 1900.8493915998843,
+      "checkpoint_sha256": "998c600fd88680e359ae402a83cbdf34b7e2846a058eacfd64afef181e0c2428"
+    },
+    {
+      "block": 62,
+      "checkpoint": 8,
+      "task_status": "search_complete_test_not_run",
+      "completed_proposals": 24,
+      "valid_programs": 23,
+      "invalid_programs": 1,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 8,
+        "loss": 0.06311686969466002
+      },
+      "branch": {
+        "id": 5,
+        "loss": 0.06347091227276794
+      },
+      "branch_difference": {
+        "node_id": 5,
+        "validation_loss_delta": 0.0003540425781079215,
+        "probe_behavior_distance": 0.08089668615984405,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 48,
+        "known_tokens": 182304,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 3019.9410220000427,
+      "checkpoint_sha256": "50a2cd2696ade039302d8bf4874d73a81bec257576407bef8ff7be68dfc56638"
+    },
+    {
+      "block": 62,
+      "checkpoint": 24,
+      "task_status": "search_complete_test_not_run",
+      "completed_proposals": 24,
+      "valid_programs": 23,
+      "invalid_programs": 1,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 24,
+        "loss": 0.06220311254429684
+      },
+      "branch": {
+        "id": 9,
+        "loss": 0.06825128992247567
+      },
+      "branch_difference": {
+        "node_id": 9,
+        "validation_loss_delta": 0.00604817737817883,
+        "probe_behavior_distance": 0.13114178419905972,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 48,
+        "known_tokens": 182304,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 3019.9410220000427,
+      "checkpoint_sha256": "21edcb7ab788b14da2937b275151969463981fb0ce99713f4a576303a606c926"
+    },
+    {
+      "block": 64,
+      "checkpoint": 8,
+      "task_status": "search_complete_test_not_run",
+      "completed_proposals": 24,
+      "valid_programs": 24,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 10,
+        "loss": 0.030450779563449586
+      },
+      "branch": {
+        "id": 8,
+        "loss": 0.03175127937396968
+      },
+      "branch_difference": {
+        "node_id": 8,
+        "validation_loss_delta": 0.0013004998105200956,
+        "probe_behavior_distance": 0.08728213507625272,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 48,
+        "known_tokens": 211048,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 3262.4066153999884,
+      "checkpoint_sha256": "e9454609565c3cdc91f8a5d7e6b35208830987a893d5187afd0c1e330f15c562"
+    },
+    {
+      "block": 64,
+      "checkpoint": 24,
+      "task_status": "search_complete_test_not_run",
+      "completed_proposals": 24,
+      "valid_programs": 24,
+      "invalid_programs": 0,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 25,
+        "loss": 0.02260017209027511
+      },
+      "branch": {
+        "id": 22,
+        "loss": 0.024532955909430196
+      },
+      "branch_difference": {
+        "node_id": 22,
+        "validation_loss_delta": 0.001932783819155088,
+        "probe_behavior_distance": 0.08703703703703702,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 48,
+        "known_tokens": 211048,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 3262.4066153999884,
+      "checkpoint_sha256": "b9a897e7d76a19a473813df9393db58a1eae007cbab1fe1cf5371b5547873b32"
+    },
+    {
+      "block": 61,
+      "checkpoint": 8,
+      "task_status": "search_complete_test_not_run",
+      "completed_proposals": 24,
+      "valid_programs": 23,
+      "invalid_programs": 1,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 5,
+        "loss": 0.04533277534063642
+      },
+      "branch": {
+        "id": 10,
+        "loss": 0.04579664212142192
+      },
+      "branch_difference": {
+        "node_id": 10,
+        "validation_loss_delta": 0.00046386678078549903,
+        "probe_behavior_distance": 0.21109625668449197,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 48,
+        "known_tokens": 231587,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 3293.98765809997,
+      "checkpoint_sha256": "835b41f7cf9bf1b3086cfa525b97a791d5fea7a7be8ec98ed65c96b7a772bb02"
+    },
+    {
+      "block": 61,
+      "checkpoint": 24,
+      "task_status": "search_complete_test_not_run",
+      "completed_proposals": 24,
+      "valid_programs": 23,
+      "invalid_programs": 1,
+      "truncations": 0,
+      "checkpoint_status": "ready",
+      "incumbent": {
+        "id": 16,
+        "loss": 0.03585393334990952
+      },
+      "branch": {
+        "id": 15,
+        "loss": 0.03617293671430552
+      },
+      "branch_difference": {
+        "node_id": 15,
+        "validation_loss_delta": 0.00031900336439599775,
+        "probe_behavior_distance": 0.15811546840958604,
+        "eligible": true
+      },
+      "cost": {
+        "requests": 48,
+        "known_tokens": 231587,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 3293.98765809997,
+      "checkpoint_sha256": "04f46402e2c6d5ce509a5ea4db6e8b23f9306efccc03420384009f1da29d1644"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "b65-step08",
+      "path": "checkpoints/b65-step08.json",
+      "sha256": "b0c348bcadcbc4c406aca5814013ff33a048fdd7b8b3e4150df5f0250412f5aa",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b65-step24",
+      "path": "checkpoints/b65-step24.json",
+      "sha256": "790414db951138d4bc4111302bdb7ff9ca608201f86d9c665bb6f9c0f11e64ff",
+      "status": "preparation_incomplete",
+      "branch_available": false
+    },
+    {
+      "id": "b63-step08",
+      "path": "checkpoints/b63-step08.json",
+      "sha256": "a47309c776d9ef3d6928f2a1b301c5cd638dc2d8ad282e4b05dec5ea979528ac",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b63-step24",
+      "path": "checkpoints/b63-step24.json",
+      "sha256": "1fd071adf3083ce4bb37c4cc92570ddd0606f1e48bfa137aa26ca380533a6d25",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b66-step08",
+      "path": "checkpoints/b66-step08.json",
+      "sha256": "0b5956dbb407a85ea0fe53ef308dca5f8ebc3c11ff0a2bfcd4c5d7061b841d0e",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b66-step24",
+      "path": "checkpoints/b66-step24.json",
+      "sha256": "a2bfc94ebb89b162c40ea296e57aac03d504658f91a157751e1c61acee7aa10b",
+      "status": "preparation_incomplete",
+      "branch_available": false
+    },
+    {
+      "id": "b60-step08",
+      "path": "checkpoints/b60-step08.json",
+      "sha256": "c741d73d735fcc1f28109932390035219023ac3b2d1288b120d0c7509f78619c",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b60-step24",
+      "path": "checkpoints/b60-step24.json",
+      "sha256": "07585de8e569e7505f53a1eb0892c6a4aedf22db5e0b1dc37dd95fa9ffecb1f5",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b67-step08",
+      "path": "checkpoints/b67-step08.json",
+      "sha256": "8941b7af876c5d5684b84e686b2cce919effc50905ed07e700bd7d3c42b21ed3",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b67-step24",
+      "path": "checkpoints/b67-step24.json",
+      "sha256": "998c600fd88680e359ae402a83cbdf34b7e2846a058eacfd64afef181e0c2428",
+      "status": "preparation_incomplete",
+      "branch_available": false
+    },
+    {
+      "id": "b62-step08",
+      "path": "checkpoints/b62-step08.json",
+      "sha256": "50a2cd2696ade039302d8bf4874d73a81bec257576407bef8ff7be68dfc56638",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b62-step24",
+      "path": "checkpoints/b62-step24.json",
+      "sha256": "21edcb7ab788b14da2937b275151969463981fb0ce99713f4a576303a606c926",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b64-step08",
+      "path": "checkpoints/b64-step08.json",
+      "sha256": "e9454609565c3cdc91f8a5d7e6b35208830987a893d5187afd0c1e330f15c562",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b64-step24",
+      "path": "checkpoints/b64-step24.json",
+      "sha256": "b9a897e7d76a19a473813df9393db58a1eae007cbab1fe1cf5371b5547873b32",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b61-step08",
+      "path": "checkpoints/b61-step08.json",
+      "sha256": "835b41f7cf9bf1b3086cfa525b97a791d5fea7a7be8ec98ed65c96b7a772bb02",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b61-step24",
+      "path": "checkpoints/b61-step24.json",
+      "sha256": "04f46402e2c6d5ce509a5ea4db6e8b23f9306efccc03420384009f1da29d1644",
+      "status": "ready",
+      "branch_available": true
+    }
+  ],
+  "histories": [
+    {
+      "checkpoint": "b65-step08",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "summary_node_ids": [
+        3,
+        5,
+        4,
+        1,
+        7
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 0,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.04155953832395905,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.04155953832395905,
+            "best_validation_loss": 0.04155953832395905,
+            "median_valid_validation_loss": 0.06632895295648383,
+            "valid_program_count": 11
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 3,
+              "intent": "This heuristic extends the return-aware approach with two modifications. First, it scales the return distance penalty by (1 + progress), increasing the penalty for being far from the start as the tour advances. Second, it adds a small regre",
+              "tags": [
+                "return_aware",
+                "regret"
+              ],
+              "validation_loss": 0.04155953832395905,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 5,
+              "intent": "Increase regret weight to 0.4 to align with the regret_aware seed family and strengthen look-ahead selection, addressing the parent's underweighting (0.1). Slightly reduce return_distance coefficient to 0.2 since progress scaling already am",
+              "tags": [
+                "regret",
+                "hybrid"
+              ],
+              "validation_loss": 0.04843277513515749,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 4,
+              "intent": "We add a nearest-neighbor lookahead term (-0.1 * nearest_remaining) so candidates closer to an unvisited neighbor receive a bonus, promoting chaining of short edges. The existing progress-scaled return penalty and regret term are kept. This",
+              "tags": [
+                "return_aware",
+                "lookahead"
+              ],
+              "validation_loss": 0.048461791868495294,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 1,
+              "intent": "shared hand-written seed: return_aware",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "validation_loss": 0.05861685599396909,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 7,
+              "intent": "This heuristic extends the parent by adding a 2-step lookahead: it penalizes the candidate's nearest remaining distance to reduce long next-step edges, and incorporates a cluster density term to favor candidates that are centrally located a",
+              "tags": [
+                "lookahead",
+                "cluster"
+              ],
+              "validation_loss": 0.06308657160288958,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [],
+          "not_yet_observed_operator_tags": []
+        }
+      },
+      "prompt_sha256": "8f41920742a844e60b3bcace8d7430499088663917babcbc7ea09d7d919cc193"
+    },
+    {
+      "checkpoint": "b63-step08",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "summary_node_ids": [
+        4,
+        9,
+        3,
+        1,
+        5
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 0,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.039226994277127704,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.039226994277127704,
+            "best_validation_loss": 0.039226994277127704,
+            "median_valid_validation_loss": 0.06467519556671224,
+            "valid_program_count": 11
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 4,
+              "intent": "Scale the regret term with tour progress so late-game picks avoid stranding a near-unvisited node, and add a small cluster_density bonus to favor gateway candidates in dense unvisited regions. Keeps the parent progress-weighted return term ",
+              "tags": [
+                "return_aware",
+                "regret"
+              ],
+              "validation_loss": 0.039226994277127704,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 9,
+              "intent": "Dampen the regret term with a square root to reduce sensitivity to outlier regret values (common in uniform instances), strengthen regret weight as the tour progresses, taper the cluster-density bonus to favor early gateway picks, and add a",
+              "tags": [
+                "nonlinear",
+                "regret"
+              ],
+              "validation_loss": 0.04424345957500402,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 3,
+              "intent": "Build on return_aware seed by making the return penalty grow with progress (closing cost matters more late in the tour) and add a small regret term so candidates that are uniquely close to another unvisited node get a mild boost, improving ",
+              "tags": [
+                "return_aware",
+                "progress"
+              ],
+              "validation_loss": 0.044587369949167184,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 1,
+              "intent": "shared hand-written seed: return_aware",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "validation_loss": 0.047553198922408446,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 5,
+              "intent": "Strengthen late-tour regret dominance via steeper progress-dependent weight while keeping return awareness and a small density bonus, targeting uniform instances where parent regret (0.05→0.15) was too timid to prevent near-stranding detour",
+              "tags": [
+                "regret",
+                "return_aware"
+              ],
+              "validation_loss": 0.04963966358094288,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [],
+          "not_yet_observed_operator_tags": []
+        }
+      },
+      "prompt_sha256": "376b91559f1b4e43f00b6f222649df9a65dfec725c40b1180c8a8bd62709db7d"
+    },
+    {
+      "checkpoint": "b63-step24",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "summary_node_ids": [
+        4,
+        24,
+        25,
+        11,
+        9
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 1,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.039226994277127704,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.039226994277127704,
+            "best_validation_loss": 0.039226994277127704,
+            "median_valid_validation_loss": 0.047743390090243275,
+            "valid_program_count": 26
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 4,
+              "intent": "Scale the regret term with tour progress so late-game picks avoid stranding a near-unvisited node, and add a small cluster_density bonus to favor gateway candidates in dense unvisited regions. Keeps the parent progress-weighted return term ",
+              "tags": [
+                "return_aware",
+                "regret"
+              ],
+              "validation_loss": 0.039226994277127704,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 24,
+              "intent": "Build on parent id 4 by steepening the progress-driven regret ramp from 0.05+0.10p to 0.05+0.15p and adding a spread-gated bonus that activates only when candidate-to-unvisited distances are homogeneous (low spread, characteristic of unifor",
+              "tags": [
+                "progress",
+                "hybrid"
+              ],
+              "validation_loss": 0.039226994277127704,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 25,
+              "intent": "Add a progress²-gated nearest_remaining penalty (max ~-0.08) that activates only in mid-to-late tour to gently discourage stranding candidates whose next-hop is distant. Preserves early-game parent behavior that drives strong clustered/grid",
+              "tags": [
+                "nonlinear",
+                "lookahead"
+              ],
+              "validation_loss": 0.039226994277127704,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 11,
+              "intent": "We add a penalty proportional to the gap between the candidate distance and the current nearest unvisited distance, scaled by progress, to discourage stranding close unvisited nodes in uniform instances. This 1‑step lookahead encourages pic",
+              "tags": [
+                "lookahead",
+                "progress"
+              ],
+              "validation_loss": 0.040664004428461575,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 9,
+              "intent": "Dampen the regret term with a square root to reduce sensitivity to outlier regret values (common in uniform instances), strengthen regret weight as the tour progresses, taper the cluster-density bonus to favor early gateway picks, and add a",
+              "tags": [
+                "nonlinear",
+                "regret"
+              ],
+              "validation_loss": 0.04424345957500402,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [
+            {
+              "node_id": 18,
+              "failure_type": "ProgramError",
+              "proposal_failure": null,
+              "tags": [
+                "cluster",
+                "nonlinear"
+              ]
+            }
+          ],
+          "not_yet_observed_operator_tags": []
+        }
+      },
+      "prompt_sha256": "a3db589c171cea565f57d17493f27398a97ef06291204b9a83097fd31d9be57f"
+    },
+    {
+      "checkpoint": "b66-step08",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "summary_node_ids": [
+        9,
+        8,
+        10,
+        4,
+        7
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 0,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.046016743473758975,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.046016743473758975,
+            "best_validation_loss": 0.046016743473758975,
+            "median_valid_validation_loss": 0.05389745994600396,
+            "valid_program_count": 11
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 9,
+              "intent": "Extend the parent by adding a quadratic regret amplification term (0.05*pr^2) and a progress-gated nearest-remaining lookahead (-0.12*pr*nr). The quadratic sharpens the end-of-tour bias toward high-regret candidates, pushing the regret weig",
+              "tags": [
+                "nonlinear",
+                "lookahead"
+              ],
+              "validation_loss": 0.046016743473758975,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 8,
+              "intent": "Escalate the regret bias as the tour advances. The parent used a constant 0.1 regret weight; this version ramps it linearly from 0.1 to 0.25 at progress=1. Near the end of the tour, when fewer candidates remain, picking a node whose alterna",
+              "tags": [
+                "regret",
+                "progress"
+              ],
+              "validation_loss": 0.04651221516580931,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 10,
+              "intent": "Augment the parent with a progress-gated mean_remaining penalty to favor candidates central to the remaining unvisited set. This multi-step chainability proxy extends the single-step nearest_remaining lookahead, addressing the parent's weak",
+              "tags": [
+                "lookahead",
+                "hybrid"
+              ],
+              "validation_loss": 0.04844097825069413,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 4,
+              "intent": "Progress-scaled return penalty: return_distance weight grows from 0.15 to 0.45 over the tour, biasing late choices toward nodes that close cleanly to the start. Small regret bias (0.1) prefers candidates with worse alternatives, helping uni",
+              "tags": [
+                "return_aware",
+                "progress"
+              ],
+              "validation_loss": 0.04929006817624098,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 7,
+              "intent": "Augment parent with a bounded penalty on nearest_remaining to prefer candidates close to other unvisited cities, providing a one-step lookahead that reduces isolated picks likely to cause long subsequent edges. This helps differentiate cand",
+              "tags": [
+                "lookahead",
+                "return_aware"
+              ],
+              "validation_loss": 0.05201103786231848,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [],
+          "not_yet_observed_operator_tags": []
+        }
+      },
+      "prompt_sha256": "7405bc56780777ee3206db2517b34dd585f7e62b7d91dcbae0329811ff00066b"
+    },
+    {
+      "checkpoint": "b60-step08",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "summary_node_ids": [
+        8,
+        5,
+        10,
+        3,
+        9
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 0,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.042945950990724534,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.042945950990724534,
+            "best_validation_loss": 0.042945950990724534,
+            "median_valid_validation_loss": 0.061742128368176004,
+            "valid_program_count": 11
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 8,
+              "intent": "Replace the parent's linear return-distance ramp (0.1 + 0.2*p) with a quadratic schedule (0.08 + 0.65*p*p) so that return-distance pressure stays light while many cities remain (preserving early flexibility and grid performance) but acceler",
+              "tags": [
+                "progress"
+              ],
+              "validation_loss": 0.042945950990724534,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 5,
+              "intent": "Amplify the regret weight 5x (0.1 → 0.5) to make the heuristic act decisively when a candidate would become expensive to reach later, while retaining a mild progress-weighted return-distance term to keep the closing leg short. Strong regret",
+              "tags": [
+                "regret",
+                "return_aware"
+              ],
+              "validation_loss": 0.045693859388963635,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 10,
+              "intent": "Replace the parent's constant regret weight (0.4) with a linear ramp (0.3 + 0.25*p) so regret influence grows as the tour progresses. This targets uniform random instances where myopic lock-in is most damaging in the final third, while pres",
+              "tags": [
+                "regret",
+                "progress"
+              ],
+              "validation_loss": 0.04798911318185617,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 3,
+              "intent": "Progress-weighted return distance: early in the tour the return-to-start penalty is weak (coefficient 0.1) so the heuristic behaves like a local chainer; as progress approaches 1 the coefficient rises to 0.4 so the final jump back to city 0",
+              "tags": [
+                "return_aware",
+                "progress"
+              ],
+              "validation_loss": 0.050512216612376364,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 9,
+              "intent": "Replace the constant regret coefficient with a quadratic schedule (0.6 - 0.5*p^2) so that early steps favor high-regret candidates to escape myopic lock-in, while late steps reduce regret pressure to allow the return-distance ramp (0.08 + 0",
+              "tags": [
+                "nonlinear",
+                "regret"
+              ],
+              "validation_loss": 0.050874720176095664,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [],
+          "not_yet_observed_operator_tags": [
+            "hybrid"
+          ]
+        }
+      },
+      "prompt_sha256": "c8efc399f5fc3173f083ef1fb494f0fff4d9a0778b9564491f6277ad41be6721"
+    },
+    {
+      "checkpoint": "b60-step24",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "summary_node_ids": [
+        8,
+        26,
+        5,
+        16,
+        12
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 0,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.042945950990724534,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.042945950990724534,
+            "best_validation_loss": 0.042945950990724534,
+            "median_valid_validation_loss": 0.0584917879773886,
+            "valid_program_count": 27
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 8,
+              "intent": "Replace the parent's linear return-distance ramp (0.1 + 0.2*p) with a quadratic schedule (0.08 + 0.65*p*p) so that return-distance pressure stays light while many cities remain (preserving early flexibility and grid performance) but acceler",
+              "tags": [
+                "progress"
+              ],
+              "validation_loss": 0.042945950990724534,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 26,
+              "intent": "Modulate the regret weight linearly with progress (0.2 early → 0.6 late) so end-game choices on uniform instances better avoid myopic lock-in, while early flexibility and the parent's quadratic return-distance closing signal remain intact. ",
+              "tags": [
+                "progress",
+                "regret"
+              ],
+              "validation_loss": 0.045134913640999946,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 5,
+              "intent": "Amplify the regret weight 5x (0.1 → 0.5) to make the heuristic act decisively when a candidate would become expensive to reach later, while retaining a mild progress-weighted return-distance term to keep the closing leg short. Strong regret",
+              "tags": [
+                "regret",
+                "return_aware"
+              ],
+              "validation_loss": 0.045693859388963635,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 16,
+              "intent": "Add a mid-tour lookahead term -nearest_remaining scaled by p*(1-p) to the parent's quadratic return-distance schedule. The ramp peaks at progress=0.5 where flexibility is greatest and decisions most affect remaining connectivity. This shoul",
+              "tags": [
+                "lookahead",
+                "progress"
+              ],
+              "validation_loss": 0.045726632670765925,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 12,
+              "intent": "Add a small, progress-decaying penalty on nearest_remaining to discourage visiting isolated candidates early (which would force long jumps on the next step), complementing the parent's late-tour quadratic return ramp. This one-step lookahea",
+              "tags": [
+                "return_aware",
+                "lookahead"
+              ],
+              "validation_loss": 0.046725083527412004,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [],
+          "not_yet_observed_operator_tags": []
+        }
+      },
+      "prompt_sha256": "cdffdb27351653cd3e53f56f0d375173da29436749c4156f7a6abe6a008e0b29"
+    },
+    {
+      "checkpoint": "b67-step08",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "summary_node_ids": [
+        8,
+        5,
+        4,
+        10,
+        1
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 1,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.05947683432375466,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.05947683432375466,
+            "best_validation_loss": 0.05947683432375466,
+            "median_valid_validation_loss": 0.0713918329460217,
+            "valid_program_count": 10
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 8,
+              "intent": "Modulate return-distance emphasis by progress so late-tour candidates consider closing the loop more heavily, addressing cumulative routing bias without disrupting distance dominance. The progress-weighted return term grows smoothly while p",
+              "tags": [
+                "progress",
+                "return_aware"
+              ],
+              "validation_loss": 0.05947683432375466,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 5,
+              "intent": "Push regret emphasis above the parent's 0.15 weight, but apply a bounded inverse-distance damping so high-regret candidates dominate selection when the move is cheap, while distance still dominates for far-away candidates. This targets the ",
+              "tags": [
+                "regret",
+                "nonlinear"
+              ],
+              "validation_loss": 0.06213498707794107,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 4,
+              "intent": "Hybrid extension of the return_aware parent that retains return-to-start bias but adds modest regret to avoid committing to candidates whose omission would force expensive deferred links; local distance remains dominant.",
+              "tags": [
+                "return_aware",
+                "regret"
+              ],
+              "validation_loss": 0.06573229888527982,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 10,
+              "intent": "Blend parent's progress-weighted return and distance-damped regret with cluster-density-adaptive distance penalty—amplifying distance in uniform regions to prevent long jumps, and softening it within dense clusters so regret can resolve clo",
+              "tags": [
+                "hybrid",
+                "cluster"
+              ],
+              "validation_loss": 0.06777390985787142,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 1,
+              "intent": "shared hand-written seed: return_aware",
+              "tags": [
+                "local_distance",
+                "return_aware"
+              ],
+              "validation_loss": 0.06893469714484216,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [
+            {
+              "node_id": 9,
+              "failure_type": "ProgramError",
+              "proposal_failure": null,
+              "tags": [
+                "nonlinear",
+                "cluster"
+              ]
+            }
+          ],
+          "not_yet_observed_operator_tags": []
+        }
+      },
+      "prompt_sha256": "76f58d8fe90c5a3dca1c7578c39f025d791959eb3e48295e87166d67d4c7f63e"
+    },
+    {
+      "checkpoint": "b62-step08",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "summary_node_ids": [
+        8,
+        5,
+        9,
+        0,
+        10
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 0,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.06311686969466002,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.06311686969466002,
+            "best_validation_loss": 0.06311686969466002,
+            "median_valid_validation_loss": 0.07808941830123306,
+            "valid_program_count": 11
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 8,
+              "intent": "Build on parent's regret-driven urgency (proved strength) with a bounded lookahead that prefers candidates with a close unvisited neighbor, enabling cheap follow-up moves for better chaining. Keep the progress-weighted return-distance closu",
+              "tags": [
+                "regret",
+                "lookahead"
+              ],
+              "validation_loss": 0.06311686969466002,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 5,
+              "intent": "Augment nearest-neighbor with a regret term that prioritizes isolated candidates (high second-nearest minus nearest gap among unvisited nodes) before they become expensive to reach, and modulate return-distance penalty by progress so it onl",
+              "tags": [
+                "regret",
+                "return_aware"
+              ],
+              "validation_loss": 0.06347091227276794,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 9,
+              "intent": "Builds on parent's regret-driven construction by adding a cluster_density modulation on the distance penalty. In dense regions (high cd), distance becomes less discriminative because many candidates are similarly close, so we reduce distanc",
+              "tags": [
+                "regret",
+                "cluster"
+              ],
+              "validation_loss": 0.06825128992247567,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 0,
+              "intent": "shared hand-written seed: nearest_neighbor",
+              "tags": [
+                "local_distance"
+              ],
+              "validation_loss": 0.07439166419568666,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 10,
+              "intent": "Extend the parent's regret+return-aware core with a cluster-density bonus and an inverse-spread centrality term to discriminate candidates when inter-candidate distances are similar (uniform regime). Preferring high cluster_density and low ",
+              "tags": [
+                "hybrid",
+                "cluster"
+              ],
+              "validation_loss": 0.07542197536585997,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [],
+          "not_yet_observed_operator_tags": [
+            "nonlinear"
+          ]
+        }
+      },
+      "prompt_sha256": "396b115d878633762aae936b493ce734f92e1ead16fbba9bdb6e8a23011d966e"
+    },
+    {
+      "checkpoint": "b62-step24",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "summary_node_ids": [
+        24,
+        8,
+        5,
+        9,
+        23
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 1,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.06220311254429684,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.06220311254429684,
+            "best_validation_loss": 0.06220311254429684,
+            "median_valid_validation_loss": 0.07699193109582621,
+            "valid_program_count": 26
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 24,
+              "intent": "Refine parent's regret+lookahead by making the lookahead weight inversely proportional to progress, so early on we still consider cheap follow-up moves to chain cities, while late we prioritize closing the tour via the progress-weighted ret",
+              "tags": [
+                "progress",
+                "hybrid"
+              ],
+              "validation_loss": 0.06220311254429684,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 8,
+              "intent": "Build on parent's regret-driven urgency (proved strength) with a bounded lookahead that prefers candidates with a close unvisited neighbor, enabling cheap follow-up moves for better chaining. Keep the progress-weighted return-distance closu",
+              "tags": [
+                "regret",
+                "lookahead"
+              ],
+              "validation_loss": 0.06311686969466002,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 5,
+              "intent": "Augment nearest-neighbor with a regret term that prioritizes isolated candidates (high second-nearest minus nearest gap among unvisited nodes) before they become expensive to reach, and modulate return-distance penalty by progress so it onl",
+              "tags": [
+                "regret",
+                "return_aware"
+              ],
+              "validation_loss": 0.06347091227276794,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 9,
+              "intent": "Builds on parent's regret-driven construction by adding a cluster_density modulation on the distance penalty. In dense regions (high cd), distance becomes less discriminative because many candidates are similarly close, so we reduce distanc",
+              "tags": [
+                "regret",
+                "cluster"
+              ],
+              "validation_loss": 0.06825128992247567,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 23,
+              "intent": "Introduce a cluster-density-modulated regret interaction (rg*cd) that adaptively amplifies the regret bonus in dense unvisited areas. On uniform instances, where local density and regret are both moderate, this effectively raises the regret",
+              "tags": [
+                "regret",
+                "cluster"
+              ],
+              "validation_loss": 0.06989440529761629,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [
+            {
+              "node_id": 15,
+              "failure_type": "ProgramError",
+              "proposal_failure": null,
+              "tags": [
+                "regret",
+                "lookahead"
+              ]
+            }
+          ],
+          "not_yet_observed_operator_tags": []
+        }
+      },
+      "prompt_sha256": "c8510047243828dc37c4a9c18d50025698c463d3b8c12cc301ba697b5ca02402"
+    },
+    {
+      "checkpoint": "b64-step08",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "summary_node_ids": [
+        10,
+        8,
+        9,
+        6,
+        4
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 0,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.030450779563449586,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.030450779563449586,
+            "best_validation_loss": 0.030450779563449586,
+            "median_valid_validation_loss": 0.05943100592273566,
+            "valid_program_count": 11
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 10,
+              "intent": "Builds on parent's progress-modulated return bias. Adds two uniform-targeted adaptive weights: regret weight scales 0.25 to 0.40 inversely with cluster_density, boosting second-nearest tie-breaking where nearest-neighbor tends to cross. Nea",
+              "tags": [
+                "regret",
+                "lookahead"
+              ],
+              "validation_loss": 0.030450779563449586,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 8,
+              "intent": "Add a progress-modulated return bias to the parent's cluster-aware regret heuristic. As the visited fraction grows, the return-distance weight rises from roughly 0.1 (early) to 0.6 (late), pushing late-tour selection toward candidates that ",
+              "tags": [
+                "progress",
+                "regret"
+              ],
+              "validation_loss": 0.03175127937396968,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 9,
+              "intent": "Replace the linear 0.3*prog term in the parent's return-distance weight with 0.35*prog^2, so the closing pressure is minimal early (prog small -> small bias) and accelerates quadratically in late stages (prog near 1 -> strong bias toward lo",
+              "tags": [
+                "nonlinear",
+                "progress"
+              ],
+              "validation_loss": 0.04708361422247029,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 6,
+              "intent": "Bump regret weight from 0.15 to 0.20 to lift uniform-family performance where the parent's cluster-density switch has the weakest signal. Parent's cluster-switchable return bias is preserved unchanged: cluster/grid layouts retain density-dr",
+              "tags": [
+                "cluster",
+                "regret"
+              ],
+              "validation_loss": 0.05116185026341807,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 4,
+              "intent": "Scale return-distance weight by inverse cluster density so sparse/uniform regions receive stronger return bias (their current weakness) while dense clusters retain the parent's distance+regret balance. Cluster density acts as an adaptive sw",
+              "tags": [
+                "return_aware",
+                "cluster"
+              ],
+              "validation_loss": 0.05530974500500843,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [],
+          "not_yet_observed_operator_tags": [
+            "hybrid"
+          ]
+        }
+      },
+      "prompt_sha256": "d646ab41a9466024c82e7a69468a368345d0be2408b476a6604052505d3ebb37"
+    },
+    {
+      "checkpoint": "b64-step24",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "summary_node_ids": [
+        25,
+        26,
+        21,
+        24,
+        20
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 0,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.02260017209027511,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.02260017209027511,
+            "best_validation_loss": 0.02260017209027511,
+            "median_valid_validation_loss": 0.03175127937396968,
+            "valid_program_count": 27
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 25,
+              "intent": "Adds a 4-feature nonlinear interaction term (cd * sn * prog * reg) that rewards cluster-boundary candidates with high regret at moderate progress, complementing the parent's term6 by adding regret sensitivity to the cluster-escape signal so",
+              "tags": [
+                "cluster",
+                "regret"
+              ],
+              "validation_loss": 0.02260017209027511,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 26,
+              "intent": "Adds a non-monotone bridge-regret term 0.10*cd*(1-cd)*reg*(1+0.5*(1-p)) that prioritizes moderate-density cluster boundary candidates with high regret, especially at early/mid progress. Unlike the parent's monotone cd-using terms, cd*(1-cd)",
+              "tags": [
+                "cluster",
+                "regret"
+              ],
+              "validation_loss": 0.02260017209027511,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 21,
+              "intent": "Builds on the parent's cluster-aware regret strategy. Strengthens centrality preference in clusters (term5: -0.08 cd*mean -> -0.12 cd*mean) to keep internal traversal tight, then adds a bounded mid-progress cluster-escape term (0.18 cd*prog",
+              "tags": [
+                "cluster",
+                "lookahead"
+              ],
+              "validation_loss": 0.022774467473069524,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 24,
+              "intent": "Refines cluster handling by normalizing the mid‑tour spread reward with the nearest unvisited distance (term6) so bridge candidates are only boosted if they remain near the frontier, and adds an early‑tour bias toward the nearest neighbor i",
+              "tags": [
+                "cluster",
+                "lookahead"
+              ],
+              "validation_loss": 0.022774467473069524,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 20,
+              "intent": "The parent's regret weight collapses to 0.20+0.40sn when cd≈1, underweighting look-ahead where cluster traps need escaping. Restoring 0.15cd to the regret weight boosts it in clustered cases. A bounded -0.08cd*mean_remaining term prefers cl",
+              "tags": [
+                "regret",
+                "cluster"
+              ],
+              "validation_loss": 0.023351672478704812,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [],
+          "not_yet_observed_operator_tags": []
+        }
+      },
+      "prompt_sha256": "524885f2e6880ea8171185f6e1608e3d2edc30cea34474c1866e6fb95cfa0b14"
+    },
+    {
+      "checkpoint": "b61-step08",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "summary_node_ids": [
+        5,
+        10,
+        8,
+        3,
+        9
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 0,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.04533277534063642,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.04533277534063642,
+            "best_validation_loss": 0.04533277534063642,
+            "median_valid_validation_loss": 0.06191296604454228,
+            "valid_program_count": 11
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 5,
+              "intent": "Adds a multiplicative regret*distance term so candidates that are simultaneously far from the current location and have high insertion regret get a clear priority boost. Plain nearest-neighbor strands such remote, isolated nodes; plain regr",
+              "tags": [
+                "regret",
+                "nonlinear"
+              ],
+              "validation_loss": 0.04533277534063642,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 10,
+              "intent": "Doubles the linear regret weight (0.2→0.3) and the nonlinear regret×distance interaction (0.1→0.2) so stranded candidates in uniform random instances are pulled forward more decisively, since raw distance discrimination is weak there. Sligh",
+              "tags": [
+                "regret",
+                "nonlinear"
+              ],
+              "validation_loss": 0.04579664212142192,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 8,
+              "intent": "Phase-modulated routing: early tour (low progress) prioritizes regret with a low return-distance weight to identify and rescue stranded candidates in uniform layouts. Late tour (high progress) ramps up return-distance weight to efficiently ",
+              "tags": [
+                "progress",
+                "regret"
+              ],
+              "validation_loss": 0.04672259793239916,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 3,
+              "intent": "Adds an immediate regret term to the parent's return-aware rule. Regret equals second-nearest minus nearest remaining unvisited, so high regret flags urgent visits to avoid stranding. The return term already encourages outward exploration f",
+              "tags": [
+                "return_aware",
+                "regret"
+              ],
+              "validation_loss": 0.04737247067674287,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 9,
+              "intent": "Add a multiplicative penalty for the product of current distance and nearest remaining distance to suppress candidates that are both far from the current location and lack close unvisited neighbors (potential stranded nodes). This targets u",
+              "tags": [
+                "nonlinear",
+                "lookahead"
+              ],
+              "validation_loss": 0.05238384475384813,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [],
+          "not_yet_observed_operator_tags": [
+            "hybrid"
+          ]
+        }
+      },
+      "prompt_sha256": "7f1935f40c5950b3f62bfc86b62c8e3b9cd9aa65f2713a3cfd32c233f9731609"
+    },
+    {
+      "checkpoint": "b61-step24",
+      "visible_node_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "summary_node_ids": [
+        16,
+        15,
+        20,
+        13,
+        25
+      ],
+      "intent_count": 5,
+      "hypothesis_count": 0,
+      "failure_count": 1,
+      "history_evidence": {
+        "same_checkpoint": true,
+        "checkpoint_incumbent_validation_loss": 0.03585393334990952,
+        "project_best_validation_loss": null,
+        "required_strategy_hypothesis": {
+          "target_failure": "a concrete observed limitation or failure",
+          "mechanism": "why the proposed change could address it",
+          "expected_behavior_change": "an observable change in route construction",
+          "falsifiable_prediction": "a search-time quality prediction"
+        },
+        "historical_search_summary": {
+          "source": "frozen search prefix and proposals already observed in this run",
+          "test_data_access": false,
+          "quality_level": {
+            "incumbent_validation_loss": 0.03585393334990952,
+            "best_validation_loss": 0.03585393334990952,
+            "median_valid_validation_loss": 0.04736961913564111,
+            "valid_program_count": 26
+          },
+          "recorded_program_summaries": [
+            {
+              "node_id": 16,
+              "intent": "Adapt heuristic weights more aggressively to tour progress. Early on, penalize high cluster_density and spread to encourage exploration and avoid premature clustering; late on, reward cluster_density and increase weights for return_distance",
+              "tags": [
+                "progress",
+                "hybrid"
+              ],
+              "validation_loss": 0.03585393334990952,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 15,
+              "intent": "Add a 1-step lookahead using nearest_remaining to address the parent's uniform-layout weakness while preserving the regret scheduling that works well elsewhere. In uniform instances, cluster density barely discriminates between candidates (",
+              "tags": [
+                "lookahead",
+                "regret"
+              ],
+              "validation_loss": 0.03617293671430552,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 20,
+              "intent": "Refines parent 16's balanced progress-adaptive hybrid by adding a bounded quadratic distance term weighted by (1-prg). This mild nonlinear emphasis (max ~0.2 for d≈2) amplifies small distance gaps when candidates look similar (uniform), whi",
+              "tags": [
+                "progress",
+                "nonlinear"
+              ],
+              "validation_loss": 0.03788690786996517,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 13,
+              "intent": "We scale the regret weight linearly from 0.5 to 0.1 as the tour progresses, focusing on regret early to avoid future insertion difficulties and shifting emphasis to return distance as progress increases. The nonlinear interaction term (regr",
+              "tags": [
+                "regret",
+                "progress"
+              ],
+              "validation_loss": 0.04048831286968457,
+              "strategy_hypothesis": null
+            },
+            {
+              "node_id": 25,
+              "intent": "Add a small bounded quadratic distance term -0.08*d^2 to the parent's progress-adaptive scorer. The quadratic amplifies absolute distance differences, which helps in uniform instances where linear distance provides weak gradient signal amon",
+              "tags": [
+                "nonlinear",
+                "hybrid"
+              ],
+              "validation_loss": 0.04137466728550274,
+              "strategy_hypothesis": null
+            }
+          ],
+          "observed_failures": [
+            {
+              "node_id": 22,
+              "failure_type": "ProgramError",
+              "proposal_failure": {
+                "kind": "proposal_parse_failure",
+                "stage": "coder",
+                "error_type": "ValueError"
+              },
+              "tags": [
+                "cluster",
+                "progress"
+              ]
+            }
+          ],
+          "not_yet_observed_operator_tags": []
+        }
+      },
+      "prompt_sha256": "5102a708b336b2cd4dc8cc559b1380b687fc487c4c730079c70f723bf6b2552d"
+    }
+  ],
+  "cost": {
+    "requests": 353,
+    "known_tokens": 1368670,
+    "unknown_requests": 4,
+    "unknown_reservation": 83780
+  },
+  "continuation_request": {
+    "authorized": false,
+    "jobs": [
+      {
+        "job_id": "eg-b64-step24-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b64-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b62-step24-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b62-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b63-step24-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b63-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b65-step08-r0",
+        "strategy": "B",
+        "checkpoint_id": "b65-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b63-step24-r1",
+        "strategy": "B",
+        "checkpoint_id": "b63-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b62-step08-r0",
+        "strategy": "B",
+        "checkpoint_id": "b62-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b61-step24-r0",
+        "strategy": "B",
+        "checkpoint_id": "b61-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b60-step08-r1",
+        "strategy": "B",
+        "checkpoint_id": "b60-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b64-step24-r1",
+        "strategy": "B",
+        "checkpoint_id": "b64-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b67-step08-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b67-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b60-step24-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b60-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b66-step24-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b66-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "b-b66-step08-r1",
+        "strategy": "B",
+        "checkpoint_id": "b66-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b61-step08-r0",
+        "strategy": "B",
+        "checkpoint_id": "b61-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b61-step08-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b61-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b67-step08-r1",
+        "strategy": "I",
+        "checkpoint_id": "b67-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b61-step24-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b61-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b65-step24-r0",
+        "strategy": "I",
+        "checkpoint_id": "b65-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "i-b63-step24-r1",
+        "strategy": "I",
+        "checkpoint_id": "b63-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b61-step24-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b61-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b67-step24-r1",
+        "strategy": "I",
+        "checkpoint_id": "b67-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "b-b64-step08-r0",
+        "strategy": "B",
+        "checkpoint_id": "b64-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b65-step24-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b65-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "e0-b66-step24-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b66-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "e0-b63-step24-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b63-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b66-step24-r0",
+        "strategy": "B",
+        "checkpoint_id": "b66-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "eg-b62-step08-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b62-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b64-step08-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b64-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b62-step24-r1",
+        "strategy": "I",
+        "checkpoint_id": "b62-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b63-step24-r0",
+        "strategy": "I",
+        "checkpoint_id": "b63-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b66-step08-r0",
+        "strategy": "B",
+        "checkpoint_id": "b66-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b61-step24-r0",
+        "strategy": "I",
+        "checkpoint_id": "b61-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b60-step24-r0",
+        "strategy": "B",
+        "checkpoint_id": "b60-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b65-step24-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b65-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "eg-b66-step08-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b66-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b62-step08-r1",
+        "strategy": "I",
+        "checkpoint_id": "b62-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b63-step08-r0",
+        "strategy": "I",
+        "checkpoint_id": "b63-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b67-step24-r0",
+        "strategy": "I",
+        "checkpoint_id": "b67-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "b-b67-step24-r0",
+        "strategy": "B",
+        "checkpoint_id": "b67-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "eg-b62-step24-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b62-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b60-step08-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b60-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b65-step24-r1",
+        "strategy": "B",
+        "checkpoint_id": "b65-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "eg-b66-step24-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b66-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "b-b67-step24-r1",
+        "strategy": "B",
+        "checkpoint_id": "b67-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "b-b61-step24-r1",
+        "strategy": "B",
+        "checkpoint_id": "b61-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b66-step08-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b66-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b66-step08-r1",
+        "strategy": "I",
+        "checkpoint_id": "b66-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b62-step24-r0",
+        "strategy": "B",
+        "checkpoint_id": "b62-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b66-step08-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b66-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b66-step08-r0",
+        "strategy": "I",
+        "checkpoint_id": "b66-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b62-step24-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b62-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b61-step08-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b61-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b63-step24-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b63-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b65-step08-r1",
+        "strategy": "I",
+        "checkpoint_id": "b65-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b65-step08-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b65-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b67-step24-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b67-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "eg-b67-step24-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b67-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "e0-b60-step08-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b60-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b64-step08-r0",
+        "strategy": "I",
+        "checkpoint_id": "b64-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b66-step24-r0",
+        "strategy": "I",
+        "checkpoint_id": "b66-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "eg-b67-step08-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b67-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b64-step08-r1",
+        "strategy": "I",
+        "checkpoint_id": "b64-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b61-step24-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b61-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b64-step24-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b64-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b65-step24-r1",
+        "strategy": "I",
+        "checkpoint_id": "b65-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "e0-b64-step08-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b64-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b63-step08-r0",
+        "strategy": "B",
+        "checkpoint_id": "b63-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b60-step24-r1",
+        "strategy": "B",
+        "checkpoint_id": "b60-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b63-step08-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b63-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b64-step24-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b64-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b62-step24-r1",
+        "strategy": "B",
+        "checkpoint_id": "b62-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b65-step24-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b65-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "eg-b64-step08-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b64-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b62-step08-r1",
+        "strategy": "B",
+        "checkpoint_id": "b62-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b60-step08-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b60-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b63-step08-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b63-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b60-step24-r1",
+        "strategy": "I",
+        "checkpoint_id": "b60-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b62-step24-r0",
+        "strategy": "I",
+        "checkpoint_id": "b62-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b60-step08-r0",
+        "strategy": "I",
+        "checkpoint_id": "b60-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b61-step24-r1",
+        "strategy": "I",
+        "checkpoint_id": "b61-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b64-step24-r0",
+        "strategy": "B",
+        "checkpoint_id": "b64-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b62-step08-r0",
+        "strategy": "I",
+        "checkpoint_id": "b62-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b60-step24-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b60-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b60-step24-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b60-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b65-step08-r1",
+        "strategy": "B",
+        "checkpoint_id": "b65-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b67-step08-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b67-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b61-step08-r0",
+        "strategy": "I",
+        "checkpoint_id": "b61-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b63-step08-r1",
+        "strategy": "I",
+        "checkpoint_id": "b63-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b66-step24-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b66-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "i-b65-step08-r0",
+        "strategy": "I",
+        "checkpoint_id": "b65-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b67-step08-r1",
+        "strategy": "B",
+        "checkpoint_id": "b67-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b62-step24-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b62-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b63-step08-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b63-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b64-step24-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b64-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b67-step08-r0",
+        "strategy": "B",
+        "checkpoint_id": "b67-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b60-step08-r0",
+        "strategy": "B",
+        "checkpoint_id": "b60-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b61-step08-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b61-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b65-step24-r0",
+        "strategy": "B",
+        "checkpoint_id": "b65-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "eg-b65-step24-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b65-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "eg-b64-step08-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b64-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b65-step08-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b65-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b62-step08-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b62-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b61-step08-r1",
+        "strategy": "I",
+        "checkpoint_id": "b61-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b66-step24-r1",
+        "strategy": "I",
+        "checkpoint_id": "b66-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "e0-b67-step08-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b67-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b67-step24-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b67-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "eg-b63-step24-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b63-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b66-step24-r1",
+        "strategy": "B",
+        "checkpoint_id": "b66-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "i-b64-step24-r0",
+        "strategy": "I",
+        "checkpoint_id": "b64-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b62-step08-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b62-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b66-step08-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b66-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 66,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b61-step08-r1",
+        "strategy": "B",
+        "checkpoint_id": "b61-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b67-step08-r0",
+        "strategy": "I",
+        "checkpoint_id": "b67-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b67-step24-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b67-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 67,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "preparation_incomplete"
+      },
+      {
+        "job_id": "eg-b60-step24-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b60-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b62-step08-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b62-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 62,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b60-step24-r0",
+        "strategy": "I",
+        "checkpoint_id": "b60-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b64-step24-r1",
+        "strategy": "I",
+        "checkpoint_id": "b64-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 24,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b61-step24-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b61-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "i-b60-step08-r1",
+        "strategy": "I",
+        "checkpoint_id": "b60-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b60-step08-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b60-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 60,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b61-step08-r0",
+        "strategy": "EG",
+        "checkpoint_id": "b61-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 61,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b64-step08-r1",
+        "strategy": "B",
+        "checkpoint_id": "b64-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 64,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b63-step24-r0",
+        "strategy": "B",
+        "checkpoint_id": "b63-step24",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 24,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "b-b63-step08-r1",
+        "strategy": "B",
+        "checkpoint_id": "b63-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b65-step08-r1",
+        "strategy": "E0",
+        "checkpoint_id": "b65-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "e0-b65-step08-r0",
+        "strategy": "E0",
+        "checkpoint_id": "b65-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 65,
+        "public_prefix_steps": 8,
+        "repetition": 0,
+        "steps": 8,
+        "eligibility": "executable"
+      },
+      {
+        "job_id": "eg-b63-step08-r1",
+        "strategy": "EG",
+        "checkpoint_id": "b63-step08",
+        "provider": "minimax-cn-coding-plan",
+        "model": "MiniMax-M3",
+        "data_block": 63,
+        "public_prefix_steps": 8,
+        "repetition": 1,
+        "steps": 8,
+        "eligibility": "executable"
+      }
+    ],
+    "executable_jobs": 104,
+    "max_proposals": 832,
+    "max_requests": 1664,
+    "max_tokens": 10400000
+  },
+  "test_access": false,
+  "no_inference_of_component_effectiveness": true,
+  "task_status_counts": {
+    "infrastructure_incomplete": 3,
+    "search_complete_test_not_run": 5
+  },
+  "ready_checkpoints": 13,
+  "branch_available_checkpoints": 13,
+  "new_cost": {
+    "requests": 308,
+    "known_tokens": 1208548,
+    "unknown_requests": 2,
+    "unknown_reservation": 41757
+  },
+  "historical_cost": {
+    "requests": 45,
+    "known_tokens": 160122,
+    "unknown_requests": 2,
+    "unknown_reservation": 42023,
+    "calls": [
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/000-coder",
+        "status": "response_persisted",
+        "known_tokens": 1407,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "3cf6fdd3d0de06304cd59259ccc3be489bb44c0110eb14321b8bc95eae87c2c0",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/000-planner",
+        "status": "response_persisted",
+        "known_tokens": 5454,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "0edb7dc5fc3b3563800fa50347a56df4971f862fe706711e70818b66acd68b16",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/001-coder",
+        "status": "response_persisted",
+        "known_tokens": 2300,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "4af359ca7a2b7b4bf63af84d6978791098ec091cc26e97da123eae0f69c4f8af",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/001-planner",
+        "status": "response_persisted",
+        "known_tokens": 11547,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "dbf00c5b2a6ab155a0b6d1d63effa8d52489ccf79135083ab616113ab340cfa7",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/002-coder",
+        "status": "response_persisted",
+        "known_tokens": 2981,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "a27c3a7e9c34dc1fb3621028894f4a46fd7a4d0cee0a8fba48690d8bbe340e59",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/002-planner",
+        "status": "response_persisted",
+        "known_tokens": 3933,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "e86df1a9da819cdba6b99b0114a6f7a7bec799d233576740d10cff72a9b378f5",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/003-coder",
+        "status": "response_persisted",
+        "known_tokens": 2180,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "8f18055006d4c38c9ccd1497489aa1e70ed57ceb1a3c9b206b2f9f8e1c2e09d0",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/003-planner",
+        "status": "response_persisted",
+        "known_tokens": 3844,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "0711de9e1f66f1caa469b945539511989ffa3a1e092338255aa8cf3754c4b720",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/004-coder",
+        "status": "response_persisted",
+        "known_tokens": 1487,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "14fdc99db59a8f9c656ab6736a9b9d16995e2c4dddb2eee61682724a69e3a565",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/004-planner",
+        "status": "response_persisted",
+        "known_tokens": 3966,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "45040aa794229b9abc1f1aef0a1cca6d6bf506c9ecbad2b2158e48f75a633aff",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/005-coder",
+        "status": "response_persisted",
+        "known_tokens": 1904,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "4248e041e3cc5e9b56db1b9f4b95956ee573bca6966f586126d69335fda7a47c",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/005-planner",
+        "status": "response_persisted",
+        "known_tokens": 3812,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "933ee4f5e999bee95ff5edd3dc1d136dd8e6ba5d539e2295898e92ad3d98474e",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/006-coder",
+        "status": "response_persisted",
+        "known_tokens": 2262,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "c97df5bb0370abe0c0dfbf4751b0907ee9f7e4ab232a87b3ba93cd122877045b",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/006-planner",
+        "status": "response_persisted",
+        "known_tokens": 6862,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "701eb7170fb18cb1ae915d26948d12a7d49549738844c5f241e98e63b8d12460",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/007-coder",
+        "status": "response_persisted",
+        "known_tokens": 2207,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "f296bed7e6796d341de3f5df8d3d65b8d13eafd88f1d75663fc83a1a2f4c6a8e",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/007-planner",
+        "status": "response_persisted",
+        "known_tokens": 7197,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "f7d66be2b4fed657a3de260cb94fb803bc835c256f407f1e0b40fb43aa61b31d",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/008-coder",
+        "status": "response_persisted",
+        "known_tokens": 1889,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "deb762fe39ab8bd56ce6bd9680a5b333d67096f3014bd611c89bddf881947307",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/008-planner",
+        "status": "response_persisted",
+        "known_tokens": 7592,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "510b663c8d0487f348f28f8f7291d34fecc4cb47dd8d420e3e888809b8c621fd",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/009-coder",
+        "status": "response_persisted",
+        "known_tokens": 2051,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "494ad0edb4ba76b619230e7354639ded601ef101910a6a69693d04dca0da7788",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/009-planner",
+        "status": "response_persisted",
+        "known_tokens": 6890,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "249e1db4fa27f36c6bd6b57fe10b8218dc07a34bf43ebe2629d5d559f2453444",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/010-coder",
+        "status": "response_persisted",
+        "known_tokens": 1463,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "c2863f4870265f1a25a6ef71b8da3b580453e337285c30a1aee86e843f500d45",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/010-planner",
+        "status": "response_persisted",
+        "known_tokens": 3067,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "241792b6bc208992d2de7d1b3bb41b1e1fb4e97b12c177f87ec7d4f3e2f0c092",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/011-coder",
+        "status": "response_persisted",
+        "known_tokens": 2029,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "17d7d7458ef1e7ce6611e2972786d6660a73e6f7f9f6fc1cccc72393af2d18e4",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/011-planner",
+        "status": "response_persisted",
+        "known_tokens": 4174,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "52752d102fd054c805a526ab8d8942e577f1e8cd6dd8559a91d6c135e22be3c9",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/012-coder",
+        "status": "response_persisted",
+        "known_tokens": 2428,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "a541927fc809524df9873f2ebe9ac3c9bbec0b5f22e76c68de7d1e84e807561b",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/012-planner",
+        "status": "response_persisted",
+        "known_tokens": 6194,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "9444cd09ea6d5d2cf4100f95e845ea113e0a2f21dec6554d2f5ac4340240ac9d",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/013-coder",
+        "status": "response_persisted",
+        "known_tokens": 1881,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "e0007638f321aa2f5d44dc140f7d1f9c588cc9b9f59837f1f9608feb9f826adb",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/013-planner",
+        "status": "response_persisted",
+        "known_tokens": 10221,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "c1973d09ee8a4305e900ef75abd7351a92c8fd18825a4bea0b9b627eed3c0595",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/014-coder",
+        "status": "response_persisted",
+        "known_tokens": 2135,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "3b5147847e70514ddf9dacd44259221ead3e1421a5bb3ad43626af730616818d",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/014-planner",
+        "status": "response_persisted",
+        "known_tokens": 5195,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "e1aee275dbe649ae32990f8b4f3cad63d1397c45d33c280f37581b7a2fbdac8e",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/015-coder",
+        "status": "response_persisted",
+        "known_tokens": 1696,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "c1a082e3376912acf0da6f87be4861b63dd7cb90f66b1d7068140d4ee4d98f29",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/015-planner",
+        "status": "response_persisted",
+        "known_tokens": 5222,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "3e254c5772a883f255be0d05be7dbd8285fdba84df01f8be18113ae8229f1848",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/016-planner",
+        "status": "sent_unknown",
+        "known_tokens": 0,
+        "usage_complete": false,
+        "unknown_reservation": 21302,
+        "request_sha256": "fedfc12bf1b21aa9c99430a80fd73b580874683da1f1d29c94733573d0a8ba86",
+        "returned_model": null
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/000-coder",
+        "status": "response_persisted",
+        "known_tokens": 1927,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "8a14c2d72f2e96c2c39444b7252c4269bf0c58d23018153855b84bf91174aec8",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/000-planner",
+        "status": "response_persisted",
+        "known_tokens": 3325,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "f8fbc60916161615657ffa3d09eae34954ea63c9aca7c73b88c52e83d2ba39a8",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/001-coder",
+        "status": "response_persisted",
+        "known_tokens": 2928,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "49c1832f4b975fdcd0cbc9d3d4a37a218090e8ce7703c74af9e7112c3230a9bb",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/001-planner",
+        "status": "response_persisted",
+        "known_tokens": 3902,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "274fd1468cbf908a01ede49a4821fbfb0b4a1c976993e3f4ee28721f9cfb5b6b",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/002-coder",
+        "status": "response_persisted",
+        "known_tokens": 1889,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "8e5d553b3b9e0ca8c38db49c7424a032a3ee0de2aadfd727d753f3dd87b1935c",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/002-planner",
+        "status": "response_persisted",
+        "known_tokens": 2938,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "172ea965c3916980f8bfd92c266320d83ceab7338f42be41bdfd6f370196f245",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "superseded_rerun/prefix_runs/prefix-sp-b65/calls/000-coder",
+        "status": "response_persisted",
+        "known_tokens": 1160,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "1c70cb806271bec2bef4ebfa85091fc50fab0147511210df01eefd70ffbd37ec",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "superseded_rerun/prefix_runs/prefix-sp-b65/calls/000-planner",
+        "status": "response_persisted",
+        "known_tokens": 8058,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "07ee0c0609b27b52404796236660866e70bc99bfcd94260f8ac70a7cbf0c7969",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "superseded_rerun/prefix_runs/prefix-sp-b65/calls/001-coder",
+        "status": "response_persisted",
+        "known_tokens": 2253,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "e552db41a4f0a05fbd01ca8b0b7ad78eedfb543af4e434645868b8990c18313e",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "superseded_rerun/prefix_runs/prefix-sp-b65/calls/001-planner",
+        "status": "response_persisted",
+        "known_tokens": 3681,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "3b2960eff71d175564944a2c9c46971f247ed11cfc1db01cdd57da480e4d532e",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "superseded_rerun/prefix_runs/prefix-sp-b65/calls/002-planner",
+        "status": "sent_unknown",
+        "known_tokens": 0,
+        "usage_complete": false,
+        "unknown_reservation": 20721,
+        "request_sha256": "71e896b7b6cfd4846366abd2e39d80372ca8869a029843117fe18318b139c2e5",
+        "returned_model": null
+      }
+    ],
+    "short_probe": {
+      "model": "MiniMax-M3",
+      "input_tokens": 209,
+      "output_tokens": 382,
+      "seconds": 5.3645482999272645,
+      "request_id": "070db26c8103ecdff1fcdb7e7c42b62d"
+    }
+  },
+  "search_proposals": 169,
+  "valid_search_programs": 165,
+  "superseded_rerun_proposals_excluded": 2
+}

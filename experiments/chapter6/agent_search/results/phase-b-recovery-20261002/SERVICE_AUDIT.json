@@ -1,0 +1,3082 @@
+{
+  "responses": [
+    {
+      "job": "prefix-sp-b60",
+      "call": "000-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 779,
+      "output_tokens": 641,
+      "seconds": 6.624464499996975,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "000-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1093,
+      "output_tokens": 3966,
+      "seconds": 73.87515380000696,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "001-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 847,
+      "output_tokens": 1136,
+      "seconds": 13.100067999912426,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "001-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1238,
+      "output_tokens": 849,
+      "seconds": 22.3832988999784,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "002-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 835,
+      "output_tokens": 984,
+      "seconds": 9.375372500158846,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "002-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1237,
+      "output_tokens": 1919,
+      "seconds": 48.39692129986361,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "003-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 826,
+      "output_tokens": 1168,
+      "seconds": 12.85577220004052,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "003-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1221,
+      "output_tokens": 2362,
+      "seconds": 43.1748333000578,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "004-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 869,
+      "output_tokens": 3468,
+      "seconds": 41.901536900084466,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "004-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1222,
+      "output_tokens": 2515,
+      "seconds": 19.513729400001466,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "005-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 826,
+      "output_tokens": 1196,
+      "seconds": 16.882967500016093,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "005-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1221,
+      "output_tokens": 2606,
+      "seconds": 61.72308829985559,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "006-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 825,
+      "output_tokens": 880,
+      "seconds": 13.666121499845758,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "006-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1238,
+      "output_tokens": 5327,
+      "seconds": 127.22742659994401,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "007-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 814,
+      "output_tokens": 2078,
+      "seconds": 39.35442469990812,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "007-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1237,
+      "output_tokens": 2409,
+      "seconds": 54.19436439988203,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "008-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 843,
+      "output_tokens": 1185,
+      "seconds": 31.925941199995577,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "008-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1238,
+      "output_tokens": 3393,
+      "seconds": 69.17544430005364,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "009-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 828,
+      "output_tokens": 1598,
+      "seconds": 19.28102650004439,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "009-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1239,
+      "output_tokens": 9130,
+      "seconds": 146.80277030006982,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "010-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 825,
+      "output_tokens": 735,
+      "seconds": 11.658108200179413,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "010-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1238,
+      "output_tokens": 3967,
+      "seconds": 56.06349970004521,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "011-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 828,
+      "output_tokens": 900,
+      "seconds": 14.758806499885395,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "011-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1237,
+      "output_tokens": 5009,
+      "seconds": 67.69928709999658,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "012-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 857,
+      "output_tokens": 2001,
+      "seconds": 26.98475469998084,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "012-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1238,
+      "output_tokens": 3706,
+      "seconds": 92.69611790007912,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "013-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 845,
+      "output_tokens": 1178,
+      "seconds": 20.385277400026098,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "013-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1237,
+      "output_tokens": 2610,
+      "seconds": 49.03794419998303,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "014-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 851,
+      "output_tokens": 1432,
+      "seconds": 22.19102009991184,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "014-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1238,
+      "output_tokens": 3886,
+      "seconds": 64.96857209992595,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "015-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 910,
+      "output_tokens": 1248,
+      "seconds": 22.137277900008485,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "015-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1237,
+      "output_tokens": 3144,
+      "seconds": 110.56858449988067,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "016-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 860,
+      "output_tokens": 505,
+      "seconds": 9.574072899995372,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "016-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1238,
+      "output_tokens": 3257,
+      "seconds": 57.57524870010093,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "017-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 818,
+      "output_tokens": 709,
+      "seconds": 8.80222769989632,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "017-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1239,
+      "output_tokens": 2835,
+      "seconds": 53.666313600027934,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "018-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 815,
+      "output_tokens": 980,
+      "seconds": 15.024443000089377,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "018-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1238,
+      "output_tokens": 5562,
+      "seconds": 95.25321789993905,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "019-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 891,
+      "output_tokens": 1806,
+      "seconds": 54.157458800124004,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "019-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1237,
+      "output_tokens": 2386,
+      "seconds": 59.26377919991501,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "020-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 792,
+      "output_tokens": 1364,
+      "seconds": 17.050423699896783,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "020-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1238,
+      "output_tokens": 7230,
+      "seconds": 145.75851670000702,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "021-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 877,
+      "output_tokens": 583,
+      "seconds": 16.30671180016361,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "021-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1237,
+      "output_tokens": 7706,
+      "seconds": 125.23726740013808,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "022-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 807,
+      "output_tokens": 1526,
+      "seconds": 60.639589899918064,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "022-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1238,
+      "output_tokens": 7071,
+      "seconds": 129.03874470014125,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "023-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 817,
+      "output_tokens": 516,
+      "seconds": 7.9926471000071615,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b60",
+      "call": "023-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1237,
+      "output_tokens": 2223,
+      "seconds": 44.396072200033814,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "000-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 771,
+      "output_tokens": 1013,
+      "seconds": 15.777874700026587,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "000-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1066,
+      "output_tokens": 3694,
+      "seconds": 77.15303849987686,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "001-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 768,
+      "output_tokens": 1168,
+      "seconds": 22.868072400102392,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "001-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1162,
+      "output_tokens": 1598,
+      "seconds": 31.339221900096163,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "002-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 782,
+      "output_tokens": 2170,
+      "seconds": 25.150606600102037,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "002-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1161,
+      "output_tokens": 3331,
+      "seconds": 65.91839290014468,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "003-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 776,
+      "output_tokens": 682,
+      "seconds": 12.519506799988449,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "003-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1170,
+      "output_tokens": 1588,
+      "seconds": 24.36730149993673,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "004-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 831,
+      "output_tokens": 1493,
+      "seconds": 21.643341900082305,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "004-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1171,
+      "output_tokens": 5416,
+      "seconds": 103.30787719995715,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "005-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 826,
+      "output_tokens": 873,
+      "seconds": 12.487894900143147,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "005-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1170,
+      "output_tokens": 2991,
+      "seconds": 62.29306069994345,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "006-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 786,
+      "output_tokens": 1342,
+      "seconds": 17.43094930006191,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "006-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1171,
+      "output_tokens": 9227,
+      "seconds": 264.6130413999781,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "007-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 825,
+      "output_tokens": 1234,
+      "seconds": 26.283789899898693,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "007-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1170,
+      "output_tokens": 4321,
+      "seconds": 80.59920640010387,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "008-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 798,
+      "output_tokens": 1189,
+      "seconds": 50.372088599950075,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "008-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1171,
+      "output_tokens": 10003,
+      "seconds": 154.686051200144,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "009-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 837,
+      "output_tokens": 846,
+      "seconds": 13.484718600055203,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "009-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1172,
+      "output_tokens": 2744,
+      "seconds": 71.5024378998205,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "010-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 837,
+      "output_tokens": 2794,
+      "seconds": 60.15388540015556,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "010-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1222,
+      "output_tokens": 4193,
+      "seconds": 117.80470170010813,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "011-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 837,
+      "output_tokens": 2495,
+      "seconds": 37.4687692001462,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "011-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1197,
+      "output_tokens": 4178,
+      "seconds": 44.635135899996385,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "012-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 903,
+      "output_tokens": 1278,
+      "seconds": 16.31852709990926,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "012-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1198,
+      "output_tokens": 3046,
+      "seconds": 52.87262050015852,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "013-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 916,
+      "output_tokens": 1218,
+      "seconds": 26.45648240018636,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "013-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1279,
+      "output_tokens": 4175,
+      "seconds": 53.36812400002964,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "014-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 973,
+      "output_tokens": 5296,
+      "seconds": 47.65533520001918,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "014-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1276,
+      "output_tokens": 5352,
+      "seconds": 69.72345670009963,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "015-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1217,
+      "output_tokens": 1396,
+      "seconds": 14.295647700084373,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "015-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1694,
+      "output_tokens": 5351,
+      "seconds": 77.40307749994099,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "016-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1193,
+      "output_tokens": 2152,
+      "seconds": 29.718248799908906,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "016-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1695,
+      "output_tokens": 8169,
+      "seconds": 302.5752443000674,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "017-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1208,
+      "output_tokens": 1285,
+      "seconds": 16.21698569995351,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "017-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1696,
+      "output_tokens": 4235,
+      "seconds": 54.39263359992765,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "018-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1277,
+      "output_tokens": 894,
+      "seconds": 19.164610299980268,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "018-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1695,
+      "output_tokens": 10039,
+      "seconds": 148.93517179996707,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "019-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1181,
+      "output_tokens": 949,
+      "seconds": 82.08244349993765,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "019-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1694,
+      "output_tokens": 11425,
+      "seconds": 185.81177280005068,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "020-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1172,
+      "output_tokens": 2588,
+      "seconds": 47.46734039997682,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "020-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1695,
+      "output_tokens": 5863,
+      "seconds": 124.96820749994367,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "021-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1161,
+      "output_tokens": 1920,
+      "seconds": 25.778950499836355,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "021-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1694,
+      "output_tokens": 11880,
+      "seconds": 185.5184062998742,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "022-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1211,
+      "output_tokens": 977,
+      "seconds": 12.681278900010511,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "022-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1695,
+      "output_tokens": 8308,
+      "seconds": 102.68446240015328,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "023-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1228,
+      "output_tokens": 1290,
+      "seconds": 18.298606999916956,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b61",
+      "call": "023-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1694,
+      "output_tokens": 5596,
+      "seconds": 149.50202309992164,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "000-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 698,
+      "output_tokens": 324,
+      "seconds": 8.608602599939331,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "000-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1074,
+      "output_tokens": 2582,
+      "seconds": 53.63220119988546,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "001-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 747,
+      "output_tokens": 496,
+      "seconds": 9.91459279996343,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "001-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1125,
+      "output_tokens": 3002,
+      "seconds": 51.94943940010853,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "002-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 772,
+      "output_tokens": 2728,
+      "seconds": 44.55352650000714,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "002-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1124,
+      "output_tokens": 3881,
+      "seconds": 64.30883660004474,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "003-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 823,
+      "output_tokens": 1524,
+      "seconds": 29.53003970021382,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "003-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1227,
+      "output_tokens": 2690,
+      "seconds": 44.124336999841034,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "004-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 843,
+      "output_tokens": 1034,
+      "seconds": 36.66427499987185,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "004-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1228,
+      "output_tokens": 3687,
+      "seconds": 81.41313090012409,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "005-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 870,
+      "output_tokens": 757,
+      "seconds": 21.437900100136176,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "005-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1290,
+      "output_tokens": 6886,
+      "seconds": 150.02645560004748,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "006-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 926,
+      "output_tokens": 2615,
+      "seconds": 69.21920309984125,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "006-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1335,
+      "output_tokens": 7860,
+      "seconds": 200.68898730003275,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "007-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 915,
+      "output_tokens": 1680,
+      "seconds": 23.42679650010541,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "007-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1334,
+      "output_tokens": 3806,
+      "seconds": 107.08289299998432,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "008-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 887,
+      "output_tokens": 594,
+      "seconds": 22.21054819994606,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "008-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1335,
+      "output_tokens": 4212,
+      "seconds": 67.86254859995097,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "009-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 918,
+      "output_tokens": 1044,
+      "seconds": 14.604395600035787,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "009-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1336,
+      "output_tokens": 3592,
+      "seconds": 226.08354800008237,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "010-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 851,
+      "output_tokens": 915,
+      "seconds": 15.789419900160283,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "010-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1335,
+      "output_tokens": 3904,
+      "seconds": 98.12411700002849,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "011-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 935,
+      "output_tokens": 1310,
+      "seconds": 19.814569799927995,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "011-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1334,
+      "output_tokens": 2138,
+      "seconds": 39.20207230001688,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "012-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 933,
+      "output_tokens": 1065,
+      "seconds": 18.01298170001246,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "012-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1335,
+      "output_tokens": 5793,
+      "seconds": 80.45727610005997,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "013-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 882,
+      "output_tokens": 3022,
+      "seconds": 71.4765761999879,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "013-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1334,
+      "output_tokens": 5338,
+      "seconds": 95.10479709994979,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "014-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 885,
+      "output_tokens": 1439,
+      "seconds": 12.561073599848896,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "014-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1335,
+      "output_tokens": 3380,
+      "seconds": 277.4130261000246,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "015-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 874,
+      "output_tokens": 518,
+      "seconds": 5.610875699901953,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "015-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1334,
+      "output_tokens": 2438,
+      "seconds": 30.229419599985704,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "016-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 880,
+      "output_tokens": 1301,
+      "seconds": 19.424013399984688,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "016-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1335,
+      "output_tokens": 1622,
+      "seconds": 27.016647800104693,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "017-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 887,
+      "output_tokens": 508,
+      "seconds": 5.284704699879512,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "017-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1336,
+      "output_tokens": 3229,
+      "seconds": 36.5767670001369,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "018-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 914,
+      "output_tokens": 650,
+      "seconds": 9.050514000002295,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "018-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1335,
+      "output_tokens": 9256,
+      "seconds": 170.1074194998946,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "019-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 907,
+      "output_tokens": 730,
+      "seconds": 11.572650300106034,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "019-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1334,
+      "output_tokens": 4055,
+      "seconds": 86.08095289999619,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "020-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 883,
+      "output_tokens": 1261,
+      "seconds": 30.497243900084868,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "020-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1335,
+      "output_tokens": 9401,
+      "seconds": 163.0682775999885,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "021-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 876,
+      "output_tokens": 1867,
+      "seconds": 101.03997649997473,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "021-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1334,
+      "output_tokens": 2447,
+      "seconds": 53.2209694001358,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "022-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 904,
+      "output_tokens": 1584,
+      "seconds": 24.339738599956036,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "022-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1309,
+      "output_tokens": 3455,
+      "seconds": 127.42306299996562,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "023-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 893,
+      "output_tokens": 1445,
+      "seconds": 23.37444470007904,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b62",
+      "call": "023-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1308,
+      "output_tokens": 1295,
+      "seconds": 24.846273799892515,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "000-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 744,
+      "output_tokens": 2319,
+      "seconds": 38.836617400171235,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "000-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1089,
+      "output_tokens": 1300,
+      "seconds": 14.185363099910319,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "001-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 783,
+      "output_tokens": 1096,
+      "seconds": 15.90297030005604,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "001-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1151,
+      "output_tokens": 1175,
+      "seconds": 23.326950900023803,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "002-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 798,
+      "output_tokens": 464,
+      "seconds": 16.016121299937367,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "002-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1193,
+      "output_tokens": 1180,
+      "seconds": 22.73084870004095,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "003-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 857,
+      "output_tokens": 1198,
+      "seconds": 27.006032099947333,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "003-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1192,
+      "output_tokens": 2097,
+      "seconds": 26.423384200083092,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "004-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 803,
+      "output_tokens": 1016,
+      "seconds": 13.839445000048727,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "004-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1193,
+      "output_tokens": 9739,
+      "seconds": 273.4410092001781,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "005-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 849,
+      "output_tokens": 1165,
+      "seconds": 40.45445320010185,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "005-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1192,
+      "output_tokens": 8128,
+      "seconds": 183.5444697001949,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "006-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 819,
+      "output_tokens": 1748,
+      "seconds": 22.13977809995413,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "006-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1193,
+      "output_tokens": 1633,
+      "seconds": 27.314828999806195,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "007-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 881,
+      "output_tokens": 465,
+      "seconds": 7.633859500056133,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "007-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1192,
+      "output_tokens": 6419,
+      "seconds": 107.76535520004109,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "008-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 864,
+      "output_tokens": 1202,
+      "seconds": 15.062388499965891,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "008-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1193,
+      "output_tokens": 4247,
+      "seconds": 91.61003359989263,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "009-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 823,
+      "output_tokens": 1073,
+      "seconds": 30.34241889999248,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "009-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1194,
+      "output_tokens": 5568,
+      "seconds": 87.38818740006536,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "010-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 866,
+      "output_tokens": 2242,
+      "seconds": 29.653002500068396,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "010-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1193,
+      "output_tokens": 3683,
+      "seconds": 115.39266810007393,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "011-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 902,
+      "output_tokens": 1183,
+      "seconds": 15.180411299923435,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "011-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1192,
+      "output_tokens": 3568,
+      "seconds": 58.99200359988026,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "012-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 810,
+      "output_tokens": 676,
+      "seconds": 11.655993500025943,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "012-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1193,
+      "output_tokens": 2335,
+      "seconds": 41.871765499934554,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "013-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 866,
+      "output_tokens": 1173,
+      "seconds": 18.945045799948275,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "013-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1192,
+      "output_tokens": 4536,
+      "seconds": 74.21393179986626,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "014-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 839,
+      "output_tokens": 540,
+      "seconds": 5.4535124998074025,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "014-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1193,
+      "output_tokens": 2157,
+      "seconds": 33.3199992000591,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "015-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 827,
+      "output_tokens": 1356,
+      "seconds": 15.635541900061071,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "015-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1192,
+      "output_tokens": 4461,
+      "seconds": 72.89659080002457,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "016-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 867,
+      "output_tokens": 1240,
+      "seconds": 15.385269100079313,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "016-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1193,
+      "output_tokens": 3264,
+      "seconds": 51.68716880003922,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "017-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 888,
+      "output_tokens": 1034,
+      "seconds": 11.894519800087437,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "017-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1194,
+      "output_tokens": 3430,
+      "seconds": 74.47986280010082,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "018-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 937,
+      "output_tokens": 1691,
+      "seconds": 23.845357599901035,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "018-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1193,
+      "output_tokens": 2479,
+      "seconds": 42.96747440006584,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "019-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 844,
+      "output_tokens": 544,
+      "seconds": 9.477298599900678,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "019-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1192,
+      "output_tokens": 2755,
+      "seconds": 59.27636450016871,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "020-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 828,
+      "output_tokens": 584,
+      "seconds": 7.43778740009293,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "020-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1193,
+      "output_tokens": 7745,
+      "seconds": 133.85778129985556,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "021-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 962,
+      "output_tokens": 550,
+      "seconds": 10.939161699963734,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "021-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1315,
+      "output_tokens": 1931,
+      "seconds": 29.241235499968752,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "022-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 941,
+      "output_tokens": 1917,
+      "seconds": 33.48015319998376,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "022-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1316,
+      "output_tokens": 7713,
+      "seconds": 85.39810150000267,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "023-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 939,
+      "output_tokens": 1430,
+      "seconds": 20.512980500003323,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b63",
+      "call": "023-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1315,
+      "output_tokens": 2432,
+      "seconds": 47.349666400114074,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "000-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 834,
+      "output_tokens": 1161,
+      "seconds": 19.14429230010137,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "000-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1057,
+      "output_tokens": 1698,
+      "seconds": 34.575461599975824,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "001-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 782,
+      "output_tokens": 1481,
+      "seconds": 52.75579659990035,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "001-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1089,
+      "output_tokens": 5215,
+      "seconds": 114.76146840001456,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "002-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 821,
+      "output_tokens": 1914,
+      "seconds": 24.657406499842182,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "002-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1144,
+      "output_tokens": 6328,
+      "seconds": 92.38864560006186,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "003-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 858,
+      "output_tokens": 818,
+      "seconds": 13.099784400081262,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "003-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1143,
+      "output_tokens": 5208,
+      "seconds": 159.1252661999315,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "004-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 852,
+      "output_tokens": 973,
+      "seconds": 25.35920020006597,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "004-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1201,
+      "output_tokens": 3290,
+      "seconds": 92.18318130006082,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "005-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 873,
+      "output_tokens": 1114,
+      "seconds": 15.115540600148961,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "005-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1200,
+      "output_tokens": 1626,
+      "seconds": 28.28175860014744,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "006-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 895,
+      "output_tokens": 829,
+      "seconds": 22.157145999837667,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "006-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1238,
+      "output_tokens": 1834,
+      "seconds": 35.923996899975464,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "007-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 898,
+      "output_tokens": 1164,
+      "seconds": 16.347851400030777,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "007-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1237,
+      "output_tokens": 2522,
+      "seconds": 35.432186800055206,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "008-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 972,
+      "output_tokens": 1744,
+      "seconds": 26.84237049985677,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "008-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1253,
+      "output_tokens": 5480,
+      "seconds": 169.48984149983153,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "009-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1036,
+      "output_tokens": 1489,
+      "seconds": 18.81704879994504,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "009-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1401,
+      "output_tokens": 3366,
+      "seconds": 61.77661469997838,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "010-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1044,
+      "output_tokens": 3010,
+      "seconds": 74.37471759994514,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "010-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1400,
+      "output_tokens": 3109,
+      "seconds": 59.196868599858135,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "011-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1055,
+      "output_tokens": 1834,
+      "seconds": 63.04181179986335,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "011-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1399,
+      "output_tokens": 2043,
+      "seconds": 50.97409079992212,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "012-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1089,
+      "output_tokens": 2360,
+      "seconds": 23.642360599944368,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "012-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1400,
+      "output_tokens": 8929,
+      "seconds": 147.83884750003926,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "013-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1090,
+      "output_tokens": 1694,
+      "seconds": 18.006976399803534,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "013-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1399,
+      "output_tokens": 4759,
+      "seconds": 114.90221039997414,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "014-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1072,
+      "output_tokens": 2130,
+      "seconds": 30.342558099888265,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "014-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1382,
+      "output_tokens": 3772,
+      "seconds": 110.54812220018357,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "015-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1083,
+      "output_tokens": 1480,
+      "seconds": 18.90327850007452,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "015-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1381,
+      "output_tokens": 9088,
+      "seconds": 151.2933165000286,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "016-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1117,
+      "output_tokens": 1671,
+      "seconds": 23.93362389993854,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "016-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1370,
+      "output_tokens": 2338,
+      "seconds": 75.57914829999208,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "017-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1069,
+      "output_tokens": 1632,
+      "seconds": 17.8483380000107,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "017-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1371,
+      "output_tokens": 9196,
+      "seconds": 424.9517930999864,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "018-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1164,
+      "output_tokens": 2116,
+      "seconds": 34.03038890007883,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "018-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1399,
+      "output_tokens": 5033,
+      "seconds": 92.87482180004008,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "019-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1197,
+      "output_tokens": 5293,
+      "seconds": 49.42805360001512,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "019-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1459,
+      "output_tokens": 2622,
+      "seconds": 48.506521799834445,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "020-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1190,
+      "output_tokens": 1414,
+      "seconds": 16.080641000065953,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "020-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1460,
+      "output_tokens": 10080,
+      "seconds": 190.7257766998373,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "021-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1164,
+      "output_tokens": 2257,
+      "seconds": 31.11187019990757,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "021-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1459,
+      "output_tokens": 2905,
+      "seconds": 52.34576699999161,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "022-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1240,
+      "output_tokens": 3767,
+      "seconds": 49.09356479998678,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "022-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1460,
+      "output_tokens": 3090,
+      "seconds": 64.14213220006786,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "023-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1242,
+      "output_tokens": 2337,
+      "seconds": 28.65926310000941,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b64",
+      "call": "023-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1460,
+      "output_tokens": 5436,
+      "seconds": 124.35984200006351,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "000-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 772,
+      "output_tokens": 635,
+      "seconds": 9.40058230003342,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "000-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1090,
+      "output_tokens": 4364,
+      "seconds": 31.192313800100237,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "001-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 794,
+      "output_tokens": 1506,
+      "seconds": 9.569454699987546,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "001-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1199,
+      "output_tokens": 10348,
+      "seconds": 67.91185360006057,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "002-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 816,
+      "output_tokens": 2165,
+      "seconds": 13.377929700072855,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "002-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1198,
+      "output_tokens": 2735,
+      "seconds": 48.11967000016011,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "003-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 814,
+      "output_tokens": 1366,
+      "seconds": 8.728358499938622,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "003-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1197,
+      "output_tokens": 2647,
+      "seconds": 14.482378199929371,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "004-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 827,
+      "output_tokens": 660,
+      "seconds": 5.916999400127679,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "004-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1198,
+      "output_tokens": 2768,
+      "seconds": 45.015211699996144,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "005-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 818,
+      "output_tokens": 1086,
+      "seconds": 12.324804299976677,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "005-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1197,
+      "output_tokens": 2615,
+      "seconds": 39.65902030002326,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "006-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 787,
+      "output_tokens": 1475,
+      "seconds": 25.944547099992633,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "006-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1198,
+      "output_tokens": 5664,
+      "seconds": 87.8428551000543,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "007-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 778,
+      "output_tokens": 1429,
+      "seconds": 10.168492700206116,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "007-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1197,
+      "output_tokens": 6000,
+      "seconds": 32.564917099894956,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "008-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 783,
+      "output_tokens": 1106,
+      "seconds": 13.406163999810815,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "008-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1198,
+      "output_tokens": 6394,
+      "seconds": 101.57999800005928,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "009-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 818,
+      "output_tokens": 1233,
+      "seconds": 21.779938000021502,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "009-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1199,
+      "output_tokens": 5691,
+      "seconds": 90.44997390010394,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "010-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 827,
+      "output_tokens": 636,
+      "seconds": 7.059533999999985,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "010-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1198,
+      "output_tokens": 1869,
+      "seconds": 31.233474599896,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "011-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 801,
+      "output_tokens": 1228,
+      "seconds": 7.805082199862227,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "011-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1197,
+      "output_tokens": 2977,
+      "seconds": 48.77278610016219,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "012-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 847,
+      "output_tokens": 1581,
+      "seconds": 13.49175569997169,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "012-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1295,
+      "output_tokens": 4899,
+      "seconds": 51.51943589979783,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "013-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 865,
+      "output_tokens": 1016,
+      "seconds": 9.21924200002104,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "013-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1294,
+      "output_tokens": 8927,
+      "seconds": 89.36511200014502,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "014-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 853,
+      "output_tokens": 1282,
+      "seconds": 8.808044099947438,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "014-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1295,
+      "output_tokens": 3900,
+      "seconds": 35.70350510021672,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "015-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 853,
+      "output_tokens": 843,
+      "seconds": 8.928254399914294,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b65",
+      "call": "015-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1294,
+      "output_tokens": 3928,
+      "seconds": 59.605097600026056,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "000-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 739,
+      "output_tokens": 710,
+      "seconds": 8.202942700125277,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "000-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1087,
+      "output_tokens": 10276,
+      "seconds": 168.61698159994557,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "001-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 754,
+      "output_tokens": 1225,
+      "seconds": 82.96938300016336,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "001-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1088,
+      "output_tokens": 3847,
+      "seconds": 124.68756679981016,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "002-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 820,
+      "output_tokens": 3518,
+      "seconds": 51.59229400008917,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "002-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1174,
+      "output_tokens": 2572,
+      "seconds": 48.974004599964246,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "003-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 796,
+      "output_tokens": 813,
+      "seconds": 22.395555999828503,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "003-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1173,
+      "output_tokens": 1258,
+      "seconds": 20.90222889999859,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "004-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 802,
+      "output_tokens": 755,
+      "seconds": 11.344418700085953,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "004-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1174,
+      "output_tokens": 5890,
+      "seconds": 100.63766349991783,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "005-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 840,
+      "output_tokens": 821,
+      "seconds": 11.897870299872011,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "005-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1173,
+      "output_tokens": 7510,
+      "seconds": 264.32924570003524,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "006-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 884,
+      "output_tokens": 1069,
+      "seconds": 13.102078199852258,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "006-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1221,
+      "output_tokens": 2398,
+      "seconds": 44.844239899888635,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "007-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 907,
+      "output_tokens": 1068,
+      "seconds": 22.154618199914694,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "007-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1256,
+      "output_tokens": 6891,
+      "seconds": 116.2092047999613,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "008-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 901,
+      "output_tokens": 1180,
+      "seconds": 14.316327600041404,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "008-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1257,
+      "output_tokens": 4523,
+      "seconds": 73.61520759994164,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "009-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 951,
+      "output_tokens": 1142,
+      "seconds": 13.955298200016841,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "009-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1258,
+      "output_tokens": 2478,
+      "seconds": 47.98536800011061,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "010-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 900,
+      "output_tokens": 1531,
+      "seconds": 21.071588000049815,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "010-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1257,
+      "output_tokens": 3346,
+      "seconds": 48.565201099961996,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "011-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 961,
+      "output_tokens": 761,
+      "seconds": 9.234437600011006,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "011-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1256,
+      "output_tokens": 3005,
+      "seconds": 118.71450749994256,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "012-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 962,
+      "output_tokens": 1263,
+      "seconds": 62.75361809995957,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b66",
+      "call": "012-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1257,
+      "output_tokens": 1816,
+      "seconds": 17.205820499919355,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "000-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 737,
+      "output_tokens": 600,
+      "seconds": 10.568749999860302,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "000-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1073,
+      "output_tokens": 2484,
+      "seconds": 56.2062119001057,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "001-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 721,
+      "output_tokens": 504,
+      "seconds": 18.235708000138402,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "001-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1074,
+      "output_tokens": 1063,
+      "seconds": 28.538162200013176,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "002-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 793,
+      "output_tokens": 1807,
+      "seconds": 29.929303800221533,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "002-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1113,
+      "output_tokens": 9051,
+      "seconds": 159.77869629999623,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "003-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 839,
+      "output_tokens": 2163,
+      "seconds": 69.59660130017437,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "003-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1186,
+      "output_tokens": 2597,
+      "seconds": 46.647836999967694,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "004-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 840,
+      "output_tokens": 1149,
+      "seconds": 37.25867159990594,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "004-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1187,
+      "output_tokens": 3155,
+      "seconds": 68.31568729993887,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "005-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 805,
+      "output_tokens": 1867,
+      "seconds": 26.02792500006035,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "005-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1186,
+      "output_tokens": 3979,
+      "seconds": 106.86961570009589,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "006-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 904,
+      "output_tokens": 1226,
+      "seconds": 14.274199200095609,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "006-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1198,
+      "output_tokens": 3092,
+      "seconds": 45.848106200108305,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "007-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 827,
+      "output_tokens": 791,
+      "seconds": 14.704729599878192,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "007-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1197,
+      "output_tokens": 2587,
+      "seconds": 27.421924999915063,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "008-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 833,
+      "output_tokens": 1008,
+      "seconds": 14.736689199926332,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "008-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1198,
+      "output_tokens": 2883,
+      "seconds": 49.550979000050575,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "009-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 945,
+      "output_tokens": 1325,
+      "seconds": 18.431040399940684,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "009-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1199,
+      "output_tokens": 4585,
+      "seconds": 106.4044442998711,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "010-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 880,
+      "output_tokens": 647,
+      "seconds": 9.20123380003497,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "010-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1244,
+      "output_tokens": 4933,
+      "seconds": 85.50817939988337,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "011-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 878,
+      "output_tokens": 1477,
+      "seconds": 17.766680900007486,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "011-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1243,
+      "output_tokens": 7107,
+      "seconds": 129.29757449985482,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "012-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 899,
+      "output_tokens": 1200,
+      "seconds": 29.811684499960393,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "012-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1244,
+      "output_tokens": 2175,
+      "seconds": 64.94700670009479,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "013-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 893,
+      "output_tokens": 970,
+      "seconds": 17.309436100069433,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "013-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1243,
+      "output_tokens": 3073,
+      "seconds": 51.58354319981299,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "014-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 955,
+      "output_tokens": 675,
+      "seconds": 6.64497400005348,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "014-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1223,
+      "output_tokens": 2425,
+      "seconds": 68.53631859994493,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "015-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 886,
+      "output_tokens": 2462,
+      "seconds": 33.69099920010194,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "015-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1222,
+      "output_tokens": 2698,
+      "seconds": 59.5571623002179,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "016-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 910,
+      "output_tokens": 723,
+      "seconds": 33.67092249984853,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "016-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1223,
+      "output_tokens": 2970,
+      "seconds": 61.67492479993962,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "017-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 887,
+      "output_tokens": 1318,
+      "seconds": 22.087606300134212,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "017-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1224,
+      "output_tokens": 5416,
+      "seconds": 95.9063975000754,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "018-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 885,
+      "output_tokens": 2181,
+      "seconds": 25.124749700073153,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "018-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1223,
+      "output_tokens": 3461,
+      "seconds": 56.35964090004563,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "019-coder",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 878,
+      "output_tokens": 1795,
+      "seconds": 23.063618500018492,
+      "usage_complete": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "019-planner",
+      "returned_model": "MiniMax-M3",
+      "input_tokens": 1222,
+      "output_tokens": 2609,
+      "seconds": 45.23540719994344,
+      "usage_complete": true
+    }
+  ],
+  "diagnostics": [
+    {
+      "job": "prefix-sp-b66",
+      "call": "013-planner",
+      "http_status": 529,
+      "business_code": "overloaded_error",
+      "error_category": "provider_server",
+      "trace_id": "070e4870585606eeeded5abb1902feac",
+      "retry_after": null,
+      "elapsed_seconds": 0.28719320008531213,
+      "partial_bytes": 0,
+      "utc": "2026-10-02T02:22:40.514136+00:00",
+      "automatic_retry": false,
+      "usage_unknown": true
+    },
+    {
+      "job": "prefix-sp-b67",
+      "call": "020-planner",
+      "http_status": 529,
+      "business_code": "overloaded_error",
+      "error_category": "provider_server",
+      "trace_id": "070e5909a274bc1ad0d97744d049c29b",
+      "retry_after": null,
+      "elapsed_seconds": 0.5271939001977444,
+      "partial_bytes": 0,
+      "utc": "2026-10-02T03:33:30.209477+00:00",
+      "automatic_retry": false,
+      "usage_unknown": true
+    }
+  ],
+  "returned_models": {
+    "MiniMax-M3": 338
+  },
+  "responses_exceeding_180_seconds": 12,
+  "longest_response_seconds": 424.9517930999864,
+  "historical_error_cause_not_inferred": true
+}

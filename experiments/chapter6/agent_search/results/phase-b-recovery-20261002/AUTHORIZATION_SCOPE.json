@@ -1,0 +1,14 @@
+{
+  "scope": "public_prefix_recovery_only",
+  "provider": "minimax-cn-coding-plan",
+  "model": "MiniMax-M3",
+  "max_requests": 384,
+  "max_tokens": 2000000,
+  "max_concurrency": 1,
+  "historical_cost_included": true,
+  "automatic_retries": false,
+  "continuation_authorized": false,
+  "test_authorized": false,
+  "basis": "Original detailed user authorization for blocks 60-67 public prefixes plus latest instruction to use local OpenCode MiniMax-M3 and solve execution failures. Prior explicit exclusion of continuations remains pending clarification.",
+  "run_manifest_sha256": "e9db0a08fb3bc524e3d8973272483118fce99e53516b8c22298a9cc90cbbeeda"
+}

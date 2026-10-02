@@ -1,0 +1,118 @@
+{
+  "study_manifest_sha256": "e9db0a08fb3bc524e3d8973272483118fce99e53516b8c22298a9cc90cbbeeda",
+  "records": [
+    {
+      "id": "b65-step08",
+      "path": "checkpoints/b65-step08.json",
+      "sha256": "b0c348bcadcbc4c406aca5814013ff33a048fdd7b8b3e4150df5f0250412f5aa",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b65-step24",
+      "path": "checkpoints/b65-step24.json",
+      "sha256": "790414db951138d4bc4111302bdb7ff9ca608201f86d9c665bb6f9c0f11e64ff",
+      "status": "preparation_incomplete",
+      "branch_available": false
+    },
+    {
+      "id": "b63-step08",
+      "path": "checkpoints/b63-step08.json",
+      "sha256": "a47309c776d9ef3d6928f2a1b301c5cd638dc2d8ad282e4b05dec5ea979528ac",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b63-step24",
+      "path": "checkpoints/b63-step24.json",
+      "sha256": "1fd071adf3083ce4bb37c4cc92570ddd0606f1e48bfa137aa26ca380533a6d25",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b66-step08",
+      "path": "checkpoints/b66-step08.json",
+      "sha256": "0b5956dbb407a85ea0fe53ef308dca5f8ebc3c11ff0a2bfcd4c5d7061b841d0e",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b66-step24",
+      "path": "checkpoints/b66-step24.json",
+      "sha256": "a2bfc94ebb89b162c40ea296e57aac03d504658f91a157751e1c61acee7aa10b",
+      "status": "preparation_incomplete",
+      "branch_available": false
+    },
+    {
+      "id": "b60-step08",
+      "path": "checkpoints/b60-step08.json",
+      "sha256": "c741d73d735fcc1f28109932390035219023ac3b2d1288b120d0c7509f78619c",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b60-step24",
+      "path": "checkpoints/b60-step24.json",
+      "sha256": "07585de8e569e7505f53a1eb0892c6a4aedf22db5e0b1dc37dd95fa9ffecb1f5",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b67-step08",
+      "path": "checkpoints/b67-step08.json",
+      "sha256": "8941b7af876c5d5684b84e686b2cce919effc50905ed07e700bd7d3c42b21ed3",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b67-step24",
+      "path": "checkpoints/b67-step24.json",
+      "sha256": "998c600fd88680e359ae402a83cbdf34b7e2846a058eacfd64afef181e0c2428",
+      "status": "preparation_incomplete",
+      "branch_available": false
+    },
+    {
+      "id": "b62-step08",
+      "path": "checkpoints/b62-step08.json",
+      "sha256": "50a2cd2696ade039302d8bf4874d73a81bec257576407bef8ff7be68dfc56638",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b62-step24",
+      "path": "checkpoints/b62-step24.json",
+      "sha256": "21edcb7ab788b14da2937b275151969463981fb0ce99713f4a576303a606c926",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b64-step08",
+      "path": "checkpoints/b64-step08.json",
+      "sha256": "e9454609565c3cdc91f8a5d7e6b35208830987a893d5187afd0c1e330f15c562",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b64-step24",
+      "path": "checkpoints/b64-step24.json",
+      "sha256": "b9a897e7d76a19a473813df9393db58a1eae007cbab1fe1cf5371b5547873b32",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b61-step08",
+      "path": "checkpoints/b61-step08.json",
+      "sha256": "835b41f7cf9bf1b3086cfa525b97a791d5fea7a7be8ec98ed65c96b7a772bb02",
+      "status": "ready",
+      "branch_available": true
+    },
+    {
+      "id": "b61-step24",
+      "path": "checkpoints/b61-step24.json",
+      "sha256": "04f46402e2c6d5ce509a5ea4db6e8b23f9306efccc03420384009f1da29d1644",
+      "status": "ready",
+      "branch_available": true
+    }
+  ],
+  "test_access": false
+}

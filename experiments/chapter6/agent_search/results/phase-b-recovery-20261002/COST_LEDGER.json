@@ -1,0 +1,510 @@
+{
+  "cumulative": {
+    "requests": 353,
+    "known_tokens": 1368670,
+    "unknown_requests": 4,
+    "unknown_reservation": 83780
+  },
+  "prior": {
+    "requests": 45,
+    "known_tokens": 160122,
+    "unknown_requests": 2,
+    "unknown_reservation": 42023,
+    "calls": [
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/000-coder",
+        "status": "response_persisted",
+        "known_tokens": 1407,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "3cf6fdd3d0de06304cd59259ccc3be489bb44c0110eb14321b8bc95eae87c2c0",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/000-planner",
+        "status": "response_persisted",
+        "known_tokens": 5454,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "0edb7dc5fc3b3563800fa50347a56df4971f862fe706711e70818b66acd68b16",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/001-coder",
+        "status": "response_persisted",
+        "known_tokens": 2300,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "4af359ca7a2b7b4bf63af84d6978791098ec091cc26e97da123eae0f69c4f8af",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/001-planner",
+        "status": "response_persisted",
+        "known_tokens": 11547,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "dbf00c5b2a6ab155a0b6d1d63effa8d52489ccf79135083ab616113ab340cfa7",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/002-coder",
+        "status": "response_persisted",
+        "known_tokens": 2981,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "a27c3a7e9c34dc1fb3621028894f4a46fd7a4d0cee0a8fba48690d8bbe340e59",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/002-planner",
+        "status": "response_persisted",
+        "known_tokens": 3933,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "e86df1a9da819cdba6b99b0114a6f7a7bec799d233576740d10cff72a9b378f5",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/003-coder",
+        "status": "response_persisted",
+        "known_tokens": 2180,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "8f18055006d4c38c9ccd1497489aa1e70ed57ceb1a3c9b206b2f9f8e1c2e09d0",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/003-planner",
+        "status": "response_persisted",
+        "known_tokens": 3844,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "0711de9e1f66f1caa469b945539511989ffa3a1e092338255aa8cf3754c4b720",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/004-coder",
+        "status": "response_persisted",
+        "known_tokens": 1487,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "14fdc99db59a8f9c656ab6736a9b9d16995e2c4dddb2eee61682724a69e3a565",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/004-planner",
+        "status": "response_persisted",
+        "known_tokens": 3966,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "45040aa794229b9abc1f1aef0a1cca6d6bf506c9ecbad2b2158e48f75a633aff",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/005-coder",
+        "status": "response_persisted",
+        "known_tokens": 1904,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "4248e041e3cc5e9b56db1b9f4b95956ee573bca6966f586126d69335fda7a47c",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/005-planner",
+        "status": "response_persisted",
+        "known_tokens": 3812,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "933ee4f5e999bee95ff5edd3dc1d136dd8e6ba5d539e2295898e92ad3d98474e",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/006-coder",
+        "status": "response_persisted",
+        "known_tokens": 2262,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "c97df5bb0370abe0c0dfbf4751b0907ee9f7e4ab232a87b3ba93cd122877045b",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/006-planner",
+        "status": "response_persisted",
+        "known_tokens": 6862,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "701eb7170fb18cb1ae915d26948d12a7d49549738844c5f241e98e63b8d12460",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/007-coder",
+        "status": "response_persisted",
+        "known_tokens": 2207,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "f296bed7e6796d341de3f5df8d3d65b8d13eafd88f1d75663fc83a1a2f4c6a8e",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/007-planner",
+        "status": "response_persisted",
+        "known_tokens": 7197,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "f7d66be2b4fed657a3de260cb94fb803bc835c256f407f1e0b40fb43aa61b31d",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/008-coder",
+        "status": "response_persisted",
+        "known_tokens": 1889,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "deb762fe39ab8bd56ce6bd9680a5b333d67096f3014bd611c89bddf881947307",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/008-planner",
+        "status": "response_persisted",
+        "known_tokens": 7592,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "510b663c8d0487f348f28f8f7291d34fecc4cb47dd8d420e3e888809b8c621fd",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/009-coder",
+        "status": "response_persisted",
+        "known_tokens": 2051,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "494ad0edb4ba76b619230e7354639ded601ef101910a6a69693d04dca0da7788",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/009-planner",
+        "status": "response_persisted",
+        "known_tokens": 6890,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "249e1db4fa27f36c6bd6b57fe10b8218dc07a34bf43ebe2629d5d559f2453444",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/010-coder",
+        "status": "response_persisted",
+        "known_tokens": 1463,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "c2863f4870265f1a25a6ef71b8da3b580453e337285c30a1aee86e843f500d45",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/010-planner",
+        "status": "response_persisted",
+        "known_tokens": 3067,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "241792b6bc208992d2de7d1b3bb41b1e1fb4e97b12c177f87ec7d4f3e2f0c092",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/011-coder",
+        "status": "response_persisted",
+        "known_tokens": 2029,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "17d7d7458ef1e7ce6611e2972786d6660a73e6f7f9f6fc1cccc72393af2d18e4",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/011-planner",
+        "status": "response_persisted",
+        "known_tokens": 4174,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "52752d102fd054c805a526ab8d8942e577f1e8cd6dd8559a91d6c135e22be3c9",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/012-coder",
+        "status": "response_persisted",
+        "known_tokens": 2428,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "a541927fc809524df9873f2ebe9ac3c9bbec0b5f22e76c68de7d1e84e807561b",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/012-planner",
+        "status": "response_persisted",
+        "known_tokens": 6194,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "9444cd09ea6d5d2cf4100f95e845ea113e0a2f21dec6554d2f5ac4340240ac9d",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/013-coder",
+        "status": "response_persisted",
+        "known_tokens": 1881,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "e0007638f321aa2f5d44dc140f7d1f9c588cc9b9f59837f1f9608feb9f826adb",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/013-planner",
+        "status": "response_persisted",
+        "known_tokens": 10221,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "c1973d09ee8a4305e900ef75abd7351a92c8fd18825a4bea0b9b627eed3c0595",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/014-coder",
+        "status": "response_persisted",
+        "known_tokens": 2135,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "3b5147847e70514ddf9dacd44259221ead3e1421a5bb3ad43626af730616818d",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/014-planner",
+        "status": "response_persisted",
+        "known_tokens": 5195,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "e1aee275dbe649ae32990f8b4f3cad63d1397c45d33c280f37581b7a2fbdac8e",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/015-coder",
+        "status": "response_persisted",
+        "known_tokens": 1696,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "c1a082e3376912acf0da6f87be4861b63dd7cb90f66b1d7068140d4ee4d98f29",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/015-planner",
+        "status": "response_persisted",
+        "known_tokens": 5222,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "3e254c5772a883f255be0d05be7dbd8285fdba84df01f8be18113ae8229f1848",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "original/prefix_runs/prefix-sp-b65/calls/016-planner",
+        "status": "sent_unknown",
+        "known_tokens": 0,
+        "usage_complete": false,
+        "unknown_reservation": 21302,
+        "request_sha256": "fedfc12bf1b21aa9c99430a80fd73b580874683da1f1d29c94733573d0a8ba86",
+        "returned_model": null
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/000-coder",
+        "status": "response_persisted",
+        "known_tokens": 1927,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "8a14c2d72f2e96c2c39444b7252c4269bf0c58d23018153855b84bf91174aec8",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/000-planner",
+        "status": "response_persisted",
+        "known_tokens": 3325,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "f8fbc60916161615657ffa3d09eae34954ea63c9aca7c73b88c52e83d2ba39a8",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/001-coder",
+        "status": "response_persisted",
+        "known_tokens": 2928,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "49c1832f4b975fdcd0cbc9d3d4a37a218090e8ce7703c74af9e7112c3230a9bb",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/001-planner",
+        "status": "response_persisted",
+        "known_tokens": 3902,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "274fd1468cbf908a01ede49a4821fbfb0b4a1c976993e3f4ee28721f9cfb5b6b",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/002-coder",
+        "status": "response_persisted",
+        "known_tokens": 1889,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "8e5d553b3b9e0ca8c38db49c7424a032a3ee0de2aadfd727d753f3dd87b1935c",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "service_acceptance/full-20261002/calls/002-planner",
+        "status": "response_persisted",
+        "known_tokens": 2938,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "172ea965c3916980f8bfd92c266320d83ceab7338f42be41bdfd6f370196f245",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "superseded_rerun/prefix_runs/prefix-sp-b65/calls/000-coder",
+        "status": "response_persisted",
+        "known_tokens": 1160,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "1c70cb806271bec2bef4ebfa85091fc50fab0147511210df01eefd70ffbd37ec",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "superseded_rerun/prefix_runs/prefix-sp-b65/calls/000-planner",
+        "status": "response_persisted",
+        "known_tokens": 8058,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "07ee0c0609b27b52404796236660866e70bc99bfcd94260f8ac70a7cbf0c7969",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "superseded_rerun/prefix_runs/prefix-sp-b65/calls/001-coder",
+        "status": "response_persisted",
+        "known_tokens": 2253,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "e552db41a4f0a05fbd01ca8b0b7ad78eedfb543af4e434645868b8990c18313e",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "superseded_rerun/prefix_runs/prefix-sp-b65/calls/001-planner",
+        "status": "response_persisted",
+        "known_tokens": 3681,
+        "usage_complete": true,
+        "unknown_reservation": 0,
+        "request_sha256": "3b2960eff71d175564944a2c9c46971f247ed11cfc1db01cdd57da480e4d532e",
+        "returned_model": "MiniMax-M3"
+      },
+      {
+        "path": "superseded_rerun/prefix_runs/prefix-sp-b65/calls/002-planner",
+        "status": "sent_unknown",
+        "known_tokens": 0,
+        "usage_complete": false,
+        "unknown_reservation": 20721,
+        "request_sha256": "71e896b7b6cfd4846366abd2e39d80372ca8869a029843117fe18318b139c2e5",
+        "returned_model": null
+      }
+    ],
+    "short_probe": {
+      "model": "MiniMax-M3",
+      "input_tokens": 209,
+      "output_tokens": 382,
+      "seconds": 5.3645482999272645,
+      "request_id": "070db26c8103ecdff1fcdb7e7c42b62d"
+    }
+  },
+  "new": {
+    "requests": 308,
+    "known_tokens": 1208548,
+    "unknown_requests": 2,
+    "unknown_reservation": 41757
+  },
+  "unknown_reservation_is_not_actual_usage": true,
+  "max_tokens": 2000000,
+  "max_requests": 384,
+  "per_task": {
+    "65": {
+      "cost": {
+        "requests": 33,
+        "known_tokens": 127470,
+        "unknown_requests": 1,
+        "unknown_reservation": 21302
+      },
+      "wall_seconds": 1253.4073335998692,
+      "completed_proposals": 16
+    },
+    "63": {
+      "cost": {
+        "requests": 48,
+        "known_tokens": 171266,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 2251.449472000124,
+      "completed_proposals": 24
+    },
+    "66": {
+      "cost": {
+        "requests": 27,
+        "known_tokens": 98514,
+        "unknown_requests": 1,
+        "unknown_reservation": 20905
+      },
+      "wall_seconds": 1551.0683925000485,
+      "completed_proposals": 13
+    },
+    "60": {
+      "cost": {
+        "requests": 48,
+        "known_tokens": 174481,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 2346.2788897999562,
+      "completed_proposals": 24
+    },
+    "67": {
+      "cost": {
+        "requests": 41,
+        "known_tokens": 139348,
+        "unknown_requests": 1,
+        "unknown_reservation": 20852
+      },
+      "wall_seconds": 1900.8493915998843,
+      "completed_proposals": 20
+    },
+    "62": {
+      "cost": {
+        "requests": 48,
+        "known_tokens": 182304,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 3019.9410220000427,
+      "completed_proposals": 24
+    },
+    "64": {
+      "cost": {
+        "requests": 48,
+        "known_tokens": 211048,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 3262.4066153999884,
+      "completed_proposals": 24
+    },
+    "61": {
+      "cost": {
+        "requests": 48,
+        "known_tokens": 231587,
+        "unknown_requests": 0,
+        "unknown_reservation": 0
+      },
+      "wall_seconds": 3293.98765809997,
+      "completed_proposals": 24
+    }
+  }
+}

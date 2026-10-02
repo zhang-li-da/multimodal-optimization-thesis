@@ -1,0 +1,872 @@
+[
+  {
+    "block": 65,
+    "checkpoint": 8,
+    "task_status": "infrastructure_incomplete",
+    "completed_proposals": 16,
+    "valid_programs": 16,
+    "invalid_programs": 0,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 3,
+      "loss": 0.04155953832395905
+    },
+    "branch": {
+      "id": 5,
+      "loss": 0.04843277513515749
+    },
+    "branch_difference": {
+      "node_id": 5,
+      "validation_loss_delta": 0.00687323681119844,
+      "probe_behavior_distance": 0.1328976034858388,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 33,
+      "known_tokens": 127470,
+      "unknown_requests": 1,
+      "unknown_reservation": 21302
+    },
+    "wall_seconds": 1253.4073335998692,
+    "checkpoint_sha256": "b0c348bcadcbc4c406aca5814013ff33a048fdd7b8b3e4150df5f0250412f5aa",
+    "structure": {
+      "incumbent": {
+        "id": 3,
+        "name": "return_aware_progress_regret",
+        "intent": "This heuristic extends the return-aware approach with two modifications. First, it scales the return distance penalty by (1 + progress), increasing the penalty for being far from the start as the tour advances. Second, it adds a small regret term to account for the difference between the nearest and second-nearest unvisited cities, breaking ties when the nearest neighbor is not significantly better. These changes aim to balance local proximity with global return cost and a simple lookahead, potentially reducing total tour length.",
+        "tags": [
+          "return_aware",
+          "regret"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "1dae917e8d680608e6b0f110f50d5c29e58a9caa1cec8041a16079f2d4679b87",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "8f4e569ebc6ab85c55bb9db3b541a507dbebe6ccc212f78a4aca4d2cce391741"
+        }
+      },
+      "branch": {
+        "id": 5,
+        "name": "regret_cluster_hybrid",
+        "intent": "Increase regret weight to 0.4 to align with the regret_aware seed family and strengthen look-ahead selection, addressing the parent's underweighting (0.1). Slightly reduce return_distance coefficient to 0.2 since progress scaling already amplifies its impact at later stages. Add a small positive cluster_density bonus (0.08) to favor candidates embedded in dense regions of remaining cities, improving chain efficiency on clustered and grid instances where uniform was the weak spot. All added terms are bounded in [0,1] and only perturb rankings among close candidates.",
+        "tags": [
+          "regret",
+          "hybrid"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "b5dcaf57490ce2c21a5f7b0a7d6887d80fc674629752aade54415f3cf93ab3d4",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "c654b7d61449afa24577e53880b38b562e57a95eb8d1ba5303206f4ae98c7871"
+        }
+      }
+    }
+  },
+  {
+    "block": 65,
+    "checkpoint": 24,
+    "task_status": "infrastructure_incomplete",
+    "completed_proposals": 16,
+    "valid_programs": 16,
+    "invalid_programs": 0,
+    "truncations": 0,
+    "checkpoint_status": "preparation_incomplete",
+    "incumbent": null,
+    "branch": null,
+    "branch_difference": {},
+    "cost": {
+      "requests": 33,
+      "known_tokens": 127470,
+      "unknown_requests": 1,
+      "unknown_reservation": 21302
+    },
+    "wall_seconds": 1253.4073335998692,
+    "checkpoint_sha256": "790414db951138d4bc4111302bdb7ff9ca608201f86d9c665bb6f9c0f11e64ff",
+    "structure": {}
+  },
+  {
+    "block": 63,
+    "checkpoint": 8,
+    "task_status": "search_complete_test_not_run",
+    "completed_proposals": 24,
+    "valid_programs": 23,
+    "invalid_programs": 1,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 4,
+      "loss": 0.039226994277127704
+    },
+    "branch": {
+      "id": 3,
+      "loss": 0.044587369949167184
+    },
+    "branch_difference": {
+      "node_id": 3,
+      "validation_loss_delta": 0.00536037567203948,
+      "probe_behavior_distance": 0.0941047471620227,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 48,
+      "known_tokens": 171266,
+      "unknown_requests": 0,
+      "unknown_reservation": 0
+    },
+    "wall_seconds": 2251.449472000124,
+    "checkpoint_sha256": "a47309c776d9ef3d6928f2a1b301c5cd638dc2d8ad282e4b05dec5ea979528ac",
+    "structure": {
+      "incumbent": {
+        "id": 4,
+        "name": "closing_regret",
+        "intent": "Scale the regret term with tour progress so late-game picks avoid stranding a near-unvisited node, and add a small cluster_density bonus to favor gateway candidates in dense unvisited regions. Keeps the parent progress-weighted return term to preserve clustered/grid gains, targeting the parent's uniform-instance weakness where mid-tour gateway misses cause long detours.",
+        "tags": [
+          "return_aware",
+          "regret"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "5dd44fe0f5b0b9127c4fd53d6dfc8a0afdee9213374988b5bfd82dc0ff9e5ca0",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "90cc533e40fc84f74edaefb2b148c3b1b46dac5b515a9ff62cbf4d94b523eed8"
+        }
+      },
+      "branch": {
+        "id": 3,
+        "name": "adaptive_return_regret",
+        "intent": "Build on return_aware seed by making the return penalty grow with progress (closing cost matters more late in the tour) and add a small regret term so candidates that are uniquely close to another unvisited node get a mild boost, improving gateway behavior in clustered instances without disturbing local structure.",
+        "tags": [
+          "return_aware",
+          "progress"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "687a71125aea2dcc4bdd5627863cb14d2578c8299a6ed0a7559f4b4ec75d8a81",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "c9630db61885e4619b54c6f53a94b94d86b3feea86c74db406d03247ec5414e9"
+        }
+      }
+    }
+  },
+  {
+    "block": 63,
+    "checkpoint": 24,
+    "task_status": "search_complete_test_not_run",
+    "completed_proposals": 24,
+    "valid_programs": 23,
+    "invalid_programs": 1,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 4,
+      "loss": 0.039226994277127704
+    },
+    "branch": {
+      "id": 3,
+      "loss": 0.044587369949167184
+    },
+    "branch_difference": {
+      "node_id": 3,
+      "validation_loss_delta": 0.00536037567203948,
+      "probe_behavior_distance": 0.0941047471620227,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 48,
+      "known_tokens": 171266,
+      "unknown_requests": 0,
+      "unknown_reservation": 0
+    },
+    "wall_seconds": 2251.449472000124,
+    "checkpoint_sha256": "1fd071adf3083ce4bb37c4cc92570ddd0606f1e48bfa137aa26ca380533a6d25",
+    "structure": {
+      "incumbent": {
+        "id": 4,
+        "name": "closing_regret",
+        "intent": "Scale the regret term with tour progress so late-game picks avoid stranding a near-unvisited node, and add a small cluster_density bonus to favor gateway candidates in dense unvisited regions. Keeps the parent progress-weighted return term to preserve clustered/grid gains, targeting the parent's uniform-instance weakness where mid-tour gateway misses cause long detours.",
+        "tags": [
+          "return_aware",
+          "regret"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "5dd44fe0f5b0b9127c4fd53d6dfc8a0afdee9213374988b5bfd82dc0ff9e5ca0",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "90cc533e40fc84f74edaefb2b148c3b1b46dac5b515a9ff62cbf4d94b523eed8"
+        }
+      },
+      "branch": {
+        "id": 3,
+        "name": "adaptive_return_regret",
+        "intent": "Build on return_aware seed by making the return penalty grow with progress (closing cost matters more late in the tour) and add a small regret term so candidates that are uniquely close to another unvisited node get a mild boost, improving gateway behavior in clustered instances without disturbing local structure.",
+        "tags": [
+          "return_aware",
+          "progress"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "687a71125aea2dcc4bdd5627863cb14d2578c8299a6ed0a7559f4b4ec75d8a81",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "c9630db61885e4619b54c6f53a94b94d86b3feea86c74db406d03247ec5414e9"
+        }
+      }
+    }
+  },
+  {
+    "block": 66,
+    "checkpoint": 8,
+    "task_status": "infrastructure_incomplete",
+    "completed_proposals": 13,
+    "valid_programs": 13,
+    "invalid_programs": 0,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 9,
+      "loss": 0.046016743473758975
+    },
+    "branch": {
+      "id": 4,
+      "loss": 0.04929006817624098
+    },
+    "branch_difference": {
+      "node_id": 4,
+      "validation_loss_delta": 0.003273324702482004,
+      "probe_behavior_distance": 0.10049019607843139,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 27,
+      "known_tokens": 98514,
+      "unknown_requests": 1,
+      "unknown_reservation": 20905
+    },
+    "wall_seconds": 1551.0683925000485,
+    "checkpoint_sha256": "0b5956dbb407a85ea0fe53ef308dca5f8ebc3c11ff0a2bfcd4c5d7061b841d0e",
+    "structure": {
+      "incumbent": {
+        "id": 9,
+        "name": "quadratic_regret_with_nearest_lookahead",
+        "intent": "Extend the parent by adding a quadratic regret amplification term (0.05*pr^2) and a progress-gated nearest-remaining lookahead (-0.12*pr*nr). The quadratic sharpens the end-of-tour bias toward high-regret candidates, pushing the regret weight from 0.25 to 0.30 at pr=1 to better prevent stranded expensive late picks. The nearest-remaining term acts as a one-step chainability proxy: near the end, candidates well-connected to remaining nodes are favored, which helps uniform instances where pure distance poorly discriminates.",
+        "tags": [
+          "nonlinear",
+          "lookahead"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "628374a3f0ebee00a4aa4b75c3565cc88ca4746ef47d5172a9ecba40feda16f8",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "3c31487a128a19578cb3cbd0a0167b91d2e36693c4791cdd29d15d1c35d660da"
+        }
+      },
+      "branch": {
+        "id": 4,
+        "name": "progress_scaled_return_with_regret",
+        "intent": "Progress-scaled return penalty: return_distance weight grows from 0.15 to 0.45 over the tour, biasing late choices toward nodes that close cleanly to the start. Small regret bias (0.1) prefers candidates with worse alternatives, helping uniform instances where local distance ties are common. Distance remains dominant; supplementary terms are bounded and act as tie-breakers only.",
+        "tags": [
+          "return_aware",
+          "progress"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "c5ecbfac80ab57b0965fede9d23ba4f5d14004e3945e529f4027793b35203c57",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "79c66ab8ae2fc6b275b7a0ed2877a47e89c20e43602ea74e5cf589ede5840ef1"
+        }
+      }
+    }
+  },
+  {
+    "block": 66,
+    "checkpoint": 24,
+    "task_status": "infrastructure_incomplete",
+    "completed_proposals": 13,
+    "valid_programs": 13,
+    "invalid_programs": 0,
+    "truncations": 0,
+    "checkpoint_status": "preparation_incomplete",
+    "incumbent": null,
+    "branch": null,
+    "branch_difference": {},
+    "cost": {
+      "requests": 27,
+      "known_tokens": 98514,
+      "unknown_requests": 1,
+      "unknown_reservation": 20905
+    },
+    "wall_seconds": 1551.0683925000485,
+    "checkpoint_sha256": "a2bfc94ebb89b162c40ea296e57aac03d504658f91a157751e1c61acee7aa10b",
+    "structure": {}
+  },
+  {
+    "block": 60,
+    "checkpoint": 8,
+    "task_status": "search_complete_test_not_run",
+    "completed_proposals": 24,
+    "valid_programs": 24,
+    "invalid_programs": 0,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 8,
+      "loss": 0.042945950990724534
+    },
+    "branch": {
+      "id": 5,
+      "loss": 0.045693859388963635
+    },
+    "branch_difference": {
+      "node_id": 5,
+      "validation_loss_delta": 0.0027479083982391017,
+      "probe_behavior_distance": 0.08728213507625272,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 48,
+      "known_tokens": 174481,
+      "unknown_requests": 0,
+      "unknown_reservation": 0
+    },
+    "wall_seconds": 2346.2788897999562,
+    "checkpoint_sha256": "c741d73d735fcc1f28109932390035219023ac3b2d1288b120d0c7509f78619c",
+    "structure": {
+      "incumbent": {
+        "id": 8,
+        "name": "quadratic_progress_closing",
+        "intent": "Replace the parent's linear return-distance ramp (0.1 + 0.2*p) with a quadratic schedule (0.08 + 0.65*p*p) so that return-distance pressure stays light while many cities remain (preserving early flexibility and grid performance) but accelerates sharply in the closing third of the tour where the start-distance gap most inflates total tour length on uniform instances. Regret is slightly reduced to 0.4 to keep escape-from-myopic-lock-in behavior without overpowering the closing signal.",
+        "tags": [
+          "progress"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "388fae0c053a23aaeceb883396221d910ab0023a618659c6cfaf3f589003bc95",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "4438c219c49d71b04b2941b4d90f7f3ed9f4ef3389dd2e2fe9ed1763221071aa"
+        }
+      },
+      "branch": {
+        "id": 5,
+        "name": "regret_amplified_return",
+        "intent": "Amplify the regret weight 5x (0.1 → 0.5) to make the heuristic act decisively when a candidate would become expensive to reach later, while retaining a mild progress-weighted return-distance term to keep the closing leg short. Strong regret helps escape the nearest-neighbor traps that hurt the parent on uniform instances; the return term prevents stranding the tour far from city 0 at the end.",
+        "tags": [
+          "regret",
+          "return_aware"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "e0c4af9caf75a504ea65800f64a13385c5e45d9792b7045d7f7353d002d15c12",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "85d790abba01a8e77b1b856d33ae58e60597b64ce086b1b1b71acc02dcd51cec"
+        }
+      }
+    }
+  },
+  {
+    "block": 60,
+    "checkpoint": 24,
+    "task_status": "search_complete_test_not_run",
+    "completed_proposals": 24,
+    "valid_programs": 24,
+    "invalid_programs": 0,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 8,
+      "loss": 0.042945950990724534
+    },
+    "branch": {
+      "id": 5,
+      "loss": 0.045693859388963635
+    },
+    "branch_difference": {
+      "node_id": 5,
+      "validation_loss_delta": 0.0027479083982391017,
+      "probe_behavior_distance": 0.08728213507625272,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 48,
+      "known_tokens": 174481,
+      "unknown_requests": 0,
+      "unknown_reservation": 0
+    },
+    "wall_seconds": 2346.2788897999562,
+    "checkpoint_sha256": "07585de8e569e7505f53a1eb0892c6a4aedf22db5e0b1dc37dd95fa9ffecb1f5",
+    "structure": {
+      "incumbent": {
+        "id": 8,
+        "name": "quadratic_progress_closing",
+        "intent": "Replace the parent's linear return-distance ramp (0.1 + 0.2*p) with a quadratic schedule (0.08 + 0.65*p*p) so that return-distance pressure stays light while many cities remain (preserving early flexibility and grid performance) but accelerates sharply in the closing third of the tour where the start-distance gap most inflates total tour length on uniform instances. Regret is slightly reduced to 0.4 to keep escape-from-myopic-lock-in behavior without overpowering the closing signal.",
+        "tags": [
+          "progress"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "388fae0c053a23aaeceb883396221d910ab0023a618659c6cfaf3f589003bc95",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "4438c219c49d71b04b2941b4d90f7f3ed9f4ef3389dd2e2fe9ed1763221071aa"
+        }
+      },
+      "branch": {
+        "id": 5,
+        "name": "regret_amplified_return",
+        "intent": "Amplify the regret weight 5x (0.1 → 0.5) to make the heuristic act decisively when a candidate would become expensive to reach later, while retaining a mild progress-weighted return-distance term to keep the closing leg short. Strong regret helps escape the nearest-neighbor traps that hurt the parent on uniform instances; the return term prevents stranding the tour far from city 0 at the end.",
+        "tags": [
+          "regret",
+          "return_aware"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "e0c4af9caf75a504ea65800f64a13385c5e45d9792b7045d7f7353d002d15c12",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "85d790abba01a8e77b1b856d33ae58e60597b64ce086b1b1b71acc02dcd51cec"
+        }
+      }
+    }
+  },
+  {
+    "block": 67,
+    "checkpoint": 8,
+    "task_status": "infrastructure_incomplete",
+    "completed_proposals": 20,
+    "valid_programs": 19,
+    "invalid_programs": 1,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 8,
+      "loss": 0.05947683432375466
+    },
+    "branch": {
+      "id": 4,
+      "loss": 0.06573229888527982
+    },
+    "branch_difference": {
+      "node_id": 4,
+      "validation_loss_delta": 0.006255464561525155,
+      "probe_behavior_distance": 0.0925925925925926,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 41,
+      "known_tokens": 139348,
+      "unknown_requests": 1,
+      "unknown_reservation": 20852
+    },
+    "wall_seconds": 1900.8493915998843,
+    "checkpoint_sha256": "8941b7af876c5d5684b84e686b2cce919effc50905ed07e700bd7d3c42b21ed3",
+    "structure": {
+      "incumbent": {
+        "id": 8,
+        "name": "progress_return_regret",
+        "intent": "Modulate return-distance emphasis by progress so late-tour candidates consider closing the loop more heavily, addressing cumulative routing bias without disrupting distance dominance. The progress-weighted return term grows smoothly while preserving the parent's bounded inverse-distance regret damping for disambiguating close candidates in uniform/clustered regimes.",
+        "tags": [
+          "progress",
+          "return_aware"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "bb14486a42860c1ae29cfad09721bec2eae2164beafa3d6a87903dfd957cf0f9",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "1ce9472b35fa05247572b47285e4aa5b35aac1fdd780ec1d3663a503dd6beddc"
+        }
+      },
+      "branch": {
+        "id": 4,
+        "name": "return_regret_hybrid",
+        "intent": "Hybrid extension of the return_aware parent that retains return-to-start bias but adds modest regret to avoid committing to candidates whose omission would force expensive deferred links; local distance remains dominant.",
+        "tags": [
+          "return_aware",
+          "regret"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "8577f340a25369794070568163fe5fb2d52fb7c961a5c719d724f300d3301167",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "29bba02c3bff54219a297d04ee0e0e05c3316aff4dca10b53960c5ca754f2a94"
+        }
+      }
+    }
+  },
+  {
+    "block": 67,
+    "checkpoint": 24,
+    "task_status": "infrastructure_incomplete",
+    "completed_proposals": 20,
+    "valid_programs": 19,
+    "invalid_programs": 1,
+    "truncations": 0,
+    "checkpoint_status": "preparation_incomplete",
+    "incumbent": null,
+    "branch": null,
+    "branch_difference": {},
+    "cost": {
+      "requests": 41,
+      "known_tokens": 139348,
+      "unknown_requests": 1,
+      "unknown_reservation": 20852
+    },
+    "wall_seconds": 1900.8493915998843,
+    "checkpoint_sha256": "998c600fd88680e359ae402a83cbdf34b7e2846a058eacfd64afef181e0c2428",
+    "structure": {}
+  },
+  {
+    "block": 62,
+    "checkpoint": 8,
+    "task_status": "search_complete_test_not_run",
+    "completed_proposals": 24,
+    "valid_programs": 23,
+    "invalid_programs": 1,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 8,
+      "loss": 0.06311686969466002
+    },
+    "branch": {
+      "id": 5,
+      "loss": 0.06347091227276794
+    },
+    "branch_difference": {
+      "node_id": 5,
+      "validation_loss_delta": 0.0003540425781079215,
+      "probe_behavior_distance": 0.08089668615984405,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 48,
+      "known_tokens": 182304,
+      "unknown_requests": 0,
+      "unknown_reservation": 0
+    },
+    "wall_seconds": 3019.9410220000427,
+    "checkpoint_sha256": "50a2cd2696ade039302d8bf4874d73a81bec257576407bef8ff7be68dfc56638",
+    "structure": {
+      "incumbent": {
+        "id": 8,
+        "name": "regret_lookahead",
+        "intent": "Build on parent's regret-driven urgency (proved strength) with a bounded lookahead that prefers candidates with a close unvisited neighbor, enabling cheap follow-up moves for better chaining. Keep the progress-weighted return-distance closure penalty unchanged. The hypothesis is that combining regret with a lighter lookahead weight (0.1 vs reference's 0.4) avoids the lookahead-only failure mode while potentially helping on uniform cases where regret alone may not discriminate.",
+        "tags": [
+          "regret",
+          "lookahead"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "7c2770760cf5596847607b549cf824e27e761803a86f36629aaedd5768548c15",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "e795d4200cf259e150ed5a39a0f7d8e7009733be420d8fa87db71c0cc613e022"
+        }
+      },
+      "branch": {
+        "id": 5,
+        "name": "regret_endgame_aware",
+        "intent": "Augment nearest-neighbor with a regret term that prioritizes isolated candidates (high second-nearest minus nearest gap among unvisited nodes) before they become expensive to reach, and modulate return-distance penalty by progress so it only influences the final insertions toward the start.",
+        "tags": [
+          "regret",
+          "return_aware"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "8aed809a301fa86402beceb24a8918b649eb840bf0adc7c15c83ab71fad253a5",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "1c1b702cca270ec347c07e4000bd08d04519fae12a90dc5a322fd592fdef5246"
+        }
+      }
+    }
+  },
+  {
+    "block": 62,
+    "checkpoint": 24,
+    "task_status": "search_complete_test_not_run",
+    "completed_proposals": 24,
+    "valid_programs": 23,
+    "invalid_programs": 1,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 24,
+      "loss": 0.06220311254429684
+    },
+    "branch": {
+      "id": 9,
+      "loss": 0.06825128992247567
+    },
+    "branch_difference": {
+      "node_id": 9,
+      "validation_loss_delta": 0.00604817737817883,
+      "probe_behavior_distance": 0.13114178419905972,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 48,
+      "known_tokens": 182304,
+      "unknown_requests": 0,
+      "unknown_reservation": 0
+    },
+    "wall_seconds": 3019.9410220000427,
+    "checkpoint_sha256": "21edcb7ab788b14da2937b275151969463981fb0ce99713f4a576303a606c926",
+    "structure": {
+      "incumbent": {
+        "id": 24,
+        "name": "progress_adaptive_regret_lookahead",
+        "intent": "Refine parent's regret+lookahead by making the lookahead weight inversely proportional to progress, so early on we still consider cheap follow-up moves to chain cities, while late we prioritize closing the tour via the progress-weighted return penalty. This balances exploration and exploitation across the tour, aiming to improve uniform instances where constant lookahead may mislead.",
+        "tags": [
+          "progress",
+          "hybrid"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "d11fcc916fe30141f708a8b31a9c8dda3056d60ba5caa380fa60f011d83c2d20",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "8cdfc23b5343d8c2db61193d90c6d11165ac4b480261ef76751aea4f5d17f26f"
+        }
+      },
+      "branch": {
+        "id": 9,
+        "name": "cluster_modulated_regret",
+        "intent": "Builds on parent's regret-driven construction by adding a cluster_density modulation on the distance penalty. In dense regions (high cd), distance becomes less discriminative because many candidates are similarly close, so we reduce distance weight and trust regret more to avoid greedy local traps. In sparse regions, distance dominates as in the parent. The nonlinear term (-d × cd) should help uniform instances where local density fluctuations provide discriminative signal, while keeping the parent's strength on clustered/grid where cd acts as a mild regularizer that shifts emphasis toward regret in naturally dense areas without overcorrecting.",
+        "tags": [
+          "regret",
+          "cluster"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "876df7ce078a4f4badbf195c9c62deb9b380dafc10be4742edeb0488e9aae8be",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "f1a9b9e1ec3da9ec0ab89364b415ec044e904bbe5be6e5674e5990e870bcbe70"
+        }
+      }
+    }
+  },
+  {
+    "block": 64,
+    "checkpoint": 8,
+    "task_status": "search_complete_test_not_run",
+    "completed_proposals": 24,
+    "valid_programs": 24,
+    "invalid_programs": 0,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 10,
+      "loss": 0.030450779563449586
+    },
+    "branch": {
+      "id": 8,
+      "loss": 0.03175127937396968
+    },
+    "branch_difference": {
+      "node_id": 8,
+      "validation_loss_delta": 0.0013004998105200956,
+      "probe_behavior_distance": 0.08728213507625272,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 48,
+      "known_tokens": 211048,
+      "unknown_requests": 0,
+      "unknown_reservation": 0
+    },
+    "wall_seconds": 3262.4066153999884,
+    "checkpoint_sha256": "e9454609565c3cdc91f8a5d7e6b35208830987a893d5187afd0c1e330f15c562",
+    "structure": {
+      "incumbent": {
+        "id": 10,
+        "name": "uniform_aware_adaptive_v2",
+        "intent": "Builds on parent's progress-modulated return bias. Adds two uniform-targeted adaptive weights: regret weight scales 0.25 to 0.40 inversely with cluster_density, boosting second-nearest tie-breaking where nearest-neighbor tends to cross. Nearest_remaining lookahead (0 to 0.10) activates only in low-density uniform instances to avoid greedy dead-ends. Both terms vanish in clustered cases where the parent's local ranking already wins. All corrections bounded, monotone in cluster_density, and retain the return-aware + regret-aware anchors.",
+        "tags": [
+          "regret",
+          "lookahead"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "bf182513ca0f24d9f95fc90ff7da276e8244cb09a7047a33d01976a60549450f",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "a4ab2a467cee06a3fd6612a9d833bb1133d57b5ea44efdaa16e1180d4ac2ff47"
+        }
+      },
+      "branch": {
+        "id": 8,
+        "name": "progress_modulated_return",
+        "intent": "Add a progress-modulated return bias to the parent's cluster-aware regret heuristic. As the visited fraction grows, the return-distance weight rises from roughly 0.1 (early) to 0.6 (late), pushing late-tour selection toward candidates that close the loop efficiently. This directly targets the uniform family where cluster_density is low and the parent's regret bump left the largest residual gap. Regret weight is nudged from 0.20 to 0.25 to reinforce second-nearest tie-breaking across all families. All coefficients remain small and monotone, and no term ignores distance, so the 24-delta 2-opt refinement still dominates any residual construction ranking noise.",
+        "tags": [
+          "progress",
+          "regret"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "30d921ecd054fcb7ba1bdbcb50551b2dec165921ad475d412aa03cda5163d3db",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "df92117e3ac6f0e418c66c73eaa184a49c3b6591f3740afcb36382ec7388d002"
+        }
+      }
+    }
+  },
+  {
+    "block": 64,
+    "checkpoint": 24,
+    "task_status": "search_complete_test_not_run",
+    "completed_proposals": 24,
+    "valid_programs": 24,
+    "invalid_programs": 0,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 25,
+      "loss": 0.02260017209027511
+    },
+    "branch": {
+      "id": 22,
+      "loss": 0.024532955909430196
+    },
+    "branch_difference": {
+      "node_id": 22,
+      "validation_loss_delta": 0.001932783819155088,
+      "probe_behavior_distance": 0.08703703703703702,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 48,
+      "known_tokens": 211048,
+      "unknown_requests": 0,
+      "unknown_reservation": 0
+    },
+    "wall_seconds": 3262.4066153999884,
+    "checkpoint_sha256": "b9a897e7d76a19a473813df9393db58a1eae007cbab1fe1cf5371b5547873b32",
+    "structure": {
+      "incumbent": {
+        "id": 25,
+        "name": "cluster_boundary_regret_v1",
+        "intent": "Adds a 4-feature nonlinear interaction term (cd * sn * prog * reg) that rewards cluster-boundary candidates with high regret at moderate progress, complementing the parent's term6 by adding regret sensitivity to the cluster-escape signal so bridge nodes whose omission would cause large future insertion cost are visited preferentially. Tightens term3's sn coefficient (0.40->0.35) and raises cd coefficient (0.15->0.20) to prevent double-counting while strengthening cluster-aware regret. Targets the clustered-family weakness (0.0268) without disturbing grid/uniform regimes where cd is small and the new term naturally vanishes.",
+        "tags": [
+          "cluster",
+          "regret"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "322b076fe015964df8ae797cd819322de6ef17d593e8205311364dca99e31dbf",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "fa989b94d467244b72ab2617a3907144fc3cbf5c8d2851da82bc8ed7585db0f7"
+        }
+      },
+      "branch": {
+        "id": 22,
+        "name": "cluster_chain_v2",
+        "intent": "Builds on the parent's cluster-escape logic with three refinements: (1) replaces unbounded spread in term6 with normalized sn = spread/(1+spread) for numerical stability; (2) adds a chain-density bonus (term7) that rewards candidates in clusters whose nearest_remaining is small relative to mean_remaining, incentivizing tight intra-cluster chaining early in the tour; (3) boosts the regret coefficient in dense clusters (term3: 0.15→0.20 cd) to better resolve ambiguous equidistant choices typical in cluster regimes. The result is tighter cluster traversal early, bounded boundary escape mid-tour, and preserved return optimization late.",
+        "tags": [
+          "cluster",
+          "lookahead"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "3d7c6c0c6c6bca21f960d4e6b7e20689b310b7eaa03a084cba953f322d83fe97",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "8b593a962a4b7238b96fdbb9ec64d573bcf536f4e30ef0f743b7d476ab4daf50"
+        }
+      }
+    }
+  },
+  {
+    "block": 61,
+    "checkpoint": 8,
+    "task_status": "search_complete_test_not_run",
+    "completed_proposals": 24,
+    "valid_programs": 23,
+    "invalid_programs": 1,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 5,
+      "loss": 0.04533277534063642
+    },
+    "branch": {
+      "id": 10,
+      "loss": 0.04579664212142192
+    },
+    "branch_difference": {
+      "node_id": 10,
+      "validation_loss_delta": 0.00046386678078549903,
+      "probe_behavior_distance": 0.21109625668449197,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 48,
+      "known_tokens": 231587,
+      "unknown_requests": 0,
+      "unknown_reservation": 0
+    },
+    "wall_seconds": 3293.98765809997,
+    "checkpoint_sha256": "835b41f7cf9bf1b3086cfa525b97a791d5fea7a7be8ec98ed65c96b7a772bb02",
+    "structure": {
+      "incumbent": {
+        "id": 5,
+        "name": "regret_distance_amplified",
+        "intent": "Adds a multiplicative regret*distance term so candidates that are simultaneously far from the current location and have high insertion regret get a clear priority boost. Plain nearest-neighbor strands such remote, isolated nodes; plain regret alone is weak when distances are uniform. The interaction amplifies urgency exactly where the greedy path is most harmful, which is most pronounced in uniform instances where the parent's regret signal under-weighted stranded candidates.",
+        "tags": [
+          "regret",
+          "nonlinear"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "c262ef734da362628f2dc65dab49bed4a07b7740b31db97b1afe523d507d67a4",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "d3bb3a54c847ad297bb976a58aa1e7e440edc1a05f2f9c45192a81c2bad1d3d3"
+        }
+      },
+      "branch": {
+        "id": 10,
+        "name": "amplified_regret_pressure",
+        "intent": "Doubles the linear regret weight (0.2→0.3) and the nonlinear regret×distance interaction (0.1→0.2) so stranded candidates in uniform random instances are pulled forward more decisively, since raw distance discrimination is weak there. Slightly trims the return-distance weight (0.25→0.2) so that essential far-from-origin candidates in clustered layouts are not suppressed. The interaction term rgt*d now dominates for remote stranded nodes, directly targeting the failure mode the parent only partially fixed.",
+        "tags": [
+          "regret",
+          "nonlinear"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "bc0e3ee8093d634975161c34968506e4b67632bfbb42ab1a54dc62f0b7ddc1a0",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "9355d7575d4b6f7b96add91bc8daa6184d32cce5a22b4eb7511126ebde16eeac"
+        }
+      }
+    }
+  },
+  {
+    "block": 61,
+    "checkpoint": 24,
+    "task_status": "search_complete_test_not_run",
+    "completed_proposals": 24,
+    "valid_programs": 23,
+    "invalid_programs": 1,
+    "truncations": 0,
+    "checkpoint_status": "ready",
+    "incumbent": {
+      "id": 16,
+      "loss": 0.03585393334990952
+    },
+    "branch": {
+      "id": 15,
+      "loss": 0.03617293671430552
+    },
+    "branch_difference": {
+      "node_id": 15,
+      "validation_loss_delta": 0.00031900336439599775,
+      "probe_behavior_distance": 0.15811546840958604,
+      "eligible": true
+    },
+    "cost": {
+      "requests": 48,
+      "known_tokens": 231587,
+      "unknown_requests": 0,
+      "unknown_reservation": 0
+    },
+    "wall_seconds": 3293.98765809997,
+    "checkpoint_sha256": "04f46402e2c6d5ce509a5ea4db6e8b23f9306efccc03420384009f1da29d1644",
+    "structure": {
+      "incumbent": {
+        "id": 16,
+        "name": "progress_adaptive_v2",
+        "intent": "Adapt heuristic weights more aggressively to tour progress. Early on, penalize high cluster_density and spread to encourage exploration and avoid premature clustering; late on, reward cluster_density and increase weights for return_distance and nearest_remaining to efficiently close the tour. Regret weight decreases with progress because lookahead is less critical near the end. This should reduce uniform loss by better balancing early spread and late compaction while preserving grid strength.",
+        "tags": [
+          "progress",
+          "hybrid"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "5bd4a65194fe5b400587332a8d1b70d0a1c574d60a8914941ce51daebfb09bb3",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "a4afea1214b77faf65a51cdce825c6b4b8496bb74079b03d92d7ab0a6da7d2e2"
+        }
+      },
+      "branch": {
+        "id": 15,
+        "name": "lookahead_with_regret_decay",
+        "intent": "Add a 1-step lookahead using nearest_remaining to address the parent's uniform-layout weakness while preserving the regret scheduling that works well elsewhere. In uniform instances, cluster density barely discriminates between candidates (nearly constant across all unvisited cities), but nearest_remaining provides a genuine forward-looking signal about how easily the tour can continue after inserting this candidate. The lookahead weight decays with progress (0.4 to 0.1) because early insertions dominate tour structure when many cities remain, while late insertions need less lookahead as the tour nears completion. Slightly reducing the cluster penalty keeps grid/clustered strength without dominating uniform cases.",
+        "tags": [
+          "lookahead",
+          "regret"
+        ],
+        "program_identity": {
+          "raw_code_sha256": "0cf5151d3d63a575306b40e8b6043ccf778df596bbb9408727475f0961d0b0be",
+          "structural_format": "chapter6-priority-ast-json-v1",
+          "structural_sha256": "50592ff2f40d88d090b0057b9989fa9c95ae3494f9d2e0840f9ee86ef9264421"
+        }
+      }
+    }
+  }
+]
