@@ -50,6 +50,11 @@
       "sha256": "b2f82c2bbc5aa643b09c23649e45d5536b364482775e78e8f7121211e17e17bf"
     },
     {
+      "path": "REFINEMENT_20261003_ZH.md",
+      "bytes": 3879,
+      "sha256": "f1c0dc2928cdab4c160d74bdfbae3313c6a1cfe6d64ecb9a78c126e7821639d3"
+    },
+    {
       "path": "REPORT_ZH.md",
       "bytes": 14611,
       "sha256": "63447fef58db2b56c2b89947e7bc2ac2b79af2d038a83c4bd5d23044376742ce"
@@ -118,6 +123,11 @@
       "path": "inventory.py",
       "bytes": 22754,
       "sha256": "5f5fc12a60b1162c8e59f02f2eca90b1f3ab7ec0b315497466ab253d72307240"
+    },
+    {
+      "path": "investment_outcomes.py",
+      "bytes": 8679,
+      "sha256": "0c01b94ce11176a0de09da3d69f2595049d46a99711034f9230d467b842ab753"
     },
     {
       "path": "phase_b_runner.py",
@@ -200,6 +210,11 @@
       "sha256": "ab6e2e9c6bcea4cd7f8ba2927a67e57e2c63832262bcde17e0980b9c3c076c1a"
     },
     {
+      "path": "test_investment_outcomes.py",
+      "bytes": 3398,
+      "sha256": "2ba47b7101140c09a21abc350cc7e82829be5f43d940167dc9454a86b79ee88f"
+    },
+    {
       "path": "test_phase_b_runner.py",
       "bytes": 8782,
       "sha256": "90426f8fa05842789defe58592ef937ef51d534be994cd8b9a54fc313c4132cb"
@@ -220,5 +235,5 @@
       "sha256": "2dad8dcbaccf2101820e2ef347604ad253d76201bb81d1ca2ebb2ace99a353c1"
     }
   ],
-  "manifest_sha256": "d0691dd270b35b47bf265fe36690b7d3c8d9d74ba21ba8c222a3e55f82451281"
+  "manifest_sha256": "93e80bd28e0858325ef09aaccb4edc741b7ef6105deb9015d2e9faee0a02c70a"
 }
