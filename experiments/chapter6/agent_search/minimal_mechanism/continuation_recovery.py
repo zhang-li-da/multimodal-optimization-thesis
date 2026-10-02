@@ -192,8 +192,8 @@ def dispatch(out):
         if wait > 0:
             time.sleep(wait)
         checkpoint = read_json(out / 'checkpoints' / f"{job['checkpoint_id']}.json")
-        snapshot = read_json(out / next(p.name for p in (out / 'data').glob('*.json')
-                                       if f"b{job['data_block']}" in p.name))
+                snapshot = read_json(out / 'data' / next(p.name for p in (out / 'data').glob('*.json')
+                                                        if f"b{job['data_block']}" in p.name))
         parameters = {'temperature': manifest['model']['temperature'],
                       'planner_max_tokens': manifest['model']['planner_max_tokens'],
                       'coder_max_tokens': manifest['model']['coder_max_tokens'],
