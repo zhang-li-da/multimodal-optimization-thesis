@@ -70,6 +70,11 @@
       "sha256": "61daa6e47af6e8531069ce4352d8989447da3d558a05f07c790e04a3b93fd1c5"
     },
     {
+      "path": "SEGMENT_FREEZE_REVIEW_ZH.md",
+      "bytes": 2203,
+      "sha256": "5896e42976b1e2b225ade2ffbca6a8a76e17038402bf4f6711cafcf03d150bc3"
+    },
+    {
       "path": "SEGMENT_REVISION_ZH.md",
       "bytes": 2473,
       "sha256": "452a68c19ad5343da0de6d57040d154a1902d7b2768cfb7af59affc1b87f171e"
@@ -180,6 +185,11 @@
       "sha256": "9b951a06fe2350880f4953cc38ebf0599666ac4c8e2d08ad8d3be467a193832e"
     },
     {
+      "path": "segment_freeze_check.py",
+      "bytes": 10591,
+      "sha256": "4469524414dc5edfc9962ba4a762e327be928a21fd9e89e159a8775bb8588088"
+    },
+    {
       "path": "test_analyze_phase_b.py",
       "bytes": 13430,
       "sha256": "141d3e11ab4d49af2e64f476f888c05d862f6a8c053eaf184748652a3f23abfa"
@@ -235,10 +245,15 @@
       "sha256": "2dad8dcbaccf2101820e2ef347604ad253d76201bb81d1ca2ebb2ace99a353c1"
     },
     {
+      "path": "test_segment_freeze_check.py",
+      "bytes": 7351,
+      "sha256": "5e93934398ba2ba88280dc08eec255a716bbcbde6b00e29b73ca6e47564478c7"
+    },
+    {
       "path": "test_wall_admission.py",
       "bytes": 1917,
       "sha256": "ba10e455a25945fb4c876fa5ac4c3def48fb6d319ca777401752b9da5d4067ca"
     }
   ],
-  "manifest_sha256": "44e42bcbb8700a72c7f32a3ded231efd402abdc87247385cf035c50b9a2c4fe3"
+  "manifest_sha256": "c3bdf832a0e5e465b2c9c8fa9222035bc1b5f897e89cd693d4a75de117effc2f"
 }
