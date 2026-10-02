@@ -40,6 +40,11 @@
       "sha256": "f19d01c4ce999eeab90dbd4a996ca4fe73e0e4a20e36aefc2fce7e8435ca1ebe"
     },
     {
+      "path": "RECOVERY_ZH.md",
+      "bytes": 2040,
+      "sha256": "b2f82c2bbc5aa643b09c23649e45d5536b364482775e78e8f7121211e17e17bf"
+    },
+    {
       "path": "REPORT_ZH.md",
       "bytes": 14611,
       "sha256": "63447fef58db2b56c2b89947e7bc2ac2b79af2d038a83c4bd5d23044376742ce"
@@ -95,6 +100,16 @@
       "sha256": "4fa809dc586c8c5def57e8f5228e2b823c9b7f8c9819adcd533f27ff43140c7c"
     },
     {
+      "path": "recovery_study.py",
+      "bytes": 17189,
+      "sha256": "d0974bd20ad2b065aa243471010b9aa49da7a07dc8119736eb924f124021fb1e"
+    },
+    {
+      "path": "recovery_transport.py",
+      "bytes": 5724,
+      "sha256": "9e2e95dbe3358715d5480dab136e2c249247cc6e1834fdf80377a62d9a293183"
+    },
+    {
       "path": "test_analyze_phase_b.py",
       "bytes": 13430,
       "sha256": "141d3e11ab4d49af2e64f476f888c05d862f6a8c053eaf184748652a3f23abfa"
@@ -123,7 +138,12 @@
       "path": "test_protocol_b.py",
       "bytes": 2319,
       "sha256": "39536f01173649ae54715d21c0382cafbdbe147e087337981e1292891e7dfce3"
+    },
+    {
+      "path": "test_recovery.py",
+      "bytes": 4088,
+      "sha256": "2dad8dcbaccf2101820e2ef347604ad253d76201bb81d1ca2ebb2ace99a353c1"
     }
   ],
-  "manifest_sha256": "cb54f9b8ea7c63d83e83c9f3e3e6ec5662843a819bebc61585d47a7e4cbd67ea"
+  "manifest_sha256": "532f22c17e4c55f403da020b6833e23f80f4fade2b85ef811ee07079979b60dc"
 }
