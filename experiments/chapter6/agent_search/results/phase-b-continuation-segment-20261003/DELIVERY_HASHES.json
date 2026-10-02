@@ -15,9 +15,11 @@
     "parent_snapshot_manifest.json": "b112d0e9c81b7f3bf7507093fac59227ae3b6f99f4c370beabe6c1ce07236e10",
     "progress.json": "294c83a9ecccc670c70626183ca7f2f5115b48174199fb24f9d6f56c9512021a",
     "raw-segments.zip": "a3f2b189d0ef11daf3cb3951529e1916be0ce9994a8b9db3d29d021857ee367f",
-    "REPORT_ZH.md": "b8d84b5aed4de3ca2fa17b01bb07ebe1246465ee875f0d29c09be647c41dd34d",
+    "REPORT_ZH.md": "fea3f7fd3e63f15a1a39e8cffe2f0a4851aa6ad698857334484381f6cd974bde",
     "SEGMENT_AUDIT.json": "94622c3b42cbbda1e3cee418531db2e3174559a260daa9ac9715d7d51d252176",
     "segment_source_archive.py": "abfeb16f24b267956d9e40aeeeb9241061c4fb59f236415df7b57de7c50cf9a5",
+    "STATE_HASH_RECONCILIATION.json": "4b07f1445519a13cc15708bb8937f2aed31b9daa1fbb3af2aaeace2799dc393d",
+    "verify_segment_raw.py": "6a4df6c4ed00a74795e9e2a9f142077566c5da25ca103697ced16f31a8020b75",
     "verify_segment_remote_20261003.py": "c2635ddb375d0998023f3cd2eb9251e94d2f818eb5ea2637e9dd5809ae7e902f"
   },
   "manifest_sha256": "aaab19931709547c1eb51143c8bec411f183dc3633a894edbb54370c77945bf8"

@@ -1,0 +1,26 @@
+{
+  "fixed_remote_commit": "3baef9f",
+  "files_verified": 17,
+  "archive_members_verified": 489,
+  "source_members_verified": 128,
+  "zip_integrity": "passed",
+  "planned_jobs": 128,
+  "planned_checkpoints": 16,
+  "coverage": {
+    "/request.json": 56,
+    "/response.json": 54,
+    "/candidate.json": 28,
+    "/selection_candidates.json": 4,
+    "/terminal_status.json": 61
+  },
+  "manifest_sha256": "aaab19931709547c1eb51143c8bec411f183dc3633a894edbb54370c77945bf8",
+  "cumulative_cost": {
+    "requests": 139,
+    "known_tokens": 557801,
+    "unknown_requests": 5,
+    "unknown_reservation": 102422
+  },
+  "all_remote_bytes_match_delivery_hashes": true,
+  "text_hash_basis": "Git blob LF",
+  "test_access": false
+}

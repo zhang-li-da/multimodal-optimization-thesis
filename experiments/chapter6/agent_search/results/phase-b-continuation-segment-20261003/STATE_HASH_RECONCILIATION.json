@@ -1,0 +1,47 @@
+{
+  "rows": [
+    {
+      "job": "b-b61-step24-r0",
+      "status": "infrastructure_incomplete",
+      "json_loaded_digest": "aa8c338fb195cbe36f054b70385044184e84eb59c2ee13a26fd5259b5d947576",
+      "integer_keys_restored_digest": "71f78b64af9da6164d6236e8b492066d0bc30057c66a8d4e114e94a70cdb6058",
+      "pending_decision_added": true,
+      "reconciled_digest": "c6de7556ccaf0be375225ca6ad2369413f4f2a7f0bfd3b077767051619596a23",
+      "result_state_sha256": "c6de7556ccaf0be375225ca6ad2369413f4f2a7f0bfd3b077767051619596a23",
+      "match": true
+    },
+    {
+      "job": "b-b62-step08-r0",
+      "status": "infrastructure_incomplete",
+      "json_loaded_digest": "1b527a920a327433d32168b02dd2c6d085ff742ccdd7ad379ec815df38d9a672",
+      "integer_keys_restored_digest": "35308faf8aab9368dfacc652294c0620efef01e5da7c14d0b2f5871ed0e88099",
+      "pending_decision_added": true,
+      "reconciled_digest": "8175b58394ea77d34a55bd6a0df1f049b30b806375e4cc70713f35efc0f93fd2",
+      "result_state_sha256": "8175b58394ea77d34a55bd6a0df1f049b30b806375e4cc70713f35efc0f93fd2",
+      "match": true
+    },
+    {
+      "job": "b-b63-step24-r1",
+      "status": "continuation_complete",
+      "json_loaded_digest": "f3f201f6daa596bd299c5eaf64a2c690541fb443175d72c9bda09fa163a0315d",
+      "integer_keys_restored_digest": "1b4c5c505cc44023bacf054ed24745448b5f656a04e1ab348bc7935c82bbf936",
+      "pending_decision_added": false,
+      "reconciled_digest": "1b4c5c505cc44023bacf054ed24745448b5f656a04e1ab348bc7935c82bbf936",
+      "result_state_sha256": "1b4c5c505cc44023bacf054ed24745448b5f656a04e1ab348bc7935c82bbf936",
+      "match": true
+    },
+    {
+      "job": "b-b65-step08-r0",
+      "status": "continuation_complete",
+      "json_loaded_digest": "69982e910741ccd177c6778d99619f08adc708d8ec71bbd87751459f51b12f6c",
+      "integer_keys_restored_digest": "4772f9e30054304b00c3ced4fc1ed9370189109053644ba96266457eec8e57f9",
+      "pending_decision_added": false,
+      "reconciled_digest": "4772f9e30054304b00c3ced4fc1ed9370189109053644ba96266457eec8e57f9",
+      "result_state_sha256": "4772f9e30054304b00c3ced4fc1ed9370189109053644ba96266457eec8e57f9",
+      "match": true
+    }
+  ],
+  "new_model_calls": 0,
+  "test_access": false,
+  "numeric_evaluations": 0
+}
