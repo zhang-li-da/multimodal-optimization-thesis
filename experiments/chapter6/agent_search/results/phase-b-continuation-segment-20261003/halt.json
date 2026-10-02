@@ -1,0 +1,24 @@
+{
+  "after_job": "b-b61-step24-r0",
+  "reason": {
+    "status": "infrastructure_incomplete",
+    "diagnostics": {
+      "http_status": null,
+      "business_code": null,
+      "error_category": "transport_timeout",
+      "exception_type": "TimeoutError",
+      "cause_type": null,
+      "trace_id": null,
+      "retry_after": null,
+      "elapsed_seconds": 4.706692900042981,
+      "partial_bytes": 0,
+      "utc": "2026-10-02T16:27:42.167154+00:00",
+      "automatic_retry": false,
+      "usage_unknown": true
+    },
+    "unknown_usage": true
+  },
+  "utc": "2026-10-02T16:27:42.222806+00:00",
+  "automatic_resume": false,
+  "test_access": false
+}

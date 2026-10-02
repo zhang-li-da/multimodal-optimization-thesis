@@ -1,0 +1,23 @@
+{
+  "schema": "chapter6-segment-delivery-hashes-v1",
+  "files": {
+    "ANALYSIS.json": "2aaa8b59ebd6e111f0fc37080e55a41d8e2bc470d8d694c3ec9a805fb9f519f0",
+    "ARCHIVE_INDEX.json": "87b39c8ff797b69504083c6f3fa35139211e632c53d13de4184767ede4525ebc",
+    "deliver_segment_20261003.py": "931e11d08db9c2a5d87265e5541bbc540bf6a5cca5859e215f3879d3234d7ffe",
+    "execution-source.zip": "9b6b71c2e88dec05aff76d3f483a3e744c0fce9064874cea7913662ba7a53da1",
+    "EXECUTION_BINDING.json": "62cab9d2823cb22147236579091ebfa88e05902b12997ce93cf623bec34fb2c7",
+    "EXECUTION_SOURCE_INDEX.json": "e6d46ebaec94db3dea047142e7d47eb23c0400a2a674d739c49fb1863686621b",
+    "halt.json": "8ab153ebd78f893751a06ffdf539d45de93271c59501e6c36e437068d2959b07",
+    "manifest.json": "3e52eb77fe473f63ad8586ebc7ff8ee3cfeea553c44e28fd6c81fed4b550eb3b",
+    "parent_halt.json": "9ce597f076b9337d725d2a30f33f48e4a1b89eb8863f8fc8e044cd2874cf5b45",
+    "parent_manifest.json": "4d9c5e994c74d09e397e46ed00d86c2173be4501fb8e59111a78a23744c73e6f",
+    "parent_snapshot_manifest.json": "b112d0e9c81b7f3bf7507093fac59227ae3b6f99f4c370beabe6c1ce07236e10",
+    "progress.json": "294c83a9ecccc670c70626183ca7f2f5115b48174199fb24f9d6f56c9512021a",
+    "raw-segments.zip": "a3f2b189d0ef11daf3cb3951529e1916be0ce9994a8b9db3d29d021857ee367f",
+    "REPORT_ZH.md": "b8d84b5aed4de3ca2fa17b01bb07ebe1246465ee875f0d29c09be647c41dd34d",
+    "SEGMENT_AUDIT.json": "94622c3b42cbbda1e3cee418531db2e3174559a260daa9ac9715d7d51d252176",
+    "segment_source_archive.py": "abfeb16f24b267956d9e40aeeeb9241061c4fb59f236415df7b57de7c50cf9a5",
+    "verify_segment_remote_20261003.py": "c2635ddb375d0998023f3cd2eb9251e94d2f818eb5ea2637e9dd5809ae7e902f"
+  },
+  "manifest_sha256": "aaab19931709547c1eb51143c8bec411f183dc3633a894edbb54370c77945bf8"
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "chapter6-prelaunch-source-binding-v1",
+  "created_utc": "2026-10-02T16:12:10.070713+00:00",
+  "manifest_sha256": "aaab19931709547c1eb51143c8bec411f183dc3633a894edbb54370c77945bf8",
+  "source_commit": "d35e56f5f62ce6e5cdefe0db0e0c3d4c7287ce64",
+  "source_index_sha256": "0bb15dfb79f5db2feb052c95aad9715196b4732cd630ebaeace66acac6fb21ed",
+  "prior_source_commit": "b766d27f2b27b1c40c03932df48f89db9b471741",
+  "zero_new_calls_at_binding": true,
+  "reason": "Offline recovery verification and inherited-cost audit fixes; no changes to model, action, data, order, or budgets",
+  "test_access": false,
+  "binding_sha256": "9e5da2728667b8cfbcc345a6588a2fd0465f3c96e2338418f3a12366c89f1223"
+}

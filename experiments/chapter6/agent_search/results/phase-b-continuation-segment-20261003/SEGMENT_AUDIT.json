@@ -1,0 +1,791 @@
+{
+  "schema": "chapter6-continuation-segment-audit-v1",
+  "manifest_sha256": "aaab19931709547c1eb51143c8bec411f183dc3633a894edbb54370c77945bf8",
+  "created_utc": "2026-10-02T16:12:24.240672+00:00",
+  "status_counts": {
+    "historical_attempt_preserved": 3,
+    "continuation_complete": 2,
+    "infrastructure_incomplete": 1,
+    "not_started": 98,
+    "preparation_incomplete": 24
+  },
+  "rows": [
+    {
+      "job_id": "eg-b64-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "historical_attempt_preserved",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b62-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "historical_attempt_preserved",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b63-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "historical_attempt_preserved",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b65-step08-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "continuation_complete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b63-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "continuation_complete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b62-step08-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "infrastructure_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b61-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b60-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b64-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b67-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b60-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b66-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b66-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b61-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b61-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b67-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b61-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b65-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b63-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b61-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b67-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b64-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b65-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b66-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b63-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b66-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b62-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b64-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b62-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b63-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b66-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b61-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b60-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b65-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b66-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b62-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b63-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b67-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b67-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b62-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b60-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b65-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b66-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b67-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b61-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b66-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b66-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b62-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b66-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b66-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b62-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b61-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b63-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b65-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b65-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b67-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b67-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b60-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b64-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b66-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b67-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b64-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b61-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b64-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b65-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b64-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b63-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b60-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b63-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b64-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b62-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b65-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b64-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b62-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b60-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b63-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b60-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b62-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b60-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b61-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b64-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b62-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b60-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b60-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b65-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b67-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b61-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b63-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b66-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b65-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b67-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b62-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b63-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b64-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b67-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b60-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b61-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b65-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b65-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b64-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b65-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b62-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b61-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b66-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b67-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b67-step24-r0",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b63-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b66-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b64-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b62-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b66-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b61-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b67-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b67-step24-r1",
+      "eligibility": "parent_terminal_preserved",
+      "status": "preparation_incomplete",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b60-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b62-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b60-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b64-step24-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b61-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "i-b60-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b60-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b61-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b64-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b63-step24-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "b-b63-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b65-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "e0-b65-step08-r0",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    },
+    {
+      "job_id": "eg-b63-step08-r1",
+      "eligibility": "ready",
+      "status": "not_started",
+      "completed_proposals": 0
+    }
+  ],
+  "cost_including_parent": {
+    "requests": 125,
+    "known_tokens": 484599,
+    "unknown_requests": 4,
+    "unknown_reservation": 81507
+  },
+  "parent_manifest_sha256": "3c0ba95491bdb824a9c1ba49bcc4544fa61d1dff10f083a71ae639e9a7dd9a82",
+  "all_released_tasks_terminal": false,
+  "test_access": false
+}
