@@ -250,7 +250,11 @@ def main():
     parser.add_argument('action', choices=['prepare', 'run', 'audit'])
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
-    result = {'prepare': prepare, 'run': dispatch, 'audit': audit}[args.action](args.output)
+    if args.action == 'audit':
+        manifest = read_json(args.output / 'manifest.json')
+        result = audit(args.output, manifest)
+    else:
+        result = {'prepare': prepare, 'run': dispatch}[args.action](args.output)
     print(json.dumps({k: v for k, v in result.items() if k in {'manifest_sha256', 'known_tokens', 'requests', 'completed_proposals', 'statuses'}}))
 
 
