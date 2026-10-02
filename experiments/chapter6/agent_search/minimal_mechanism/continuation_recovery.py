@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import shutil
 import time
@@ -34,6 +35,11 @@ def prepare(out: Path):
     # Materialize only search snapshots and frozen checkpoints, never Test.
     out.mkdir(parents=True)
     shutil.copytree(PREFIX / 'data', out / 'data')
+    for record in prefix_manifest.get('data', []):
+        source = PREFIX / record['path']
+        copied = out / record['path']
+        if file_sha(source) != record['sha256'] or file_sha(copied) != record['sha256']:
+            raise ValueError(f"search snapshot hash mismatch: {record['path']}")
     for checkpoint_id, checkpoint in checkpoints.items():
         write(out / 'checkpoints' / f'{checkpoint_id}.json', checkpoint)
     protocol = read_json(HERE / 'protocol.b.json')
@@ -55,6 +61,8 @@ def prepare(out: Path):
         'model': {'provider': 'minimax-cn-coding-plan', 'requested_model': 'MiniMax-M3',
                   'transport': 'local OpenCode configuration via direct HTTP',
                   'concurrency': 1, 'retry_policy': 'none', 'timeout_seconds': 600,
+                  'protocol_timeout_seconds': protocol['generation']['timeout_seconds'],
+                  'continuation_timeout_override': True,
                   'temperature': protocol['generation']['temperature'],
                   'planner_max_tokens': protocol['generation']['planner_max_tokens'],
                   'coder_max_tokens': protocol['generation']['coder_max_tokens']},
@@ -94,6 +102,35 @@ def statuses(out, manifest):
 
 
 def audit(out, manifest):
+    def run_usage(run):
+        calls_dir = run / 'calls'
+        requests = known_tokens = unknown_requests = 0
+        if calls_dir.exists():
+            for call in sorted(p for p in calls_dir.iterdir() if p.is_dir()):
+                request = call / 'request.json'
+                if not request.exists():
+                    continue
+                requests += 1
+                response = call / 'response.json'
+                state = read_json(call / 'state.json') if (call / 'state.json').exists() else {}
+                if not response.exists() or state.get('status') in {'sent_unknown', 'indeterminate'}:
+                    unknown_requests += 1
+                    continue
+                try:
+                    envelope = read_json(response)
+                    body = json.loads(base64.b64decode(envelope['body_base64']).decode('utf-8'))
+                    usage = body.get('usage', {}) if isinstance(body, dict) else {}
+                    if not all(key in usage for key in ('prompt_tokens', 'completion_tokens')):
+                        unknown_requests += 1
+                        continue
+                    known_tokens += int(usage.get('prompt_tokens', 0) or 0)
+                    known_tokens += int(usage.get('completion_tokens', 0) or 0)
+                except (KeyError, ValueError, TypeError, json.JSONDecodeError):
+                    unknown_requests += 1
+        return {'requests': requests, 'known_tokens': known_tokens,
+                'unknown_requests': unknown_requests,
+                'usage_complete': unknown_requests == 0}
+
     rows = []
     for job in manifest['jobs']:
         run = out / 'runs' / job['job_id']
@@ -102,6 +139,12 @@ def audit(out, manifest):
         result = read_json(result_path) if result_path.exists() else {}
         terminal = read_json(terminal_path) if terminal_path.exists() else {}
         usage = result.get('usage', terminal.get('usage', {}))
+        scanned = run_usage(run)
+        if scanned['requests']:
+            usage = {**usage, 'call_attempts': scanned['requests'],
+                     'known_tokens': scanned['known_tokens'],
+                     'unknown_requests': scanned['unknown_requests'],
+                     'usage_complete': scanned['usage_complete']}
         rows.append({'job_id': job['job_id'], 'strategy': job['strategy'],
                      'checkpoint_id': job['checkpoint_id'], 'eligibility': job.get('eligibility'),
                      'status': result.get('status', terminal.get('status', 'not_started')),
@@ -109,19 +152,23 @@ def audit(out, manifest):
                      'known_tokens': usage.get('known_tokens', 0),
                      'requests': usage.get('call_attempts', 0),
                      'usage_complete': usage.get('usage_complete', False),
+                     'unknown_requests': usage.get('unknown_requests', 0),
                      'wall_seconds': result.get('summary', {}).get('wall_seconds'),
                      'test_access': False})
     value = {'schema': 'chapter6-continuation-audit-v1', 'manifest_sha256': manifest['manifest_sha256'],
              'created_utc': utcnow(), 'rows': rows, 'statuses': statuses(out, manifest),
-             'test_access': False, 'all_tasks_accounted': all(row['status'] != 'missing' for row in rows),
+             'test_access': False,
              'executable_jobs': manifest['limits']['executable_jobs'],
              'terminal_jobs': sum(row['status'] in {'continuation_complete', 'infrastructure_incomplete',
                                                    'budget_exhausted', 'branch_unavailable',
-                                                   'preparation_incomplete', 'sent_unknown', 'provider_failed',
-                                                   'not_started'} for row in rows),
+                                                   'preparation_incomplete', 'sent_unknown', 'provider_failed'}
+                               for row in rows),
              'known_tokens': sum(row['known_tokens'] for row in rows),
              'requests': sum(row['requests'] for row in rows),
-             'completed_proposals': sum(row['completed_proposals'] for row in rows)}
+             'completed_proposals': sum(row['completed_proposals'] for row in rows),
+             'unknown_requests': sum(row['unknown_requests'] for row in rows),
+             'all_tasks_accounted': all(row['status'] in TERMINAL and row['status'] != 'not_started'
+                                        for row in rows)}
     write(out / 'CONTINUATION_AUDIT.json', value)
     return value
 
@@ -130,6 +177,7 @@ def dispatch(out):
     manifest = verify(out)
     gate = GlobalPauseGate(2)
     transport_failures = 0
+    last_dispatch = 0.0
     for job in manifest['jobs']:
         run = out / 'runs' / job['job_id']
         if (run / 'terminal_status.json').exists():
@@ -140,6 +188,9 @@ def dispatch(out):
                                                  'reason': 'checkpoint_not_ready', 'missing_outcome': True,
                                                  'test_access': False})
             continue
+        wait = 1.0 - (time.monotonic() - last_dispatch)
+        if wait > 0:
+            time.sleep(wait)
         checkpoint = read_json(out / 'checkpoints' / f"{job['checkpoint_id']}.json")
         snapshot = read_json(out / next(p.name for p in (out / 'data').glob('*.json')
                                        if f"b{job['data_block']}" in p.name))
@@ -165,12 +216,21 @@ def dispatch(out):
         write(run / 'terminal_status.json', {'status': status, 'utc': utcnow(),
                                              'diagnostics': transport.last_diagnostics,
                                              'test_access': False})
+        last_dispatch = time.monotonic()
         pause = gate.observe(transport.last_diagnostics)
         category = (transport.last_diagnostics or {}).get('error_category')
-        transport_failures = transport_failures + 1 if category in {'transport_timeout', 'transport_error'} else 0
-        if pause['pause'] or transport_failures >= 2:
+        run_audit = audit(out, manifest)
+        unknown_usage = any(row['job_id'] == job['job_id'] and row['unknown_requests']
+                            for row in run_audit['rows'])
+        transport_failures = transport_failures + 1 if category in {
+            'transport_timeout', 'transport_error', 'provider_server'} else 0
+        immediate_server_pause = category in {'provider_server', 'quota_exhausted',
+                                              'connection_limit', 'authentication'}
+        if pause['pause'] or immediate_server_pause or unknown_usage or transport_failures >= 2:
             write(out / 'halt.json', {'status': 'paused', 'after_job': job['job_id'],
-                                     'reason': pause, 'transport_failures': transport_failures,
+                                     'reason': {**pause, 'category': category,
+                                                'unknown_usage': unknown_usage},
+                                     'transport_failures': transport_failures,
                                      'no_automatic_retry': True})
             break
     for job in manifest['jobs']:

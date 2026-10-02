@@ -84,6 +84,8 @@ def history_summary(nodes: list[dict], incumbent_loss: float) -> dict:
             "intent": str(node.get("intent", ""))[:240],
             "tags": node.get("tags", []),
             "strategy_hypothesis_present": _valid_hypothesis(node.get("strategy_hypothesis")),
+            "strategy_hypothesis": (node.get("strategy_hypothesis")
+                                    if isinstance(node.get("strategy_hypothesis"), dict) else None),
             "program_fingerprint": node.get("program_fingerprint") or evaluation.get("program_identity", {}).get("raw_code_sha256"),
             "structure_fingerprint": node.get("structure_fingerprint") or evaluation.get("program_identity", {}).get("structural_sha256"),
             "valid": bool(evaluation.get("valid")),
