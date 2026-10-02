@@ -170,7 +170,7 @@ def audit(out, manifest):
              'unknown_requests': sum(row['unknown_requests'] for row in rows),
              'all_tasks_accounted': all(row['status'] in TERMINAL and row['status'] != 'not_started'
                                         for row in rows)}
-    write(out / 'CONTINUATION_AUDIT.json', value)
+    save_json(out / 'CONTINUATION_AUDIT.json', value, immutable=False)
     return value
 
 
