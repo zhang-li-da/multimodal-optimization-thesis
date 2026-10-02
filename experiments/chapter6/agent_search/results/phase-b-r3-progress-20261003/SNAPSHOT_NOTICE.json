@@ -1,0 +1,18 @@
+{
+  "schema": "chapter6-terminal-only-live-snapshot-v1",
+  "created_utc": "2026-10-02T17:31:40.809996+00:00",
+  "source_study": "C:\\Users\\67473\\Desktop\\5\\phase_b_registered_resume_20261002_r3",
+  "completed_current_segment_jobs": [
+    "b-b60-step08-r1",
+    "b-b64-step24-r1",
+    "eg-b67-step08-r1",
+    "eg-b60-step24-r0",
+    "b-b66-step08-r1"
+  ],
+  "in_flight_jobs_excluded": [
+    "b-b61-step08-r0"
+  ],
+  "live_dispatch_continues": true,
+  "archive_scope": "Immutable terminal tasks only; active request evidence excluded to avoid torn snapshot",
+  "test_access": false
+}

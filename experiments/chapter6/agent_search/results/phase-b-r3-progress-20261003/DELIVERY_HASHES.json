@@ -1,0 +1,13 @@
+{
+  "basis": "Git canonical bytes; ZIP exact bytes",
+  "files": {
+    "ANALYSIS.json": "1eeb72a941009c7f785107d0425cbe23ffb7be5831f24438e5734d3a7ee34b9f",
+    "ARCHIVE_INDEX.json": "e6a6d21086db2d1b7154e3bb2f6b0067e3290939629c26ee6a8f538715c52740",
+    "EXECUTION_BINDING.json": "bdda7383dcbe7f844d5f65b3ccfa025a18f31b94080ed2d82ec92454edce3448",
+    "INVESTMENT_OUTCOMES.json": "0b62265686f7d2cef3898c612128e3ef4cf316ac1b03d8d46f876a29e7e8e177",
+    "manifest.json": "fa55be935f6bf1146d429be5c2c6038ab3ca9acac70a8e8bbd58fe29f5040892",
+    "REPORT_ZH.md": "7787e0d964a9a51e6d34684882e35ae03b3b961f2ee218b1c80b1c4af989e516",
+    "SNAPSHOT_NOTICE.json": "222da2d9357895d2c434eb40af87e7f67bf3b0d076692db799d7c63eb1145371",
+    "terminal-snapshot.zip": "bf816f6e2774ec91e82cde21a9fa506cca077b2e005ac5c63b3a6c3f5d08992d"
+  }
+}

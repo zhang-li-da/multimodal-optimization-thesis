@@ -1,0 +1,6307 @@
+{
+  "schema": "chapter6-common-target-investment-outcomes-v1",
+  "manifest_sha256": "98d2f7635feae551a3035b0361df41f3135873b25e3f3ad0c927fed22f5d5f34",
+  "analysis_revision": "Retrospective search-only diagnostics, not a pre-registered efficacy endpoint",
+  "status_counts": {
+    "historical_attempt_preserved": 3,
+    "continuation_complete": 7,
+    "infrastructure_incomplete": 2,
+    "preparation_incomplete": 24,
+    "not_started": 92
+  },
+  "rows": [
+    {
+      "job_id": "eg-b64-step24-r0",
+      "checkpoint_id": "b64-step24",
+      "block": 64,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "historical_attempt_preserved",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b62-step24-r0",
+      "checkpoint_id": "b62-step24",
+      "block": 62,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "historical_attempt_preserved",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b63-step24-r0",
+      "checkpoint_id": "b63-step24",
+      "block": 63,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "historical_attempt_preserved",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b65-step08-r0",
+      "checkpoint_id": "b65-step08",
+      "block": 65,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "continuation_complete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": 652.8554471000098,
+      "horizons": {
+        "4": {
+          "status": "observed_prefix",
+          "horizon": 4,
+          "baseline_validation_loss": 0.04155953832395905,
+          "best_id": 3,
+          "best_validation_loss": 0.04155953832395905,
+          "global_gain_pp": 0.0,
+          "known_tokens": 28737,
+          "requests": 8,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 4,
+          "project_progress_events": 1,
+          "exploration_proposals": 0,
+          "development_proposals": 4,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 5.310422699898481
+        },
+        "8": {
+          "status": "observed_prefix",
+          "horizon": 8,
+          "baseline_validation_loss": 0.04155953832395905,
+          "best_id": 3,
+          "best_validation_loss": 0.04155953832395905,
+          "global_gain_pp": 0.0,
+          "known_tokens": 51733,
+          "requests": 16,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 8,
+          "project_progress_events": 1,
+          "exploration_proposals": 0,
+          "development_proposals": 8,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 6.1056579002179205
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "observed_prefix",
+        "global_gain_pp": 0.0,
+        "known_tokens": 22996,
+        "usage_complete": true,
+        "gain_pp_per_1000_tokens": 0.0
+      }
+    },
+    {
+      "job_id": "b-b63-step24-r1",
+      "checkpoint_id": "b63-step24",
+      "block": 63,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "continuation_complete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": 834.7182999001816,
+      "horizons": {
+        "4": {
+          "status": "observed_prefix",
+          "horizon": 4,
+          "baseline_validation_loss": 0.039226994277127704,
+          "best_id": 4,
+          "best_validation_loss": 0.039226994277127704,
+          "global_gain_pp": 0.0,
+          "known_tokens": 29087,
+          "requests": 8,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 4,
+          "project_progress_events": 1,
+          "exploration_proposals": 0,
+          "development_proposals": 4,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 5.24171830015257
+        },
+        "8": {
+          "status": "observed_prefix",
+          "horizon": 8,
+          "baseline_validation_loss": 0.039226994277127704,
+          "best_id": 4,
+          "best_validation_loss": 0.039226994277127704,
+          "global_gain_pp": 0.0,
+          "known_tokens": 53776,
+          "requests": 16,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 8,
+          "project_progress_events": 2,
+          "exploration_proposals": 0,
+          "development_proposals": 8,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 6.053429600549862
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "observed_prefix",
+        "global_gain_pp": 0.0,
+        "known_tokens": 24689,
+        "usage_complete": true,
+        "gain_pp_per_1000_tokens": 0.0
+      }
+    },
+    {
+      "job_id": "b-b62-step08-r0",
+      "checkpoint_id": "b62-step08",
+      "block": 62,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "infrastructure_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": 901.2906391001306,
+      "horizons": {
+        "4": {
+          "status": "observed_prefix",
+          "horizon": 4,
+          "baseline_validation_loss": 0.06311686969466002,
+          "best_id": 12,
+          "best_validation_loss": 0.053936019202482116,
+          "global_gain_pp": 0.91808504921779,
+          "known_tokens": 40746,
+          "requests": 7,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.022531906180184313,
+          "valid_proposals": 3,
+          "project_progress_events": 1,
+          "exploration_proposals": 0,
+          "development_proposals": 4,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": 2,
+          "evaluation_seconds": 5.104917099932209
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 5,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b61-step24-r0",
+      "checkpoint_id": "b61-step24",
+      "block": 61,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "infrastructure_incomplete",
+      "evidence_layer": "parent_snapshot",
+      "terminal_wall_seconds": 901.5130507999565,
+      "horizons": {
+        "4": {
+          "status": "observed_prefix",
+          "horizon": 4,
+          "baseline_validation_loss": 0.03585393334990952,
+          "best_id": 28,
+          "best_validation_loss": 0.03419896802317073,
+          "global_gain_pp": 0.165496532673879,
+          "known_tokens": 37099,
+          "requests": 8,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.004460943224180679,
+          "valid_proposals": 4,
+          "project_progress_events": 1,
+          "exploration_proposals": 0,
+          "development_proposals": 4,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": 2,
+          "evaluation_seconds": 6.260354199912399
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 7,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b60-step08-r1",
+      "checkpoint_id": "b60-step08",
+      "block": 60,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "continuation_complete",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": 576.0570591001306,
+      "horizons": {
+        "4": {
+          "status": "observed_prefix",
+          "horizon": 4,
+          "baseline_validation_loss": 0.042945950990724534,
+          "best_id": 8,
+          "best_validation_loss": 0.042945950990724534,
+          "global_gain_pp": 0.0,
+          "known_tokens": 19224,
+          "requests": 8,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 4,
+          "project_progress_events": 0,
+          "exploration_proposals": 0,
+          "development_proposals": 4,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 5.838460499886423
+        },
+        "8": {
+          "status": "observed_prefix",
+          "horizon": 8,
+          "baseline_validation_loss": 0.042945950990724534,
+          "best_id": 8,
+          "best_validation_loss": 0.042945950990724534,
+          "global_gain_pp": 0.0,
+          "known_tokens": 49592,
+          "requests": 16,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 8,
+          "project_progress_events": 1,
+          "exploration_proposals": 0,
+          "development_proposals": 8,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 6.7237044994253665
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "observed_prefix",
+        "global_gain_pp": 0.0,
+        "known_tokens": 30368,
+        "usage_complete": true,
+        "gain_pp_per_1000_tokens": 0.0
+      }
+    },
+    {
+      "job_id": "b-b64-step24-r1",
+      "checkpoint_id": "b64-step24",
+      "block": 64,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "continuation_complete",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": 724.9198831999674,
+      "horizons": {
+        "4": {
+          "status": "observed_prefix",
+          "horizon": 4,
+          "baseline_validation_loss": 0.02260017209027511,
+          "best_id": 25,
+          "best_validation_loss": 0.02260017209027511,
+          "global_gain_pp": 0.0,
+          "known_tokens": 33320,
+          "requests": 8,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 3,
+          "project_progress_events": 0,
+          "exploration_proposals": 0,
+          "development_proposals": 4,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 5.845240000169724
+        },
+        "8": {
+          "status": "observed_prefix",
+          "horizon": 8,
+          "baseline_validation_loss": 0.02260017209027511,
+          "best_id": 32,
+          "best_validation_loss": 0.021647288149805155,
+          "global_gain_pp": 0.09528839404699535,
+          "known_tokens": 73635,
+          "requests": 16,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.001294063883302714,
+          "valid_proposals": 6,
+          "project_progress_events": 1,
+          "exploration_proposals": 0,
+          "development_proposals": 8,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": 6,
+          "evaluation_seconds": 6.896225600270554
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "observed_prefix",
+        "global_gain_pp": 0.09528839404699535,
+        "known_tokens": 40315,
+        "usage_complete": true,
+        "gain_pp_per_1000_tokens": 0.002363596528512845
+      }
+    },
+    {
+      "job_id": "eg-b67-step08-r1",
+      "checkpoint_id": "b67-step08",
+      "block": 67,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "continuation_complete",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": 636.4845533999614,
+      "horizons": {
+        "4": {
+          "status": "observed_prefix",
+          "horizon": 4,
+          "baseline_validation_loss": 0.05947683432375466,
+          "best_id": 8,
+          "best_validation_loss": 0.05947683432375466,
+          "global_gain_pp": 0.0,
+          "known_tokens": 21766,
+          "requests": 8,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 4,
+          "project_progress_events": 0,
+          "exploration_proposals": 1,
+          "development_proposals": 3,
+          "exploration_admissions": 1,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 6.235727800056338
+        },
+        "8": {
+          "status": "observed_prefix",
+          "horizon": 8,
+          "baseline_validation_loss": 0.05947683432375466,
+          "best_id": 8,
+          "best_validation_loss": 0.05947683432375466,
+          "global_gain_pp": 0.0,
+          "known_tokens": 62102,
+          "requests": 16,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 8,
+          "project_progress_events": 1,
+          "exploration_proposals": 1,
+          "development_proposals": 7,
+          "exploration_admissions": 1,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 7.309785400284454
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "observed_prefix",
+        "global_gain_pp": 0.0,
+        "known_tokens": 40336,
+        "usage_complete": true,
+        "gain_pp_per_1000_tokens": 0.0
+      }
+    },
+    {
+      "job_id": "eg-b60-step24-r0",
+      "checkpoint_id": "b60-step24",
+      "block": 60,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "continuation_complete",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": 568.3694470999762,
+      "horizons": {
+        "4": {
+          "status": "observed_prefix",
+          "horizon": 4,
+          "baseline_validation_loss": 0.042945950990724534,
+          "best_id": 8,
+          "best_validation_loss": 0.042945950990724534,
+          "global_gain_pp": 0.0,
+          "known_tokens": 42521,
+          "requests": 8,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 3,
+          "project_progress_events": 0,
+          "exploration_proposals": 2,
+          "development_proposals": 2,
+          "exploration_admissions": 1,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 5.764211000176147
+        },
+        "8": {
+          "status": "observed_prefix",
+          "horizon": 8,
+          "baseline_validation_loss": 0.042945950990724534,
+          "best_id": 8,
+          "best_validation_loss": 0.042945950990724534,
+          "global_gain_pp": 0.0,
+          "known_tokens": 69781,
+          "requests": 16,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 7,
+          "project_progress_events": 0,
+          "exploration_proposals": 2,
+          "development_proposals": 6,
+          "exploration_admissions": 1,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 6.7264843001030385
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "observed_prefix",
+        "global_gain_pp": 0.0,
+        "known_tokens": 27260,
+        "usage_complete": true,
+        "gain_pp_per_1000_tokens": 0.0
+      }
+    },
+    {
+      "job_id": "e0-b66-step24-r0",
+      "checkpoint_id": "b66-step24",
+      "block": 66,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b66-step08-r1",
+      "checkpoint_id": "b66-step08",
+      "block": 66,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "continuation_complete",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": 683.882591499947,
+      "horizons": {
+        "4": {
+          "status": "observed_prefix",
+          "horizon": 4,
+          "baseline_validation_loss": 0.046016743473758975,
+          "best_id": 9,
+          "best_validation_loss": 0.046016743473758975,
+          "global_gain_pp": 0.0,
+          "known_tokens": 34402,
+          "requests": 8,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 4,
+          "project_progress_events": 0,
+          "exploration_proposals": 0,
+          "development_proposals": 4,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 6.102200000314042
+        },
+        "8": {
+          "status": "observed_prefix",
+          "horizon": 8,
+          "baseline_validation_loss": 0.046016743473758975,
+          "best_id": 9,
+          "best_validation_loss": 0.046016743473758975,
+          "global_gain_pp": 0.0,
+          "known_tokens": 61690,
+          "requests": 16,
+          "usage_complete": true,
+          "gain_pp_per_1000_tokens": 0.0,
+          "valid_proposals": 8,
+          "project_progress_events": 0,
+          "exploration_proposals": 0,
+          "development_proposals": 8,
+          "exploration_admissions": 0,
+          "first_global_improvement_proposal": null,
+          "evaluation_seconds": 6.940160600235686
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "observed_prefix",
+        "global_gain_pp": 0.0,
+        "known_tokens": 27288,
+        "usage_complete": true,
+        "gain_pp_per_1000_tokens": 0.0
+      }
+    },
+    {
+      "job_id": "b-b61-step08-r0",
+      "checkpoint_id": "b61-step08",
+      "block": 61,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b61-step08-r1",
+      "checkpoint_id": "b61-step08",
+      "block": 61,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b67-step08-r1",
+      "checkpoint_id": "b67-step08",
+      "block": 67,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b61-step24-r1",
+      "checkpoint_id": "b61-step24",
+      "block": 61,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b65-step24-r0",
+      "checkpoint_id": "b65-step24",
+      "block": 65,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b63-step24-r1",
+      "checkpoint_id": "b63-step24",
+      "block": 63,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b61-step24-r0",
+      "checkpoint_id": "b61-step24",
+      "block": 61,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b67-step24-r1",
+      "checkpoint_id": "b67-step24",
+      "block": 67,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b64-step08-r0",
+      "checkpoint_id": "b64-step08",
+      "block": 64,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b65-step24-r1",
+      "checkpoint_id": "b65-step24",
+      "block": 65,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b66-step24-r1",
+      "checkpoint_id": "b66-step24",
+      "block": 66,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b63-step24-r1",
+      "checkpoint_id": "b63-step24",
+      "block": 63,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b66-step24-r0",
+      "checkpoint_id": "b66-step24",
+      "block": 66,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b62-step08-r1",
+      "checkpoint_id": "b62-step08",
+      "block": 62,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b64-step08-r0",
+      "checkpoint_id": "b64-step08",
+      "block": 64,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b62-step24-r1",
+      "checkpoint_id": "b62-step24",
+      "block": 62,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b63-step24-r0",
+      "checkpoint_id": "b63-step24",
+      "block": 63,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b66-step08-r0",
+      "checkpoint_id": "b66-step08",
+      "block": 66,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b61-step24-r0",
+      "checkpoint_id": "b61-step24",
+      "block": 61,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b60-step24-r0",
+      "checkpoint_id": "b60-step24",
+      "block": 60,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b65-step24-r0",
+      "checkpoint_id": "b65-step24",
+      "block": 65,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b66-step08-r0",
+      "checkpoint_id": "b66-step08",
+      "block": 66,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b62-step08-r1",
+      "checkpoint_id": "b62-step08",
+      "block": 62,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b63-step08-r0",
+      "checkpoint_id": "b63-step08",
+      "block": 63,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b67-step24-r0",
+      "checkpoint_id": "b67-step24",
+      "block": 67,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b67-step24-r0",
+      "checkpoint_id": "b67-step24",
+      "block": 67,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b62-step24-r1",
+      "checkpoint_id": "b62-step24",
+      "block": 62,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b60-step08-r0",
+      "checkpoint_id": "b60-step08",
+      "block": 60,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b65-step24-r1",
+      "checkpoint_id": "b65-step24",
+      "block": 65,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b66-step24-r1",
+      "checkpoint_id": "b66-step24",
+      "block": 66,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b67-step24-r1",
+      "checkpoint_id": "b67-step24",
+      "block": 67,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b61-step24-r1",
+      "checkpoint_id": "b61-step24",
+      "block": 61,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b66-step08-r0",
+      "checkpoint_id": "b66-step08",
+      "block": 66,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b66-step08-r1",
+      "checkpoint_id": "b66-step08",
+      "block": 66,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b62-step24-r0",
+      "checkpoint_id": "b62-step24",
+      "block": 62,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b66-step08-r1",
+      "checkpoint_id": "b66-step08",
+      "block": 66,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b66-step08-r0",
+      "checkpoint_id": "b66-step08",
+      "block": 66,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b62-step24-r1",
+      "checkpoint_id": "b62-step24",
+      "block": 62,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b61-step08-r0",
+      "checkpoint_id": "b61-step08",
+      "block": 61,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b63-step24-r0",
+      "checkpoint_id": "b63-step24",
+      "block": 63,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b65-step08-r1",
+      "checkpoint_id": "b65-step08",
+      "block": 65,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b65-step08-r1",
+      "checkpoint_id": "b65-step08",
+      "block": 65,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b67-step24-r1",
+      "checkpoint_id": "b67-step24",
+      "block": 67,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b67-step24-r0",
+      "checkpoint_id": "b67-step24",
+      "block": 67,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b60-step08-r1",
+      "checkpoint_id": "b60-step08",
+      "block": 60,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b64-step08-r0",
+      "checkpoint_id": "b64-step08",
+      "block": 64,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b66-step24-r0",
+      "checkpoint_id": "b66-step24",
+      "block": 66,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b67-step08-r0",
+      "checkpoint_id": "b67-step08",
+      "block": 67,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b64-step08-r1",
+      "checkpoint_id": "b64-step08",
+      "block": 64,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b61-step24-r1",
+      "checkpoint_id": "b61-step24",
+      "block": 61,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b64-step24-r1",
+      "checkpoint_id": "b64-step24",
+      "block": 64,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b65-step24-r1",
+      "checkpoint_id": "b65-step24",
+      "block": 65,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b64-step08-r1",
+      "checkpoint_id": "b64-step08",
+      "block": 64,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b63-step08-r0",
+      "checkpoint_id": "b63-step08",
+      "block": 63,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b60-step24-r1",
+      "checkpoint_id": "b60-step24",
+      "block": 60,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b63-step08-r0",
+      "checkpoint_id": "b63-step08",
+      "block": 63,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b64-step24-r0",
+      "checkpoint_id": "b64-step24",
+      "block": 64,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b62-step24-r1",
+      "checkpoint_id": "b62-step24",
+      "block": 62,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b65-step24-r0",
+      "checkpoint_id": "b65-step24",
+      "block": 65,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b64-step08-r1",
+      "checkpoint_id": "b64-step08",
+      "block": 64,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b62-step08-r1",
+      "checkpoint_id": "b62-step08",
+      "block": 62,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b60-step08-r1",
+      "checkpoint_id": "b60-step08",
+      "block": 60,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b63-step08-r1",
+      "checkpoint_id": "b63-step08",
+      "block": 63,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b60-step24-r1",
+      "checkpoint_id": "b60-step24",
+      "block": 60,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b62-step24-r0",
+      "checkpoint_id": "b62-step24",
+      "block": 62,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b60-step08-r0",
+      "checkpoint_id": "b60-step08",
+      "block": 60,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b61-step24-r1",
+      "checkpoint_id": "b61-step24",
+      "block": 61,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b64-step24-r0",
+      "checkpoint_id": "b64-step24",
+      "block": 64,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b62-step08-r0",
+      "checkpoint_id": "b62-step08",
+      "block": 62,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b60-step24-r1",
+      "checkpoint_id": "b60-step24",
+      "block": 60,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b60-step24-r0",
+      "checkpoint_id": "b60-step24",
+      "block": 60,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b65-step08-r1",
+      "checkpoint_id": "b65-step08",
+      "block": 65,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b67-step08-r1",
+      "checkpoint_id": "b67-step08",
+      "block": 67,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b61-step08-r0",
+      "checkpoint_id": "b61-step08",
+      "block": 61,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b63-step08-r1",
+      "checkpoint_id": "b63-step08",
+      "block": 63,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b66-step24-r0",
+      "checkpoint_id": "b66-step24",
+      "block": 66,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b65-step08-r0",
+      "checkpoint_id": "b65-step08",
+      "block": 65,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b67-step08-r1",
+      "checkpoint_id": "b67-step08",
+      "block": 67,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b62-step24-r0",
+      "checkpoint_id": "b62-step24",
+      "block": 62,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b63-step08-r0",
+      "checkpoint_id": "b63-step08",
+      "block": 63,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b64-step24-r1",
+      "checkpoint_id": "b64-step24",
+      "block": 64,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b67-step08-r0",
+      "checkpoint_id": "b67-step08",
+      "block": 67,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b60-step08-r0",
+      "checkpoint_id": "b60-step08",
+      "block": 60,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b61-step08-r1",
+      "checkpoint_id": "b61-step08",
+      "block": 61,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b65-step24-r0",
+      "checkpoint_id": "b65-step24",
+      "block": 65,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b65-step24-r1",
+      "checkpoint_id": "b65-step24",
+      "block": 65,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b64-step08-r0",
+      "checkpoint_id": "b64-step08",
+      "block": 64,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b65-step08-r0",
+      "checkpoint_id": "b65-step08",
+      "block": 65,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b62-step08-r0",
+      "checkpoint_id": "b62-step08",
+      "block": 62,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b61-step08-r1",
+      "checkpoint_id": "b61-step08",
+      "block": 61,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b66-step24-r1",
+      "checkpoint_id": "b66-step24",
+      "block": 66,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b67-step08-r0",
+      "checkpoint_id": "b67-step08",
+      "block": 67,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b67-step24-r0",
+      "checkpoint_id": "b67-step24",
+      "block": 67,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b63-step24-r1",
+      "checkpoint_id": "b63-step24",
+      "block": 63,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b66-step24-r1",
+      "checkpoint_id": "b66-step24",
+      "block": 66,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b64-step24-r0",
+      "checkpoint_id": "b64-step24",
+      "block": 64,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b62-step08-r0",
+      "checkpoint_id": "b62-step08",
+      "block": 62,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b66-step08-r1",
+      "checkpoint_id": "b66-step08",
+      "block": 66,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b61-step08-r1",
+      "checkpoint_id": "b61-step08",
+      "block": 61,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b67-step08-r0",
+      "checkpoint_id": "b67-step08",
+      "block": 67,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b67-step24-r1",
+      "checkpoint_id": "b67-step24",
+      "block": 67,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "preparation_incomplete",
+      "evidence_layer": "parent_snapshot/parent_snapshot",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b60-step24-r1",
+      "checkpoint_id": "b60-step24",
+      "block": 60,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b62-step08-r1",
+      "checkpoint_id": "b62-step08",
+      "block": 62,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b60-step24-r0",
+      "checkpoint_id": "b60-step24",
+      "block": 60,
+      "strategy": "I",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b64-step24-r1",
+      "checkpoint_id": "b64-step24",
+      "block": 64,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b61-step24-r0",
+      "checkpoint_id": "b61-step24",
+      "block": 61,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "i-b60-step08-r1",
+      "checkpoint_id": "b60-step08",
+      "block": 60,
+      "strategy": "I",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b60-step08-r0",
+      "checkpoint_id": "b60-step08",
+      "block": 60,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b61-step08-r0",
+      "checkpoint_id": "b61-step08",
+      "block": 61,
+      "strategy": "EG",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b64-step08-r1",
+      "checkpoint_id": "b64-step08",
+      "block": 64,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b63-step24-r0",
+      "checkpoint_id": "b63-step24",
+      "block": 63,
+      "strategy": "B",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "b-b63-step08-r1",
+      "checkpoint_id": "b63-step08",
+      "block": 63,
+      "strategy": "B",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b65-step08-r1",
+      "checkpoint_id": "b65-step08",
+      "block": 65,
+      "strategy": "E0",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "e0-b65-step08-r0",
+      "checkpoint_id": "b65-step08",
+      "block": 65,
+      "strategy": "E0",
+      "repetition": 0,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    },
+    {
+      "job_id": "eg-b63-step08-r1",
+      "checkpoint_id": "b63-step08",
+      "block": 63,
+      "strategy": "EG",
+      "repetition": 1,
+      "status": "not_started",
+      "evidence_layer": ".",
+      "terminal_wall_seconds": null,
+      "horizons": {
+        "4": {
+          "status": "missing_prefix",
+          "horizon": 4,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        },
+        "8": {
+          "status": "missing_prefix",
+          "horizon": 8,
+          "observed_proposals": 0,
+          "global_gain_pp": null,
+          "gain_pp_per_1000_tokens": null,
+          "known_tokens": null,
+          "usage_complete": null
+        }
+      },
+      "marginal_4_to_8": {
+        "status": "censored",
+        "global_gain_pp": null,
+        "known_tokens": null
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison": "B-I",
+      "horizon": 4,
+      "positive_favors": "B",
+      "complete_pairs": 0,
+      "independent_blocks_observed": 0,
+      "block_mean_gain_difference_pp": {},
+      "equal_block_mean_pp": null,
+      "pairs": [],
+      "missing": [
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 0,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 0,
+          "action_status": "infrastructure_incomplete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 0,
+          "action_status": "infrastructure_incomplete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        }
+      ]
+    },
+    {
+      "comparison": "B-I",
+      "horizon": 8,
+      "positive_favors": "B",
+      "complete_pairs": 0,
+      "independent_blocks_observed": 0,
+      "block_mean_gain_difference_pp": {},
+      "equal_block_mean_pp": null,
+      "pairs": [],
+      "missing": [
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 0,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 0,
+          "action_status": "infrastructure_incomplete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 0,
+          "action_status": "infrastructure_incomplete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        }
+      ]
+    },
+    {
+      "comparison": "EG-E0",
+      "horizon": 4,
+      "positive_favors": "EG",
+      "complete_pairs": 0,
+      "independent_blocks_observed": 0,
+      "block_mean_gain_difference_pp": {},
+      "equal_block_mean_pp": null,
+      "pairs": [],
+      "missing": [
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 0,
+          "action_status": "historical_attempt_preserved",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 0,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "historical_attempt_preserved"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "historical_attempt_preserved"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        }
+      ]
+    },
+    {
+      "comparison": "EG-E0",
+      "horizon": 8,
+      "positive_favors": "EG",
+      "complete_pairs": 0,
+      "independent_blocks_observed": 0,
+      "block_mean_gain_difference_pp": {},
+      "equal_block_mean_pp": null,
+      "pairs": [],
+      "missing": [
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 0,
+          "action_status": "historical_attempt_preserved",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 0,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "historical_attempt_preserved"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "historical_attempt_preserved"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        }
+      ]
+    },
+    {
+      "comparison": "E0-I",
+      "horizon": 4,
+      "positive_favors": "E0",
+      "complete_pairs": 0,
+      "independent_blocks_observed": 0,
+      "block_mean_gain_difference_pp": {},
+      "equal_block_mean_pp": null,
+      "pairs": [],
+      "missing": [
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 0,
+          "action_status": "historical_attempt_preserved",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 0,
+          "action_status": "historical_attempt_preserved",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        }
+      ]
+    },
+    {
+      "comparison": "E0-I",
+      "horizon": 8,
+      "positive_favors": "E0",
+      "complete_pairs": 0,
+      "independent_blocks_observed": 0,
+      "block_mean_gain_difference_pp": {},
+      "equal_block_mean_pp": null,
+      "pairs": [],
+      "missing": [
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 0,
+          "action_status": "historical_attempt_preserved",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 0,
+          "action_status": "historical_attempt_preserved",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        }
+      ]
+    },
+    {
+      "comparison": "EG-I",
+      "horizon": 4,
+      "positive_favors": "EG",
+      "complete_pairs": 0,
+      "independent_blocks_observed": 0,
+      "block_mean_gain_difference_pp": {},
+      "equal_block_mean_pp": null,
+      "pairs": [],
+      "missing": [
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 0,
+          "action_status": "historical_attempt_preserved",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 0,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        }
+      ]
+    },
+    {
+      "comparison": "EG-I",
+      "horizon": 8,
+      "positive_favors": "EG",
+      "complete_pairs": 0,
+      "independent_blocks_observed": 0,
+      "block_mean_gain_difference_pp": {},
+      "equal_block_mean_pp": null,
+      "pairs": [],
+      "missing": [
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 0,
+          "action_status": "historical_attempt_preserved",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 1,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 0,
+          "action_status": "continuation_complete",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b67-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step24",
+          "repetition": 0,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b62-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b64-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step24",
+          "repetition": 1,
+          "action_status": "preparation_incomplete",
+          "comparator_status": "preparation_incomplete"
+        },
+        {
+          "checkpoint_id": "b64-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b65-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b62-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b66-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b60-step24",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step24",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b61-step08",
+          "repetition": 0,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        },
+        {
+          "checkpoint_id": "b63-step08",
+          "repetition": 1,
+          "action_status": "not_started",
+          "comparator_status": "not_started"
+        }
+      ]
+    }
+  ],
+  "cost_scope": "Each window includes all exploration and development requests through that proposal; whole-task failures remain in the separate cumulative ledger",
+  "interpretation": "Common resource ceilings, not equal actual token spending; validation and descriptive efficiency cannot establish Test efficacy",
+  "test_access": false,
+  "model_calls": 0,
+  "numeric_reevaluations": 0
+}
