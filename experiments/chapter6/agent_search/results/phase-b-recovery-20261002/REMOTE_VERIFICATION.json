@@ -1,0 +1,28 @@
+{
+  "fixed_remote_commit": "3e7512cf5272d409f50b9c637c9147cafe0f39c3",
+  "repository": "zhang-li-da/multimodal-optimization-thesis",
+  "files_verified": 41,
+  "manifest_sha256": "e9db0a08fb3bc524e3d8973272483118fce99e53516b8c22298a9cc90cbbeeda",
+  "member_hashes_verified": 2421,
+  "zip_integrity": "passed",
+  "planned_jobs": 8,
+  "planned_checkpoints": 16,
+  "coverage": {
+    "/request.json": 385,
+    "/response.json": 380,
+    "/raw_response.json": 380,
+    "/candidate.json": 187,
+    "/checkpoint.json": 10,
+    "/state.json": 385
+  },
+  "cost": {
+    "requests": 353,
+    "known_tokens": 1368670,
+    "unknown_requests": 4,
+    "unknown_reservation": 83780
+  },
+  "all_downloaded_bytes_match_local": true,
+  "test_access": false,
+  "coverage_note": "Raw member counts include the original block65 provenance copy as well as its preserved main-trajectory copy. Unique main trajectory: 341 requests, 338 responses, 3 unknown. Add superseded rerun 5 requests, full acceptance 6 and short probe 1 for cumulative 353; do not sum duplicate archive members as new calls.",
+  "redundant_raw_host_download": "A parallel redundant raw.githubusercontent.com read timed out; the official GitHub Contents API fixed-commit download succeeded and all bytes/members passed verification."
+}
