@@ -86,8 +86,8 @@
     },
     {
       "path": "audit_segments.py",
-      "bytes": 14739,
-      "sha256": "a9ed1fa282b2024ed0daaf817127218e9adbbb3ec770dd32e3b2eecef619157d"
+      "bytes": 18251,
+      "sha256": "ca9598aa5f0712a5c24edfd85f1023357752b3e70c1a6e7689a6a35ac4e68fe0"
     },
     {
       "path": "continuation_recovery.py",
@@ -186,8 +186,8 @@
     },
     {
       "path": "test_audit_segments.py",
-      "bytes": 2364,
-      "sha256": "181597ba2fb415fc43cc79146342aedfbc3d97ac6b268e785899f838c6918486"
+      "bytes": 3149,
+      "sha256": "9491c8b5a4f6424486af12f852226861a2de62d9b3cfc4c43b6f596a959faefe"
     },
     {
       "path": "test_continuation_resume.py",
@@ -240,5 +240,5 @@
       "sha256": "ba10e455a25945fb4c876fa5ac4c3def48fb6d319ca777401752b9da5d4067ca"
     }
   ],
-  "manifest_sha256": "a29fbfad2d5e84d8f3478343c9fb93e6857de95cf9cf75fa97e40f5618767f58"
+  "manifest_sha256": "6a353a6be7245071151b1d44195aa7d64f5f837c5883a983390a84ebb10e3652"
 }

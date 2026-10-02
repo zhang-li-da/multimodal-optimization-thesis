@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+import hashlib
 import json
 import statistics
 import zipfile
@@ -228,7 +229,43 @@ def archive(root, output):
             entries.append({'path': name, 'bytes': path.stat().st_size, 'sha256': file_sha(path)})
     save_json(output / 'ARCHIVE_INDEX.json', {'archive': 'raw-segments.zip',
               'sha256': file_sha(output / 'raw-segments.zip'), 'members': entries})
+    with zipfile.ZipFile(output / 'raw-segments.zip') as z:
+        assert z.testzip() is None
+        assert len(z.namelist()) == len(set(z.namelist())) == len(entries)
+        for row in entries:
+            raw = z.read(row['path'])
+            assert len(raw) == row['bytes'] and hashlib.sha256(raw).hexdigest() == row['sha256']
+    save_json(output / 'manifest.json', read_json(root / 'manifest.json'))
+    binding = root / 'EXECUTION_BINDING.json'
+    if binding.exists():
+        save_json(output / binding.name, read_json(binding))
+    (output / 'REPORT_ZH.md').write_text(report_zh(audit_result), encoding='utf-8')
     return audit_result
+
+
+def report_zh(result):
+    new = [r for r in result['rows'] if r['evidence_layer'] == '.' and r['requests']]
+    costs = sum_cost(new)
+    total = result['cost_including_history']
+    lines = ['# 阶段 B 第三续接段结果', '',
+             '本报告保留所有计划任务、历史失败和实际成本。模型为本机 OpenCode 配置的 MiniMax-M3；测试集未开放。', '',
+             f"- Manifest：{result['manifest_sha256']}。",
+             f"- 本段启动 {len(new)} 个任务，完成 {sum(r['status'] == 'continuation_complete' for r in new)} 条完整轨迹。",
+             f"- 本段完成 {sum(r['completed_proposals'] for r in new)} 个提案，其中 {sum(r['valid_proposals'] for r in new)} 个有效。",
+             f"- 本段 {costs['requests']:,} 次请求、{costs['known_tokens']:,} 已知 token、{costs['unknown_requests']} 个未知用量请求。",
+             f"- 包含全部历史：{total['requests']:,} 次请求、{total['known_tokens']:,} 已知 token、{total['unknown_requests']} 个未知用量请求。未知用量另保守占账 {total['unknown_reservation']:,} token，不能解释为实测消耗。",
+             f"- 状态计数：{json.dumps(result['status_counts'], ensure_ascii=False, sort_keys=True)}。",
+             f"- 同检查点、同重复、同期限的完整配对数：{len(result['pairs'])}（4/8 步分别计数）。", '',
+             '| 本段任务 | 状态 | 提案／有效 | 项目进步 | 全局 validation 改善 | 已知 token |',
+             '| --- | --- | ---: | ---: | ---: | ---: |']
+    for r in new:
+        lines.append(f"| {r['job_id']} | {r['status']} | {r['completed_proposals']}/{r['valid_proposals']} | {r['project_progress']} | {r['global_improvements']} | {r['known_tokens']:,} |")
+    lines += ['',
+              f"审计重放了 {result['replayed_decisions']} 个终态提案，核验各层共 {result['verified_search_inputs_across_layers']} 份搜索输入，检查请求、响应、冻结候选和逐任务成本。审计本身新增模型调用和数值重评均为 0。", '',
+              '内存中的整数行为编号写入 JSON 后变为字符串键，可能导致排序和原始状态摘要不同。报告分别保留序列化摘要比较和恢复整数键后的比较，不改写旧记录。', '',
+              '项目内改善与最终全局改善分别计数。固定续开发中跨行为类别保持项目连续性，不等于自然搜索中的续期有效；历史回放也不产生替代轨迹。', '',
+              '未启动、前置检查点缺失、未知调用和未成熟轨迹都不能按零收益处理。当前报告只含搜索期 validation 过程，不能证明 B 优于 I、EG 优于 E0、保护或反馈有效。完整方法的自然搜索消融、独立确认和适用范围验证仍未完成。', '']
+    return '\n'.join(lines)
 
 
 def main():
