@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import argparse
-import base64
 import json
 import shutil
 import time
@@ -121,13 +120,12 @@ def audit(out, manifest):
                     continue
                 try:
                     envelope = read_json(response)
-                    body = json.loads(base64.b64decode(envelope['body_base64']).decode('utf-8'))
-                    usage = body.get('usage', {}) if isinstance(body, dict) else {}
-                    if not all(key in usage for key in ('prompt_tokens', 'completion_tokens')):
+                    usage = envelope.get('usage_raw', {})
+                    if not isinstance(usage, dict) or not all(
+                            key in usage for key in ('prompt_tokens', 'completion_tokens')):
                         unknown_requests += 1
                         continue
-                    known_tokens += int(usage.get('prompt_tokens', 0) or 0)
-                    known_tokens += int(usage.get('completion_tokens', 0) or 0)
+                    known_tokens += int(usage.get('total_tokens', 0) or 0)
                 except (KeyError, ValueError, TypeError, json.JSONDecodeError):
                     unknown_requests += 1
         return {'requests': requests, 'known_tokens': known_tokens,
