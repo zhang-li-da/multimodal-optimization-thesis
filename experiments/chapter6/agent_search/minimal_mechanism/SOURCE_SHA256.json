@@ -71,8 +71,8 @@
     },
     {
       "path": "continuation_recovery.py",
-      "bytes": 13857,
-      "sha256": "501f048f21554c575a1afdf42962c3187fa8c806ef966c8753ba8a7a7167cd0b"
+      "bytes": 13841,
+      "sha256": "cba442a684323631f356106e53a565d859b3029a3e54b6ecb0be2d25db2c9a0f"
     },
     {
       "path": "controller.py",
@@ -155,5 +155,5 @@
       "sha256": "2dad8dcbaccf2101820e2ef347604ad253d76201bb81d1ca2ebb2ace99a353c1"
     }
   ],
-  "manifest_sha256": "88db50cdd6042c091dcccd02d708695f61d021eb860fda965129208b673a46e2"
+  "manifest_sha256": "db2ce80e6cee6f20d33f10768d19560ea0d97ea6732c362b2af5cc3d009e09e9"
 }
