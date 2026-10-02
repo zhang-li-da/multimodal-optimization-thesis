@@ -97,6 +97,17 @@ def _copy_parent_snapshot(parent: Path, out: Path) -> dict:
 
 def prepare(parent: Path, out: Path, registry: Path) -> dict:
     parent, out, registry = map(lambda p: Path(p).resolve(), (parent, out, registry))
+    if (out.is_relative_to(parent) or parent.is_relative_to(out)
+            or registry.is_relative_to(out) or registry.is_relative_to(parent)):
+        raise ValueError('recovery directories must not overlap')
+    # The selection and snapshot must share the same lock as dispatch, not
+    # just the final owner write: no claim may appear between these steps.
+    with run_lock(registry):
+        return _prepare_locked(parent, out, registry)
+
+
+def _prepare_locked(parent: Path, out: Path, registry: Path) -> dict:
+    parent, out, registry = map(lambda p: Path(p).resolve(), (parent, out, registry))
     if out.exists():
         raise ValueError("recovery segment output already exists")
     parent_manifest = read_json(parent / "manifest.json")
@@ -180,32 +191,31 @@ def prepare(parent: Path, out: Path, registry: Path) -> dict:
                                 "new_requests": ready * 16, "new_tokens": ready * 100000})
     manifest["manifest_sha256"] = digest(manifest)
 
-    with run_lock(registry):
-        current = read_json(owner_path)
-        if current != owner:
-            raise ValueError("registry owner changed while preparing segment")
-        history = registry / "ownership_history"
-        history.mkdir(parents=True, exist_ok=True)
-        save_json(history / f"parent-{parent_manifest['manifest_sha256']}.json",
-                  {"role": "parent", "owner": owner, "halt": parent_halt}, immutable=True)
-        save_json(out / "parent_halt.json", parent_halt, immutable=True)
-        save_json(out / "parent_manifest.json", parent_manifest, immutable=True)
-        save_json(out / "manifest.json", manifest, immutable=True)
-        # Preserve only terminal parent status markers in the live tree.  Their calls stay in parent_snapshot.
-        for job in jobs:
-            status = _parent_status(parent, job["job_id"])
-            if status == "not_started":
-                continue
-            run = out / "runs" / job["job_id"]
-            run.mkdir(parents=True, exist_ok=True)
-            source = parent / "runs" / job["job_id"] / "terminal_status.json"
-            marker = read_json(source)
-            marker.update({"parent_output": str(parent), "parent_status_sha256": file_sha(source),
-                           "parent_segment_read_only": True})
-            save_json(run / "terminal_status.json", marker, immutable=True)
-        save_json(owner_path, {"output": str(out), "manifest_sha256": manifest["manifest_sha256"],
-                               "parent_output": str(parent), "parent_manifest_sha256": parent_manifest["manifest_sha256"]},
-                  immutable=False)
+    current = read_json(owner_path)
+    if current != owner:
+        raise ValueError("registry owner changed while preparing segment")
+    history = registry / "ownership_history"
+    history.mkdir(parents=True, exist_ok=True)
+    save_json(history / f"parent-{parent_manifest['manifest_sha256']}.json",
+              {"role": "parent", "owner": owner, "halt": parent_halt}, immutable=True)
+    save_json(out / "parent_halt.json", parent_halt, immutable=True)
+    save_json(out / "parent_manifest.json", parent_manifest, immutable=True)
+    save_json(out / "manifest.json", manifest, immutable=True)
+    # Parent calls remain in the snapshot and only status markers are copied.
+    for job in jobs:
+        status = _parent_status(parent, job["job_id"])
+        if status == "not_started":
+            continue
+        run = out / "runs" / job["job_id"]
+        run.mkdir(parents=True, exist_ok=True)
+        source = parent / "runs" / job["job_id"] / "terminal_status.json"
+        marker = read_json(source)
+        marker.update({"parent_output": str(parent), "parent_status_sha256": file_sha(source),
+                       "parent_segment_read_only": True})
+        save_json(run / "terminal_status.json", marker, immutable=True)
+    save_json(owner_path, {"output": str(out), "manifest_sha256": manifest["manifest_sha256"],
+                           "parent_output": str(parent), "parent_manifest_sha256": parent_manifest["manifest_sha256"]},
+              immutable=False)
     return manifest
 
 
@@ -214,9 +224,15 @@ def verify_segment_inputs(out: Path, manifest: dict) -> dict:
     snapshot = read_json(out / 'parent_snapshot_manifest.json')
     if digest({k: v for k, v in snapshot.items() if k != 'snapshot_sha256'}) != manifest['parent_snapshot_sha256']:
         raise ValueError('parent snapshot manifest changed')
+    root = out / 'parent_snapshot'
+    names = [row['path'] for row in snapshot['files']]
+    actual = {p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file()}
+    if len(names) != len(set(names)) or actual != set(names):
+        raise ValueError('parent snapshot file set changed')
     for row in snapshot['files']:
         path = (out / 'parent_snapshot' / row['path']).resolve()
-        if not path.is_relative_to((out / 'parent_snapshot').resolve()) or file_sha(path) != row['sha256']:
+        if (not path.is_relative_to(root.resolve()) or file_sha(path) != row['sha256']
+                or path.stat().st_size != row['bytes']):
             raise ValueError('parent snapshot evidence changed')
     parent = out / 'parent_snapshot'
     pm = read_json(parent / 'manifest.json')
@@ -225,6 +241,26 @@ def verify_segment_inputs(out: Path, manifest: dict) -> dict:
         raise ValueError('parent binding mismatch')
     if base.ledger(parent, pm) != base.sum_cost(manifest['historical_attempts']):
         raise ValueError('parent cumulative costs differ')
+    if (read_json(out / 'parent_manifest.json') != pm
+            or read_json(out / 'parent_halt.json') != manifest['parent_halt']):
+        raise ValueError('parent metadata copy changed')
+    for field in ('files', 'prefix_manifest_sha256', 'registry'):
+        if manifest[field] != pm[field]:
+            raise ValueError('frozen parent input changed: ' + field)
+    for key in ('max_requests_including_history', 'max_tokens_including_history'):
+        if manifest['limits'][key] != pm['limits'][key]:
+            raise ValueError('cumulative budget changed')
+    # An aggregate alone cannot detect moving a cost between experimental units.
+    def by_task(rows):
+        groups = {}
+        for row in rows:
+            groups.setdefault(row['job_id'], []).append(row)
+        return {job: costs for job, values in groups.items()
+                if any((costs := base.sum_cost(values)).values())}
+    # Older preparation recorded zero-cost terminal rows. Their presence is
+    # immaterial, but every nonzero cost must stay with its original task.
+    if by_task(manifest['historical_attempts']) != by_task(_parent_attempts(parent, pm)):
+        raise ValueError('parent task cost attribution changed')
     parent_jobs = {j['job_id']: j for j in pm['jobs']}
     if [j['job_id'] for j in manifest['jobs']] != [j['job_id'] for j in pm['jobs']]:
         raise ValueError('parent task order changed')
@@ -242,6 +278,16 @@ def verify_segment_inputs(out: Path, manifest: dict) -> dict:
                 raise ValueError('parent task was restarted')
         elif job['eligibility'] != 'ready':
             raise ValueError('unstarted task eligibility changed')
+        else:
+            prior_run = parent / 'runs' / job_id
+            claim_path = Path(manifest['registry']) / 'claims' / (job_id + '.json')
+            foreign_claim = (claim_path.exists() and
+                             read_json(claim_path).get('manifest_sha256') != manifest['manifest_sha256'])
+            if (parent_jobs[job_id]['eligibility'] != 'ready' or foreign_claim
+                    or (prior_run / 'config.json').exists()
+                    or (prior_run / 'attempt_claim.json').exists()
+                    or any(prior_run.glob('calls/*/request.json'))):
+                raise ValueError('previously started task cannot be released')
     if manifest['parameters'] != pm['parameters'] or manifest['model'] != pm['model']:
         raise ValueError('frozen generation parameters changed')
     binding_path = out / 'EXECUTION_BINDING.json'
@@ -258,12 +304,19 @@ def verify_segment_inputs(out: Path, manifest: dict) -> dict:
 def bind_prelaunch(out: Path) -> dict:
     """Add a new source binding; never edit the original run manifest."""
     manifest = read_json(out / 'manifest.json')
+    if digest({k: v for k, v in manifest.items() if k != 'manifest_sha256'}) != manifest['manifest_sha256']:
+        raise ValueError('manifest changed')
     if (out / 'EXECUTION_BINDING.json').exists():
         raise ValueError('execution binding already frozen')
     if git('status', '--porcelain'):
         raise ValueError('commit source before binding')
     base.verify_index()
     with run_lock(Path(manifest['registry'])):
+        owner = read_json(Path(manifest['registry']) / 'owner.json')
+        if owner.get('output') != str(out.resolve()) or owner.get('manifest_sha256') != manifest['manifest_sha256']:
+            raise ValueError('registry owner mismatch')
+        if (out / 'halt.json').exists():
+            raise ValueError('cannot bind a halted segment')
         verify_segment_inputs(out, manifest)
         for job in manifest['jobs']:
             if job['eligibility'] != 'ready':

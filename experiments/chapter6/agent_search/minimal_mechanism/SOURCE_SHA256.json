@@ -91,8 +91,8 @@
     },
     {
       "path": "continuation_segment.py",
-      "bytes": 17491,
-      "sha256": "d2079a34e88d65990c6260c5dbcfbca5fb40872cf3ea4b660fed382d156199f8"
+      "bytes": 20639,
+      "sha256": "382071804a2d8786e6758a2a72a71d8cb1673a7327e09a2a8bff03f32ff5cd57"
     },
     {
       "path": "controller.py",
@@ -176,8 +176,8 @@
     },
     {
       "path": "test_continuation_segment.py",
-      "bytes": 4436,
-      "sha256": "1f42b67e14b5b676bcf69e47d275b1c6ce6761a8c4e9fa6a39d3d6f219a17452"
+      "bytes": 6715,
+      "sha256": "42b2efc3d511869d1b739e76176e6740023cd9aea6129cd23bff7668729d71e6"
     },
     {
       "path": "test_controller.py",
@@ -210,5 +210,5 @@
       "sha256": "2dad8dcbaccf2101820e2ef347604ad253d76201bb81d1ca2ebb2ace99a353c1"
     }
   ],
-  "manifest_sha256": "f39f51b90c8f71f7d54ab91c536e0688b16da15e4b04d427e2af8032e7bd07f4"
+  "manifest_sha256": "f56b4632959cca6d5d97b07019183c9f208c94235e2897da9fcfcf28e36d0641"
 }

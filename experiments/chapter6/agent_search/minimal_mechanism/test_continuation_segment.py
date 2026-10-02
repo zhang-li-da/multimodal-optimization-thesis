@@ -82,7 +82,67 @@ def test_prelaunch_binding_additive_and_cannot_be_reissued(halted, tmp_path):
 def test_binding_refuses_any_started_task(halted, tmp_path):
     parent, pm, registry, ready = halted
     out = tmp_path / 'segment'
-    segment.prepare(parent, out, registry)
-    save_json(registry / 'claims' / (ready[2]['job_id'] + '.json'), {'claimed': True})
+    manifest = segment.prepare(parent, out, registry)
+    save_json(registry / 'claims' / (ready[2]['job_id'] + '.json'),
+              {'manifest_sha256': manifest['manifest_sha256']})
     with pytest.raises(ValueError, match='after a task started'):
+        segment.bind_prelaunch(out)
+
+
+def test_snapshot_includes_exact_file_set(halted, tmp_path):
+    parent, pm, registry, ready = halted
+    out = tmp_path / 'segment'
+    m = segment.prepare(parent, out, registry)
+    save_json(out / 'parent_snapshot/unregistered.json', {'untracked': True})
+    with pytest.raises(ValueError, match='file set changed'):
+        segment.verify_segment_inputs(out, m)
+
+
+def test_segment_cannot_reset_budget_or_reassign_parent_costs(halted, tmp_path):
+    import copy
+    parent, pm, registry, ready = halted
+    out = tmp_path / 'segment'
+    m = segment.prepare(parent, out, registry)
+    changed = copy.deepcopy(m)
+    changed['limits']['max_requests_including_history'] += 16
+    with pytest.raises(ValueError, match='cumulative budget changed'):
+        segment.verify_segment_inputs(out, changed)
+    changed = copy.deepcopy(m)
+    rows = changed['historical_attempts']
+    rows[0]['known_tokens'] -= 1
+    rows[1]['known_tokens'] += 1
+    assert base.sum_cost(rows) == base.sum_cost(m['historical_attempts'])
+    with pytest.raises(ValueError, match='cost attribution changed'):
+        segment.verify_segment_inputs(out, changed)
+
+
+def test_parent_selection_and_snapshot_hold_family_lock(halted, tmp_path, monkeypatch):
+    from contextlib import contextmanager
+    parent, pm, registry, ready = halted
+    lock_held = []
+    original_snapshot = segment._copy_parent_snapshot
+    @contextmanager
+    def lock(path):
+        assert path == registry
+        assert not lock_held
+        lock_held.append(True)
+        try:
+            yield
+        finally:
+            lock_held.pop()
+    def snapshot(*args):
+        assert lock_held
+        return original_snapshot(*args)
+    monkeypatch.setattr(segment, 'run_lock', lock)
+    monkeypatch.setattr(segment, '_copy_parent_snapshot', snapshot)
+    segment.prepare(parent, tmp_path / 'segment', registry)
+    assert not lock_held
+
+
+def test_halted_segment_cannot_receive_new_binding(halted, tmp_path):
+    parent, pm, registry, ready = halted
+    out = tmp_path / 'segment'
+    segment.prepare(parent, out, registry)
+    base.halt(out, ready[2]['job_id'], 'offline test')
+    with pytest.raises(ValueError, match='halted segment'):
         segment.bind_prelaunch(out)
