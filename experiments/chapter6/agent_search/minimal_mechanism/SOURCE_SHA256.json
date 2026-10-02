@@ -80,6 +80,11 @@
       "sha256": "88c779c7f7fb1555f2c2915d18ebbbe45f65c5abc16515bc080dc867ac8fbaff"
     },
     {
+      "path": "audit_segments.py",
+      "bytes": 14739,
+      "sha256": "a9ed1fa282b2024ed0daaf817127218e9adbbb3ec770dd32e3b2eecef619157d"
+    },
+    {
       "path": "continuation_recovery.py",
       "bytes": 14047,
       "sha256": "418a83ef3d3131c87b1ba40f5428e4606fb61e9408a829a1fdcfbf8d3290bb32"
@@ -170,6 +175,11 @@
       "sha256": "141d3e11ab4d49af2e64f476f888c05d862f6a8c053eaf184748652a3f23abfa"
     },
     {
+      "path": "test_audit_segments.py",
+      "bytes": 2364,
+      "sha256": "181597ba2fb415fc43cc79146342aedfbc3d97ac6b268e785899f838c6918486"
+    },
+    {
       "path": "test_continuation_resume.py",
       "bytes": 9556,
       "sha256": "6c3e25228a1ac14a91c75e4b79fe63f35f7d4240c8f4963be775bcd65c6fbfcd"
@@ -210,5 +220,5 @@
       "sha256": "2dad8dcbaccf2101820e2ef347604ad253d76201bb81d1ca2ebb2ace99a353c1"
     }
   ],
-  "manifest_sha256": "27c5b4adf9d493f3a10ba4d188eee9fc6d46f70183fb03e388934e1a4329ff40"
+  "manifest_sha256": "d0691dd270b35b47bf265fe36690b7d3c8d9d74ba21ba8c222a3e55f82451281"
 }
